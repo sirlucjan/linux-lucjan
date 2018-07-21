@@ -1,13 +1,13 @@
 .
 ├── 4.17
-│   ├── 4.17-linux-lucjan-v20180613r1.patch
-│   ├── 4.17-linux-lucjan-v20180613r2.patch
-│   ├── 4.17-linux-lucjan-v20180625r1.patch
-│   ├── 4.17-linux-lucjan-v20180702r1.patch
-│   ├── 4.17-linux-lucjan-v20180709r1.patch
-│   ├── 4.17-linux-lucjan-v20180713r1.patch
-│   ├── 4.17-linux-lucjan-v20180716r1.patch
-│   └── 4.17-linux-lucjan-v20180716r2.patch
+│   ├── 4.17-lucjan-rev1.patch
+│   ├── 4.17-lucjan-rev2.patch
+│   ├── 4.17-lucjan-rev3.patch
+│   ├── 4.17-lucjan-rev4.patch
+│   ├── 4.17-lucjan-rev5.patch
+│   ├── 4.17-lucjan-rev6.patch
+│   ├── 4.17-lucjan-rev7.patch
+│   └── 4.17-lucjan-rev8.patch
 ├── Files
 └── README.md
 
