@@ -1,3 +1,12 @@
+4.17-lucjan-rev-12
+
+- add blk-mq-cleanup-blk_mq_get_driver_tag.patch
+- add blk-mq-don-t-pass-hctx-to-blk_mq_mark_tag_wait.patch
+- add blk-mq-introduce-new-lock-for-protecting-hctx-dispat.patch
+- add blk-mq-reinit-q-tag_set_list-entry-only-after-grace-.patch
+- add blk-mq-remove-synchronize_rcu-from-blk_mq_del_queue_.patch
+- add blk-mq-avoid-to-synchronize-rcu-inside-blk_cleanup_q.patch
+
 4.17-lucjan-rev11
 
 - add v4.17.12+_pds098s.patch
