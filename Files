@@ -15,13 +15,13 @@
 │   │   ├── 4.17-lucjan-rev8.patch
 │   │   └── 4.17-lucjan-rev9.patch
 │   └── 4.18
-│       ├── 4.18-lucjan-rev1.patch
-│       ├── 4.18-lucjan-rev2.patch
-│       └── 4.18-lucjan-rev3.patch
+│       ├── 4.18-lucjan-rev1-rc1.patch
+│       ├── 4.18-lucjan-rev1-rc2.patch
+│       └── 4.18-lucjan-rev1-rc3.patch
 ├── Changelog
 ├── Files
 ├── README.md
 └── testing
-    └── 4.18-lucjan-rev4.patch
+    └── 4.18-lucjan-rev1-rc4.patch
 
 5 directories, 19 files
