@@ -1,3 +1,7 @@
+4.18-lucjan-rev4
+
+- add 4.18-bfq-sq-mq-v8r12-2K180817.patch
+
 4.18-lucjan-rev3
 
 - add PDS-mq 0.98v
