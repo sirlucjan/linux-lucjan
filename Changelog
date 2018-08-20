@@ -1,16 +1,16 @@
-4.18-lucjan-rev5
+4.18-lucjan-ll5
 
 - rebase uksm patch
 
-4.18-lucjan-rev4
+4.18-lucjan-ll4
 
 - add 4.18-bfq-sq-mq-v8r12-2K180817.patch
 
-4.18-lucjan-rev3
+4.18-lucjan-ll3
 
 - add PDS-mq 0.98v
 
-4.18-lucjan-rev2
+4.18-lucjan-ll2
 
 - add block-bfq-readd-missing-reset-of-parent-entity-servi.patch
 - add block-bfq-always-update-the-budget-of-an-entity-when.patch
@@ -18,11 +18,11 @@
 - add block-bfq-improve-code-of-bfq_bfqq_charge_time.patch
 - add block-bfq-return-nbytes-and-not-zero-from-struct-cft.patch
 
-4.18-lucjan-rev1
+4.18-lucjan-ll1
 
 - rebase against 4.18
 
-4.17-lucjan-rev-12
+4.17-lucjan-ll12
 
 - add blk-mq-cleanup-blk_mq_get_driver_tag.patch
 - add blk-mq-don-t-pass-hctx-to-blk_mq_mark_tag_wait.patch
@@ -35,7 +35,7 @@
 
 - add v4.17.12+_pds098s.patch
 
-4.17-lucjan-rev10
+4.17-lucjan-ll10
 
 - add misc-rtsx_usb-Use-USB-remote-wakeup-signaling-for-ca.patch
 - add memstick-Prevent-memstick-host-from-getting-runtime-.patch
@@ -44,7 +44,7 @@
 - add misc-rtsx_usb-memstick-rtsx_usb_ms-Avoid-long-delay-.patch
 
 
-4.17-lucjan-rev9
+4.17-lucjan-ll9
 
 - add ACPICA-AML-Parser-ignore-control-method-status-in-mo.patch
 

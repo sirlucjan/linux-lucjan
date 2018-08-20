@@ -8,7 +8,7 @@
 
 ***
 
-* [bfq improvements](https://groups.google.com/forum/#!forum/bfq-iosched) -  - latest fixes authored by Paolo Valente and BFQ Team
+* [bfq improvements](https://groups.google.com/forum/#!forum/bfq-iosched) - latest fixes authored by Paolo Valente and BFQ Team
  
 * [BFQ-SQ and BFQ-MQ Scheduler](https://github.com/Algodev-github/bfq-mq) - bfq-sq and bfq-mq from Algodev-github 
 
