@@ -1,7 +1,10 @@
+4.18-lucjan-ll11
+
+- add PDS-mq 0.98s
+
 4.18-lucjan-ll10
 
 - add v4.18_pds098w_revert_data_structure_v2.patch
-
 
 4.18-lucjan-ll9
 
@@ -13,7 +16,7 @@
 
 4.18-lucjan-ll7
 
-- add PDS-mq 0.98v
+- add PDS-mq 0.98w
 
 4.18-lucjan-ll6-rc2 ---> 4.18-lucjan-ll6
 
