@@ -1,3 +1,7 @@
+4.18-lucjan-ll13
+
+- add HID-core-fix-grouping-by-application.patch
+
 4.18-lucjan-ll12
 
 - add PDS-mq 0.98y
