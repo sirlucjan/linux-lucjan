@@ -1,3 +1,7 @@
+4.18-lucjan-ll14
+
+- add block-bfq-swap-puts-in-bfqg_and_blkg_put.patch
+
 4.18-lucjan-ll13
 
 - add HID-core-fix-grouping-by-application.patch
