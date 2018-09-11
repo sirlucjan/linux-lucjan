@@ -1,3 +1,7 @@
+4.18-lucjan-ll18-rc2
+
+- drop blk-mq patches
+
 4.18-lucjan-ll18-rc1
 
 - sync with upstream
