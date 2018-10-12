@@ -1,3 +1,7 @@
+4.18-lucjan-ll27
+
+- add block-bfq-improve-asymmetric-scenarios-detection.patch
+
 4.18-lucjan-ll26
 
 - add 4.18-bfq-sq-mq-v9r1-2K181012.patch
