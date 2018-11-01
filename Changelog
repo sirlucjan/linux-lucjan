@@ -1,3 +1,7 @@
+4.18-lucjan-ll31
+
+- add 4.18-bfq-sq-mq-v9r1-2K181101.patch
+
 4.18-lucjan-ll30
 
 - revert: update graysky's patch
