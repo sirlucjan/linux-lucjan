@@ -1,3 +1,21 @@
+4.19-lucjan-ll1
+
+- sync with 4.19 line
+- add add 4.19-bfq-sq-mq-v9r1-2K181101-rc1.patch
+- add PDS-mq 0.99c
+- add block-bfq-correctly-charge-and-reset-entity-service-.patch
+- add block-bfq-inject-other-queue-I-O-into-seeky-idle-que.patch
+- add block-bfq-do-not-plug-I-O-if-all-queues-are-weight-r.patch
+- add block-bfq-improve-asymmetric-scenarios-detection.patch
+- add block-bfq-fix-asymmetric-scenarios-detection.patch
+- add misc-rtsx_usb-Use-USB-remote-wakeup-signaling-for-ca.patch
+- add memstick-Prevent-memstick-host-from-getting-runtime-.patch
+- add memstick-rtsx_usb_ms-Use-ms_dev-helper.patch
+- add memstick-rtsx_usb_ms-Support-runtime-power-managemen.patch
+- add net-Add-and-use-skb_mark_not_on_list.patch
+- addnet-Add-and-use-skb_list_del_init.patch
+- add net-Use-skb_list_del_init-for-gro_flush_oldest-too.patch
+
 4.18-lucjan-ll31
 
 - add 4.18-bfq-sq-mq-v9r1-2K181101.patch
