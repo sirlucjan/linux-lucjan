@@ -1,3 +1,7 @@
+4.19-lucjan-ll3
+
+- add add-ll-version.patch
+
 4.19-lucjan-ll2
 
 - add memstick-rtsx_usb_ms-Add-missing-pm_runtime_disable-.patch
