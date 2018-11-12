@@ -155,13 +155,9 @@
 │       └── 4.20-rc1-lucjan-ll1-rc1.patch.sig
 ├── Changelog
 ├── Files
-├── INFO
 ├── README.md
-├── testing
-│   ├── 4.19-lucjan-ll4-rc1.patch
-│   └── 4.19-lucjan-ll4-rc1.patch.sig
-└── trunk
-    ├── 4.20-rc1-lucjan-ll1-rc2.patch
-    └── 4.20-rc1-lucjan-ll1-rc2.patch.sig
+└── testing
+    ├── 4.19-lucjan-ll4-rc1.patch
+    └── 4.19-lucjan-ll4-rc1.patch.sig
 
-8 directories, 156 files
+7 directories, 153 files
