@@ -125,34 +125,31 @@
 │   │   ├── 4.18-lucjan-ll8.patch.sig
 │   │   ├── 4.18-lucjan-ll9.patch
 │   │   └── 4.18-lucjan-ll9.patch.sig
-│   ├── 4.19
-│   │   ├── 4.19-lucjan-ll1.patch
-│   │   ├── 4.19-lucjan-ll1.patch.sig
-│   │   ├── 4.19-lucjan-ll1-rc10.patch
-│   │   ├── 4.19-lucjan-ll1-rc10.patch.sig
-│   │   ├── 4.19-lucjan-ll1-rc1.patch
-│   │   ├── 4.19-lucjan-ll1-rc1.patch.sig
-│   │   ├── 4.19-lucjan-ll1-rc2.patch
-│   │   ├── 4.19-lucjan-ll1-rc2.patch.sig
-│   │   ├── 4.19-lucjan-ll1-rc3.patch
-│   │   ├── 4.19-lucjan-ll1-rc3.patch.sig
-│   │   ├── 4.19-lucjan-ll1-rc4.patch
-│   │   ├── 4.19-lucjan-ll1-rc4.patch.sig
-│   │   ├── 4.19-lucjan-ll1-rc5.patch
-│   │   ├── 4.19-lucjan-ll1-rc5.patch.sig
-│   │   ├── 4.19-lucjan-ll1-rc6.patch
-│   │   ├── 4.19-lucjan-ll1-rc6.patch.sig
-│   │   ├── 4.19-lucjan-ll1-rc7.patch
-│   │   ├── 4.19-lucjan-ll1-rc7.patch.sig
-│   │   ├── 4.19-lucjan-ll1-rc8.patch
-│   │   ├── 4.19-lucjan-ll1-rc8.patch.sig
-│   │   ├── 4.19-lucjan-ll1-rc9.patch
-│   │   ├── 4.19-lucjan-ll1-rc9.patch.sig
-│   │   ├── 4.19-lucjan-ll2.patch
-│   │   └── 4.19-lucjan-ll2.patch.sig
-│   └── 4.20
-│       ├── 4.20-rc1-lucjan-ll1-rc1.patch
-│       └── 4.20-rc1-lucjan-ll1-rc1.patch.sig
+│   └── 4.19
+│       ├── 4.19-lucjan-ll1.patch
+│       ├── 4.19-lucjan-ll1.patch.sig
+│       ├── 4.19-lucjan-ll1-rc10.patch
+│       ├── 4.19-lucjan-ll1-rc10.patch.sig
+│       ├── 4.19-lucjan-ll1-rc1.patch
+│       ├── 4.19-lucjan-ll1-rc1.patch.sig
+│       ├── 4.19-lucjan-ll1-rc2.patch
+│       ├── 4.19-lucjan-ll1-rc2.patch.sig
+│       ├── 4.19-lucjan-ll1-rc3.patch
+│       ├── 4.19-lucjan-ll1-rc3.patch.sig
+│       ├── 4.19-lucjan-ll1-rc4.patch
+│       ├── 4.19-lucjan-ll1-rc4.patch.sig
+│       ├── 4.19-lucjan-ll1-rc5.patch
+│       ├── 4.19-lucjan-ll1-rc5.patch.sig
+│       ├── 4.19-lucjan-ll1-rc6.patch
+│       ├── 4.19-lucjan-ll1-rc6.patch.sig
+│       ├── 4.19-lucjan-ll1-rc7.patch
+│       ├── 4.19-lucjan-ll1-rc7.patch.sig
+│       ├── 4.19-lucjan-ll1-rc8.patch
+│       ├── 4.19-lucjan-ll1-rc8.patch.sig
+│       ├── 4.19-lucjan-ll1-rc9.patch
+│       ├── 4.19-lucjan-ll1-rc9.patch.sig
+│       ├── 4.19-lucjan-ll2.patch
+│       └── 4.19-lucjan-ll2.patch.sig
 ├── Changelog
 ├── Files
 ├── README.md
@@ -160,4 +157,4 @@
     ├── 4.19-lucjan-ll4-rc1.patch
     └── 4.19-lucjan-ll4-rc1.patch.sig
 
-7 directories, 153 files
+6 directories, 151 files
