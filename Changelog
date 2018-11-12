@@ -1,3 +1,7 @@
+4.19-lucjan-ll4-rc2
+
+- add PDS-mq 0.99d
+
 4.19-lucjan-ll4-rc1
 
 - drop block-bfq-correctly-charge-and-reset-entity-service-.patch (sync with upstream)
