@@ -1,7 +1,3 @@
-4.19-lucjan-ll8
-
-- add block-bfq-mq-fix-num_active_groups-update.patch
-
 4.19-lucjan-ll7
 
 - add PDS-mq 0.99f
