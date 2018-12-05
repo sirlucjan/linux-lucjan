@@ -1,3 +1,8 @@
+4.19-lucjan-ll9
+
+- add blk-mq-fix-corruption-with-direct-issue.patch
+- x86_64_defconfig-add-I-O-schedulers.patch
+
 4.19-lucjan-ll8
 
 - add block-bfq-mq-fix-num_active_groups-update.patch
