@@ -1,3 +1,7 @@
+4.19-lucjan-ll11
+
+- add pds-Sync-c5511d03ec09-sched-smt-Make-sched_smt_prese.patch
+
 4.19-lucjan-ll10
 
 - add 4.19-bfq-sq-mq-v9r1-2K181206-rc1.patch
