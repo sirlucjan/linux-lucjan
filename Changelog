@@ -1,3 +1,7 @@
+4.19-lucjan-ll10
+
+- add 4.19-bfq-sq-mq-v9r1-2K181206-rc1.patch
+
 4.19-lucjan-ll9
 
 - add blk-mq-fix-corruption-with-direct-issue.patch
