@@ -1,3 +1,17 @@
+4.19-lucjan-ll12-rc3
+
+- add block-bfq-fix-decrement-of-num_active_groups.patch
+
+- add block-bfq-fix-comments-on-__bfq_deactivate_entity.patch
+
+4.19-lucjan-ll12-rc2
+
+- add add 4.19-bfq-sq-mq-v9r1-2K181206-rc2.patch
+
+4.19-lucjan-ll12-rc1
+
+- sync with upstream
+
 4.19-lucjan-ll11
 
 - add pds-Sync-c5511d03ec09-sched-smt-Make-sched_smt_prese.patch
