@@ -1,3 +1,7 @@
+4.19-lucjan-ll12-rc4
+
+- add blk-mq-punt-failed-direct-issue-to-dispatch-list.patch
+
 4.19-lucjan-ll12-rc3
 
 - add block-bfq-fix-decrement-of-num_active_groups.patch
