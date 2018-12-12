@@ -1,7 +1,7 @@
 4.19-lucjan-ll16
 
 - drop uksm-4.19.9-rc.patch
-- improve x86_64_defconfig-add-I-O-schedulers.patch
+- improve x86_64_defconfig-add-I-O-schedulers.patch (---> 4.19-bfq-sq-mq-v9r1-2K181212-rc1.patch)
 - add bfq-Increase-BLKCG_MAX_POLS.patch
 
 4.19-lucjan-ll15-rc2
