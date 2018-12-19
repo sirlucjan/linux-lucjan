@@ -1,3 +1,8 @@
+4.19-lucjan-ll19
+
+- add PDS-mq 0.99h
+- add pds-Fix-NORMAL_PRIO-mess-up-with-ISO_PRIO.patch
+
 4.19-lucjan-ll18
 
 - add memstick-rtsx_usb_ms-Add-missing-pm_runtime_disable-.patch
