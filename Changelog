@@ -324,7 +324,7 @@
 - add blk-mq-remove-synchronize_rcu-from-blk_mq_del_queue_.patch
 - add blk-mq-avoid-to-synchronize-rcu-inside-blk_cleanup_q.patch
 
-4.17-lucjan-rev11
+4.17-lucjan-ll11
 
 - add v4.17.12+_pds098s.patch
 
