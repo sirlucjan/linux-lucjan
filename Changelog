@@ -1,3 +1,9 @@
+4.20-lucjan-ll1-rc1
+
+- sync with upstream
+- add PDS-mq 0.99i
+- add pds-Fix-missing-mainline-scheduler-API-for-psi.patch
+
 4.19-lucjan-ll19
 
 - add PDS-mq 0.99h
