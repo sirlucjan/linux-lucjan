@@ -1,3 +1,7 @@
+4.20-lucjan-ll3
+
+- add block-Kconf-iosched-fix-depends-for-BLK-CGROUP-IOLATENCY.patch
+
 4.20-lucjan-ll2
 
 - add block-Fix-enables-BFQ-MQ-multi-queue-IO-scheduling-by-default.patch
