@@ -1,3 +1,8 @@
+4.20-lucjan-ll2
+
+- add block-Fix-enables-BFQ-MQ-multi-queue-IO-scheduling-by-default.patch
+- add kconfig-add-750Hz-timer-interrupt-kernel-config-option.patch
+
 4.20-lucjan-ll1-rc2 --> 4.20-lucjan-ll1
 
 4.20-lucjan-ll1-rc2
