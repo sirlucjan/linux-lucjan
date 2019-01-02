@@ -1,3 +1,7 @@
+4.20-lucjan-ll5
+
+- add block-Set-rq_affinity-2-for-full-multithreading-I-O-.patch
+
 4.20-lucjan-ll4
 
 - add PDS-mq 0.99j
