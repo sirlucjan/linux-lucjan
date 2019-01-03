@@ -1,3 +1,7 @@
+4.20-lucjan-ll7
+
+- block-Kconf-iosched-fix-depends-for-BLK-CGROUPS-IOLATENCY.patch
+
 4.20-lucjan-ll6
 
 - add Add-a-CONFIG-option-that-sets-O3.patch
