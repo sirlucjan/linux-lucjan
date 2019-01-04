@@ -2,6 +2,8 @@
 
 - add ZEN-scsi-Always-use-the-blk-mq-I-O-path.patch
 - add LL-scsi-Always-use-the-blk-mq-I-O-path.patch
+- drop add-ll-version.patch
+- add LL-Add-.ll-version.patch
 
 4.20-lucjan-ll7
 
