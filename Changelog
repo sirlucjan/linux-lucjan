@@ -1,11 +1,16 @@
+4.20-lucjan-ll8
+
+- add ZEN-scsi-Always-use-the-blk-mq-I-O-path.patch
+- add LL-scsi-Always-use-the-blk-mq-I-O-path.patch
+
 4.20-lucjan-ll7
 
-- block-Kconf-iosched-fix-depends-for-BLK-CGROUPS-IOLATENCY.patch
+- add LL-block-Kconf-iosched-fix-depends-for-BLK-CGROUPS-IOLATENCY
 
 4.20-lucjan-ll6
 
-- add Add-a-CONFIG-option-that-sets-O3.patch
-- add Add-config-options-for-unprivileged_userns_cl.patch
+- add ZEN-Add-a-CONFIG-option-that-sets-O3.patch
+- add ZEN-Add-CONFIG-for-unprivileged_userns_clone.patch
 
 4.20-lucjan-ll5
 
@@ -22,7 +27,7 @@
 4.20-lucjan-ll2
 
 - add block-Fix-enables-BFQ-MQ-multi-queue-IO-scheduling-by-default.patch
-- add kconfig-add-750Hz-timer-interrupt-kernel-config-option.patch
+- add LL-kconfig-add-750Hz-timer-interrupt-kernel-config-option.patch
 
 4.20-lucjan-ll1-rc2 --> 4.20-lucjan-ll1
 
