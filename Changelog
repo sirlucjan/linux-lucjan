@@ -1,3 +1,7 @@
+4.20-lucjan-ll9
+
+- add 4.20-bfq-sq-mq-v9r1-2K190108-rc1.patch
+
 4.20-lucjan-ll8
 
 - add ZEN-scsi-Always-use-the-blk-mq-I-O-path.patch
