@@ -1,3 +1,7 @@
+4.20-lucjan-l12
+
+- add infiniband-Fix-__read_overflow2-error-with-O3-inlini.patch
+
 4.20-lucjan-ll11
 
 - add 4.20-bfq-sq-mq-v9r1-2K190111-rc1.patch
