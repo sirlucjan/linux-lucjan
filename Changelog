@@ -1,3 +1,7 @@
+4.20-lucjan-ll14-rc1
+
+- switch to diff --git
+
 4.20-lucjan-ll13
 
 - add LL-elevator-set-default-scheduler-to-bfq-mq-for-blk-mq.patch
