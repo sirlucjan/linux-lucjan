@@ -1,3 +1,8 @@
+4.20-lucjan-ll16
+
+- add PDS-mq 0.99l
+- blk-mq-fix-updating-internal-depth-state-for-4.20-se.patch
+
 4.20-lucjan-ll15
 
 - add bfq-update-internal-depth-state-when-queue-depth-cha.patch
