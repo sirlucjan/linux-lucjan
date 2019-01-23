@@ -1,3 +1,9 @@
+4.20-lucjan-ll18
+
+- add bfq-do-not-consider-interactive-queues-in-srt-filter.patch
+- add bfq-avoid-selecting-a-queue-w-o-budget.patch
+- add bfq-make-sure-queue-budgets-are-not-below-service-re.patch
+
 4.20-lucjan-ll17
 
 - add 4.20-bfq-sq-mq-v9r1-2K190121-rc1.patch
