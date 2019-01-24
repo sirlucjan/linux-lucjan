@@ -1,3 +1,7 @@
+4.20-lucjan-ll19
+
+- add 4.20-bfq-sq-mq-v9r1-2K190124-rc1.patch
+
 4.20-lucjan-ll18
 
 - add bfq-do-not-consider-interactive-queues-in-srt-filter.patch
