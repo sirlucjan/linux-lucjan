@@ -1,3 +1,7 @@
+4.20-lucjan-ll21
+
+- add 4.20-bfq-sq-mq-v9r1-2K190128-rc1.patch (includes bfq-Increase-BLKCG_MAX_POLS.patch)
+
 4.20-lucjan-ll20
 
 - add 4.20-bfq-sq-mq-v9r1-2K190125-rc1.patch
