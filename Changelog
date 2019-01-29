@@ -1,3 +1,8 @@
+4.20-lucjan-ll23
+
+- drop blkcg-fix-ref-count-issue-with-bio_blkcg-using-task_.patch
+- drop block-doc-add-slice_idle_us-to-bfq-documentation.patch
+
 4.20-lucjan-ll22
 
 - add blkcg-fix-ref-count-issue-with-bio_blkcg-using-task_.patch
