@@ -1,3 +1,19 @@
+4.20-lucjan-ll22
+
+- add blkcg-fix-ref-count-issue-with-bio_blkcg-using-task_.patch
+- add block-doc-add-slice_idle_us-to-bfq-documentation.patch
+- add block-bfq-remove-case-of-redirected-bic-from-insert_.patch
+- add block-bfq-consider-also-ioprio-classes-in-symmetry-d.patch
+- add block-bfq-split-function-bfq_better_to_idle.patch
+- add block-bfq-do-not-plug-I-O-of-in-service-queue-when-h.patch
+- add block-bfq-unconditionally-plug-I-O-in-asymmetric-sce.patch
+- add block-bfq-fix-sequential-rq-detection-in-rate-estima.patch
+- add block-bfq-fix-queue-removal-from-weights-tree.patch
+- add block-bfq-reduce-threshold-for-detecting-command-que.patch
+- add block-bfq-port-commit-cfq-iosched-improve-hw_tag-det.patch
+- add block-bfq-do-not-overcharge-writes-in-asymmetric-sce.patch
+- add block-bfq-fix-in-service-queue-check-for-queue-mergi.patch
+
 4.20-lucjan-ll21
 
 - add 4.20-bfq-sq-mq-v9r1-2K190128-rc1.patch (includes bfq-Increase-BLKCG_MAX_POLS.patch)
