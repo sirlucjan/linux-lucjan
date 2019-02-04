@@ -1,3 +1,7 @@
+4.20-lucjan-ll24
+
+- add 4.20-bfq-sq-mq-v9r1-2K190204-rc1.patch
+
 4.20-lucjan-ll23
 
 - drop blkcg-fix-ref-count-issue-with-bio_blkcg-using-task_.patch
