@@ -1,3 +1,9 @@
+4.20-lucjan-ll25
+
+- add blk-mq-fix-a-hung-issue-when-fsync.patch
+- add block-v2-0-3-iolatency-bug-fix.patch
+- add blk-Optimization-for-classic-polling.patch
+
 4.20-lucjan-ll24
 
 - add 4.20-bfq-sq-mq-v9r1-2K190204-rc1.patch
