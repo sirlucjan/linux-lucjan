@@ -1,3 +1,5 @@
+4.20-lucjan-ll26-rc2 ---> 4.20-lucjan-ll26
+
 4.20-lucjan-ll26-rc2
 
 - add x86-kvm-Fix-sched_smt_present-undefined.patch

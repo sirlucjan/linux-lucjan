@@ -1,7 +1,7 @@
 .
 ├── actual
-│   ├── 4.20-lucjan-ll25.patch
-│   └── 4.20-lucjan-ll25.patch.sig
+│   ├── 4.20-lucjan-ll26.patch
+│   └── 4.20-lucjan-ll26.patch.sig
 ├── archive
 │   ├── 4.17
 │   │   ├── 4.17-lucjan-ll10.patch
@@ -241,8 +241,12 @@
 │       ├── 4.20-lucjan-ll23.patch.sig
 │       ├── 4.20-lucjan-ll24.patch
 │       ├── 4.20-lucjan-ll24.patch.sig
+│       ├── 4.20-lucjan-ll25.patch
+│       ├── 4.20-lucjan-ll25.patch.sig
 │       ├── 4.20-lucjan-ll26-rc1.patch
 │       ├── 4.20-lucjan-ll26-rc1.patch.sig
+│       ├── 4.20-lucjan-ll26-rc2.patch
+│       ├── 4.20-lucjan-ll26-rc2.patch.sig
 │       ├── 4.20-lucjan-ll2.patch
 │       ├── 4.20-lucjan-ll2.patch.sig
 │       ├── 4.20-lucjan-ll3.patch
@@ -261,9 +265,6 @@
 │       └── 4.20-lucjan-ll9.patch.sig
 ├── Changelog
 ├── Files
-├── README.md
-└── testing
-    ├── 4.20-lucjan-ll26-rc2.patch
-    └── 4.20-lucjan-ll26-rc2.patch.sig
+└── README.md
 
-7 directories, 259 files
+6 directories, 261 files
