@@ -241,6 +241,8 @@
 │       ├── 4.20-lucjan-ll23.patch.sig
 │       ├── 4.20-lucjan-ll24.patch
 │       ├── 4.20-lucjan-ll24.patch.sig
+│       ├── 4.20-lucjan-ll26-rc1.patch
+│       ├── 4.20-lucjan-ll26-rc1.patch.sig
 │       ├── 4.20-lucjan-ll2.patch
 │       ├── 4.20-lucjan-ll2.patch.sig
 │       ├── 4.20-lucjan-ll3.patch
@@ -261,7 +263,7 @@
 ├── Files
 ├── README.md
 └── testing
-    ├── 4.20-lucjan-ll26-rc1.patch
-    └── 4.20-lucjan-ll26-rc1.patch.sig
+    ├── 4.20-lucjan-ll26-rc2.patch
+    └── 4.20-lucjan-ll26-rc2.patch.sig
 
-7 directories, 257 files
+7 directories, 259 files

@@ -1,3 +1,7 @@
+4.20-lucjan-ll26-rc2
+
+- add x86-kvm-Fix-sched_smt_present-undefined.patch
+
 4.20-lucjan-ll26-rc1
 
 - sync with upstream (drop memstick-Prevent-memstick-host-from-getting-runtime-.patch)
