@@ -1,3 +1,8 @@
+4.20-lucjan-ll28
+
+- add PDS-mq 0.99m
+- drop x86-kvm-Fix-sched_smt_present-undefined.patch
+
 4.20-lucjan-ll27
 
 - add block-break-loop-when-getting-target-major-number-in.patch
