@@ -1,3 +1,7 @@
+4.20-lucjan-ll29-rc1
+
+- sync with upstream (drop blk-mq-fix-a-hung-issue-when-fsync.patch)
+
 4.20-lucjan-ll28
 
 - add PDS-mq 0.99m
