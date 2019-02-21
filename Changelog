@@ -1,3 +1,7 @@
+4.20-lucjan-ll31
+
+- add block-Fix-NULL-pointer-dereference-in-register_disk.patch
+
 4.20-lucjan-ll30
 
 - add block-Fix-a-WRITE-SAME-BUG_ON.patch
