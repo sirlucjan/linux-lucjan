@@ -1,3 +1,8 @@
+4.20-lucjan-ll33
+
+- add net-crypto-set-sk-to-NULL-when-af_alg_release.patch
+- add exec-Fix-mem-leak-in-kernel_read_file.patch
+
 4.20-lucjan-ll32
 
 - add pds-Fix-hrtick_start-too-short-for-new-tasks.patch
