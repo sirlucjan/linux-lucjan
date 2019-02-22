@@ -1,3 +1,7 @@
+4.20-lucjan-ll34
+
+- drop net-crypto-set-sk-to-NULL-when-af_alg_release.patch (sync with upstream)
+
 4.20-lucjan-ll33
 
 - add net-crypto-set-sk-to-NULL-when-af_alg_release.patch
