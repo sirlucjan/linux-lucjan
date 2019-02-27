@@ -1,3 +1,8 @@
+4.20-lucjan-ll36
+
+- add scsi-sd-block-Fix-regressions-in-read-only-block-dev.patch
+- add scsi-sd-block-Update-fix-regressions-in-read-only-block-dev.patch
+
 4.20-lucjan-ll35
 
 - add x86-CPU-Add-Icelake-model-number.patch
