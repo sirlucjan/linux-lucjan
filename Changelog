@@ -1,3 +1,7 @@
+4.20-lucjan-ll37
+
+- add 4.20-bfq-sq-mq-v9r1-2K190228-rc1.patch
+
 4.20-lucjan-ll36
 
 - add scsi-sd-block-Fix-regressions-in-read-only-block-dev.patch
