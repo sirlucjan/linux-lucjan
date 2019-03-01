@@ -1,3 +1,7 @@
+4.20-lucjan-ll39
+
+- add 0001-block-add-a-new-flag-BLK_MQ_POLL_CLASSIC-for-hybrid-.patch
+
 4.20-lucjan-ll38
 
 - add blk-throttle-verify-format-of-bandwidth-limit-and-de.patch
