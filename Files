@@ -317,13 +317,13 @@
 │       ├── 5.0-lucjan-ll1-rc3.patch
 │       ├── 5.0-lucjan-ll1-rc3.patch.sig
 │       ├── 5.0-lucjan-ll1-rc4.patch
-│       └── 5.0-lucjan-ll1-rc4.patch.sig
+│       ├── 5.0-lucjan-ll1-rc4.patch.sig
+│       ├── 5.0-lucjan-ll1-rc5.patch
+│       └── 5.0-lucjan-ll1-rc5.patch.sig
 ├── Changelog
 ├── Files
 ├── README.md
 └── trunk
-    ├── 5.0-lucjan-ll1-rc5.patch
-    ├── 5.0-lucjan-ll1-rc5.patch.sig
     ├── 5.0-lucjan-ll1-rc6.patch
     └── 5.0-lucjan-ll1-rc6.patch.sig
 
