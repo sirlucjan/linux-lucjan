@@ -1,3 +1,59 @@
+5.0-lucjan-ll1
+
+- add bfq-blk-mq-Fix-system-freeze-with-high-nr_requests.patch
+- add block-break-loop-when-getting-target-major-number-in.patch
+- add block-Refactor-register_blkdev-to-compare-major-numb.patch
+- add block-Remove-redundant-unlikely-annotation.patch
+- add block-Set-rq_affinity-2-for-full-multithreading-I-O-.patch
+- add block-Fix-a-WRITE-SAME-BUG_ON.patch
+- add block-Fix-NULL-pointer-dereference-in-register_disk.patch
+- add block-loop-Do-not-print-warn-message-if-partition-sc.patch
+- add block-loop-set-GENHD_FL_NO_PART_SCAN-after-blkdev_re.patch
+- add blk-throttle-verify-format-of-bandwidth-limit-and-de.patch
+- add block-add-a-new-flag-BLK_MQ_POLL_CLASSIC-for-hybrid-.patch
+- add gcctunes-5.0-merge-graysky-s-patchset.patch
+- add v5.0_pds099o.patch
+- add pds-Fix-compilation-issue-with-CONFIG_ENERGY_MODEL.patch
+- add pds-update_task_priodl-for-all-task-when-timeslice-e.patch
+- add bfq-update-internal-depth-state-when-queue-depth-cha.patch
+- add block-bfq-do-not-consider-interactive-queues-in-srt-.patch
+- add block-bfq-avoid-selecting-a-queue-w-o-budget.patch
+- add block-bfq-make-sure-queue-budgets-are-not-below-serv.patch
+- add block-bfq-remove-case-of-redirected-bic-from-insert_.patch
+- add block-bfq-consider-also-ioprio-classes-in-symmetry-d.patch
+- add block-bfq-split-function-bfq_better_to_idle.patch
+- add block-bfq-do-not-plug-I-O-of-in-service-queue-when-h.patch
+- add block-bfq-unconditionally-plug-I-O-in-asymmetric-sce.patch
+- add block-bfq-fix-sequential-rq-detection-in-rate-estima.patch
+- add block-bfq-fix-queue-removal-from-weights-tree.patch
+- add block-bfq-reduce-threshold-for-detecting-command-que.patch
+- add block-bfq-port-commit-cfq-iosched-improve-hw_tag-det.patch
+- add block-bfq-do-not-overcharge-writes-in-asymmetric-sce.patch
+- add block-bfq-fix-in-service-queue-check-for-queue-mergi.patch
+- add block-bfq-increase-idling-for-weight-raised-queues.patch
+- add block-bfq-do-not-idle-for-lowest-weight-queues.patch
+- add block-bfq-tune-service-injection-basing-on-request-s.patch
+- add block-bfq-do-not-merge-queues-on-flash-storage-with-.patch
+- add block-bfq-do-not-tag-totally-seeky-queues-as-soft-rt.patch
+- add block-bfq-always-protect-newly-created-queues-from-e.patch
+- add block-bfq-print-SHARED-instead-of-pid-for-shared-que.patch
+- add block-bfq-save-resume-weight-on-a-queue-merge-split.patch
+- add bfq-Avoid-double-definition-of-bfq_pid_to_str.patch
+- add doc-block-bfq-add-information-on-bfq-execution-time.patch
+- add fixes-5.0-merge-BFQ-improvements-v2.patch
+- add add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
+- add uksm-5.0-initial-submission.patch
+- add uksm-5.0-adopt-new-MMU-notifiers-API.patch
+- add scsi-sd-block-Fix-regressions-in-read-only-block-dev.patch
+- add scsi-sd-block-Update-fix-regressions-in-read-only-bl.patch
+- add ZEN-Add-a-CONFIG-option-that-sets-O3.patch
+- add infiniband-Fix-__read_overflow2-error-with-O3-inlini.patch
+- add add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
+- add ZEN-Add-CONFIG-for-unprivileged_userns_clone.patch
+- add LL-kconfig-add-750Hz-timer-interrupt-kernel-config-option.patch
+- add LL-elevator-set-default-scheduler-to-bfq-for-blk-mq.patch
+- add LL-Add-.ll-version.patch
+
 4.20-lucjan-ll46-rc1 ---> 4.20-lucjan-ll46
 
 4.20-lucjan-ll46-rc1
