@@ -1,3 +1,8 @@
+5.0-lucjan-ll20
+
+- add block-Init-flush-rq-ref-count-to-1.patch
+- add block-Code-cleanup-for-bio_find_or_create_slab.patch
+
 5.0-lucjan-ll1
 
 - add bfq-blk-mq-Fix-system-freeze-with-high-nr_requests.patch
