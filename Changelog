@@ -1,3 +1,7 @@
+5.0-lucjan-ll4
+
+- morf PDS-mq into BMQ
+
 5.0-lucjan-ll3
 
 - add lock-bfq-Fix-bugs-reduce-exec-time-and-boost-perform.patch
