@@ -1,3 +1,7 @@
+5.0-lucjan-ll7
+
+- add Makefile-Add-fno-builtin-bcmp-to-CLANG_FLAGS.patch
+
 5.0-lucjan-ll6
 
 - add netfilter-nf_tables-fix-set-double-free-in-abort-pat.patch
