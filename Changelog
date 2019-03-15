@@ -1,3 +1,8 @@
+5.0-lucjan-ll8
+
+- add blk-mq-Use-blk_mq_sched_mark_restart_hctx-to-set-RES.patch
+- add block-Update-v3-Add-a-new-flag-BLK_MQ_POLL_CLASSIC-f.patch
+
 5.0-lucjan-ll7
 
 - add Makefile-Add-fno-builtin-bcmp-to-CLANG_FLAGS.patch
