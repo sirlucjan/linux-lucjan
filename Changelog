@@ -1,3 +1,7 @@
+5.0-lucjan-ll9
+
+- add BMQ 0.90
+
 5.0-lucjan-ll8
 
 - add blk-mq-Use-blk_mq_sched_mark_restart_hctx-to-set-RES.patch
