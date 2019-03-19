@@ -1,3 +1,7 @@
+5.0-lucjan-ll11
+
+- add bmq-Fix-BMQ-compile-fails-for-x86-UP-again.patch
+
 5.0-lucjan-ll10
 
 - blk-mq-nvme-Cancel-request-synchronously.patch
