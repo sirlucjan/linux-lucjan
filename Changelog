@@ -1,3 +1,8 @@
+5.0-lucjan-ll12
+
+- add block-Add-BLK_MQ_POLL_CLASSIC-for-hybrid-poll-and-re.patch
+- add block-Fix-use-after-free-of-gendisk.patch
+
 5.0-lucjan-ll11
 
 - add bmq-Fix-BMQ-compile-fails-for-x86-UP-again.patch
