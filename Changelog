@@ -1,5 +1,10 @@
 5.0-lucjan-ll12
 
+- add mm-set-128-2048-min-max-kilobytes-to-read-ahead-for-.patch
+- add sched-core-nr_migrate-128-increases-number-of-tasks-.patch
+
+5.0-lucjan-ll12
+
 - add block-Add-BLK_MQ_POLL_CLASSIC-for-hybrid-poll-and-re.patch
 - add block-Fix-use-after-free-of-gendisk.patch
 
