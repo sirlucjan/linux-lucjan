@@ -1,4 +1,11 @@
-5.0-lucjan-ll12
+5.0-lucjan-ll14
+
+- add blk-mq-Rmove-unused-nr_expired-from-blk_mq_hw_ctx.patch
+- add blkcg-Fix-kernel-doc-warnings.patch
+- add blk-iolatency-include-blk.h.patch
+- add block-Unexport-blk_mq_add_to_requeue_list.patch
+
+5.0-lucjan-ll13
 
 - add mm-set-128-2048-min-max-kilobytes-to-read-ahead-for-.patch
 - add sched-core-nr_migrate-128-increases-number-of-tasks-.patch
