@@ -1,7 +1,3 @@
-5.0-lucjan-ll16
-
-- add block-Add-a-req_bvec-helper.patch
-
 5.0-lucjan-ll15
 
 - add blkcg-Prevent-priority-inversion-problem-during-sync.patch
