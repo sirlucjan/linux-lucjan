@@ -1,3 +1,7 @@
+5.0-lucjan-ll16
+
+- add BMQ 0.91
+
 5.0-lucjan-ll15
 
 - add blkcg-Prevent-priority-inversion-problem-during-sync.patch
