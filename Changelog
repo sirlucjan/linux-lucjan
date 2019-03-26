@@ -1,3 +1,7 @@
+5.0-lucjan-ll18
+
+- add bmq-Fix-obviously-wrong-branch-statement-in-do_sched.patch
+
 5.0-lucjan-ll17
 
 - add blk-mq-Cleaup-code-and-update-comment.patch
