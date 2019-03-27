@@ -1,3 +1,9 @@
+5.0-lucjan-ll19
+
+- add blk-mq-Use-static_rqs-to-iterate-busy-tags-v2.patch
+- add blk-mq-Fix-sbitmap-ws_active-for-shared-tags.patch
+- add blk-mq-Add-trace-block-plug-and-unplug-for-multiple-.patch
+
 5.0-lucjan-ll18
 
 - add bmq-Fix-obviously-wrong-branch-statement-in-do_sched.patch
