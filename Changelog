@@ -1,3 +1,7 @@
+5.0-lucjan-ll20-rc1
+
+- sync witn upstream (drop netfilter-nf_tables-fix-set-double-free-in-abort-pat.patch)
+
 5.0-lucjan-ll19
 
 - add blk-mq-Use-static_rqs-to-iterate-busy-tags-v2.patch
