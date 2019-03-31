@@ -1,3 +1,7 @@
+5.0-lucjan-ll20-rc2
+
+- sync with upstream (drop blk-mq-Fix-sbitmap-ws_active-for-shared-tags.patch)
+
 5.0-lucjan-ll20-rc1
 
 - sync witn upstream (drop netfilter-nf_tables-fix-set-double-free-in-abort-pat.patch)
