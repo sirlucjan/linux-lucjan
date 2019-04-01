@@ -1,6 +1,6 @@
-From e35ced8cfdd4ced4210d95e18ec8dd12fbea4310 Mon Sep 17 00:00:00 2001
+From 78147d31060b4237adb7f3b2cc6187dfc237dd32 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Sun, 31 Mar 2019 20:18:43 +0200
+Date: Mon, 1 Apr 2019 19:52:43 +0200
 Subject: [PATCH] 5.0-lucjan-ll20
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -360,7 +360,7 @@ index 000000000..be19a3127
 +2016-09-10 UKSM 0.1.2.5 Fix a bug in dedup ratio calculation.
 +2017-02-26 UKSM 0.1.2.6 Fix a bug in hugetlbpage handling and a race bug with page migration.
 diff --git a/Makefile b/Makefile
-index 63152c5ca..07df0e5e3 100644
+index 565c6826d..d629c1ee4 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Shy Crocodile
@@ -3676,7 +3676,7 @@ index 61deab0b5..bcbb699f0 100644
  static inline struct sbq_wait_state *bt_wait_ptr(struct sbitmap_queue *bt,
  						 struct blk_mq_hw_ctx *hctx)
 diff --git a/block/blk-mq.c b/block/blk-mq.c
-index 9437a5eb0..2a66692dc 100644
+index b9283b63d..9d1b3d67b 100644
 --- a/block/blk-mq.c
 +++ b/block/blk-mq.c
 @@ -59,7 +59,8 @@ static int blk_mq_poll_stats_bkt(const struct request *rq)
@@ -3823,7 +3823,7 @@ index 9437a5eb0..2a66692dc 100644
  
  	if (next != 0) {
  		mod_timer(&q->timeout, next);
-@@ -1097,8 +1100,7 @@ static bool blk_mq_mark_tag_wait(struct blk_mq_hw_ctx *hctx,
+@@ -1104,8 +1107,7 @@ static bool blk_mq_mark_tag_wait(struct blk_mq_hw_ctx *hctx,
  	bool ret;
  
  	if (!(hctx->flags & BLK_MQ_F_TAG_SHARED)) {
@@ -3833,7 +3833,7 @@ index 9437a5eb0..2a66692dc 100644
  
  		/*
  		 * It's possible that a tag was freed in the window between the
-@@ -1999,11 +2001,13 @@ static blk_qc_t blk_mq_make_request(struct request_queue *q, struct bio *bio)
+@@ -2008,11 +2010,13 @@ static blk_qc_t blk_mq_make_request(struct request_queue *q, struct bio *bio)
  			plug->rq_count--;
  		}
  		blk_add_rq_to_plug(plug, rq);
@@ -3847,7 +3847,7 @@ index 9437a5eb0..2a66692dc 100644
  			blk_mq_try_issue_directly(data.hctx, same_queue_rq,
  					&cookie, false, true);
  		}
-@@ -2857,7 +2861,7 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
+@@ -2866,7 +2870,7 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
  	/*
  	 * Default to classic polling
  	 */
@@ -3856,7 +3856,7 @@ index 9437a5eb0..2a66692dc 100644
  
  	blk_mq_init_cpu_queues(q, set->nr_hw_queues);
  	blk_mq_add_queue_tag_set(set, q);
-@@ -3110,6 +3114,8 @@ int blk_mq_update_nr_requests(struct request_queue *q, unsigned int nr)
+@@ -3119,6 +3123,8 @@ int blk_mq_update_nr_requests(struct request_queue *q, unsigned int nr)
  		}
  		if (ret)
  			break;
@@ -3865,7 +3865,7 @@ index 9437a5eb0..2a66692dc 100644
  	}
  
  	if (!ret)
-@@ -3207,10 +3213,6 @@ static void __blk_mq_update_nr_hw_queues(struct blk_mq_tag_set *set,
+@@ -3216,10 +3222,6 @@ static void __blk_mq_update_nr_hw_queues(struct blk_mq_tag_set *set,
  
  	list_for_each_entry(q, &set->tag_list, tag_set_list)
  		blk_mq_freeze_queue(q);
@@ -3876,7 +3876,7 @@ index 9437a5eb0..2a66692dc 100644
  	/*
  	 * Switch IO scheduler to 'none', cleaning up the data associated
  	 * with the previous scheduler. We will switch back once we are done
-@@ -3389,7 +3391,7 @@ static bool blk_mq_poll_hybrid(struct request_queue *q,
+@@ -3398,7 +3400,7 @@ static bool blk_mq_poll_hybrid(struct request_queue *q,
  {
  	struct request *rq;
  
@@ -4724,10 +4724,10 @@ index 4aac1b4a8..24d5b63f6 100644
  	blk_mq_unquiesce_queue(ctrl->ctrl.admin_q);
  	nvme_loop_destroy_admin_queue(ctrl);
 diff --git a/drivers/scsi/sd.c b/drivers/scsi/sd.c
-index b84099479..8762b90bc 100644
+index d64553c0a..013354fbe 100644
 --- a/drivers/scsi/sd.c
 +++ b/drivers/scsi/sd.c
-@@ -2591,10 +2591,8 @@ sd_read_write_protect_flag(struct scsi_disk *sdkp, unsigned char *buffer)
+@@ -2586,10 +2586,8 @@ sd_read_write_protect_flag(struct scsi_disk *sdkp, unsigned char *buffer)
  	int res;
  	struct scsi_device *sdp = sdkp->device;
  	struct scsi_mode_data data;
@@ -4738,7 +4738,7 @@ index b84099479..8762b90bc 100644
  	if (sdp->skip_ms_page_3f) {
  		sd_first_printk(KERN_NOTICE, sdkp, "Assuming Write Enabled\n");
  		return;
-@@ -2632,7 +2630,7 @@ sd_read_write_protect_flag(struct scsi_disk *sdkp, unsigned char *buffer)
+@@ -2627,7 +2625,7 @@ sd_read_write_protect_flag(struct scsi_disk *sdkp, unsigned char *buffer)
  			  "Test WP failed, assume Write Enabled\n");
  	} else {
  		sdkp->write_prot = ((data.device_specific & 0x80) != 0);
@@ -13708,7 +13708,7 @@ index 6c48ad13b..55aecf55d 100644
  /*
   * Only called through the sysfs control interface:
 diff --git a/mm/memory.c b/mm/memory.c
-index e8d69ade5..5cea1773d 100644
+index 8d3f38fa5..15a792c66 100644
 --- a/mm/memory.c
 +++ b/mm/memory.c
 @@ -128,6 +128,25 @@ EXPORT_SYMBOL(zero_pfn);
@@ -13776,7 +13776,7 @@ index e8d69ade5..5cea1773d 100644
  
  			if (!PageAnon(page)) {
  				if (pte_dirty(ptent)) {
-@@ -2109,8 +2136,10 @@ static inline void cow_user_page(struct page *dst, struct page *src, unsigned lo
+@@ -2110,8 +2137,10 @@ static inline void cow_user_page(struct page *dst, struct page *src, unsigned lo
  			clear_page(kaddr);
  		kunmap_atomic(kaddr);
  		flush_dcache_page(dst);
@@ -13788,7 +13788,7 @@ index e8d69ade5..5cea1773d 100644
  }
  
  static gfp_t __get_fault_gfp_mask(struct vm_area_struct *vma)
-@@ -2258,6 +2287,7 @@ static vm_fault_t wp_page_copy(struct vm_fault *vmf)
+@@ -2259,6 +2288,7 @@ static vm_fault_t wp_page_copy(struct vm_fault *vmf)
  							      vmf->address);
  		if (!new_page)
  			goto oom;
@@ -13796,7 +13796,7 @@ index e8d69ade5..5cea1773d 100644
  	} else {
  		new_page = alloc_page_vma(GFP_HIGHUSER_MOVABLE, vma,
  				vmf->address);
-@@ -2286,7 +2316,9 @@ static vm_fault_t wp_page_copy(struct vm_fault *vmf)
+@@ -2287,7 +2317,9 @@ static vm_fault_t wp_page_copy(struct vm_fault *vmf)
  						mm_counter_file(old_page));
  				inc_mm_counter_fast(mm, MM_ANONPAGES);
  			}
