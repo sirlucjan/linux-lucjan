@@ -1,3 +1,5 @@
+5.0-lucjan-ll20-rc2 ---> 5.0-lucjan-ll20
+
 5.0-lucjan-ll20-rc2
 
 - sync with upstream (drop blk-mq-Fix-sbitmap-ws_active-for-shared-tags.patch)
