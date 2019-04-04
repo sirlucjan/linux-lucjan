@@ -1,3 +1,7 @@
+5.0-lucjan-ll21-rc1
+
+- sync with upstream (drop block-bfq-fix-queue-removal-from-weights-tree.patch, block-bfq-fix-in-service-queue-check-for-queue-mergi.patch and block-loop-set-GENHD_FL_NO_PART_SCAN-after-blkdev_re.patch)
+
 5.0-lucjan-ll20-rc2 ---> 5.0-lucjan-ll20
 
 5.0-lucjan-ll20-rc2
