@@ -1,6 +1,6 @@
-From dc5455dfcf243131cfd36ea17666d314c3b3b59c Mon Sep 17 00:00:00 2001
+From 2aa5f07b15691b81e96b9f9b193bf307d58cb92a Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Thu, 4 Apr 2019 20:38:09 +0200
+Date: Mon, 8 Apr 2019 13:54:26 +0200
 Subject: [PATCH] 5.0-lucjan-ll21
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -360,7 +360,7 @@ index 000000000..be19a3127
 +2016-09-10 UKSM 0.1.2.5 Fix a bug in dedup ratio calculation.
 +2017-02-26 UKSM 0.1.2.6 Fix a bug in hugetlbpage handling and a race bug with page migration.
 diff --git a/Makefile b/Makefile
-index e8ce34439..0bcfed44e 100644
+index af99c77c7..62dc03b45 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Shy Crocodile
@@ -374,7 +374,7 @@ index e8ce34439..0bcfed44e 100644
  # That's our default target when none is given on the command line
  PHONY := _all
  _all:
-@@ -504,6 +508,7 @@ ifneq ($(GCC_TOOLCHAIN),)
+@@ -518,6 +522,7 @@ ifneq ($(GCC_TOOLCHAIN),)
  CLANG_FLAGS	+= --gcc-toolchain=$(GCC_TOOLCHAIN)
  endif
  CLANG_FLAGS	+= -no-integrated-as
@@ -382,7 +382,7 @@ index e8ce34439..0bcfed44e 100644
  KBUILD_CFLAGS	+= $(CLANG_FLAGS)
  KBUILD_AFLAGS	+= $(CLANG_FLAGS)
  export CLANG_FLAGS
-@@ -667,12 +672,16 @@ ifdef CONFIG_CC_OPTIMIZE_FOR_SIZE
+@@ -681,12 +686,16 @@ ifdef CONFIG_CC_OPTIMIZE_FOR_SIZE
  KBUILD_CFLAGS	+= $(call cc-option,-Oz,-Os)
  KBUILD_CFLAGS	+= $(call cc-disable-warning,maybe-uninitialized,)
  else
