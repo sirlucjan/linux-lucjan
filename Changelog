@@ -1,3 +1,8 @@
+5.0-lucjan-ll23
+
+- add BMQ 0.92
+- add block-bfq-fix-use-after-free-in-bfq_bfqq_expire.patch
+
 5.0-lucjan-ll22
 
 - add block-bfq-delete-bfq-prefix-from-cgroup-filenames.patch
