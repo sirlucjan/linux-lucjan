@@ -1,3 +1,8 @@
+5.0-lucjan-ll24
+
+- add block-bfq-fix-some-typos-in-comments.patch
+- fix block-bfq-fix-use-after-free-in-bfq_bfqq_expire.patch
+
 5.0-lucjan-ll23
 
 - add BMQ 0.92
