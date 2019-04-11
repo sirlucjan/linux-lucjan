@@ -1,3 +1,7 @@
+5.0-lucjan-ll25
+
+- add bmq-Fix-yield.patch
+
 5.0-lucjan-ll24
 
 - add block-bfq-fix-some-typos-in-comments.patch
