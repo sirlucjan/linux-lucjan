@@ -1,6 +1,6 @@
-From aea0fe6450479fa5602da6e28d8c582771efbf62 Mon Sep 17 00:00:00 2001
+From efbd471d315ab52f7a8964e6675bb9255279b96e Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Thu, 18 Apr 2019 19:47:07 +0200
+Date: Thu, 18 Apr 2019 20:55:53 +0200
 Subject: [PATCH] 5.0-lucjan-ll28
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -360,7 +360,7 @@ index 000000000..be19a3127
 +2016-09-10 UKSM 0.1.2.5 Fix a bug in dedup ratio calculation.
 +2017-02-26 UKSM 0.1.2.6 Fix a bug in hugetlbpage handling and a race bug with page migration.
 diff --git a/Makefile b/Makefile
-index f7666051d..c1c33d52c 100644
+index f39bc4ddf..e737dbb57 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Shy Crocodile
@@ -12948,7 +12948,7 @@ index 000000000..20dcf19ea
 +}
 +#endif /* BMQ_SCHED_H */
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 01a2489de..ec392c55b 100644
+index 62cc29364..4f427518a 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -44,7 +44,7 @@ const_debug unsigned int sysctl_sched_features =
@@ -12973,7 +12973,7 @@ index 01a2489de..ec392c55b 100644
  /*
   * __task_rq_lock - lock the rq @p resides on.
 diff --git a/kernel/sched/cpufreq_schedutil.c b/kernel/sched/cpufreq_schedutil.c
-index 033ec7c45..72b270813 100644
+index 1ccf77f6d..4ecf11a83 100644
 --- a/kernel/sched/cpufreq_schedutil.c
 +++ b/kernel/sched/cpufreq_schedutil.c
 @@ -175,6 +175,7 @@ static unsigned int get_next_freq(struct sugov_policy *sg_policy,
@@ -12998,7 +12998,7 @@ index 033ec7c45..72b270813 100644
  
  /**
   * sugov_iowait_reset() - Reset the IO boost status of a CPU.
-@@ -435,7 +443,9 @@ static inline bool sugov_cpu_is_busy(struct sugov_cpu *sg_cpu) { return false; }
+@@ -424,7 +432,9 @@ static inline bool sugov_cpu_is_busy(struct sugov_cpu *sg_cpu) { return false; }
   */
  static inline void ignore_dl_rate_limit(struct sugov_cpu *sg_cpu, struct sugov_policy *sg_policy)
  {
@@ -13008,7 +13008,7 @@ index 033ec7c45..72b270813 100644
  		sg_policy->need_freq_update = true;
  }
  
-@@ -676,6 +686,7 @@ static int sugov_kthread_create(struct sugov_policy *sg_policy)
+@@ -665,6 +675,7 @@ static int sugov_kthread_create(struct sugov_policy *sg_policy)
  	}
  
  	ret = sched_setattr_nocheck(thread, &attr);
@@ -13016,7 +13016,7 @@ index 033ec7c45..72b270813 100644
  	if (ret) {
  		kthread_stop(thread);
  		pr_warn("%s: failed to set SCHED_DEADLINE\n", __func__);
-@@ -905,6 +916,7 @@ static int __init sugov_register(void)
+@@ -896,6 +907,7 @@ static int __init sugov_register(void)
  fs_initcall(sugov_register);
  
  #ifdef CONFIG_ENERGY_MODEL
@@ -13024,7 +13024,7 @@ index 033ec7c45..72b270813 100644
  extern bool sched_energy_update;
  extern struct mutex sched_energy_mutex;
  
-@@ -935,4 +947,10 @@ void sched_cpufreq_governor_change(struct cpufreq_policy *policy,
+@@ -926,4 +938,10 @@ void sched_cpufreq_governor_change(struct cpufreq_policy *policy,
  	}
  
  }
