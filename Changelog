@@ -1,3 +1,7 @@
+5.0-lucjan-ll27
+
+- add e1000e-start-network-tx-queue-only-when-link-is-up.patch
+
 5.0-lucjan-ll26-rc1 --> 5.0-lucjan-ll26
 
 5.0-lucjan-ll26-rc1
