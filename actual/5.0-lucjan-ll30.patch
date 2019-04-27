@@ -1,6 +1,6 @@
-From 7913c9b48b4fbf475df89b8f5cf2c6849ea77e6d Mon Sep 17 00:00:00 2001
+From c3343b042dfcfc0f24433df1d741f51f01f30356 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Wed, 24 Apr 2019 21:37:23 +0200
+Date: Sat, 27 Apr 2019 14:56:10 +0200
 Subject: [PATCH] 5.0-lucjan-ll30
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -360,7 +360,7 @@ index 000000000..be19a3127
 +2016-09-10 UKSM 0.1.2.5 Fix a bug in dedup ratio calculation.
 +2017-02-26 UKSM 0.1.2.6 Fix a bug in hugetlbpage handling and a race bug with page migration.
 diff --git a/Makefile b/Makefile
-index c040d4b0f..b278e1b94 100644
+index b282c4143..6daf8b6c9 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Shy Crocodile
@@ -13242,7 +13242,7 @@ index 750fb3c67..0cc040a28 100644
  	}
  	return 0;
 diff --git a/kernel/sysctl.c b/kernel/sysctl.c
-index 28ec71d91..14f5e5582 100644
+index f50f1471c..f522f8049 100644
 --- a/kernel/sysctl.c
 +++ b/kernel/sysctl.c
 @@ -106,6 +106,9 @@ extern int core_uses_pid;
@@ -13255,7 +13255,7 @@ index 28ec71d91..14f5e5582 100644
  extern int pid_max;
  extern int pid_max_min, pid_max_max;
  extern int percpu_pagelist_fraction;
-@@ -130,6 +133,9 @@ static unsigned long one_ul = 1;
+@@ -131,6 +134,9 @@ static unsigned long one_ul = 1;
  static unsigned long long_max = LONG_MAX;
  static int one_hundred = 100;
  static int one_thousand = 1000;
@@ -13265,7 +13265,7 @@ index 28ec71d91..14f5e5582 100644
  #ifdef CONFIG_PRINTK
  static int ten_thousand = 10000;
  #endif
-@@ -297,7 +303,7 @@ static struct ctl_table sysctl_base_table[] = {
+@@ -298,7 +304,7 @@ static struct ctl_table sysctl_base_table[] = {
  	{ }
  };
  
@@ -13274,7 +13274,7 @@ index 28ec71d91..14f5e5582 100644
  static int min_sched_granularity_ns = 100000;		/* 100 usecs */
  static int max_sched_granularity_ns = NSEC_PER_SEC;	/* 1 second */
  static int min_wakeup_granularity_ns;			/* 0 usecs */
-@@ -314,6 +320,7 @@ static int max_extfrag_threshold = 1000;
+@@ -315,6 +321,7 @@ static int max_extfrag_threshold = 1000;
  #endif
  
  static struct ctl_table kern_table[] = {
@@ -13282,7 +13282,7 @@ index 28ec71d91..14f5e5582 100644
  	{
  		.procname	= "sched_child_runs_first",
  		.data		= &sysctl_sched_child_runs_first,
-@@ -468,6 +475,7 @@ static struct ctl_table kern_table[] = {
+@@ -469,6 +476,7 @@ static struct ctl_table kern_table[] = {
  		.extra1		= &one,
  	},
  #endif
@@ -13290,7 +13290,7 @@ index 28ec71d91..14f5e5582 100644
  #ifdef CONFIG_PROVE_LOCKING
  	{
  		.procname	= "prove_locking",
-@@ -516,6 +524,15 @@ static struct ctl_table kern_table[] = {
+@@ -517,6 +525,15 @@ static struct ctl_table kern_table[] = {
  		.proc_handler	= proc_dointvec,
  	},
  #endif
@@ -13306,7 +13306,7 @@ index 28ec71d91..14f5e5582 100644
  #ifdef CONFIG_PROC_SYSCTL
  	{
  		.procname	= "tainted",
-@@ -1040,6 +1057,17 @@ static struct ctl_table kern_table[] = {
+@@ -1041,6 +1058,17 @@ static struct ctl_table kern_table[] = {
  		.proc_handler	= proc_dointvec,
  	},
  #endif
@@ -19912,5 +19912,5 @@ index f807f2e3b..0b9d45d55 100644
  	"nr_dirty_threshold",
  	"nr_dirty_background_threshold",
 -- 
-2.21.0.419.gffac537e6c
+2.21.0.777.g83232e3864
 
