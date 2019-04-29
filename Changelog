@@ -1,3 +1,7 @@
+5.0-lucjan-ll32-rc1
+
+- sync with upstream (drop block-bfq-fix-use-after-free-in-bfq_bfqq_expire.patch, drop block-loop-Do-not-print-warn-message-if-partition-sc.patch, resync block-bfq-fix-some-typos-in-comments.patch)
+
 5.0-lucjan-ll31
 
 - add block-Kconf-iosched-set-default-value-of-IOSCHED_BFQ.patch
