@@ -1,6 +1,6 @@
-From ef4877f308cc419923550b5d5520b11e6730ac81 Mon Sep 17 00:00:00 2001
+From b34269d919de3485fca6c6c4a0e3352f7a45f8e7 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Mon, 29 Apr 2019 21:42:51 +0200
+Date: Mon, 29 Apr 2019 22:25:07 +0200
 Subject: [PATCH] 5.0-lucjan-ll32
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3194,7 +3194,7 @@ index 746bd570b..e7dc07cf9 100644
  
  #endif /* CONFIG_BFQ_GROUP_IOSCHED */
 diff --git a/block/bfq-wf2q.c b/block/bfq-wf2q.c
-index 4aab1a819..d2ea98ef2 100644
+index 8077bf71d..48d899cfb 100644
 --- a/block/bfq-wf2q.c
 +++ b/block/bfq-wf2q.c
 @@ -44,6 +44,12 @@ static unsigned int bfq_class_idx(struct bfq_entity *entity)
@@ -3279,7 +3279,7 @@ index 4aab1a819..d2ea98ef2 100644
  		return NULL;
  
  	/*
-@@ -1665,7 +1671,7 @@ void bfq_del_bfqq_busy(struct bfq_data *bfqd, struct bfq_queue *bfqq,
+@@ -1678,7 +1684,7 @@ void bfq_del_bfqq_busy(struct bfq_data *bfqd, struct bfq_queue *bfqq,
  
  	bfq_clear_bfqq_busy(bfqq);
  
@@ -3288,7 +3288,7 @@ index 4aab1a819..d2ea98ef2 100644
  
  	if (bfqq->wr_coeff > 1)
  		bfqd->wr_busy_queues--;
-@@ -1688,7 +1694,7 @@ void bfq_add_bfqq_busy(struct bfq_data *bfqd, struct bfq_queue *bfqq)
+@@ -1701,7 +1707,7 @@ void bfq_add_bfqq_busy(struct bfq_data *bfqd, struct bfq_queue *bfqq)
  	bfq_activate_bfqq(bfqd, bfqq);
  
  	bfq_mark_bfqq_busy(bfqq);
