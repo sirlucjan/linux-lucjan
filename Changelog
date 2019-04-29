@@ -1,3 +1,7 @@
+5.0-lucjan-ll31
+
+- add block-Kconf-iosched-set-default-value-of-IOSCHED_BFQ.patch
+
 5.0-lucjan-ll30-rc1 --> 5.0-lucjan-ll30
 
 5.0-lucjan-ll30-rc1
