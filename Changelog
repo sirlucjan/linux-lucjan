@@ -1,3 +1,7 @@
+5.0-lucjan-ll32-rc2
+
+- add BMQ 0.93
+
 5.0-lucjan-ll32-rc1
 
 - sync with upstream (drop block-bfq-fix-use-after-free-in-bfq_bfqq_expire.patch, drop block-loop-Do-not-print-warn-message-if-partition-sc.patch, resync block-bfq-fix-some-typos-in-comments.patch)
