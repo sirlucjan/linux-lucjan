@@ -1,6 +1,6 @@
-From 07802d7ff2b2aa36a13a64805ddfedbefb92aea4 Mon Sep 17 00:00:00 2001
+From a0b690e9f3ec445924ae2e43117d0dab7761349d Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Tue, 30 Apr 2019 11:00:03 +0200
+Date: Wed, 1 May 2019 11:33:08 +0200
 Subject: [PATCH] 5.0-lucjan-ll32
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -360,7 +360,7 @@ index 000000000..be19a3127
 +2016-09-10 UKSM 0.1.2.5 Fix a bug in dedup ratio calculation.
 +2017-02-26 UKSM 0.1.2.6 Fix a bug in hugetlbpage handling and a race bug with page migration.
 diff --git a/Makefile b/Makefile
-index b282c4143..1d7d40373 100644
+index 35268bbff..13b6a668b 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Shy Crocodile
@@ -767,7 +767,7 @@ index 6adce1526..f8612b07d 100644
  config X86_MINIMUM_CPU_FAMILY
  	int
 diff --git a/arch/x86/Makefile b/arch/x86/Makefile
-index 9c5a67d1b..500189f46 100644
+index c0c7291d4..4a8b3c1fd 100644
 --- a/arch/x86/Makefile
 +++ b/arch/x86/Makefile
 @@ -118,13 +118,46 @@ else
@@ -2971,7 +2971,7 @@ index 72510c470..b85a4ab8b 100644
  		.init_sched		= bfq_init_queue,
  		.exit_sched		= bfq_exit_queue,
 diff --git a/block/bfq-iosched.h b/block/bfq-iosched.h
-index 746bd570b..e7dc07cf9 100644
+index ca98c98a8..eba7cd449 100644
 --- a/block/bfq-iosched.h
 +++ b/block/bfq-iosched.h
 @@ -32,6 +32,8 @@
