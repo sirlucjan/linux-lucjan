@@ -1,6 +1,6 @@
-From a0b690e9f3ec445924ae2e43117d0dab7761349d Mon Sep 17 00:00:00 2001
+From 43fb03ef702974c0ccc150ab36f42761a8480f9d Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Wed, 1 May 2019 11:33:08 +0200
+Date: Fri, 3 May 2019 14:23:25 +0200
 Subject: [PATCH] 5.0-lucjan-ll32
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -360,7 +360,7 @@ index 000000000..be19a3127
 +2016-09-10 UKSM 0.1.2.5 Fix a bug in dedup ratio calculation.
 +2017-02-26 UKSM 0.1.2.6 Fix a bug in hugetlbpage handling and a race bug with page migration.
 diff --git a/Makefile b/Makefile
-index 35268bbff..13b6a668b 100644
+index 45e321b07..e84777deb 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Shy Crocodile
@@ -374,7 +374,7 @@ index 35268bbff..13b6a668b 100644
  # That's our default target when none is given on the command line
  PHONY := _all
  _all:
-@@ -518,6 +522,7 @@ ifneq ($(GCC_TOOLCHAIN),)
+@@ -520,6 +524,7 @@ ifneq ($(GCC_TOOLCHAIN),)
  CLANG_FLAGS	+= --gcc-toolchain=$(GCC_TOOLCHAIN)
  endif
  CLANG_FLAGS	+= -no-integrated-as
@@ -382,7 +382,7 @@ index 35268bbff..13b6a668b 100644
  KBUILD_CFLAGS	+= $(CLANG_FLAGS)
  KBUILD_AFLAGS	+= $(CLANG_FLAGS)
  export CLANG_FLAGS
-@@ -680,12 +685,16 @@ KBUILD_CFLAGS	+= $(call cc-disable-warning, int-in-bool-context)
+@@ -682,12 +687,16 @@ KBUILD_CFLAGS	+= $(call cc-disable-warning, int-in-bool-context)
  ifdef CONFIG_CC_OPTIMIZE_FOR_SIZE
  KBUILD_CFLAGS	+= -Os $(call cc-disable-warning,maybe-uninitialized,)
  else
@@ -5406,10 +5406,10 @@ index 161e8164a..f0dbdf3c9 100644
 +
  #endif /* __LINUX_KSM_H */
 diff --git a/include/linux/mm.h b/include/linux/mm.h
-index 80bb6408f..4b10482bb 100644
+index 7000ddd80..867572314 100644
 --- a/include/linux/mm.h
 +++ b/include/linux/mm.h
-@@ -2447,8 +2447,8 @@ int __must_check write_one_page(struct page *page);
+@@ -2460,8 +2460,8 @@ int __must_check write_one_page(struct page *page);
  void task_dirty_inc(struct task_struct *tsk);
  
  /* readahead.c */
