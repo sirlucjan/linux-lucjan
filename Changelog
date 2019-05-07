@@ -1,3 +1,8 @@
+5.1-lucjan-ll1-rc2
+
+- drop nfp-make-friends-with-O3.patch
+- add nfp-bpf-fix-static-check-error-through-tightening-sh.patch
+
 5.1-lucjan-ll1-rc1
 
 - add add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
