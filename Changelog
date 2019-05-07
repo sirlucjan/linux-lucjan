@@ -1,3 +1,55 @@
+5.1-lucjan-ll1-rc1
+
+- add add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
+- add block-bfq-fix-some-typos-in-comments.patch
+- add block-bfq-delete-bfq-prefix-from-cgroup-filenames.patch
+- add block-Kconfig.iosched-set-default-value-of-IOSCHED_BFQ.patch
+- add block-bfq-increase-idling-for-weight-raised-queues.patch
+- add bfq-do-not-idle-for-lowest-weight-queues.patch
+- add block-bfq-tune-service-injection-basing-on-request-s.patch
+- add block-bfq-do-not-merge-queues-on-flash-storage-with-.patch
+- add block-bfq-do-not-tag-totally-seeky-queues-as-soft-rt.patch
+- add block-bfq-always-protect-newly-created-queues-from-e.patch
+- add block-bfq-print-SHARED-instead-of-pid-for-shared-que.patch
+- add block-bfq-save-resume-weight-on-a-queue-merge-split.patch
+- add doc-block-bfq-add-information-on-bfq-execution-time.patch
+- add blk-throttle-verify-format-of-bandwidth-limit-and-de.patch
+- add blkcg-Prevent-priority-inversion-problem-during-sync.patch
+- add blkcg-Prevent-priority-inversion-problem-during-sync.patch
+- add blk-mq-Use-static_rqs-to-iterate-busy-tags-v2.patch
+- add blk-mq-fix-races-related-with-freeing-queue.patch
+- add blk-mq-Fix-memory-leak-in-error-handling.patch
+- add block-break-loop-when-getting-target-major-number-in.patch
+- add block-Remove-redundant-unlikely-annotation.patch
+- add block-Fix-a-WRITE-SAME-BUG_ON.patch
+- add block-loop-set-GENHD_FL_NO_PART_SCAN-after-blkdev_re.patch
+- add block-Init-flush-rq-ref-count-to-1.patch
+- add block-Code-cleanup-for-bio_find_or_create_slab.patch
+- add block-Don-t-check-if-adjacent-bvecs-in-one-bio-can-b.patch
+- add block-Fix-use-after-free-of-gendisk.patch
+- add block-Add-a-req_bvec-helper.patch
+- add block-Skip-media-change-event-handling-if-unsupporte.patch
+- add cpu-5.1-merge-graysky-s-patchset.patch
+- add cpu-5.1-add-a-CONFIG-option-that-sets-O3.patch
+- add nfp-make-friends-with-O3.patch
+- add BMQ 0.94
+- add io_uring-fix-shadowed-variable-ret-return-code-being.patch
+- add io_uring-restructure-io_-read-write-control-flow.patch
+- add LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch
+- add LL-elevator-set-default-scheduler-to-bfq-for-blk-mq.patch
+- add mm-Set-2048-max-kilobytes-to-read-ahead-for-filesyst.patch
+- add sched-core-nr_migrate-128-increases-number-of-tasks-.patch
+- add LL-Add-.ll-version.patch
+- add loop-Better-discard-for-block-devices.patch
+- add Revert-e1000e-fix-cyclic-resets-at-link-up-with-acti.patch
+- add e1000e-start-network-tx-queue-only-when-link-is-up.patch
+- add scsi-sd-block-Fix-regressions-in-read-only-block-dev.patch
+- add scsi-sd-block-Update-fix-regressions-in-read-only-bl.patch
+- add uksm-5.1-initial-submission.patch
+- add uksm-5.1-apply-52d1e606ee733.patch
+- add ZEN-Add-CONFIG-for-unprivileged_userns_clone.patch
+- add infiniband-Fix-__read_overflow2-error-with-O3-inlini.patch
+
 5.0-lucjan-ll34-rc1 --> 5.0-lucjan-ll34
 
 5.0-lucjan-ll34-rc1
