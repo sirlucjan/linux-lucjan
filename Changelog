@@ -1,3 +1,8 @@
+5.1-lucjan-ll1-rc4
+
+- drop UKSM
+- add mm-ksm-always-merge-anonymous-memory.patch
+
 5.1-lucjan-ll1-rc3
 
 - add Revert-bmq-Sync-c546951d9c93-sched-core-Use-READ_ONC.patch
