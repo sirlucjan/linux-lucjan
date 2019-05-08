@@ -1,6 +1,6 @@
-From 91e4aae09b7d95f1410bfd58d40ae181d799bc97 Mon Sep 17 00:00:00 2001
+From 81159eb01da35e53126a513de3ebe68c7245ec26 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Sun, 5 May 2019 14:21:57 +0200
+Date: Mon, 6 May 2019 12:53:45 +0200
 Subject: [PATCH] 5.0-lucjan-ll34
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -360,7 +360,7 @@ index 000000000..be19a3127
 +2016-09-10 UKSM 0.1.2.5 Fix a bug in dedup ratio calculation.
 +2017-02-26 UKSM 0.1.2.6 Fix a bug in hugetlbpage handling and a race bug with page migration.
 diff --git a/Makefile b/Makefile
-index e7a028553..5cb89d7f9 100644
+index 18b6e1fcd..b70661160 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Shy Crocodile
@@ -3869,7 +3869,7 @@ index 61deab0b5..bcbb699f0 100644
  static inline struct sbq_wait_state *bt_wait_ptr(struct sbitmap_queue *bt,
  						 struct blk_mq_hw_ctx *hctx)
 diff --git a/block/blk-mq.c b/block/blk-mq.c
-index 16f9675c5..0af76f19c 100644
+index 5a2585d69..d5dc9bdfd 100644
 --- a/block/blk-mq.c
 +++ b/block/blk-mq.c
 @@ -59,7 +59,8 @@ static int blk_mq_poll_stats_bkt(const struct request *rq)
@@ -4026,7 +4026,7 @@ index 16f9675c5..0af76f19c 100644
  
  		/*
  		 * It's possible that a tag was freed in the window between the
-@@ -2012,11 +2014,13 @@ static blk_qc_t blk_mq_make_request(struct request_queue *q, struct bio *bio)
+@@ -2013,11 +2015,13 @@ static blk_qc_t blk_mq_make_request(struct request_queue *q, struct bio *bio)
  			plug->rq_count--;
  		}
  		blk_add_rq_to_plug(plug, rq);
@@ -4040,7 +4040,7 @@ index 16f9675c5..0af76f19c 100644
  			blk_mq_try_issue_directly(data.hctx, same_queue_rq,
  					&cookie);
  		}
-@@ -2826,7 +2830,7 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
+@@ -2827,7 +2831,7 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
  		goto err_exit;
  
  	if (blk_mq_alloc_ctxs(q))
@@ -4049,7 +4049,7 @@ index 16f9675c5..0af76f19c 100644
  
  	/* init q->mq_kobj and sw queues' kobjects */
  	blk_mq_sysfs_init(q);
-@@ -2870,7 +2874,7 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
+@@ -2871,7 +2875,7 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
  	/*
  	 * Default to classic polling
  	 */
@@ -4058,7 +4058,7 @@ index 16f9675c5..0af76f19c 100644
  
  	blk_mq_init_cpu_queues(q, set->nr_hw_queues);
  	blk_mq_add_queue_tag_set(set, q);
-@@ -2890,6 +2894,9 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
+@@ -2891,6 +2895,9 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
  	kfree(q->queue_hw_ctx);
  err_sys_init:
  	blk_mq_sysfs_deinit(q);
@@ -4068,7 +4068,7 @@ index 16f9675c5..0af76f19c 100644
  err_exit:
  	q->mq_ops = NULL;
  	return ERR_PTR(-ENOMEM);
-@@ -3123,6 +3130,8 @@ int blk_mq_update_nr_requests(struct request_queue *q, unsigned int nr)
+@@ -3124,6 +3131,8 @@ int blk_mq_update_nr_requests(struct request_queue *q, unsigned int nr)
  		}
  		if (ret)
  			break;
@@ -4077,7 +4077,7 @@ index 16f9675c5..0af76f19c 100644
  	}
  
  	if (!ret)
-@@ -3220,10 +3229,6 @@ static void __blk_mq_update_nr_hw_queues(struct blk_mq_tag_set *set,
+@@ -3221,10 +3230,6 @@ static void __blk_mq_update_nr_hw_queues(struct blk_mq_tag_set *set,
  
  	list_for_each_entry(q, &set->tag_list, tag_set_list)
  		blk_mq_freeze_queue(q);
@@ -4088,7 +4088,7 @@ index 16f9675c5..0af76f19c 100644
  	/*
  	 * Switch IO scheduler to 'none', cleaning up the data associated
  	 * with the previous scheduler. We will switch back once we are done
-@@ -3402,7 +3407,7 @@ static bool blk_mq_poll_hybrid(struct request_queue *q,
+@@ -3403,7 +3408,7 @@ static bool blk_mq_poll_hybrid(struct request_queue *q,
  {
  	struct request *rq;
  

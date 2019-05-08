@@ -417,12 +417,9 @@
 │       └── 5.1-lucjan-ll1-rc1.patch.sig
 ├── Changelog
 ├── Files
-├── pending
-│   ├── 5.0-lucjan-ll34.patch
-│   └── 5.0-lucjan-ll34.patch.sig
 ├── README.md
 └── trunk
     ├── 5.1-lucjan-ll1-rc2.patch
     └── 5.1-lucjan-ll1-rc2.patch.sig
 
-10 directories, 415 files
+9 directories, 413 files
