@@ -1,3 +1,7 @@
+5.1-lucjan-ll1-rc3
+
+- add Revert-bmq-Sync-c546951d9c93-sched-core-Use-READ_ONC.patch
+
 5.1-lucjan-ll1-rc2
 
 - drop nfp-make-friends-with-O3.patch
