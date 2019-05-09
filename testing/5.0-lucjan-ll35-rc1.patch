@@ -1,6 +1,6 @@
-From 31d02b92062b2a0d2b1dd7168cbdfffe2ef9beb1 Mon Sep 17 00:00:00 2001
+From 2ad52308d8ac5e6189c2438df7a0bea21480ae26 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Thu, 9 May 2019 20:38:58 +0200
+Date: Thu, 9 May 2019 21:53:04 +0200
 Subject: [PATCH] 5.0-lucjan-ll35
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -122,7 +122,7 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  create mode 100644 mm/uksm.c
 
 diff --git a/Documentation/block/bfq-iosched.txt b/Documentation/block/bfq-iosched.txt
-index 98a8dd5..1a0f2ac 100644
+index 98a8dd5ee..1a0f2ac02 100644
 --- a/Documentation/block/bfq-iosched.txt
 +++ b/Documentation/block/bfq-iosched.txt
 @@ -20,13 +20,26 @@ for that device, by setting low_latency to 0. See Section 3 for
@@ -167,7 +167,7 @@ index 98a8dd5..1a0f2ac 100644
 +[3] https://github.com/Algodev-github/S
 diff --git a/Documentation/scheduler/sched-BMQ.txt b/Documentation/scheduler/sched-BMQ.txt
 new file mode 100644
-index 0000000..52a8fe5
+index 000000000..52a8fe57e
 --- /dev/null
 +++ b/Documentation/scheduler/sched-BMQ.txt
 @@ -0,0 +1,95 @@
@@ -267,7 +267,7 @@ index 0000000..52a8fe5
 +
 +To be continued...
 diff --git a/Documentation/sysctl/kernel.txt b/Documentation/sysctl/kernel.txt
-index c0527d8..d74c91c 100644
+index c0527d8a4..d74c91cd6 100644
 --- a/Documentation/sysctl/kernel.txt
 +++ b/Documentation/sysctl/kernel.txt
 @@ -99,6 +99,7 @@ show up in /proc/sys/kernel:
@@ -294,7 +294,7 @@ index c0527d8..d74c91c 100644
 +==============================================================
 diff --git a/Documentation/vm/uksm.txt b/Documentation/vm/uksm.txt
 new file mode 100644
-index 0000000..be19a31
+index 000000000..be19a3127
 --- /dev/null
 +++ b/Documentation/vm/uksm.txt
 @@ -0,0 +1,61 @@
@@ -360,7 +360,7 @@ index 0000000..be19a31
 +2016-09-10 UKSM 0.1.2.5 Fix a bug in dedup ratio calculation.
 +2017-02-26 UKSM 0.1.2.6 Fix a bug in hugetlbpage handling and a race bug with page migration.
 diff --git a/Makefile b/Makefile
-index 51a8195..560e9d4 100644
+index b0bdced59..04668626f 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Shy Crocodile
@@ -400,7 +400,7 @@ index 51a8195..560e9d4 100644
  KBUILD_CFLAGS += $(call cc-ifversion, -lt, 0409, \
  			$(call cc-disable-warning,maybe-uninitialized,))
 diff --git a/arch/powerpc/platforms/cell/spufs/sched.c b/arch/powerpc/platforms/cell/spufs/sched.c
-index 9fcccb4..7f2b6c2 100644
+index 9fcccb449..7f2b6c226 100644
 --- a/arch/powerpc/platforms/cell/spufs/sched.c
 +++ b/arch/powerpc/platforms/cell/spufs/sched.c
 @@ -64,11 +64,6 @@ static struct task_struct *spusched_task;
@@ -416,7 +416,7 @@ index 9fcccb4..7f2b6c2 100644
   * Frequency of the spu scheduler tick.  By default we do one SPU scheduler
   * tick for every 10 CPU scheduler ticks.
 diff --git a/arch/x86/Kconfig.cpu b/arch/x86/Kconfig.cpu
-index 6adce15..f8612b0 100644
+index 6adce1526..f8612b07d 100644
 --- a/arch/x86/Kconfig.cpu
 +++ b/arch/x86/Kconfig.cpu
 @@ -116,6 +116,7 @@ config MPENTIUMM
@@ -767,7 +767,7 @@ index 6adce15..f8612b0 100644
  config X86_MINIMUM_CPU_FAMILY
  	int
 diff --git a/arch/x86/Makefile b/arch/x86/Makefile
-index c0c7291..4a8b3c1 100644
+index c0c7291d4..4a8b3c1fd 100644
 --- a/arch/x86/Makefile
 +++ b/arch/x86/Makefile
 @@ -118,13 +118,46 @@ else
@@ -821,7 +821,7 @@ index c0c7291..4a8b3c1 100644
          KBUILD_CFLAGS += $(cflags-y)
  
 diff --git a/arch/x86/Makefile_32.cpu b/arch/x86/Makefile_32.cpu
-index 1f5faf8..14a6d19 100644
+index 1f5faf860..14a6d1999 100644
 --- a/arch/x86/Makefile_32.cpu
 +++ b/arch/x86/Makefile_32.cpu
 @@ -23,7 +23,18 @@ cflags-$(CONFIG_MK6)		+= -march=k6
@@ -866,7 +866,7 @@ index 1f5faf8..14a6d19 100644
  # AMD Elan support
  cflags-$(CONFIG_MELAN)		+= -march=i486
 diff --git a/arch/x86/include/asm/module.h b/arch/x86/include/asm/module.h
-index 7948a17..44b7762 100644
+index 7948a17fe..44b776297 100644
 --- a/arch/x86/include/asm/module.h
 +++ b/arch/x86/include/asm/module.h
 @@ -25,6 +25,30 @@ struct mod_arch_specific {
@@ -928,7 +928,7 @@ index 7948a17..44b7762 100644
  #define MODULE_PROC_FAMILY "ELAN "
  #elif defined CONFIG_MCRUSOE
 diff --git a/block/Kconfig.iosched b/block/Kconfig.iosched
-index 4626b88..01d05ab 100644
+index 4626b88b2..01d05ab68 100644
 --- a/block/Kconfig.iosched
 +++ b/block/Kconfig.iosched
 @@ -20,6 +20,7 @@ config MQ_IOSCHED_KYBER
@@ -940,7 +940,7 @@ index 4626b88..01d05ab 100644
  	BFQ I/O scheduler for BLK-MQ. BFQ distributes the bandwidth of
  	of the device among all processes according to their weights,
 diff --git a/block/bfq-cgroup.c b/block/bfq-cgroup.c
-index c6113af..b9e9945 100644
+index c6113af31..b9e99453e 100644
 --- a/block/bfq-cgroup.c
 +++ b/block/bfq-cgroup.c
 @@ -578,7 +578,8 @@ void bfq_bfqq_move(struct bfq_data *bfqd, struct bfq_queue *bfqq,
@@ -1104,7 +1104,7 @@ index c6113af..b9e9945 100644
  		.seq_show = bfq_io_show_weight,
  		.write = bfq_io_set_weight,
 diff --git a/block/bfq-iosched.c b/block/bfq-iosched.c
-index 72510c4..b85a4ab 100644
+index 72510c470..b85a4ab8b 100644
 --- a/block/bfq-iosched.c
 +++ b/block/bfq-iosched.c
 @@ -189,7 +189,7 @@ static const int bfq_default_max_budget = 16 * 1024;
@@ -2971,7 +2971,7 @@ index 72510c4..b85a4ab 100644
  		.init_sched		= bfq_init_queue,
  		.exit_sched		= bfq_exit_queue,
 diff --git a/block/bfq-iosched.h b/block/bfq-iosched.h
-index ca98c98..eba7cd4 100644
+index ca98c98a8..eba7cd449 100644
 --- a/block/bfq-iosched.h
 +++ b/block/bfq-iosched.h
 @@ -32,6 +32,8 @@
@@ -3194,7 +3194,7 @@ index ca98c98..eba7cd4 100644
  
  #endif /* CONFIG_BFQ_GROUP_IOSCHED */
 diff --git a/block/bfq-wf2q.c b/block/bfq-wf2q.c
-index 8077bf7..48d899c 100644
+index 8077bf71d..48d899cfb 100644
 --- a/block/bfq-wf2q.c
 +++ b/block/bfq-wf2q.c
 @@ -44,6 +44,12 @@ static unsigned int bfq_class_idx(struct bfq_entity *entity)
@@ -3298,7 +3298,7 @@ index 8077bf7..48d899c 100644
  	if (!bfqq->dispatched)
  		if (bfqq->wr_coeff == 1)
 diff --git a/block/bio.c b/block/bio.c
-index a06f58b..bad405e 100644
+index a06f58bd4..bad405e95 100644
 --- a/block/bio.c
 +++ b/block/bio.c
 @@ -90,29 +90,27 @@ static struct kmem_cache *bio_find_or_create_slab(unsigned int extra_size)
@@ -3355,7 +3355,7 @@ index a06f58b..bad405e 100644
  	mutex_unlock(&bio_slab_lock);
  	return slab;
 diff --git a/block/blk-cgroup.c b/block/blk-cgroup.c
-index 2bed572..11929b3 100644
+index 2bed5725a..11929b39a 100644
 --- a/block/blk-cgroup.c
 +++ b/block/blk-cgroup.c
 @@ -880,7 +880,7 @@ int blkg_conf_prep(struct blkcg *blkcg, const struct blkcg_policy *pol,
@@ -3528,7 +3528,7 @@ index 2bed572..11929b3 100644
   * Charge @delta to the blkg's current delay accumulation.  This is used to
   * throttle tasks if an IO controller thinks we need more throttling.
 diff --git a/block/blk-core.c b/block/blk-core.c
-index 5bde73a..3729d6d 100644
+index 5bde73a49..3729d6dfc 100644
 --- a/block/blk-core.c
 +++ b/block/blk-core.c
 @@ -116,6 +116,7 @@ void blk_rq_init(struct request_queue *q, struct request *rq)
@@ -3549,7 +3549,7 @@ index 5bde73a..3729d6d 100644
  
  		if (op_is_flush(bio->bi_opf) && !bio_sectors(bio))
 diff --git a/block/blk-flush.c b/block/blk-flush.c
-index 6e0f2d9..d95f948 100644
+index 6e0f2d97f..d95f94892 100644
 --- a/block/blk-flush.c
 +++ b/block/blk-flush.c
 @@ -220,7 +220,7 @@ static void flush_end_io(struct request *flush_rq, blk_status_t error)
@@ -3571,7 +3571,7 @@ index 6e0f2d9..d95f948 100644
  
  	/*
 diff --git a/block/blk-mq-debugfs.c b/block/blk-mq-debugfs.c
-index 7921573..0cec9c7 100644
+index 7921573ae..0cec9c735 100644
 --- a/block/blk-mq-debugfs.c
 +++ b/block/blk-mq-debugfs.c
 @@ -442,7 +442,7 @@ static int hctx_busy_show(void *data, struct seq_file *m)
@@ -3584,7 +3584,7 @@ index 7921573..0cec9c7 100644
  
  	return 0;
 diff --git a/block/blk-mq-tag.c b/block/blk-mq-tag.c
-index 2089c6c..930597c 100644
+index 2089c6c62..930597cde 100644
 --- a/block/blk-mq-tag.c
 +++ b/block/blk-mq-tag.c
 @@ -216,26 +216,38 @@ struct bt_iter_data {
@@ -3853,7 +3853,7 @@ index 2089c6c..930597c 100644
  		    bool round_robin, int node)
  {
 diff --git a/block/blk-mq-tag.h b/block/blk-mq-tag.h
-index 61deab0..bcbb699 100644
+index 61deab0b5..bcbb699f0 100644
 --- a/block/blk-mq-tag.h
 +++ b/block/blk-mq-tag.h
 @@ -32,9 +32,9 @@ extern bool blk_mq_has_free_tags(struct blk_mq_tags *tags);
@@ -3869,7 +3869,7 @@ index 61deab0..bcbb699 100644
  static inline struct sbq_wait_state *bt_wait_ptr(struct sbitmap_queue *bt,
  						 struct blk_mq_hw_ctx *hctx)
 diff --git a/block/blk-mq.c b/block/blk-mq.c
-index 16f9675..40b8d19 100644
+index 6930c82ab..1c05047d0 100644
 --- a/block/blk-mq.c
 +++ b/block/blk-mq.c
 @@ -59,7 +59,8 @@ static int blk_mq_poll_stats_bkt(const struct request *rq)
@@ -3902,7 +3902,7 @@ index 16f9675..40b8d19 100644
  				     bool reserved)
  {
  	struct mq_inflight *mi = priv;
-@@ -786,7 +785,6 @@ void blk_mq_add_to_requeue_list(struct request *rq, bool at_head,
+@@ -793,7 +792,6 @@ void blk_mq_add_to_requeue_list(struct request *rq, bool at_head,
  	if (kick_requeue_list)
  		blk_mq_kick_requeue_list(q);
  }
@@ -3910,7 +3910,7 @@ index 16f9675..40b8d19 100644
  
  void blk_mq_kick_requeue_list(struct request_queue *q)
  {
-@@ -813,28 +811,22 @@ struct request *blk_mq_tag_to_rq(struct blk_mq_tags *tags, unsigned int tag)
+@@ -820,28 +818,22 @@ struct request *blk_mq_tag_to_rq(struct blk_mq_tags *tags, unsigned int tag)
  }
  EXPORT_SYMBOL(blk_mq_tag_to_rq);
  
@@ -3944,7 +3944,7 @@ index 16f9675..40b8d19 100644
  	return busy;
  }
  EXPORT_SYMBOL_GPL(blk_mq_queue_inflight);
-@@ -874,8 +866,7 @@ static bool blk_mq_req_expired(struct request *rq, unsigned long *next)
+@@ -881,8 +873,7 @@ static bool blk_mq_req_expired(struct request *rq, unsigned long *next)
  	return false;
  }
  
@@ -3954,7 +3954,7 @@ index 16f9675..40b8d19 100644
  {
  	unsigned long *next = priv;
  
-@@ -936,7 +927,7 @@ static void blk_mq_timeout_work(struct work_struct *work)
+@@ -943,7 +934,7 @@ static void blk_mq_timeout_work(struct work_struct *work)
  	if (!percpu_ref_tryget(&q->q_usage_counter))
  		return;
  
@@ -3963,7 +3963,7 @@ index 16f9675..40b8d19 100644
  
  	if (next != 0) {
  		mod_timer(&q->timeout, next);
-@@ -1104,8 +1095,7 @@ static bool blk_mq_mark_tag_wait(struct blk_mq_hw_ctx *hctx,
+@@ -1111,8 +1102,7 @@ static bool blk_mq_mark_tag_wait(struct blk_mq_hw_ctx *hctx,
  	bool ret;
  
  	if (!(hctx->flags & BLK_MQ_F_TAG_SHARED)) {
@@ -3973,7 +3973,7 @@ index 16f9675..40b8d19 100644
  
  		/*
  		 * It's possible that a tag was freed in the window between the
-@@ -2012,11 +2002,13 @@ static blk_qc_t blk_mq_make_request(struct request_queue *q, struct bio *bio)
+@@ -2020,11 +2010,13 @@ static blk_qc_t blk_mq_make_request(struct request_queue *q, struct bio *bio)
  			plug->rq_count--;
  		}
  		blk_add_rq_to_plug(plug, rq);
@@ -3987,7 +3987,7 @@ index 16f9675..40b8d19 100644
  			blk_mq_try_issue_directly(data.hctx, same_queue_rq,
  					&cookie);
  		}
-@@ -2826,7 +2818,7 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
+@@ -2834,7 +2826,7 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
  		goto err_exit;
  
  	if (blk_mq_alloc_ctxs(q))
@@ -3996,7 +3996,7 @@ index 16f9675..40b8d19 100644
  
  	/* init q->mq_kobj and sw queues' kobjects */
  	blk_mq_sysfs_init(q);
-@@ -2870,7 +2862,7 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
+@@ -2878,7 +2870,7 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
  	/*
  	 * Default to classic polling
  	 */
@@ -4005,7 +4005,7 @@ index 16f9675..40b8d19 100644
  
  	blk_mq_init_cpu_queues(q, set->nr_hw_queues);
  	blk_mq_add_queue_tag_set(set, q);
-@@ -2890,6 +2882,9 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
+@@ -2898,6 +2890,9 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
  	kfree(q->queue_hw_ctx);
  err_sys_init:
  	blk_mq_sysfs_deinit(q);
@@ -4015,7 +4015,7 @@ index 16f9675..40b8d19 100644
  err_exit:
  	q->mq_ops = NULL;
  	return ERR_PTR(-ENOMEM);
-@@ -3123,6 +3118,8 @@ int blk_mq_update_nr_requests(struct request_queue *q, unsigned int nr)
+@@ -3131,6 +3126,8 @@ int blk_mq_update_nr_requests(struct request_queue *q, unsigned int nr)
  		}
  		if (ret)
  			break;
@@ -4024,7 +4024,7 @@ index 16f9675..40b8d19 100644
  	}
  
  	if (!ret)
-@@ -3220,10 +3217,6 @@ static void __blk_mq_update_nr_hw_queues(struct blk_mq_tag_set *set,
+@@ -3228,10 +3225,6 @@ static void __blk_mq_update_nr_hw_queues(struct blk_mq_tag_set *set,
  
  	list_for_each_entry(q, &set->tag_list, tag_set_list)
  		blk_mq_freeze_queue(q);
@@ -4035,7 +4035,7 @@ index 16f9675..40b8d19 100644
  	/*
  	 * Switch IO scheduler to 'none', cleaning up the data associated
  	 * with the previous scheduler. We will switch back once we are done
-@@ -3402,7 +3395,7 @@ static bool blk_mq_poll_hybrid(struct request_queue *q,
+@@ -3410,7 +3403,7 @@ static bool blk_mq_poll_hybrid(struct request_queue *q,
  {
  	struct request *rq;
  
@@ -4045,7 +4045,7 @@ index 16f9675..40b8d19 100644
  
  	if (!blk_qc_t_is_internal(cookie))
 diff --git a/block/blk-mq.h b/block/blk-mq.h
-index a3a684a..e99194d 100644
+index a3a684a8c..e99194d41 100644
 --- a/block/blk-mq.h
 +++ b/block/blk-mq.h
 @@ -40,6 +40,8 @@ void blk_mq_free_queue(struct request_queue *q);
@@ -4074,7 +4074,7 @@ index a3a684a..e99194d 100644
  {
  	if (rq->tag == -1 || rq->internal_tag == -1)
 diff --git a/block/blk-settings.c b/block/blk-settings.c
-index 3e7038e..672cd27 100644
+index 3e7038e47..672cd276e 100644
 --- a/block/blk-settings.c
 +++ b/block/blk-settings.c
 @@ -497,8 +497,6 @@ int blk_stack_limits(struct queue_limits *t, struct queue_limits *b,
@@ -4106,7 +4106,7 @@ index 3e7038e..672cd27 100644
  				    b->logical_block_size);
  
 diff --git a/block/blk-sysfs.c b/block/blk-sysfs.c
-index 590d1ef..d9c8e47 100644
+index 590d1ef2f..d9c8e47e0 100644
 --- a/block/blk-sysfs.c
 +++ b/block/blk-sysfs.c
 @@ -360,8 +360,8 @@ static ssize_t queue_poll_delay_show(struct request_queue *q, char *page)
@@ -4137,7 +4137,7 @@ index 590d1ef..d9c8e47 100644
  	return count;
  }
 diff --git a/block/blk-throttle.c b/block/blk-throttle.c
-index 1b97a73..a51d930 100644
+index 1b97a73d2..a51d9301d 100644
 --- a/block/blk-throttle.c
 +++ b/block/blk-throttle.c
 @@ -970,9 +970,13 @@ static bool tg_may_dispatch(struct throtl_grp *tg, struct bio *bio,
@@ -4240,7 +4240,7 @@ index 1b97a73..a51d930 100644
  
  	tg->bps_conf[READ][index] = v[0];
 diff --git a/block/elevator.c b/block/elevator.c
-index f05e90d..568de11 100644
+index f05e90d4e..568de119b 100644
 --- a/block/elevator.c
 +++ b/block/elevator.c
 @@ -596,8 +596,8 @@ int elevator_switch_mq(struct request_queue *q,
@@ -4264,7 +4264,7 @@ index f05e90d..568de11 100644
  		goto out_unlock;
  
 diff --git a/block/genhd.c b/block/genhd.c
-index 1dd8fd6..9e4a69a 100644
+index 1dd8fd661..9e4a69a24 100644
 --- a/block/genhd.c
 +++ b/block/genhd.c
 @@ -324,12 +324,48 @@ void blkdev_show(struct seq_file *seqf, off_t offset)
@@ -4498,7 +4498,7 @@ index 1dd8fd6..9e4a69a 100644
  
  EXPORT_SYMBOL(bdev_read_only);
 diff --git a/block/ioctl.c b/block/ioctl.c
-index 4825c78..41206df 100644
+index 4825c78a6..41206df89 100644
 --- a/block/ioctl.c
 +++ b/block/ioctl.c
 @@ -451,6 +451,10 @@ static int blkdev_roset(struct block_device *bdev, fmode_t mode,
@@ -4513,7 +4513,7 @@ index 4825c78..41206df 100644
  	return 0;
  }
 diff --git a/block/partition-generic.c b/block/partition-generic.c
-index 8e596a8..3de5139 100644
+index 8e596a8df..3de5139f2 100644
 --- a/block/partition-generic.c
 +++ b/block/partition-generic.c
 @@ -98,7 +98,7 @@ static ssize_t part_ro_show(struct device *dev,
@@ -4550,7 +4550,7 @@ index 8e596a8..3de5139 100644
  	if (info) {
  		struct partition_meta_info *pinfo = alloc_part_info(disk);
 diff --git a/drivers/block/mtip32xx/mtip32xx.c b/drivers/block/mtip32xx/mtip32xx.c
-index 88e8440..63e8d7d 100644
+index 88e8440e7..63e8d7d7f 100644
 --- a/drivers/block/mtip32xx/mtip32xx.c
 +++ b/drivers/block/mtip32xx/mtip32xx.c
 @@ -2770,12 +2770,12 @@ static int mtip_service_thread(void *data)
@@ -4578,7 +4578,7 @@ index 88e8440..63e8d7d 100644
  
  	/*
 diff --git a/drivers/block/nbd.c b/drivers/block/nbd.c
-index 7c9a949..fceefa8 100644
+index 7c9a949e8..fceefa8da 100644
 --- a/drivers/block/nbd.c
 +++ b/drivers/block/nbd.c
 @@ -747,7 +747,7 @@ static bool nbd_clear_req(struct request *req, void *data, bool reserved)
@@ -4591,7 +4591,7 @@ index 7c9a949..fceefa8 100644
  	dev_dbg(disk_to_dev(nbd->disk), "queue cleared\n");
  }
 diff --git a/drivers/block/skd_main.c b/drivers/block/skd_main.c
-index ab893a7..182b074 100644
+index ab893a757..182b074ff 100644
 --- a/drivers/block/skd_main.c
 +++ b/drivers/block/skd_main.c
 @@ -395,7 +395,7 @@ static int skd_in_flight(struct skd_device *skdev)
@@ -4613,7 +4613,7 @@ index ab893a7..182b074 100644
  
  static void skd_isr_msg_from_dev(struct skd_device *skdev)
 diff --git a/drivers/cpufreq/cpufreq_conservative.c b/drivers/cpufreq/cpufreq_conservative.c
-index 4268f87..47fa3a1 100644
+index 4268f87e9..47fa3a161 100644
 --- a/drivers/cpufreq/cpufreq_conservative.c
 +++ b/drivers/cpufreq/cpufreq_conservative.c
 @@ -31,8 +31,8 @@ struct cs_dbs_tuners {
@@ -4628,7 +4628,7 @@ index 4268f87..47fa3a1 100644
  #define DEF_SAMPLING_DOWN_FACTOR		(1)
  #define MAX_SAMPLING_DOWN_FACTOR		(10)
 diff --git a/drivers/cpufreq/cpufreq_ondemand.c b/drivers/cpufreq/cpufreq_ondemand.c
-index 6b423ee..e8c8aff 100644
+index 6b423eebf..e8c8aff4c 100644
 --- a/drivers/cpufreq/cpufreq_ondemand.c
 +++ b/drivers/cpufreq/cpufreq_ondemand.c
 @@ -21,7 +21,7 @@
@@ -4650,7 +4650,7 @@ index 6b423ee..e8c8aff 100644
   * proportional to load.
   */
 diff --git a/drivers/infiniband/core/addr.c b/drivers/infiniband/core/addr.c
-index 0dce94e..73f1fb5 100644
+index 0dce94e3c..73f1fb5fc 100644
 --- a/drivers/infiniband/core/addr.c
 +++ b/drivers/infiniband/core/addr.c
 @@ -817,6 +817,7 @@ int rdma_addr_find_l2_eth_by_grh(const union ib_gid *sgid,
@@ -4662,7 +4662,7 @@ index 0dce94e..73f1fb5 100644
  	int ret;
  
 diff --git a/drivers/net/ethernet/intel/e1000e/netdev.c b/drivers/net/ethernet/intel/e1000e/netdev.c
-index 7acc61e..d39a79a 100644
+index 7acc61e4f..d39a79a7d 100644
 --- a/drivers/net/ethernet/intel/e1000e/netdev.c
 +++ b/drivers/net/ethernet/intel/e1000e/netdev.c
 @@ -4209,7 +4209,7 @@ void e1000e_up(struct e1000_adapter *adapter)
@@ -4707,7 +4707,7 @@ index 7acc61e..d39a79a 100644
  				mod_timer(&adapter->phy_info_timer,
  					  round_jiffies(jiffies + 2 * HZ));
 diff --git a/drivers/nvme/host/core.c b/drivers/nvme/host/core.c
-index 6a9dd68..b50a1ff 100644
+index 4c4413ad3..e3d91a882 100644
 --- a/drivers/nvme/host/core.c
 +++ b/drivers/nvme/host/core.c
 @@ -3816,6 +3816,18 @@ void nvme_start_queues(struct nvme_ctrl *ctrl)
@@ -4730,10 +4730,10 @@ index 6a9dd68..b50a1ff 100644
  {
  	int result = -ENOMEM;
 diff --git a/drivers/nvme/host/fc.c b/drivers/nvme/host/fc.c
-index c37d5bb..378e9a9 100644
+index 8625b73d9..c8075f9b3 100644
 --- a/drivers/nvme/host/fc.c
 +++ b/drivers/nvme/host/fc.c
-@@ -2368,7 +2368,7 @@ nvme_fc_complete_rq(struct request *rq)
+@@ -2378,7 +2378,7 @@ nvme_fc_complete_rq(struct request *rq)
  /*
   * This routine is used by the transport when it needs to find active
   * io on a queue that is to be terminated. The transport uses
@@ -4742,7 +4742,7 @@ index c37d5bb..378e9a9 100644
   * this routine to kill them on a 1 by 1 basis.
   *
   * As FC allocates FC exchange for each io, the transport must contact
-@@ -2729,7 +2729,7 @@ nvme_fc_delete_association(struct nvme_fc_ctrl *ctrl)
+@@ -2739,7 +2739,7 @@ nvme_fc_delete_association(struct nvme_fc_ctrl *ctrl)
  	 * If io queues are present, stop them and terminate all outstanding
  	 * ios on them. As FC allocates FC exchange for each io, the
  	 * transport must contact the LLDD to terminate the exchange,
@@ -4751,7 +4751,7 @@ index c37d5bb..378e9a9 100644
  	 * to tell us what io's are busy and invoke a transport routine
  	 * to kill them with the LLDD.  After terminating the exchange
  	 * the LLDD will call the transport's normal io done path, but it
-@@ -2739,7 +2739,7 @@ nvme_fc_delete_association(struct nvme_fc_ctrl *ctrl)
+@@ -2749,7 +2749,7 @@ nvme_fc_delete_association(struct nvme_fc_ctrl *ctrl)
  	 */
  	if (ctrl->ctrl.queue_count > 1) {
  		nvme_stop_queues(&ctrl->ctrl);
@@ -4760,7 +4760,7 @@ index c37d5bb..378e9a9 100644
  				nvme_fc_terminate_exchange, &ctrl->ctrl);
  	}
  
-@@ -2757,11 +2757,11 @@ nvme_fc_delete_association(struct nvme_fc_ctrl *ctrl)
+@@ -2767,11 +2767,11 @@ nvme_fc_delete_association(struct nvme_fc_ctrl *ctrl)
  
  	/*
  	 * clean up the admin queue. Same thing as above.
@@ -4775,7 +4775,7 @@ index c37d5bb..378e9a9 100644
  
  	/* kill the aens as they are a separate path */
 diff --git a/drivers/nvme/host/nvme.h b/drivers/nvme/host/nvme.h
-index c4a1bb4..6dc4ff8 100644
+index c4a1bb41a..6dc4ff8ed 100644
 --- a/drivers/nvme/host/nvme.h
 +++ b/drivers/nvme/host/nvme.h
 @@ -441,6 +441,8 @@ void nvme_unfreeze(struct nvme_ctrl *ctrl);
@@ -4788,7 +4788,7 @@ index c4a1bb4..6dc4ff8 100644
  #define NVME_QID_ANY -1
  struct request *nvme_alloc_request(struct request_queue *q,
 diff --git a/drivers/nvme/host/pci.c b/drivers/nvme/host/pci.c
-index 7fee665..7d82e6c 100644
+index 7fee665ec..7d82e6cf1 100644
 --- a/drivers/nvme/host/pci.c
 +++ b/drivers/nvme/host/pci.c
 @@ -2476,8 +2476,9 @@ static void nvme_dev_disable(struct nvme_dev *dev, bool shutdown)
@@ -4804,7 +4804,7 @@ index 7fee665..7d82e6c 100644
  	/*
  	 * The driver will not be starting up queues again if shutting down so
 diff --git a/drivers/nvme/host/rdma.c b/drivers/nvme/host/rdma.c
-index 52abc3a..d77e785 100644
+index 52abc3a6d..d77e78560 100644
 --- a/drivers/nvme/host/rdma.c
 +++ b/drivers/nvme/host/rdma.c
 @@ -922,7 +922,7 @@ static void nvme_rdma_teardown_admin_queue(struct nvme_rdma_ctrl *ctrl,
@@ -4826,7 +4826,7 @@ index 52abc3a..d77e785 100644
  		if (remove)
  			nvme_start_queues(&ctrl->ctrl);
 diff --git a/drivers/nvme/host/tcp.c b/drivers/nvme/host/tcp.c
-index 5f0a004..23a7c7e 100644
+index 5f0a00425..23a7c7ea2 100644
 --- a/drivers/nvme/host/tcp.c
 +++ b/drivers/nvme/host/tcp.c
 @@ -1686,7 +1686,8 @@ static void nvme_tcp_teardown_admin_queue(struct nvme_ctrl *ctrl,
@@ -4849,7 +4849,7 @@ index 5f0a004..23a7c7e 100644
  		nvme_start_queues(ctrl);
  	nvme_tcp_destroy_io_queues(ctrl, remove);
 diff --git a/drivers/nvme/target/loop.c b/drivers/nvme/target/loop.c
-index 4aac1b4..24d5b63 100644
+index 4aac1b4a8..24d5b63f6 100644
 --- a/drivers/nvme/target/loop.c
 +++ b/drivers/nvme/target/loop.c
 @@ -429,7 +429,7 @@ static void nvme_loop_shutdown_ctrl(struct nvme_loop_ctrl *ctrl)
@@ -4871,7 +4871,7 @@ index 4aac1b4..24d5b63 100644
  	blk_mq_unquiesce_queue(ctrl->ctrl.admin_q);
  	nvme_loop_destroy_admin_queue(ctrl);
 diff --git a/drivers/scsi/sd.c b/drivers/scsi/sd.c
-index d64553c..013354f 100644
+index d64553c0a..013354fbe 100644
 --- a/drivers/scsi/sd.c
 +++ b/drivers/scsi/sd.c
 @@ -2586,10 +2586,8 @@ sd_read_write_protect_flag(struct scsi_disk *sdkp, unsigned char *buffer)
@@ -4895,7 +4895,7 @@ index d64553c..013354f 100644
  			sd_printk(KERN_NOTICE, sdkp, "Write Protect is %s\n",
  				  sdkp->write_prot ? "on" : "off");
 diff --git a/fs/exec.c b/fs/exec.c
-index bcf3837..c752711 100644
+index bcf383730..c75271124 100644
 --- a/fs/exec.c
 +++ b/fs/exec.c
 @@ -62,6 +62,8 @@
@@ -4916,7 +4916,7 @@ index bcf3837..c752711 100644
  }
  EXPORT_SYMBOL(setup_new_exec);
 diff --git a/fs/fs-writeback.c b/fs/fs-writeback.c
-index 36855c1..77c039a 100644
+index 36855c1f8..77c039a0e 100644
 --- a/fs/fs-writeback.c
 +++ b/fs/fs-writeback.c
 @@ -28,6 +28,7 @@
@@ -4946,7 +4946,7 @@ index 36855c1..77c039a 100644
  EXPORT_SYMBOL(sync_inodes_sb);
  
 diff --git a/fs/proc/base.c b/fs/proc/base.c
-index f5ed951..42bf4ae 100644
+index f5ed9512d..42bf4ae51 100644
 --- a/fs/proc/base.c
 +++ b/fs/proc/base.c
 @@ -459,7 +459,7 @@ static int proc_pid_schedstat(struct seq_file *m, struct pid_namespace *ns,
@@ -4959,7 +4959,7 @@ index f5ed951..42bf4ae 100644
  		   task->sched_info.pcount);
  
 diff --git a/fs/proc/meminfo.c b/fs/proc/meminfo.c
-index 568d90e..1f1c8da 100644
+index 568d90e17..1f1c8dac5 100644
 --- a/fs/proc/meminfo.c
 +++ b/fs/proc/meminfo.c
 @@ -106,6 +106,10 @@ static int meminfo_proc_show(struct seq_file *m, void *v)
@@ -4974,7 +4974,7 @@ index 568d90e..1f1c8da 100644
  	show_val_kb(m, "Quicklists:     ", quicklist_total_size());
  #endif
 diff --git a/fs/sync.c b/fs/sync.c
-index b54e054..3958b8f 100644
+index b54e0541a..3958b8f98 100644
 --- a/fs/sync.c
 +++ b/fs/sync.c
 @@ -16,6 +16,7 @@
@@ -5001,7 +5001,7 @@ index b54e054..3958b8f 100644
  
  static void fdatawrite_one_bdev(struct block_device *bdev, void *arg)
 diff --git a/include/asm-generic/pgtable.h b/include/asm-generic/pgtable.h
-index 05e61e6..8c81766 100644
+index 05e61e6c8..8c81766af 100644
 --- a/include/asm-generic/pgtable.h
 +++ b/include/asm-generic/pgtable.h
 @@ -855,12 +855,25 @@ extern void untrack_pfn(struct vm_area_struct *vma, unsigned long pfn,
@@ -5041,7 +5041,7 @@ index 05e61e6..8c81766 100644
  
  static inline unsigned long my_zero_pfn(unsigned long addr)
 diff --git a/include/linux/backing-dev-defs.h b/include/linux/backing-dev-defs.h
-index 07e02d6..095e4dd 100644
+index 07e02d6df..095e4dd04 100644
 --- a/include/linux/backing-dev-defs.h
 +++ b/include/linux/backing-dev-defs.h
 @@ -191,6 +191,8 @@ struct backing_dev_info {
@@ -5054,7 +5054,7 @@ index 07e02d6..095e4dd 100644
  	struct bdi_writeback_congested *wb_congested;
  #endif
 diff --git a/include/linux/blk-cgroup.h b/include/linux/blk-cgroup.h
-index 76c6131..05e774d 100644
+index 76c61318f..05e774d55 100644
 --- a/include/linux/blk-cgroup.h
 +++ b/include/linux/blk-cgroup.h
 @@ -29,6 +29,27 @@
@@ -5135,7 +5135,7 @@ index 76c6131..05e774d 100644
  
  	if (!throtl) {
 diff --git a/include/linux/blk-mq.h b/include/linux/blk-mq.h
-index 0e030f5..f6d9850 100644
+index 7e092bdac..66ea66382 100644
 --- a/include/linux/blk-mq.h
 +++ b/include/linux/blk-mq.h
 @@ -57,7 +57,6 @@ struct blk_mq_hw_ctx {
@@ -5165,7 +5165,7 @@ index 0e030f5..f6d9850 100644
  void blk_mq_kick_requeue_list(struct request_queue *q);
  void blk_mq_delay_kick_requeue_list(struct request_queue *q, unsigned long msecs);
  bool blk_mq_complete_request(struct request *rq);
-@@ -320,8 +316,8 @@ void blk_mq_unquiesce_queue(struct request_queue *q);
+@@ -321,8 +317,8 @@ void blk_mq_unquiesce_queue(struct request_queue *q);
  void blk_mq_delay_run_hw_queue(struct blk_mq_hw_ctx *hctx, unsigned long msecs);
  bool blk_mq_run_hw_queue(struct blk_mq_hw_ctx *hctx, bool async);
  void blk_mq_run_hw_queues(struct request_queue *q, bool async);
@@ -5177,7 +5177,7 @@ index 0e030f5..f6d9850 100644
  void blk_mq_unfreeze_queue(struct request_queue *q);
  void blk_freeze_queue_start(struct request_queue *q);
 diff --git a/include/linux/blkdev.h b/include/linux/blkdev.h
-index 338604d..9ed264d 100644
+index 338604dff..9ed264dbb 100644
 --- a/include/linux/blkdev.h
 +++ b/include/linux/blkdev.h
 @@ -50,6 +50,9 @@ struct blk_stat_callback;
@@ -5205,7 +5205,7 @@ index 338604d..9ed264d 100644
  void blk_queue_flag_set(unsigned int flag, struct request_queue *q);
  void blk_queue_flag_clear(unsigned int flag, struct request_queue *q);
 diff --git a/include/linux/elevator.h b/include/linux/elevator.h
-index 2e9e276..6e8bc53 100644
+index 2e9e2763b..6e8bc5374 100644
 --- a/include/linux/elevator.h
 +++ b/include/linux/elevator.h
 @@ -31,6 +31,7 @@ struct elevator_mq_ops {
@@ -5217,7 +5217,7 @@ index 2e9e276..6e8bc53 100644
  	bool (*allow_merge)(struct request_queue *, struct request *, struct bio *);
  	bool (*bio_merge)(struct blk_mq_hw_ctx *, struct bio *);
 diff --git a/include/linux/genhd.h b/include/linux/genhd.h
-index 06c0fd5..1abde0e 100644
+index 06c0fd594..1abde0e88 100644
 --- a/include/linux/genhd.h
 +++ b/include/linux/genhd.h
 @@ -118,7 +118,8 @@ struct hd_struct {
@@ -5256,7 +5256,7 @@ index 06c0fd5..1abde0e 100644
  
  extern void disk_block_events(struct gendisk *disk);
 diff --git a/include/linux/jiffies.h b/include/linux/jiffies.h
-index fa92824..fa45619 100644
+index fa9282425..fa456190e 100644
 --- a/include/linux/jiffies.h
 +++ b/include/linux/jiffies.h
 @@ -171,7 +171,7 @@ static inline u64 get_jiffies_64(void)
@@ -5269,7 +5269,7 @@ index fa92824..fa45619 100644
  /*
   * Change timeval to jiffies, trying to avoid the
 diff --git a/include/linux/ksm.h b/include/linux/ksm.h
-index 161e816..f0dbdf3 100644
+index 161e8164a..f0dbdf3c9 100644
 --- a/include/linux/ksm.h
 +++ b/include/linux/ksm.h
 @@ -21,20 +21,16 @@ struct mem_cgroup;
@@ -5340,7 +5340,7 @@ index 161e816..f0dbdf3 100644
 +
  #endif /* __LINUX_KSM_H */
 diff --git a/include/linux/mm.h b/include/linux/mm.h
-index 7000ddd..8675723 100644
+index 7000ddd80..867572314 100644
 --- a/include/linux/mm.h
 +++ b/include/linux/mm.h
 @@ -2460,8 +2460,8 @@ int __must_check write_one_page(struct page *page);
@@ -5355,7 +5355,7 @@ index 7000ddd..8675723 100644
  int force_page_cache_readahead(struct address_space *mapping, struct file *filp,
  			pgoff_t offset, unsigned long nr_to_read);
 diff --git a/include/linux/mm_types.h b/include/linux/mm_types.h
-index 2c471a2..78bfe5d 100644
+index 2c471a2c4..78bfe5deb 100644
 --- a/include/linux/mm_types.h
 +++ b/include/linux/mm_types.h
 @@ -328,6 +328,9 @@ struct vm_area_struct {
@@ -5369,7 +5369,7 @@ index 2c471a2..78bfe5d 100644
  
  struct core_thread {
 diff --git a/include/linux/mmzone.h b/include/linux/mmzone.h
-index 842f918..43a50e5 100644
+index 842f91895..43a50e54a 100644
 --- a/include/linux/mmzone.h
 +++ b/include/linux/mmzone.h
 @@ -148,6 +148,9 @@ enum zone_stat_item {
@@ -5383,7 +5383,7 @@ index 842f918..43a50e5 100644
  
  enum node_stat_item {
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index 9b35aff..1bf66b8 100644
+index 9b35aff09..1bf66b8db 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
 @@ -612,13 +612,18 @@ struct task_struct {
@@ -5456,7 +5456,7 @@ index 9b35aff..1bf66b8 100644
  {
  	return task->thread_pid;
 diff --git a/include/linux/sched/deadline.h b/include/linux/sched/deadline.h
-index 0cb0343..b66abba 100644
+index 0cb034331..b66abbae9 100644
 --- a/include/linux/sched/deadline.h
 +++ b/include/linux/sched/deadline.h
 @@ -1,5 +1,22 @@
@@ -5491,7 +5491,7 @@ index 0cb0343..b66abba 100644
  static inline bool dl_time_before(u64 a, u64 b)
  {
 diff --git a/include/linux/sched/nohz.h b/include/linux/sched/nohz.h
-index b36f4cf..2a55162 100644
+index b36f4cf38..2a5516295 100644
 --- a/include/linux/sched/nohz.h
 +++ b/include/linux/sched/nohz.h
 @@ -6,7 +6,7 @@
@@ -5504,7 +5504,7 @@ index b36f4cf..2a55162 100644
  extern void cpu_load_update_nohz_stop(void);
  #else
 diff --git a/include/linux/sched/prio.h b/include/linux/sched/prio.h
-index 7d64fea..d9dc5d3 100644
+index 7d64feafc..d9dc5d3cc 100644
 --- a/include/linux/sched/prio.h
 +++ b/include/linux/sched/prio.h
 @@ -20,11 +20,17 @@
@@ -5526,7 +5526,7 @@ index 7d64fea..d9dc5d3 100644
   * Convert user-nice values [ -20 ... 0 ... 19 ]
   * to static priority [ MAX_RT_PRIO..MAX_PRIO-1 ],
 diff --git a/include/linux/sched/rt.h b/include/linux/sched/rt.h
-index e5af028..6387c8e 100644
+index e5af028c0..6387c8ea9 100644
 --- a/include/linux/sched/rt.h
 +++ b/include/linux/sched/rt.h
 @@ -24,8 +24,10 @@ static inline bool task_is_realtime(struct task_struct *tsk)
@@ -5541,7 +5541,7 @@ index e5af028..6387c8e 100644
  }
  
 diff --git a/include/linux/sched/task.h b/include/linux/sched/task.h
-index 44c6f15..e84a427 100644
+index 44c6f1580..e84a4274b 100644
 --- a/include/linux/sched/task.h
 +++ b/include/linux/sched/task.h
 @@ -82,7 +82,7 @@ extern long kernel_wait4(pid_t, int __user *, int, struct rusage *);
@@ -5555,7 +5555,7 @@ index 44c6f15..e84a427 100644
  #define sched_exec()   {}
 diff --git a/include/linux/sradix-tree.h b/include/linux/sradix-tree.h
 new file mode 100644
-index 0000000..d71edba
+index 000000000..d71edba6b
 --- /dev/null
 +++ b/include/linux/sradix-tree.h
 @@ -0,0 +1,77 @@
@@ -5638,7 +5638,7 @@ index 0000000..d71edba
 +#endif /* _LINUX_SRADIX_TREE_H */
 diff --git a/include/linux/uksm.h b/include/linux/uksm.h
 new file mode 100644
-index 0000000..bb8651f
+index 000000000..bb8651f53
 --- /dev/null
 +++ b/include/linux/uksm.h
 @@ -0,0 +1,149 @@
@@ -5792,7 +5792,7 @@ index 0000000..bb8651f
 +#endif /* !CONFIG_UKSM */
 +#endif /* __LINUX_UKSM_H */
 diff --git a/init/Kconfig b/init/Kconfig
-index c9386a3..bd1c2a7 100644
+index c9386a365..bd1c2a79d 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -48,6 +48,26 @@ config THREAD_INFO_IN_TASK
@@ -5893,7 +5893,7 @@ index c9386a3..bd1c2a7 100644
  	bool "Optimize for size"
  	help
 diff --git a/init/init_task.c b/init/init_task.c
-index 5aebe3b..9c2a3db 100644
+index 5aebe3be4..9c2a3db17 100644
 --- a/init/init_task.c
 +++ b/init/init_task.c
 @@ -59,6 +59,125 @@ struct task_struct init_task
@@ -6031,7 +6031,7 @@ index 5aebe3b..9c2a3db 100644
  EXPORT_SYMBOL(init_task);
  
 diff --git a/kernel/Kconfig.hz b/kernel/Kconfig.hz
-index 2a202a8..1a25339 100644
+index 2a202a846..1a2533920 100644
 --- a/kernel/Kconfig.hz
 +++ b/kernel/Kconfig.hz
 @@ -4,7 +4,7 @@
@@ -6066,7 +6066,7 @@ index 2a202a8..1a25339 100644
  
  config SCHED_HRTICK
 diff --git a/kernel/cgroup/cpuset.c b/kernel/cgroup/cpuset.c
-index 479743d..546e424 100644
+index 479743db6..546e42462 100644
 --- a/kernel/cgroup/cpuset.c
 +++ b/kernel/cgroup/cpuset.c
 @@ -658,7 +658,7 @@ static int validate_change(struct cpuset *cur, struct cpuset *trial)
@@ -6088,7 +6088,7 @@ index 479743d..546e424 100644
  {
  }
 diff --git a/kernel/delayacct.c b/kernel/delayacct.c
-index 2a12b98..dba268c 100644
+index 2a12b988c..dba268ca1 100644
 --- a/kernel/delayacct.c
 +++ b/kernel/delayacct.c
 @@ -115,7 +115,7 @@ int __delayacct_add_tsk(struct taskstats *d, struct task_struct *tsk)
@@ -6101,7 +6101,7 @@ index 2a12b98..dba268c 100644
  	d->cpu_count += t1;
  
 diff --git a/kernel/exit.c b/kernel/exit.c
-index 2166c2d..c4eef2f 100644
+index 2166c2d92..c4eef2f20 100644
 --- a/kernel/exit.c
 +++ b/kernel/exit.c
 @@ -130,7 +130,7 @@ static void __exit_signal(struct task_struct *tsk)
@@ -6123,7 +6123,7 @@ index 2166c2d..c4eef2f 100644
  	__unhash_process(tsk, group_dead);
  	write_sequnlock(&sig->stats_lock);
 diff --git a/kernel/fork.c b/kernel/fork.c
-index b69248e..e0a8d71 100644
+index b69248e6f..e0a8d71c3 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -104,6 +104,11 @@
@@ -6172,7 +6172,7 @@ index b69248e..e0a8d71 100644
  	if (err)
  		goto bad_unshare_out;
 diff --git a/kernel/livepatch/transition.c b/kernel/livepatch/transition.c
-index 304d5eb..d9ac68f 100644
+index 304d5eb8a..d9ac68f36 100644
 --- a/kernel/livepatch/transition.c
 +++ b/kernel/livepatch/transition.c
 @@ -316,7 +316,11 @@ static bool klp_try_switch_task(struct task_struct *task)
@@ -6188,7 +6188,7 @@ index 304d5eb..d9ac68f 100644
  			 "%s: %s:%d is running\n", __func__, task->comm,
  			 task->pid);
 diff --git a/kernel/locking/rtmutex.c b/kernel/locking/rtmutex.c
-index 978d63a..4aeb8ae 100644
+index 978d63a82..4aeb8aec5 100644
 --- a/kernel/locking/rtmutex.c
 +++ b/kernel/locking/rtmutex.c
 @@ -228,7 +228,7 @@ static inline bool unlock_rt_mutex_safe(struct rt_mutex *lock,
@@ -6219,7 +6219,7 @@ index 978d63a..4aeb8ae 100644
  	/* Get the top priority waiter on the lock */
  	if (rt_mutex_has_waiters(lock))
 diff --git a/kernel/sched/Makefile b/kernel/sched/Makefile
-index 21fb5a5..b23231b 100644
+index 21fb5a566..b23231bae 100644
 --- a/kernel/sched/Makefile
 +++ b/kernel/sched/Makefile
 @@ -16,15 +16,21 @@ ifneq ($(CONFIG_SCHED_OMIT_FRAME_POINTER),y)
@@ -6252,7 +6252,7 @@ index 21fb5a5..b23231b 100644
  obj-$(CONFIG_MEMBARRIER) += membarrier.o
 diff --git a/kernel/sched/bmq.c b/kernel/sched/bmq.c
 new file mode 100644
-index 0000000..f12c6ea
+index 000000000..f12c6ea22
 --- /dev/null
 +++ b/kernel/sched/bmq.c
 @@ -0,0 +1,6112 @@
@@ -12370,7 +12370,7 @@ index 0000000..f12c6ea
 +#undef CREATE_TRACE_POINTS
 diff --git a/kernel/sched/bmq_sched.h b/kernel/sched/bmq_sched.h
 new file mode 100644
-index 0000000..20dcf19
+index 000000000..20dcf19ea
 --- /dev/null
 +++ b/kernel/sched/bmq_sched.h
 @@ -0,0 +1,438 @@
@@ -12813,7 +12813,7 @@ index 0000000..20dcf19
 +}
 +#endif /* BMQ_SCHED_H */
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 62cc293..4f42751 100644
+index 62cc29364..4f427518a 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -44,7 +44,7 @@ const_debug unsigned int sysctl_sched_features =
@@ -12838,7 +12838,7 @@ index 62cc293..4f42751 100644
  /*
   * __task_rq_lock - lock the rq @p resides on.
 diff --git a/kernel/sched/cpufreq_schedutil.c b/kernel/sched/cpufreq_schedutil.c
-index 1ccf77f..4ecf11a 100644
+index 1ccf77f6d..4ecf11a83 100644
 --- a/kernel/sched/cpufreq_schedutil.c
 +++ b/kernel/sched/cpufreq_schedutil.c
 @@ -175,6 +175,7 @@ static unsigned int get_next_freq(struct sugov_policy *sg_policy,
@@ -12901,7 +12901,7 @@ index 1ccf77f..4ecf11a 100644
 +#endif
  #endif
 diff --git a/kernel/sched/cputime.c b/kernel/sched/cputime.c
-index ba4a143..a1b5973 100644
+index ba4a143bd..a1b5973a6 100644
 --- a/kernel/sched/cputime.c
 +++ b/kernel/sched/cputime.c
 @@ -121,7 +121,7 @@ void account_user_time(struct task_struct *p, u64 cputime)
@@ -12950,7 +12950,7 @@ index ba4a143..a1b5973 100644
  
  	task_cputime(p, &cputime.utime, &cputime.stime);
 diff --git a/kernel/sched/idle.c b/kernel/sched/idle.c
-index f5516ba..3040c01 100644
+index f5516bae0..3040c0191 100644
 --- a/kernel/sched/idle.c
 +++ b/kernel/sched/idle.c
 @@ -353,6 +353,7 @@ void cpu_startup_entry(enum cpuhp_state state)
@@ -12967,7 +12967,7 @@ index f5516ba..3040c01 100644
  };
 +#endif
 diff --git a/kernel/sched/pelt.c b/kernel/sched/pelt.c
-index 90fb5bc..dcd6d6f 100644
+index 90fb5bc12..dcd6d6ff6 100644
 --- a/kernel/sched/pelt.c
 +++ b/kernel/sched/pelt.c
 @@ -240,6 +240,7 @@ ___update_load_avg(struct sched_avg *sa, unsigned long load, unsigned long runna
@@ -12987,7 +12987,7 @@ index 90fb5bc..dcd6d6f 100644
  #ifdef CONFIG_HAVE_SCHED_AVG_IRQ
  /*
 diff --git a/kernel/sched/pelt.h b/kernel/sched/pelt.h
-index 7e56b48..d20d2b3 100644
+index 7e56b489f..d20d2b3c2 100644
 --- a/kernel/sched/pelt.h
 +++ b/kernel/sched/pelt.h
 @@ -1,10 +1,12 @@
@@ -13032,7 +13032,7 @@ index 7e56b48..d20d2b3 100644
  static inline int
  update_irq_load_avg(struct rq *rq, u64 running)
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index 425a558..95f7d93 100644
+index 425a5589e..95f7d93f8 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -2,6 +2,10 @@
@@ -13057,7 +13057,7 @@ index 425a558..95f7d93 100644
 +}
 +#endif /* !CONFIG_SCHED_BMQ */
 diff --git a/kernel/sched/stats.c b/kernel/sched/stats.c
-index 750fb3c..0cc040a 100644
+index 750fb3c67..0cc040a28 100644
 --- a/kernel/sched/stats.c
 +++ b/kernel/sched/stats.c
 @@ -22,8 +22,10 @@ static int show_schedstat(struct seq_file *seq, void *v)
@@ -13088,7 +13088,7 @@ index 750fb3c..0cc040a 100644
  	}
  	return 0;
 diff --git a/kernel/sysctl.c b/kernel/sysctl.c
-index f50f147..f522f80 100644
+index f50f1471c..f522f8049 100644
 --- a/kernel/sysctl.c
 +++ b/kernel/sysctl.c
 @@ -106,6 +106,9 @@ extern int core_uses_pid;
@@ -13171,7 +13171,7 @@ index f50f147..f522f80 100644
  	{
  		.procname	= "spin_retry",
 diff --git a/kernel/time/posix-cpu-timers.c b/kernel/time/posix-cpu-timers.c
-index 80f9552..ac066b4 100644
+index 80f955210..ac066b446 100644
 --- a/kernel/time/posix-cpu-timers.c
 +++ b/kernel/time/posix-cpu-timers.c
 @@ -792,6 +792,7 @@ check_timers_list(struct list_head *timers,
@@ -13249,7 +13249,7 @@ index 80f9552..ac066b4 100644
  	return 0;
  }
 diff --git a/kernel/trace/trace_selftest.c b/kernel/trace/trace_selftest.c
-index 9d402e7..fd609ff 100644
+index 9d402e7fc..fd609ff88 100644
 --- a/kernel/trace/trace_selftest.c
 +++ b/kernel/trace/trace_selftest.c
 @@ -1045,10 +1045,15 @@ static int trace_wakeup_test_thread(void *data)
@@ -13269,7 +13269,7 @@ index 9d402e7..fd609ff 100644
  	struct wakeup_test_data *x = data;
  
 diff --git a/kernel/user_namespace.c b/kernel/user_namespace.c
-index 923414a..107b17f 100644
+index 923414a24..107b17f0d 100644
 --- a/kernel/user_namespace.c
 +++ b/kernel/user_namespace.c
 @@ -26,6 +26,13 @@
@@ -13287,7 +13287,7 @@ index 923414a..107b17f 100644
  static DEFINE_MUTEX(userns_state_mutex);
  
 diff --git a/lib/Makefile b/lib/Makefile
-index e1b59da..a2f2072 100644
+index e1b59da71..a2f207294 100644
 --- a/lib/Makefile
 +++ b/lib/Makefile
 @@ -18,7 +18,7 @@ KCOV_INSTRUMENT_debugobjects.o := n
@@ -13301,7 +13301,7 @@ index e1b59da..a2f2072 100644
  	 flex_proportions.o ratelimit.o show_mem.o \
 diff --git a/lib/sradix-tree.c b/lib/sradix-tree.c
 new file mode 100644
-index 0000000..ab21e63
+index 000000000..ab21e6309
 --- /dev/null
 +++ b/lib/sradix-tree.c
 @@ -0,0 +1,476 @@
@@ -13782,7 +13782,7 @@ index 0000000..ab21e63
 +	return 0;
 +}
 diff --git a/mm/Kconfig b/mm/Kconfig
-index 25c71eb..be39038 100644
+index 25c71eb8a..be39038f0 100644
 --- a/mm/Kconfig
 +++ b/mm/Kconfig
 @@ -302,6 +302,32 @@ config KSM
@@ -13819,7 +13819,7 @@ index 25c71eb..be39038 100644
  config DEFAULT_MMAP_MIN_ADDR
          int "Low address space to protect from user allocation"
 diff --git a/mm/Makefile b/mm/Makefile
-index d210cc9..47eda9e 100644
+index d210cc9d6..47eda9e6b 100644
 --- a/mm/Makefile
 +++ b/mm/Makefile
 @@ -58,7 +58,8 @@ obj-$(CONFIG_SPARSEMEM)	+= sparse.o
@@ -13833,7 +13833,7 @@ index d210cc9..47eda9e 100644
  obj-$(CONFIG_SLAB) += slab.o
  obj-$(CONFIG_SLUB) += slub.o
 diff --git a/mm/backing-dev.c b/mm/backing-dev.c
-index 72e6d0c..8848d26 100644
+index 72e6d0c55..8848d26e8 100644
 --- a/mm/backing-dev.c
 +++ b/mm/backing-dev.c
 @@ -686,10 +686,12 @@ static int cgwb_bdi_init(struct backing_dev_info *bdi)
@@ -13850,7 +13850,7 @@ index 72e6d0c..8848d26 100644
  	ret = wb_init(&bdi->wb, bdi, 1, GFP_KERNEL);
  	if (!ret) {
 diff --git a/mm/ksm.c b/mm/ksm.c
-index 6c48ad1..55aecf5 100644
+index 6c48ad13b..55aecf55d 100644
 --- a/mm/ksm.c
 +++ b/mm/ksm.c
 @@ -843,17 +843,6 @@ static int unmerge_ksm_pages(struct vm_area_struct *vma,
@@ -13872,7 +13872,7 @@ index 6c48ad1..55aecf5 100644
  /*
   * Only called through the sysfs control interface:
 diff --git a/mm/memory.c b/mm/memory.c
-index 8d3f38f..15a792c 100644
+index 8d3f38fa5..15a792c66 100644
 --- a/mm/memory.c
 +++ b/mm/memory.c
 @@ -128,6 +128,25 @@ EXPORT_SYMBOL(zero_pfn);
@@ -13971,7 +13971,7 @@ index 8d3f38f..15a792c 100644
  		}
  		flush_cache_page(vma, vmf->address, pte_pfn(vmf->orig_pte));
 diff --git a/mm/mmap.c b/mm/mmap.c
-index da9236a..ed0e9dc 100644
+index da9236a50..ed0e9dcdc 100644
 --- a/mm/mmap.c
 +++ b/mm/mmap.c
 @@ -46,6 +46,7 @@
@@ -14145,7 +14145,7 @@ index da9236a..ed0e9dc 100644
  	return vma;
  
 diff --git a/mm/rmap.c b/mm/rmap.c
-index 0454ecc..035d0f3 100644
+index 0454ecc29..035d0f341 100644
 --- a/mm/rmap.c
 +++ b/mm/rmap.c
 @@ -1021,7 +1021,7 @@ void page_move_anon_rmap(struct page *page, struct vm_area_struct *vma)
@@ -14159,7 +14159,7 @@ index 0454ecc..035d0f3 100644
  static void __page_set_anon_rmap(struct page *page,
 diff --git a/mm/uksm.c b/mm/uksm.c
 new file mode 100644
-index 0000000..174e192
+index 000000000..174e1921e
 --- /dev/null
 +++ b/mm/uksm.c
 @@ -0,0 +1,5580 @@
@@ -19744,7 +19744,7 @@ index 0000000..174e192
 +#endif
 +
 diff --git a/mm/vmstat.c b/mm/vmstat.c
-index f807f2e..0b9d45d 100644
+index f807f2e3b..0b9d45d55 100644
 --- a/mm/vmstat.c
 +++ b/mm/vmstat.c
 @@ -1165,6 +1165,9 @@ const char * const vmstat_text[] = {
