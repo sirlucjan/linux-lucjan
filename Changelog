@@ -68,6 +68,8 @@
 - add ZEN-Add-CONFIG-for-unprivileged_userns_clone.patch
 - add infiniband-Fix-__read_overflow2-error-with-O3-inlini.patch
 
+5.0-lucjan0-ll35-rc1 --> 5.0-lucjan0-ll35
+
 5.0-lucjan0-ll35-rc1
 
 - sync with upstream
