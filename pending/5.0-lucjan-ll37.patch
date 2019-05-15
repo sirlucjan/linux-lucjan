@@ -1,6 +1,6 @@
-From 7de90435fc8baf0870315f31a421bb2151cddf56 Mon Sep 17 00:00:00 2001
+From 50d44fbfa8d7eb6712f4e4a0c7eec39001b49156 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Tue, 14 May 2019 20:59:55 +0200
+Date: Wed, 15 May 2019 16:05:31 +0200
 Subject: [PATCH] 5.0-lucjan-ll37
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -359,7 +359,7 @@ index 000000000..be19a3127
 +2016-09-10 UKSM 0.1.2.5 Fix a bug in dedup ratio calculation.
 +2017-02-26 UKSM 0.1.2.6 Fix a bug in hugetlbpage handling and a race bug with page migration.
 diff --git a/Makefile b/Makefile
-index 95670d520..e191d19ed 100644
+index 905debb4d..215b7c63d 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Shy Crocodile
@@ -1103,7 +1103,7 @@ index c6113af31..b9e99453e 100644
  		.seq_show = bfq_io_show_weight,
  		.write = bfq_io_set_weight,
 diff --git a/block/bfq-iosched.c b/block/bfq-iosched.c
-index 72510c470..3d64e0406 100644
+index 356620414..b85a4ab8b 100644
 --- a/block/bfq-iosched.c
 +++ b/block/bfq-iosched.c
 @@ -189,7 +189,7 @@ static const int bfq_default_max_budget = 16 * 1024;
@@ -2923,7 +2923,7 @@ index 72510c470..3d64e0406 100644
  		bfq_handle_burst(bfqd, bfqq);
  
  	return bfqq;
-@@ -5459,7 +5999,7 @@ static int bfq_init_queue(struct request_queue *q, struct elevator_type *e)
+@@ -5464,7 +6004,7 @@ static int bfq_init_queue(struct request_queue *q, struct elevator_type *e)
  		     HRTIMER_MODE_REL);
  	bfqd->idle_slice_timer.function = bfq_idle_slice_timer;
  
@@ -2932,7 +2932,7 @@ index 72510c470..3d64e0406 100644
  	bfqd->num_groups_with_pending_reqs = 0;
  
  	INIT_LIST_HEAD(&bfqd->active_list);
-@@ -5467,6 +6007,7 @@ static int bfq_init_queue(struct request_queue *q, struct elevator_type *e)
+@@ -5472,6 +6012,7 @@ static int bfq_init_queue(struct request_queue *q, struct elevator_type *e)
  	INIT_HLIST_HEAD(&bfqd->burst_list);
  
  	bfqd->hw_tag = -1;
@@ -3839,7 +3839,7 @@ index 61deab0b5..bcbb699f0 100644
  static inline struct sbq_wait_state *bt_wait_ptr(struct sbitmap_queue *bt,
  						 struct blk_mq_hw_ctx *hctx)
 diff --git a/block/blk-mq.c b/block/blk-mq.c
-index 6930c82ab..a9e235641 100644
+index 5b920a82b..1c05047d0 100644
 --- a/block/blk-mq.c
 +++ b/block/blk-mq.c
 @@ -59,7 +59,8 @@ static int blk_mq_poll_stats_bkt(const struct request *rq)
@@ -3985,7 +3985,7 @@ index 6930c82ab..a9e235641 100644
  err_exit:
  	q->mq_ops = NULL;
  	return ERR_PTR(-ENOMEM);
-@@ -3228,10 +3223,6 @@ static void __blk_mq_update_nr_hw_queues(struct blk_mq_tag_set *set,
+@@ -3230,10 +3225,6 @@ static void __blk_mq_update_nr_hw_queues(struct blk_mq_tag_set *set,
  
  	list_for_each_entry(q, &set->tag_list, tag_set_list)
  		blk_mq_freeze_queue(q);
@@ -3996,7 +3996,7 @@ index 6930c82ab..a9e235641 100644
  	/*
  	 * Switch IO scheduler to 'none', cleaning up the data associated
  	 * with the previous scheduler. We will switch back once we are done
-@@ -3410,7 +3401,7 @@ static bool blk_mq_poll_hybrid(struct request_queue *q,
+@@ -3412,7 +3403,7 @@ static bool blk_mq_poll_hybrid(struct request_queue *q,
  {
  	struct request *rq;
  
