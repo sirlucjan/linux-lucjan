@@ -1,3 +1,11 @@
+5.1-lucjan-ll1-rc7
+
+- add ksm-5.1-revert-automerge-feature.patch
+- add mm-ksm-introduce-ksm_madvise_merge-helper.patch
+- add mm-ksm-introduce-ksm_madvise_unmerge-helper.patch
+- add mm-ksm-proc-introduce-remote-merge.patch
+- add mm-ksm-proc-add-remote-KSM-documentation.patch
+
 5.1-lucjan-ll1-rc6
 
 - drop blk-throttle-verify-format-of-bandwidth-limit-and-de.patch
