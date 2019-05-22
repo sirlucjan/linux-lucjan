@@ -435,14 +435,14 @@
 │       ├── 5.1-lucjan-ll1-rc5.patch.sig
 │       ├── 5.1-lucjan-ll1-rc6.patch
 │       ├── 5.1-lucjan-ll1-rc6.patch.sig
+│       ├── 5.1-lucjan-ll1-rc7.patch
+│       ├── 5.1-lucjan-ll1-rc7.patch.sig
 │       ├── 5.1-lucjan-ll1-rc8.patch
 │       └── 5.1-lucjan-ll1-rc8.patch.sig
 ├── Changelog
 ├── Files
 ├── README.md
 └── trunk
-    ├── 5.1-lucjan-ll1-rc7.patch
-    ├── 5.1-lucjan-ll1-rc7.patch.sig
     ├── 5.1-lucjan-ll1-rc9.patch
     └── 5.1-lucjan-ll1-rc9.patch.sig
 
