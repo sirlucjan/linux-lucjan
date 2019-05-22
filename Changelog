@@ -1,3 +1,7 @@
+5.1-lucjan-ll1-rc10
+
+- add Revert-dm-eliminate-split_discard_bios-flag-from-DM-.patch
+
 5.1-lucjan-ll1-rc9
 
 - add BMQ 0.95
