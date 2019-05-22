@@ -1,6 +1,6 @@
-From 50d44fbfa8d7eb6712f4e4a0c7eec39001b49156 Mon Sep 17 00:00:00 2001
+From 4e5228927a0669d8a0ebdebc8784a0159ad36ed6 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Wed, 15 May 2019 16:05:31 +0200
+Date: Mon, 20 May 2019 16:18:41 +0200
 Subject: [PATCH] 5.0-lucjan-ll37
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -359,7 +359,7 @@ index 000000000..be19a3127
 +2016-09-10 UKSM 0.1.2.5 Fix a bug in dedup ratio calculation.
 +2017-02-26 UKSM 0.1.2.6 Fix a bug in hugetlbpage handling and a race bug with page migration.
 diff --git a/Makefile b/Makefile
-index 905debb4d..215b7c63d 100644
+index 287830c6c..764c7d88b 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Shy Crocodile
@@ -4877,7 +4877,7 @@ index bcf383730..c75271124 100644
  }
  EXPORT_SYMBOL(setup_new_exec);
 diff --git a/fs/fs-writeback.c b/fs/fs-writeback.c
-index 36855c1f8..77c039a0e 100644
+index b16645b41..1779c9330 100644
 --- a/fs/fs-writeback.c
 +++ b/fs/fs-writeback.c
 @@ -28,6 +28,7 @@
@@ -4888,7 +4888,7 @@ index 36855c1f8..77c039a0e 100644
  #include "internal.h"
  
  /*
-@@ -2446,6 +2447,8 @@ void sync_inodes_sb(struct super_block *sb)
+@@ -2451,6 +2452,8 @@ void sync_inodes_sb(struct super_block *sb)
  		return;
  	WARN_ON(!rwsem_is_locked(&sb->s_umount));
  
@@ -4897,7 +4897,7 @@ index 36855c1f8..77c039a0e 100644
  	/* protect against inode wb switch, see inode_switch_wbs_work_fn() */
  	bdi_down_write_wb_switch_rwsem(bdi);
  	bdi_split_work_to_wbs(bdi, &work, false);
-@@ -2453,6 +2456,8 @@ void sync_inodes_sb(struct super_block *sb)
+@@ -2458,6 +2461,8 @@ void sync_inodes_sb(struct super_block *sb)
  	bdi_up_write_wb_switch_rwsem(bdi);
  
  	wait_sb_inodes(sb);
@@ -6072,7 +6072,7 @@ index 2166c2d92..c4eef2f20 100644
  	__unhash_process(tsk, group_dead);
  	write_sequnlock(&sig->stats_lock);
 diff --git a/kernel/fork.c b/kernel/fork.c
-index b69248e6f..e0a8d71c3 100644
+index 95fd41e92..97752dfd2 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -104,6 +104,11 @@
@@ -6096,7 +6096,7 @@ index b69248e6f..e0a8d71c3 100644
  		mm->map_count++;
  		if (!(tmp->vm_flags & VM_WIPEONFORK))
  			retval = copy_page_range(mm, oldmm, mpnt);
-@@ -1695,6 +1700,10 @@ static __latent_entropy struct task_struct *copy_process(
+@@ -1720,6 +1725,10 @@ static __latent_entropy struct task_struct *copy_process(
  	if ((clone_flags & (CLONE_NEWUSER|CLONE_FS)) == (CLONE_NEWUSER|CLONE_FS))
  		return ERR_PTR(-EINVAL);
  
@@ -6107,7 +6107,7 @@ index b69248e6f..e0a8d71c3 100644
  	/*
  	 * Thread groups must share signals as well, and detached threads
  	 * can only be started up within the thread group.
-@@ -2528,6 +2537,12 @@ int ksys_unshare(unsigned long unshare_flags)
+@@ -2555,6 +2564,12 @@ int ksys_unshare(unsigned long unshare_flags)
  	if (unshare_flags & CLONE_NEWNS)
  		unshare_flags |= CLONE_FS;
  
@@ -19707,5 +19707,5 @@ index f807f2e3b..0b9d45d55 100644
  	"nr_dirty_threshold",
  	"nr_dirty_background_threshold",
 -- 
-2.21.0.777.g83232e3864
+2.22.0.rc1
 
