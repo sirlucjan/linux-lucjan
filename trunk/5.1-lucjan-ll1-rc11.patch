@@ -1,6 +1,6 @@
-From e4b0b8b23e9d34d21ebd07b348d5492b7b7f326f Mon Sep 17 00:00:00 2001
+From 0b458c695e8395cabe609c3e83261d940340ae46 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Thu, 23 May 2019 20:41:29 +0200
+Date: Thu, 23 May 2019 22:21:13 +0200
 Subject: [PATCH] 5.1-lucjan-ll1
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -277,7 +277,7 @@ index aa058aa7b..f92c0ff84 100644
 +
 +==============================================================
 diff --git a/Makefile b/Makefile
-index acab93537..d071f5b8c 100644
+index 3cf5ebcdc..b6412504d 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Shy Crocodile
@@ -2468,7 +2468,7 @@ index ae4d000ac..48d899cfb 100644
  		 * __bfq_lookup_next_entity that there is no
  		 * sd->in_service_entity.
 diff --git a/block/blk-core.c b/block/blk-core.c
-index a55389ba8..828ef748a 100644
+index b375cfea0..f1c92b23d 100644
 --- a/block/blk-core.c
 +++ b/block/blk-core.c
 @@ -792,7 +792,7 @@ static inline bool bio_check_ro(struct bio *bio, struct hd_struct *part)
@@ -3046,7 +3046,7 @@ index 84efb8956..1dbe403b9 100644
  		ret = __io_sqe_files_scm(ctx, this_files, total);
  		if (ret)
 diff --git a/fs/proc/base.c b/fs/proc/base.c
-index 6a803a0b7..aa7490ec9 100644
+index 0c9bef89a..fd2bf9f40 100644
 --- a/fs/proc/base.c
 +++ b/fs/proc/base.c
 @@ -94,6 +94,8 @@
@@ -3067,7 +3067,7 @@ index 6a803a0b7..aa7490ec9 100644
  		   (unsigned long long)task->sched_info.run_delay,
  		   task->sched_info.pcount);
  
-@@ -2957,6 +2959,120 @@ static int proc_stack_depth(struct seq_file *m, struct pid_namespace *ns,
+@@ -2962,6 +2964,120 @@ static int proc_stack_depth(struct seq_file *m, struct pid_namespace *ns,
  }
  #endif /* CONFIG_STACKLEAK_METRICS */
  
@@ -3188,7 +3188,7 @@ index 6a803a0b7..aa7490ec9 100644
  /*
   * Thread groups
   */
-@@ -3061,6 +3177,9 @@ static const struct pid_entry tgid_base_stuff[] = {
+@@ -3066,6 +3182,9 @@ static const struct pid_entry tgid_base_stuff[] = {
  #ifdef CONFIG_STACKLEAK_METRICS
  	ONE("stack_depth", S_IRUGO, proc_stack_depth),
  #endif
