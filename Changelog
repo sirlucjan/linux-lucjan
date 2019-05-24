@@ -1,3 +1,8 @@
+5.1-lucjan-ll1-rc13
+
+- add mm-compaction.c-fix-an-undefined-behaviour.patch
+- add mm-compaction-Make-sure-we-isolate-a-valid-PFN.patch
+
 5.1-lucjan-ll1-rc12
 
 - drop dm-make-sure-to-obey-max_io_len_target_boundary.patch
