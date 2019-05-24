@@ -1,6 +1,11 @@
 5.1-lucjan-ll1-rc12
 
-- drop Revert-dm-eliminate-split_discard_bios-flag-from-DM-.patch
+- drop dm-make-sure-to-obey-max_io_len_target_boundary.patch
+
+5.1-lucjan-ll1-ll11
+
+- add Revert-Revert-dm-eliminate-split_discard_bios-flag-f.patch
+- dm-make-sure-to-obey-max_io_len_target_boundary.patch
 
 5.1-lucjan-ll1-rc10
 
