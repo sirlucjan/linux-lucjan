@@ -1,6 +1,6 @@
-From 4e5228927a0669d8a0ebdebc8784a0159ad36ed6 Mon Sep 17 00:00:00 2001
+From 365b68bd5c4ec9e8cfd24d0091f44765448cb660 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Mon, 20 May 2019 16:18:41 +0200
+Date: Thu, 23 May 2019 22:19:25 +0200
 Subject: [PATCH] 5.0-lucjan-ll37
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -359,7 +359,7 @@ index 000000000..be19a3127
 +2016-09-10 UKSM 0.1.2.5 Fix a bug in dedup ratio calculation.
 +2017-02-26 UKSM 0.1.2.6 Fix a bug in hugetlbpage handling and a race bug with page migration.
 diff --git a/Makefile b/Makefile
-index 287830c6c..764c7d88b 100644
+index 48623d4c6..2be2a935b 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Shy Crocodile
@@ -3498,7 +3498,7 @@ index 2bed5725a..11929b39a 100644
   * Charge @delta to the blkg's current delay accumulation.  This is used to
   * throttle tasks if an IO controller thinks we need more throttling.
 diff --git a/block/blk-core.c b/block/blk-core.c
-index 5bde73a49..3729d6dfc 100644
+index 6ba6d8805..f43ddc385 100644
 --- a/block/blk-core.c
 +++ b/block/blk-core.c
 @@ -116,6 +116,7 @@ void blk_rq_init(struct request_queue *q, struct request *rq)
@@ -3839,7 +3839,7 @@ index 61deab0b5..bcbb699f0 100644
  static inline struct sbq_wait_state *bt_wait_ptr(struct sbitmap_queue *bt,
  						 struct blk_mq_hw_ctx *hctx)
 diff --git a/block/blk-mq.c b/block/blk-mq.c
-index 5b920a82b..1c05047d0 100644
+index 9957e0fc1..0dc1060ce 100644
 --- a/block/blk-mq.c
 +++ b/block/blk-mq.c
 @@ -59,7 +59,8 @@ static int blk_mq_poll_stats_bkt(const struct request *rq)
@@ -3957,7 +3957,7 @@ index 5b920a82b..1c05047d0 100644
  			blk_mq_try_issue_directly(data.hctx, same_queue_rq,
  					&cookie);
  		}
-@@ -2834,7 +2826,7 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
+@@ -2829,7 +2821,7 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
  		goto err_exit;
  
  	if (blk_mq_alloc_ctxs(q))
@@ -3966,7 +3966,7 @@ index 5b920a82b..1c05047d0 100644
  
  	/* init q->mq_kobj and sw queues' kobjects */
  	blk_mq_sysfs_init(q);
-@@ -2878,7 +2870,7 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
+@@ -2873,7 +2865,7 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
  	/*
  	 * Default to classic polling
  	 */
@@ -3975,7 +3975,7 @@ index 5b920a82b..1c05047d0 100644
  
  	blk_mq_init_cpu_queues(q, set->nr_hw_queues);
  	blk_mq_add_queue_tag_set(set, q);
-@@ -2898,6 +2890,9 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
+@@ -2893,6 +2885,9 @@ struct request_queue *blk_mq_init_allocated_queue(struct blk_mq_tag_set *set,
  	kfree(q->queue_hw_ctx);
  err_sys_init:
  	blk_mq_sysfs_deinit(q);
@@ -3985,7 +3985,7 @@ index 5b920a82b..1c05047d0 100644
  err_exit:
  	q->mq_ops = NULL;
  	return ERR_PTR(-ENOMEM);
-@@ -3230,10 +3225,6 @@ static void __blk_mq_update_nr_hw_queues(struct blk_mq_tag_set *set,
+@@ -3226,10 +3221,6 @@ static void __blk_mq_update_nr_hw_queues(struct blk_mq_tag_set *set,
  
  	list_for_each_entry(q, &set->tag_list, tag_set_list)
  		blk_mq_freeze_queue(q);
@@ -3996,7 +3996,7 @@ index 5b920a82b..1c05047d0 100644
  	/*
  	 * Switch IO scheduler to 'none', cleaning up the data associated
  	 * with the previous scheduler. We will switch back once we are done
-@@ -3412,7 +3403,7 @@ static bool blk_mq_poll_hybrid(struct request_queue *q,
+@@ -3408,7 +3399,7 @@ static bool blk_mq_poll_hybrid(struct request_queue *q,
  {
  	struct request *rq;
  
@@ -4006,10 +4006,10 @@ index 5b920a82b..1c05047d0 100644
  
  	if (!blk_qc_t_is_internal(cookie))
 diff --git a/block/blk-mq.h b/block/blk-mq.h
-index a3a684a8c..e99194d41 100644
+index 39bc1d5d4..140fbe7d0 100644
 --- a/block/blk-mq.h
 +++ b/block/blk-mq.h
-@@ -40,6 +40,8 @@ void blk_mq_free_queue(struct request_queue *q);
+@@ -40,6 +40,8 @@ void blk_mq_exit_queue(struct request_queue *q);
  int blk_mq_update_nr_requests(struct request_queue *q, unsigned int nr);
  void blk_mq_wake_waiters(struct request_queue *q);
  bool blk_mq_dispatch_rq_list(struct request_queue *, struct list_head *, bool);
@@ -4907,7 +4907,7 @@ index b16645b41..1779c9330 100644
  EXPORT_SYMBOL(sync_inodes_sb);
  
 diff --git a/fs/proc/base.c b/fs/proc/base.c
-index f5ed9512d..42bf4ae51 100644
+index ef11c54ad..0d7db62ec 100644
 --- a/fs/proc/base.c
 +++ b/fs/proc/base.c
 @@ -459,7 +459,7 @@ static int proc_pid_schedstat(struct seq_file *m, struct pid_namespace *ns,
@@ -12787,7 +12787,7 @@ index 62cc29364..4f427518a 100644
  /*
   * __task_rq_lock - lock the rq @p resides on.
 diff --git a/kernel/sched/cpufreq_schedutil.c b/kernel/sched/cpufreq_schedutil.c
-index 1ccf77f6d..4ecf11a83 100644
+index d4ab9245e..2c62f8454 100644
 --- a/kernel/sched/cpufreq_schedutil.c
 +++ b/kernel/sched/cpufreq_schedutil.c
 @@ -175,6 +175,7 @@ static unsigned int get_next_freq(struct sugov_policy *sg_policy,
@@ -12830,7 +12830,7 @@ index 1ccf77f6d..4ecf11a83 100644
  	if (ret) {
  		kthread_stop(thread);
  		pr_warn("%s: failed to set SCHED_DEADLINE\n", __func__);
-@@ -896,6 +907,7 @@ static int __init sugov_register(void)
+@@ -897,6 +908,7 @@ static int __init sugov_register(void)
  fs_initcall(sugov_register);
  
  #ifdef CONFIG_ENERGY_MODEL
@@ -12838,7 +12838,7 @@ index 1ccf77f6d..4ecf11a83 100644
  extern bool sched_energy_update;
  extern struct mutex sched_energy_mutex;
  
-@@ -926,4 +938,10 @@ void sched_cpufreq_governor_change(struct cpufreq_policy *policy,
+@@ -927,4 +939,10 @@ void sched_cpufreq_governor_change(struct cpufreq_policy *policy,
  	}
  
  }
@@ -13236,11 +13236,11 @@ index 923414a24..107b17f0d 100644
  static DEFINE_MUTEX(userns_state_mutex);
  
 diff --git a/lib/Makefile b/lib/Makefile
-index e1b59da71..a2f207294 100644
+index d1f312096..8af61bb79 100644
 --- a/lib/Makefile
 +++ b/lib/Makefile
-@@ -18,7 +18,7 @@ KCOV_INSTRUMENT_debugobjects.o := n
- KCOV_INSTRUMENT_dynamic_debug.o := n
+@@ -29,7 +29,7 @@ CFLAGS_string.o := $(call cc-option, -fno-stack-protector)
+ endif
  
  lib-y := ctype.o string.o vsprintf.o cmdline.o \
 -	 rbtree.o radix-tree.o timerqueue.o xarray.o \
@@ -13920,7 +13920,7 @@ index 8d3f38fa5..15a792c66 100644
  		}
  		flush_cache_page(vma, vmf->address, pte_pfn(vmf->orig_pte));
 diff --git a/mm/mmap.c b/mm/mmap.c
-index da9236a50..ed0e9dcdc 100644
+index 446698476..e85b78b66 100644
 --- a/mm/mmap.c
 +++ b/mm/mmap.c
 @@ -46,6 +46,7 @@
@@ -14022,7 +14022,7 @@ index da9236a50..ed0e9dcdc 100644
  	/* Success. */
  	if (!err)
  		return 0;
-@@ -2994,6 +3016,7 @@ static int do_brk_flags(unsigned long addr, unsigned long len, unsigned long fla
+@@ -2995,6 +3017,7 @@ static int do_brk_flags(unsigned long addr, unsigned long len, unsigned long fla
  	if ((flags & (~VM_EXEC)) != 0)
  		return -EINVAL;
  	flags |= VM_DATA_DEFAULT_FLAGS | VM_ACCOUNT | mm->def_flags;
@@ -14030,7 +14030,7 @@ index da9236a50..ed0e9dcdc 100644
  
  	error = get_unmapped_area(NULL, addr, len, 0, MAP_FIXED);
  	if (offset_in_page(error))
-@@ -3044,6 +3067,7 @@ static int do_brk_flags(unsigned long addr, unsigned long len, unsigned long fla
+@@ -3045,6 +3068,7 @@ static int do_brk_flags(unsigned long addr, unsigned long len, unsigned long fla
  	vma->vm_flags = flags;
  	vma->vm_page_prot = vm_get_page_prot(flags);
  	vma_link(mm, vma, prev, rb_link, rb_parent);
@@ -14038,7 +14038,7 @@ index da9236a50..ed0e9dcdc 100644
  out:
  	perf_event_mmap(vma);
  	mm->total_vm += len >> PAGE_SHIFT;
-@@ -3121,6 +3145,12 @@ void exit_mmap(struct mm_struct *mm)
+@@ -3122,6 +3146,12 @@ void exit_mmap(struct mm_struct *mm)
  		up_write(&mm->mmap_sem);
  	}
  
@@ -14051,7 +14051,7 @@ index da9236a50..ed0e9dcdc 100644
  	if (mm->locked_vm) {
  		vma = mm->mmap;
  		while (vma) {
-@@ -3133,8 +3163,12 @@ void exit_mmap(struct mm_struct *mm)
+@@ -3134,8 +3164,12 @@ void exit_mmap(struct mm_struct *mm)
  	arch_exit_mmap(mm);
  
  	vma = mm->mmap;
@@ -14065,7 +14065,7 @@ index da9236a50..ed0e9dcdc 100644
  
  	lru_add_drain();
  	flush_cache_mm(mm);
-@@ -3155,6 +3189,11 @@ void exit_mmap(struct mm_struct *mm)
+@@ -3156,6 +3190,11 @@ void exit_mmap(struct mm_struct *mm)
  		vma = remove_vma(vma);
  	}
  	vm_unacct_memory(nr_accounted);
@@ -14077,7 +14077,7 @@ index da9236a50..ed0e9dcdc 100644
  }
  
  /* Insert vm structure into process list sorted by address
-@@ -3262,6 +3301,7 @@ struct vm_area_struct *copy_vma(struct vm_area_struct **vmap,
+@@ -3263,6 +3302,7 @@ struct vm_area_struct *copy_vma(struct vm_area_struct **vmap,
  			new_vma->vm_ops->open(new_vma);
  		vma_link(mm, new_vma, prev, rb_link, rb_parent);
  		*need_rmap_locks = false;
@@ -14085,7 +14085,7 @@ index da9236a50..ed0e9dcdc 100644
  	}
  	return new_vma;
  
-@@ -3412,6 +3452,7 @@ static struct vm_area_struct *__install_special_mapping(
+@@ -3413,6 +3453,7 @@ static struct vm_area_struct *__install_special_mapping(
  	vm_stat_account(mm, vma->vm_flags, len >> PAGE_SHIFT);
  
  	perf_event_mmap(vma);
