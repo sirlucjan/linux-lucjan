@@ -435,6 +435,10 @@
 │       ├── 5.1-lucjan-ll1-rc12.patch.sig
 │       ├── 5.1-lucjan-ll1-rc13.patch
 │       ├── 5.1-lucjan-ll1-rc13.patch.sig
+│       ├── 5.1-lucjan-ll1-rc14.patch
+│       ├── 5.1-lucjan-ll1-rc14.patch.sig
+│       ├── 5.1-lucjan-ll1-rc15.patch
+│       ├── 5.1-lucjan-ll1-rc15.patch.sig
 │       ├── 5.1-lucjan-ll1-rc1.patch
 │       ├── 5.1-lucjan-ll1-rc1.patch.sig
 │       ├── 5.1-lucjan-ll1-rc2.patch
@@ -456,13 +460,8 @@
 ├── Changelog
 ├── Files
 ├── README.md
-├── testing
-│   ├── 5.1-lucjan-ll2-rc1.patch
-│   └── 5.1-lucjan-ll2-rc1.patch.sig
-└── trunk
-    ├── 5.1-lucjan-ll1-rc14.patch
-    ├── 5.1-lucjan-ll1-rc14.patch.sig
-    ├── 5.1-lucjan-ll1-rc15.patch
-    └── 5.1-lucjan-ll1-rc15.patch.sig
+└── testing
+    ├── 5.1-lucjan-ll2-rc1.patch
+    └── 5.1-lucjan-ll2-rc1.patch.sig
 
-10 directories, 455 files
+9 directories, 455 files
