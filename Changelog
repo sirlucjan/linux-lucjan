@@ -1,5 +1,9 @@
 5.1-lucjan-ll4
 
+- sync with upstream (drop mm-compaction-Make-sure-we-isolate-a-valid-PFN.patch)
+
+5.1-lucjan-ll4
+
 - add BMQ 0.96
 
 5.1-lucjan-ll3
