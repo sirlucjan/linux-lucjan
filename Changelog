@@ -1,6 +1,13 @@
+5.1-lucjan-ll7
+
+- drop bmq-5.1-try-to-fix-lockup.patch
+- add bmq-Fix-__ffs-usage-in-bmq_find_first_bit-bmq_find_n.patch
+
 5.1-lucjan-ll6
 
 - add bmq-5.1-try-to-fix-lockup.patch
+- add block-bfq-add-weight-symlink-to-the-bfq.weight-cgrou.patch
+- add cgroup-let-a-symlink-too-be-created-with-a-cftype-fi.patch
 
 5.1-lucjan-ll5-r1 --> 5.1-lucjan-ll5
 
