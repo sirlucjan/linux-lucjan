@@ -1,4 +1,6 @@
-5.1-lucjan-ll4
+5.1-lucjan-ll5-r1 --> 5.1-lucjan-ll5
+
+5.1-lucjan-ll5-rc1
 
 - sync with upstream (drop mm-compaction-Make-sure-we-isolate-a-valid-PFN.patch)
 
