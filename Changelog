@@ -1,3 +1,7 @@
+5.1-lucjan-ll9-rc1
+
+- sync with upstream (drop block-bfq-increase-idling-for-weight-raised-queues.patch and mm-compaction.c-fix-an-undefined-behaviour.patch)
+
 5.1-lucjan-ll8
 
 - drop block-bfq-delete-bfq-prefix-from-cgroup-filenames.patch
