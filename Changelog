@@ -1,3 +1,7 @@
+5.1-lucjan-ll10
+
+- add bcache-fix-stack-corruption-by-PRECEDING_KEY.patch
+
 5.1-lucjan-ll9-rc1 --> 5.1-lucjan-ll9
 
 5.1-lucjan-ll9-rc1
