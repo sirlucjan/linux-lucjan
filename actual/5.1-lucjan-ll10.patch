@@ -1,6 +1,6 @@
-From 28e74223051c487dd576d57efdc4e70356572cf0 Mon Sep 17 00:00:00 2001
+From 29a8c2506e1e58fe0cbca2da4164f98b7a6fc230 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Mon, 17 Jun 2019 20:53:10 +0200
+Date: Sat, 15 Jun 2019 21:07:42 +0200
 Subject: [PATCH] 5.1-lucjan-ll10
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -512,7 +512,7 @@ index aa058aa7b..f92c0ff84 100644
 +
 +==============================================================
 diff --git a/Makefile b/Makefile
-index 5171900e5..c0e8b37c3 100644
+index e7d1973d9..4d877a116 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Shy Crocodile
@@ -12235,10 +12235,10 @@ index 6ea523d71..fee813232 100644
  		release_sock(sk);
  		if (reqsk_queue_empty(&icsk->icsk_accept_queue))
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index 365c8490b..a0171e564 100644
+index 6baa6dc1b..994233222 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
-@@ -3947,8 +3947,8 @@ void __init tcp_init(void)
+@@ -3946,8 +3946,8 @@ void __init tcp_init(void)
  	tcp_init_mem();
  	/* Set per-socket limits to no more than 1/128 the pressure threshold */
  	limit = nr_free_buffer_pages() << (PAGE_SHIFT - 7);
