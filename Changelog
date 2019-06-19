@@ -1,4 +1,10 @@
-5.1-lucjan-ll11
+5.1-lucjan-ll12
+
+- add andrea-thp-fix.patch (from clearlinux)
+
+5.1-lucjan-ll11-rc1 --> 5.1-lucjan-ll11
+
+5.1-lucjan-ll11-rc1
 
 - sync with upstream (drop bcache-fix-stack-corruption-by-PRECEDING_KEY.patch)
 
