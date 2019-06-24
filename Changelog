@@ -1,3 +1,13 @@
+5.1-lucjan-ll19
+
+- add block-bfq-reset-inject-limit-when-think-time-state-c.patch
+- add block-bfq-fix-rq_in_driver-check-in-bfq_update_injec.patch
+- add block-bfq-update-base-request-service-times-when-pos.patch
+- add block-bfq-bring-forward-seek-think-time-update.patch
+- add block-bfq-detect-wakers-and-unconditionally-inject-t.patch
+- add block-bfq-preempt-lower-weight-or-lower-priority-que.patch
+- add block-bfq-re-schedule-empty-queues-if-they-deserve-I.patch
+
 5.1-lucjan-ll18
 
 - update LL-Implement-ll-branding-v5.1.patch
