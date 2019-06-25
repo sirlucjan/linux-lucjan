@@ -1,3 +1,7 @@
+5.1-lucjan-ll20
+
+- update LL-Implement-ll-branding-v5.1.patch
+
 5.1-lucjan-ll19
 
 - add block-bfq-reset-inject-limit-when-think-time-state-c.patch
