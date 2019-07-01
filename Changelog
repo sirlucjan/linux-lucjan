@@ -1,3 +1,7 @@
+5.1-lucjan-ll27
+
+- aufs-advanced-multi-layered-unification-filesystem-20190610.patch
+
 5.1-lucjan-ll26
 
 - add aufs-advanced-multi-layered-unification-filesystem.-.patch
