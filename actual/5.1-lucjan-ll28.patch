@@ -1,6 +1,6 @@
-From fbe933b83a98c25ce2b3d1971efde4ff241945ff Mon Sep 17 00:00:00 2001
+From 166d4c3346b2837cbe0e6e84b56b4749f2ccf248 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Tue, 2 Jul 2019 20:07:52 +0200
+Date: Tue, 2 Jul 2019 20:09:35 +0200
 Subject: [PATCH] 5.1-lucjan-ll28
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3002,7 +3002,7 @@ index 2c2fce72e..f5be2663b 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index d7b3c8e3f..e4775a00a 100644
+index 6eec39342..3d3e439f7 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Shy Crocodile
@@ -6648,11 +6648,11 @@ index b8647b5c3..84a751bd1 100644
  		.enter_s2idle = intel_idle_s2idle, },
  	{
 diff --git a/drivers/infiniband/core/addr.c b/drivers/infiniband/core/addr.c
-index 0dce94e3c..73f1fb5fc 100644
+index d0b04b0d3..3a3621bae 100644
 --- a/drivers/infiniband/core/addr.c
 +++ b/drivers/infiniband/core/addr.c
-@@ -817,6 +817,7 @@ int rdma_addr_find_l2_eth_by_grh(const union ib_gid *sgid,
- 		struct sockaddr     _sockaddr;
+@@ -816,6 +816,7 @@ int rdma_addr_find_l2_eth_by_grh(const union ib_gid *sgid,
+ 	union {
  		struct sockaddr_in  _sockaddr_in;
  		struct sockaddr_in6 _sockaddr_in6;
 +		struct sockaddr_ib  _sockaddr_ib;
@@ -47845,7 +47845,7 @@ index 155d7514a..eefcbb908 100644
  void __init files_init(void)
  {
 diff --git a/fs/inode.c b/fs/inode.c
-index 9a453f363..78b9f5631 100644
+index 5bd1dd2e9..a1d9fca8e 100644
 --- a/fs/inode.c
 +++ b/fs/inode.c
 @@ -1657,7 +1657,7 @@ EXPORT_SYMBOL(generic_update_time);
@@ -47866,10 +47866,10 @@ index 9a453f363..78b9f5631 100644
  /**
   *	touch_atime	-	update the access time
 diff --git a/fs/io_uring.c b/fs/io_uring.c
-index e82adbf8a..9aa1d35a9 100644
+index b897695c9..4281cf0cb 100644
 --- a/fs/io_uring.c
 +++ b/fs/io_uring.c
-@@ -1062,26 +1062,29 @@ static int io_read(struct io_kiocb *req, const struct sqe_submit *s,
+@@ -1063,26 +1063,29 @@ static int io_read(struct io_kiocb *req, const struct sqe_submit *s,
  	ret = io_import_iovec(req->ctx, READ, s, &iovec, &iter);
  	if (ret)
  		return ret;
@@ -47915,7 +47915,7 @@ index e82adbf8a..9aa1d35a9 100644
  	kfree(iovec);
  	return ret;
  }
-@@ -1109,50 +1112,46 @@ static int io_write(struct io_kiocb *req, const struct sqe_submit *s,
+@@ -1110,50 +1113,46 @@ static int io_write(struct io_kiocb *req, const struct sqe_submit *s,
  	ret = io_import_iovec(req->ctx, WRITE, s, &iovec, &iter);
  	if (ret)
  		return ret;
@@ -47996,7 +47996,7 @@ index e82adbf8a..9aa1d35a9 100644
  	kfree(iovec);
  	return ret;
  }
-@@ -2225,7 +2224,6 @@ static int io_sqe_files_scm(struct io_ring_ctx *ctx)
+@@ -2224,7 +2223,6 @@ static int io_sqe_files_scm(struct io_ring_ctx *ctx)
  	left = ctx->nr_user_files;
  	while (left) {
  		unsigned this_files = min_t(unsigned, left, SCM_MAX_FD);
@@ -48067,7 +48067,7 @@ index c03b83662..94d210ca3 100644
  int fsnotify_fasync(int fd, struct file *file, int on)
  {
 diff --git a/fs/notify/mark.c b/fs/notify/mark.c
-index 22acb0a79..a38381e57 100644
+index e9d49191d..21fa85b24 100644
 --- a/fs/notify/mark.c
 +++ b/fs/notify/mark.c
 @@ -289,6 +289,7 @@ void fsnotify_put_mark(struct fsnotify_mark *mark)
@@ -48086,7 +48086,7 @@ index 22acb0a79..a38381e57 100644
  
  /*
   * Sorting function for lists of fsnotify marks.
-@@ -685,6 +687,7 @@ int fsnotify_add_mark(struct fsnotify_mark *mark, fsnotify_connp_t *connp,
+@@ -693,6 +695,7 @@ int fsnotify_add_mark(struct fsnotify_mark *mark, fsnotify_connp_t *connp,
  	mutex_unlock(&group->mark_mutex);
  	return ret;
  }
@@ -48094,7 +48094,7 @@ index 22acb0a79..a38381e57 100644
  
  /*
   * Given a list of marks, find the mark associated with given group. If found
-@@ -809,6 +812,7 @@ void fsnotify_init_mark(struct fsnotify_mark *mark,
+@@ -817,6 +820,7 @@ void fsnotify_init_mark(struct fsnotify_mark *mark,
  	mark->group = group;
  	WRITE_ONCE(mark->connector, NULL);
  }
@@ -57611,7 +57611,7 @@ index fc64874dc..5405c052f 100644
  	}
  
 diff --git a/mm/mempolicy.c b/mm/mempolicy.c
-index 2219e747d..6db8719f9 100644
+index 5b3bf1747..178e68691 100644
 --- a/mm/mempolicy.c
 +++ b/mm/mempolicy.c
 @@ -2085,8 +2085,9 @@ alloc_pages_vma(gfp_t gfp, int order, struct vm_area_struct *vma,
