@@ -22,6 +22,8 @@
 
 * [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.1) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
 
+* [WireGuard](https://git.zx2c4.com/WireGuard) - fast and secure kernelspace VPN
+
 * [LL-patches](https://github.com/sirlucjan/kernel-patches/tree/master/5.1/ll-patches) / [LL-patches](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.1/ll-patches) - specific patches authored by Piotr Gorski
 
 * [LL-branding](https://github.com/sirlucjan/kernel-patches/tree/master/5.1/ll-branding) / [LL-branding](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.1/ll-branding) - specific patches authored by Piotr Gorski
