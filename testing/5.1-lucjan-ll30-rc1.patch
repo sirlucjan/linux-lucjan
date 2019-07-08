@@ -1,6 +1,6 @@
-From 13ba96325002616d85f7096c6a2933b575138348 Mon Sep 17 00:00:00 2001
+From a66cbb22dea5f3c05e80308a690d5481a018acd8 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Wed, 3 Jul 2019 21:14:19 +0200
+Date: Mon, 8 Jul 2019 18:05:58 +0200
 Subject: [PATCH] 5.1-lucjan-ll30
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3002,7 +3002,7 @@ index 2c2fce72e..f5be2663b 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index 46a0ae537..611949678 100644
+index 29f90cc1e..c92274bb1 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Shy Crocodile
@@ -11685,10 +11685,10 @@ index 7c7ada0b3..814d1b796 100644
  	}
  
 diff --git a/fs/Kconfig b/fs/Kconfig
-index 3e6d3101f..8b099435d 100644
+index db921dc26..80d6394ab 100644
 --- a/fs/Kconfig
 +++ b/fs/Kconfig
-@@ -261,6 +261,7 @@ source "fs/romfs/Kconfig"
+@@ -260,6 +260,7 @@ source "fs/romfs/Kconfig"
  source "fs/pstore/Kconfig"
  source "fs/sysv/Kconfig"
  source "fs/ufs/Kconfig"
@@ -47866,7 +47866,7 @@ index 5bd1dd2e9..a1d9fca8e 100644
  /**
   *	touch_atime	-	update the access time
 diff --git a/fs/io_uring.c b/fs/io_uring.c
-index b897695c9..4281cf0cb 100644
+index 7d8e83458..c34be012c 100644
 --- a/fs/io_uring.c
 +++ b/fs/io_uring.c
 @@ -1063,26 +1063,29 @@ static int io_read(struct io_kiocb *req, const struct sqe_submit *s,
@@ -49800,7 +49800,7 @@ index 4e2d82eea..e6f6e64c9 100644
  }
  
 diff --git a/kernel/cgroup/cpuset.c b/kernel/cgroup/cpuset.c
-index 4834c4214..eac93fe2b 100644
+index 6c9deb2cc..21988f3c6 100644
 --- a/kernel/cgroup/cpuset.c
 +++ b/kernel/cgroup/cpuset.c
 @@ -673,7 +673,7 @@ static int validate_change(struct cpuset *cur, struct cpuset *trial)
