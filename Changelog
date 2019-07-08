@@ -1,3 +1,89 @@
+5.2-lucjan-ll1-rc1
+
+- add add-sysctl-to-disallow-unprivileged-CLONE_NEWUSER-by.patch
+- add ZEN-Add-CONFIG-for-unprivileged_userns_clone.patch
+- add block-Kconfig.iosched-set-default-value-of-IOSCHED_BFQ.patch
+- add cgroup-let-a-symlink-too-be-created-with-a-cftype-fi.patch
+- add block-bfq-add-weight-symlink-to-the-bfq.weight-cgrou.patch
+- add block-initialize-the-write-priority-in-blk_rq_bio_pr.patch
+- add block-remove-blk_init_request_from_bio.patch
+- add block-remove-the-bi_phys_segments-field-in-struct-bi.patch
+- add block-simplify-blk_recalc_rq_segments.patch
+- add block-untangle-the-end-of-blk_bio_segment_split.patch
+- add block-mark-blk_rq_bio_prep-as-inline.patch
+- add blk-cgroup-factor-out-a-helper-to-read-rwstat-counte.patch
+- add blk-cgroup-pass-blkg_rwstat-structures-by-reference.patch
+- add blk-cgroup-introduce-a-new-struct-blkg_rwstat_sample.patch
+- add blk-cgroup-move-struct-blkg_stat-to-bfq.patch
+- add bfq-iosched-move-bfq_stat_recursive_sum-into-the-onl.patch
+- add block-rename-CONFIG_DEBUG_BLK_CGROUP-to-CONFIG_BFQ_C.patch
+- add block-improve-print_req_error.patch
+- add cgroup-export-css_next_descendant_pre-for-bfq.patch
+- add block-bfq-reset-inject-limit-when-think-time-state-c.patch
+- add block-bfq-fix-rq_in_driver-check-in-bfq_update_injec.patch
+- add block-bfq-update-base-request-service-times-when-pos.patch
+- add block-bfq-bring-forward-seek-think-time-update.patch
+- add block-bfq-detect-wakers-and-unconditionally-inject-t.patch
+- add block-bfq-preempt-lower-weight-or-lower-priority-que.patch
+- add block-bfq-re-schedule-empty-queues-if-they-deserve-I.patch
+- add block-bfq-Init-saved_wr_start_at_switch_to_srt-in-un.patch
+- add block-bfq-NULL-out-the-bic-when-it-s-no-longer-valid.patch
+- add i8042-decrease-debug-message-level-to-info.patch
+- add Increase-the-ext4-default-commit-age.patch
+- add silence-rapl.patch
+- add pci-pme-wakeups.patch
+- add ksm-wakeups.patch
+- add intel_idle-tweak-cpuidle-cstates.patch
+- add bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
+- add smpboot-reuse-timer-calibration.patch
+- add raid6-add-Kconfig-option-to-skip-raid6-benchmarking.patch
+- add Initialize-ata-before-graphics.patch
+- add reduce-e1000e-boot-time-by-tightening-sleep-ranges.patch
+- add give-rdrand-some-credit.patch
+- add ipv4-tcp-allow-the-memory-tuning-for-tcp-to-go-a-lit.patch
+- add e1000e-increase-pause-and-refresh-time.patch
+- add kernel-time-reduce-ntp-wakeups.patch
+- add init-wait-for-partition-and-retry-scan.patch
+- add print-fsync-count-for-bootchart.patch
+- add Add-boot-option-to-allow-unsigned-modules.patch
+- add Enable-stateless-firmware-loading.patch
+- add Migrate-some-systemd-defaults-to-the-kernel-defaults.patch
+- add xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
+- add use-lfence-instead-of-rep-and-nop.patch
+- add do-accept-in-LIFO-order-for-cache-efficiency.patch
+- add locking-rwsem-spin-faster.patch
+- add thp-fix.patch
+- add ata-libahci-ignore-staggered-spin-up.patch
+- add cpu-5.2-merge-graysky-s-patchset.patch
+- add cpu-5.2-add-a-CONFIG-option-that-sets-O3.patch
+- add consolemap-Fix-a-memory-leaking-bug-in-drivers-tty-v.patch
+- add drm-edid-Fix-a-missing-check-bug-in-drm_load_edid_fi.patch
+- add wcd9335-fix-a-incorrect-use-of-kstrndup.patch
+- add clk-sunxi-fix-a-missing-check-bug-in-sunxi_divs_clk_.patch
+- add scsi-mpt3sas_ctl-fix-double-fetch-bug-in-_ctl_ioctl_.patch
+- add io_uring-restructure-io_-read-write-control-flow.patch
+- add mm-ksm-introduce-ksm_madvise_merge-helper.patch
+- add mm-ksm-introduce-ksm_madvise_unmerge-helper.patch
+- add mm-ksm-proc-introduce-remote-merge.patch
+- add mm-ksm-proc-add-remote-KSM-documentation.patch
+- dd LL-Implement-ll-branding-v5.2.patch
+- add LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch
+- add LL-elevator-set-default-scheduler-to-bfq-for-blk-mq.patch
+- add sched-core-nr_migrate-128-increases-number-of-tasks-.patch
+- add LL-Add-.ll-version.patch
+- add loop-Better-discard-for-block-devices.patch
+- add Revert-e1000e-fix-cyclic-resets-at-link-up-with-acti.patch
+- add e1000e-start-network-tx-queue-only-when-link-is-up.patch
+- add scsi-sd-block-Fix-regressions-in-read-only-block-dev.patch
+- add scsi-sd-block-Update-fix-regressions-in-read-only-bl.patch
+- add ZEN-Add-Thinkpad-SMAPI-driver.patch
+- add ZEN-Allow-setting-the-number-of-available-virtual-TT.patch
+- add ZEN-Allow-TCP-YeAH-as-default-congestion-control.patch
+- add ZEN-Add-VHBA-driver.patch
+- add BMQ 0.97
+- add AUFS 20190610
+- add WireGuard 0.0.20190702
+
 5.1-lucjan-ll30-rc1
 
 - sync with upstream (drop Bluetooth-Fix-minimum-encryption-key-size-check.patch)
