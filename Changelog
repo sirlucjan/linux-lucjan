@@ -94,7 +94,7 @@
 - add mm-ksm-introduce-ksm_madvise_unmerge-helper.patch
 - add mm-ksm-proc-introduce-remote-merge.patch
 - add mm-ksm-proc-add-remote-KSM-documentation.patch
-- dd LL-Implement-ll-branding-v5.2.patch
+- add LL-Implement-ll-branding-v5.2.patch
 - add LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch
 - add LL-elevator-set-default-scheduler-to-bfq-for-blk-mq.patch
 - add sched-core-nr_migrate-128-increases-number-of-tasks-.patch
@@ -111,6 +111,8 @@
 - add BMQ 0.97
 - add AUFS 20190610
 - add WireGuard 0.0.20190702
+
+5.1-lucjan-ll30-rc1 --> 5.1-lucjan-ll30
 
 5.1-lucjan-ll30-rc1
 
