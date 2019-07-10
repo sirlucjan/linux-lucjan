@@ -1,3 +1,7 @@
+5.2-lucjan-ll1-rc3
+
+- add block-Fix-depends-for-BLK_DEV_ZONED.patch
+
 5.2-lucjan-ll1-rc2
 
 - add fpga-dfl-fme-mgr-fix-FME_PR_INTFC_ID-register-addres.patch

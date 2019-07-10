@@ -525,7 +525,9 @@
 │   │   └── 5.1-lucjan-ll9-rc1.patch.sig
 │   └── 5.2
 │       ├── 5.2-lucjan-ll1-rc1.patch
-│       └── 5.2-lucjan-ll1-rc1.patch.sig
+│       ├── 5.2-lucjan-ll1-rc1.patch.sig
+│       ├── 5.2-lucjan-ll1-rc2.patch
+│       └── 5.2-lucjan-ll1-rc2.patch.sig
 ├── Changelog
 ├── Files
 ├── README.md
@@ -533,7 +535,7 @@
 │   ├── 5.1-lucjan-ll30-rc1.patch
 │   └── 5.1-lucjan-ll30-rc1.patch.sig
 └── trunk
-    ├── 5.2-lucjan-ll1-rc2.patch
-    └── 5.2-lucjan-ll1-rc2.patch.sig
+    ├── 5.2-lucjan-ll1-rc3.patch
+    └── 5.2-lucjan-ll1-rc3.patch.sig
 
-11 directories, 525 files
+11 directories, 527 files
