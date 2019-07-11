@@ -1,3 +1,7 @@
+5.2-lucjan-ll1-rc4
+
+- add kbuild-add-fcf-protection-none-to-retpoline-flags.patch
+
 5.2-lucjan-ll1-rc3
 
 - add block-Fix-depends-for-BLK_DEV_ZONED.patch
