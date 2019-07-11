@@ -1,3 +1,5 @@
+5.2-lucjan-ll1-rc4 -> 5.2-lucjan-ll1
+
 5.2-lucjan-ll1-rc4
 
 - add kbuild-add-fcf-protection-none-to-retpoline-flags.patch
