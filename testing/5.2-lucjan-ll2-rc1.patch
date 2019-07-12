@@ -1,6 +1,6 @@
-From 6f46e3446e7336b7cac3fc4cf0d1083df778f88e Mon Sep 17 00:00:00 2001
+From 33301ddbb854c3d06e068572aa7be7db0636f45f Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Fri, 12 Jul 2019 13:04:04 +0200
+Date: Fri, 12 Jul 2019 15:28:43 +0200
 Subject: [PATCH] 5.2-lucjan-ll2
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3453,7 +3453,7 @@ index 677ef41cb..c2a7491dd 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index 3e4868a64..8849b5698 100644
+index 39bf52184..8227e2d89 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Bobtail Squid
@@ -4506,7 +4506,7 @@ index b3796a40a..0baf91894 100644
  		.write = bfq_io_set_weight,
  	},
 diff --git a/block/bfq-iosched.c b/block/bfq-iosched.c
-index f9269ae6d..69aae4f50 100644
+index e5db3856b..50c9d2598 100644
 --- a/block/bfq-iosched.c
 +++ b/block/bfq-iosched.c
 @@ -157,6 +157,7 @@ BFQ_BFQQ_FNS(in_large_burst);
@@ -5504,7 +5504,7 @@ index f9269ae6d..69aae4f50 100644
  	bfq_put_queue(bfqq); /* release process reference */
  }
  
-@@ -4687,6 +4958,8 @@ static void bfq_init_bfqq(struct bfq_data *bfqd, struct bfq_queue *bfqq,
+@@ -4688,6 +4959,8 @@ static void bfq_init_bfqq(struct bfq_data *bfqd, struct bfq_queue *bfqq,
  	RB_CLEAR_NODE(&bfqq->entity.rb_node);
  	INIT_LIST_HEAD(&bfqq->fifo);
  	INIT_HLIST_NODE(&bfqq->burst_list_node);
@@ -5513,7 +5513,7 @@ index f9269ae6d..69aae4f50 100644
  
  	bfqq->ref = 0;
  	bfqq->bfqd = bfqd;
-@@ -4854,7 +5127,7 @@ static void bfq_update_has_short_ttime(struct bfq_data *bfqd,
+@@ -4855,7 +5128,7 @@ static void bfq_update_has_short_ttime(struct bfq_data *bfqd,
  				       struct bfq_queue *bfqq,
  				       struct bfq_io_cq *bic)
  {
@@ -5522,7 +5522,7 @@ index f9269ae6d..69aae4f50 100644
  
  	/*
  	 * No need to update has_short_ttime if bfqq is async or in
-@@ -4879,13 +5152,102 @@ static void bfq_update_has_short_ttime(struct bfq_data *bfqd,
+@@ -4880,13 +5153,102 @@ static void bfq_update_has_short_ttime(struct bfq_data *bfqd,
  	     bfqq->ttime.ttime_mean > bfqd->bfq_slice_idle))
  		has_short_ttime = false;
  
@@ -5627,7 +5627,7 @@ index f9269ae6d..69aae4f50 100644
  }
  
  /*
-@@ -4895,19 +5257,9 @@ static void bfq_update_has_short_ttime(struct bfq_data *bfqd,
+@@ -4896,19 +5258,9 @@ static void bfq_update_has_short_ttime(struct bfq_data *bfqd,
  static void bfq_rq_enqueued(struct bfq_data *bfqd, struct bfq_queue *bfqq,
  			    struct request *rq)
  {
@@ -5647,7 +5647,7 @@ index f9269ae6d..69aae4f50 100644
  	bfqq->last_request_pos = blk_rq_pos(rq) + blk_rq_sectors(rq);
  
  	if (bfqq == bfqd->in_service_queue && bfq_bfqq_wait_request(bfqq)) {
-@@ -4995,6 +5347,10 @@ static bool __bfq_insert_request(struct bfq_data *bfqd, struct request *rq)
+@@ -4996,6 +5348,10 @@ static bool __bfq_insert_request(struct bfq_data *bfqd, struct request *rq)
  		bfqq = new_bfqq;
  	}
  
@@ -5658,7 +5658,7 @@ index f9269ae6d..69aae4f50 100644
  	waiting = bfqq && bfq_bfqq_wait_request(bfqq);
  	bfq_add_request(rq);
  	idle_timer_disabled = waiting && !bfq_bfqq_wait_request(bfqq);
-@@ -5007,7 +5363,7 @@ static bool __bfq_insert_request(struct bfq_data *bfqd, struct request *rq)
+@@ -5008,7 +5364,7 @@ static bool __bfq_insert_request(struct bfq_data *bfqd, struct request *rq)
  	return idle_timer_disabled;
  }
  
@@ -5667,7 +5667,7 @@ index f9269ae6d..69aae4f50 100644
  static void bfq_update_insert_stats(struct request_queue *q,
  				    struct bfq_queue *bfqq,
  				    bool idle_timer_disabled,
-@@ -5037,7 +5393,7 @@ static inline void bfq_update_insert_stats(struct request_queue *q,
+@@ -5038,7 +5394,7 @@ static inline void bfq_update_insert_stats(struct request_queue *q,
  					   struct bfq_queue *bfqq,
  					   bool idle_timer_disabled,
  					   unsigned int cmd_flags) {}
@@ -5676,7 +5676,7 @@ index f9269ae6d..69aae4f50 100644
  
  static void bfq_insert_request(struct blk_mq_hw_ctx *hctx, struct request *rq,
  			       bool at_head)
-@@ -5200,6 +5556,7 @@ static void bfq_completed_request(struct bfq_queue *bfqq, struct bfq_data *bfqd)
+@@ -5201,6 +5557,7 @@ static void bfq_completed_request(struct bfq_queue *bfqq, struct bfq_data *bfqd)
  			1UL<<(BFQ_RATE_SHIFT - 10))
  		bfq_update_rate_reset(bfqd, NULL);
  	bfqd->last_completion = now_ns;
@@ -5684,7 +5684,7 @@ index f9269ae6d..69aae4f50 100644
  
  	/*
  	 * If we are waiting to discover whether the request pattern
-@@ -5397,8 +5754,14 @@ static void bfq_update_inject_limit(struct bfq_data *bfqd,
+@@ -5398,8 +5755,14 @@ static void bfq_update_inject_limit(struct bfq_data *bfqd,
  	 * total service time, and there seem to be the right
  	 * conditions to do it, or we can lower the last base value
  	 * computed.
@@ -5700,7 +5700,7 @@ index f9269ae6d..69aae4f50 100644
  	    tot_time_ns < bfqq->last_serv_time_ns) {
  		bfqq->last_serv_time_ns = tot_time_ns;
  		/*
-@@ -5406,7 +5769,18 @@ static void bfq_update_inject_limit(struct bfq_data *bfqd,
+@@ -5407,7 +5770,18 @@ static void bfq_update_inject_limit(struct bfq_data *bfqd,
  		 * start trying injection.
  		 */
  		bfqq->inject_limit = max_t(unsigned int, 1, old_limit);
@@ -5827,7 +5827,7 @@ index c2faa7782..e80adf822 100644
  
  #ifdef CONFIG_BFQ_GROUP_IOSCHED
 diff --git a/block/bio.c b/block/bio.c
-index ce797d73b..3d293d438 100644
+index 67bba12d2..2cf4d6e1e 100644
 --- a/block/bio.c
 +++ b/block/bio.c
 @@ -558,14 +558,6 @@ void bio_put(struct bio *bio)
@@ -5846,7 +5846,7 @@ index ce797d73b..3d293d438 100644
   * 	__bio_clone_fast - clone a bio that shares the original bio's biovec
   * 	@bio: destination bio
 @@ -734,7 +726,7 @@ static int __bio_add_pc_page(struct request_queue *q, struct bio *bio,
- 	if (bio_full(bio))
+ 	if (bio_full(bio, len))
  		return 0;
  
 -	if (bio->bi_phys_segments >= queue_max_segments(q))
@@ -52600,10 +52600,10 @@ index 90dd78f0e..6cf6c21d3 100644
  ssize_t
  __vfs_getxattr(struct dentry *dentry, struct inode *inode, const char *name,
 diff --git a/include/linux/bio.h b/include/linux/bio.h
-index f87abaa89..a54ec0455 100644
+index e36b8fc1b..cd9794fd9 100644
 --- a/include/linux/bio.h
 +++ b/include/linux/bio.h
-@@ -408,7 +408,6 @@ static inline void bio_wouldblock_error(struct bio *bio)
+@@ -422,7 +422,6 @@ static inline void bio_wouldblock_error(struct bio *bio)
  }
  
  struct request_queue;
