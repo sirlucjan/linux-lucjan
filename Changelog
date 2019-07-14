@@ -1,3 +1,9 @@
+5.2-lucjan-ll3
+
+- add cpu-5.2-add-Zen-2-support.patch
+
+5.2-lucjan-ll2-rc1 --> 5.2-lucjan-ll2
+
 5.2-lucjan-ll2-rc1
 
 - sync with upstream (drop block-bfq-NULL-out-the-bic-when-it-s-no-longer-valid.patch)
