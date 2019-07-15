@@ -1,3 +1,8 @@
+5.2-lucjan-ll5
+
+- add aufs-fix-version.patch
+- add BMQ 0.98
+
 5.2-lucjan-ll4
 
 - add cpu-5.2-add-Goldmont-support.patch
