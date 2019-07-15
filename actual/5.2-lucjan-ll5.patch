@@ -1,6 +1,6 @@
-From 21801a49850febf62f1d7c9fb90d9bb425419767 Mon Sep 17 00:00:00 2001
+From f34f81152e0499786b0bf72fccff72da778752a5 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Mon, 15 Jul 2019 10:36:59 +0200
+Date: Mon, 15 Jul 2019 15:26:20 +0200
 Subject: [PATCH] 5.2-lucjan-ll5
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3509,7 +3509,7 @@ index e56b553de..ef94224ef 100644
   * Frequency of the spu scheduler tick.  By default we do one SPU scheduler
   * tick for every 10 CPU scheduler ticks.
 diff --git a/arch/x86/Kconfig.cpu b/arch/x86/Kconfig.cpu
-index 6adce1526..133d2dd5e 100644
+index 6adce1526..25f88a10f 100644
 --- a/arch/x86/Kconfig.cpu
 +++ b/arch/x86/Kconfig.cpu
 @@ -116,6 +116,7 @@ config MPENTIUMM
@@ -3700,14 +3700,14 @@ index 6adce1526..133d2dd5e 100644
 +
 +	  Enables -march=silvermont
 +	 
-++config MGOLDMONT
-+        bool "Intel Goldmont"
-+        select X86_P6_NOP
-+        ---help---
++config MGOLDMONT
++       bool "Intel Goldmont"
++       select X86_P6_NOP
++       ---help---
 +
-+          Select this for the Intel Goldmont platform.
++         Select this for the Intel Goldmont platform.
 +          
-+          Enables -march=goldmont
++         Enables -march=goldmont
 +
 +config MSANDYBRIDGE
 +	bool "Intel Sandy Bridge"
