@@ -1,3 +1,34 @@
+5.2-lucjan-ll6
+
+- add block-bfq-add-logs-and-BUG_ONs.patch
+- add block-bfq-DEBUG-log-inject-limit-reset.patch
+- add block-bfq-DEBUG-log-think-time-state-change.patch
+- add block-bfq-DEBUG-add-check-and-logs-on-rq_in_driver-i.patch
+- add block-bfq-DEBUG-log-think-time-update.patch
+- add block-bfq-DEBUG-add-logs-on-waker-detection.patch
+- add block-bfq-DEBUG-add-BUG_ONs-on-waker-detection.patch
+- add block-bfq-DEBUG-add-more-BUG_ONs.patch
+- add block-bfq-DEBUG-check-that-injection-never-chooses-i.patch
+- add block-bfq-DEBUG-add-more-checks-on-next_rq.patch
+- add block-bfq-DEBUG-log-preemption-info.patch
+- add block-bfq-DEBUG-log-per-queue-rq-completion-times.patch
+- add block-bfq-DEBUG-log-TOTALLY_SEEKY.patch
+- add block-bfq-check-also-in-flight-I-O-in-dispatch-plugg.patch
+- drop block-initialize-the-write-priority-in-blk_rq_bio_pr.patch
+- drop block-remove-blk_init_request_from_bio.patch
+- drop block-remove-the-bi_phys_segments-field-in-struct-bi.patch
+- drop block-simplify-blk_recalc_rq_segments.patch
+- drop block-untangle-the-end-of-blk_bio_segment_split.patch
+- drop block-mark-blk_rq_bio_prep-as-inline.patch
+- drop blk-cgroup-factor-out-a-helper-to-read-rwstat-counte.patch
+- drop blk-cgroup-pass-blkg_rwstat-structures-by-reference.patch
+- drop blk-cgroup-introduce-a-new-struct-blkg_rwstat_sample.patch
+- drop blk-cgroup-move-struct-blkg_stat-to-bfq.patch
+- drop bfq-iosched-move-bfq_stat_recursive_sum-into-the-onl.patch
+- drop block-rename-CONFIG_DEBUG_BLK_CGROUP-to-CONFIG_BFQ_C.patch
+- drop block-improve-print_req_error.patch
+- drop cgroup-export-css_next_descendant_pre-for-bfq.patch
+
 5.2-lucjan-ll5
 
 - add aufs-fix-version.patch
