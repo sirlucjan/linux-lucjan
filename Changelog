@@ -1,3 +1,7 @@
+5.2-lucjan-ll4
+
+- add cpu-5.2-add-Goldmont-support.patch
+
 5.2-lucjan-ll3
 
 - add cpu-5.2-add-Zen-2-support.patch
