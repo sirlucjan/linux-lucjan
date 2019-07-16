@@ -1,3 +1,7 @@
+5.2-lucjan-ll7
+
+- add netfilter-nf_tables-fix-module-autoload-for-redir.patch
+
 5.2-lucjan-ll6
 
 - add block-bfq-add-logs-and-BUG_ONs.patch
