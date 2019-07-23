@@ -1,3 +1,7 @@
+5.2-lucjan-ll10-rc1
+
+- sync with upstream (drop block-bfq-fix-rq_in_driver-check-in-bfq_update_injec.patch)
+
 5.2-lucjan-ll9-rc1 --> 5.2-lucjan-ll9
 
 5.2-lucjan-ll9-rc1
