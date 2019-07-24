@@ -1,6 +1,6 @@
-From 054e52d8805a0a25c9d1590c25e302181a2863b9 Mon Sep 17 00:00:00 2001
+From cf09b02a49fb663b06aa3a8e7c025873779255b3 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Tue, 23 Jul 2019 20:19:14 +0200
+Date: Wed, 24 Jul 2019 22:23:20 +0200
 Subject: [PATCH] 5.2-lucjan-ll10
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3330,7 +3330,7 @@ index 677ef41cb..c2a7491dd 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index d6c65b678..1e1cdb167 100644
+index 099beedeb..84c2efd5b 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Bobtail Squid
@@ -4207,7 +4207,7 @@ index b3796a40a..0d8688052 100644
  		.write = bfq_io_set_weight,
  	},
 diff --git a/block/bfq-iosched.c b/block/bfq-iosched.c
-index e5db3856b..d99d196e9 100644
+index 404e776aa..9a72a34d1 100644
 --- a/block/bfq-iosched.c
 +++ b/block/bfq-iosched.c
 @@ -157,6 +157,7 @@ BFQ_BFQQ_FNS(in_large_burst);
@@ -7489,7 +7489,7 @@ index e5db3856b..d99d196e9 100644
  
  	/*
  	 * Either we still have to compute the base value for the
-@@ -5407,7 +6452,18 @@ static void bfq_update_inject_limit(struct bfq_data *bfqd,
+@@ -5413,7 +6458,18 @@ static void bfq_update_inject_limit(struct bfq_data *bfqd,
  		 * start trying injection.
  		 */
  		bfqq->inject_limit = max_t(unsigned int, 1, old_limit);
@@ -7509,7 +7509,7 @@ index e5db3856b..d99d196e9 100644
  
  	/* update complete, not waiting for any request completion any longer */
  	bfqd->waited_rq = NULL;
-@@ -5421,8 +6477,13 @@ static void bfq_update_inject_limit(struct bfq_data *bfqd,
+@@ -5427,8 +6483,13 @@ static void bfq_update_inject_limit(struct bfq_data *bfqd,
   */
  static void bfq_finish_requeue_request(struct request *rq)
  {
@@ -7524,7 +7524,7 @@ index e5db3856b..d99d196e9 100644
  
  	/*
  	 * Requeue and finish hooks are invoked in blk-mq without
-@@ -5444,7 +6505,21 @@ static void bfq_finish_requeue_request(struct request *rq)
+@@ -5450,7 +6511,21 @@ static void bfq_finish_requeue_request(struct request *rq)
  	if (!rq->elv.icq || !bfqq)
  		return;
  
@@ -7546,7 +7546,7 @@ index e5db3856b..d99d196e9 100644
  
  	if (rq->rq_flags & RQF_STARTED)
  		bfqg_stats_update_completion(bfqq_group(bfqq),
-@@ -5452,6 +6527,8 @@ static void bfq_finish_requeue_request(struct request *rq)
+@@ -5458,6 +6533,8 @@ static void bfq_finish_requeue_request(struct request *rq)
  					     rq->io_start_time_ns,
  					     rq->cmd_flags);
  
@@ -7555,7 +7555,7 @@ index e5db3856b..d99d196e9 100644
  	if (likely(rq->rq_flags & RQF_STARTED)) {
  		unsigned long flags;
  
-@@ -5477,7 +6554,9 @@ static void bfq_finish_requeue_request(struct request *rq)
+@@ -5483,7 +6560,9 @@ static void bfq_finish_requeue_request(struct request *rq)
  		 * current version of the code, this implies that the
  		 * lock is held.
  		 */
@@ -7565,7 +7565,7 @@ index e5db3856b..d99d196e9 100644
  		if (!RB_EMPTY_NODE(&rq->rb_node)) {
  			bfq_remove_request(rq->q, rq);
  			bfqg_stats_update_io_remove(bfqq_group(bfqq),
-@@ -5548,13 +6627,28 @@ static struct bfq_queue *bfq_get_bfqq_handle_split(struct bfq_data *bfqd,
+@@ -5554,13 +6633,28 @@ static struct bfq_queue *bfq_get_bfqq_handle_split(struct bfq_data *bfqd,
  	if (bfqq)
  		bfq_put_queue(bfqq);
  	bfqq = bfq_get_queue(bfqd, bio, is_sync, bic);
@@ -7596,7 +7596,7 @@ index e5db3856b..d99d196e9 100644
  			bfq_clear_bfqq_in_large_burst(bfqq);
  			if (bic->was_in_burst_list)
  				/*
-@@ -5654,8 +6748,10 @@ static struct bfq_queue *bfq_init_rq(struct request *rq)
+@@ -5660,8 +6754,10 @@ static struct bfq_queue *bfq_init_rq(struct request *rq)
  	 * events, a request cannot be manipulated any longer before
  	 * being removed from bfq.
  	 */
@@ -7608,7 +7608,7 @@ index e5db3856b..d99d196e9 100644
  
  	bic = icq_to_bic(rq->elv.icq);
  
-@@ -5669,6 +6765,7 @@ static struct bfq_queue *bfq_init_rq(struct request *rq)
+@@ -5675,6 +6771,7 @@ static struct bfq_queue *bfq_init_rq(struct request *rq)
  	if (likely(!new_queue)) {
  		/* If the queue was seeky for too long, break it apart. */
  		if (bfq_bfqq_coop(bfqq) && bfq_bfqq_split_coop(bfqq)) {
@@ -7616,7 +7616,7 @@ index e5db3856b..d99d196e9 100644
  			bfq_log_bfqq(bfqd, bfqq, "breaking apart bfqq");
  
  			/* Update bic before losing reference to bfqq */
-@@ -5684,16 +6781,22 @@ static struct bfq_queue *bfq_init_rq(struct request *rq)
+@@ -5690,16 +6787,22 @@ static struct bfq_queue *bfq_init_rq(struct request *rq)
  								 NULL);
  			else
  				bfqq_already_existing = true;
@@ -7641,7 +7641,7 @@ index e5db3856b..d99d196e9 100644
  
  	/*
  	 * If a bfq_queue has only one process reference, it is owned
-@@ -5739,6 +6842,8 @@ static struct bfq_queue *bfq_init_rq(struct request *rq)
+@@ -5745,6 +6848,8 @@ static struct bfq_queue *bfq_init_rq(struct request *rq)
  		      bfq_tot_busy_queues(bfqd) == 0)))
  		bfq_handle_burst(bfqd, bfqq);
  
@@ -7650,7 +7650,7 @@ index e5db3856b..d99d196e9 100644
  	return bfqq;
  }
  
-@@ -5748,7 +6853,10 @@ static void bfq_idle_slice_timer_body(struct bfq_queue *bfqq)
+@@ -5754,7 +6859,10 @@ static void bfq_idle_slice_timer_body(struct bfq_queue *bfqq)
  	enum bfqq_expiration reason;
  	unsigned long flags;
  
@@ -7661,7 +7661,7 @@ index e5db3856b..d99d196e9 100644
  	bfq_clear_bfqq_wait_request(bfqq);
  
  	if (bfqq != bfqd->in_service_queue) {
-@@ -5791,6 +6899,8 @@ static enum hrtimer_restart bfq_idle_slice_timer(struct hrtimer *timer)
+@@ -5797,6 +6905,8 @@ static enum hrtimer_restart bfq_idle_slice_timer(struct hrtimer *timer)
  					     idle_slice_timer);
  	struct bfq_queue *bfqq = bfqd->in_service_queue;
  
@@ -7670,7 +7670,7 @@ index e5db3856b..d99d196e9 100644
  	/*
  	 * Theoretical race here: the in-service queue can be NULL or
  	 * different from the queue that was idling if a new request
-@@ -5810,11 +6920,11 @@ static void __bfq_put_async_bfqq(struct bfq_data *bfqd,
+@@ -5816,11 +6926,11 @@ static void __bfq_put_async_bfqq(struct bfq_data *bfqd,
  {
  	struct bfq_queue *bfqq = *bfqq_ptr;
  
@@ -7684,7 +7684,7 @@ index e5db3856b..d99d196e9 100644
  			     bfqq, bfqq->ref);
  		bfq_put_queue(bfqq);
  		*bfqq_ptr = NULL;
-@@ -5906,8 +7016,13 @@ static void bfq_exit_queue(struct elevator_queue *e)
+@@ -5912,8 +7022,13 @@ static void bfq_exit_queue(struct elevator_queue *e)
  	struct bfq_data *bfqd = e->elevator_data;
  	struct bfq_queue *bfqq, *n;
  
@@ -7698,7 +7698,7 @@ index e5db3856b..d99d196e9 100644
  	spin_lock_irq(&bfqd->lock);
  	list_for_each_entry_safe(bfqq, n, &bfqd->idle_list, bfqq_list)
  		bfq_deactivate_bfqq(bfqd, bfqq, false, false);
-@@ -5915,6 +7030,8 @@ static void bfq_exit_queue(struct elevator_queue *e)
+@@ -5921,6 +7036,8 @@ static void bfq_exit_queue(struct elevator_queue *e)
  
  	hrtimer_cancel(&bfqd->idle_slice_timer);
  
@@ -7707,7 +7707,7 @@ index e5db3856b..d99d196e9 100644
  #ifdef CONFIG_BFQ_GROUP_IOSCHED
  	/* release oom-queue reference to root group */
  	bfqg_and_blkg_put(bfqd->root_group);
-@@ -5927,6 +7044,7 @@ static void bfq_exit_queue(struct elevator_queue *e)
+@@ -5933,6 +7050,7 @@ static void bfq_exit_queue(struct elevator_queue *e)
  	spin_unlock_irq(&bfqd->lock);
  #endif
  
@@ -7715,7 +7715,7 @@ index e5db3856b..d99d196e9 100644
  	kfree(bfqd);
  }
  
-@@ -6107,6 +7225,58 @@ static int bfq_var_store(unsigned long *var, const char *page)
+@@ -6113,6 +7231,58 @@ static int bfq_var_store(unsigned long *var, const char *page)
  	return 0;
  }
  
@@ -7774,7 +7774,7 @@ index e5db3856b..d99d196e9 100644
  #define SHOW_FUNCTION(__FUNC, __VAR, __CONV)				\
  static ssize_t __FUNC(struct elevator_queue *e, char *page)		\
  {									\
-@@ -6127,6 +7297,12 @@ SHOW_FUNCTION(bfq_max_budget_show, bfqd->bfq_user_max_budget, 0);
+@@ -6133,6 +7303,12 @@ SHOW_FUNCTION(bfq_max_budget_show, bfqd->bfq_user_max_budget, 0);
  SHOW_FUNCTION(bfq_timeout_sync_show, bfqd->bfq_timeout, 1);
  SHOW_FUNCTION(bfq_strict_guarantees_show, bfqd->strict_guarantees, 0);
  SHOW_FUNCTION(bfq_low_latency_show, bfqd->low_latency, 0);
@@ -7787,7 +7787,7 @@ index e5db3856b..d99d196e9 100644
  #undef SHOW_FUNCTION
  
  #define USEC_SHOW_FUNCTION(__FUNC, __VAR)				\
-@@ -6171,6 +7347,16 @@ STORE_FUNCTION(bfq_back_seek_max_store, &bfqd->bfq_back_max, 0, INT_MAX, 0);
+@@ -6177,6 +7353,16 @@ STORE_FUNCTION(bfq_back_seek_max_store, &bfqd->bfq_back_max, 0, INT_MAX, 0);
  STORE_FUNCTION(bfq_back_seek_penalty_store, &bfqd->bfq_back_penalty, 1,
  		INT_MAX, 0);
  STORE_FUNCTION(bfq_slice_idle_store, &bfqd->bfq_slice_idle, 0, INT_MAX, 2);
@@ -7804,7 +7804,7 @@ index e5db3856b..d99d196e9 100644
  #undef STORE_FUNCTION
  
  #define USEC_STORE_FUNCTION(__FUNC, __PTR, MIN, MAX)			\
-@@ -6194,6 +7380,13 @@ USEC_STORE_FUNCTION(bfq_slice_idle_us_store, &bfqd->bfq_slice_idle, 0,
+@@ -6200,6 +7386,13 @@ USEC_STORE_FUNCTION(bfq_slice_idle_us_store, &bfqd->bfq_slice_idle, 0,
  		    UINT_MAX);
  #undef USEC_STORE_FUNCTION
  
@@ -7818,7 +7818,7 @@ index e5db3856b..d99d196e9 100644
  static ssize_t bfq_max_budget_store(struct elevator_queue *e,
  				    const char *page, size_t count)
  {
-@@ -6301,6 +7494,13 @@ static struct elv_fs_entry bfq_attrs[] = {
+@@ -6307,6 +7500,13 @@ static struct elv_fs_entry bfq_attrs[] = {
  	BFQ_ATTR(timeout_sync),
  	BFQ_ATTR(strict_guarantees),
  	BFQ_ATTR(low_latency),
@@ -7832,7 +7832,7 @@ index e5db3856b..d99d196e9 100644
  	__ATTR_NULL
  };
  
-@@ -6338,6 +7538,7 @@ MODULE_ALIAS("bfq-iosched");
+@@ -6344,6 +7544,7 @@ MODULE_ALIAS("bfq-iosched");
  static int __init bfq_init(void)
  {
  	int ret;
@@ -7840,7 +7840,7 @@ index e5db3856b..d99d196e9 100644
  
  #ifdef CONFIG_BFQ_GROUP_IOSCHED
  	ret = blkcg_policy_register(&blkcg_policy_bfq);
-@@ -6369,6 +7570,11 @@ static int __init bfq_init(void)
+@@ -6375,6 +7576,11 @@ static int __init bfq_init(void)
  	if (ret)
  		goto slab_kill;
  
@@ -13494,10 +13494,10 @@ index de9243d30..a74f34a8d 100644
  	NUM_IWL_UCODE_TLV_API
  #ifdef __CHECKER__
 diff --git a/drivers/net/wireless/intel/iwlwifi/mvm/fw.c b/drivers/net/wireless/intel/iwlwifi/mvm/fw.c
-index 153717587..36c260f8e 100644
+index 559f6df1a..8a3e542c4 100644
 --- a/drivers/net/wireless/intel/iwlwifi/mvm/fw.c
 +++ b/drivers/net/wireless/intel/iwlwifi/mvm/fw.c
-@@ -681,15 +681,15 @@ static int iwl_mvm_sar_get_wrds_table(struct iwl_mvm *mvm)
+@@ -682,15 +682,15 @@ static int iwl_mvm_sar_get_wrds_table(struct iwl_mvm *mvm)
  {
  	union acpi_object *wifi_pkg, *table, *data;
  	bool enabled;
@@ -13516,7 +13516,7 @@ index 153717587..36c260f8e 100644
  		ret = PTR_ERR(wifi_pkg);
  		goto out_free;
  	}
-@@ -718,15 +718,15 @@ static int iwl_mvm_sar_get_ewrd_table(struct iwl_mvm *mvm)
+@@ -719,15 +719,15 @@ static int iwl_mvm_sar_get_ewrd_table(struct iwl_mvm *mvm)
  {
  	union acpi_object *wifi_pkg, *data;
  	bool enabled;
@@ -13535,7 +13535,7 @@ index 153717587..36c260f8e 100644
  		ret = PTR_ERR(wifi_pkg);
  		goto out_free;
  	}
-@@ -777,7 +777,7 @@ static int iwl_mvm_sar_get_ewrd_table(struct iwl_mvm *mvm)
+@@ -778,7 +778,7 @@ static int iwl_mvm_sar_get_ewrd_table(struct iwl_mvm *mvm)
  static int iwl_mvm_sar_get_wgds_table(struct iwl_mvm *mvm)
  {
  	union acpi_object *wifi_pkg, *data;
@@ -13544,7 +13544,7 @@ index 153717587..36c260f8e 100644
  	int idx = 1;
  
  	data = iwl_acpi_get_object(mvm->dev, ACPI_WGDS_METHOD);
-@@ -785,12 +785,13 @@ static int iwl_mvm_sar_get_wgds_table(struct iwl_mvm *mvm)
+@@ -786,12 +786,13 @@ static int iwl_mvm_sar_get_wgds_table(struct iwl_mvm *mvm)
  		return PTR_ERR(data);
  
  	wifi_pkg = iwl_acpi_get_wifi_pkg(mvm->dev, data,
@@ -13560,7 +13560,7 @@ index 153717587..36c260f8e 100644
  	for (i = 0; i < ACPI_NUM_GEO_PROFILES; i++) {
  		for (j = 0; j < ACPI_GEO_TABLE_SIZE; j++) {
  			union acpi_object *entry;
-@@ -877,15 +878,29 @@ int iwl_mvm_get_sar_geo_profile(struct iwl_mvm *mvm)
+@@ -878,15 +879,29 @@ int iwl_mvm_get_sar_geo_profile(struct iwl_mvm *mvm)
  {
  	struct iwl_geo_tx_power_profiles_resp *resp;
  	int ret;
@@ -13596,7 +13596,7 @@ index 153717587..36c260f8e 100644
  	};
  
  	ret = iwl_mvm_send_cmd(mvm, &cmd);
-@@ -955,6 +970,16 @@ static int iwl_mvm_sar_geo_init(struct iwl_mvm *mvm)
+@@ -956,6 +971,16 @@ static int iwl_mvm_sar_geo_init(struct iwl_mvm *mvm)
  					i, j, value[1], value[2], value[0]);
  		}
  	}
@@ -13614,10 +13614,10 @@ index 153717587..36c260f8e 100644
  }
  
 diff --git a/drivers/net/wireless/intel/iwlwifi/mvm/mac80211.c b/drivers/net/wireless/intel/iwlwifi/mvm/mac80211.c
-index fdbabca02..3a076e5e3 100644
+index 964c7baab..3905770b8 100644
 --- a/drivers/net/wireless/intel/iwlwifi/mvm/mac80211.c
 +++ b/drivers/net/wireless/intel/iwlwifi/mvm/mac80211.c
-@@ -468,7 +468,19 @@ int iwl_mvm_mac_setup_register(struct iwl_mvm *mvm)
+@@ -474,7 +474,19 @@ int iwl_mvm_mac_setup_register(struct iwl_mvm *mvm)
  	ieee80211_hw_set(hw, SUPPORTS_VHT_EXT_NSS_BW);
  	ieee80211_hw_set(hw, BUFF_MMPDU_TXQ);
  	ieee80211_hw_set(hw, STA_MMPDU_TXQ);
@@ -13639,10 +13639,10 @@ index fdbabca02..3a076e5e3 100644
  
  	if (iwl_mvm_has_tlc_offload(mvm)) {
 diff --git a/drivers/net/wireless/intel/iwlwifi/mvm/mvm.h b/drivers/net/wireless/intel/iwlwifi/mvm/mvm.h
-index 02efcf218..5c34e4051 100644
+index 88af1f0ba..ed8fc9a92 100644
 --- a/drivers/net/wireless/intel/iwlwifi/mvm/mvm.h
 +++ b/drivers/net/wireless/intel/iwlwifi/mvm/mvm.h
-@@ -1181,6 +1181,7 @@ struct iwl_mvm {
+@@ -1184,6 +1184,7 @@ struct iwl_mvm {
  #ifdef CONFIG_ACPI
  	struct iwl_mvm_sar_profile sar_profiles[ACPI_SAR_PROFILE_NUM];
  	struct iwl_mvm_geo_profile geo_profiles[ACPI_NUM_GEO_PROFILES];
@@ -13651,7 +13651,7 @@ index 02efcf218..5c34e4051 100644
  };
  
 diff --git a/drivers/pci/pci.c b/drivers/pci/pci.c
-index 8abc843b1..68ad880a2 100644
+index 720da09d4..625fba1e8 100644
 --- a/drivers/pci/pci.c
 +++ b/drivers/pci/pci.c
 @@ -61,7 +61,7 @@ struct pci_pme_device {
@@ -54927,7 +54927,7 @@ index 8874f681b..59eb72bf7 100644
  	[RLIMIT_RTTIME]		= {  RLIM_INFINITY,  RLIM_INFINITY },	\
  }
 diff --git a/include/linux/blkdev.h b/include/linux/blkdev.h
-index 592669bcc..914ed8269 100644
+index 56e18d7fb..ea3dbc2b8 100644
 --- a/include/linux/blkdev.h
 +++ b/include/linux/blkdev.h
 @@ -45,7 +45,11 @@ struct blk_queue_stats;
@@ -55135,10 +55135,10 @@ index 6e2377e6c..5a945d18a 100644
  
  #define lockdep_assert_held(l)			do { (void)(l); } while (0)
 diff --git a/include/linux/mm.h b/include/linux/mm.h
-index dd0b5f4e1..22030c241 100644
+index 0a6dae2f2..dd74bb1d1 100644
 --- a/include/linux/mm.h
 +++ b/include/linux/mm.h
-@@ -1553,6 +1553,28 @@ static inline void unmap_shared_mapping_range(struct address_space *mapping,
+@@ -1558,6 +1558,28 @@ static inline void unmap_shared_mapping_range(struct address_space *mapping,
  	unmap_mapping_range(mapping, holebegin, holelen, 0);
  }
  
@@ -56428,7 +56428,7 @@ index abb2a4a2c..d12c8ccec 100644
  			 "%s: %s:%d is running\n", __func__, task->comm,
  			 task->pid);
 diff --git a/kernel/locking/lockdep.c b/kernel/locking/lockdep.c
-index c47788fa8..67dccde03 100644
+index dbc936ccf..4fc8dc30c 100644
 --- a/kernel/locking/lockdep.c
 +++ b/kernel/locking/lockdep.c
 @@ -152,7 +152,7 @@ static
@@ -63111,7 +63111,7 @@ index 000000000..d9ea1288f
 +}
 +#endif /* BMQ_SCHED_H */
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 874c42774..053a1419c 100644
+index 4d5962232..31de11cea 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -45,7 +45,11 @@ const_debug unsigned int sysctl_sched_features =
@@ -63608,10 +63608,10 @@ index 0fef39566..83fb1ecfc 100644
  }
 +EXPORT_SYMBOL_GPL(task_work_run);
 diff --git a/kernel/time/ntp.c b/kernel/time/ntp.c
-index 8de4f789d..9686c10b1 100644
+index 65eb79661..25a9d8c6d 100644
 --- a/kernel/time/ntp.c
 +++ b/kernel/time/ntp.c
-@@ -512,7 +512,7 @@ static void sched_sync_hw_clock(struct timespec64 now,
+@@ -513,7 +513,7 @@ static void sched_sync_hw_clock(struct timespec64 now,
  		 * the algorithm is very likely to require a short-sleep retry
  		 * after the above long sleep to synchronize ts_nsec.
  		 */
@@ -116118,5 +116118,5 @@ index a04a7cedd..85737fe54 100644
  		return -ENOMEM;
  
 -- 
-2.22.0.454.g9d418600f4
+2.22.0.545.g9c9b961d7e
 
