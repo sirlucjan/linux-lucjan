@@ -1,7 +1,7 @@
 .
 ├── actual
-│   ├── 5.2-lucjan-ll9.patch
-│   └── 5.2-lucjan-ll9.patch.sig
+│   ├── 5.2-lucjan-ll10.patch
+│   └── 5.2-lucjan-ll10.patch.sig
 ├── archive
 │   ├── 4.17
 │   │   ├── 4.17-lucjan-ll10.patch
@@ -532,6 +532,8 @@
 │   │   ├── 5.1-lucjan-ll9-rc1.patch
 │   │   └── 5.1-lucjan-ll9-rc1.patch.sig
 │   └── 5.2
+│       ├── 5.2-lucjan-ll10-rc1.patch
+│       ├── 5.2-lucjan-ll10-rc1.patch.sig
 │       ├── 5.2-lucjan-ll1.patch
 │       ├── 5.2-lucjan-ll1.patch.sig
 │       ├── 5.2-lucjan-ll1-rc1.patch
@@ -558,13 +560,12 @@
 │       ├── 5.2-lucjan-ll7.patch.sig
 │       ├── 5.2-lucjan-ll8.patch
 │       ├── 5.2-lucjan-ll8.patch.sig
+│       ├── 5.2-lucjan-ll9.patch
+│       ├── 5.2-lucjan-ll9.patch.sig
 │       ├── 5.2-lucjan-ll9-rc1.patch
 │       └── 5.2-lucjan-ll9-rc1.patch.sig
 ├── Changelog
 ├── Files
-├── README.md
-└── testing
-    ├── 5.2-lucjan-ll10-rc1.patch
-    └── 5.2-lucjan-ll10-rc1.patch.sig
+└── README.md
 
-10 directories, 557 files
+9 directories, 559 files
