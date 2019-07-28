@@ -1,6 +1,6 @@
-From cf09b02a49fb663b06aa3a8e7c025873779255b3 Mon Sep 17 00:00:00 2001
+From e103f6358ea0c8b0e499c98c0b75bf2d3dfc7ab0 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Wed, 24 Jul 2019 22:23:20 +0200
+Date: Fri, 26 Jul 2019 19:13:56 +0200
 Subject: [PATCH] 5.2-lucjan-ll10
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3330,7 +3330,7 @@ index 677ef41cb..c2a7491dd 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index 099beedeb..84c2efd5b 100644
+index 9aa5549da..e1685100c 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Bobtail Squid
@@ -54927,7 +54927,7 @@ index 8874f681b..59eb72bf7 100644
  	[RLIMIT_RTTIME]		= {  RLIM_INFINITY,  RLIM_INFINITY },	\
  }
 diff --git a/include/linux/blkdev.h b/include/linux/blkdev.h
-index 56e18d7fb..ea3dbc2b8 100644
+index 93baef66b..9cb98f144 100644
 --- a/include/linux/blkdev.h
 +++ b/include/linux/blkdev.h
 @@ -45,7 +45,11 @@ struct blk_queue_stats;
@@ -54953,7 +54953,7 @@ index 56e18d7fb..ea3dbc2b8 100644
  
  /* flags that prevent us from merging requests: */
  #define RQF_NOMERGE_FLAGS \
-@@ -608,7 +616,8 @@ struct request_queue {
+@@ -613,7 +621,8 @@ struct request_queue {
  #define QUEUE_FLAG_PCI_P2PDMA	25	/* device supports PCI p2p requests */
  
  #define QUEUE_FLAG_MQ_DEFAULT	((1 << QUEUE_FLAG_IO_STAT) |		\
@@ -54985,7 +54985,7 @@ index b4e766e93..67391720c 100644
  
  	/*
 diff --git a/include/linux/fs.h b/include/linux/fs.h
-index f7fdfe93e..28593b894 100644
+index 79fec8a84..363bd32c0 100644
 --- a/include/linux/fs.h
 +++ b/include/linux/fs.h
 @@ -1333,6 +1333,7 @@ extern void fasync_free(struct fasync_struct *);
@@ -55073,7 +55073,7 @@ index 8b5330dd5..dcb8b2201 100644
  
  extern void disk_block_events(struct gendisk *disk);
 diff --git a/include/linux/jbd2.h b/include/linux/jbd2.h
-index 5c04181b7..632618647 100644
+index 0e0393e7f..220bdfa47 100644
 --- a/include/linux/jbd2.h
 +++ b/include/linux/jbd2.h
 @@ -44,7 +44,7 @@
@@ -63897,10 +63897,10 @@ index ac5e5ba78..5decb22d1 100644
  # Give 'page_alloc' its own module-parameter namespace
  page-alloc-y := page_alloc.o
 diff --git a/mm/filemap.c b/mm/filemap.c
-index 6dd9a2274..ede6d4892 100644
+index 861e26ee4..7ac5b4397 100644
 --- a/mm/filemap.c
 +++ b/mm/filemap.c
-@@ -2701,7 +2701,7 @@ vm_fault_t filemap_page_mkwrite(struct vm_fault *vmf)
+@@ -2723,7 +2723,7 @@ vm_fault_t filemap_page_mkwrite(struct vm_fault *vmf)
  	vm_fault_t ret = VM_FAULT_LOCKED;
  
  	sb_start_pagefault(inode->i_sb);
@@ -64397,10 +64397,10 @@ index 7fd6db3fe..a2324d734 100644
  		release_sock(sk);
  		if (reqsk_queue_empty(&icsk->icsk_accept_queue))
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index 7dc9ab84b..24ebfac77 100644
+index 5264f064a..80c19601f 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
-@@ -3931,8 +3931,8 @@ void __init tcp_init(void)
+@@ -3935,8 +3935,8 @@ void __init tcp_init(void)
  	tcp_init_mem();
  	/* Set per-socket limits to no more than 1/128 the pressure threshold */
  	limit = nr_free_buffer_pages() << (PAGE_SHIFT - 7);
