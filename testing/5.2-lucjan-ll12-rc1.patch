@@ -1,6 +1,6 @@
-From 375cfa2b85f290406f56bcc41dd8751d14eb272a Mon Sep 17 00:00:00 2001
+From cf3174c9766c2a3c1c3006764401b398ba9d33cd Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Mon, 29 Jul 2019 20:42:57 +0200
+Date: Mon, 29 Jul 2019 22:14:57 +0200
 Subject: [PATCH] 5.2-lucjan-ll12
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3329,7 +3329,7 @@ index 677ef41cb..c2a7491dd 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index 68ee97784..5d5f82df5 100644
+index 103659791..a4c381ed4 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Bobtail Squid
@@ -3343,7 +3343,7 @@ index 68ee97784..5d5f82df5 100644
  # That's our default target when none is given on the command line
  PHONY := _all
  _all:
-@@ -636,6 +640,10 @@ RETPOLINE_CFLAGS_CLANG := -mretpoline-external-thunk
+@@ -637,6 +641,10 @@ RETPOLINE_CFLAGS_CLANG := -mretpoline-external-thunk
  RETPOLINE_VDSO_CFLAGS_CLANG := -mretpoline
  RETPOLINE_CFLAGS := $(call cc-option,$(RETPOLINE_CFLAGS_GCC),$(call cc-option,$(RETPOLINE_CFLAGS_CLANG)))
  RETPOLINE_VDSO_CFLAGS := $(call cc-option,$(RETPOLINE_VDSO_CFLAGS_GCC),$(call cc-option,$(RETPOLINE_VDSO_CFLAGS_CLANG)))
@@ -3354,7 +3354,7 @@ index 68ee97784..5d5f82df5 100644
  export RETPOLINE_CFLAGS
  export RETPOLINE_VDSO_CFLAGS
  
-@@ -697,8 +705,12 @@ KBUILD_CFLAGS	+= $(call cc-disable-warning, address-of-packed-member)
+@@ -698,8 +706,12 @@ KBUILD_CFLAGS	+= $(call cc-disable-warning, address-of-packed-member)
  ifdef CONFIG_CC_OPTIMIZE_FOR_SIZE
  KBUILD_CFLAGS	+= -Os
  else
@@ -8941,10 +8941,10 @@ index c9ba22508..c789b03f8 100644
 +
  }
 diff --git a/block/blk-core.c b/block/blk-core.c
-index 8340f6967..b932281ce 100644
+index 5183fca08..df0dbff4c 100644
 --- a/block/blk-core.c
 +++ b/block/blk-core.c
-@@ -749,7 +749,7 @@ static inline bool bio_check_ro(struct bio *bio, struct hd_struct *part)
+@@ -750,7 +750,7 @@ static inline bool bio_check_ro(struct bio *bio, struct hd_struct *part)
  {
  	const int op = bio_op(bio);
  
@@ -8953,7 +8953,7 @@ index 8340f6967..b932281ce 100644
  		char b[BDEVNAME_SIZE];
  
  		if (op_is_flush(bio->bi_opf) && !bio_sectors(bio))
-@@ -1116,6 +1116,9 @@ blk_qc_t submit_bio(struct bio *bio)
+@@ -1117,6 +1117,9 @@ blk_qc_t submit_bio(struct bio *bio)
  			count_vm_events(PGPGIN, count);
  		}
  
@@ -9378,10 +9378,10 @@ index dced03387..d2cd03766 100644
   * proportional to load.
   */
 diff --git a/drivers/fpga/Kconfig b/drivers/fpga/Kconfig
-index 8072c195d..48f62243e 100644
+index dd414250e..41bad2f27 100644
 --- a/drivers/fpga/Kconfig
 +++ b/drivers/fpga/Kconfig
-@@ -155,7 +155,7 @@ config FPGA_DFL
+@@ -156,7 +156,7 @@ config FPGA_DFL
  
  config FPGA_DFL_FME
  	tristate "FPGA DFL FME Driver"
@@ -12944,7 +12944,7 @@ index fa5ff77b8..5da118b0b 100644
  		.enter_s2idle = intel_idle_s2idle, },
  	{
 diff --git a/drivers/infiniband/core/addr.c b/drivers/infiniband/core/addr.c
-index 2f7d14159..3eee86ff1 100644
+index 9b76a8fcd..2a0f9ce8b 100644
 --- a/drivers/infiniband/core/addr.c
 +++ b/drivers/infiniband/core/addr.c
 @@ -817,6 +817,7 @@ int rdma_addr_find_l2_eth_by_grh(const union ib_gid *sgid,
@@ -13650,7 +13650,7 @@ index 720da09d4..625fba1e8 100644
  static void pci_dev_d3_sleep(struct pci_dev *dev)
  {
 diff --git a/drivers/platform/x86/Kconfig b/drivers/platform/x86/Kconfig
-index 5d5cc6111..b8bd38152 100644
+index 7c2fd1d72..a2b36f2eb 100644
 --- a/drivers/platform/x86/Kconfig
 +++ b/drivers/platform/x86/Kconfig
 @@ -623,9 +623,28 @@ config THINKPAD_ACPI_HOTKEY_POLL
@@ -54291,10 +54291,10 @@ index 2bf21e2c9..ed54d3759 100644
  /**
   *	touch_atime	-	update the access time
 diff --git a/fs/io_uring.c b/fs/io_uring.c
-index 4ef62a450..e4e52e464 100644
+index 6c09cedcf..ed83d63a2 100644
 --- a/fs/io_uring.c
 +++ b/fs/io_uring.c
-@@ -1105,26 +1105,29 @@ static int io_read(struct io_kiocb *req, const struct sqe_submit *s,
+@@ -1145,26 +1145,29 @@ static int io_read(struct io_kiocb *req, const struct sqe_submit *s,
  	ret = io_import_iovec(req->ctx, READ, s, &iovec, &iter);
  	if (ret)
  		return ret;
@@ -54340,7 +54340,7 @@ index 4ef62a450..e4e52e464 100644
  	kfree(iovec);
  	return ret;
  }
-@@ -1152,50 +1155,46 @@ static int io_write(struct io_kiocb *req, const struct sqe_submit *s,
+@@ -1192,50 +1195,46 @@ static int io_write(struct io_kiocb *req, const struct sqe_submit *s,
  	ret = io_import_iovec(req->ctx, WRITE, s, &iovec, &iter);
  	if (ret)
  		return ret;
@@ -54520,7 +54520,7 @@ index 99ddd126f..2154d69a2 100644
  /*
   * Destroy all marks in destroy_list, waits for SRCU period to finish before
 diff --git a/fs/open.c b/fs/open.c
-index b5b80469b..eb818f6b9 100644
+index a59abe3c6..78809163b 100644
 --- a/fs/open.c
 +++ b/fs/open.c
 @@ -65,6 +65,7 @@ int do_truncate(struct dentry *dentry, loff_t length, unsigned int time_attrs,
@@ -54532,7 +54532,7 @@ index b5b80469b..eb818f6b9 100644
  long vfs_truncate(const struct path *path, loff_t length)
  {
 diff --git a/fs/proc/base.c b/fs/proc/base.c
-index 255f6754c..6130dcedf 100644
+index 03517154f..b69c0ede9 100644
 --- a/fs/proc/base.c
 +++ b/fs/proc/base.c
 @@ -94,6 +94,8 @@
@@ -54553,8 +54553,8 @@ index 255f6754c..6130dcedf 100644
  		   (unsigned long long)task->sched_info.run_delay,
  		   task->sched_info.pcount);
  
-@@ -2014,7 +2016,7 @@ static int map_files_get_link(struct dentry *dentry, struct path *path)
- 	down_read(&mm->mmap_sem);
+@@ -2020,7 +2022,7 @@ static int map_files_get_link(struct dentry *dentry, struct path *path)
+ 	rc = -ENOENT;
  	vma = find_exact_vma(mm, vm_start, vm_end);
  	if (vma && vma->vm_file) {
 -		*path = vma->vm_file->f_path;
@@ -54562,7 +54562,7 @@ index 255f6754c..6130dcedf 100644
  		path_get(path);
  		rc = 0;
  	}
-@@ -2957,6 +2959,120 @@ static int proc_stack_depth(struct seq_file *m, struct pid_namespace *ns,
+@@ -2973,6 +2975,120 @@ static int proc_stack_depth(struct seq_file *m, struct pid_namespace *ns,
  }
  #endif /* CONFIG_STACKLEAK_METRICS */
  
@@ -54683,7 +54683,7 @@ index 255f6754c..6130dcedf 100644
  /*
   * Thread groups
   */
-@@ -3061,6 +3177,9 @@ static const struct pid_entry tgid_base_stuff[] = {
+@@ -3077,6 +3193,9 @@ static const struct pid_entry tgid_base_stuff[] = {
  #ifdef CONFIG_STACKLEAK_METRICS
  	ONE("stack_depth", S_IRUGO, proc_stack_depth),
  #endif
@@ -54710,10 +54710,10 @@ index 14c2badb8..65afe5287 100644
  		ino = inode->i_ino;
  	}
 diff --git a/fs/proc/task_mmu.c b/fs/proc/task_mmu.c
-index 01d4eb0e6..fedfaa012 100644
+index 7f84d1477..3d9ee997b 100644
 --- a/fs/proc/task_mmu.c
 +++ b/fs/proc/task_mmu.c
-@@ -305,7 +305,10 @@ show_map_vma(struct seq_file *m, struct vm_area_struct *vma)
+@@ -309,7 +309,10 @@ show_map_vma(struct seq_file *m, struct vm_area_struct *vma)
  	const char *name = NULL;
  
  	if (file) {
@@ -54725,7 +54725,7 @@ index 01d4eb0e6..fedfaa012 100644
  		dev = inode->i_sb->s_dev;
  		ino = inode->i_ino;
  		pgoff = ((loff_t)vma->vm_pgoff) << PAGE_SHIFT;
-@@ -1761,7 +1764,7 @@ static int show_numa_map(struct seq_file *m, void *v)
+@@ -1774,7 +1777,7 @@ static int show_numa_map(struct seq_file *m, void *v)
  	struct proc_maps_private *proc_priv = &numa_priv->proc_maps;
  	struct vm_area_struct *vma = v;
  	struct numa_maps *md = &numa_priv->md;
@@ -54735,7 +54735,7 @@ index 01d4eb0e6..fedfaa012 100644
  	struct mm_walk walk = {
  		.hugetlb_entry = gather_hugetlb_stats,
 diff --git a/fs/proc/task_nommu.c b/fs/proc/task_nommu.c
-index 36bf0f2e1..8df6cbc58 100644
+index 7907e6419..d17209cf5 100644
 --- a/fs/proc/task_nommu.c
 +++ b/fs/proc/task_nommu.c
 @@ -155,7 +155,10 @@ static int nommu_vma_show(struct seq_file *m, struct vm_area_struct *vma)
@@ -64164,7 +64164,7 @@ index 7e8c3e8ae..d8a903f61 100644
  			new_vma->vm_ops->open(new_vma);
  		vma_link(mm, new_vma, prev, rb_link, rb_parent);
 diff --git a/mm/nommu.c b/mm/nommu.c
-index d8c02fbe0..22dae8b72 100644
+index b2823519f..d7e4abcac 100644
 --- a/mm/nommu.c
 +++ b/mm/nommu.c
 @@ -640,7 +640,7 @@ static void __put_nommu_region(struct vm_region *region)
