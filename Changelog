@@ -1,3 +1,7 @@
+5.2-lucjan-ll12-rc1
+
+- sync with upstream (drop drm-edid-Fix-a-missing-check-bug-in-drm_load_edid_fi.patch)
+
 5.2-lucjan-ll11
 
 - update LL-Implement-ll-branding-v5.2.patch
