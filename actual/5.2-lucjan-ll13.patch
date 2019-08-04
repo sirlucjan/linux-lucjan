@@ -1,6 +1,6 @@
-From 2941ac5c618821a593f0fc8b1aaf0f5e486919be Mon Sep 17 00:00:00 2001
+From 09ce34f803cfbdfc0df84a42d0583ff7c059cb9b Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Wed, 31 Jul 2019 22:32:29 +0200
+Date: Fri, 2 Aug 2019 13:40:36 +0200
 Subject: [PATCH] 5.2-lucjan-ll13
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3329,7 +3329,7 @@ index 677ef41cb..c2a7491dd 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index 78bd926c8..3517afbf4 100644
+index c48d4224f..182cbf204 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Bobtail Squid
@@ -54200,7 +54200,7 @@ index c435398f2..3fc74e471 100644
  /**
   * d_ancestor - search for an ancestor
 diff --git a/fs/exec.c b/fs/exec.c
-index 89a500bb8..1a722915e 100644
+index 39902cc9e..ed8f4957a 100644
 --- a/fs/exec.c
 +++ b/fs/exec.c
 @@ -110,6 +110,7 @@ bool path_noexec(const struct path *path)
@@ -54532,7 +54532,7 @@ index a59abe3c6..78809163b 100644
  long vfs_truncate(const struct path *path, loff_t length)
  {
 diff --git a/fs/proc/base.c b/fs/proc/base.c
-index 03517154f..b69c0ede9 100644
+index e781af70d..ea1e611af 100644
 --- a/fs/proc/base.c
 +++ b/fs/proc/base.c
 @@ -94,6 +94,8 @@
@@ -54544,7 +54544,7 @@ index 03517154f..b69c0ede9 100644
  #include <trace/events/oom.h>
  #include "internal.h"
  #include "fd.h"
-@@ -459,7 +461,7 @@ static int proc_pid_schedstat(struct seq_file *m, struct pid_namespace *ns,
+@@ -477,7 +479,7 @@ static int proc_pid_schedstat(struct seq_file *m, struct pid_namespace *ns,
  		seq_puts(m, "0 0 0\n");
  	else
  		seq_printf(m, "%llu %llu %lu\n",
@@ -54553,7 +54553,7 @@ index 03517154f..b69c0ede9 100644
  		   (unsigned long long)task->sched_info.run_delay,
  		   task->sched_info.pcount);
  
-@@ -2020,7 +2022,7 @@ static int map_files_get_link(struct dentry *dentry, struct path *path)
+@@ -2038,7 +2040,7 @@ static int map_files_get_link(struct dentry *dentry, struct path *path)
  	rc = -ENOENT;
  	vma = find_exact_vma(mm, vm_start, vm_end);
  	if (vma && vma->vm_file) {
@@ -54562,7 +54562,7 @@ index 03517154f..b69c0ede9 100644
  		path_get(path);
  		rc = 0;
  	}
-@@ -2973,6 +2975,120 @@ static int proc_stack_depth(struct seq_file *m, struct pid_namespace *ns,
+@@ -2991,6 +2993,120 @@ static int proc_stack_depth(struct seq_file *m, struct pid_namespace *ns,
  }
  #endif /* CONFIG_STACKLEAK_METRICS */
  
@@ -54683,7 +54683,7 @@ index 03517154f..b69c0ede9 100644
  /*
   * Thread groups
   */
-@@ -3077,6 +3193,9 @@ static const struct pid_entry tgid_base_stuff[] = {
+@@ -3095,6 +3211,9 @@ static const struct pid_entry tgid_base_stuff[] = {
  #ifdef CONFIG_STACKLEAK_METRICS
  	ONE("stack_depth", S_IRUGO, proc_stack_depth),
  #endif
@@ -55193,7 +55193,7 @@ index 35942084c..24f5fd1a7 100644
  extern const struct file_operations proc_mountinfo_operations;
  extern const struct file_operations proc_mountstats_operations;
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index 118374106..7b2be1b8c 100644
+index 1157f6e24..47320d62f 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
 @@ -604,13 +604,18 @@ struct task_struct {
@@ -55257,7 +55257,7 @@ index 118374106..7b2be1b8c 100644
  
  	/* Process credentials: */
  
-@@ -1217,6 +1234,15 @@ struct task_struct {
+@@ -1225,6 +1242,15 @@ struct task_struct {
  	 */
  };
  
@@ -56349,7 +56349,7 @@ index a75b6a7f4..b63fdd44e 100644
  	__unhash_process(tsk, group_dead);
  	write_sequnlock(&sig->stats_lock);
 diff --git a/kernel/fork.c b/kernel/fork.c
-index fe83343da..ab4117b98 100644
+index d3f006ed2..7376eaea9 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -106,6 +106,11 @@
@@ -63253,7 +63253,7 @@ index 14c6a8716..3df243b6a 100644
  	nr_switches = p->nvcsw + p->nivcsw;
  
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index f35930f5e..1282ef7bc 100644
+index 9ecf1e4c6..6555b5128 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -37,8 +37,13 @@
