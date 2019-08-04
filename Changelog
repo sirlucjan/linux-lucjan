@@ -1,3 +1,7 @@
+5.2-lucjan-ll14
+
+- add aufs-bump-to-v20190805.patch
+
 5.2-lucjan-ll13
 
 - update LL-Implement-ll-branding-v5.2.patch
