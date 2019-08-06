@@ -1,7 +1,7 @@
-From 76019adaf268c0b8777969e5d9854dee1cbf833e Mon Sep 17 00:00:00 2001
+From 3b1a228f0e1a658fd63a45c8183b31f88df03b5f Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Mon, 5 Aug 2019 16:35:42 +0200
-Subject: [PATCH] 5.2-lucjan-ll14
+Date: Tue, 6 Aug 2019 14:34:23 +0200
+Subject: [PATCH] 5.2-lucjan-ll15
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
 ---
@@ -112,8 +112,6 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  fs/aufs/branch.c                              | 1423 +++
  fs/aufs/branch.h                              |  366 +
  fs/aufs/conf.mk                               |   40 +
- fs/aufs/conf.str                              |    9 +
- fs/aufs/conf.str.tmp                          |    9 +
  fs/aufs/cpup.c                                | 1458 +++
  fs/aufs/cpup.h                                |  100 +
  fs/aufs/dbgaufs.c                             |  526 +
@@ -377,7 +375,7 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  security/device_cgroup.c                      |    1 +
  security/security.c                           |    8 +
  sound/soc/codecs/wcd9335.c                    |    2 +-
- 372 files changed, 106739 insertions(+), 1371 deletions(-)
+ 370 files changed, 106721 insertions(+), 1371 deletions(-)
  create mode 100644 Documentation/ABI/testing/debugfs-aufs
  create mode 100644 Documentation/ABI/testing/sysfs-aufs
  create mode 100644 Documentation/filesystems/aufs/README
@@ -411,8 +409,6 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  create mode 100644 fs/aufs/branch.c
  create mode 100644 fs/aufs/branch.h
  create mode 100644 fs/aufs/conf.mk
- create mode 100644 fs/aufs/conf.str
- create mode 100644 fs/aufs/conf.str.tmp
  create mode 100644 fs/aufs/cpup.c
  create mode 100644 fs/aufs/cpup.h
  create mode 100644 fs/aufs/dbgaufs.c
@@ -3329,7 +3325,7 @@ index 677ef41cb..c2a7491dd 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index 19f60a39a..aff9dc577 100644
+index 19f60a39a..4ac83a3c3 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Bobtail Squid
@@ -3337,7 +3333,7 @@ index 19f60a39a..aff9dc577 100644
  # expect to learn how to build the kernel reading this file.
  
 +LLNAME = linux-lucjan
-+LLVERSION = .ll14
++LLVERSION = .ll15
 +EXTRAVERSION := $(EXTRAVERSION)$(LLVERSION)
 +
  # That's our default target when none is given on the command line
@@ -20305,36 +20301,6 @@ index 000000000..12782f8e0
 +${obj}/sysfs.o: ${AuConfName}
 +
 +-include ${srctree}/${src}/conf_priv.mk
-diff --git a/fs/aufs/conf.str b/fs/aufs/conf.str
-new file mode 100644
-index 000000000..d3163c25f
---- /dev/null
-+++ b/fs/aufs/conf.str
-@@ -0,0 +1,9 @@
-+"CONFIG_AUFS_FS=m\n"
-+"CONFIG_AUFS_BRANCH_MAX_127=y\n"
-+"CONFIG_AUFS_SBILIST=y\n"
-+"CONFIG_AUFS_XATTR=y\n"
-+"CONFIG_AUFS_FHSM=y\n"
-+"CONFIG_AUFS_BR_FUSE=y\n"
-+"CONFIG_AUFS_POLL=y\n"
-+"CONFIG_AUFS_BR_HFSPLUS=y\n"
-+"CONFIG_AUFS_BDEV_LOOP=y\n"
-diff --git a/fs/aufs/conf.str.tmp b/fs/aufs/conf.str.tmp
-new file mode 100644
-index 000000000..d3163c25f
---- /dev/null
-+++ b/fs/aufs/conf.str.tmp
-@@ -0,0 +1,9 @@
-+"CONFIG_AUFS_FS=m\n"
-+"CONFIG_AUFS_BRANCH_MAX_127=y\n"
-+"CONFIG_AUFS_SBILIST=y\n"
-+"CONFIG_AUFS_XATTR=y\n"
-+"CONFIG_AUFS_FHSM=y\n"
-+"CONFIG_AUFS_BR_FUSE=y\n"
-+"CONFIG_AUFS_POLL=y\n"
-+"CONFIG_AUFS_BR_HFSPLUS=y\n"
-+"CONFIG_AUFS_BDEV_LOOP=y\n"
 diff --git a/fs/aufs/cpup.c b/fs/aufs/cpup.c
 new file mode 100644
 index 000000000..21134b448

@@ -1,6 +1,6 @@
-From f5551899ef66fdb20b86f1060c1dddcac52eb48d Mon Sep 17 00:00:00 2001
+From 76019adaf268c0b8777969e5d9854dee1cbf833e Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Mon, 5 Aug 2019 00:29:27 +0200
+Date: Mon, 5 Aug 2019 16:35:42 +0200
 Subject: [PATCH] 5.2-lucjan-ll14
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3329,7 +3329,7 @@ index 677ef41cb..c2a7491dd 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index 3cd40f1a8..abc1f81e6 100644
+index 19f60a39a..aff9dc577 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Bobtail Squid
@@ -3343,7 +3343,7 @@ index 3cd40f1a8..abc1f81e6 100644
  # That's our default target when none is given on the command line
  PHONY := _all
  _all:
-@@ -637,6 +641,10 @@ RETPOLINE_CFLAGS_CLANG := -mretpoline-external-thunk
+@@ -638,6 +642,10 @@ RETPOLINE_CFLAGS_CLANG := -mretpoline-external-thunk
  RETPOLINE_VDSO_CFLAGS_CLANG := -mretpoline
  RETPOLINE_CFLAGS := $(call cc-option,$(RETPOLINE_CFLAGS_GCC),$(call cc-option,$(RETPOLINE_CFLAGS_CLANG)))
  RETPOLINE_VDSO_CFLAGS := $(call cc-option,$(RETPOLINE_VDSO_CFLAGS_GCC),$(call cc-option,$(RETPOLINE_VDSO_CFLAGS_CLANG)))
@@ -3354,7 +3354,7 @@ index 3cd40f1a8..abc1f81e6 100644
  export RETPOLINE_CFLAGS
  export RETPOLINE_VDSO_CFLAGS
  
-@@ -698,8 +706,12 @@ KBUILD_CFLAGS	+= $(call cc-disable-warning, address-of-packed-member)
+@@ -699,8 +707,12 @@ KBUILD_CFLAGS	+= $(call cc-disable-warning, address-of-packed-member)
  ifdef CONFIG_CC_OPTIMIZE_FOR_SIZE
  KBUILD_CFLAGS	+= -Os
  else
@@ -9163,7 +9163,7 @@ index 7eaaf5ee5..1174f1d07 100644
  	"/lib/firmware/updates",
  	"/lib/firmware/" UTS_RELEASE,
 diff --git a/drivers/block/loop.c b/drivers/block/loop.c
-index f11b7dc16..9972fb893 100644
+index 430d31499..3431f9698 100644
 --- a/drivers/block/loop.c
 +++ b/drivers/block/loop.c
 @@ -425,19 +425,14 @@ static int lo_read_transfer(struct loop_device *lo, struct request *rq,
@@ -9302,7 +9302,7 @@ index f11b7dc16..9972fb893 100644
  }
  
  static void loop_unprepare_queue(struct loop_device *lo)
-@@ -1935,7 +1976,10 @@ static void loop_handle_cmd(struct loop_cmd *cmd)
+@@ -1937,7 +1978,10 @@ static void loop_handle_cmd(struct loop_cmd *cmd)
   failed:
  	/* complete non-aio request */
  	if (!cmd->use_aio || ret) {
@@ -54291,7 +54291,7 @@ index 2bf21e2c9..ed54d3759 100644
  /**
   *	touch_atime	-	update the access time
 diff --git a/fs/io_uring.c b/fs/io_uring.c
-index 6c09cedcf..ed83d63a2 100644
+index 3e887a095..18898a312 100644
 --- a/fs/io_uring.c
 +++ b/fs/io_uring.c
 @@ -1145,26 +1145,29 @@ static int io_read(struct io_kiocb *req, const struct sqe_submit *s,
@@ -54971,7 +54971,7 @@ index b4e766e93..67391720c 100644
  
  	/*
 diff --git a/include/linux/fs.h b/include/linux/fs.h
-index 79fec8a84..363bd32c0 100644
+index 5186ac5b2..050fc36b5 100644
 --- a/include/linux/fs.h
 +++ b/include/linux/fs.h
 @@ -1333,6 +1333,7 @@ extern void fasync_free(struct fasync_struct *);
@@ -56494,7 +56494,7 @@ index 0b1f77957..311850785 100644
  	rcu_read_unlock();
  
 diff --git a/kernel/module.c b/kernel/module.c
-index 80c7c0958..d4f1ba7cc 100644
+index 8431c3d47..826945fdf 100644
 --- a/kernel/module.c
 +++ b/kernel/module.c
 @@ -52,6 +52,7 @@
@@ -56525,7 +56525,7 @@ index 80c7c0958..d4f1ba7cc 100644
  #ifndef CONFIG_MODVERSIONS
  #define symversion(base, idx) NULL
  #else
-@@ -4288,6 +4295,20 @@ static const struct file_operations proc_modules_operations = {
+@@ -4286,6 +4293,20 @@ static const struct file_operations proc_modules_operations = {
  static int __init proc_modules_init(void)
  {
  	proc_create("modules", 0, NULL, &proc_modules_operations);
