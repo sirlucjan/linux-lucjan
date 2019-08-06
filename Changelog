@@ -1,3 +1,7 @@
+5.2-lucjan-ll15
+
+- resync AUFS
+
 5.2-lucjan-ll14
 
 - add aufs-bump-to-v20190805.patch
