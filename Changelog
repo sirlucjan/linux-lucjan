@@ -1,3 +1,11 @@
+5.2-lucjan-ll17
+
+- add Revert-block-bfq-add-weight-symlink-to-the-bfq.weigh.patch
+- add Revert-cgroup-let-a-symlink-too-be-created-with-a-cf.patch
+- add bfq-Fix-the-missing-barrier-in-__bfq_entity_update_w.patch
+- add bfq-Extract-bfq_group_set_weight-from-bfq_io_set_wei.patch
+- add bfq-Add-per-device-weight.patch
+
 5.2-lucjan-ll16
 
 - resync AUFS
