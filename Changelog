@@ -1,3 +1,9 @@
+5.2-lucjan-ll18
+
+- add port-block-bfq-reset-last_completed_rq_bfqq-if-the-p.patch
+- add port-block-bfq-move-update-of-waker-and-woken-list-t.patch
+- add port-block-bfq-handle-NULL-return-value-by-bfq_init_.patch
+
 5.2-lucjan-ll17
 
 - add Revert-block-bfq-add-weight-symlink-to-the-bfq.weigh.patch
