@@ -1,3 +1,8 @@
+5.2-lucjan-ll19
+
+- add Revert-bfq-Fix-the-missing-barrier-in-__bfq_entity_u.patch
+- add port-bfq-Fix-the-missing-barrier-in-__bfq_entity_upd.patch
+
 5.2-lucjan-ll18
 
 - add port-block-bfq-reset-last_completed_rq_bfqq-if-the-p.patch
