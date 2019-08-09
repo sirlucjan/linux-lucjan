@@ -1,3 +1,12 @@
+5.2-lucjan-ll20
+
+- add Revert-port-block-bfq-reset-last_completed_rq_bfqq-i.patch
+- add Revert-port-block-bfq-move-update-of-waker-and-woken.patch
+- add Revert-port-block-bfq-handle-NULL-return-value-by-bf.patch
+- add block-bfq-reset-last_completed_rq_bfqq-if-the-pointe.patch
+- add block-bfq-move-update-of-waker-and-woken-list-to-que.patch
+- add block-bfq-handle-NULL-return-value-by-bfq_init_rq.patch
+
 5.2-lucjan-ll19
 
 - add Revert-bfq-Fix-the-missing-barrier-in-__bfq_entity_u.patch
