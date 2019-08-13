@@ -1,3 +1,11 @@
+5.2-lucjan-ll21
+
+- add mt76-usb-fix-rx-A-MSDU-support.patch
+- Revert-port-block-bfq-reset-last_completed_rq_bfqq-i.patch,
+  Revert-port-block-bfq-move-update-of-waker-and-woken.patch and 
+  Revert-port-block-bfq-move-update-of-waker-and-woken.patch -> 
+  Drop-block-bfq-ports.patch
+    
 5.2-lucjan-ll20
 
 - add Revert-port-block-bfq-reset-last_completed_rq_bfqq-i.patch
