@@ -1,5 +1,3 @@
-5.2-lucjan-ll22-rc1 --> 5.2-lucjan-ll23-rc1
-
 5.2-lucjan-ll22-rc1
 
 - sync with upstream (drop netfilter-nf_tables-fix-module-autoload-for-redir.patch)
