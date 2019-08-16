@@ -1,6 +1,6 @@
-From 46bc96cc05cea00dd72111bfcb7bd210219a00ca Mon Sep 17 00:00:00 2001
+From 8373ace32925234b6be1a0638a08ffade59cd5f2 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Thu, 15 Aug 2019 14:14:36 +0200
+Date: Fri, 16 Aug 2019 16:18:37 +0200
 Subject: [PATCH] 5.2-lucjan-ll23
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3325,7 +3325,7 @@ index 677ef41cb..c2a7491dd 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index bad87c4c8..06a77c3dc 100644
+index cfc667fe9..e0624b51e 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Bobtail Squid
@@ -9363,7 +9363,7 @@ index 7eaaf5ee5..1174f1d07 100644
  	"/lib/firmware/updates",
  	"/lib/firmware/" UTS_RELEASE,
 diff --git a/drivers/block/loop.c b/drivers/block/loop.c
-index 430d31499..bf8795d6a 100644
+index e1739efca..8661c8cb5 100644
 --- a/drivers/block/loop.c
 +++ b/drivers/block/loop.c
 @@ -425,19 +425,14 @@ static int lo_read_transfer(struct loop_device *lo, struct request *rq,
@@ -13823,7 +13823,7 @@ index de9243d30..a74f34a8d 100644
  	NUM_IWL_UCODE_TLV_API
  #ifdef __CHECKER__
 diff --git a/drivers/net/wireless/intel/iwlwifi/mvm/fw.c b/drivers/net/wireless/intel/iwlwifi/mvm/fw.c
-index 559f6df1a..8a3e542c4 100644
+index 5af9959d0..889270705 100644
 --- a/drivers/net/wireless/intel/iwlwifi/mvm/fw.c
 +++ b/drivers/net/wireless/intel/iwlwifi/mvm/fw.c
 @@ -682,15 +682,15 @@ static int iwl_mvm_sar_get_wrds_table(struct iwl_mvm *mvm)
@@ -13889,7 +13889,7 @@ index 559f6df1a..8a3e542c4 100644
  	for (i = 0; i < ACPI_NUM_GEO_PROFILES; i++) {
  		for (j = 0; j < ACPI_GEO_TABLE_SIZE; j++) {
  			union acpi_object *entry;
-@@ -878,15 +879,29 @@ int iwl_mvm_get_sar_geo_profile(struct iwl_mvm *mvm)
+@@ -894,15 +895,29 @@ int iwl_mvm_get_sar_geo_profile(struct iwl_mvm *mvm)
  {
  	struct iwl_geo_tx_power_profiles_resp *resp;
  	int ret;
@@ -13924,8 +13924,8 @@ index 559f6df1a..8a3e542c4 100644
 +		.data = { data },
  	};
  
- 	ret = iwl_mvm_send_cmd(mvm, &cmd);
-@@ -956,6 +971,16 @@ static int iwl_mvm_sar_geo_init(struct iwl_mvm *mvm)
+ 	if (!iwl_mvm_sar_geo_support(mvm))
+@@ -969,6 +984,16 @@ static int iwl_mvm_sar_geo_init(struct iwl_mvm *mvm)
  					i, j, value[1], value[2], value[0]);
  		}
  	}
@@ -14060,7 +14060,7 @@ index bbaa1365b..dd90427b2 100644
  		data_len = min_t(int, len, urb->sg[nsgs].length);
  		skb_add_rx_frag(skb, skb_shinfo(skb)->nr_frags,
 diff --git a/drivers/pci/pci.c b/drivers/pci/pci.c
-index 720da09d4..625fba1e8 100644
+index 088fcdc8d..bbd04a6c4 100644
 --- a/drivers/pci/pci.c
 +++ b/drivers/pci/pci.c
 @@ -61,7 +61,7 @@ struct pci_pme_device {
