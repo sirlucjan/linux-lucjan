@@ -1,6 +1,6 @@
-From 8373ace32925234b6be1a0638a08ffade59cd5f2 Mon Sep 17 00:00:00 2001
+From dae77438c3b742ac321f767c7935c1568488478a Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Fri, 16 Aug 2019 16:18:37 +0200
+Date: Fri, 16 Aug 2019 16:56:56 +0200
 Subject: [PATCH] 5.2-lucjan-ll23
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3325,7 +3325,7 @@ index 677ef41cb..c2a7491dd 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index cfc667fe9..e0624b51e 100644
+index 20297675a..5938ca603 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Bobtail Squid
@@ -64330,10 +64330,10 @@ index 3dc434641..14ee2b59a 100644
  	}
  
 diff --git a/mm/mempolicy.c b/mm/mempolicy.c
-index fdcb73536..23e794356 100644
+index ca3f443c8..c795ddb55 100644
 --- a/mm/mempolicy.c
 +++ b/mm/mempolicy.c
-@@ -2085,8 +2085,9 @@ alloc_pages_vma(gfp_t gfp, int order, struct vm_area_struct *vma,
+@@ -2131,8 +2131,9 @@ alloc_pages_vma(gfp_t gfp, int order, struct vm_area_struct *vma,
  		nmask = policy_nodemask(gfp, pol);
  		if (!nmask || node_isset(hpage_node, *nmask)) {
  			mpol_cond_put(pol);

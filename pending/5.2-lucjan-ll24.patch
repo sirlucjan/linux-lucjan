@@ -1,7 +1,7 @@
-From dae77438c3b742ac321f767c7935c1568488478a Mon Sep 17 00:00:00 2001
+From 2eff2510a5440132c8397bb4361cc287848c69bd Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Fri, 16 Aug 2019 16:56:56 +0200
-Subject: [PATCH] 5.2-lucjan-ll23
+Date: Sat, 17 Aug 2019 02:30:34 +0200
+Subject: [PATCH] 5.2-lucjan-ll24
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
 ---
@@ -72,6 +72,7 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  drivers/fpga/dfl-pci.c                        |   40 +
  drivers/fpga/dfl.c                            |  169 +-
  drivers/fpga/dfl.h                            |   54 +-
+ drivers/gpu/drm/amd/amdgpu/gfx_v8_0.c         |   40 +
  drivers/idle/intel_idle.c                     |   44 +-
  drivers/infiniband/core/addr.c                |    1 +
  drivers/input/serio/i8042.c                   |   10 +-
@@ -375,7 +376,7 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  security/device_cgroup.c                      |    1 +
  security/security.c                           |    8 +
  sound/soc/codecs/wcd9335.c                    |    2 +-
- 370 files changed, 106872 insertions(+), 1407 deletions(-)
+ 371 files changed, 106912 insertions(+), 1407 deletions(-)
  create mode 100644 Documentation/ABI/testing/debugfs-aufs
  create mode 100644 Documentation/ABI/testing/sysfs-aufs
  create mode 100644 Documentation/filesystems/aufs/README
@@ -3325,7 +3326,7 @@ index 677ef41cb..c2a7491dd 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index 20297675a..5938ca603 100644
+index 20297675a..d29a7bba0 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Bobtail Squid
@@ -3333,7 +3334,7 @@ index 20297675a..5938ca603 100644
  # expect to learn how to build the kernel reading this file.
  
 +LLNAME = linux-lucjan
-+LLVERSION = .ll23
++LLVERSION = .ll24
 +EXTRAVERSION := $(EXTRAVERSION)$(LLVERSION)
 +
  # That's our default target when none is given on the command line
@@ -13084,6 +13085,71 @@ index a8b869e9e..6c320801d 100644
 +void __dfl_fpga_cdev_config_port_vf(struct dfl_fpga_cdev *cdev, bool is_vf);
 +
  #endif /* __FPGA_DFL_H */
+diff --git a/drivers/gpu/drm/amd/amdgpu/gfx_v8_0.c b/drivers/gpu/drm/amd/amdgpu/gfx_v8_0.c
+index 02955e6e9..c21ef99cc 100644
+--- a/drivers/gpu/drm/amd/amdgpu/gfx_v8_0.c
++++ b/drivers/gpu/drm/amd/amdgpu/gfx_v8_0.c
+@@ -1317,6 +1317,39 @@ static int gfx_v8_0_rlc_init(struct amdgpu_device *adev)
+ 	return 0;
+ }
+ 
++static int gfx_v8_0_csb_vram_pin(struct amdgpu_device *adev)
++{
++	int r;
++
++	r = amdgpu_bo_reserve(adev->gfx.rlc.clear_state_obj, false);
++	if (unlikely(r != 0))
++		return r;
++
++	r = amdgpu_bo_pin(adev->gfx.rlc.clear_state_obj,
++			AMDGPU_GEM_DOMAIN_VRAM);
++	if (!r)
++		adev->gfx.rlc.clear_state_gpu_addr =
++			amdgpu_bo_gpu_offset(adev->gfx.rlc.clear_state_obj);
++
++	amdgpu_bo_unreserve(adev->gfx.rlc.clear_state_obj);
++
++	return r;
++}
++
++static void gfx_v8_0_csb_vram_unpin(struct amdgpu_device *adev)
++{
++	int r;
++
++	if (!adev->gfx.rlc.clear_state_obj)
++		return;
++
++	r = amdgpu_bo_reserve(adev->gfx.rlc.clear_state_obj, true);
++	if (likely(r == 0)) {
++		amdgpu_bo_unpin(adev->gfx.rlc.clear_state_obj);
++		amdgpu_bo_unreserve(adev->gfx.rlc.clear_state_obj);
++	}
++}
++
+ static void gfx_v8_0_mec_fini(struct amdgpu_device *adev)
+ {
+ 	amdgpu_bo_free_kernel(&adev->gfx.mec.hpd_eop_obj, NULL, NULL);
+@@ -4777,6 +4810,10 @@ static int gfx_v8_0_hw_init(void *handle)
+ 	gfx_v8_0_init_golden_registers(adev);
+ 	gfx_v8_0_constants_init(adev);
+ 
++	r = gfx_v8_0_csb_vram_pin(adev);
++	if (r)
++		return r;
++
+ 	r = adev->gfx.rlc.funcs->resume(adev);
+ 	if (r)
+ 		return r;
+@@ -4893,6 +4930,9 @@ static int gfx_v8_0_hw_fini(void *handle)
+ 	else
+ 		pr_err("rlc is busy, skip halt rlc\n");
+ 	amdgpu_gfx_rlc_exit_safe_mode(adev);
++
++	gfx_v8_0_csb_vram_unpin(adev);
++
+ 	return 0;
+ }
+ 
 diff --git a/drivers/idle/intel_idle.c b/drivers/idle/intel_idle.c
 index fa5ff77b8..5da118b0b 100644
 --- a/drivers/idle/intel_idle.c
