@@ -1,6 +1,6 @@
-From 6b954f088cb9c00e4ff5eeb8ab3c91b8139c2e79 Mon Sep 17 00:00:00 2001
+From 92059592f00656275b35b19a637b4a3e06002be1 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Sun, 18 Aug 2019 14:54:04 +0200
+Date: Sun, 18 Aug 2019 18:49:34 +0200
 Subject: [PATCH] 5.2-lucjan-ll25
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -583,7 +583,7 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
 
 diff --git a/Documentation/ABI/testing/debugfs-aufs b/Documentation/ABI/testing/debugfs-aufs
 new file mode 100644
-index 000000000..4a6694194
+index 0000000..4a66941
 --- /dev/null
 +++ b/Documentation/ABI/testing/debugfs-aufs
 @@ -0,0 +1,55 @@
@@ -644,7 +644,7 @@ index 000000000..4a6694194
 +		will be empty. About XINO files, see the aufs manual.
 diff --git a/Documentation/ABI/testing/sysfs-aufs b/Documentation/ABI/testing/sysfs-aufs
 new file mode 100644
-index 000000000..82f951849
+index 0000000..82f9518
 --- /dev/null
 +++ b/Documentation/ABI/testing/sysfs-aufs
 @@ -0,0 +1,31 @@
@@ -680,7 +680,7 @@ index 000000000..82f951849
 +		When the aufs mount option 'noxino' is specified, it
 +		will be empty. About XINO files, see the aufs manual.
 diff --git a/Documentation/ABI/testing/sysfs-platform-dfl-fme b/Documentation/ABI/testing/sysfs-platform-dfl-fme
-index 8fa4febfa..1bd5ea503 100644
+index 8fa4feb..1bd5ea5 100644
 --- a/Documentation/ABI/testing/sysfs-platform-dfl-fme
 +++ b/Documentation/ABI/testing/sysfs-platform-dfl-fme
 @@ -21,3 +21,233 @@ Contact:	Wu Hao <hao.wu@intel.com>
@@ -918,7 +918,7 @@ index 8fa4febfa..1bd5ea503 100644
 +		Function Units (AFUs) can tolerate latency >= 40us for memory
 +		access or 0 if any AFU is latency sensitive (< 40us).
 diff --git a/Documentation/ABI/testing/sysfs-platform-dfl-port b/Documentation/ABI/testing/sysfs-platform-dfl-port
-index 6a92dda51..4aeca9485 100644
+index 6a92dda..4aeca94 100644
 --- a/Documentation/ABI/testing/sysfs-platform-dfl-port
 +++ b/Documentation/ABI/testing/sysfs-platform-dfl-port
 @@ -14,3 +14,107 @@ Description:	Read-only. User can program different PR bitstreams to FPGA
@@ -1031,7 +1031,7 @@ index 6a92dda51..4aeca9485 100644
 +		(-ETIMEDOUT).
 diff --git a/Documentation/filesystems/aufs/README b/Documentation/filesystems/aufs/README
 new file mode 100644
-index 000000000..6e6774fbf
+index 0000000..6e6774f
 --- /dev/null
 +++ b/Documentation/filesystems/aufs/README
 @@ -0,0 +1,399 @@
@@ -1436,7 +1436,7 @@ index 000000000..6e6774fbf
 +# End: ;
 diff --git a/Documentation/filesystems/aufs/design/01intro.txt b/Documentation/filesystems/aufs/design/01intro.txt
 new file mode 100644
-index 000000000..609bf0e9b
+index 0000000..609bf0e
 --- /dev/null
 +++ b/Documentation/filesystems/aufs/design/01intro.txt
 @@ -0,0 +1,171 @@
@@ -1613,7 +1613,7 @@ index 000000000..609bf0e9b
 +about it. But currently I have implemented it in kernel space.
 diff --git a/Documentation/filesystems/aufs/design/02struct.txt b/Documentation/filesystems/aufs/design/02struct.txt
 new file mode 100644
-index 000000000..2467788c7
+index 0000000..2467788
 --- /dev/null
 +++ b/Documentation/filesystems/aufs/design/02struct.txt
 @@ -0,0 +1,258 @@
@@ -1877,7 +1877,7 @@ index 000000000..2467788c7
 +For this purpose, use "aumvdown" command in aufs-util.git.
 diff --git a/Documentation/filesystems/aufs/design/03atomic_open.txt b/Documentation/filesystems/aufs/design/03atomic_open.txt
 new file mode 100644
-index 000000000..9f16ac1e0
+index 0000000..9f16ac1
 --- /dev/null
 +++ b/Documentation/filesystems/aufs/design/03atomic_open.txt
 @@ -0,0 +1,85 @@
@@ -1968,7 +1968,7 @@ index 000000000..9f16ac1e0
 +       be implemented in aufs, but not all I am afraid.
 diff --git a/Documentation/filesystems/aufs/design/03lookup.txt b/Documentation/filesystems/aufs/design/03lookup.txt
 new file mode 100644
-index 000000000..08b443d94
+index 0000000..08b443d
 --- /dev/null
 +++ b/Documentation/filesystems/aufs/design/03lookup.txt
 @@ -0,0 +1,113 @@
@@ -2087,7 +2087,7 @@ index 000000000..08b443d94
 +   by over-mounting something (or another method).
 diff --git a/Documentation/filesystems/aufs/design/04branch.txt b/Documentation/filesystems/aufs/design/04branch.txt
 new file mode 100644
-index 000000000..3ab3682a4
+index 0000000..3ab3682
 --- /dev/null
 +++ b/Documentation/filesystems/aufs/design/04branch.txt
 @@ -0,0 +1,74 @@
@@ -2167,7 +2167,7 @@ index 000000000..3ab3682a4
 +    same named entry on the upper branch.
 diff --git a/Documentation/filesystems/aufs/design/05wbr_policy.txt b/Documentation/filesystems/aufs/design/05wbr_policy.txt
 new file mode 100644
-index 000000000..1f9b86bc6
+index 0000000..1f9b86b
 --- /dev/null
 +++ b/Documentation/filesystems/aufs/design/05wbr_policy.txt
 @@ -0,0 +1,64 @@
@@ -2237,7 +2237,7 @@ index 000000000..1f9b86bc6
 +  copyup policy.
 diff --git a/Documentation/filesystems/aufs/design/06dirren.dot b/Documentation/filesystems/aufs/design/06dirren.dot
 new file mode 100644
-index 000000000..2d62bb6dd
+index 0000000..2d62bb6
 --- /dev/null
 +++ b/Documentation/filesystems/aufs/design/06dirren.dot
 @@ -0,0 +1,31 @@
@@ -2274,7 +2274,7 @@ index 000000000..2d62bb6dd
 +}
 diff --git a/Documentation/filesystems/aufs/design/06dirren.txt b/Documentation/filesystems/aufs/design/06dirren.txt
 new file mode 100644
-index 000000000..3b80f8659
+index 0000000..3b80f86
 --- /dev/null
 +++ b/Documentation/filesystems/aufs/design/06dirren.txt
 @@ -0,0 +1,102 @@
@@ -2382,7 +2382,7 @@ index 000000000..3b80f8659
 +equivalen to udba=reval case.
 diff --git a/Documentation/filesystems/aufs/design/06fhsm.txt b/Documentation/filesystems/aufs/design/06fhsm.txt
 new file mode 100644
-index 000000000..8b498d0af
+index 0000000..8b498d0
 --- /dev/null
 +++ b/Documentation/filesystems/aufs/design/06fhsm.txt
 @@ -0,0 +1,120 @@
@@ -2508,7 +2508,7 @@ index 000000000..8b498d0af
 +should restore the original file state after an error happens.
 diff --git a/Documentation/filesystems/aufs/design/06mmap.txt b/Documentation/filesystems/aufs/design/06mmap.txt
 new file mode 100644
-index 000000000..cdd84ea77
+index 0000000..cdd84ea
 --- /dev/null
 +++ b/Documentation/filesystems/aufs/design/06mmap.txt
 @@ -0,0 +1,72 @@
@@ -2586,7 +2586,7 @@ index 000000000..cdd84ea77
 +I have to give up this "looks-smater" approach.
 diff --git a/Documentation/filesystems/aufs/design/06xattr.txt b/Documentation/filesystems/aufs/design/06xattr.txt
 new file mode 100644
-index 000000000..edd7553f3
+index 0000000..edd7553
 --- /dev/null
 +++ b/Documentation/filesystems/aufs/design/06xattr.txt
 @@ -0,0 +1,96 @@
@@ -2688,7 +2688,7 @@ index 000000000..edd7553f3
 +now, aufs implements the branch attributes to ignore the error.
 diff --git a/Documentation/filesystems/aufs/design/07export.txt b/Documentation/filesystems/aufs/design/07export.txt
 new file mode 100644
-index 000000000..9b983f3dd
+index 0000000..9b983f3
 --- /dev/null
 +++ b/Documentation/filesystems/aufs/design/07export.txt
 @@ -0,0 +1,58 @@
@@ -2752,7 +2752,7 @@ index 000000000..9b983f3dd
 +  lookup_one_len(), vfs_getattr(), encode_fh() and others.
 diff --git a/Documentation/filesystems/aufs/design/08shwh.txt b/Documentation/filesystems/aufs/design/08shwh.txt
 new file mode 100644
-index 000000000..647a86a65
+index 0000000..647a86a
 --- /dev/null
 +++ b/Documentation/filesystems/aufs/design/08shwh.txt
 @@ -0,0 +1,52 @@
@@ -2810,7 +2810,7 @@ index 000000000..647a86a65
 +initramfs will use it to replace the old one at the next boot.
 diff --git a/Documentation/filesystems/aufs/design/10dynop.txt b/Documentation/filesystems/aufs/design/10dynop.txt
 new file mode 100644
-index 000000000..13e8583f2
+index 0000000..13e8583
 --- /dev/null
 +++ b/Documentation/filesystems/aufs/design/10dynop.txt
 @@ -0,0 +1,47 @@
@@ -2862,7 +2862,7 @@ index 000000000..13e8583f2
 +Currently this approach is applied to address_space_operations for
 +regular files only.
 diff --git a/Documentation/filesystems/proc.txt b/Documentation/filesystems/proc.txt
-index 66cad5c86..62ad2bbfd 100644
+index 66cad5c..62ad2bb 100644
 --- a/Documentation/filesystems/proc.txt
 +++ b/Documentation/filesystems/proc.txt
 @@ -45,6 +45,7 @@ Table of Contents
@@ -2895,7 +2895,7 @@ index 66cad5c86..62ad2bbfd 100644
  Configuring procfs
 diff --git a/Documentation/scheduler/sched-BMQ.txt b/Documentation/scheduler/sched-BMQ.txt
 new file mode 100644
-index 000000000..52a8fe57e
+index 0000000..52a8fe5
 --- /dev/null
 +++ b/Documentation/scheduler/sched-BMQ.txt
 @@ -0,0 +1,95 @@
@@ -2995,7 +2995,7 @@ index 000000000..52a8fe57e
 +
 +To be continued...
 diff --git a/Documentation/sysctl/kernel.txt b/Documentation/sysctl/kernel.txt
-index f0c86fbb3..9d24ceed2 100644
+index f0c86fb..9d24cee 100644
 --- a/Documentation/sysctl/kernel.txt
 +++ b/Documentation/sysctl/kernel.txt
 @@ -100,6 +100,7 @@ show up in /proc/sys/kernel:
@@ -3022,7 +3022,7 @@ index f0c86fbb3..9d24ceed2 100644
 +==============================================================
 diff --git a/Documentation/tp_smapi.txt b/Documentation/tp_smapi.txt
 new file mode 100644
-index 000000000..a249678a8
+index 0000000..a249678
 --- /dev/null
 +++ b/Documentation/tp_smapi.txt
 @@ -0,0 +1,275 @@
@@ -3302,7 +3302,7 @@ index 000000000..a249678a8
 +thinkpad_ec module and the H8S hardware documentation:
 +http://documentation.renesas.com/eng/products/mpumcu/rej09b0300_2140bhm.pdf
 diff --git a/MAINTAINERS b/MAINTAINERS
-index 677ef41cb..c2a7491dd 100644
+index 677ef41..c2a7491 100644
 --- a/MAINTAINERS
 +++ b/MAINTAINERS
 @@ -2769,6 +2769,19 @@ F:	include/linux/audit.h
@@ -3326,7 +3326,7 @@ index 677ef41cb..c2a7491dd 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index 20297675a..558aa9796 100644
+index 2029767..558aa97 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Bobtail Squid
@@ -3365,7 +3365,7 @@ index 20297675a..558aa9796 100644
  ifdef CONFIG_CC_DISABLE_WARN_MAYBE_UNINITIALIZED
  KBUILD_CFLAGS   += -Wno-maybe-uninitialized
 diff --git a/arch/powerpc/platforms/cell/spufs/sched.c b/arch/powerpc/platforms/cell/spufs/sched.c
-index e56b553de..ef94224ef 100644
+index e56b553..ef94224 100644
 --- a/arch/powerpc/platforms/cell/spufs/sched.c
 +++ b/arch/powerpc/platforms/cell/spufs/sched.c
 @@ -51,11 +51,6 @@ static struct task_struct *spusched_task;
@@ -3381,7 +3381,7 @@ index e56b553de..ef94224ef 100644
   * Frequency of the spu scheduler tick.  By default we do one SPU scheduler
   * tick for every 10 CPU scheduler ticks.
 diff --git a/arch/x86/Kconfig.cpu b/arch/x86/Kconfig.cpu
-index 6adce1526..5477ade83 100644
+index 6adce15..5477ade 100644
 --- a/arch/x86/Kconfig.cpu
 +++ b/arch/x86/Kconfig.cpu
 @@ -116,6 +116,7 @@ config MPENTIUMM
@@ -3748,7 +3748,7 @@ index 6adce1526..5477ade83 100644
  config X86_MINIMUM_CPU_FAMILY
  	int
 diff --git a/arch/x86/Makefile b/arch/x86/Makefile
-index 56e748a76..b106742db 100644
+index 56e748a..b106742 100644
 --- a/arch/x86/Makefile
 +++ b/arch/x86/Makefile
 @@ -118,13 +118,49 @@ else
@@ -3805,7 +3805,7 @@ index 56e748a76..b106742db 100644
          KBUILD_CFLAGS += $(cflags-y)
  
 diff --git a/arch/x86/Makefile_32.cpu b/arch/x86/Makefile_32.cpu
-index 1f5faf860..d5e9dcb8b 100644
+index 1f5faf8..d5e9dcb 100644
 --- a/arch/x86/Makefile_32.cpu
 +++ b/arch/x86/Makefile_32.cpu
 @@ -23,7 +23,19 @@ cflags-$(CONFIG_MK6)		+= -march=k6
@@ -3852,7 +3852,7 @@ index 1f5faf860..d5e9dcb8b 100644
  # AMD Elan support
  cflags-$(CONFIG_MELAN)		+= -march=i486
 diff --git a/arch/x86/include/asm/module.h b/arch/x86/include/asm/module.h
-index 7948a17fe..654b52e0e 100644
+index 7948a17..654b52e 100644
 --- a/arch/x86/include/asm/module.h
 +++ b/arch/x86/include/asm/module.h
 @@ -25,6 +25,32 @@ struct mod_arch_specific {
@@ -3918,7 +3918,7 @@ index 7948a17fe..654b52e0e 100644
  #define MODULE_PROC_FAMILY "ELAN "
  #elif defined CONFIG_MCRUSOE
 diff --git a/arch/x86/include/asm/processor.h b/arch/x86/include/asm/processor.h
-index c34a35c78..6b455318c 100644
+index c34a35c..6b45531 100644
 --- a/arch/x86/include/asm/processor.h
 +++ b/arch/x86/include/asm/processor.h
 @@ -644,7 +644,7 @@ static inline unsigned int cpuid_edx(unsigned int op)
@@ -3931,7 +3931,7 @@ index c34a35c78..6b455318c 100644
  
  static __always_inline void cpu_relax(void)
 diff --git a/arch/x86/kernel/alternative.c b/arch/x86/kernel/alternative.c
-index 390596b76..2eb7bd7e5 100644
+index 390596b..2eb7bd7 100644
 --- a/arch/x86/kernel/alternative.c
 +++ b/arch/x86/kernel/alternative.c
 @@ -633,7 +633,9 @@ void __init alternative_instructions(void)
@@ -3945,7 +3945,7 @@ index 390596b76..2eb7bd7e5 100644
  #ifdef CONFIG_SMP
  	/* Patch to UP if other cpus not imminent. */
 diff --git a/arch/x86/kernel/tsc.c b/arch/x86/kernel/tsc.c
-index 0b29e58f2..7d565350d 100644
+index 0b29e58..7d56535 100644
 --- a/arch/x86/kernel/tsc.c
 +++ b/arch/x86/kernel/tsc.c
 @@ -1508,6 +1508,9 @@ unsigned long calibrate_delay_is_known(void)
@@ -3959,7 +3959,7 @@ index 0b29e58f2..7d565350d 100644
  	if (sibling < nr_cpu_ids)
  		return cpu_data(sibling).loops_per_jiffy;
 diff --git a/block/Kconfig b/block/Kconfig
-index 2466dcc3e..1b220101a 100644
+index 2466dcc..1b22010 100644
 --- a/block/Kconfig
 +++ b/block/Kconfig
 @@ -73,7 +73,6 @@ config BLK_DEV_INTEGRITY
@@ -3971,7 +3971,7 @@ index 2466dcc3e..1b220101a 100644
  	Block layer zoned block device support. This option enables
  	support for ZAC/ZBC host-managed and host-aware zoned block devices.
 diff --git a/block/Kconfig.iosched b/block/Kconfig.iosched
-index 4626b88b2..01d05ab68 100644
+index 4626b88..01d05ab 100644
 --- a/block/Kconfig.iosched
 +++ b/block/Kconfig.iosched
 @@ -20,6 +20,7 @@ config MQ_IOSCHED_KYBER
@@ -3983,7 +3983,7 @@ index 4626b88b2..01d05ab68 100644
  	BFQ I/O scheduler for BLK-MQ. BFQ distributes the bandwidth of
  	of the device among all processes according to their weights,
 diff --git a/block/bfq-cgroup.c b/block/bfq-cgroup.c
-index b3796a40a..3563b2b5d 100644
+index b3796a4..3563b2b 100644
 --- a/block/bfq-cgroup.c
 +++ b/block/bfq-cgroup.c
 @@ -252,6 +252,7 @@ static void bfqg_put(struct bfq_group *bfqg)
@@ -4377,7 +4377,7 @@ index b3796a40a..3563b2b5d 100644
  	/* statistics, covers only the tasks in the bfqg */
  	{
 diff --git a/block/bfq-iosched.c b/block/bfq-iosched.c
-index 404e776aa..ae0fde510 100644
+index 404e776..ae0fde5 100644
 --- a/block/bfq-iosched.c
 +++ b/block/bfq-iosched.c
 @@ -157,6 +157,7 @@ BFQ_BFQQ_FNS(in_large_burst);
@@ -8041,7 +8041,7 @@ index 404e776aa..ae0fde510 100644
  
  slab_kill:
 diff --git a/block/bfq-iosched.h b/block/bfq-iosched.h
-index c2faa7782..761ddba76 100644
+index c2faa77..761ddba 100644
 --- a/block/bfq-iosched.h
 +++ b/block/bfq-iosched.h
 @@ -168,6 +168,9 @@ struct bfq_entity {
@@ -8253,7 +8253,7 @@ index c2faa7782..761ddba76 100644
  
  #endif /* _BFQ_H */
 diff --git a/block/bfq-wf2q.c b/block/bfq-wf2q.c
-index c9ba22508..2f82d492a 100644
+index c9ba225..2f82d49 100644
 --- a/block/bfq-wf2q.c
 +++ b/block/bfq-wf2q.c
 @@ -76,6 +76,7 @@ static bool bfq_update_next_in_service(struct bfq_sched_data *sd,
@@ -9142,7 +9142,7 @@ index c9ba22508..2f82d492a 100644
 +
  }
 diff --git a/block/blk-core.c b/block/blk-core.c
-index 5183fca08..df0dbff4c 100644
+index 5183fca..df0dbff 100644
 --- a/block/blk-core.c
 +++ b/block/blk-core.c
 @@ -750,7 +750,7 @@ static inline bool bio_check_ro(struct bio *bio, struct hd_struct *part)
@@ -9165,7 +9165,7 @@ index 5183fca08..df0dbff4c 100644
  			char b[BDEVNAME_SIZE];
  			printk(KERN_DEBUG "%s(%d): %s block %Lu on %s (%u sectors)\n",
 diff --git a/block/elevator.c b/block/elevator.c
-index 2f17d66d0..225ebcea4 100644
+index 2f17d66..225ebce 100644
 --- a/block/elevator.c
 +++ b/block/elevator.c
 @@ -604,8 +604,10 @@ int elevator_init_mq(struct request_queue *q)
@@ -9192,7 +9192,7 @@ index 2f17d66d0..225ebcea4 100644
  		goto out_unlock;
  
 diff --git a/block/genhd.c b/block/genhd.c
-index 24654e1d8..87ae63d06 100644
+index 24654e1..87ae63d 100644
 --- a/block/genhd.c
 +++ b/block/genhd.c
 @@ -1559,26 +1559,40 @@ static void set_disk_ro_uevent(struct gendisk *gd, int ro)
@@ -9255,7 +9255,7 @@ index 24654e1d8..87ae63d06 100644
  
  EXPORT_SYMBOL(bdev_read_only);
 diff --git a/block/ioctl.c b/block/ioctl.c
-index 15a0eb80a..1b94ebda3 100644
+index 15a0eb8..1b94ebd 100644
 --- a/block/ioctl.c
 +++ b/block/ioctl.c
 @@ -452,6 +452,10 @@ static int blkdev_roset(struct block_device *bdev, fmode_t mode,
@@ -9270,7 +9270,7 @@ index 15a0eb80a..1b94ebda3 100644
  	return 0;
  }
 diff --git a/block/partition-generic.c b/block/partition-generic.c
-index aee643ce1..c7db63a8a 100644
+index aee643c..c7db63a 100644
 --- a/block/partition-generic.c
 +++ b/block/partition-generic.c
 @@ -98,7 +98,7 @@ static ssize_t part_ro_show(struct device *dev,
@@ -9295,7 +9295,7 @@ index aee643ce1..c7db63a8a 100644
  	if (info) {
  		struct partition_meta_info *pinfo = alloc_part_info(disk);
 diff --git a/drivers/Makefile b/drivers/Makefile
-index 28b030d79..3bb47d062 100644
+index 28b030d..3bb47d0 100644
 --- a/drivers/Makefile
 +++ b/drivers/Makefile
 @@ -58,15 +58,8 @@ obj-y				+= char/
@@ -9330,7 +9330,7 @@ index 28b030d79..3bb47d062 100644
  obj-$(CONFIG_MTD)		+= mtd/
  obj-$(CONFIG_SPI)		+= spi/
 diff --git a/drivers/ata/libahci.c b/drivers/ata/libahci.c
-index 0984c4b76..b0a81faec 100644
+index 0984c4b..b0a81fa 100644
 --- a/drivers/ata/libahci.c
 +++ b/drivers/ata/libahci.c
 @@ -33,14 +33,14 @@
@@ -9351,7 +9351,7 @@ index 0984c4b76..b0a81faec 100644
  static int ahci_set_lpm(struct ata_link *link, enum ata_lpm_policy policy,
  			unsigned hints);
 diff --git a/drivers/base/firmware_loader/main.c b/drivers/base/firmware_loader/main.c
-index 7eaaf5ee5..1174f1d07 100644
+index 7eaaf5e..1174f1d 100644
 --- a/drivers/base/firmware_loader/main.c
 +++ b/drivers/base/firmware_loader/main.c
 @@ -278,6 +278,8 @@ static void free_fw_priv(struct fw_priv *fw_priv)
@@ -9364,7 +9364,7 @@ index 7eaaf5ee5..1174f1d07 100644
  	"/lib/firmware/updates",
  	"/lib/firmware/" UTS_RELEASE,
 diff --git a/drivers/block/loop.c b/drivers/block/loop.c
-index e1739efca..8661c8cb5 100644
+index e1739ef..8661c8c 100644
 --- a/drivers/block/loop.c
 +++ b/drivers/block/loop.c
 @@ -425,19 +425,14 @@ static int lo_read_transfer(struct loop_device *lo, struct request *rq,
@@ -9646,7 +9646,7 @@ index e1739efca..8661c8cb5 100644
  	}
  }
 diff --git a/drivers/block/loop.h b/drivers/block/loop.h
-index af75a5ee4..1e6ee5a4f 100644
+index af75a5e..1e6ee5a 100644
 --- a/drivers/block/loop.h
 +++ b/drivers/block/loop.h
 @@ -46,7 +46,7 @@ struct loop_device {
@@ -9659,7 +9659,7 @@ index af75a5ee4..1e6ee5a4f 100644
  	void		*key_data; 
  
 diff --git a/drivers/char/random.c b/drivers/char/random.c
-index 5d5ea4ce1..9a55e0ca9 100644
+index 5d5ea4c..9a55e0c 100644
 --- a/drivers/char/random.c
 +++ b/drivers/char/random.c
 @@ -1877,6 +1877,8 @@ static void __init init_std_data(struct entropy_store *r)
@@ -9672,7 +9672,7 @@ index 5d5ea4ce1..9a55e0ca9 100644
  	}
  	mix_pool_bytes(r, utsname(), sizeof(*(utsname())));
 diff --git a/drivers/clk/sunxi/clk-sunxi.c b/drivers/clk/sunxi/clk-sunxi.c
-index 623fda5e9..d3a43381a 100644
+index 623fda5..d3a4338 100644
 --- a/drivers/clk/sunxi/clk-sunxi.c
 +++ b/drivers/clk/sunxi/clk-sunxi.c
 @@ -980,6 +980,8 @@ static struct clk ** __init sunxi_divs_clk_setup(struct device_node *node,
@@ -9685,7 +9685,7 @@ index 623fda5e9..d3a43381a 100644
  		} else {
  			factors.name = clk_name;
 diff --git a/drivers/cpufreq/cpufreq_conservative.c b/drivers/cpufreq/cpufreq_conservative.c
-index b66e81c06..a294f8f5f 100644
+index b66e81c..a294f8f 100644
 --- a/drivers/cpufreq/cpufreq_conservative.c
 +++ b/drivers/cpufreq/cpufreq_conservative.c
 @@ -28,8 +28,8 @@ struct cs_dbs_tuners {
@@ -9700,7 +9700,7 @@ index b66e81c06..a294f8f5f 100644
  #define DEF_SAMPLING_DOWN_FACTOR		(1)
  #define MAX_SAMPLING_DOWN_FACTOR		(10)
 diff --git a/drivers/cpufreq/cpufreq_ondemand.c b/drivers/cpufreq/cpufreq_ondemand.c
-index dced03387..d2cd03766 100644
+index dced033..d2cd037 100644
 --- a/drivers/cpufreq/cpufreq_ondemand.c
 +++ b/drivers/cpufreq/cpufreq_ondemand.c
 @@ -18,7 +18,7 @@
@@ -9722,7 +9722,7 @@ index dced03387..d2cd03766 100644
   * proportional to load.
   */
 diff --git a/drivers/fpga/Kconfig b/drivers/fpga/Kconfig
-index dd414250e..41bad2f27 100644
+index dd41425..41bad2f 100644
 --- a/drivers/fpga/Kconfig
 +++ b/drivers/fpga/Kconfig
 @@ -156,7 +156,7 @@ config FPGA_DFL
@@ -9735,7 +9735,7 @@ index dd414250e..41bad2f27 100644
  	  The FPGA Management Engine (FME) is a feature device implemented
  	  under Device Feature List (DFL) framework. Select this option to
 diff --git a/drivers/fpga/Makefile b/drivers/fpga/Makefile
-index 312b93717..d8e21dfc6 100644
+index 312b937..d8e21df 100644
 --- a/drivers/fpga/Makefile
 +++ b/drivers/fpga/Makefile
 @@ -39,8 +39,10 @@ obj-$(CONFIG_FPGA_DFL_FME_BRIDGE)	+= dfl-fme-br.o
@@ -9752,7 +9752,7 @@ index 312b93717..d8e21dfc6 100644
  obj-$(CONFIG_FPGA_DFL_PCI)		+= dfl-pci.o
 diff --git a/drivers/fpga/dfl-afu-error.c b/drivers/fpga/dfl-afu-error.c
 new file mode 100644
-index 000000000..f20dbdf58
+index 0000000..f20dbdf
 --- /dev/null
 +++ b/drivers/fpga/dfl-afu-error.c
 @@ -0,0 +1,225 @@
@@ -9982,7 +9982,7 @@ index 000000000..f20dbdf58
 +	.uinit = port_err_uinit,
 +};
 diff --git a/drivers/fpga/dfl-afu-main.c b/drivers/fpga/dfl-afu-main.c
-index 02baa6a22..8241aced2 100644
+index 02baa6a..8241ace 100644
 --- a/drivers/fpga/dfl-afu-main.c
 +++ b/drivers/fpga/dfl-afu-main.c
 @@ -21,15 +21,19 @@
@@ -10411,7 +10411,7 @@ index 02baa6a22..8241aced2 100644
  MODULE_ALIAS("platform:dfl-port");
 +MODULE_VERSION(DRV_VERSION);
 diff --git a/drivers/fpga/dfl-afu.h b/drivers/fpga/dfl-afu.h
-index 0c7630ae3..c3182a268 100644
+index 0c7630a..c3182a2 100644
 --- a/drivers/fpga/dfl-afu.h
 +++ b/drivers/fpga/dfl-afu.h
 @@ -79,6 +79,9 @@ struct dfl_afu {
@@ -10435,7 +10435,7 @@ index 0c7630ae3..c3182a268 100644
  #endif /* __DFL_AFU_H */
 diff --git a/drivers/fpga/dfl-fme-error.c b/drivers/fpga/dfl-fme-error.c
 new file mode 100644
-index 000000000..cdea10825
+index 0000000..cdea108
 --- /dev/null
 +++ b/drivers/fpga/dfl-fme-error.c
 @@ -0,0 +1,385 @@
@@ -10825,7 +10825,7 @@ index 000000000..cdea10825
 +	.uinit = fme_global_err_uinit,
 +};
 diff --git a/drivers/fpga/dfl-fme-main.c b/drivers/fpga/dfl-fme-main.c
-index 086ad2420..80b124e9c 100644
+index 086ad24..80b124e 100644
 --- a/drivers/fpga/dfl-fme-main.c
 +++ b/drivers/fpga/dfl-fme-main.c
 @@ -14,13 +14,18 @@
@@ -11402,7 +11402,7 @@ index 086ad2420..80b124e9c 100644
  MODULE_ALIAS("platform:dfl-fme");
 +MODULE_VERSION(DRV_VERSION);
 diff --git a/drivers/fpga/dfl-fme-mgr.c b/drivers/fpga/dfl-fme-mgr.c
-index 76f37709d..d1a4ba5d1 100644
+index 76f3770..d1a4ba5 100644
 --- a/drivers/fpga/dfl-fme-mgr.c
 +++ b/drivers/fpga/dfl-fme-mgr.c
 @@ -22,16 +22,20 @@
@@ -11598,7 +11598,7 @@ index 76f37709d..d1a4ba5d1 100644
 +MODULE_VERSION(DRV_VERSION);
 diff --git a/drivers/fpga/dfl-fme-perf.c b/drivers/fpga/dfl-fme-perf.c
 new file mode 100644
-index 000000000..0d7768af8
+index 0000000..0d7768a
 --- /dev/null
 +++ b/drivers/fpga/dfl-fme-perf.c
 @@ -0,0 +1,871 @@
@@ -12474,7 +12474,7 @@ index 000000000..0d7768af8
 +	.uinit = fme_perf_uinit,
 +};
 diff --git a/drivers/fpga/dfl-fme-pr.c b/drivers/fpga/dfl-fme-pr.c
-index d9ca95548..52f1745df 100644
+index d9ca955..52f1745 100644
 --- a/drivers/fpga/dfl-fme-pr.c
 +++ b/drivers/fpga/dfl-fme-pr.c
 @@ -74,6 +74,7 @@ static int fme_pr(struct platform_device *pdev, unsigned long arg)
@@ -12602,7 +12602,7 @@ index d9ca95548..52f1745df 100644
  	.uinit = pr_mgmt_uinit,
  	.ioctl = fme_pr_ioctl,
 diff --git a/drivers/fpga/dfl-fme.h b/drivers/fpga/dfl-fme.h
-index 5394a216c..dc7104816 100644
+index 5394a21..dc71048 100644
 --- a/drivers/fpga/dfl-fme.h
 +++ b/drivers/fpga/dfl-fme.h
 @@ -21,18 +21,25 @@
@@ -12633,7 +12633,7 @@ index 5394a216c..dc7104816 100644
  
  #endif /* __DFL_FME_H */
 diff --git a/drivers/fpga/dfl-pci.c b/drivers/fpga/dfl-pci.c
-index 66b572058..2fa571b0f 100644
+index 66b5720..2fa571b 100644
 --- a/drivers/fpga/dfl-pci.c
 +++ b/drivers/fpga/dfl-pci.c
 @@ -223,8 +223,46 @@ int cci_pci_probe(struct pci_dev *pcidev, const struct pci_device_id *pcidevid)
@@ -12697,7 +12697,7 @@ index 66b572058..2fa571b0f 100644
  MODULE_LICENSE("GPL v2");
 +MODULE_VERSION(DRV_VERSION);
 diff --git a/drivers/fpga/dfl.c b/drivers/fpga/dfl.c
-index 4b66aaa32..1bb2b582e 100644
+index 4b66aaa..1bb2b58 100644
 --- a/drivers/fpga/dfl.c
 +++ b/drivers/fpga/dfl.c
 @@ -14,6 +14,8 @@
@@ -12940,7 +12940,7 @@ index 4b66aaa32..1bb2b582e 100644
  MODULE_LICENSE("GPL v2");
 +MODULE_VERSION(DRV_VERSION);
 diff --git a/drivers/fpga/dfl.h b/drivers/fpga/dfl.h
-index a8b869e9e..6c320801d 100644
+index a8b869e..6c32080 100644
 --- a/drivers/fpga/dfl.h
 +++ b/drivers/fpga/dfl.h
 @@ -30,8 +30,8 @@
@@ -13086,7 +13086,7 @@ index a8b869e9e..6c320801d 100644
 +
  #endif /* __FPGA_DFL_H */
 diff --git a/drivers/gpu/drm/amd/amdgpu/gfx_v8_0.c b/drivers/gpu/drm/amd/amdgpu/gfx_v8_0.c
-index 02955e6e9..c21ef99cc 100644
+index 02955e6..c21ef99 100644
 --- a/drivers/gpu/drm/amd/amdgpu/gfx_v8_0.c
 +++ b/drivers/gpu/drm/amd/amdgpu/gfx_v8_0.c
 @@ -1317,6 +1317,39 @@ static int gfx_v8_0_rlc_init(struct amdgpu_device *adev)
@@ -13151,7 +13151,7 @@ index 02955e6e9..c21ef99cc 100644
  }
  
 diff --git a/drivers/idle/intel_idle.c b/drivers/idle/intel_idle.c
-index fa5ff77b8..5da118b0b 100644
+index fa5ff77..5da118b 100644
 --- a/drivers/idle/intel_idle.c
 +++ b/drivers/idle/intel_idle.c
 @@ -454,7 +454,7 @@ static struct cpuidle_state hsw_cstates[] = {
@@ -13353,7 +13353,7 @@ index fa5ff77b8..5da118b0b 100644
  		.enter_s2idle = intel_idle_s2idle, },
  	{
 diff --git a/drivers/infiniband/core/addr.c b/drivers/infiniband/core/addr.c
-index 9b76a8fcd..2a0f9ce8b 100644
+index 9b76a8f..2a0f9ce 100644
 --- a/drivers/infiniband/core/addr.c
 +++ b/drivers/infiniband/core/addr.c
 @@ -817,6 +817,7 @@ int rdma_addr_find_l2_eth_by_grh(const union ib_gid *sgid,
@@ -13365,7 +13365,7 @@ index 9b76a8fcd..2a0f9ce8b 100644
  	int ret;
  
 diff --git a/drivers/input/serio/i8042.c b/drivers/input/serio/i8042.c
-index e4352741c..8ed4a89aa 100644
+index e435274..8ed4a89 100644
 --- a/drivers/input/serio/i8042.c
 +++ b/drivers/input/serio/i8042.c
 @@ -597,7 +597,7 @@ static int i8042_enable_kbd_port(void)
@@ -13414,7 +13414,7 @@ index e4352741c..8ed4a89aa 100644
  #endif
  }
 diff --git a/drivers/net/dummy.c b/drivers/net/dummy.c
-index 54e4d8b07..a23d56941 100644
+index 54e4d8b..a23d569 100644
 --- a/drivers/net/dummy.c
 +++ b/drivers/net/dummy.c
 @@ -44,7 +44,7 @@
@@ -13427,7 +13427,7 @@ index 54e4d8b07..a23d56941 100644
  /* fake multicast ability */
  static void set_multicast_list(struct net_device *dev)
 diff --git a/drivers/net/ethernet/intel/e1000e/80003es2lan.c b/drivers/net/ethernet/intel/e1000e/80003es2lan.c
-index f86d55657..4b103cca8 100644
+index f86d556..4b103cc 100644
 --- a/drivers/net/ethernet/intel/e1000e/80003es2lan.c
 +++ b/drivers/net/ethernet/intel/e1000e/80003es2lan.c
 @@ -680,7 +680,7 @@ static s32 e1000_reset_hw_80003es2lan(struct e1000_hw *hw)
@@ -13440,7 +13440,7 @@ index f86d55657..4b103cca8 100644
  	ctrl = er32(CTRL);
  
 diff --git a/drivers/net/ethernet/intel/e1000e/82571.c b/drivers/net/ethernet/intel/e1000e/82571.c
-index b9309302c..2c1bab377 100644
+index b930930..2c1bab3 100644
 --- a/drivers/net/ethernet/intel/e1000e/82571.c
 +++ b/drivers/net/ethernet/intel/e1000e/82571.c
 @@ -959,7 +959,7 @@ static s32 e1000_reset_hw_82571(struct e1000_hw *hw)
@@ -13453,7 +13453,7 @@ index b9309302c..2c1bab377 100644
  	/* Must acquire the MDIO ownership before MAC reset.
  	 * Ownership defaults to firmware after a reset.
 diff --git a/drivers/net/ethernet/intel/e1000e/ethtool.c b/drivers/net/ethernet/intel/e1000e/ethtool.c
-index 02ebf208f..083426983 100644
+index 02ebf20..0834269 100644
 --- a/drivers/net/ethernet/intel/e1000e/ethtool.c
 +++ b/drivers/net/ethernet/intel/e1000e/ethtool.c
 @@ -1014,7 +1014,7 @@ static int e1000_intr_test(struct e1000_adapter *adapter, u64 *data)
@@ -13520,7 +13520,7 @@ index 02ebf208f..083426983 100644
  		}
  		/* Fall Through */
 diff --git a/drivers/net/ethernet/intel/e1000e/ich8lan.c b/drivers/net/ethernet/intel/e1000e/ich8lan.c
-index cdae0efde..395b05701 100644
+index cdae0ef..395b057 100644
 --- a/drivers/net/ethernet/intel/e1000e/ich8lan.c
 +++ b/drivers/net/ethernet/intel/e1000e/ich8lan.c
 @@ -271,7 +271,7 @@ static void e1000_toggle_lanphypc_pch_lpt(struct e1000_hw *hw)
@@ -13614,7 +13614,7 @@ index cdae0efde..395b05701 100644
  	/* Workaround for ICH8 bit corruption issue in FIFO memory */
  	if (hw->mac.type == e1000_ich8lan) {
 diff --git a/drivers/net/ethernet/intel/e1000e/mac.c b/drivers/net/ethernet/intel/e1000e/mac.c
-index 4abd55d64..e531976f8 100644
+index 4abd55d..e531976 100644
 --- a/drivers/net/ethernet/intel/e1000e/mac.c
 +++ b/drivers/net/ethernet/intel/e1000e/mac.c
 @@ -797,7 +797,7 @@ static s32 e1000_poll_fiber_serdes_link_generic(struct e1000_hw *hw)
@@ -13627,7 +13627,7 @@ index 4abd55d64..e531976f8 100644
  		if (status & E1000_STATUS_LU)
  			break;
 diff --git a/drivers/net/ethernet/intel/e1000e/netdev.c b/drivers/net/ethernet/intel/e1000e/netdev.c
-index b081a1ef6..f6f73d534 100644
+index b081a1e..f6f73d5 100644
 --- a/drivers/net/ethernet/intel/e1000e/netdev.c
 +++ b/drivers/net/ethernet/intel/e1000e/netdev.c
 @@ -3208,7 +3208,7 @@ static void e1000_configure_rx(struct e1000_adapter *adapter)
@@ -13709,7 +13709,7 @@ index b081a1ef6..f6f73d534 100644
  		WARN_ON(test_bit(__E1000_RESETTING, &adapter->state));
  
 diff --git a/drivers/net/ethernet/intel/e1000e/nvm.c b/drivers/net/ethernet/intel/e1000e/nvm.c
-index 937f9af22..e609f4df8 100644
+index 937f9af..e609f4d 100644
 --- a/drivers/net/ethernet/intel/e1000e/nvm.c
 +++ b/drivers/net/ethernet/intel/e1000e/nvm.c
 @@ -392,7 +392,7 @@ s32 e1000e_write_nvm_spi(struct e1000_hw *hw, u16 offset, u16 words, u16 *data)
@@ -13722,7 +13722,7 @@ index 937f9af22..e609f4df8 100644
  	}
  
 diff --git a/drivers/net/wireless/intel/iwlwifi/fw/acpi.c b/drivers/net/wireless/intel/iwlwifi/fw/acpi.c
-index 405038ce9..7573af2d8 100644
+index 405038c..7573af2 100644
 --- a/drivers/net/wireless/intel/iwlwifi/fw/acpi.c
 +++ b/drivers/net/wireless/intel/iwlwifi/fw/acpi.c
 @@ -97,7 +97,7 @@ IWL_EXPORT_SYMBOL(iwl_acpi_get_object);
@@ -13814,7 +13814,7 @@ index 405038ce9..7573af2d8 100644
  		goto out_free;
  	}
 diff --git a/drivers/net/wireless/intel/iwlwifi/fw/acpi.h b/drivers/net/wireless/intel/iwlwifi/fw/acpi.h
-index f5704e166..991a23450 100644
+index f5704e1..991a234 100644
 --- a/drivers/net/wireless/intel/iwlwifi/fw/acpi.h
 +++ b/drivers/net/wireless/intel/iwlwifi/fw/acpi.h
 @@ -97,7 +97,7 @@
@@ -13837,7 +13837,7 @@ index f5704e166..991a23450 100644
  	return ERR_PTR(-ENOENT);
  }
 diff --git a/drivers/net/wireless/intel/iwlwifi/fw/api/power.h b/drivers/net/wireless/intel/iwlwifi/fw/api/power.h
-index 01f003c6c..f195db398 100644
+index 01f003c..f195db3 100644
 --- a/drivers/net/wireless/intel/iwlwifi/fw/api/power.h
 +++ b/drivers/net/wireless/intel/iwlwifi/fw/api/power.h
 @@ -419,14 +419,26 @@ struct iwl_per_chain_offset_group {
@@ -13868,7 +13868,7 @@ index 01f003c6c..f195db398 100644
  
  /**
 diff --git a/drivers/net/wireless/intel/iwlwifi/fw/file.h b/drivers/net/wireless/intel/iwlwifi/fw/file.h
-index de9243d30..a74f34a8d 100644
+index de9243d..a74f34a 100644
 --- a/drivers/net/wireless/intel/iwlwifi/fw/file.h
 +++ b/drivers/net/wireless/intel/iwlwifi/fw/file.h
 @@ -286,6 +286,8 @@ typedef unsigned int __bitwise iwl_ucode_tlv_api_t;
@@ -13889,7 +13889,7 @@ index de9243d30..a74f34a8d 100644
  	NUM_IWL_UCODE_TLV_API
  #ifdef __CHECKER__
 diff --git a/drivers/net/wireless/intel/iwlwifi/mvm/fw.c b/drivers/net/wireless/intel/iwlwifi/mvm/fw.c
-index 5af9959d0..889270705 100644
+index 5af9959..8892707 100644
 --- a/drivers/net/wireless/intel/iwlwifi/mvm/fw.c
 +++ b/drivers/net/wireless/intel/iwlwifi/mvm/fw.c
 @@ -682,15 +682,15 @@ static int iwl_mvm_sar_get_wrds_table(struct iwl_mvm *mvm)
@@ -14009,7 +14009,7 @@ index 5af9959d0..889270705 100644
  }
  
 diff --git a/drivers/net/wireless/intel/iwlwifi/mvm/mac80211.c b/drivers/net/wireless/intel/iwlwifi/mvm/mac80211.c
-index 964c7baab..3905770b8 100644
+index 964c7ba..3905770 100644
 --- a/drivers/net/wireless/intel/iwlwifi/mvm/mac80211.c
 +++ b/drivers/net/wireless/intel/iwlwifi/mvm/mac80211.c
 @@ -474,7 +474,19 @@ int iwl_mvm_mac_setup_register(struct iwl_mvm *mvm)
@@ -14034,7 +14034,7 @@ index 964c7baab..3905770b8 100644
  
  	if (iwl_mvm_has_tlc_offload(mvm)) {
 diff --git a/drivers/net/wireless/intel/iwlwifi/mvm/mvm.h b/drivers/net/wireless/intel/iwlwifi/mvm/mvm.h
-index 88af1f0ba..ed8fc9a92 100644
+index 88af1f0..ed8fc9a 100644
 --- a/drivers/net/wireless/intel/iwlwifi/mvm/mvm.h
 +++ b/drivers/net/wireless/intel/iwlwifi/mvm/mvm.h
 @@ -1184,6 +1184,7 @@ struct iwl_mvm {
@@ -14046,7 +14046,7 @@ index 88af1f0ba..ed8fc9a92 100644
  };
  
 diff --git a/drivers/net/wireless/mediatek/mt76/mt76.h b/drivers/net/wireless/mediatek/mt76/mt76.h
-index 8ecbf81a9..889b76deb 100644
+index 8ecbf81..889b76d 100644
 --- a/drivers/net/wireless/mediatek/mt76/mt76.h
 +++ b/drivers/net/wireless/mediatek/mt76/mt76.h
 @@ -30,6 +30,7 @@
@@ -14058,7 +14058,7 @@ index 8ecbf81a9..889b76deb 100644
  struct mt76_dev;
  struct mt76_wcid;
 diff --git a/drivers/net/wireless/mediatek/mt76/usb.c b/drivers/net/wireless/mediatek/mt76/usb.c
-index bbaa1365b..dd90427b2 100644
+index bbaa136..dd90427 100644
 --- a/drivers/net/wireless/mediatek/mt76/usb.c
 +++ b/drivers/net/wireless/mediatek/mt76/usb.c
 @@ -429,6 +429,42 @@ static int mt76u_get_rx_entry_len(u8 *data, u32 data_len)
@@ -14126,7 +14126,7 @@ index bbaa1365b..dd90427b2 100644
  		data_len = min_t(int, len, urb->sg[nsgs].length);
  		skb_add_rx_frag(skb, skb_shinfo(skb)->nr_frags,
 diff --git a/drivers/pci/pci.c b/drivers/pci/pci.c
-index 088fcdc8d..bbd04a6c4 100644
+index 088fcdc..bbd04a6 100644
 --- a/drivers/pci/pci.c
 +++ b/drivers/pci/pci.c
 @@ -61,7 +61,7 @@ struct pci_pme_device {
@@ -14139,7 +14139,7 @@ index 088fcdc8d..bbd04a6c4 100644
  static void pci_dev_d3_sleep(struct pci_dev *dev)
  {
 diff --git a/drivers/platform/x86/Kconfig b/drivers/platform/x86/Kconfig
-index 7c2fd1d72..a2b36f2eb 100644
+index 7c2fd1d..a2b36f2 100644
 --- a/drivers/platform/x86/Kconfig
 +++ b/drivers/platform/x86/Kconfig
 @@ -623,9 +623,28 @@ config THINKPAD_ACPI_HOTKEY_POLL
@@ -14172,7 +14172,7 @@ index 7c2fd1d72..a2b36f2eb 100644
  	help
  	  This driver provides support for the IBM Hard Drive Active Protection
 diff --git a/drivers/platform/x86/Makefile b/drivers/platform/x86/Makefile
-index 87b0069bd..a0535f9f2 100644
+index 87b0069..a0535f9 100644
 --- a/drivers/platform/x86/Makefile
 +++ b/drivers/platform/x86/Makefile
 @@ -39,6 +39,8 @@ obj-$(CONFIG_TC1100_WMI)	+= tc1100-wmi.o
@@ -14185,7 +14185,7 @@ index 87b0069bd..a0535f9f2 100644
  obj-$(CONFIG_FUJITSU_LAPTOP)	+= fujitsu-laptop.o
  obj-$(CONFIG_FUJITSU_TABLET)	+= fujitsu-tablet.o
 diff --git a/drivers/platform/x86/hdaps.c b/drivers/platform/x86/hdaps.c
-index 3adcb0de0..5e4232be2 100644
+index 3adcb0d..5e4232b 100644
 --- a/drivers/platform/x86/hdaps.c
 +++ b/drivers/platform/x86/hdaps.c
 @@ -3,7 +3,7 @@
@@ -15379,7 +15379,7 @@ index 3adcb0de0..5e4232be2 100644
  MODULE_DESCRIPTION("IBM Hard Drive Active Protection System (HDAPS) driver");
 diff --git a/drivers/platform/x86/thinkpad_ec.c b/drivers/platform/x86/thinkpad_ec.c
 new file mode 100644
-index 000000000..597614bc1
+index 0000000..597614b
 --- /dev/null
 +++ b/drivers/platform/x86/thinkpad_ec.c
 @@ -0,0 +1,513 @@
@@ -15898,7 +15898,7 @@ index 000000000..597614bc1
 +module_exit(thinkpad_ec_exit);
 diff --git a/drivers/platform/x86/tp_smapi.c b/drivers/platform/x86/tp_smapi.c
 new file mode 100644
-index 000000000..209cb6487
+index 0000000..209cb64
 --- /dev/null
 +++ b/drivers/platform/x86/tp_smapi.c
 @@ -0,0 +1,1493 @@
@@ -17396,7 +17396,7 @@ index 000000000..209cb6487
 +module_init(tp_init);
 +module_exit(tp_exit);
 diff --git a/drivers/powercap/intel_rapl.c b/drivers/powercap/intel_rapl.c
-index f888117b0..38c35beac 100644
+index f888117..38c35be 100644
 --- a/drivers/powercap/intel_rapl.c
 +++ b/drivers/powercap/intel_rapl.c
 @@ -1612,7 +1612,7 @@ static int __init rapl_init(void)
@@ -17409,7 +17409,7 @@ index f888117b0..38c35beac 100644
  
  		return -ENODEV;
 diff --git a/drivers/scsi/Kconfig b/drivers/scsi/Kconfig
-index 61da513fc..dcb9c643e 100644
+index 61da513..dcb9c64 100644
 --- a/drivers/scsi/Kconfig
 +++ b/drivers/scsi/Kconfig
 @@ -1516,4 +1516,6 @@ source "drivers/scsi/pcmcia/Kconfig"
@@ -17420,7 +17420,7 @@ index 61da513fc..dcb9c643e 100644
 +
  endmenu
 diff --git a/drivers/scsi/Makefile b/drivers/scsi/Makefile
-index 8826111fd..35e70562b 100644
+index 8826111..35e7056 100644
 --- a/drivers/scsi/Makefile
 +++ b/drivers/scsi/Makefile
 @@ -151,6 +151,7 @@ obj-$(CONFIG_CHR_DEV_SCH)	+= ch.o
@@ -17432,7 +17432,7 @@ index 8826111fd..35e70562b 100644
  # This goes last, so that "real" scsi devices probe earlier
  obj-$(CONFIG_SCSI_DEBUG)	+= scsi_debug.o
 diff --git a/drivers/scsi/mpt3sas/mpt3sas_ctl.c b/drivers/scsi/mpt3sas/mpt3sas_ctl.c
-index b2bb47c14..5181c03e8 100644
+index b2bb47c..5181c03 100644
 --- a/drivers/scsi/mpt3sas/mpt3sas_ctl.c
 +++ b/drivers/scsi/mpt3sas/mpt3sas_ctl.c
 @@ -2319,6 +2319,10 @@ _ctl_ioctl_main(struct file *file, unsigned int cmd, void __user *arg,
@@ -17448,7 +17448,7 @@ index b2bb47c14..5181c03e8 100644
  			ret = _ctl_do_mpt_command(ioc, karg, &uarg->mf);
 diff --git a/drivers/scsi/vhba/Kconfig b/drivers/scsi/vhba/Kconfig
 new file mode 100644
-index 000000000..7ccb7d8dc
+index 0000000..7ccb7d8
 --- /dev/null
 +++ b/drivers/scsi/vhba/Kconfig
 @@ -0,0 +1,9 @@
@@ -17463,7 +17463,7 @@ index 000000000..7ccb7d8dc
 +	will be called vhba.
 diff --git a/drivers/scsi/vhba/Makefile b/drivers/scsi/vhba/Makefile
 new file mode 100644
-index 000000000..736824872
+index 0000000..7368248
 --- /dev/null
 +++ b/drivers/scsi/vhba/Makefile
 @@ -0,0 +1,4 @@
@@ -17473,7 +17473,7 @@ index 000000000..736824872
 +ccflags-y := -DVHBA_VERSION=\"$(VHBA_VERSION)\" -Werror
 diff --git a/drivers/scsi/vhba/vhba.c b/drivers/scsi/vhba/vhba.c
 new file mode 100644
-index 000000000..0ad712138
+index 0000000..0ad7121
 --- /dev/null
 +++ b/drivers/scsi/vhba/vhba.c
 @@ -0,0 +1,1083 @@
@@ -18561,7 +18561,7 @@ index 000000000..0ad712138
 +module_exit(vhba_exit);
 +
 diff --git a/drivers/tty/Kconfig b/drivers/tty/Kconfig
-index 3b1d312bb..6b434c723 100644
+index 3b1d312..6b434c7 100644
 --- a/drivers/tty/Kconfig
 +++ b/drivers/tty/Kconfig
 @@ -76,6 +76,19 @@ config VT_CONSOLE_SLEEP
@@ -18585,7 +18585,7 @@ index 3b1d312bb..6b434c723 100644
  	bool
  	depends on VT && !UML
 diff --git a/drivers/tty/vt/consolemap.c b/drivers/tty/vt/consolemap.c
-index b28aa0d28..79fcc96cc 100644
+index b28aa0d..79fcc96 100644
 --- a/drivers/tty/vt/consolemap.c
 +++ b/drivers/tty/vt/consolemap.c
 @@ -489,7 +489,11 @@ con_insert_unipair(struct uni_pagedir *p, u_short unicode, u_short fontpos)
@@ -18602,7 +18602,7 @@ index b28aa0d28..79fcc96cc 100644
  	}
  
 diff --git a/fs/Kconfig b/fs/Kconfig
-index bfb1c6095..bddba5bb3 100644
+index bfb1c60..bddba5b 100644
 --- a/fs/Kconfig
 +++ b/fs/Kconfig
 @@ -261,6 +261,7 @@ source "fs/romfs/Kconfig"
@@ -18614,7 +18614,7 @@ index bfb1c6095..bddba5bb3 100644
  endif # MISC_FILESYSTEMS
  
 diff --git a/fs/Makefile b/fs/Makefile
-index c9aea23ab..57c6f47b0 100644
+index c9aea23..57c6f47 100644
 --- a/fs/Makefile
 +++ b/fs/Makefile
 @@ -130,3 +130,4 @@ obj-$(CONFIG_F2FS_FS)		+= f2fs/
@@ -18624,7 +18624,7 @@ index c9aea23ab..57c6f47b0 100644
 +obj-$(CONFIG_AUFS_FS)           += aufs/
 diff --git a/fs/aufs/Kconfig b/fs/aufs/Kconfig
 new file mode 100644
-index 000000000..9f4364257
+index 0000000..9f43642
 --- /dev/null
 +++ b/fs/aufs/Kconfig
 @@ -0,0 +1,199 @@
@@ -18829,7 +18829,7 @@ index 000000000..9f4364257
 +endif
 diff --git a/fs/aufs/Makefile b/fs/aufs/Makefile
 new file mode 100644
-index 000000000..2c819a649
+index 0000000..2c819a6
 --- /dev/null
 +++ b/fs/aufs/Makefile
 @@ -0,0 +1,46 @@
@@ -18881,7 +18881,7 @@ index 000000000..2c819a649
 +aufs-$(CONFIG_AUFS_MAGIC_SYSRQ) += sysrq.o
 diff --git a/fs/aufs/aufs.h b/fs/aufs/aufs.h
 new file mode 100644
-index 000000000..a62a85211
+index 0000000..a62a852
 --- /dev/null
 +++ b/fs/aufs/aufs.h
 @@ -0,0 +1,62 @@
@@ -18949,7 +18949,7 @@ index 000000000..a62a85211
 +#endif /* __AUFS_H__ */
 diff --git a/fs/aufs/branch.c b/fs/aufs/branch.c
 new file mode 100644
-index 000000000..fb388a049
+index 0000000..fb388a0
 --- /dev/null
 +++ b/fs/aufs/branch.c
 @@ -0,0 +1,1423 @@
@@ -20378,7 +20378,7 @@ index 000000000..fb388a049
 +}
 diff --git a/fs/aufs/branch.h b/fs/aufs/branch.h
 new file mode 100644
-index 000000000..012459ad5
+index 0000000..012459a
 --- /dev/null
 +++ b/fs/aufs/branch.h
 @@ -0,0 +1,366 @@
@@ -20750,7 +20750,7 @@ index 000000000..012459ad5
 +#endif /* __AUFS_BRANCH_H__ */
 diff --git a/fs/aufs/conf.mk b/fs/aufs/conf.mk
 new file mode 100644
-index 000000000..12782f8e0
+index 0000000..12782f8
 --- /dev/null
 +++ b/fs/aufs/conf.mk
 @@ -0,0 +1,40 @@
@@ -20796,7 +20796,7 @@ index 000000000..12782f8e0
 +-include ${srctree}/${src}/conf_priv.mk
 diff --git a/fs/aufs/cpup.c b/fs/aufs/cpup.c
 new file mode 100644
-index 000000000..21134b448
+index 0000000..21134b4
 --- /dev/null
 +++ b/fs/aufs/cpup.c
 @@ -0,0 +1,1458 @@
@@ -22260,7 +22260,7 @@ index 000000000..21134b448
 +}
 diff --git a/fs/aufs/cpup.h b/fs/aufs/cpup.h
 new file mode 100644
-index 000000000..abcbfbc55
+index 0000000..abcbfbc
 --- /dev/null
 +++ b/fs/aufs/cpup.h
 @@ -0,0 +1,100 @@
@@ -22366,7 +22366,7 @@ index 000000000..abcbfbc55
 +#endif /* __AUFS_CPUP_H__ */
 diff --git a/fs/aufs/dbgaufs.c b/fs/aufs/dbgaufs.c
 new file mode 100644
-index 000000000..e32d91d1f
+index 0000000..e32d91d
 --- /dev/null
 +++ b/fs/aufs/dbgaufs.c
 @@ -0,0 +1,526 @@
@@ -22898,7 +22898,7 @@ index 000000000..e32d91d1f
 +}
 diff --git a/fs/aufs/dbgaufs.h b/fs/aufs/dbgaufs.h
 new file mode 100644
-index 000000000..1ea241bf0
+index 0000000..1ea241b
 --- /dev/null
 +++ b/fs/aufs/dbgaufs.h
 @@ -0,0 +1,53 @@
@@ -22957,7 +22957,7 @@ index 000000000..1ea241bf0
 +#endif /* __DBGAUFS_H__ */
 diff --git a/fs/aufs/dcsub.c b/fs/aufs/dcsub.c
 new file mode 100644
-index 000000000..0b9122307
+index 0000000..0b91223
 --- /dev/null
 +++ b/fs/aufs/dcsub.c
 @@ -0,0 +1,225 @@
@@ -23188,7 +23188,7 @@ index 000000000..0b9122307
 +}
 diff --git a/fs/aufs/dcsub.h b/fs/aufs/dcsub.h
 new file mode 100644
-index 000000000..5e578995c
+index 0000000..5e57899
 --- /dev/null
 +++ b/fs/aufs/dcsub.h
 @@ -0,0 +1,137 @@
@@ -23331,7 +23331,7 @@ index 000000000..5e578995c
 +#endif /* __AUFS_DCSUB_H__ */
 diff --git a/fs/aufs/debug.c b/fs/aufs/debug.c
 new file mode 100644
-index 000000000..b93bb4f56
+index 0000000..b93bb4f
 --- /dev/null
 +++ b/fs/aufs/debug.c
 @@ -0,0 +1,441 @@
@@ -23778,7 +23778,7 @@ index 000000000..b93bb4f56
 +}
 diff --git a/fs/aufs/debug.h b/fs/aufs/debug.h
 new file mode 100644
-index 000000000..9c52470a6
+index 0000000..9c52470
 --- /dev/null
 +++ b/fs/aufs/debug.h
 @@ -0,0 +1,226 @@
@@ -24010,7 +24010,7 @@ index 000000000..9c52470a6
 +#endif /* __AUFS_DEBUG_H__ */
 diff --git a/fs/aufs/dentry.c b/fs/aufs/dentry.c
 new file mode 100644
-index 000000000..faf664508
+index 0000000..faf6645
 --- /dev/null
 +++ b/fs/aufs/dentry.c
 @@ -0,0 +1,1154 @@
@@ -25170,7 +25170,7 @@ index 000000000..faf664508
 +};
 diff --git a/fs/aufs/dentry.h b/fs/aufs/dentry.h
 new file mode 100644
-index 000000000..3b443fc7e
+index 0000000..3b443fc
 --- /dev/null
 +++ b/fs/aufs/dentry.h
 @@ -0,0 +1,268 @@
@@ -25444,7 +25444,7 @@ index 000000000..3b443fc7e
 +#endif /* __AUFS_DENTRY_H__ */
 diff --git a/fs/aufs/dinfo.c b/fs/aufs/dinfo.c
 new file mode 100644
-index 000000000..86140548f
+index 0000000..8614054
 --- /dev/null
 +++ b/fs/aufs/dinfo.c
 @@ -0,0 +1,554 @@
@@ -26004,7 +26004,7 @@ index 000000000..86140548f
 +}
 diff --git a/fs/aufs/dir.c b/fs/aufs/dir.c
 new file mode 100644
-index 000000000..68e87d6f2
+index 0000000..68e87d6
 --- /dev/null
 +++ b/fs/aufs/dir.c
 @@ -0,0 +1,763 @@
@@ -26773,7 +26773,7 @@ index 000000000..68e87d6f2
 +};
 diff --git a/fs/aufs/dir.h b/fs/aufs/dir.h
 new file mode 100644
-index 000000000..5c8065d25
+index 0000000..5c8065d
 --- /dev/null
 +++ b/fs/aufs/dir.h
 @@ -0,0 +1,134 @@
@@ -26913,7 +26913,7 @@ index 000000000..5c8065d25
 +#endif /* __AUFS_DIR_H__ */
 diff --git a/fs/aufs/dirren.c b/fs/aufs/dirren.c
 new file mode 100644
-index 000000000..0bd412ab6
+index 0000000..0bd412a
 --- /dev/null
 +++ b/fs/aufs/dirren.c
 @@ -0,0 +1,1316 @@
@@ -28235,7 +28235,7 @@ index 000000000..0bd412ab6
 +}
 diff --git a/fs/aufs/dirren.h b/fs/aufs/dirren.h
 new file mode 100644
-index 000000000..a98673646
+index 0000000..a986736
 --- /dev/null
 +++ b/fs/aufs/dirren.h
 @@ -0,0 +1,140 @@
@@ -28381,7 +28381,7 @@ index 000000000..a98673646
 +#endif /* __AUFS_DIRREN_H__ */
 diff --git a/fs/aufs/dynop.c b/fs/aufs/dynop.c
 new file mode 100644
-index 000000000..ed79f8255
+index 0000000..ed79f82
 --- /dev/null
 +++ b/fs/aufs/dynop.c
 @@ -0,0 +1,367 @@
@@ -28754,7 +28754,7 @@ index 000000000..ed79f8255
 +}
 diff --git a/fs/aufs/dynop.h b/fs/aufs/dynop.h
 new file mode 100644
-index 000000000..5d0b36559
+index 0000000..5d0b365
 --- /dev/null
 +++ b/fs/aufs/dynop.h
 @@ -0,0 +1,77 @@
@@ -28837,7 +28837,7 @@ index 000000000..5d0b36559
 +#endif /* __AUFS_DYNOP_H__ */
 diff --git a/fs/aufs/export.c b/fs/aufs/export.c
 new file mode 100644
-index 000000000..1da2ca0a9
+index 0000000..1da2ca0
 --- /dev/null
 +++ b/fs/aufs/export.c
 @@ -0,0 +1,838 @@
@@ -29681,7 +29681,7 @@ index 000000000..1da2ca0a9
 +}
 diff --git a/fs/aufs/f_op.c b/fs/aufs/f_op.c
 new file mode 100644
-index 000000000..e3376c87d
+index 0000000..e3376c8
 --- /dev/null
 +++ b/fs/aufs/f_op.c
 @@ -0,0 +1,819 @@
@@ -30506,7 +30506,7 @@ index 000000000..e3376c87d
 +};
 diff --git a/fs/aufs/fhsm.c b/fs/aufs/fhsm.c
 new file mode 100644
-index 000000000..f86a4c24f
+index 0000000..f86a4c2
 --- /dev/null
 +++ b/fs/aufs/fhsm.c
 @@ -0,0 +1,427 @@
@@ -30939,7 +30939,7 @@ index 000000000..f86a4c24f
 +}
 diff --git a/fs/aufs/file.c b/fs/aufs/file.c
 new file mode 100644
-index 000000000..dbb33855d
+index 0000000..dbb3385
 --- /dev/null
 +++ b/fs/aufs/file.c
 @@ -0,0 +1,863 @@
@@ -31808,7 +31808,7 @@ index 000000000..dbb33855d
 +};
 diff --git a/fs/aufs/file.h b/fs/aufs/file.h
 new file mode 100644
-index 000000000..c679a19df
+index 0000000..c679a19
 --- /dev/null
 +++ b/fs/aufs/file.h
 @@ -0,0 +1,342 @@
@@ -32156,7 +32156,7 @@ index 000000000..c679a19df
 +#endif /* __AUFS_FILE_H__ */
 diff --git a/fs/aufs/finfo.c b/fs/aufs/finfo.c
 new file mode 100644
-index 000000000..448c5e9cd
+index 0000000..448c5e9
 --- /dev/null
 +++ b/fs/aufs/finfo.c
 @@ -0,0 +1,149 @@
@@ -32311,7 +32311,7 @@ index 000000000..448c5e9cd
 +}
 diff --git a/fs/aufs/fstype.h b/fs/aufs/fstype.h
 new file mode 100644
-index 000000000..510bd87e9
+index 0000000..510bd87
 --- /dev/null
 +++ b/fs/aufs/fstype.h
 @@ -0,0 +1,401 @@
@@ -32718,7 +32718,7 @@ index 000000000..510bd87e9
 +#endif /* __AUFS_FSTYPE_H__ */
 diff --git a/fs/aufs/hbl.h b/fs/aufs/hbl.h
 new file mode 100644
-index 000000000..6db65b16b
+index 0000000..6db65b1
 --- /dev/null
 +++ b/fs/aufs/hbl.h
 @@ -0,0 +1,65 @@
@@ -32789,7 +32789,7 @@ index 000000000..6db65b16b
 +#endif /* __AUFS_HBL_H__ */
 diff --git a/fs/aufs/hfsnotify.c b/fs/aufs/hfsnotify.c
 new file mode 100644
-index 000000000..7945ae3ca
+index 0000000..7945ae3
 --- /dev/null
 +++ b/fs/aufs/hfsnotify.c
 @@ -0,0 +1,288 @@
@@ -33083,7 +33083,7 @@ index 000000000..7945ae3ca
 +};
 diff --git a/fs/aufs/hfsplus.c b/fs/aufs/hfsplus.c
 new file mode 100644
-index 000000000..3bd869a69
+index 0000000..3bd869a
 --- /dev/null
 +++ b/fs/aufs/hfsplus.c
 @@ -0,0 +1,60 @@
@@ -33149,7 +33149,7 @@ index 000000000..3bd869a69
 +}
 diff --git a/fs/aufs/hnotify.c b/fs/aufs/hnotify.c
 new file mode 100644
-index 000000000..2e7c2cdb8
+index 0000000..2e7c2cd
 --- /dev/null
 +++ b/fs/aufs/hnotify.c
 @@ -0,0 +1,721 @@
@@ -33876,7 +33876,7 @@ index 000000000..2e7c2cdb8
 +}
 diff --git a/fs/aufs/i_op.c b/fs/aufs/i_op.c
 new file mode 100644
-index 000000000..4f5001ebd
+index 0000000..4f5001e
 --- /dev/null
 +++ b/fs/aufs/i_op.c
 @@ -0,0 +1,1507 @@
@@ -35389,7 +35389,7 @@ index 000000000..4f5001ebd
 +};
 diff --git a/fs/aufs/i_op_add.c b/fs/aufs/i_op_add.c
 new file mode 100644
-index 000000000..af6893e61
+index 0000000..af6893e
 --- /dev/null
 +++ b/fs/aufs/i_op_add.c
 @@ -0,0 +1,936 @@
@@ -36331,7 +36331,7 @@ index 000000000..af6893e61
 +}
 diff --git a/fs/aufs/i_op_del.c b/fs/aufs/i_op_del.c
 new file mode 100644
-index 000000000..1c459dbea
+index 0000000..1c459db
 --- /dev/null
 +++ b/fs/aufs/i_op_del.c
 @@ -0,0 +1,513 @@
@@ -36850,7 +36850,7 @@ index 000000000..1c459dbea
 +}
 diff --git a/fs/aufs/i_op_ren.c b/fs/aufs/i_op_ren.c
 new file mode 100644
-index 000000000..91aa66594
+index 0000000..91aa665
 --- /dev/null
 +++ b/fs/aufs/i_op_ren.c
 @@ -0,0 +1,1250 @@
@@ -38106,7 +38106,7 @@ index 000000000..91aa66594
 +}
 diff --git a/fs/aufs/iinfo.c b/fs/aufs/iinfo.c
 new file mode 100644
-index 000000000..098fd1150
+index 0000000..098fd11
 --- /dev/null
 +++ b/fs/aufs/iinfo.c
 @@ -0,0 +1,286 @@
@@ -38398,7 +38398,7 @@ index 000000000..098fd1150
 +}
 diff --git a/fs/aufs/inode.c b/fs/aufs/inode.c
 new file mode 100644
-index 000000000..985377d9b
+index 0000000..985377d
 --- /dev/null
 +++ b/fs/aufs/inode.c
 @@ -0,0 +1,529 @@
@@ -38933,7 +38933,7 @@ index 000000000..985377d9b
 +}
 diff --git a/fs/aufs/inode.h b/fs/aufs/inode.h
 new file mode 100644
-index 000000000..e387ef16e
+index 0000000..e387ef1
 --- /dev/null
 +++ b/fs/aufs/inode.h
 @@ -0,0 +1,698 @@
@@ -39637,7 +39637,7 @@ index 000000000..e387ef16e
 +#endif /* __AUFS_INODE_H__ */
 diff --git a/fs/aufs/ioctl.c b/fs/aufs/ioctl.c
 new file mode 100644
-index 000000000..fb2fb7582
+index 0000000..fb2fb75
 --- /dev/null
 +++ b/fs/aufs/ioctl.c
 @@ -0,0 +1,220 @@
@@ -39863,7 +39863,7 @@ index 000000000..fb2fb7582
 +#endif
 diff --git a/fs/aufs/lcnt.h b/fs/aufs/lcnt.h
 new file mode 100644
-index 000000000..d8508f875
+index 0000000..d8508f8
 --- /dev/null
 +++ b/fs/aufs/lcnt.h
 @@ -0,0 +1,186 @@
@@ -40055,7 +40055,7 @@ index 000000000..d8508f875
 +#endif /* __AUFS_LCNT_H__ */
 diff --git a/fs/aufs/loop.c b/fs/aufs/loop.c
 new file mode 100644
-index 000000000..52c441cb3
+index 0000000..52c441c
 --- /dev/null
 +++ b/fs/aufs/loop.c
 @@ -0,0 +1,164 @@
@@ -40225,7 +40225,7 @@ index 000000000..52c441cb3
 +}
 diff --git a/fs/aufs/loop.h b/fs/aufs/loop.h
 new file mode 100644
-index 000000000..8eb091a84
+index 0000000..8eb091a
 --- /dev/null
 +++ b/fs/aufs/loop.h
 @@ -0,0 +1,59 @@
@@ -40290,7 +40290,7 @@ index 000000000..8eb091a84
 +#endif /* __AUFS_LOOP_H__ */
 diff --git a/fs/aufs/magic.mk b/fs/aufs/magic.mk
 new file mode 100644
-index 000000000..7bc9eef3f
+index 0000000..7bc9eef
 --- /dev/null
 +++ b/fs/aufs/magic.mk
 @@ -0,0 +1,31 @@
@@ -40327,7 +40327,7 @@ index 000000000..7bc9eef3f
 +endif
 diff --git a/fs/aufs/module.c b/fs/aufs/module.c
 new file mode 100644
-index 000000000..295736adf
+index 0000000..295736a
 --- /dev/null
 +++ b/fs/aufs/module.c
 @@ -0,0 +1,273 @@
@@ -40606,7 +40606,7 @@ index 000000000..295736adf
 +module_exit(aufs_exit);
 diff --git a/fs/aufs/module.h b/fs/aufs/module.h
 new file mode 100644
-index 000000000..3036754b9
+index 0000000..3036754
 --- /dev/null
 +++ b/fs/aufs/module.h
 @@ -0,0 +1,166 @@
@@ -40778,7 +40778,7 @@ index 000000000..3036754b9
 +#endif /* __AUFS_MODULE_H__ */
 diff --git a/fs/aufs/mvdown.c b/fs/aufs/mvdown.c
 new file mode 100644
-index 000000000..cbac849ea
+index 0000000..cbac849
 --- /dev/null
 +++ b/fs/aufs/mvdown.c
 @@ -0,0 +1,706 @@
@@ -41490,7 +41490,7 @@ index 000000000..cbac849ea
 +}
 diff --git a/fs/aufs/opts.c b/fs/aufs/opts.c
 new file mode 100644
-index 000000000..c92ca1457
+index 0000000..c92ca14
 --- /dev/null
 +++ b/fs/aufs/opts.c
 @@ -0,0 +1,1877 @@
@@ -43373,7 +43373,7 @@ index 000000000..c92ca1457
 +}
 diff --git a/fs/aufs/opts.h b/fs/aufs/opts.h
 new file mode 100644
-index 000000000..6326b5434
+index 0000000..6326b54
 --- /dev/null
 +++ b/fs/aufs/opts.h
 @@ -0,0 +1,225 @@
@@ -43604,7 +43604,7 @@ index 000000000..6326b5434
 +#endif /* __AUFS_OPTS_H__ */
 diff --git a/fs/aufs/plink.c b/fs/aufs/plink.c
 new file mode 100644
-index 000000000..718edb882
+index 0000000..718edb8
 --- /dev/null
 +++ b/fs/aufs/plink.c
 @@ -0,0 +1,516 @@
@@ -44126,7 +44126,7 @@ index 000000000..718edb882
 +}
 diff --git a/fs/aufs/poll.c b/fs/aufs/poll.c
 new file mode 100644
-index 000000000..c48c6cb64
+index 0000000..c48c6cb
 --- /dev/null
 +++ b/fs/aufs/poll.c
 @@ -0,0 +1,51 @@
@@ -44183,7 +44183,7 @@ index 000000000..c48c6cb64
 +}
 diff --git a/fs/aufs/posix_acl.c b/fs/aufs/posix_acl.c
 new file mode 100644
-index 000000000..67a4bbffd
+index 0000000..67a4bbf
 --- /dev/null
 +++ b/fs/aufs/posix_acl.c
 @@ -0,0 +1,103 @@
@@ -44292,7 +44292,7 @@ index 000000000..67a4bbffd
 +}
 diff --git a/fs/aufs/procfs.c b/fs/aufs/procfs.c
 new file mode 100644
-index 000000000..582dd486f
+index 0000000..582dd48
 --- /dev/null
 +++ b/fs/aufs/procfs.c
 @@ -0,0 +1,171 @@
@@ -44469,7 +44469,7 @@ index 000000000..582dd486f
 +}
 diff --git a/fs/aufs/rdu.c b/fs/aufs/rdu.c
 new file mode 100644
-index 000000000..3805e7962
+index 0000000..3805e79
 --- /dev/null
 +++ b/fs/aufs/rdu.c
 @@ -0,0 +1,384 @@
@@ -44859,7 +44859,7 @@ index 000000000..3805e7962
 +#endif
 diff --git a/fs/aufs/rwsem.h b/fs/aufs/rwsem.h
 new file mode 100644
-index 000000000..2f8988fa1
+index 0000000..2f8988f
 --- /dev/null
 +++ b/fs/aufs/rwsem.h
 @@ -0,0 +1,73 @@
@@ -44938,7 +44938,7 @@ index 000000000..2f8988fa1
 +#endif /* __AUFS_RWSEM_H__ */
 diff --git a/fs/aufs/sbinfo.c b/fs/aufs/sbinfo.c
 new file mode 100644
-index 000000000..500a920b4
+index 0000000..500a920
 --- /dev/null
 +++ b/fs/aufs/sbinfo.c
 @@ -0,0 +1,314 @@
@@ -45258,7 +45258,7 @@ index 000000000..500a920b4
 +}
 diff --git a/fs/aufs/super.c b/fs/aufs/super.c
 new file mode 100644
-index 000000000..7e56cf5cc
+index 0000000..7e56cf5
 --- /dev/null
 +++ b/fs/aufs/super.c
 @@ -0,0 +1,1050 @@
@@ -46314,7 +46314,7 @@ index 000000000..7e56cf5cc
 +};
 diff --git a/fs/aufs/super.h b/fs/aufs/super.h
 new file mode 100644
-index 000000000..37f02bb21
+index 0000000..37f02bb
 --- /dev/null
 +++ b/fs/aufs/super.h
 @@ -0,0 +1,589 @@
@@ -46909,7 +46909,7 @@ index 000000000..37f02bb21
 +#endif /* __AUFS_SUPER_H__ */
 diff --git a/fs/aufs/sysaufs.c b/fs/aufs/sysaufs.c
 new file mode 100644
-index 000000000..32a0811c5
+index 0000000..32a0811
 --- /dev/null
 +++ b/fs/aufs/sysaufs.c
 @@ -0,0 +1,93 @@
@@ -47008,7 +47008,7 @@ index 000000000..32a0811c5
 +}
 diff --git a/fs/aufs/sysaufs.h b/fs/aufs/sysaufs.h
 new file mode 100644
-index 000000000..195fe279b
+index 0000000..195fe27
 --- /dev/null
 +++ b/fs/aufs/sysaufs.h
 @@ -0,0 +1,102 @@
@@ -47116,7 +47116,7 @@ index 000000000..195fe279b
 +#endif /* __SYSAUFS_H__ */
 diff --git a/fs/aufs/sysfs.c b/fs/aufs/sysfs.c
 new file mode 100644
-index 000000000..eda987628
+index 0000000..eda9876
 --- /dev/null
 +++ b/fs/aufs/sysfs.c
 @@ -0,0 +1,374 @@
@@ -47496,7 +47496,7 @@ index 000000000..eda987628
 +}
 diff --git a/fs/aufs/sysrq.c b/fs/aufs/sysrq.c
 new file mode 100644
-index 000000000..db10ec528
+index 0000000..db10ec5
 --- /dev/null
 +++ b/fs/aufs/sysrq.c
 @@ -0,0 +1,160 @@
@@ -47662,7 +47662,7 @@ index 000000000..db10ec528
 +}
 diff --git a/fs/aufs/vdir.c b/fs/aufs/vdir.c
 new file mode 100644
-index 000000000..dc768f5d9
+index 0000000..dc768f5
 --- /dev/null
 +++ b/fs/aufs/vdir.c
 @@ -0,0 +1,896 @@
@@ -48564,7 +48564,7 @@ index 000000000..dc768f5d9
 +}
 diff --git a/fs/aufs/vfsub.c b/fs/aufs/vfsub.c
 new file mode 100644
-index 000000000..d6945e225
+index 0000000..d6945e2
 --- /dev/null
 +++ b/fs/aufs/vfsub.c
 @@ -0,0 +1,902 @@
@@ -49472,7 +49472,7 @@ index 000000000..d6945e225
 +}
 diff --git a/fs/aufs/vfsub.h b/fs/aufs/vfsub.h
 new file mode 100644
-index 000000000..51e677c7f
+index 0000000..51e677c
 --- /dev/null
 +++ b/fs/aufs/vfsub.h
 @@ -0,0 +1,354 @@
@@ -49832,7 +49832,7 @@ index 000000000..51e677c7f
 +#endif /* __AUFS_VFSUB_H__ */
 diff --git a/fs/aufs/wbr_policy.c b/fs/aufs/wbr_policy.c
 new file mode 100644
-index 000000000..64954145c
+index 0000000..6495414
 --- /dev/null
 +++ b/fs/aufs/wbr_policy.c
 @@ -0,0 +1,830 @@
@@ -50668,7 +50668,7 @@ index 000000000..64954145c
 +};
 diff --git a/fs/aufs/whout.c b/fs/aufs/whout.c
 new file mode 100644
-index 000000000..6c9c85015
+index 0000000..6c9c850
 --- /dev/null
 +++ b/fs/aufs/whout.c
 @@ -0,0 +1,1062 @@
@@ -51736,7 +51736,7 @@ index 000000000..6c9c85015
 +}
 diff --git a/fs/aufs/whout.h b/fs/aufs/whout.h
 new file mode 100644
-index 000000000..06f69b24e
+index 0000000..06f69b2
 --- /dev/null
 +++ b/fs/aufs/whout.h
 @@ -0,0 +1,86 @@
@@ -51828,7 +51828,7 @@ index 000000000..06f69b24e
 +#endif /* __AUFS_WHOUT_H__ */
 diff --git a/fs/aufs/wkq.c b/fs/aufs/wkq.c
 new file mode 100644
-index 000000000..b0dd8df4e
+index 0000000..b0dd8df
 --- /dev/null
 +++ b/fs/aufs/wkq.c
 @@ -0,0 +1,392 @@
@@ -52226,7 +52226,7 @@ index 000000000..b0dd8df4e
 +}
 diff --git a/fs/aufs/wkq.h b/fs/aufs/wkq.h
 new file mode 100644
-index 000000000..235370d91
+index 0000000..235370d
 --- /dev/null
 +++ b/fs/aufs/wkq.h
 @@ -0,0 +1,89 @@
@@ -52321,7 +52321,7 @@ index 000000000..235370d91
 +#endif /* __AUFS_WKQ_H__ */
 diff --git a/fs/aufs/xattr.c b/fs/aufs/xattr.c
 new file mode 100644
-index 000000000..8e56b15c5
+index 0000000..8e56b15
 --- /dev/null
 +++ b/fs/aufs/xattr.c
 @@ -0,0 +1,356 @@
@@ -52683,7 +52683,7 @@ index 000000000..8e56b15c5
 +}
 diff --git a/fs/aufs/xino.c b/fs/aufs/xino.c
 new file mode 100644
-index 000000000..35ea33469
+index 0000000..35ea334
 --- /dev/null
 +++ b/fs/aufs/xino.c
 @@ -0,0 +1,1965 @@
@@ -54653,7 +54653,7 @@ index 000000000..35ea33469
 +	return err;
 +}
 diff --git a/fs/dcache.c b/fs/dcache.c
-index c435398f2..3fc74e471 100644
+index c435398..3fc74e4 100644
 --- a/fs/dcache.c
 +++ b/fs/dcache.c
 @@ -1247,7 +1247,7 @@ enum d_walk_ret {
@@ -54682,7 +54682,7 @@ index c435398f2..3fc74e471 100644
  /**
   * d_ancestor - search for an ancestor
 diff --git a/fs/exec.c b/fs/exec.c
-index 39902cc9e..ed8f4957a 100644
+index 39902cc..ed8f495 100644
 --- a/fs/exec.c
 +++ b/fs/exec.c
 @@ -110,6 +110,7 @@ bool path_noexec(const struct path *path)
@@ -54694,7 +54694,7 @@ index 39902cc9e..ed8f4957a 100644
  #ifdef CONFIG_USELIB
  /*
 diff --git a/fs/fcntl.c b/fs/fcntl.c
-index 3d40771e8..d4ad34463 100644
+index 3d40771..d4ad344 100644
 --- a/fs/fcntl.c
 +++ b/fs/fcntl.c
 @@ -32,7 +32,7 @@
@@ -54724,7 +54724,7 @@ index 3d40771e8..d4ad34463 100644
  static void f_modown(struct file *filp, struct pid *pid, enum pid_type type,
                       int force)
 diff --git a/fs/file_table.c b/fs/file_table.c
-index b07b53f24..34b9bbf4c 100644
+index b07b53f..34b9bbf 100644
 --- a/fs/file_table.c
 +++ b/fs/file_table.c
 @@ -162,6 +162,7 @@ struct file *alloc_empty_file(int flags, const struct cred *cred)
@@ -54752,7 +54752,7 @@ index b07b53f24..34b9bbf4c 100644
  void __init files_init(void)
  {
 diff --git a/fs/inode.c b/fs/inode.c
-index 2bf21e2c9..ed54d3759 100644
+index 2bf21e2..ed54d37 100644
 --- a/fs/inode.c
 +++ b/fs/inode.c
 @@ -1670,7 +1670,7 @@ EXPORT_SYMBOL(generic_update_time);
@@ -54773,10 +54773,10 @@ index 2bf21e2c9..ed54d3759 100644
  /**
   *	touch_atime	-	update the access time
 diff --git a/fs/io_uring.c b/fs/io_uring.c
-index 3e887a095..18898a312 100644
+index 6101855..eea2e44 100644
 --- a/fs/io_uring.c
 +++ b/fs/io_uring.c
-@@ -1145,26 +1145,29 @@ static int io_read(struct io_kiocb *req, const struct sqe_submit *s,
+@@ -1143,26 +1143,29 @@ static int io_read(struct io_kiocb *req, const struct sqe_submit *s,
  	ret = io_import_iovec(req->ctx, READ, s, &iovec, &iter);
  	if (ret)
  		return ret;
@@ -54822,7 +54822,7 @@ index 3e887a095..18898a312 100644
  	kfree(iovec);
  	return ret;
  }
-@@ -1192,50 +1195,46 @@ static int io_write(struct io_kiocb *req, const struct sqe_submit *s,
+@@ -1190,50 +1193,46 @@ static int io_write(struct io_kiocb *req, const struct sqe_submit *s,
  	ret = io_import_iovec(req->ctx, WRITE, s, &iovec, &iter);
  	if (ret)
  		return ret;
@@ -54904,7 +54904,7 @@ index 3e887a095..18898a312 100644
  	return ret;
  }
 diff --git a/fs/namespace.c b/fs/namespace.c
-index 6fbc91263..6cb11bd6f 100644
+index 6fbc912..6cb11bd 100644
 --- a/fs/namespace.c
 +++ b/fs/namespace.c
 @@ -436,6 +436,7 @@ void __mnt_drop_write(struct vfsmount *mnt)
@@ -54938,7 +54938,7 @@ index 6fbc91263..6cb11bd6f 100644
  static void lock_mnt_tree(struct mount *mnt)
  {
 diff --git a/fs/notify/group.c b/fs/notify/group.c
-index 039119030..0b9f7f6d8 100644
+index 0391190..0b9f7f6 100644
 --- a/fs/notify/group.c
 +++ b/fs/notify/group.c
 @@ -99,6 +99,7 @@ void fsnotify_get_group(struct fsnotify_group *group)
@@ -54966,7 +54966,7 @@ index 039119030..0b9f7f6d8 100644
  int fsnotify_fasync(int fd, struct file *file, int on)
  {
 diff --git a/fs/notify/mark.c b/fs/notify/mark.c
-index 99ddd126f..2154d69a2 100644
+index 99ddd12..2154d69 100644
 --- a/fs/notify/mark.c
 +++ b/fs/notify/mark.c
 @@ -276,6 +276,7 @@ void fsnotify_put_mark(struct fsnotify_mark *mark)
@@ -55002,7 +55002,7 @@ index 99ddd126f..2154d69a2 100644
  /*
   * Destroy all marks in destroy_list, waits for SRCU period to finish before
 diff --git a/fs/open.c b/fs/open.c
-index a59abe3c6..78809163b 100644
+index a59abe3..7880916 100644
 --- a/fs/open.c
 +++ b/fs/open.c
 @@ -65,6 +65,7 @@ int do_truncate(struct dentry *dentry, loff_t length, unsigned int time_attrs,
@@ -55014,7 +55014,7 @@ index a59abe3c6..78809163b 100644
  long vfs_truncate(const struct path *path, loff_t length)
  {
 diff --git a/fs/proc/base.c b/fs/proc/base.c
-index e781af70d..ea1e611af 100644
+index e781af7..ea1e611 100644
 --- a/fs/proc/base.c
 +++ b/fs/proc/base.c
 @@ -94,6 +94,8 @@
@@ -55176,7 +55176,7 @@ index e781af70d..ea1e611af 100644
  
  static int proc_tgid_base_readdir(struct file *file, struct dir_context *ctx)
 diff --git a/fs/proc/nommu.c b/fs/proc/nommu.c
-index 14c2badb8..65afe5287 100644
+index 14c2bad..65afe52 100644
 --- a/fs/proc/nommu.c
 +++ b/fs/proc/nommu.c
 @@ -41,7 +41,10 @@ static int nommu_region_show(struct seq_file *m, struct vm_region *region)
@@ -55192,7 +55192,7 @@ index 14c2badb8..65afe5287 100644
  		ino = inode->i_ino;
  	}
 diff --git a/fs/proc/task_mmu.c b/fs/proc/task_mmu.c
-index 7f84d1477..3d9ee997b 100644
+index 7f84d14..3d9ee99 100644
 --- a/fs/proc/task_mmu.c
 +++ b/fs/proc/task_mmu.c
 @@ -309,7 +309,10 @@ show_map_vma(struct seq_file *m, struct vm_area_struct *vma)
@@ -55217,7 +55217,7 @@ index 7f84d1477..3d9ee997b 100644
  	struct mm_walk walk = {
  		.hugetlb_entry = gather_hugetlb_stats,
 diff --git a/fs/proc/task_nommu.c b/fs/proc/task_nommu.c
-index 7907e6419..d17209cf5 100644
+index 7907e64..d17209c 100644
 --- a/fs/proc/task_nommu.c
 +++ b/fs/proc/task_nommu.c
 @@ -155,7 +155,10 @@ static int nommu_vma_show(struct seq_file *m, struct vm_area_struct *vma)
@@ -55233,7 +55233,7 @@ index 7907e6419..d17209cf5 100644
  		ino = inode->i_ino;
  		pgoff = (loff_t)vma->vm_pgoff << PAGE_SHIFT;
 diff --git a/fs/read_write.c b/fs/read_write.c
-index c543d965e..9da238d64 100644
+index c543d96..9da238d 100644
 --- a/fs/read_write.c
 +++ b/fs/read_write.c
 @@ -468,6 +468,7 @@ ssize_t vfs_read(struct file *file, char __user *buf, size_t count, loff_t *pos)
@@ -55284,7 +55284,7 @@ index c543d965e..9da238d64 100644
  /* file_ppos returns &file->f_pos or NULL if file is stream */
  static inline loff_t *file_ppos(struct file *file)
 diff --git a/fs/splice.c b/fs/splice.c
-index 14cb602d9..4fe4afa7f 100644
+index 14cb602..4fe4afa 100644
 --- a/fs/splice.c
 +++ b/fs/splice.c
 @@ -834,8 +834,8 @@ EXPORT_SYMBOL(generic_splice_sendpage);
@@ -55325,7 +55325,7 @@ index 14cb602d9..4fe4afa7f 100644
  /**
   * splice_direct_to_actor - splices data directly between two non-pipes
 diff --git a/fs/sync.c b/fs/sync.c
-index 4d1ff010b..67c66358f 100644
+index 4d1ff01..67c6635 100644
 --- a/fs/sync.c
 +++ b/fs/sync.c
 @@ -28,7 +28,7 @@
@@ -55346,7 +55346,7 @@ index 4d1ff010b..67c66358f 100644
  /*
   * Write out and wait upon all dirty data associated with this
 diff --git a/fs/xattr.c b/fs/xattr.c
-index 90dd78f0e..6cf6c21d3 100644
+index 90dd78f..6cf6c21 100644
 --- a/fs/xattr.c
 +++ b/fs/xattr.c
 @@ -119,15 +119,17 @@ xattr_permission(struct inode *inode, const char *name, int mask)
@@ -55382,7 +55382,7 @@ index 90dd78f0e..6cf6c21d3 100644
  ssize_t
  __vfs_getxattr(struct dentry *dentry, struct inode *inode, const char *name,
 diff --git a/include/asm-generic/resource.h b/include/asm-generic/resource.h
-index 8874f681b..59eb72bf7 100644
+index 8874f68..59eb72b 100644
 --- a/include/asm-generic/resource.h
 +++ b/include/asm-generic/resource.h
 @@ -23,7 +23,7 @@
@@ -55395,7 +55395,7 @@ index 8874f681b..59eb72bf7 100644
  	[RLIMIT_RTTIME]		= {  RLIM_INFINITY,  RLIM_INFINITY },	\
  }
 diff --git a/include/linux/blkdev.h b/include/linux/blkdev.h
-index 93baef66b..9cb98f144 100644
+index 93baef6..9cb98f1 100644
 --- a/include/linux/blkdev.h
 +++ b/include/linux/blkdev.h
 @@ -45,7 +45,11 @@ struct blk_queue_stats;
@@ -55432,7 +55432,7 @@ index 93baef66b..9cb98f144 100644
  void blk_queue_flag_set(unsigned int flag, struct request_queue *q);
  void blk_queue_flag_clear(unsigned int flag, struct request_queue *q);
 diff --git a/include/linux/fs.h b/include/linux/fs.h
-index 5186ac5b2..bc2041e43 100644
+index 5186ac5..bc2041e 100644
 --- a/include/linux/fs.h
 +++ b/include/linux/fs.h
 @@ -1333,6 +1333,7 @@ extern void fasync_free(struct fasync_struct *);
@@ -55492,7 +55492,7 @@ index 5186ac5b2..bc2041e43 100644
  extern const struct file_operations def_blk_fops;
  extern const struct file_operations def_chr_fops;
 diff --git a/include/linux/genhd.h b/include/linux/genhd.h
-index 8b5330dd5..dcb8b2201 100644
+index 8b5330d..dcb8b22 100644
 --- a/include/linux/genhd.h
 +++ b/include/linux/genhd.h
 @@ -118,7 +118,8 @@ struct hd_struct {
@@ -55531,7 +55531,7 @@ index 8b5330dd5..dcb8b2201 100644
  
  extern void disk_block_events(struct gendisk *disk);
 diff --git a/include/linux/jbd2.h b/include/linux/jbd2.h
-index 0e0393e7f..220bdfa47 100644
+index 0e0393e..220bdfa 100644
 --- a/include/linux/jbd2.h
 +++ b/include/linux/jbd2.h
 @@ -44,7 +44,7 @@
@@ -55544,7 +55544,7 @@ index 0e0393e7f..220bdfa47 100644
  #ifdef CONFIG_JBD2_DEBUG
  /*
 diff --git a/include/linux/jiffies.h b/include/linux/jiffies.h
-index 1b6d31da7..dea181bdb 100644
+index 1b6d31d..dea181b 100644
 --- a/include/linux/jiffies.h
 +++ b/include/linux/jiffies.h
 @@ -171,7 +171,7 @@ static inline u64 get_jiffies_64(void)
@@ -55557,7 +55557,7 @@ index 1b6d31da7..dea181bdb 100644
  /*
   * Change timeval to jiffies, trying to avoid the
 diff --git a/include/linux/ksm.h b/include/linux/ksm.h
-index e48b1e453..a91a7cfc8 100644
+index e48b1e4..a91a7cf 100644
 --- a/include/linux/ksm.h
 +++ b/include/linux/ksm.h
 @@ -19,6 +19,10 @@ struct stable_node;
@@ -55572,7 +55572,7 @@ index e48b1e453..a91a7cfc8 100644
  		unsigned long end, int advice, unsigned long *vm_flags);
  int __ksm_enter(struct mm_struct *mm);
 diff --git a/include/linux/lockdep.h b/include/linux/lockdep.h
-index 6e2377e6c..5a945d18a 100644
+index 6e2377e..5a945d1 100644
 --- a/include/linux/lockdep.h
 +++ b/include/linux/lockdep.h
 @@ -325,6 +325,8 @@ static inline int lockdep_match_key(struct lockdep_map *lock,
@@ -55593,7 +55593,7 @@ index 6e2377e6c..5a945d18a 100644
  
  #define lockdep_assert_held(l)			do { (void)(l); } while (0)
 diff --git a/include/linux/mm.h b/include/linux/mm.h
-index 0a6dae2f2..dd74bb1d1 100644
+index 0a6dae2..dd74bb1 100644
 --- a/include/linux/mm.h
 +++ b/include/linux/mm.h
 @@ -1558,6 +1558,28 @@ static inline void unmap_shared_mapping_range(struct address_space *mapping,
@@ -55626,7 +55626,7 @@ index 0a6dae2f2..dd74bb1d1 100644
  		void *buf, int len, unsigned int gup_flags);
  extern int access_remote_vm(struct mm_struct *mm, unsigned long addr,
 diff --git a/include/linux/mm_types.h b/include/linux/mm_types.h
-index 8ec38b11b..d3f5492a2 100644
+index 8ec38b1..d3f5492 100644
 --- a/include/linux/mm_types.h
 +++ b/include/linux/mm_types.h
 @@ -253,6 +253,7 @@ struct vm_region {
@@ -55646,7 +55646,7 @@ index 8ec38b11b..d3f5492a2 100644
  
  	atomic_long_t swap_readahead_info;
 diff --git a/include/linux/mnt_namespace.h b/include/linux/mnt_namespace.h
-index 35942084c..24f5fd1a7 100644
+index 3594208..24f5fd1 100644
 --- a/include/linux/mnt_namespace.h
 +++ b/include/linux/mnt_namespace.h
 @@ -6,11 +6,14 @@
@@ -55665,7 +55665,7 @@ index 35942084c..24f5fd1a7 100644
  extern const struct file_operations proc_mountinfo_operations;
  extern const struct file_operations proc_mountstats_operations;
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index 1157f6e24..47320d62f 100644
+index 1157f6e..47320d6 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
 @@ -604,13 +604,18 @@ struct task_struct {
@@ -55746,7 +55746,7 @@ index 1157f6e24..47320d62f 100644
  {
  	return task->thread_pid;
 diff --git a/include/linux/sched/deadline.h b/include/linux/sched/deadline.h
-index 0cb034331..b66abbae9 100644
+index 0cb0343..b66abba 100644
 --- a/include/linux/sched/deadline.h
 +++ b/include/linux/sched/deadline.h
 @@ -1,5 +1,22 @@
@@ -55781,7 +55781,7 @@ index 0cb034331..b66abbae9 100644
  static inline bool dl_time_before(u64 a, u64 b)
  {
 diff --git a/include/linux/sched/nohz.h b/include/linux/sched/nohz.h
-index b36f4cf38..2a5516295 100644
+index b36f4cf..2a55162 100644
 --- a/include/linux/sched/nohz.h
 +++ b/include/linux/sched/nohz.h
 @@ -6,7 +6,7 @@
@@ -55794,7 +55794,7 @@ index b36f4cf38..2a5516295 100644
  extern void cpu_load_update_nohz_stop(void);
  #else
 diff --git a/include/linux/sched/prio.h b/include/linux/sched/prio.h
-index 7d64feafc..d9dc5d3cc 100644
+index 7d64fea..d9dc5d3 100644
 --- a/include/linux/sched/prio.h
 +++ b/include/linux/sched/prio.h
 @@ -20,11 +20,17 @@
@@ -55816,7 +55816,7 @@ index 7d64feafc..d9dc5d3cc 100644
   * Convert user-nice values [ -20 ... 0 ... 19 ]
   * to static priority [ MAX_RT_PRIO..MAX_PRIO-1 ],
 diff --git a/include/linux/sched/rt.h b/include/linux/sched/rt.h
-index e5af028c0..6387c8ea9 100644
+index e5af028..6387c8e 100644
 --- a/include/linux/sched/rt.h
 +++ b/include/linux/sched/rt.h
 @@ -24,8 +24,10 @@ static inline bool task_is_realtime(struct task_struct *tsk)
@@ -55831,7 +55831,7 @@ index e5af028c0..6387c8ea9 100644
  }
  
 diff --git a/include/linux/sched/task.h b/include/linux/sched/task.h
-index f1227f2c3..89295700e 100644
+index f1227f2..8929570 100644
 --- a/include/linux/sched/task.h
 +++ b/include/linux/sched/task.h
 @@ -83,7 +83,7 @@ extern long kernel_wait4(pid_t, int __user *, int, struct rusage *);
@@ -55844,7 +55844,7 @@ index f1227f2c3..89295700e 100644
  #else
  #define sched_exec()   {}
 diff --git a/include/linux/splice.h b/include/linux/splice.h
-index 74b4911ac..19789fbea 100644
+index 74b4911..19789fb 100644
 --- a/include/linux/splice.h
 +++ b/include/linux/splice.h
 @@ -87,4 +87,10 @@ extern void splice_shrink_spd(struct splice_pipe_desc *);
@@ -55860,7 +55860,7 @@ index 74b4911ac..19789fbea 100644
  #endif
 diff --git a/include/linux/thinkpad_ec.h b/include/linux/thinkpad_ec.h
 new file mode 100644
-index 000000000..1b80d7ee5
+index 0000000..1b80d7e
 --- /dev/null
 +++ b/include/linux/thinkpad_ec.h
 @@ -0,0 +1,47 @@
@@ -55912,7 +55912,7 @@ index 000000000..1b80d7ee5
 +#endif /* __KERNEL */
 +#endif /* _THINKPAD_EC_H */
 diff --git a/include/linux/wait.h b/include/linux/wait.h
-index b6f77cf60..f8529dc95 100644
+index b6f77cf..f8529dc 100644
 --- a/include/linux/wait.h
 +++ b/include/linux/wait.h
 @@ -149,6 +149,7 @@ static inline bool wq_has_sleeper(struct wait_queue_head *wq_head)
@@ -55933,7 +55933,7 @@ index b6f77cf60..f8529dc95 100644
  long wait_woken(struct wait_queue_entry *wq_entry, unsigned mode, long timeout);
 diff --git a/include/uapi/linux/aufs_type.h b/include/uapi/linux/aufs_type.h
 new file mode 100644
-index 000000000..6fe7b75e8
+index 0000000..6fe7b75
 --- /dev/null
 +++ b/include/uapi/linux/aufs_type.h
 @@ -0,0 +1,452 @@
@@ -56390,7 +56390,7 @@ index 000000000..6fe7b75e8
 +
 +#endif /* __AUFS_TYPE_H__ */
 diff --git a/include/uapi/linux/fpga-dfl.h b/include/uapi/linux/fpga-dfl.h
-index 2e324e515..e9a00e014 100644
+index 2e324e5..e9a00e0 100644
 --- a/include/uapi/linux/fpga-dfl.h
 +++ b/include/uapi/linux/fpga-dfl.h
 @@ -176,4 +176,36 @@ struct dfl_fpga_fme_port_pr {
@@ -56431,7 +56431,7 @@ index 2e324e515..e9a00e014 100644
 +
  #endif /* _UAPI_LINUX_FPGA_DFL_H */
 diff --git a/include/uapi/linux/if_bonding.h b/include/uapi/linux/if_bonding.h
-index 790585f0e..85560927e 100644
+index 790585f..8556092 100644
 --- a/include/uapi/linux/if_bonding.h
 +++ b/include/uapi/linux/if_bonding.h
 @@ -82,7 +82,7 @@
@@ -56444,7 +56444,7 @@ index 790585f0e..85560927e 100644
  #define BOND_DEFAULT_TX_QUEUES 16   /* Default number of tx queues per device */
  
 diff --git a/include/uapi/linux/vt.h b/include/uapi/linux/vt.h
-index e9d39c485..3bceead8d 100644
+index e9d39c4..3bceead 100644
 --- a/include/uapi/linux/vt.h
 +++ b/include/uapi/linux/vt.h
 @@ -3,12 +3,25 @@
@@ -56475,7 +56475,7 @@ index e9d39c485..3bceead8d 100644
  		   consoles 16 and higher (since it returns a short) */
  
 diff --git a/init/Kconfig b/init/Kconfig
-index 0e2344389..7307dc2c3 100644
+index 0e23443..7307dc2 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -65,6 +65,30 @@ config THREAD_INFO_IN_TASK
@@ -56581,7 +56581,7 @@ index 0e2344389..7307dc2c3 100644
  	bool "Optimize for size"
  	imply CC_DISABLE_WARN_MAYBE_UNINITIALIZED  # avoid false positives
 diff --git a/init/do_mounts.c b/init/do_mounts.c
-index 2d1ea3028..45b93d5b5 100644
+index 2d1ea30..45b93d5 100644
 --- a/init/do_mounts.c
 +++ b/init/do_mounts.c
 @@ -225,11 +225,19 @@ dev_t name_to_dev_t(const char *name)
@@ -56615,7 +56615,7 @@ index 2d1ea3028..45b93d5b5 100644
  	md_run_setup();
  
 diff --git a/init/init_task.c b/init/init_task.c
-index c70ef656d..8cae99801 100644
+index c70ef65..8cae998 100644
 --- a/init/init_task.c
 +++ b/init/init_task.c
 @@ -68,9 +68,15 @@ struct task_struct init_task
@@ -56656,7 +56656,7 @@ index c70ef656d..8cae99801 100644
  #ifdef CONFIG_SMP
  	.pushable_tasks	= PLIST_NODE_INIT(init_task.pushable_tasks, MAX_PRIO),
 diff --git a/kernel/Kconfig.hz b/kernel/Kconfig.hz
-index 38ef6d068..5f95c9e01 100644
+index 38ef6d0..5f95c9e 100644
 --- a/kernel/Kconfig.hz
 +++ b/kernel/Kconfig.hz
 @@ -5,7 +5,7 @@
@@ -56691,7 +56691,7 @@ index 38ef6d068..5f95c9e01 100644
  
  config SCHED_HRTICK
 diff --git a/kernel/cgroup/cpuset.c b/kernel/cgroup/cpuset.c
-index 515525ff1..eb777b4d8 100644
+index 515525f..eb777b4 100644
 --- a/kernel/cgroup/cpuset.c
 +++ b/kernel/cgroup/cpuset.c
 @@ -673,7 +673,7 @@ static int validate_change(struct cpuset *cur, struct cpuset *trial)
@@ -56713,7 +56713,7 @@ index 515525ff1..eb777b4d8 100644
  {
  }
 diff --git a/kernel/delayacct.c b/kernel/delayacct.c
-index 27725754a..769d773c7 100644
+index 2772575..769d773 100644
 --- a/kernel/delayacct.c
 +++ b/kernel/delayacct.c
 @@ -106,7 +106,7 @@ int __delayacct_add_tsk(struct taskstats *d, struct task_struct *tsk)
@@ -56726,7 +56726,7 @@ index 27725754a..769d773c7 100644
  	d->cpu_count += t1;
  
 diff --git a/kernel/exit.c b/kernel/exit.c
-index a75b6a7f4..b63fdd44e 100644
+index 0922e84..1c08afa 100644
 --- a/kernel/exit.c
 +++ b/kernel/exit.c
 @@ -131,7 +131,7 @@ static void __exit_signal(struct task_struct *tsk)
@@ -56748,7 +56748,7 @@ index a75b6a7f4..b63fdd44e 100644
  	__unhash_process(tsk, group_dead);
  	write_sequnlock(&sig->stats_lock);
 diff --git a/kernel/fork.c b/kernel/fork.c
-index d3f006ed2..7376eaea9 100644
+index d3f006e..7376eae 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -106,6 +106,11 @@
@@ -56797,7 +56797,7 @@ index d3f006ed2..7376eaea9 100644
  	if (err)
  		goto bad_unshare_out;
 diff --git a/kernel/livepatch/transition.c b/kernel/livepatch/transition.c
-index abb2a4a2c..d12c8ccec 100644
+index abb2a4a..d12c8cc 100644
 --- a/kernel/livepatch/transition.c
 +++ b/kernel/livepatch/transition.c
 @@ -300,7 +300,11 @@ static bool klp_try_switch_task(struct task_struct *task)
@@ -56813,7 +56813,7 @@ index abb2a4a2c..d12c8ccec 100644
  			 "%s: %s:%d is running\n", __func__, task->comm,
  			 task->pid);
 diff --git a/kernel/locking/lockdep.c b/kernel/locking/lockdep.c
-index dbc936ccf..4fc8dc30c 100644
+index dbc936c..4fc8dc3 100644
 --- a/kernel/locking/lockdep.c
 +++ b/kernel/locking/lockdep.c
 @@ -152,7 +152,7 @@ static
@@ -56835,7 +56835,7 @@ index dbc936ccf..4fc8dc30c 100644
  #ifdef CONFIG_LOCK_STAT
  static DEFINE_PER_CPU(struct lock_class_stats[MAX_LOCKDEP_KEYS], cpu_lock_stats);
 diff --git a/kernel/locking/rtmutex.c b/kernel/locking/rtmutex.c
-index 38fbf9fa7..0b86890ed 100644
+index 38fbf9f..0b86890 100644
 --- a/kernel/locking/rtmutex.c
 +++ b/kernel/locking/rtmutex.c
 @@ -229,7 +229,7 @@ static inline bool unlock_rt_mutex_safe(struct rt_mutex *lock,
@@ -56866,7 +56866,7 @@ index 38fbf9fa7..0b86890ed 100644
  	/* Get the top priority waiter on the lock */
  	if (rt_mutex_has_waiters(lock))
 diff --git a/kernel/locking/rwsem-xadd.c b/kernel/locking/rwsem-xadd.c
-index 0b1f77957..311850785 100644
+index 0b1f779..3118507 100644
 --- a/kernel/locking/rwsem-xadd.c
 +++ b/kernel/locking/rwsem-xadd.c
 @@ -325,6 +325,7 @@ static inline bool rwsem_can_spin_on_owner(struct rw_semaphore *sem)
@@ -56889,7 +56889,7 @@ index 0b1f77957..311850785 100644
  	rcu_read_unlock();
  
 diff --git a/kernel/module.c b/kernel/module.c
-index 8431c3d47..826945fdf 100644
+index 8431c3d..826945f 100644
 --- a/kernel/module.c
 +++ b/kernel/module.c
 @@ -52,6 +52,7 @@
@@ -56942,7 +56942,7 @@ index 8431c3d47..826945fdf 100644
  }
  module_init(proc_modules_init);
 diff --git a/kernel/sched/Makefile b/kernel/sched/Makefile
-index 21fb5a566..b23231bae 100644
+index 21fb5a5..b23231b 100644
 --- a/kernel/sched/Makefile
 +++ b/kernel/sched/Makefile
 @@ -16,15 +16,21 @@ ifneq ($(CONFIG_SCHED_OMIT_FRAME_POINTER),y)
@@ -56975,7 +56975,7 @@ index 21fb5a566..b23231bae 100644
  obj-$(CONFIG_MEMBARRIER) += membarrier.o
 diff --git a/kernel/sched/bmq.c b/kernel/sched/bmq.c
 new file mode 100644
-index 000000000..6e15d1399
+index 0000000..6e15d13
 --- /dev/null
 +++ b/kernel/sched/bmq.c
 @@ -0,0 +1,6031 @@
@@ -63012,7 +63012,7 @@ index 000000000..6e15d1399
 +#undef CREATE_TRACE_POINTS
 diff --git a/kernel/sched/bmq_sched.h b/kernel/sched/bmq_sched.h
 new file mode 100644
-index 000000000..d9ea1288f
+index 0000000..d9ea128
 --- /dev/null
 +++ b/kernel/sched/bmq_sched.h
 @@ -0,0 +1,429 @@
@@ -63446,7 +63446,7 @@ index 000000000..d9ea1288f
 +}
 +#endif /* BMQ_SCHED_H */
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 4d5962232..31de11cea 100644
+index 4d59622..31de11c 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -45,7 +45,11 @@ const_debug unsigned int sysctl_sched_features =
@@ -63474,7 +63474,7 @@ index 4d5962232..31de11cea 100644
  /*
   * __task_rq_lock - lock the rq @p resides on.
 diff --git a/kernel/sched/cpufreq_schedutil.c b/kernel/sched/cpufreq_schedutil.c
-index ae3ec77bb..352674bc6 100644
+index ae3ec77..352674b 100644
 --- a/kernel/sched/cpufreq_schedutil.c
 +++ b/kernel/sched/cpufreq_schedutil.c
 @@ -180,6 +180,7 @@ static unsigned int get_next_freq(struct sugov_policy *sg_policy,
@@ -63537,7 +63537,7 @@ index ae3ec77bb..352674bc6 100644
 +#endif
  #endif
 diff --git a/kernel/sched/cputime.c b/kernel/sched/cputime.c
-index 2305ce89a..fa99e226b 100644
+index 2305ce8..fa99e22 100644
 --- a/kernel/sched/cputime.c
 +++ b/kernel/sched/cputime.c
 @@ -122,7 +122,7 @@ void account_user_time(struct task_struct *p, u64 cputime)
@@ -63586,7 +63586,7 @@ index 2305ce89a..fa99e226b 100644
  
  	task_cputime(p, &cputime.utime, &cputime.stime);
 diff --git a/kernel/sched/debug.c b/kernel/sched/debug.c
-index 14c6a8716..3df243b6a 100644
+index 14c6a87..3df243b 100644
 --- a/kernel/sched/debug.c
 +++ b/kernel/sched/debug.c
 @@ -900,6 +900,7 @@ void proc_sched_show_task(struct task_struct *p, struct pid_namespace *ns,
@@ -63598,7 +63598,7 @@ index 14c6a8716..3df243b6a 100644
  	nr_switches = p->nvcsw + p->nivcsw;
  
 diff --git a/kernel/sched/fair.c b/kernel/sched/fair.c
-index 9ecf1e4c6..6555b5128 100644
+index 9ecf1e4..6555b51 100644
 --- a/kernel/sched/fair.c
 +++ b/kernel/sched/fair.c
 @@ -37,8 +37,13 @@
@@ -63670,7 +63670,7 @@ index 9ecf1e4c6..6555b5128 100644
  static inline void update_load_add(struct load_weight *lw, unsigned long inc)
  {
 diff --git a/kernel/sched/idle.c b/kernel/sched/idle.c
-index 80940939b..10fed9a18 100644
+index 8094093..10fed9a 100644
 --- a/kernel/sched/idle.c
 +++ b/kernel/sched/idle.c
 @@ -354,6 +354,7 @@ void cpu_startup_entry(enum cpuhp_state state)
@@ -63687,7 +63687,7 @@ index 80940939b..10fed9a18 100644
  };
 +#endif
 diff --git a/kernel/sched/pelt.c b/kernel/sched/pelt.c
-index befce29bd..3909f5220 100644
+index befce29..3909f52 100644
 --- a/kernel/sched/pelt.c
 +++ b/kernel/sched/pelt.c
 @@ -234,6 +234,7 @@ ___update_load_avg(struct sched_avg *sa, unsigned long load, unsigned long runna
@@ -63707,7 +63707,7 @@ index befce29bd..3909f5220 100644
  #ifdef CONFIG_HAVE_SCHED_AVG_IRQ
  /*
 diff --git a/kernel/sched/pelt.h b/kernel/sched/pelt.h
-index 7489d5f56..0f6f104e6 100644
+index 7489d5f..0f6f104 100644
 --- a/kernel/sched/pelt.h
 +++ b/kernel/sched/pelt.h
 @@ -1,11 +1,13 @@
@@ -63753,7 +63753,7 @@ index 7489d5f56..0f6f104e6 100644
  static inline int
  update_irq_load_avg(struct rq *rq, u64 running)
 diff --git a/kernel/sched/sched.h b/kernel/sched/sched.h
-index b52ed1ada..70ab4be30 100644
+index b52ed1a..70ab4be 100644
 --- a/kernel/sched/sched.h
 +++ b/kernel/sched/sched.h
 @@ -2,6 +2,10 @@
@@ -63778,7 +63778,7 @@ index b52ed1ada..70ab4be30 100644
 +}
 +#endif /* !CONFIG_SCHED_BMQ */
 diff --git a/kernel/sched/stats.c b/kernel/sched/stats.c
-index 750fb3c67..0cc040a28 100644
+index 750fb3c..0cc040a 100644
 --- a/kernel/sched/stats.c
 +++ b/kernel/sched/stats.c
 @@ -22,8 +22,10 @@ static int show_schedstat(struct seq_file *seq, void *v)
@@ -63809,7 +63809,7 @@ index 750fb3c67..0cc040a28 100644
  	}
  	return 0;
 diff --git a/kernel/sched/wait.c b/kernel/sched/wait.c
-index fa0f9adfb..5727ed26a 100644
+index fa0f9ad..5727ed2 100644
 --- a/kernel/sched/wait.c
 +++ b/kernel/sched/wait.c
 @@ -37,6 +37,17 @@ void add_wait_queue_exclusive(struct wait_queue_head *wq_head, struct wait_queue
@@ -63851,7 +63851,7 @@ index fa0f9adfb..5727ed26a 100644
  {
  	wq_entry->flags = flags;
 diff --git a/kernel/sysctl.c b/kernel/sysctl.c
-index 1beca96fb..fb500d974 100644
+index 1beca96..fb500d9 100644
 --- a/kernel/sysctl.c
 +++ b/kernel/sysctl.c
 @@ -110,6 +110,9 @@ extern int core_uses_pid;
@@ -63934,7 +63934,7 @@ index 1beca96fb..fb500d974 100644
  	{
  		.procname	= "spin_retry",
 diff --git a/kernel/task_work.c b/kernel/task_work.c
-index 0fef39566..83fb1ecfc 100644
+index 0fef395..83fb1ec 100644
 --- a/kernel/task_work.c
 +++ b/kernel/task_work.c
 @@ -116,3 +116,4 @@ void task_work_run(void)
@@ -63943,7 +63943,7 @@ index 0fef39566..83fb1ecfc 100644
  }
 +EXPORT_SYMBOL_GPL(task_work_run);
 diff --git a/kernel/time/ntp.c b/kernel/time/ntp.c
-index 65eb79661..25a9d8c6d 100644
+index 65eb796..25a9d8c 100644
 --- a/kernel/time/ntp.c
 +++ b/kernel/time/ntp.c
 @@ -513,7 +513,7 @@ static void sched_sync_hw_clock(struct timespec64 now,
@@ -63956,7 +63956,7 @@ index 65eb79661..25a9d8c6d 100644
  
  	/* Compute the needed delay that will get to tv_nsec == target_nsec */
 diff --git a/kernel/time/posix-cpu-timers.c b/kernel/time/posix-cpu-timers.c
-index 0a426f4e3..81b8d233b 100644
+index 0a426f4..81b8d23 100644
 --- a/kernel/time/posix-cpu-timers.c
 +++ b/kernel/time/posix-cpu-timers.c
 @@ -791,6 +791,7 @@ check_timers_list(struct list_head *timers,
@@ -64034,7 +64034,7 @@ index 0a426f4e3..81b8d233b 100644
  	return 0;
  }
 diff --git a/kernel/trace/trace_selftest.c b/kernel/trace/trace_selftest.c
-index 69ee8ef12..208788fcb 100644
+index 69ee8ef..208788f 100644
 --- a/kernel/trace/trace_selftest.c
 +++ b/kernel/trace/trace_selftest.c
 @@ -1048,10 +1048,15 @@ static int trace_wakeup_test_thread(void *data)
@@ -64054,7 +64054,7 @@ index 69ee8ef12..208788fcb 100644
  	struct wakeup_test_data *x = data;
  
 diff --git a/kernel/user_namespace.c b/kernel/user_namespace.c
-index 0eff45ce7..aa27ecacf 100644
+index 0eff45c..aa27eca 100644
 --- a/kernel/user_namespace.c
 +++ b/kernel/user_namespace.c
 @@ -21,6 +21,13 @@
@@ -64072,7 +64072,7 @@ index 0eff45ce7..aa27ecacf 100644
  static DEFINE_MUTEX(userns_state_mutex);
  
 diff --git a/kernel/watchdog.c b/kernel/watchdog.c
-index 7f9e7b930..cb2afbda5 100644
+index 7f9e7b9..cb2afbd 100644
 --- a/kernel/watchdog.c
 +++ b/kernel/watchdog.c
 @@ -41,7 +41,7 @@ unsigned long __read_mostly watchdog_enabled;
@@ -64085,7 +64085,7 @@ index 7f9e7b930..cb2afbda5 100644
  
  static struct cpumask watchdog_allowed_mask __read_mostly;
 diff --git a/lib/Kconfig b/lib/Kconfig
-index 90623a0e1..7678577da 100644
+index 90623a0..7678577 100644
 --- a/lib/Kconfig
 +++ b/lib/Kconfig
 @@ -8,8 +8,7 @@ config BINARY_PRINTF
@@ -64100,7 +64100,7 @@ index 90623a0e1..7678577da 100644
  	bool "Automatically choose fastest RAID6 PQ functions"
 diff --git a/lib/raid6/Kconfig b/lib/raid6/Kconfig
 new file mode 100644
-index 000000000..d881d6be8
+index 0000000..d881d6b
 --- /dev/null
 +++ b/lib/raid6/Kconfig
 @@ -0,0 +1,38 @@
@@ -64143,7 +64143,7 @@ index 000000000..d881d6be8
 +
 +endmenu
 diff --git a/lib/raid6/algos.c b/lib/raid6/algos.c
-index 17417eee0..8af3d7c73 100644
+index 17417ee..8af3d7c 100644
 --- a/lib/raid6/algos.c
 +++ b/lib/raid6/algos.c
 @@ -124,6 +124,63 @@ const struct raid6_recov_calls *const raid6_recov_algos[] = {
@@ -64219,7 +64219,7 @@ index 17417eee0..8af3d7c73 100644
  static void raid6_exit(void)
  {
 diff --git a/mm/Makefile b/mm/Makefile
-index ac5e5ba78..5decb22d1 100644
+index ac5e5ba..5decb22 100644
 --- a/mm/Makefile
 +++ b/mm/Makefile
 @@ -39,7 +39,7 @@ obj-y			:= filemap.o mempool.o oom_kill.o fadvise.o \
@@ -64232,7 +64232,7 @@ index ac5e5ba78..5decb22d1 100644
  # Give 'page_alloc' its own module-parameter namespace
  page-alloc-y := page_alloc.o
 diff --git a/mm/filemap.c b/mm/filemap.c
-index 861e26ee4..7ac5b4397 100644
+index 861e26e..7ac5b43 100644
 --- a/mm/filemap.c
 +++ b/mm/filemap.c
 @@ -2723,7 +2723,7 @@ vm_fault_t filemap_page_mkwrite(struct vm_fault *vmf)
@@ -64245,7 +64245,7 @@ index 861e26ee4..7ac5b4397 100644
  	if (page->mapping != inode->i_mapping) {
  		unlock_page(page);
 diff --git a/mm/huge_memory.c b/mm/huge_memory.c
-index 885642c82..1ebd4725b 100644
+index 885642c..1ebd472 100644
 --- a/mm/huge_memory.c
 +++ b/mm/huge_memory.c
 @@ -52,7 +52,11 @@ unsigned long transparent_hugepage_flags __read_mostly =
@@ -64261,7 +64261,7 @@ index 885642c82..1ebd4725b 100644
  	(1<<TRANSPARENT_HUGEPAGE_USE_ZERO_PAGE_FLAG);
  
 diff --git a/mm/ksm.c b/mm/ksm.c
-index 3dc434641..14ee2b59a 100644
+index 3dc4346..14ee2b5 100644
 --- a/mm/ksm.c
 +++ b/mm/ksm.c
 @@ -2432,9 +2432,14 @@ static int ksm_scan_thread(void *nothing)
@@ -64396,7 +64396,7 @@ index 3dc434641..14ee2b59a 100644
  	}
  
 diff --git a/mm/mempolicy.c b/mm/mempolicy.c
-index ca3f443c8..c795ddb55 100644
+index ca3f443..c795ddb 100644
 --- a/mm/mempolicy.c
 +++ b/mm/mempolicy.c
 @@ -2131,8 +2131,9 @@ alloc_pages_vma(gfp_t gfp, int order, struct vm_area_struct *vma,
@@ -64412,7 +64412,7 @@ index ca3f443c8..c795ddb55 100644
  		}
  	}
 diff --git a/mm/mmap.c b/mm/mmap.c
-index 7e8c3e8ae..d8a903f61 100644
+index 7e8c3e8..d8a903f 100644
 --- a/mm/mmap.c
 +++ b/mm/mmap.c
 @@ -182,7 +182,7 @@ static struct vm_area_struct *remove_vma(struct vm_area_struct *vma)
@@ -64509,7 +64509,7 @@ index 7e8c3e8ae..d8a903f61 100644
  			new_vma->vm_ops->open(new_vma);
  		vma_link(mm, new_vma, prev, rb_link, rb_parent);
 diff --git a/mm/nommu.c b/mm/nommu.c
-index b2823519f..d7e4abcac 100644
+index b282351..d7e4abc 100644
 --- a/mm/nommu.c
 +++ b/mm/nommu.c
 @@ -640,7 +640,7 @@ static void __put_nommu_region(struct vm_region *region)
@@ -64553,7 +64553,7 @@ index b2823519f..d7e4abcac 100644
  	return ret;
  
 diff --git a/mm/page-writeback.c b/mm/page-writeback.c
-index bdbe8b6b1..7025ce5e3 100644
+index bdbe8b6..7025ce5 100644
 --- a/mm/page-writeback.c
 +++ b/mm/page-writeback.c
 @@ -71,7 +71,11 @@ static long ratelimit_pages = 32;
@@ -64582,7 +64582,7 @@ index bdbe8b6b1..7025ce5e3 100644
   * vm_dirty_bytes starts at 0 (disabled) so that it is a function of
 diff --git a/mm/prfile.c b/mm/prfile.c
 new file mode 100644
-index 000000000..024cdcfae
+index 0000000..024cdcf
 --- /dev/null
 +++ b/mm/prfile.c
 @@ -0,0 +1,86 @@
@@ -64673,7 +64673,7 @@ index 000000000..024cdcfae
 +}
 +#endif /* !CONFIG_MMU */
 diff --git a/net/Kconfig b/net/Kconfig
-index d122f53c6..ccf006551 100644
+index d122f53..ccf0065 100644
 --- a/net/Kconfig
 +++ b/net/Kconfig
 @@ -90,6 +90,7 @@ config INET
@@ -64685,7 +64685,7 @@ index d122f53c6..ccf006551 100644
  source "net/ipv6/Kconfig"
  source "net/netlabel/Kconfig"
 diff --git a/net/Makefile b/net/Makefile
-index 449fc0b22..bf63f55e4 100644
+index 449fc0b..bf63f55 100644
 --- a/net/Makefile
 +++ b/net/Makefile
 @@ -15,6 +15,7 @@ obj-$(CONFIG_NET)		+= $(tmp-y)
@@ -64697,7 +64697,7 @@ index 449fc0b22..bf63f55e4 100644
  obj-$(CONFIG_TLS)		+= tls/
  obj-$(CONFIG_XFRM)		+= xfrm/
 diff --git a/net/ipv4/Kconfig b/net/ipv4/Kconfig
-index 974de4d20..c893bf91e 100644
+index 974de4d..c893bf9 100644
 --- a/net/ipv4/Kconfig
 +++ b/net/ipv4/Kconfig
 @@ -676,6 +676,9 @@ choice
@@ -64719,7 +64719,7 @@ index 974de4d20..c893bf91e 100644
  	default "veno" if DEFAULT_VENO
  	default "reno" if DEFAULT_RENO
 diff --git a/net/ipv4/inet_connection_sock.c b/net/ipv4/inet_connection_sock.c
-index 7fd6db3fe..a2324d734 100644
+index 7fd6db3..a2324d7 100644
 --- a/net/ipv4/inet_connection_sock.c
 +++ b/net/ipv4/inet_connection_sock.c
 @@ -407,7 +407,7 @@ static int inet_csk_wait_for_connect(struct sock *sk, long timeo)
@@ -64732,7 +64732,7 @@ index 7fd6db3fe..a2324d734 100644
  		release_sock(sk);
  		if (reqsk_queue_empty(&icsk->icsk_accept_queue))
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index 5264f064a..80c19601f 100644
+index 5264f06..80c1960 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
 @@ -3935,8 +3935,8 @@ void __init tcp_init(void)
@@ -64748,7 +64748,7 @@ index 5264f064a..80c19601f 100644
  	init_net.ipv4.sysctl_tcp_wmem[1] = 16*1024;
 diff --git a/net/wireguard/Kconfig b/net/wireguard/Kconfig
 new file mode 100644
-index 000000000..3a688849b
+index 0000000..3a68884
 --- /dev/null
 +++ b/net/wireguard/Kconfig
 @@ -0,0 +1,32 @@
@@ -64786,7 +64786,7 @@ index 000000000..3a688849b
 +	  Say N here unless you know what you're doing.
 diff --git a/net/wireguard/Makefile b/net/wireguard/Makefile
 new file mode 100644
-index 000000000..c1a2673f6
+index 0000000..c1a2673
 --- /dev/null
 +++ b/net/wireguard/Makefile
 @@ -0,0 +1,14 @@
@@ -64806,7 +64806,7 @@ index 000000000..c1a2673f6
 +obj-$(if $(KBUILD_EXTMOD),m,$(CONFIG_WIREGUARD)) := wireguard.o
 diff --git a/net/wireguard/allowedips.c b/net/wireguard/allowedips.c
 new file mode 100644
-index 000000000..610aab047
+index 0000000..610aab0
 --- /dev/null
 +++ b/net/wireguard/allowedips.c
 @@ -0,0 +1,377 @@
@@ -65189,7 +65189,7 @@ index 000000000..610aab047
 +#include "selftest/allowedips.c"
 diff --git a/net/wireguard/allowedips.h b/net/wireguard/allowedips.h
 new file mode 100644
-index 000000000..e5c83cafc
+index 0000000..e5c83ca
 --- /dev/null
 +++ b/net/wireguard/allowedips.h
 @@ -0,0 +1,59 @@
@@ -65254,7 +65254,7 @@ index 000000000..e5c83cafc
 +#endif /* _WG_ALLOWEDIPS_H */
 diff --git a/net/wireguard/compat/Makefile.include b/net/wireguard/compat/Makefile.include
 new file mode 100644
-index 000000000..f537abec1
+index 0000000..f537abe
 --- /dev/null
 +++ b/net/wireguard/compat/Makefile.include
 @@ -0,0 +1,88 @@
@@ -65348,7 +65348,7 @@ index 000000000..f537abec1
 +endif
 diff --git a/net/wireguard/compat/checksum/checksum_partial_compat.h b/net/wireguard/compat/checksum/checksum_partial_compat.h
 new file mode 100644
-index 000000000..3dfe5397a
+index 0000000..3dfe539
 --- /dev/null
 +++ b/net/wireguard/compat/checksum/checksum_partial_compat.h
 @@ -0,0 +1,208 @@
@@ -65562,7 +65562,7 @@ index 000000000..3dfe5397a
 +}
 diff --git a/net/wireguard/compat/compat-asm.h b/net/wireguard/compat/compat-asm.h
 new file mode 100644
-index 000000000..f5c5bc29d
+index 0000000..f5c5bc2
 --- /dev/null
 +++ b/net/wireguard/compat/compat-asm.h
 @@ -0,0 +1,43 @@
@@ -65611,7 +65611,7 @@ index 000000000..f5c5bc29d
 +#endif /* _WG_COMPATASM_H */
 diff --git a/net/wireguard/compat/compat.h b/net/wireguard/compat/compat.h
 new file mode 100644
-index 000000000..239fa58bb
+index 0000000..239fa58
 --- /dev/null
 +++ b/net/wireguard/compat/compat.h
 @@ -0,0 +1,907 @@
@@ -66524,7 +66524,7 @@ index 000000000..239fa58bb
 +#endif /* _WG_COMPAT_H */
 diff --git a/net/wireguard/compat/dst_cache/dst_cache.c b/net/wireguard/compat/dst_cache/dst_cache.c
 new file mode 100644
-index 000000000..7ec22f768
+index 0000000..7ec22f7
 --- /dev/null
 +++ b/net/wireguard/compat/dst_cache/dst_cache.c
 @@ -0,0 +1,175 @@
@@ -66705,7 +66705,7 @@ index 000000000..7ec22f768
 +}
 diff --git a/net/wireguard/compat/dst_cache/include/net/dst_cache.h b/net/wireguard/compat/dst_cache/include/net/dst_cache.h
 new file mode 100644
-index 000000000..48021c0d6
+index 0000000..48021c0
 --- /dev/null
 +++ b/net/wireguard/compat/dst_cache/include/net/dst_cache.h
 @@ -0,0 +1,97 @@
@@ -66808,14 +66808,14 @@ index 000000000..48021c0d6
 +#endif /* _WG_NET_DST_CACHE_H */
 diff --git a/net/wireguard/compat/fpu-x86/include/asm/fpu/api.h b/net/wireguard/compat/fpu-x86/include/asm/fpu/api.h
 new file mode 100644
-index 000000000..f3f9117bc
+index 0000000..f3f9117
 --- /dev/null
 +++ b/net/wireguard/compat/fpu-x86/include/asm/fpu/api.h
 @@ -0,0 +1 @@
 +#include <asm/i387.h>
 diff --git a/net/wireguard/compat/intel-family-x86/include/asm/intel-family.h b/net/wireguard/compat/intel-family-x86/include/asm/intel-family.h
 new file mode 100644
-index 000000000..35a6bc4da
+index 0000000..35a6bc4
 --- /dev/null
 +++ b/net/wireguard/compat/intel-family-x86/include/asm/intel-family.h
 @@ -0,0 +1,73 @@
@@ -66894,7 +66894,7 @@ index 000000000..35a6bc4da
 +#endif /* _ASM_X86_INTEL_FAMILY_H */
 diff --git a/net/wireguard/compat/memneq/include.h b/net/wireguard/compat/memneq/include.h
 new file mode 100644
-index 000000000..2d18acd9b
+index 0000000..2d18acd
 --- /dev/null
 +++ b/net/wireguard/compat/memneq/include.h
 @@ -0,0 +1,5 @@
@@ -66905,7 +66905,7 @@ index 000000000..2d18acd9b
 +}
 diff --git a/net/wireguard/compat/memneq/memneq.c b/net/wireguard/compat/memneq/memneq.c
 new file mode 100644
-index 000000000..1c427d405
+index 0000000..1c427d4
 --- /dev/null
 +++ b/net/wireguard/compat/memneq/memneq.c
 @@ -0,0 +1,170 @@
@@ -67081,7 +67081,7 @@ index 000000000..1c427d405
 +#endif /* __HAVE_ARCH_CRYPTO_MEMNEQ */
 diff --git a/net/wireguard/compat/neon-arm/include/asm/neon.h b/net/wireguard/compat/neon-arm/include/asm/neon.h
 new file mode 100644
-index 000000000..980d831e2
+index 0000000..980d831
 --- /dev/null
 +++ b/net/wireguard/compat/neon-arm/include/asm/neon.h
 @@ -0,0 +1,7 @@
@@ -67094,7 +67094,7 @@ index 000000000..980d831e2
 +#endif
 diff --git a/net/wireguard/compat/ptr_ring/include/linux/ptr_ring.h b/net/wireguard/compat/ptr_ring/include/linux/ptr_ring.h
 new file mode 100644
-index 000000000..37b4bb254
+index 0000000..37b4bb2
 --- /dev/null
 +++ b/net/wireguard/compat/ptr_ring/include/linux/ptr_ring.h
 @@ -0,0 +1,640 @@
@@ -67740,7 +67740,7 @@ index 000000000..37b4bb254
 +#endif /* _LINUX_PTR_RING_H  */
 diff --git a/net/wireguard/compat/simd-asm/include/asm/simd.h b/net/wireguard/compat/simd-asm/include/asm/simd.h
 new file mode 100644
-index 000000000..a975b38b5
+index 0000000..a975b38
 --- /dev/null
 +++ b/net/wireguard/compat/simd-asm/include/asm/simd.h
 @@ -0,0 +1,21 @@
@@ -67767,7 +67767,7 @@ index 000000000..a975b38b5
 +#endif
 diff --git a/net/wireguard/compat/simd/include/linux/simd.h b/net/wireguard/compat/simd/include/linux/simd.h
 new file mode 100644
-index 000000000..c75c72471
+index 0000000..c75c724
 --- /dev/null
 +++ b/net/wireguard/compat/simd/include/linux/simd.h
 @@ -0,0 +1,70 @@
@@ -67843,7 +67843,7 @@ index 000000000..c75c72471
 +#endif /* _WG_SIMD_H */
 diff --git a/net/wireguard/compat/siphash/include/linux/siphash.h b/net/wireguard/compat/siphash/include/linux/siphash.h
 new file mode 100644
-index 000000000..1e5e337d1
+index 0000000..1e5e337
 --- /dev/null
 +++ b/net/wireguard/compat/siphash/include/linux/siphash.h
 @@ -0,0 +1,140 @@
@@ -67989,7 +67989,7 @@ index 000000000..1e5e337d1
 +#endif /* _WG_LINUX_SIPHASH_H */
 diff --git a/net/wireguard/compat/siphash/siphash.c b/net/wireguard/compat/siphash/siphash.c
 new file mode 100644
-index 000000000..58855328e
+index 0000000..5885532
 --- /dev/null
 +++ b/net/wireguard/compat/siphash/siphash.c
 @@ -0,0 +1,539 @@
@@ -68534,7 +68534,7 @@ index 000000000..58855328e
 +#endif
 diff --git a/net/wireguard/compat/udp_tunnel/include/net/udp_tunnel.h b/net/wireguard/compat/udp_tunnel/include/net/udp_tunnel.h
 new file mode 100644
-index 000000000..8999527d6
+index 0000000..8999527
 --- /dev/null
 +++ b/net/wireguard/compat/udp_tunnel/include/net/udp_tunnel.h
 @@ -0,0 +1,94 @@
@@ -68634,7 +68634,7 @@ index 000000000..8999527d6
 +#endif /* _WG_NET_UDP_TUNNEL_H */
 diff --git a/net/wireguard/compat/udp_tunnel/udp_tunnel.c b/net/wireguard/compat/udp_tunnel/udp_tunnel.c
 new file mode 100644
-index 000000000..ae4356609
+index 0000000..ae43566
 --- /dev/null
 +++ b/net/wireguard/compat/udp_tunnel/udp_tunnel.c
 @@ -0,0 +1,387 @@
@@ -69027,7 +69027,7 @@ index 000000000..ae4356609
 +#endif
 diff --git a/net/wireguard/compat/udp_tunnel/udp_tunnel_partial_compat.h b/net/wireguard/compat/udp_tunnel/udp_tunnel_partial_compat.h
 new file mode 100644
-index 000000000..0605896e9
+index 0000000..0605896
 --- /dev/null
 +++ b/net/wireguard/compat/udp_tunnel/udp_tunnel_partial_compat.h
 @@ -0,0 +1,226 @@
@@ -69259,7 +69259,7 @@ index 000000000..0605896e9
 +#endif
 diff --git a/net/wireguard/cookie.c b/net/wireguard/cookie.c
 new file mode 100644
-index 000000000..8b7d1fe0c
+index 0000000..8b7d1fe
 --- /dev/null
 +++ b/net/wireguard/cookie.c
 @@ -0,0 +1,236 @@
@@ -69501,7 +69501,7 @@ index 000000000..8b7d1fe0c
 +}
 diff --git a/net/wireguard/cookie.h b/net/wireguard/cookie.h
 new file mode 100644
-index 000000000..c4bd61ca0
+index 0000000..c4bd61c
 --- /dev/null
 +++ b/net/wireguard/cookie.h
 @@ -0,0 +1,59 @@
@@ -69566,7 +69566,7 @@ index 000000000..c4bd61ca0
 +#endif /* _WG_COOKIE_H */
 diff --git a/net/wireguard/crypto/Makefile.include b/net/wireguard/crypto/Makefile.include
 new file mode 100644
-index 000000000..f2a312e96
+index 0000000..f2a312e
 --- /dev/null
 +++ b/net/wireguard/crypto/Makefile.include
 @@ -0,0 +1,57 @@
@@ -69629,7 +69629,7 @@ index 000000000..f2a312e96
 +ccflags-$(CONFIG_WIREGUARD_DEBUG) += -DCONFIG_ZINC_SELFTEST
 diff --git a/net/wireguard/crypto/include/zinc/blake2s.h b/net/wireguard/crypto/include/zinc/blake2s.h
 new file mode 100644
-index 000000000..2ca0bc307
+index 0000000..2ca0bc3
 --- /dev/null
 +++ b/net/wireguard/crypto/include/zinc/blake2s.h
 @@ -0,0 +1,56 @@
@@ -69691,7 +69691,7 @@ index 000000000..2ca0bc307
 +#endif /* _ZINC_BLAKE2S_H */
 diff --git a/net/wireguard/crypto/include/zinc/chacha20.h b/net/wireguard/crypto/include/zinc/chacha20.h
 new file mode 100644
-index 000000000..1b0083d87
+index 0000000..1b0083d
 --- /dev/null
 +++ b/net/wireguard/crypto/include/zinc/chacha20.h
 @@ -0,0 +1,70 @@
@@ -69767,7 +69767,7 @@ index 000000000..1b0083d87
 +#endif /* _ZINC_CHACHA20_H */
 diff --git a/net/wireguard/crypto/include/zinc/chacha20poly1305.h b/net/wireguard/crypto/include/zinc/chacha20poly1305.h
 new file mode 100644
-index 000000000..ce7274092
+index 0000000..ce72740
 --- /dev/null
 +++ b/net/wireguard/crypto/include/zinc/chacha20poly1305.h
 @@ -0,0 +1,50 @@
@@ -69823,7 +69823,7 @@ index 000000000..ce7274092
 +#endif /* _ZINC_CHACHA20POLY1305_H */
 diff --git a/net/wireguard/crypto/include/zinc/curve25519.h b/net/wireguard/crypto/include/zinc/curve25519.h
 new file mode 100644
-index 000000000..127d8a3a1
+index 0000000..127d8a3
 --- /dev/null
 +++ b/net/wireguard/crypto/include/zinc/curve25519.h
 @@ -0,0 +1,28 @@
@@ -69857,7 +69857,7 @@ index 000000000..127d8a3a1
 +#endif /* _ZINC_CURVE25519_H */
 diff --git a/net/wireguard/crypto/include/zinc/poly1305.h b/net/wireguard/crypto/include/zinc/poly1305.h
 new file mode 100644
-index 000000000..8a16d19f8
+index 0000000..8a16d19
 --- /dev/null
 +++ b/net/wireguard/crypto/include/zinc/poly1305.h
 @@ -0,0 +1,31 @@
@@ -69894,7 +69894,7 @@ index 000000000..8a16d19f8
 +#endif /* _ZINC_POLY1305_H */
 diff --git a/net/wireguard/crypto/zinc.h b/net/wireguard/crypto/zinc.h
 new file mode 100644
-index 000000000..9aa1e8d59
+index 0000000..9aa1e8d
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc.h
 @@ -0,0 +1,15 @@
@@ -69915,7 +69915,7 @@ index 000000000..9aa1e8d59
 +#endif
 diff --git a/net/wireguard/crypto/zinc/blake2s/blake2s-x86_64-glue.c b/net/wireguard/crypto/zinc/blake2s/blake2s-x86_64-glue.c
 new file mode 100644
-index 000000000..f8cda59bf
+index 0000000..f8cda59
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/blake2s/blake2s-x86_64-glue.c
 @@ -0,0 +1,72 @@
@@ -69993,7 +69993,7 @@ index 000000000..f8cda59bf
 +}
 diff --git a/net/wireguard/crypto/zinc/blake2s/blake2s-x86_64.S b/net/wireguard/crypto/zinc/blake2s/blake2s-x86_64.S
 new file mode 100644
-index 000000000..8591938ee
+index 0000000..8591938
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/blake2s/blake2s-x86_64.S
 @@ -0,0 +1,258 @@
@@ -70257,7 +70257,7 @@ index 000000000..8591938ee
 +#endif /* CONFIG_AS_AVX512 */
 diff --git a/net/wireguard/crypto/zinc/blake2s/blake2s.c b/net/wireguard/crypto/zinc/blake2s/blake2s.c
 new file mode 100644
-index 000000000..e9e0bdaff
+index 0000000..e9e0bda
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/blake2s/blake2s.c
 @@ -0,0 +1,276 @@
@@ -70539,7 +70539,7 @@ index 000000000..e9e0bdaff
 +#endif
 diff --git a/net/wireguard/crypto/zinc/chacha20/chacha20-arm-glue.c b/net/wireguard/crypto/zinc/chacha20/chacha20-arm-glue.c
 new file mode 100644
-index 000000000..41e2e79ab
+index 0000000..41e2e79
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/chacha20/chacha20-arm-glue.c
 @@ -0,0 +1,98 @@
@@ -70643,7 +70643,7 @@ index 000000000..41e2e79ab
 +}
 diff --git a/net/wireguard/crypto/zinc/chacha20/chacha20-arm.pl b/net/wireguard/crypto/zinc/chacha20/chacha20-arm.pl
 new file mode 100644
-index 000000000..6785383ab
+index 0000000..6785383
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/chacha20/chacha20-arm.pl
 @@ -0,0 +1,1227 @@
@@ -71876,7 +71876,7 @@ index 000000000..6785383ab
 +close STDOUT;
 diff --git a/net/wireguard/crypto/zinc/chacha20/chacha20-arm64.pl b/net/wireguard/crypto/zinc/chacha20/chacha20-arm64.pl
 new file mode 100644
-index 000000000..ac14a9924
+index 0000000..ac14a99
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/chacha20/chacha20-arm64.pl
 @@ -0,0 +1,1163 @@
@@ -73045,7 +73045,7 @@ index 000000000..ac14a9924
 +close STDOUT;	# flush
 diff --git a/net/wireguard/crypto/zinc/chacha20/chacha20-mips-glue.c b/net/wireguard/crypto/zinc/chacha20/chacha20-mips-glue.c
 new file mode 100644
-index 000000000..96ce01e2c
+index 0000000..96ce01e
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/chacha20/chacha20-mips-glue.c
 @@ -0,0 +1,27 @@
@@ -73078,7 +73078,7 @@ index 000000000..96ce01e2c
 +}
 diff --git a/net/wireguard/crypto/zinc/chacha20/chacha20-mips.S b/net/wireguard/crypto/zinc/chacha20/chacha20-mips.S
 new file mode 100644
-index 000000000..a81e02db9
+index 0000000..a81e02d
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/chacha20/chacha20-mips.S
 @@ -0,0 +1,424 @@
@@ -73508,7 +73508,7 @@ index 000000000..a81e02db9
 +.set at
 diff --git a/net/wireguard/crypto/zinc/chacha20/chacha20-unrolled-arm.S b/net/wireguard/crypto/zinc/chacha20/chacha20-unrolled-arm.S
 new file mode 100644
-index 000000000..2140319b6
+index 0000000..2140319
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/chacha20/chacha20-unrolled-arm.S
 @@ -0,0 +1,461 @@
@@ -73975,7 +73975,7 @@ index 000000000..2140319b6
 +ENDPROC(hchacha20_arm)
 diff --git a/net/wireguard/crypto/zinc/chacha20/chacha20-x86_64-glue.c b/net/wireguard/crypto/zinc/chacha20/chacha20-x86_64-glue.c
 new file mode 100644
-index 000000000..5ac5f686a
+index 0000000..5ac5f68
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/chacha20/chacha20-x86_64-glue.c
 @@ -0,0 +1,105 @@
@@ -74086,7 +74086,7 @@ index 000000000..5ac5f686a
 +}
 diff --git a/net/wireguard/crypto/zinc/chacha20/chacha20-x86_64.pl b/net/wireguard/crypto/zinc/chacha20/chacha20-x86_64.pl
 new file mode 100644
-index 000000000..cec75729b
+index 0000000..cec7572
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/chacha20/chacha20-x86_64.pl
 @@ -0,0 +1,4106 @@
@@ -78198,7 +78198,7 @@ index 000000000..cec75729b
 +close STDOUT;
 diff --git a/net/wireguard/crypto/zinc/chacha20/chacha20.c b/net/wireguard/crypto/zinc/chacha20/chacha20.c
 new file mode 100644
-index 000000000..b4763c81e
+index 0000000..b4763c8
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/chacha20/chacha20.c
 @@ -0,0 +1,193 @@
@@ -78397,7 +78397,7 @@ index 000000000..b4763c81e
 +#endif
 diff --git a/net/wireguard/crypto/zinc/chacha20poly1305.c b/net/wireguard/crypto/zinc/chacha20poly1305.c
 new file mode 100644
-index 000000000..0001c9205
+index 0000000..0001c92
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/chacha20poly1305.c
 @@ -0,0 +1,364 @@
@@ -78767,7 +78767,7 @@ index 000000000..0001c9205
 +#endif
 diff --git a/net/wireguard/crypto/zinc/curve25519/curve25519-arm-glue.c b/net/wireguard/crypto/zinc/curve25519/curve25519-arm-glue.c
 new file mode 100644
-index 000000000..e0c5a5d29
+index 0000000..e0c5a5d
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/curve25519/curve25519-arm-glue.c
 @@ -0,0 +1,43 @@
@@ -78816,7 +78816,7 @@ index 000000000..e0c5a5d29
 +}
 diff --git a/net/wireguard/crypto/zinc/curve25519/curve25519-arm.S b/net/wireguard/crypto/zinc/curve25519/curve25519-arm.S
 new file mode 100644
-index 000000000..0ef143104
+index 0000000..0ef1431
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/curve25519/curve25519-arm.S
 @@ -0,0 +1,2064 @@
@@ -80886,7 +80886,7 @@ index 000000000..0ef143104
 +#endif
 diff --git a/net/wireguard/crypto/zinc/curve25519/curve25519-fiat32.c b/net/wireguard/crypto/zinc/curve25519/curve25519-fiat32.c
 new file mode 100644
-index 000000000..42cfb6c00
+index 0000000..42cfb6c
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/curve25519/curve25519-fiat32.c
 @@ -0,0 +1,860 @@
@@ -81752,7 +81752,7 @@ index 000000000..42cfb6c00
 +}
 diff --git a/net/wireguard/crypto/zinc/curve25519/curve25519-hacl64.c b/net/wireguard/crypto/zinc/curve25519/curve25519-hacl64.c
 new file mode 100644
-index 000000000..0f729ec74
+index 0000000..0f729ec
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/curve25519/curve25519-hacl64.c
 @@ -0,0 +1,784 @@
@@ -82542,7 +82542,7 @@ index 000000000..0f729ec74
 +}
 diff --git a/net/wireguard/crypto/zinc/curve25519/curve25519-x86_64-glue.c b/net/wireguard/crypto/zinc/curve25519/curve25519-x86_64-glue.c
 new file mode 100644
-index 000000000..d62bd37b0
+index 0000000..d62bd37
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/curve25519/curve25519-x86_64-glue.c
 @@ -0,0 +1,50 @@
@@ -82598,7 +82598,7 @@ index 000000000..d62bd37b0
 +}
 diff --git a/net/wireguard/crypto/zinc/curve25519/curve25519-x86_64.c b/net/wireguard/crypto/zinc/curve25519/curve25519-x86_64.c
 new file mode 100644
-index 000000000..e8af3e2e3
+index 0000000..e8af3e2
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/curve25519/curve25519-x86_64.c
 @@ -0,0 +1,2366 @@
@@ -84970,7 +84970,7 @@ index 000000000..e8af3e2e3
 +}
 diff --git a/net/wireguard/crypto/zinc/curve25519/curve25519.c b/net/wireguard/crypto/zinc/curve25519/curve25519.c
 new file mode 100644
-index 000000000..82c669e41
+index 0000000..82c669e
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/curve25519/curve25519.c
 @@ -0,0 +1,113 @@
@@ -85089,7 +85089,7 @@ index 000000000..82c669e41
 +#endif
 diff --git a/net/wireguard/crypto/zinc/poly1305/poly1305-arm-glue.c b/net/wireguard/crypto/zinc/poly1305/poly1305-arm-glue.c
 new file mode 100644
-index 000000000..291fe4ba9
+index 0000000..291fe4b
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/poly1305/poly1305-arm-glue.c
 @@ -0,0 +1,140 @@
@@ -85235,7 +85235,7 @@ index 000000000..291fe4ba9
 +}
 diff --git a/net/wireguard/crypto/zinc/poly1305/poly1305-arm.pl b/net/wireguard/crypto/zinc/poly1305/poly1305-arm.pl
 new file mode 100644
-index 000000000..468f41b76
+index 0000000..468f41b
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/poly1305/poly1305-arm.pl
 @@ -0,0 +1,1276 @@
@@ -86517,7 +86517,7 @@ index 000000000..468f41b76
 +close STDOUT; # enforce flush
 diff --git a/net/wireguard/crypto/zinc/poly1305/poly1305-arm64.pl b/net/wireguard/crypto/zinc/poly1305/poly1305-arm64.pl
 new file mode 100644
-index 000000000..d513b45a1
+index 0000000..d513b45
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/poly1305/poly1305-arm64.pl
 @@ -0,0 +1,974 @@
@@ -87497,7 +87497,7 @@ index 000000000..d513b45a1
 +close STDOUT;
 diff --git a/net/wireguard/crypto/zinc/poly1305/poly1305-donna32.c b/net/wireguard/crypto/zinc/poly1305/poly1305-donna32.c
 new file mode 100644
-index 000000000..527ccc3b5
+index 0000000..527ccc3
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/poly1305/poly1305-donna32.c
 @@ -0,0 +1,205 @@
@@ -87708,7 +87708,7 @@ index 000000000..527ccc3b5
 +}
 diff --git a/net/wireguard/crypto/zinc/poly1305/poly1305-donna64.c b/net/wireguard/crypto/zinc/poly1305/poly1305-donna64.c
 new file mode 100644
-index 000000000..131f1dda1
+index 0000000..131f1dd
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/poly1305/poly1305-donna64.c
 @@ -0,0 +1,182 @@
@@ -87896,7 +87896,7 @@ index 000000000..131f1dda1
 +}
 diff --git a/net/wireguard/crypto/zinc/poly1305/poly1305-mips-glue.c b/net/wireguard/crypto/zinc/poly1305/poly1305-mips-glue.c
 new file mode 100644
-index 000000000..a540e9c4e
+index 0000000..a540e9c
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/poly1305/poly1305-mips-glue.c
 @@ -0,0 +1,37 @@
@@ -87939,7 +87939,7 @@ index 000000000..a540e9c4e
 +}
 diff --git a/net/wireguard/crypto/zinc/poly1305/poly1305-mips.S b/net/wireguard/crypto/zinc/poly1305/poly1305-mips.S
 new file mode 100644
-index 000000000..4291c1568
+index 0000000..4291c15
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/poly1305/poly1305-mips.S
 @@ -0,0 +1,407 @@
@@ -88352,7 +88352,7 @@ index 000000000..4291c1568
 +.end poly1305_init_mips
 diff --git a/net/wireguard/crypto/zinc/poly1305/poly1305-mips64.pl b/net/wireguard/crypto/zinc/poly1305/poly1305-mips64.pl
 new file mode 100644
-index 000000000..d30a03d79
+index 0000000..d30a03d
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/poly1305/poly1305-mips64.pl
 @@ -0,0 +1,467 @@
@@ -88825,7 +88825,7 @@ index 000000000..d30a03d79
 +
 diff --git a/net/wireguard/crypto/zinc/poly1305/poly1305-x86_64-glue.c b/net/wireguard/crypto/zinc/poly1305/poly1305-x86_64-glue.c
 new file mode 100644
-index 000000000..ce48a42f7
+index 0000000..ce48a42
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/poly1305/poly1305-x86_64-glue.c
 @@ -0,0 +1,156 @@
@@ -88987,7 +88987,7 @@ index 000000000..ce48a42f7
 +}
 diff --git a/net/wireguard/crypto/zinc/poly1305/poly1305-x86_64.pl b/net/wireguard/crypto/zinc/poly1305/poly1305-x86_64.pl
 new file mode 100644
-index 000000000..37ed86998
+index 0000000..37ed869
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/poly1305/poly1305-x86_64.pl
 @@ -0,0 +1,4266 @@
@@ -93259,7 +93259,7 @@ index 000000000..37ed86998
 +close STDOUT;
 diff --git a/net/wireguard/crypto/zinc/poly1305/poly1305.c b/net/wireguard/crypto/zinc/poly1305/poly1305.c
 new file mode 100644
-index 000000000..7d373b90e
+index 0000000..7d373b9
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/poly1305/poly1305.c
 @@ -0,0 +1,168 @@
@@ -93433,7 +93433,7 @@ index 000000000..7d373b90e
 +#endif
 diff --git a/net/wireguard/crypto/zinc/selftest/blake2s.c b/net/wireguard/crypto/zinc/selftest/blake2s.c
 new file mode 100644
-index 000000000..1b5c210dc
+index 0000000..1b5c210
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/selftest/blake2s.c
 @@ -0,0 +1,2090 @@
@@ -95529,7 +95529,7 @@ index 000000000..1b5c210dc
 +}
 diff --git a/net/wireguard/crypto/zinc/selftest/chacha20.c b/net/wireguard/crypto/zinc/selftest/chacha20.c
 new file mode 100644
-index 000000000..1a2390aaf
+index 0000000..1a2390a
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/selftest/chacha20.c
 @@ -0,0 +1,2698 @@
@@ -98233,7 +98233,7 @@ index 000000000..1a2390aaf
 +}
 diff --git a/net/wireguard/crypto/zinc/selftest/chacha20poly1305.c b/net/wireguard/crypto/zinc/selftest/chacha20poly1305.c
 new file mode 100644
-index 000000000..dba9cd794
+index 0000000..dba9cd7
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/selftest/chacha20poly1305.c
 @@ -0,0 +1,9034 @@
@@ -107273,7 +107273,7 @@ index 000000000..dba9cd794
 +}
 diff --git a/net/wireguard/crypto/zinc/selftest/curve25519.c b/net/wireguard/crypto/zinc/selftest/curve25519.c
 new file mode 100644
-index 000000000..0e3e3af06
+index 0000000..0e3e3af
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/selftest/curve25519.c
 @@ -0,0 +1,1315 @@
@@ -108594,7 +108594,7 @@ index 000000000..0e3e3af06
 +}
 diff --git a/net/wireguard/crypto/zinc/selftest/poly1305.c b/net/wireguard/crypto/zinc/selftest/poly1305.c
 new file mode 100644
-index 000000000..b4d7a9c2f
+index 0000000..b4d7a9c
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/selftest/poly1305.c
 @@ -0,0 +1,1107 @@
@@ -109707,7 +109707,7 @@ index 000000000..b4d7a9c2f
 +}
 diff --git a/net/wireguard/crypto/zinc/selftest/run.h b/net/wireguard/crypto/zinc/selftest/run.h
 new file mode 100644
-index 000000000..4ffaf6089
+index 0000000..4ffaf60
 --- /dev/null
 +++ b/net/wireguard/crypto/zinc/selftest/run.h
 @@ -0,0 +1,48 @@
@@ -109761,7 +109761,7 @@ index 000000000..4ffaf6089
 +#endif
 diff --git a/net/wireguard/device.c b/net/wireguard/device.c
 new file mode 100644
-index 000000000..d17dbf757
+index 0000000..d17dbf7
 --- /dev/null
 +++ b/net/wireguard/device.c
 @@ -0,0 +1,472 @@
@@ -110239,7 +110239,7 @@ index 000000000..d17dbf757
 +}
 diff --git a/net/wireguard/device.h b/net/wireguard/device.h
 new file mode 100644
-index 000000000..b15a8be9d
+index 0000000..b15a8be
 --- /dev/null
 +++ b/net/wireguard/device.h
 @@ -0,0 +1,65 @@
@@ -110310,7 +110310,7 @@ index 000000000..b15a8be9d
 +#endif /* _WG_DEVICE_H */
 diff --git a/net/wireguard/main.c b/net/wireguard/main.c
 new file mode 100644
-index 000000000..4b5b58e89
+index 0000000..4b5b58e
 --- /dev/null
 +++ b/net/wireguard/main.c
 @@ -0,0 +1,69 @@
@@ -110385,7 +110385,7 @@ index 000000000..4b5b58e89
 +MODULE_ALIAS_GENL_FAMILY(WG_GENL_NAME);
 diff --git a/net/wireguard/messages.h b/net/wireguard/messages.h
 new file mode 100644
-index 000000000..3cfd1c5e9
+index 0000000..3cfd1c5
 --- /dev/null
 +++ b/net/wireguard/messages.h
 @@ -0,0 +1,128 @@
@@ -110519,7 +110519,7 @@ index 000000000..3cfd1c5e9
 +#endif /* _WG_MESSAGES_H */
 diff --git a/net/wireguard/netlink.c b/net/wireguard/netlink.c
 new file mode 100644
-index 000000000..6fa5ba7cf
+index 0000000..6fa5ba7
 --- /dev/null
 +++ b/net/wireguard/netlink.c
 @@ -0,0 +1,644 @@
@@ -111169,7 +111169,7 @@ index 000000000..6fa5ba7cf
 +}
 diff --git a/net/wireguard/netlink.h b/net/wireguard/netlink.h
 new file mode 100644
-index 000000000..15100d92e
+index 0000000..15100d9
 --- /dev/null
 +++ b/net/wireguard/netlink.h
 @@ -0,0 +1,12 @@
@@ -111187,7 +111187,7 @@ index 000000000..15100d92e
 +#endif /* _WG_NETLINK_H */
 diff --git a/net/wireguard/noise.c b/net/wireguard/noise.c
 new file mode 100644
-index 000000000..a8f86df77
+index 0000000..a8f86df
 --- /dev/null
 +++ b/net/wireguard/noise.c
 @@ -0,0 +1,807 @@
@@ -112000,7 +112000,7 @@ index 000000000..a8f86df77
 +}
 diff --git a/net/wireguard/noise.h b/net/wireguard/noise.h
 new file mode 100644
-index 000000000..253323787
+index 0000000..2533237
 --- /dev/null
 +++ b/net/wireguard/noise.h
 @@ -0,0 +1,130 @@
@@ -112136,7 +112136,7 @@ index 000000000..253323787
 +#endif /* _WG_NOISE_H */
 diff --git a/net/wireguard/peer.c b/net/wireguard/peer.c
 new file mode 100644
-index 000000000..b66e8b5f2
+index 0000000..b66e8b5
 --- /dev/null
 +++ b/net/wireguard/peer.c
 @@ -0,0 +1,239 @@
@@ -112381,7 +112381,7 @@ index 000000000..b66e8b5f2
 +}
 diff --git a/net/wireguard/peer.h b/net/wireguard/peer.h
 new file mode 100644
-index 000000000..23af40922
+index 0000000..23af409
 --- /dev/null
 +++ b/net/wireguard/peer.h
 @@ -0,0 +1,83 @@
@@ -112470,7 +112470,7 @@ index 000000000..23af40922
 +#endif /* _WG_PEER_H */
 diff --git a/net/wireguard/peerlookup.c b/net/wireguard/peerlookup.c
 new file mode 100644
-index 000000000..e4deb3314
+index 0000000..e4deb33
 --- /dev/null
 +++ b/net/wireguard/peerlookup.c
 @@ -0,0 +1,221 @@
@@ -112697,7 +112697,7 @@ index 000000000..e4deb3314
 +}
 diff --git a/net/wireguard/peerlookup.h b/net/wireguard/peerlookup.h
 new file mode 100644
-index 000000000..ced811797
+index 0000000..ced8117
 --- /dev/null
 +++ b/net/wireguard/peerlookup.h
 @@ -0,0 +1,64 @@
@@ -112767,7 +112767,7 @@ index 000000000..ced811797
 +#endif /* _WG_PEERLOOKUP_H */
 diff --git a/net/wireguard/queueing.c b/net/wireguard/queueing.c
 new file mode 100644
-index 000000000..5c964fcb9
+index 0000000..5c964fc
 --- /dev/null
 +++ b/net/wireguard/queueing.c
 @@ -0,0 +1,53 @@
@@ -112826,7 +112826,7 @@ index 000000000..5c964fcb9
 +}
 diff --git a/net/wireguard/queueing.h b/net/wireguard/queueing.h
 new file mode 100644
-index 000000000..e49a46423
+index 0000000..e49a464
 --- /dev/null
 +++ b/net/wireguard/queueing.h
 @@ -0,0 +1,197 @@
@@ -113029,7 +113029,7 @@ index 000000000..e49a46423
 +#endif /* _WG_QUEUEING_H */
 diff --git a/net/wireguard/ratelimiter.c b/net/wireguard/ratelimiter.c
 new file mode 100644
-index 000000000..e33ec72a9
+index 0000000..e33ec72
 --- /dev/null
 +++ b/net/wireguard/ratelimiter.c
 @@ -0,0 +1,235 @@
@@ -113270,7 +113270,7 @@ index 000000000..e33ec72a9
 +#include "selftest/ratelimiter.c"
 diff --git a/net/wireguard/ratelimiter.h b/net/wireguard/ratelimiter.h
 new file mode 100644
-index 000000000..83067f71e
+index 0000000..83067f7
 --- /dev/null
 +++ b/net/wireguard/ratelimiter.h
 @@ -0,0 +1,19 @@
@@ -113295,7 +113295,7 @@ index 000000000..83067f71e
 +#endif /* _WG_RATELIMITER_H */
 diff --git a/net/wireguard/receive.c b/net/wireguard/receive.c
 new file mode 100644
-index 000000000..247a56b6e
+index 0000000..247a56b
 --- /dev/null
 +++ b/net/wireguard/receive.c
 @@ -0,0 +1,605 @@
@@ -113906,7 +113906,7 @@ index 000000000..247a56b6e
 +}
 diff --git a/net/wireguard/selftest/allowedips.c b/net/wireguard/selftest/allowedips.c
 new file mode 100644
-index 000000000..6e244a93d
+index 0000000..6e244a9
 --- /dev/null
 +++ b/net/wireguard/selftest/allowedips.c
 @@ -0,0 +1,682 @@
@@ -114594,7 +114594,7 @@ index 000000000..6e244a93d
 +#endif
 diff --git a/net/wireguard/selftest/counter.c b/net/wireguard/selftest/counter.c
 new file mode 100644
-index 000000000..f4fbb9072
+index 0000000..f4fbb90
 --- /dev/null
 +++ b/net/wireguard/selftest/counter.c
 @@ -0,0 +1,104 @@
@@ -114704,7 +114704,7 @@ index 000000000..f4fbb9072
 +#endif
 diff --git a/net/wireguard/selftest/ratelimiter.c b/net/wireguard/selftest/ratelimiter.c
 new file mode 100644
-index 000000000..bcd6462e4
+index 0000000..bcd6462
 --- /dev/null
 +++ b/net/wireguard/selftest/ratelimiter.c
 @@ -0,0 +1,226 @@
@@ -114936,7 +114936,7 @@ index 000000000..bcd6462e4
 +#endif
 diff --git a/net/wireguard/send.c b/net/wireguard/send.c
 new file mode 100644
-index 000000000..62f1a97ab
+index 0000000..62f1a97
 --- /dev/null
 +++ b/net/wireguard/send.c
 @@ -0,0 +1,431 @@
@@ -115373,7 +115373,7 @@ index 000000000..62f1a97ab
 +}
 diff --git a/net/wireguard/socket.c b/net/wireguard/socket.c
 new file mode 100644
-index 000000000..d4f65bb07
+index 0000000..d4f65bb
 --- /dev/null
 +++ b/net/wireguard/socket.c
 @@ -0,0 +1,436 @@
@@ -115815,7 +115815,7 @@ index 000000000..d4f65bb07
 +}
 diff --git a/net/wireguard/socket.h b/net/wireguard/socket.h
 new file mode 100644
-index 000000000..bab5848ef
+index 0000000..bab5848
 --- /dev/null
 +++ b/net/wireguard/socket.h
 @@ -0,0 +1,44 @@
@@ -115865,7 +115865,7 @@ index 000000000..bab5848ef
 +#endif /* _WG_SOCKET_H */
 diff --git a/net/wireguard/timers.c b/net/wireguard/timers.c
 new file mode 100644
-index 000000000..d54d32ac9
+index 0000000..d54d32a
 --- /dev/null
 +++ b/net/wireguard/timers.c
 @@ -0,0 +1,243 @@
@@ -116114,7 +116114,7 @@ index 000000000..d54d32ac9
 +}
 diff --git a/net/wireguard/timers.h b/net/wireguard/timers.h
 new file mode 100644
-index 000000000..f0653dcb1
+index 0000000..f0653dc
 --- /dev/null
 +++ b/net/wireguard/timers.h
 @@ -0,0 +1,31 @@
@@ -116151,7 +116151,7 @@ index 000000000..f0653dcb1
 +#endif /* _WG_TIMERS_H */
 diff --git a/net/wireguard/uapi/wireguard.h b/net/wireguard/uapi/wireguard.h
 new file mode 100644
-index 000000000..912f2167a
+index 0000000..912f216
 --- /dev/null
 +++ b/net/wireguard/uapi/wireguard.h
 @@ -0,0 +1,190 @@
@@ -116347,13 +116347,13 @@ index 000000000..912f2167a
 +#endif /* _WG_UAPI_WIREGUARD_H */
 diff --git a/net/wireguard/version.h b/net/wireguard/version.h
 new file mode 100644
-index 000000000..ae368725d
+index 0000000..ae36872
 --- /dev/null
 +++ b/net/wireguard/version.h
 @@ -0,0 +1 @@
 +#define WIREGUARD_VERSION "0.0.20190702"
 diff --git a/security/device_cgroup.c b/security/device_cgroup.c
-index dc28914fa..c2ddfea2b 100644
+index dc28914..c2ddfea 100644
 --- a/security/device_cgroup.c
 +++ b/security/device_cgroup.c
 @@ -824,3 +824,4 @@ int __devcgroup_check_permission(short type, u32 major, u32 minor,
@@ -116362,7 +116362,7 @@ index dc28914fa..c2ddfea2b 100644
  }
 +EXPORT_SYMBOL_GPL(__devcgroup_check_permission);
 diff --git a/security/security.c b/security/security.c
-index f493db0bf..96f118be4 100644
+index f493db0..96f118b 100644
 --- a/security/security.c
 +++ b/security/security.c
 @@ -993,6 +993,7 @@ int security_path_rmdir(const struct path *dir, struct dentry *dentry)
@@ -116430,7 +116430,7 @@ index f493db0bf..96f118be4 100644
  int security_file_alloc(struct file *file)
  {
 diff --git a/sound/soc/codecs/wcd9335.c b/sound/soc/codecs/wcd9335.c
-index a04a7cedd..85737fe54 100644
+index a04a7ce..85737fe 100644
 --- a/sound/soc/codecs/wcd9335.c
 +++ b/sound/soc/codecs/wcd9335.c
 @@ -2734,7 +2734,7 @@ static int wcd9335_codec_enable_dec(struct snd_soc_dapm_widget *w,
