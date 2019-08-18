@@ -1,3 +1,7 @@
+5.2-lucjan-ll25-rc1
+
+- add Fix-compilation-with-5.2.10.patch
+
 5.2-lucjan-ll24
 
 - add drm-amdgpu-pin-the-csb-buffer-on-hw-init-for-gfx-v8.patch
