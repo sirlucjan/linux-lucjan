@@ -600,12 +600,9 @@
 │       └── 5.2-lucjan-ll9-rc1.patch.sig
 ├── Changelog
 ├── Files
-├── pending
-│   ├── 5.2-lucjan-ll24.patch
-│   └── 5.2-lucjan-ll24.patch.sig
 ├── README.md
 └── testing
     ├── 5.2-lucjan-ll25-rc1.patch
     └── 5.2-lucjan-ll25-rc1.patch.sig
 
-11 directories, 597 files
+10 directories, 595 files
