@@ -1,3 +1,7 @@
+5.2-lucjan-ll27-rc1
+
+- add Fix-compilation-with-5.2.10.patch
+
 5.2-lucjan-ll26
 
 - add shiftfs-pf-lucjan.patch (Shift FS support)
