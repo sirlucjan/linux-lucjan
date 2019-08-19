@@ -1,3 +1,13 @@
+5.2-lucjan-ll26
+
+- add shiftfs-pf-lucjan.patch (Shift FS support)
+
+DROP 5.2-lucjan-ll26-rc1
+
+5.2-lucjan-ll26-rc1
+
+- add Fix-compilation-with-5.2.10.patch
+
 5.2-lucjan-ll25
 
 - add Add-ucode-reload-force-feature.patch
