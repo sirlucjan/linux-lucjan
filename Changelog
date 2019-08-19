@@ -1,3 +1,10 @@
+5.2-lucjan-ll25
+
+- add Add-ucode-reload-force-feature.patch
+- add Print-cpu-number-when-we-print-a-crash.patch
+
+DROP 5.2-lucjan-ll25-rc1
+
 5.2-lucjan-ll25-rc1
 
 - add Fix-compilation-with-5.2.10.patch
