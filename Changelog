@@ -1,3 +1,7 @@
+5.2-lucjan-ll26-rc2
+
+- sync with upstream (drop iwlwifi-Add-support-for-SAR-South-Korea-limitation.patch)
+
 5.2-lucjan-ll26-rc1
 
 - add Fix-compilation-with-5.2.10.patch
