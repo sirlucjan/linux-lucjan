@@ -1,7 +1,7 @@
 .
 ├── actual
-│   ├── 5.2-lucjan-ll26.patch
-│   └── 5.2-lucjan-ll26.patch.sig
+│   ├── 5.2-lucjan-ll25.patch
+│   └── 5.2-lucjan-ll25.patch.sig
 ├── archive
 │   ├── 4.17
 │   │   ├── 4.17-lucjan-ll10.patch
@@ -580,8 +580,6 @@
 │       ├── 5.2-lucjan-ll23-rc1.patch.sig
 │       ├── 5.2-lucjan-ll24.patch
 │       ├── 5.2-lucjan-ll24.patch.sig
-│       ├── 5.2-lucjan-ll25.patch
-│       ├── 5.2-lucjan-ll25.patch.sig
 │       ├── 5.2-lucjan-ll25-rc1.patch
 │       ├── 5.2-lucjan-ll25-rc1.patch.sig
 │       ├── 5.2-lucjan-ll2.patch
@@ -611,4 +609,4 @@
     ├── 5.2-lucjan-ll26-rc1.patch
     └── 5.2-lucjan-ll26-rc1.patch.sig
 
-10 directories, 601 files
+10 directories, 599 files
