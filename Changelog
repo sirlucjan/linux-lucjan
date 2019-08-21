@@ -1,7 +1,8 @@
 5.2-lucjan-ll27-rc1
 
 - add Fix-compilation-with-5.2.10.patch
-- sync with upstream (drop iwlwifi-Add-support-for-SAR-South-Korea-limitation.patch)
+- sync with upstream (drop iwlwifi-Add-support-for-SAR-South-Korea-limitation.patch and
+                      ALSA-usb-audio-Fix-an-OOB-bug-in-parse_audio_mixer_u.patch)
 
 5.2-lucjan-ll26
 
