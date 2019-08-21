@@ -1,6 +1,6 @@
-From 9e27029845bfb7d3cd9f9ba37ef38cbeadb48490 Mon Sep 17 00:00:00 2001
+From 18fdf5193879dd03e64fad9f41e66b032a57f2ef Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Wed, 21 Aug 2019 14:16:25 +0200
+Date: Wed, 21 Aug 2019 15:14:24 +0200
 Subject: [PATCH] 5.2-lucjan-ll27
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -64607,10 +64607,10 @@ index 7fd6db3fe..a2324d734 100644
  		release_sock(sk);
  		if (reqsk_queue_empty(&icsk->icsk_accept_queue))
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index 5264f064a..80c19601f 100644
+index b30f7f877..fee0071e2 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
-@@ -3935,8 +3935,8 @@ void __init tcp_init(void)
+@@ -3938,8 +3938,8 @@ void __init tcp_init(void)
  	tcp_init_mem();
  	/* Set per-socket limits to no more than 1/128 the pressure threshold */
  	limit = nr_free_buffer_pages() << (PAGE_SHIFT - 7);
