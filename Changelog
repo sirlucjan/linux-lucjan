@@ -1,3 +1,9 @@
+5.2-lucjan-ll28
+
+- update graysky's patch
+
+DROP 5.2-lucjan-ll27-rc1
+
 5.2-lucjan-ll27-rc1
 
 - add Fix-compilation-with-5.2.10.patch
