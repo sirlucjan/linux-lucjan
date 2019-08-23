@@ -1,6 +1,6 @@
-From deab79b28699c3037966376988b914db286d96b8 Mon Sep 17 00:00:00 2001
+From b01cea984b7487eb89ff91dcf8cba8053b48208d Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Fri, 23 Aug 2019 19:08:00 +0200
+Date: Fri, 23 Aug 2019 22:25:51 +0200
 Subject: [PATCH] 5.2-lucjan-ll28
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3770,7 +3770,7 @@ index 6adce1526..8a7072fa1 100644
  config X86_MINIMUM_CPU_FAMILY
  	int
 diff --git a/arch/x86/Makefile b/arch/x86/Makefile
-index 56e748a76..75f6602f5 100644
+index 56e748a76..63770cc7d 100644
 --- a/arch/x86/Makefile
 +++ b/arch/x86/Makefile
 @@ -118,13 +118,53 @@ else
@@ -3823,7 +3823,7 @@ index 56e748a76..75f6602f5 100644
 +                $(call cc-option,-march=cannonlake,$(call cc-option,-mtune=cannonlake))
 +        cflags-$(CONFIG_MICELAKE) += \
 +                $(call cc-option,-march=icelake-client,$(call cc-option,-mtune=icelake-client))
-+        cflags-$(CONFIG_MCASCADE) += \
++        cflags-$(CONFIG_MCASCADELAKE) += \
 +                $(call cc-option,-march=cascadelake,$(call cc-option,-mtune=cascadelake))
 +        cflags-$(CONFIG_MATOM) += $(call cc-option,-march=bonnell) \
 +                $(call cc-option,-mtune=bonnell,$(call cc-option,-mtune=generic))
