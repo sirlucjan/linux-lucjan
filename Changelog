@@ -1,3 +1,14 @@
+5.2-lucjan-ll28
+
+- add block-bfq-update-inject-limit-only-after-injection-o.patch
+- add block-bfq-reduce-upper-bound-for-inject-limit-to-max.patch
+- add block-bfq-DEBUG-log-pid-of-queue-chosen-for-injectio.patch
+- add block-bfq-increase-update-frequency-of-inject-limit.patch
+- add block-bfq-push-up-injection-only-after-setting-servi.patch
+- add block-bfq-raise-bfq-version-to-v11.patch
+
+DROP 5.2-lucjan-ll28-rc1
+
 5.2-lucjan-ll28-rc1
 
 - add Fix-compilation-with-5.2.10.patch
