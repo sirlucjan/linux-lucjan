@@ -1,3 +1,10 @@
+5.2-lucjan-ll31
+
+- add x86-amd_nb-Add-PCI-device-IDs-for-family-17h-model-7.patch
+- add hwmon-k10temp-Add-PCI-device-IDs-for-family-17h-mode.patch
+
+DROP 5.2-lucjan-ll31-rc1
+
 5.2-lucjan-ll31-rc1
 
 - sync with upstream (drop drm-amdgpu-pin-the-csb-buffer-on-hw-init-for-gfx-v8.patch and
