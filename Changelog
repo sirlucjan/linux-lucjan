@@ -1,3 +1,5 @@
+5.2-lucjan-ll32-rc1 --> 5.2-lucjan-ll32
+
 5.2-lucjan-ll32-rc1
 
 - sync with upstream (drop drm-amdgpu-pin-the-csb-buffer-on-hw-init-for-gfx-v8.patch and
