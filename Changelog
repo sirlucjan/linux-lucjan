@@ -1,3 +1,7 @@
+5.2-lucjan-ll36
+
+- add bmq-5.2-unbreak-systemd-detect-virt.patch
+
 5.2-lucjan-ll35
 
 - add WireGuard 0.0.20190905
