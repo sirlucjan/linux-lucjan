@@ -1,6 +1,6 @@
-From 0e6a66ae3dadd770fb7034d6ece6ad1f02a1f05f Mon Sep 17 00:00:00 2001
+From 38933b72a312bde98757a7d4b5b3de06b94efdf3 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Fri, 6 Sep 2019 15:20:30 +0200
+Date: Mon, 9 Sep 2019 13:35:55 +0200
 Subject: [PATCH] 5.2-lucjan-ll35
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3325,7 +3325,7 @@ index 677ef41cb..c2a7491dd 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index 288284de8..1681c5c7c 100644
+index e74349a37..1e780f6b6 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Bobtail Squid
@@ -55045,7 +55045,7 @@ index 7907e6419..d17209cf5 100644
  		ino = inode->i_ino;
  		pgoff = (loff_t)vma->vm_pgoff << PAGE_SHIFT;
 diff --git a/fs/read_write.c b/fs/read_write.c
-index c543d965e..9da238d64 100644
+index e8b0f1192..165befc4f 100644
 --- a/fs/read_write.c
 +++ b/fs/read_write.c
 @@ -468,6 +468,7 @@ ssize_t vfs_read(struct file *file, char __user *buf, size_t count, loff_t *pos)
@@ -63742,7 +63742,7 @@ index 000000000..d9ea1288f
 +}
 +#endif /* BMQ_SCHED_H */
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 4d5962232..31de11cea 100644
+index 42bc29865..806b820ea 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -45,7 +45,11 @@ const_debug unsigned int sysctl_sched_features =
@@ -65028,10 +65028,10 @@ index 7fd6db3fe..a2324d734 100644
  		release_sock(sk);
  		if (reqsk_queue_empty(&icsk->icsk_accept_queue))
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index b30f7f877..fee0071e2 100644
+index b2f0d2988..9120d6336 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
-@@ -3938,8 +3938,8 @@ void __init tcp_init(void)
+@@ -3948,8 +3948,8 @@ void __init tcp_init(void)
  	tcp_init_mem();
  	/* Set per-socket limits to no more than 1/128 the pressure threshold */
  	limit = nr_free_buffer_pages() << (PAGE_SHIFT - 7);

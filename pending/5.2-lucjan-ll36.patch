@@ -1,7 +1,7 @@
-From 38933b72a312bde98757a7d4b5b3de06b94efdf3 Mon Sep 17 00:00:00 2001
+From bcd64da38ce6d44478510d09002b31b2eabaabd4 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Mon, 9 Sep 2019 13:35:55 +0200
-Subject: [PATCH] 5.2-lucjan-ll35
+Date: Mon, 9 Sep 2019 14:10:09 +0200
+Subject: [PATCH] 5.2-lucjan-ll36
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
 ---
@@ -239,7 +239,7 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  kernel/locking/rwsem-xadd.c                   |    5 +-
  kernel/module.c                               |   21 +
  kernel/sched/Makefile                         |   18 +-
- kernel/sched/bmq.c                            | 6031 +++++++++++
+ kernel/sched/bmq.c                            | 6046 +++++++++++
  kernel/sched/bmq_sched.h                      |  429 +
  kernel/sched/core.c                           |    8 +
  kernel/sched/cpufreq_schedutil.c              |   18 +
@@ -375,7 +375,7 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  security/device_cgroup.c                      |    1 +
  security/security.c                           |    8 +
  sound/soc/codecs/wcd9335.c                    |    2 +-
- 370 files changed, 107172 insertions(+), 1453 deletions(-)
+ 370 files changed, 107187 insertions(+), 1453 deletions(-)
  create mode 100644 Documentation/ABI/testing/debugfs-aufs
  create mode 100644 Documentation/ABI/testing/sysfs-aufs
  create mode 100644 Documentation/filesystems/aufs/README
@@ -3325,7 +3325,7 @@ index 677ef41cb..c2a7491dd 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index e74349a37..1e780f6b6 100644
+index e74349a37..0a1fe1188 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Bobtail Squid
@@ -3333,7 +3333,7 @@ index e74349a37..1e780f6b6 100644
  # expect to learn how to build the kernel reading this file.
  
 +LLNAME = linux-lucjan
-+LLVERSION = .ll35
++LLVERSION = .ll36
 +EXTRAVERSION := $(EXTRAVERSION)$(LLVERSION)
 +
  # That's our default target when none is given on the command line
@@ -57271,10 +57271,10 @@ index 21fb5a566..b23231bae 100644
  obj-$(CONFIG_MEMBARRIER) += membarrier.o
 diff --git a/kernel/sched/bmq.c b/kernel/sched/bmq.c
 new file mode 100644
-index 000000000..6e15d1399
+index 000000000..254ffecb3
 --- /dev/null
 +++ b/kernel/sched/bmq.c
-@@ -0,0 +1,6031 @@
+@@ -0,0 +1,6046 @@
 +/*
 + *  kernel/sched/bmq.c
 + *
@@ -57330,6 +57330,18 @@ index 000000000..6e15d1399
 +
 +/* Reschedule if less than this many μs left */
 +#define RESCHED_NS		(100 * 1000)
++
++/*
++ * This allows printing both to /proc/sched_debug and
++ * to the console
++ */
++#define SEQ_printf(m, x...)			\
++ do {						\
++	if (m)					\
++		seq_printf(m, x);		\
++	else					\
++		pr_cont(x);			\
++ } while (0)
 +
 +static inline void print_scheduler_version(void)
 +{
@@ -63166,7 +63178,10 @@ index 000000000..6e15d1399
 +#ifdef CONFIG_SCHED_DEBUG
 +void proc_sched_show_task(struct task_struct *p, struct pid_namespace *ns,
 +			  struct seq_file *m)
-+{}
++{
++	SEQ_printf(m, "%s (%d, #threads: %d)\n", p->comm, task_pid_nr_ns(p, ns),
++						get_nr_threads(p));
++}
 +
 +void proc_sched_set_task(struct task_struct *p)
 +{}
