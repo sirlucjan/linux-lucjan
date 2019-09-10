@@ -1,3 +1,7 @@
+5.2-lucjan-ll37
+
+- add BFQ-dev 20190910
+
 5.2-lucjan-ll36
 
 - add bmq-5.2-unbreak-systemd-detect-virt.patch
