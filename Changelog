@@ -1,3 +1,7 @@
+5.2-lucjan-ll42-rc1
+
+- sync with upstream (drop Btrfs-fix-unwritten-extent-buffers-and-hangs-on-futu.patch)
+
 5.2-lucjan-ll41
 
 - add BFQ-dev 20190915
