@@ -1,6 +1,6 @@
-From c5eb11deda91d2f4dbbd5a548aa71203ea3da0bf Mon Sep 17 00:00:00 2001
+From 6ee1417e69d51ec0584f6d60bd1f227d50fdcff4 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Sun, 15 Sep 2019 16:55:42 +0200
+Date: Wed, 18 Sep 2019 15:46:47 +0200
 Subject: [PATCH] 5.2-lucjan-ll42
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3326,7 +3326,7 @@ index 677ef41cb..c2a7491dd 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index c9b2faad2..5571b3aeb 100644
+index 9f4b77767..ac9c94a55 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Bobtail Squid
@@ -3766,10 +3766,10 @@ index 6adce1526..8a7072fa1 100644
  config X86_MINIMUM_CPU_FAMILY
  	int
 diff --git a/arch/x86/Makefile b/arch/x86/Makefile
-index 56e748a76..63770cc7d 100644
+index 94df08688..dcbed7e3a 100644
 --- a/arch/x86/Makefile
 +++ b/arch/x86/Makefile
-@@ -118,13 +118,53 @@ else
+@@ -119,13 +119,53 @@ else
  	KBUILD_CFLAGS += $(call cc-option,-mskip-rax-setup)
  
          # FIXME - should be integrated in Makefile.cpu (Makefile_32.cpu)
@@ -57336,7 +57336,7 @@ index 385ebcfc3..a073c84e8 100644
  	rcu_read_unlock();
  
 diff --git a/kernel/module.c b/kernel/module.c
-index 8431c3d47..826945fdf 100644
+index dcf2cc656..de1ecfa10 100644
 --- a/kernel/module.c
 +++ b/kernel/module.c
 @@ -52,6 +52,7 @@
@@ -57347,7 +57347,7 @@ index 8431c3d47..826945fdf 100644
  #include <uapi/linux/module.h>
  #include "module-internal.h"
  
-@@ -267,6 +268,10 @@ static void module_assert_mutex_or_preempt(void)
+@@ -262,6 +263,10 @@ static void module_assert_mutex_or_preempt(void)
  
  static bool sig_enforce = IS_ENABLED(CONFIG_MODULE_SIG_FORCE);
  module_param(sig_enforce, bool_enable_only, 0644);
@@ -57358,7 +57358,7 @@ index 8431c3d47..826945fdf 100644
  
  /*
   * Export sig_enforce kernel cmdline parameter to allow other subsystems rely
-@@ -392,6 +397,8 @@ extern const s32 __start___kcrctab_unused[];
+@@ -387,6 +392,8 @@ extern const s32 __start___kcrctab_unused[];
  extern const s32 __start___kcrctab_unused_gpl[];
  #endif
  
@@ -57367,7 +57367,7 @@ index 8431c3d47..826945fdf 100644
  #ifndef CONFIG_MODVERSIONS
  #define symversion(base, idx) NULL
  #else
-@@ -4286,6 +4293,20 @@ static const struct file_operations proc_modules_operations = {
+@@ -4301,6 +4308,20 @@ static const struct file_operations proc_modules_operations = {
  static int __init proc_modules_init(void)
  {
  	proc_create("modules", 0, NULL, &proc_modules_operations);
