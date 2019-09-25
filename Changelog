@@ -15,6 +15,7 @@
 - drop fpga-dfl-fme-add-power-management-support.patch
 - drop fpga-dfl-fme-add-performance-reporting-support.patch
 - add staging-exfat-add-exfat-filesystem-code-to-staging.patch
+- add i8042-decrease-debug-message-level-to-info.patch
 
 5.3-lucjan-ll9
 
