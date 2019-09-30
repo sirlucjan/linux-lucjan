@@ -1,3 +1,27 @@
+5.3-lucjan-ll11
+
+- add fpga-altera-cvp-Fix-function-definition-argument.patch
+- add fpga-altera-pr-ip-Make-alt_pr_unregister-function-vo.patch
+- add fpga-dfl-use-driver-core-functions-not-sysfs-ones.patch
+- add fpga-dfl-fme-add-DFL_FPGA_FME_PORT_RELEASE-ASSIGN-io.patch
+- add fpga-dfl-pci-enable-SRIOV-support.patch
+- add fpga-dfl-afu-add-AFU-state-related-sysfs-interfaces.patch
+- add fpga-dfl-add-id_table-for-dfl-private-feature-driver.patch
+- add fpga-dfl-make-uinit-callback-optional.patch
+- add fpga-dfl-fme-add-capability-sysfs-interfaces.patch
+- add fpga-altera-cvp-Discover-Vendor-Specific-offset.patch
+- add fpga-altera-cvp-Preparation-for-V2-parts.patch
+- add fpga-altera-cvp-Add-Stratix10-V2-Support.patch
+- add fpga-dfl-make-init-callback-optional.patch
+- add fpga-dfl-fme-convert-platform_driver-to-use-dev_grou.patch
+- add fpga-dfl-afu-convert-platform_driver-to-use-dev_grou.patch
+- add fpga-dfl-afu-add-userclock-sysfs-interfaces.patch
+- add fpga-dfl-afu-expose-__afu_port_enable-disable-functi.patch
+- add fpga-dfl-afu-add-error-reporting-support.patch
+- add fpga-dfl-afu-add-STP-SignalTap-support.patch
+- add fpga-dfl-fme-add-global-error-reporting-support.patch
+- add driver-core-add-dev_groups-to-all-drivers.patch
+
 5.3-lucjan-ll10
 
 - drop fpga-dfl-fme-support-512bit-data-width-PR.patch
