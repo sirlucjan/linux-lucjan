@@ -1,3 +1,10 @@
+5.3-lucjan-ll12
+
+- add ipv6-Properly-check-reference-count-flag-before-taki.patch
+- add ipv6-do-not-free-rt-if-FIB_LOOKUP_NOREF-is-set-on-su.patch
+- add iwlwifi-fw-don-t-send-GEO_TX_POWER_LIMIT-command-to-.patch
+- add Bluetooth-hidp-Fix-assumptions-on-the-return-value-o.patch
+
 5.3-lucjan-ll11
 
 - add fpga-altera-cvp-Fix-function-definition-argument.patch
