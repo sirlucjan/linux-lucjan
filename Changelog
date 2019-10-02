@@ -1,3 +1,9 @@
+5.3-lucjan-ll13
+
+- add BFQ-dev 20191002
+
+DROP 5.3-lucjan-ll13-rc1
+
 5.3-lucjan-ll13-rc1
 
 - sync with upstream (drop ipv6-Properly-check-reference-count-flag-before-taki.patch,
