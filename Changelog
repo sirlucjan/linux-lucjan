@@ -1,3 +1,11 @@
+5.3-lucjan-ll14-rc1
+
+- sync with upstream (drop ipv6-Properly-check-reference-count-flag-before-taki.patch,
+                      drop ipv6-do-not-free-rt-if-FIB_LOOKUP_NOREF-is-set-on-su.patch,
+                      drop iwlwifi-fw-don-t-send-GEO_TX_POWER_LIMIT-command-to-.patch,
+                      drop x86-amd_nb-Add-PCI-device-IDs-for-family-17h-model-7.patch
+                      drop hwmon-k10temp-Add-PCI-device-IDs-for-family-17h-mode.patch)
+
 5.3-lucjan-ll13
 
 - add BFQ-dev 20191002
