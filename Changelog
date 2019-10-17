@@ -1,3 +1,8 @@
+5.3-lucjan-ll23
+
+- drop add-trace-events-for-open-exec-and-uselib.patch
+- add trace-add-trace-events-for-open-exec-and-uselib.patch
+
 5.3-lucjan-ll22
 
 - drop ath-do-not-enforce-EEPROM-regulatory-restrictions.patch
