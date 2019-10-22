@@ -1,3 +1,7 @@
+5.3-lucjan-ll27
+
+- add mm-ksm-proc-bail-out-on-kthreads.patch
+
 5.3-lucjan-ll26
 
 - add BMQ v5.3-r2
