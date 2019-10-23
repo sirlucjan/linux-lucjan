@@ -1,3 +1,7 @@
+5.3-lucjan-ll28
+
+- add mm-ksm-proc-rework-error-handling.patch
+
 5.3-lucjan-ll27
 
 - add mm-ksm-proc-bail-out-on-kthreads.patch
