@@ -1,3 +1,11 @@
+5.3-lucjan-ll29
+
+- drop mt76-mt76x2-disable-pcie_aspm-by-default.patch
+- drop mt76-mt76x2-disable-frag_list-support.patch
+- add mt76-mt76x2e-disable-pcie_aspm-by-default.patch
+- add mt76-dma-fix-buffer-unmap-with-non-linear-skbs.patch
+- add mt76-add-missing-ASPM-include.patch
+
 5.3-lucjan-ll28
 
 - add mm-ksm-proc-rework-error-handling.patch
