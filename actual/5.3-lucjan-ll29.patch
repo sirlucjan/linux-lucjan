@@ -1,6 +1,6 @@
-From 7de17ec307ed17234b9f2ae94fd63b879803ccf5 Mon Sep 17 00:00:00 2001
+From cad04723f173ed403a5515bb064154102396cdff Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Sun, 27 Oct 2019 23:28:13 +0100
+Date: Sun, 27 Oct 2019 23:29:31 +0100
 Subject: [PATCH] 5.3-lucjan-ll29
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3266,7 +3266,7 @@ index 1d235c674..aa0ca47b9 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index 7a3e659c7..881424e04 100644
+index 15c27d35e..9baebebd9 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Bobtail Squid
@@ -8647,7 +8647,7 @@ index bf44c79be..019547b54 100644
  	"/lib/firmware/updates",
  	"/lib/firmware/" UTS_RELEASE,
 diff --git a/drivers/block/loop.c b/drivers/block/loop.c
-index 1410fa893..846cb2750 100644
+index f6f77eaa7..3a6b2abdb 100644
 --- a/drivers/block/loop.c
 +++ b/drivers/block/loop.c
 @@ -417,19 +417,14 @@ static int lo_read_transfer(struct loop_device *lo, struct request *rq,
@@ -8882,7 +8882,7 @@ index 1410fa893..846cb2750 100644
  	lo->transfer = NULL;
  	lo->ioctl = NULL;
  	lo->lo_sizelimit = 0;
-@@ -1028,6 +1098,8 @@ static int loop_set_fd(struct loop_device *lo, fmode_t mode,
+@@ -1038,6 +1108,8 @@ static int loop_set_fd(struct loop_device *lo, fmode_t mode,
  		bd_abort_claiming(bdev, claimed_bdev, loop_set_fd);
  out_putf:
  	fput(file);
@@ -8891,7 +8891,7 @@ index 1410fa893..846cb2750 100644
  out:
  	/* This is safe: open() is still holding a reference. */
  	module_put(THIS_MODULE);
-@@ -1074,6 +1146,7 @@ loop_init_xfer(struct loop_device *lo, struct loop_func_table *xfer,
+@@ -1084,6 +1156,7 @@ loop_init_xfer(struct loop_device *lo, struct loop_func_table *xfer,
  static int __loop_clr_fd(struct loop_device *lo, bool release)
  {
  	struct file *filp = NULL;
@@ -8899,7 +8899,7 @@ index 1410fa893..846cb2750 100644
  	gfp_t gfp = lo->old_gfp_mask;
  	struct block_device *bdev = lo->lo_device;
  	int err = 0;
-@@ -1097,6 +1170,7 @@ static int __loop_clr_fd(struct loop_device *lo, bool release)
+@@ -1107,6 +1180,7 @@ static int __loop_clr_fd(struct loop_device *lo, bool release)
  
  	spin_lock_irq(&lo->lo_lock);
  	lo->lo_backing_file = NULL;
@@ -8907,7 +8907,7 @@ index 1410fa893..846cb2750 100644
  	spin_unlock_irq(&lo->lo_lock);
  
  	loop_release_xfer(lo);
-@@ -1179,6 +1253,8 @@ static int __loop_clr_fd(struct loop_device *lo, bool release)
+@@ -1189,6 +1263,8 @@ static int __loop_clr_fd(struct loop_device *lo, bool release)
  	 */
  	if (filp)
  		fput(filp);
@@ -8916,7 +8916,7 @@ index 1410fa893..846cb2750 100644
  	return err;
  }
  
-@@ -1930,7 +2006,10 @@ static void loop_handle_cmd(struct loop_cmd *cmd)
+@@ -1940,7 +2016,10 @@ static void loop_handle_cmd(struct loop_cmd *cmd)
   failed:
  	/* complete non-aio request */
  	if (!cmd->use_aio || ret) {
@@ -73589,7 +73589,7 @@ index 000000000..024cdcfae
 +}
 +#endif /* !CONFIG_MMU */
 diff --git a/mm/vmscan.c b/mm/vmscan.c
-index a6c5d0b28..dbcaf0f8f 100644
+index 8d03013b6..e1d41536e 100644
 --- a/mm/vmscan.c
 +++ b/mm/vmscan.c
 @@ -164,7 +164,11 @@ struct scan_control {
