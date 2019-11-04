@@ -1,4 +1,10 @@
-5.3-lucjan-ll30-rc10
+5.3-lucjan-ll30
+
+- add mm-Proactive-compaction.patch
+
+DROP 5.3-lucjan-ll30-rc1
+
+5.3-lucjan-ll30-rc1
 
 - sync with upstream (drop iwlwifi-exclude-GEO-SAR-support-for-3168.patch)
 
