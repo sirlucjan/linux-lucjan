@@ -1,3 +1,7 @@
+5.3-lucjan-ll34
+
+- add fix-bug-in-ucode-force-reload-revision-check.patch
+
 5.3-lucjan-ll33
 
 - drop mm-Raise-hugepage-compaction-effort-to-60.patch
