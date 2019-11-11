@@ -1,6 +1,6 @@
-From c065e99954619e2323c539f9fcb08c7da9992fa8 Mon Sep 17 00:00:00 2001
+From 4056c079c725132fede84c6cdbbc8a5b71619ffe Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Mon, 11 Nov 2019 17:41:15 +0100
+Date: Mon, 11 Nov 2019 20:36:20 +0100
 Subject: [PATCH] 5.3-lucjan-ll35
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -73417,10 +73417,10 @@ index 5ab9c2b22..810f96b36 100644
  		kcompactd_run(nid);
  	return 0;
 diff --git a/mm/filemap.c b/mm/filemap.c
-index d0cf700bf..5cac93e7b 100644
+index d9572593e..da0655328 100644
 --- a/mm/filemap.c
 +++ b/mm/filemap.c
-@@ -2721,7 +2721,7 @@ vm_fault_t filemap_page_mkwrite(struct vm_fault *vmf)
+@@ -2722,7 +2722,7 @@ vm_fault_t filemap_page_mkwrite(struct vm_fault *vmf)
  	vm_fault_t ret = VM_FAULT_LOCKED;
  
  	sb_start_pagefault(inode->i_sb);
