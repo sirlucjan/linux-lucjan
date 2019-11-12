@@ -1,3 +1,5 @@
+5.3-lucjan-ll36-rc1 --> 5.3-lucjan-ll36
+
 5.3-lucjan-ll36-rc1
 
 - sync with upstream (drop mt76-dma-fix-buffer-unmap-with-non-linear-skbs.patch)
