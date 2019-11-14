@@ -1,3 +1,7 @@
+5.3-lucjan-ll39
+
+- add nvme-workaround.patch
+
 5.3-lucjan-ll38
 
 - add BFQ-dev 20191114
