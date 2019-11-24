@@ -1,3 +1,28 @@
+5.3-lucjan-ll42
+
+- add i40e-prevent-memory-leak-in-i40e_setup_macvlans.patch
+- add ipmi-Fix-memory-leak-in-__ipmi_bmc_register.patch
+- add rpmsg-char-release-allocated-memory.patch
+- add media-rc-prevent-memory-leak-in-cx23888_ir_probe.patch
+- add nl80211-fix-memory-leak-in-nl80211_get_ftm_responder.patch
+- add mwifiex-pcie-Fix-memory-leak-in-mwifiex_pcie_alloc_c.patch
+- add mwifiex-pcie-Fix-memory-leak-in-mwifiex_pcie_init_ev.patch
+- add iwlwifi-dbg_ini-fix-memory-leak-in-alloc_sgtable.patch
+- add iwlwifi-pcie-fix-memory-leaks-in-iwl_pcie_ctxt_info_.patch
+- add rtlwifi-prevent-memory-leak-in-rtl_usb_probe.patch
+- add spi-lpspi-fix-memory-leak-in-fsl_lpspi_probe.patch
+- add scsi-bfa-release-allocated-memory-in-case-of-error.patch
+- add rtl8xxxu-prevent-leaking-urb.patch
+- add spi-gpio-prevent-memory-leak-in-spi_gpio_probe.patch
+- add rsi-release-skb-if-rsi_prepare_beacon-fails.patch
+- add tracing-Have-error-path-in-predicate_parse-free-its-.patch
+- add ath9k_htc-release-allocated-buffer-if-timed-out.patch
+- add ath9k-release-allocated-buffer-if-timed-out.patch
+- add RDMA-Fix-goto-target-to-release-the-allocated-memory.patch
+- add ath10k-fix-memory-leak.patch
+- add drm-amd-display-prevent-memory-leak.patch
+- add Port-crypto-patches-from-clearlinux.patch
+
 5.3-lucjan-ll41
 
 - add BFQ-dev 20191119
