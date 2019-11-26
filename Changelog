@@ -1,3 +1,83 @@
+5.4-lucjan-ll1-rc1
+
+- add ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch
+- add block-Kconfig.iosched-set-default-value-of-IOSCHED_B.patch
+- add blkcg-Make-bfq-disable-iocost-when-enabled.patch
+- add block-bfq-present-a-double-cgroups-interface.patch
+- add block-bfq-Skip-tracing-hooks-if-possible.patch
+- add i8042-decrease-debug-message-level-to-info.patch
+- add Increase-the-ext4-default-commit-age.patch
+- add silence-rapl.patch
+- add pci-pme-wakeups.patch
+- add ksm-wakeups.patch
+- add intel_idle-tweak-cpuidle-cstates.patch
+- add bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
+- add smpboot-reuse-timer-calibration.patch
+- add raid6-add-Kconfig-option-to-skip-raid6-benchmarking.patch
+- add Initialize-ata-before-graphics.patch
+- add give-rdrand-some-credit.patch
+- add ipv4-tcp-allow-the-memory-tuning-for-tcp-to-go-a-lit.patch
+- add kernel-time-reduce-ntp-wakeups.patch
+- add init-wait-for-partition-and-retry-scan.patch
+- add Add-boot-option-to-allow-unsigned-modules.patch
+- add Enable-stateless-firmware-loading.patch
+- add Migrate-some-systemd-defaults-to-the-kernel-defaults.patch
+- add xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
+- add use-lfence-instead-of-rep-and-nop.patch
+- add do-accept-in-LIFO-order-for-cache-efficiency.patch
+- add locking-rwsem-spin-faster.patch
+- add ata-libahci-ignore-staggered-spin-up.patch
+- add print-CPU-that-faults.patch
+- add x86-microcode-Force-update-a-uCode-even-if-the-rev-i.patch
+- add x86-microcode-echo-2-reload-to-force-load-ucode.patch
+- add fix-bug-in-ucode-force-reload-revision-check.patch
+- add nvme-workaround.patch
+- add cpu-5.4-make-O3-always-available.patch
+- add cpu-5.4-merge-graysky-s-patchset.patch
+- add consolemap-Fix-a-memory-leaking-bug-in-drivers-tty-v.patch
+- add i40e-prevent-memory-leak-in-i40e_setup_macvlans.patch
+- add ipmi-Fix-memory-leak-in-__ipmi_bmc_register.patch
+- add rpmsg-char-release-allocated-memory.patch
+- add media-rc-prevent-memory-leak-in-cx23888_ir_probe.patch
+- add mwifiex-pcie-Fix-memory-leak-in-mwifiex_pcie_alloc_c.patch
+- add mwifiex-pcie-Fix-memory-leak-in-mwifiex_pcie_init_ev.patch
+- add rtlwifi-prevent-memory-leak-in-rtl_usb_probe.patch
+- add spi-lpspi-fix-memory-leak-in-fsl_lpspi_probe.patch
+- add scsi-bfa-release-allocated-memory-in-case-of-error.patch
+- add rtl8xxxu-prevent-leaking-urb.patch
+- add spi-gpio-prevent-memory-leak-in-spi_gpio_probe.patch
+- add rsi-release-skb-if-rsi_prepare_beacon-fails.patch
+- add ath10k-fix-memory-leak.patch
+- add crypto-user-fix-memory-leak-in-crypto_reportstat.patch
+- add crypto-user-fix-memory-leak-in-crypto_report.patch
+- add net-sched-allow-configuring-cake-qdisc-as-default.patch
+- add infiniband-Fix-__read_overflow2-error-with-O3-inlini.patch
+- add -kbuild-add-fcf-protection-none-to-retpoline-flags.patch
+- add loop-Better-discard-for-block-devices.patch
+- add trace-add-trace-events-for-open-exec-and-uselib.patch
+- add futex-Split-key-setup-from-key-queue-locking-and-rea.patch
+- add futex-Implement-mechanism-to-wait-on-any-of-several-.patch
+- add futex-Change-WAIT_MULTIPLE-opcode-to-31.patch
+- add mm-ksm-introduce-ksm_madvise_merge-helper.patch
+- add mm-ksm-introduce-ksm_madvise_unmerge-helper.patch
+- add mm-ksm-proc-introduce-remote-merge.patch
+- add mm-ksm-proc-add-remote-KSM-documentation.patch
+- add LL-Implement-ll-branding-v5.4.patch
+- add LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch
+- add LL-elevator-set-default-scheduler-to-bfq-for-blk-mq.patch
+- add sched-core-nr_migrate-128-increases-number-of-tasks-.patch
+- add mm-set-2048-for-address_space-level-file-read-ahead-.patch
+- add LL-Add-.ll-version.patch
+- add scsi-sd-block-Fix-regressions-in-read-only-block-dev.patch
+- add scsi-sd-block-Update-fix-regressions-in-read-only-bl.patch
+- add ZEN-Allow-setting-the-number-of-available-virtual-TT.patch
+- add ZEN-Add-Thinkpad-SMAPI-driver.patch
+- add ZEN-Allow-TCP-YeAH-as-default-congestion-control.patch
+- add ZEN-Add-VHBA-driver.patch
+- add mm-Proactive-compaction.patch
+- add BMQ v5.3-r2
+- add WireGuard 0.0.20191012
+
 5.3-lucjan-ll43
 
 - add Refresh-mm-Proactive-compaction-with-updated-version.patch
