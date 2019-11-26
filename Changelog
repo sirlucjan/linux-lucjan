@@ -1,3 +1,7 @@
+5.4-lucjan-ll1-rc2
+
+- add LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch
+
 5.4-lucjan-ll1-rc1
 
 - add ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch
@@ -63,7 +67,6 @@
 - add mm-ksm-proc-introduce-remote-merge.patch
 - add mm-ksm-proc-add-remote-KSM-documentation.patch
 - add LL-Implement-ll-branding-v5.4.patch
-- add LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch
 - add LL-elevator-set-default-scheduler-to-bfq-for-blk-mq.patch
 - add sched-core-nr_migrate-128-increases-number-of-tasks-.patch
 - add mm-set-2048-for-address_space-level-file-read-ahead-.patch
