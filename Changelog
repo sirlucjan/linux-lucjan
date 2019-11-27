@@ -81,6 +81,10 @@
 - add BMQ v5.3-r2
 - add WireGuard 0.0.20191012
 
+5.3-lucjan-ll44
+
+- add WireGuard 0.0.20191127
+
 5.3-lucjan-ll43
 
 - add Refresh-mm-Proactive-compaction-with-updated-version.patch
