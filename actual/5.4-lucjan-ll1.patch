@@ -1,6 +1,6 @@
-From 365f4d39da9791b2fe1873f886b12a6c9199734e Mon Sep 17 00:00:00 2001
+From 7fedef2666b975d3e6cdad8f9684db421ac723c4 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Wed, 27 Nov 2019 19:12:20 +0100
+Date: Thu, 28 Nov 2019 14:24:29 +0100
 Subject: [PATCH] 5.4-lucjan-ll1
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -893,7 +893,7 @@ index 000000000..a249678a8
 +thinkpad_ec module and the H8S hardware documentation:
 +http://documentation.renesas.com/eng/products/mpumcu/rej09b0300_2140bhm.pdf
 diff --git a/Makefile b/Makefile
-index d4d36c619..755276d15 100644
+index bea2fd18e..902bee988 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Kleptomaniac Octopus
@@ -2884,10 +2884,10 @@ index 6031223ea..7d4a14c3f 100644
  		}
  		ch->parent_vsi = vsi;
 diff --git a/drivers/net/wireless/ath/ath10k/usb.c b/drivers/net/wireless/ath/ath10k/usb.c
-index e1420f67f..730ed22e0 100644
+index 9ebe74ee4..1e0343081 100644
 --- a/drivers/net/wireless/ath/ath10k/usb.c
 +++ b/drivers/net/wireless/ath/ath10k/usb.c
-@@ -435,6 +435,7 @@ static int ath10k_usb_hif_tx_sg(struct ath10k *ar, u8 pipe_id,
+@@ -443,6 +443,7 @@ static int ath10k_usb_hif_tx_sg(struct ath10k *ar, u8 pipe_id,
  			ath10k_dbg(ar, ATH10K_DBG_USB_BULK,
  				   "usb bulk transmit failed: %d\n", ret);
  			usb_unanchor_urb(urb);
@@ -7515,7 +7515,7 @@ index e88cf0554..1481b9791 100644
  
  __cacheline_aligned_in_smp DEFINE_SEQLOCK(rename_lock);
 diff --git a/fs/exec.c b/fs/exec.c
-index 555e93c7d..9d148db17 100644
+index c27231234..620859300 100644
 --- a/fs/exec.c
 +++ b/fs/exec.c
 @@ -64,6 +64,8 @@
@@ -7948,7 +7948,7 @@ index a2adf95b3..bcd0ebd52 100644
  int force_page_cache_readahead(struct address_space *mapping, struct file *filp,
  			pgoff_t offset, unsigned long nr_to_read);
 diff --git a/include/linux/sched.h b/include/linux/sched.h
-index 67a1d8698..a38ec88ef 100644
+index 775503573..68543826b 100644
 --- a/include/linux/sched.h
 +++ b/include/linux/sched.h
 @@ -644,13 +644,18 @@ struct task_struct {
@@ -8004,7 +8004,7 @@ index 67a1d8698..a38ec88ef 100644
  
  #ifdef CONFIG_UCLAMP_TASK
  	/* Clamp values requested for a scheduling entity */
-@@ -1283,6 +1299,15 @@ struct task_struct {
+@@ -1285,6 +1301,15 @@ struct task_struct {
  	 */
  };
  
@@ -8569,7 +8569,7 @@ index 27725754a..769d773c7 100644
  	d->cpu_count += t1;
  
 diff --git a/kernel/exit.c b/kernel/exit.c
-index a46a50d67..58043176b 100644
+index d351fd09e..4cfc24ab2 100644
 --- a/kernel/exit.c
 +++ b/kernel/exit.c
 @@ -131,7 +131,7 @@ static void __exit_signal(struct task_struct *tsk)
@@ -8591,7 +8591,7 @@ index a46a50d67..58043176b 100644
  	__unhash_process(tsk, group_dead);
  	write_sequnlock(&sig->stats_lock);
 diff --git a/kernel/fork.c b/kernel/fork.c
-index 13b38794e..86d0bb203 100644
+index 6cabc1243..fda4986da 100644
 --- a/kernel/fork.c
 +++ b/kernel/fork.c
 @@ -106,6 +106,11 @@
@@ -8606,7 +8606,7 @@ index 13b38794e..86d0bb203 100644
  
  /*
   * Minimum number of threads to boot the kernel
-@@ -1783,6 +1788,10 @@ static __latent_entropy struct task_struct *copy_process(
+@@ -1779,6 +1784,10 @@ static __latent_entropy struct task_struct *copy_process(
  	if ((clone_flags & (CLONE_NEWUSER|CLONE_FS)) == (CLONE_NEWUSER|CLONE_FS))
  		return ERR_PTR(-EINVAL);
  
@@ -8617,7 +8617,7 @@ index 13b38794e..86d0bb203 100644
  	/*
  	 * Thread groups must share signals as well, and detached threads
  	 * can only be started up within the thread group.
-@@ -2836,6 +2845,12 @@ int ksys_unshare(unsigned long unshare_flags)
+@@ -2826,6 +2835,12 @@ int ksys_unshare(unsigned long unshare_flags)
  	if (unshare_flags & CLONE_NEWNS)
  		unshare_flags |= CLONE_FS;
  
@@ -8631,7 +8631,7 @@ index 13b38794e..86d0bb203 100644
  	if (err)
  		goto bad_unshare_out;
 diff --git a/kernel/futex.c b/kernel/futex.c
-index bd18f60e4..329197edc 100644
+index afbf928d6..93e674bd1 100644
 --- a/kernel/futex.c
 +++ b/kernel/futex.c
 @@ -183,6 +183,7 @@ static int  __read_mostly futex_cmpxchg_enabled;
@@ -8642,7 +8642,7 @@ index bd18f60e4..329197edc 100644
  
  /*
   * Priority Inheritance state:
-@@ -2629,6 +2630,39 @@ static void futex_wait_queue_me(struct futex_hash_bucket *hb, struct futex_q *q,
+@@ -2706,6 +2707,39 @@ static void futex_wait_queue_me(struct futex_hash_bucket *hb, struct futex_q *q,
  	__set_current_state(TASK_RUNNING);
  }
  
@@ -8682,7 +8682,7 @@ index bd18f60e4..329197edc 100644
  /**
   * futex_wait_setup() - Prepare to wait on a futex
   * @uaddr:	the futex userspace address
-@@ -2649,7 +2683,6 @@ static void futex_wait_queue_me(struct futex_hash_bucket *hb, struct futex_q *q,
+@@ -2726,7 +2760,6 @@ static void futex_wait_queue_me(struct futex_hash_bucket *hb, struct futex_q *q,
  static int futex_wait_setup(u32 __user *uaddr, u32 val, unsigned int flags,
  			   struct futex_q *q, struct futex_hash_bucket **hb)
  {
@@ -8690,7 +8690,7 @@ index bd18f60e4..329197edc 100644
  	int ret;
  
  	/*
-@@ -2670,38 +2703,163 @@ static int futex_wait_setup(u32 __user *uaddr, u32 val, unsigned int flags,
+@@ -2747,38 +2780,163 @@ static int futex_wait_setup(u32 __user *uaddr, u32 val, unsigned int flags,
  	 * absorb a wakeup if *uaddr does not match the desired values
  	 * while the syscall executes.
  	 */
@@ -8873,7 +8873,7 @@ index bd18f60e4..329197edc 100644
  	return ret;
  }
  
-@@ -2782,6 +2940,10 @@ static long futex_wait_restart(struct restart_block *restart)
+@@ -2859,6 +3017,10 @@ static long futex_wait_restart(struct restart_block *restart)
  	}
  	restart->fn = do_no_restart_syscall;
  
@@ -8884,7 +8884,7 @@ index bd18f60e4..329197edc 100644
  	return (long)futex_wait(uaddr, restart->futex.flags,
  				restart->futex.val, tp, restart->futex.bitset);
  }
-@@ -3665,6 +3827,8 @@ long do_futex(u32 __user *uaddr, int op, u32 val, ktime_t *timeout,
+@@ -3902,6 +4064,8 @@ long do_futex(u32 __user *uaddr, int op, u32 val, ktime_t *timeout,
  					     uaddr2);
  	case FUTEX_CMP_REQUEUE_PI:
  		return futex_requeue(uaddr, flags, uaddr2, val, val2, &val3, 1);
@@ -8893,7 +8893,7 @@ index bd18f60e4..329197edc 100644
  	}
  	return -ENOSYS;
  }
-@@ -3681,7 +3845,8 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
+@@ -3918,7 +4082,8 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
  
  	if (utime && (cmd == FUTEX_WAIT || cmd == FUTEX_LOCK_PI ||
  		      cmd == FUTEX_WAIT_BITSET ||
@@ -8903,7 +8903,7 @@ index bd18f60e4..329197edc 100644
  		if (unlikely(should_fail_futex(!(op & FUTEX_PRIVATE_FLAG))))
  			return -EFAULT;
  		if (get_timespec64(&ts, utime))
-@@ -3690,7 +3855,7 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
+@@ -3927,7 +4092,7 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
  			return -EINVAL;
  
  		t = timespec64_to_ktime(ts);
@@ -8912,7 +8912,7 @@ index bd18f60e4..329197edc 100644
  			t = ktime_add_safe(ktime_get(), t);
  		tp = &t;
  	}
-@@ -3874,14 +4039,15 @@ SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
+@@ -4112,14 +4277,15 @@ SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
  
  	if (utime && (cmd == FUTEX_WAIT || cmd == FUTEX_LOCK_PI ||
  		      cmd == FUTEX_WAIT_BITSET ||
