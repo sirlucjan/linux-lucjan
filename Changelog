@@ -1,3 +1,10 @@
+5.4-lucjan-ll4
+
+- drop block-bfq-Skip-tracing-hooks-if-possible.patch
+- add block-bfq-DEBUG-add-logs-and-BUG_ONs.patch
+- add block-bfq-do-not-idle-for-queues-with-no-proc-refs.patch
+- add block-bfq-DEBUG-check-proc-refs-in-case-of-requeue.patch
+
 5.4-lucjan-ll3
 
 - add kbuild-reuse-intermediate-linker-scripts-in-the-fina.patch
