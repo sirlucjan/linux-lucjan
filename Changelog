@@ -1,3 +1,8 @@
+5.4-lucjan-ll5
+
+- add ACPI-EC-Rework-flushing-of-pending-work.patch
+- add ACPI-PM-s2idle-Rework-ACPI-events-synchronization.patch
+
 5.4-lucjan-ll4
 
 - drop block-bfq-Skip-tracing-hooks-if-possible.patch
