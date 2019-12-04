@@ -1,3 +1,7 @@
+5.4-lucjan-ll6
+
+- add x86-fpu-Don-t-cache-access-to-fpu_fpregs_owner_ctx.patch
+
 5.4-lucjan-ll5
 
 - add ACPI-EC-Rework-flushing-of-pending-work.patch
