@@ -1,3 +1,7 @@
+5.4-lucjan-ll12-rc1
+
+- sync with upstream (drop rsi-release-skb-if-rsi_prepare_beacon-fails.patch)
+
 5.4-lucjan-ll11
 
 - add WireGuard 0.0.20191206
