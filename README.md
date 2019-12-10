@@ -16,15 +16,15 @@
  
 * [graysky's GCC patch](https://github.com/graysky2/kernel_gcc_patch) - version for gcc 9.1
 
-* [BMQ](https://gitlab.com/alfredchen/bmq) / [BMQ blog](http://cchalpha.blogspot.com) - contains the newest vesion with latest fixes
+* [BMQ](https://gitlab.com/alfredchen/linux-bmq/commits/linux-5.4.y-bmq) / [BMQ blog](http://cchalpha.blogspot.com) - contains the newest vesion with latest fixes
 
-* [random fixes from zen-kernel](https://github.com/zen-kernel/zen-kernel) - specific patches authored by Jan Alexander Steffens and ZEN Kernel Team
+* [random fixes from zen-kernel](https://github.com/zen-kernel/zen-kernel/commits/5.4/master) - specific patches authored by Jan Alexander Steffens and ZEN Kernel Team
 
-* [random fixes from pfkernel](https://github.com/pfactum/pf-kernel) / [random fixes from pfkernel](https://gitlab.com/post-factum/pf-kernel) - for example patches from Arch Linux or specific patches authored by Oleksandr Natalenko
+* [random fixes from pfkernel](https://github.com/pfactum/pf-kernel/commits/pf-5.4) / [random fixes from pfkernel](https://gitlab.com/post-factum/pf-kernel/commits/pf-5.4) - for example patches from Arch Linux or specific patches authored by Oleksandr Natalenko
 
 * [fixes from ClearLinux](https://github.com/clearlinux-pkgs/linux) - specific patches authored by ClearLinux Team
 
-* ~~[AUFS](https://github.com/sfjro/aufs5-standalone) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem~~
+* ~~[AUFS](https://github.com/sfjro/aufs5-standalone/commits/aufs5.4) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem~~
 
 * [WireGuard](https://git.zx2c4.com/WireGuard) - fast and secure kernelspace VPN
 
