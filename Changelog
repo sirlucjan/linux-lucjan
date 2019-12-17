@@ -1,3 +1,7 @@
+5.4-lucjan-ll17
+
+- add drm-i915-fbc-Disable-fbc-by-default-on-all-glk.patch
+
 5.4-lucjan-ll16-rc1 --> 5.4-lucjan-ll16
 
 5.4-lucjan-ll16-rc1
