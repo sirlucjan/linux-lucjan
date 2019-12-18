@@ -1,6 +1,6 @@
-From 641eef9d1bff672f6145a523ac0f1770b1f0709e Mon Sep 17 00:00:00 2001
+From 56e55e629586fdfaf29340767174d1fb1dcdbb5c Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Wed, 18 Dec 2019 15:46:37 +0100
+Date: Wed, 18 Dec 2019 15:45:38 +0100
 Subject: [PATCH] 5.4-lucjan-ll18
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -905,7 +905,7 @@ index 000000000..a249678a8
 +thinkpad_ec module and the H8S hardware documentation:
 +http://documentation.renesas.com/eng/products/mpumcu/rej09b0300_2140bhm.pdf
 diff --git a/Makefile b/Makefile
-index 144daf02c..1b3f56638 100644
+index f76ddb041..7ca34529a 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Kleptomaniac Octopus
@@ -6439,10 +6439,10 @@ index 347b08b56..31772dd98 100644
  		.enter_s2idle = intel_idle_s2idle, },
  	{
 diff --git a/drivers/infiniband/core/addr.c b/drivers/infiniband/core/addr.c
-index 6d7ec371e..74049f483 100644
+index 606fa6d86..70a2cad05 100644
 --- a/drivers/infiniband/core/addr.c
 +++ b/drivers/infiniband/core/addr.c
-@@ -817,6 +817,7 @@ int rdma_addr_find_l2_eth_by_grh(const union ib_gid *sgid,
+@@ -816,6 +816,7 @@ int rdma_addr_find_l2_eth_by_grh(const union ib_gid *sgid,
  	union {
  		struct sockaddr_in  _sockaddr_in;
  		struct sockaddr_in6 _sockaddr_in6;

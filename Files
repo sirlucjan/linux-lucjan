@@ -830,9 +830,6 @@
 │       └── 5.4-lucjan-ll9.patch.sig
 ├── Changelog
 ├── Files
-├── pending
-│   ├── 5.4-lucjan-ll18.patch
-│   └── 5.4-lucjan-ll18.patch.sig
 └── README.md
 
-12 directories, 823 files
+11 directories, 821 files
