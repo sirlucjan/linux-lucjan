@@ -1,3 +1,7 @@
+5.4-lucjan-ll20
+
+- add WireGuard 0.0.20191219
+
 5.4-lucjan-ll19
 
 - add Revert-iwlwifi-assign-directly-to-iwl_trans-cfg-in-Q.patch
