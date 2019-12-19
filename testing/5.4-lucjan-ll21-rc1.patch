@@ -1,6 +1,6 @@
-From 049fdbd463b4993814c0531cfc53bf092e6c852d Mon Sep 17 00:00:00 2001
+From 496f08e37ca257839322e2206acee7628976311d Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Thu, 19 Dec 2019 17:27:30 +0100
+Date: Thu, 19 Dec 2019 17:47:07 +0100
 Subject: [PATCH] 5.4-lucjan-ll21
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -77,6 +77,7 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  drivers/scsi/vhba/vhba.c                      | 1073 ++
  drivers/spi/spi-fsl-lpspi.c                   |    2 +-
  drivers/spi/spi-gpio.c                        |    4 +-
+ drivers/tty/Kconfig                           |   13 +
  drivers/tty/vt/consolemap.c                   |    6 +-
  fs/dcache.c                                   |    4 +
  fs/exec.c                                     |    4 +
@@ -103,6 +104,7 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  include/trace/events/fs.h                     |   53 +
  include/uapi/linux/futex.h                    |    7 +
  include/uapi/linux/if_bonding.h               |    2 +-
+ include/uapi/linux/vt.h                       |   15 +-
  init/Kconfig                                  |   46 +-
  init/do_mounts.c                              |   10 +
  init/init_task.c                              |   13 +
@@ -252,7 +254,7 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  scripts/link-vmlinux.sh                       |   14 +-
  sound/hda/hdac_stream.c                       |    4 +-
  sound/pci/hda/patch_hdmi.c                    |    2 +
- 247 files changed, 65598 insertions(+), 968 deletions(-)
+ 249 files changed, 65625 insertions(+), 969 deletions(-)
  create mode 100644 Documentation/scheduler/sched-BMQ.txt
  create mode 100644 Documentation/tp_smapi.txt
  create mode 100644 drivers/platform/x86/thinkpad_ec.c
@@ -11372,6 +11374,30 @@ index 1d3e23ec2..f9c5bbb74 100644
  
  	if (of_id)
  		status = spi_gpio_probe_dt(pdev, master);
+diff --git a/drivers/tty/Kconfig b/drivers/tty/Kconfig
+index c7623f99a..fc9a83eb2 100644
+--- a/drivers/tty/Kconfig
++++ b/drivers/tty/Kconfig
+@@ -76,6 +76,19 @@ config VT_CONSOLE_SLEEP
+ 	def_bool y
+ 	depends on VT_CONSOLE && PM_SLEEP
+ 
++config NR_TTY_DEVICES
++        int "Maximum tty device number"
++        depends on VT
++        range 12 63
++        default 63
++        ---help---
++          This option is used to change the number of tty devices in /dev.
++          The default value is 63. The lowest number you can set is 12,
++          63 is also the upper limit so we don't overrun the serial
++          consoles.
++
++          If unsure, say 63.
++
+ config HW_CONSOLE
+ 	bool
+ 	depends on VT && !UML
 diff --git a/drivers/tty/vt/consolemap.c b/drivers/tty/vt/consolemap.c
 index b28aa0d28..79fcc96cc 100644
 --- a/drivers/tty/vt/consolemap.c
@@ -12195,6 +12221,37 @@ index 790585f0e..85560927e 100644
 +#define BOND_DEFAULT_MAX_BONDS  0   /* Default maximum number of devices to support */
  
  #define BOND_DEFAULT_TX_QUEUES 16   /* Default number of tx queues per device */
+ 
+diff --git a/include/uapi/linux/vt.h b/include/uapi/linux/vt.h
+index e9d39c485..3bceead8d 100644
+--- a/include/uapi/linux/vt.h
++++ b/include/uapi/linux/vt.h
+@@ -3,12 +3,25 @@
+ #define _UAPI_LINUX_VT_H
+ 
+ 
++/*
++ * We will make this definition solely for the purpose of making packages
++ * such as splashutils build, because they can not understand that
++ * NR_TTY_DEVICES is defined in the kernel configuration.
++ */
++#ifndef CONFIG_NR_TTY_DEVICES
++#define CONFIG_NR_TTY_DEVICES 63
++#endif
++
+ /*
+  * These constants are also useful for user-level apps (e.g., VC
+  * resizing).
+  */
+ #define MIN_NR_CONSOLES 1       /* must be at least 1 */
+-#define MAX_NR_CONSOLES	63	/* serial lines start at 64 */
++/*
++ * NR_TTY_DEVICES:
++ * Value MUST be at least 12 and must never be higher then 63
++ */
++#define MAX_NR_CONSOLES CONFIG_NR_TTY_DEVICES	/* serial lines start above this */
+ 		/* Note: the ioctl VT_GETSTATE does not work for
+ 		   consoles 16 and higher (since it returns a short) */
  
 diff --git a/init/Kconfig b/init/Kconfig
 index b4daad2ba..278be1903 100644
