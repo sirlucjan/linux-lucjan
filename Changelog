@@ -1,3 +1,7 @@
+5.4-lucjan-ll19
+
+- add Revert-iwlwifi-assign-directly-to-iwl_trans-cfg-in-Q.patch
+
 5.4-lucjan-ll18
 
 - add BMQ v5.4-r1
