@@ -1,3 +1,9 @@
+5.4-lucjan-ll21
+
+- add rcu-nocb-Fix-dump_tree-hierarchy-print-always-active.patch
+
+DROP 5.4-lucjan-ll21-rc1
+
 5.4-lucjan-ll21-rc1
 
 - sync with upstream (drop drm-i915-fbc-Disable-fbc-by-default-on-all-glk.patch)
