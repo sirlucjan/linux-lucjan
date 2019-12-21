@@ -1,3 +1,5 @@
+5.4-lucjan-ll22-rc1 --> 5.4-lucjan-ll22
+
 5.4-lucjan-ll22-rc1
 
 - sync with upstream (drop drm-i915-fbc-Disable-fbc-by-default-on-all-glk.patch)
