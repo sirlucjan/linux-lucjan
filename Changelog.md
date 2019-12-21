@@ -1,3 +1,7 @@
+5.4-lucjan-ll23
+
+- sync with upstream (drop ALSA-hda-Fix-regression-by-strip-mask-fix.patch)
+
 5.4-lucjan-ll22-rc1 --> 5.4-lucjan-ll22
 
 5.4-lucjan-ll22-rc1
