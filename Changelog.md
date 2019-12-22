@@ -1,3 +1,7 @@
+5.4-lucjan-ll24
+
+- add Merge-branch-ras-urgent-for-linus-of-git-git.kernel.patch
+
 5.4-lucjan-ll23
 
 - sync with upstream (drop ALSA-hda-Fix-regression-by-strip-mask-fix.patch)
