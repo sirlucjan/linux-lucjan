@@ -1,3 +1,7 @@
+5.4-lucjan-ll26
+
+- add iwlwifi-pcie-move-power-gating-workaround-earlier-in.patch
+
 5.4-lucjan-ll25
 
 - add AUFS 20191223
