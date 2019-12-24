@@ -1,3 +1,14 @@
+5.4-lucjan-ll27
+
+- add x86-intel-Disable-HPET-on-Intel-Coffee-Lake-H-platfo.patch
+- add x86-intel-Disable-HPET-on-Intel-Ice-Lake-platforms.patch
+- add drm-i915-save-AUD_FREQ_CNTRL-state-at-audio-domain-s.patch
+- add drm-i915-Fix-audio-power-up-sequence-for-gen10-displ.patch
+- add drm-i915-extend-audio-CDCLK-2-BCLK-constraint-to-mor.patch
+- add ASoC-SOF-enable-sync_write-in-hdac_bus.patch
+- add xhci-pci-Allow-host-runtime-PM-as-default-also-for-I.patch
+- add iwlwifi-pcie-restore-support-for-Killer-Qu-C0-NICs.patch
+
 5.4-lucjan-ll26
 
 - add iwlwifi-pcie-move-power-gating-workaround-earlier-in.patch
