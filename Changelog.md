@@ -1,3 +1,7 @@
+5.4-lucjan-ll29
+
+- drop mm-Proactive-compaction.patch
+
 5.4-lucjan-ll28
 
 - add WireGuard 0.0.20191226
@@ -246,7 +250,7 @@ DROP 5.4-lucjan-ll7-rc1
 - add ZEN-Add-Thinkpad-SMAPI-driver.patch
 - add ZEN-Allow-TCP-YeAH-as-default-congestion-control.patch
 - add ZEN-Add-VHBA-driver.patch
-- add mm-Proactive-compaction.patch
+- add 
 - add BMQ v5.4-r0
 - add WireGuard 0.0.20191012
 
