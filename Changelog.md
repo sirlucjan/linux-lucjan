@@ -1,3 +1,7 @@
+5.4-lucjan-ll28
+
+- add WireGuard 0.0.20191226
+
 5.4-lucjan-ll27
 
 - add x86-intel-Disable-HPET-on-Intel-Coffee-Lake-H-platfo.patch
