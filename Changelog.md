@@ -1,3 +1,17 @@
+5.4-lucjan-ll30-rc1
+
+- sync with upstream (drop x86-MCE-AMD-Do-not-use-rdmsr_safe_on_cpu-in-smca_con.patch,
+                           x86-MCE-AMD-Allow-Reserved-types-to-be-overwritten-i.patch,
+                           x86-mce-Fix-possibly-incorrect-severity-calculation-.patch,
+                           iwlwifi-pcie-move-power-gating-workaround-earlier-in.patch,
+                           x86-intel-Disable-HPET-on-Intel-Coffee-Lake-H-platfo.patch,
+                           ASoC-SOF-enable-sync_write-in-hdac_bus.patch,
+                           xhci-pci-Allow-host-runtime-PM-as-default-also-for-I.patch,
+                           mwifiex-pcie-Fix-memory-leak-in-mwifiex_pcie_init_ev.patch.
+                           rtlwifi-prevent-memory-leak-in-rtl_usb_probe.patch,
+                           spi-gpio-prevent-memory-leak-in-spi_gpio_probe.patch,
+                           loop-Better-discard-for-block-devices.patch)
+
 5.4-lucjan-ll29
 
 - drop mm-Proactive-compaction.patch
