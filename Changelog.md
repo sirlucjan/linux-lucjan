@@ -1,3 +1,5 @@
+5.4-lucjan-ll30-rc1 --> 5.4-lucjan-ll30
+
 5.4-lucjan-ll30-rc1
 
 - sync with upstream (drop x86-MCE-AMD-Do-not-use-rdmsr_safe_on_cpu-in-smca_con.patch,
