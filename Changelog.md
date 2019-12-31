@@ -1,3 +1,7 @@
+5.4-lucjan-ll31
+
+- add drm-i915-gt-Detect-if-we-miss-WaIdleLiteRestore.patch
+
 5.4-lucjan-ll30-rc1 --> 5.4-lucjan-ll30
 
 5.4-lucjan-ll30-rc1
