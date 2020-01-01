@@ -1,3 +1,7 @@
+5.4-lucjan-ll32-rc1
+
+- sync with upstream (drop Revert-iwlwifi-assign-directly-to-iwl_trans-cfg-in-Q.patch)
+
 5.4-lucjan-ll31
 
 - add drm-i915-gt-Detect-if-we-miss-WaIdleLiteRestore.patch
