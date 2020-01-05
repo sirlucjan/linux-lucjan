@@ -1,3 +1,5 @@
+5.4-lucjan-ll33-rc1 --> 5.4-lucjan-ll33
+
 5.4-lucjan-ll33-rc1
 
 - sync with upstream (drop Revert-iwlwifi-assign-directly-to-iwl_trans-cfg-in-Q.patch)
