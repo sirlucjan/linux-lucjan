@@ -1,3 +1,7 @@
+5.4-lucjan-ll34
+
+- add WireGuard 0.0.20200105
+
 5.4-lucjan-ll33-rc1 --> 5.4-lucjan-ll33
 
 5.4-lucjan-ll33-rc1
