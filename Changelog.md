@@ -1,3 +1,7 @@
+5.4-lucjan-ll35
+
+- add ZEN-Update-VHBA-to-20200106.patch
+
 5.4-lucjan-ll34
 
 - add WireGuard 0.0.20200105
