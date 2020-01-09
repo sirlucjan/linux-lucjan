@@ -1,6 +1,6 @@
-From c1ad365261662e33910f8f4d8b0a8fb81750656e Mon Sep 17 00:00:00 2001
+From e52afa4876e75c24054fe64ffb1c7c3513be3f28 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Wed, 8 Jan 2020 15:15:51 +0100
+Date: Wed, 8 Jan 2020 15:13:52 +0100
 Subject: [PATCH] 5.4-lucjan-ll35
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3073,7 +3073,7 @@ index 9d3a5c54a..f33398b47 100644
  M:	Miguel Ojeda Sandonis <miguel.ojeda.sandonis@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index 1adee1b06..67ee0d84f 100644
+index 9152508b1..80098bfa0 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Kleptomaniac Octopus
@@ -8481,7 +8481,7 @@ index ddcccf440..05ef43b13 100644
  }
  
 diff --git a/drivers/gpu/drm/i915/gt/intel_lrc.c b/drivers/gpu/drm/i915/gt/intel_lrc.c
-index 06a506c29..6600b2e08 100644
+index d564bfcab..49ce15553 100644
 --- a/drivers/gpu/drm/i915/gt/intel_lrc.c
 +++ b/drivers/gpu/drm/i915/gt/intel_lrc.c
 @@ -471,12 +471,6 @@ lrc_descriptor(struct intel_context *ce, struct intel_engine_cs *engine)
@@ -8505,7 +8505,7 @@ index 06a506c29..6600b2e08 100644
  
  		/*
  		 * Push the request back into the queue for later resubmission.
-@@ -649,13 +642,29 @@ execlists_schedule_out(struct i915_request *rq)
+@@ -650,13 +643,29 @@ execlists_schedule_out(struct i915_request *rq)
  	i915_request_put(rq);
  }
  
@@ -8539,7 +8539,7 @@ index 06a506c29..6600b2e08 100644
  
  	/*
  	 * Make sure the context image is complete before we submit it to HW.
-@@ -674,7 +683,6 @@ static u64 execlists_update_context(const struct i915_request *rq)
+@@ -675,7 +684,6 @@ static u64 execlists_update_context(const struct i915_request *rq)
  	 */
  	mb();
  
@@ -8547,7 +8547,7 @@ index 06a506c29..6600b2e08 100644
  	ce->lrc_desc &= ~CTX_DESC_FORCE_RESTORE;
  
  	return desc;
-@@ -1149,16 +1157,6 @@ static void execlists_dequeue(struct intel_engine_cs *engine)
+@@ -1150,16 +1158,6 @@ static void execlists_dequeue(struct intel_engine_cs *engine)
  			if (!list_is_last(&last->sched.link,
  					  &engine->active.requests))
  				return;
@@ -9214,7 +9214,7 @@ index 86d97f311..a2a263764 100644
  
  int pciehp_query_power_fault(struct controller *ctrl)
 diff --git a/drivers/pci/pci.c b/drivers/pci/pci.c
-index a97e2571a..772e8935a 100644
+index fcfaadc77..b6dc799dd 100644
 --- a/drivers/pci/pci.c
 +++ b/drivers/pci/pci.c
 @@ -61,7 +61,7 @@ struct pci_pme_device {
@@ -51836,7 +51836,7 @@ index 27725754a..769d773c7 100644
  	d->cpu_count += t1;
  
 diff --git a/kernel/exit.c b/kernel/exit.c
-index d351fd09e..4cfc24ab2 100644
+index 22dfaac9e..30b2fd632 100644
 --- a/kernel/exit.c
 +++ b/kernel/exit.c
 @@ -131,7 +131,7 @@ static void __exit_signal(struct task_struct *tsk)
@@ -52298,7 +52298,7 @@ index eef04551e..1ec5ab4c8 100644
  	rcu_read_unlock();
  
 diff --git a/kernel/module.c b/kernel/module.c
-index ff2d7359a..f6368b8f9 100644
+index cb09a5f37..375c111b1 100644
 --- a/kernel/module.c
 +++ b/kernel/module.c
 @@ -53,6 +53,7 @@
@@ -52329,7 +52329,7 @@ index ff2d7359a..f6368b8f9 100644
  #ifndef CONFIG_MODVERSIONS
  #define symversion(base, idx) NULL
  #else
-@@ -4401,6 +4408,20 @@ static const struct file_operations proc_modules_operations = {
+@@ -4403,6 +4410,20 @@ static const struct file_operations proc_modules_operations = {
  static int __init proc_modules_init(void)
  {
  	proc_create("modules", 0, NULL, &proc_modules_operations);
@@ -59779,10 +59779,10 @@ index 672d3c78c..41c5f1d3c 100644
  static inline void
  update_fast_start_pfn(struct compact_control *cc, unsigned long pfn)
 diff --git a/mm/filemap.c b/mm/filemap.c
-index 85b7d087e..115275a4a 100644
+index 1f5731768..a3def534d 100644
 --- a/mm/filemap.c
 +++ b/mm/filemap.c
-@@ -2696,7 +2696,7 @@ vm_fault_t filemap_page_mkwrite(struct vm_fault *vmf)
+@@ -2675,7 +2675,7 @@ vm_fault_t filemap_page_mkwrite(struct vm_fault *vmf)
  	vm_fault_t ret = VM_FAULT_LOCKED;
  
  	sb_start_pagefault(inode->i_sb);
@@ -59943,10 +59943,10 @@ index 7905934cd..71df14bcc 100644
  	}
  
 diff --git a/mm/mmap.c b/mm/mmap.c
-index a7d8c84d1..9c350dc3f 100644
+index 4390dbea4..e697082d3 100644
 --- a/mm/mmap.c
 +++ b/mm/mmap.c
-@@ -182,7 +182,7 @@ static struct vm_area_struct *remove_vma(struct vm_area_struct *vma)
+@@ -176,7 +176,7 @@ static struct vm_area_struct *remove_vma(struct vm_area_struct *vma)
  	if (vma->vm_ops && vma->vm_ops->close)
  		vma->vm_ops->close(vma);
  	if (vma->vm_file)
@@ -59955,7 +59955,7 @@ index a7d8c84d1..9c350dc3f 100644
  	mpol_put(vma_policy(vma));
  	vm_area_free(vma);
  	return next;
-@@ -940,7 +940,7 @@ int __vma_adjust(struct vm_area_struct *vma, unsigned long start,
+@@ -934,7 +934,7 @@ int __vma_adjust(struct vm_area_struct *vma, unsigned long start,
  	if (remove_next) {
  		if (file) {
  			uprobe_munmap(next, next->vm_start, next->vm_end);
@@ -59964,7 +59964,7 @@ index a7d8c84d1..9c350dc3f 100644
  		}
  		if (next->anon_vma)
  			anon_vma_merge(vma, next);
-@@ -1865,8 +1865,8 @@ unsigned long mmap_region(struct file *file, unsigned long addr,
+@@ -1859,8 +1859,8 @@ unsigned long mmap_region(struct file *file, unsigned long addr,
  	return addr;
  
  unmap_and_free_vma:
@@ -59974,7 +59974,7 @@ index a7d8c84d1..9c350dc3f 100644
  
  	/* Undo any partial mapping done by a device driver. */
  	unmap_region(mm, vma, prev, vma->vm_start, vma->vm_end);
-@@ -2695,7 +2695,7 @@ int __split_vma(struct mm_struct *mm, struct vm_area_struct *vma,
+@@ -2689,7 +2689,7 @@ int __split_vma(struct mm_struct *mm, struct vm_area_struct *vma,
  		goto out_free_mpol;
  
  	if (new->vm_file)
@@ -59983,7 +59983,7 @@ index a7d8c84d1..9c350dc3f 100644
  
  	if (new->vm_ops && new->vm_ops->open)
  		new->vm_ops->open(new);
-@@ -2714,7 +2714,7 @@ int __split_vma(struct mm_struct *mm, struct vm_area_struct *vma,
+@@ -2708,7 +2708,7 @@ int __split_vma(struct mm_struct *mm, struct vm_area_struct *vma,
  	if (new->vm_ops && new->vm_ops->close)
  		new->vm_ops->close(new);
  	if (new->vm_file)
@@ -59992,7 +59992,7 @@ index a7d8c84d1..9c350dc3f 100644
  	unlink_anon_vmas(new);
   out_free_mpol:
  	mpol_put(vma_policy(new));
-@@ -2906,7 +2906,7 @@ SYSCALL_DEFINE5(remap_file_pages, unsigned long, start, unsigned long, size,
+@@ -2900,7 +2900,7 @@ SYSCALL_DEFINE5(remap_file_pages, unsigned long, start, unsigned long, size,
  	struct vm_area_struct *vma;
  	unsigned long populate = 0;
  	unsigned long ret = -EINVAL;
@@ -60001,7 +60001,7 @@ index a7d8c84d1..9c350dc3f 100644
  
  	pr_warn_once("%s (%d) uses deprecated remap_file_pages() syscall. See Documentation/vm/remap_file_pages.rst.\n",
  		     current->comm, current->pid);
-@@ -2981,10 +2981,27 @@ SYSCALL_DEFINE5(remap_file_pages, unsigned long, start, unsigned long, size,
+@@ -2975,10 +2975,27 @@ SYSCALL_DEFINE5(remap_file_pages, unsigned long, start, unsigned long, size,
  		}
  	}
  
@@ -60030,7 +60030,7 @@ index a7d8c84d1..9c350dc3f 100644
  out:
  	up_write(&mm->mmap_sem);
  	if (populate)
-@@ -3274,7 +3291,7 @@ struct vm_area_struct *copy_vma(struct vm_area_struct **vmap,
+@@ -3268,7 +3285,7 @@ struct vm_area_struct *copy_vma(struct vm_area_struct **vmap,
  		if (anon_vma_clone(new_vma, vma))
  			goto out_free_mempol;
  		if (new_vma->vm_file)
@@ -60279,10 +60279,10 @@ index ac05e273b..b4486f025 100644
  		release_sock(sk);
  		if (reqsk_queue_empty(&icsk->icsk_accept_queue))
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index d8876f0e9..bbd15a66b 100644
+index e537a4b65..105699ab3 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
-@@ -4001,8 +4001,8 @@ void __init tcp_init(void)
+@@ -3999,8 +3999,8 @@ void __init tcp_init(void)
  	tcp_init_mem();
  	/* Set per-socket limits to no more than 1/128 the pressure threshold */
  	limit = nr_free_buffer_pages() << (PAGE_SHIFT - 7);
