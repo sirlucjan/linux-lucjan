@@ -1,3 +1,7 @@
+5.4-lucjan-ll37-rc1
+
+- sync with upstream (drop x86-intel-Disable-HPET-on-Intel-Ice-Lake-platforms.patch)
+
 5.4-lucjan-ll36
 
 - add Revert-iwlwifi-mvm-fix-scan-config-command-size.patch
