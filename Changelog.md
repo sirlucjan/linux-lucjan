@@ -1,3 +1,8 @@
+5.4-lucjan-ll36
+
+- add Revert-iwlwifi-mvm-fix-scan-config-command-size.patch
+- add e1000e-Revert-e1000e-Make-watchdog-use-delayed-work.patch
+
 5.4-lucjan-ll35
 
 - add ZEN-Update-VHBA-to-20200106.patch
