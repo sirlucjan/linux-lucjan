@@ -1,3 +1,9 @@
+5.4-lucjan-ll37
+
+- update LL-Implement-ll-branding-v5.4.patch
+
+DROP 5.4-lucjan-ll37-rc1
+
 5.4-lucjan-ll37-rc1
 
 - sync with upstream (drop x86-intel-Disable-HPET-on-Intel-Ice-Lake-platforms.patch)
