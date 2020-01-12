@@ -1,3 +1,5 @@
+5.4-lucjan-ll38-rc1 --> 5.4-lucjan-ll38
+
 5.4-lucjan-ll38-rc1
 
 - sync with upstream (drop x86-intel-Disable-HPET-on-Intel-Ice-Lake-platforms.patch)
