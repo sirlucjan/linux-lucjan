@@ -1,3 +1,7 @@
+5.4-lucjan-ll40
+
+- add AUFS 20200113
+
 5.4-lucjan-ll39
 
 - add drm-i915-Limit-audio-CDCLK-2-BCLK-constraint-back-to.patch
