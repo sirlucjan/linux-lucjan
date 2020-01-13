@@ -1,3 +1,7 @@
+5.4-lucjan-ll39
+
+- add drm-i915-Limit-audio-CDCLK-2-BCLK-constraint-back-to.patch
+
 5.4-lucjan-ll38-rc1 --> 5.4-lucjan-ll38
 
 5.4-lucjan-ll38-rc1
