@@ -1,3 +1,5 @@
+5.4-lucjan-ll42-rc1 --> 5.4-lucjan-ll42
+
 5.4-lucjan-ll42-rc1
 
 - sync with upstream (drop rpmsg-char-release-allocated-memory.patch,
