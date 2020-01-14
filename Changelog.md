@@ -1,3 +1,11 @@
+5.4-lucjan-ll41-rc1
+
+- sync with upstream (drop rpmsg-char-release-allocated-memory.patch,
+                           mwifiex-pcie-Fix-memory-leak-in-mwifiex_pcie_alloc_c.patch,
+                           scsi-bfa-release-allocated-memory-in-case-of-error.patch,
+                           rtl8xxxu-prevent-leaking-urb.patch,
+                           ath10k-fix-memory-leak.patch)
+
 5.4-lucjan-ll40
 
 - add AUFS 20200113
