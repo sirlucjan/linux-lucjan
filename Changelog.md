@@ -1,3 +1,9 @@
+5.4-lucjan-ll41
+
+- drop drm-i915-gt-Detect-if-we-miss-WaIdleLiteRestore.patch
+
+DROP 5.4-lucjan-ll41-rc1
+
 5.4-lucjan-ll41-rc1
 
 - sync with upstream (drop rpmsg-char-release-allocated-memory.patch,
