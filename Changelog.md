@@ -1,3 +1,7 @@
+5.4-lucjan-ll44-rc10
+
+- sync with upstream (drop PCI-pciehp-Do-not-disable-interrupt-twice-on-suspend.patch)
+
 5.4-lucjan-ll43
 
 - add ZEN-intel-pstate-Implement-enable-parameter.patch
