@@ -1,4 +1,8 @@
-5.4-lucjan-ll44-rc10
+5.4-lucjan-ll44-rc2
+
+- sync with upstream (drop spi-lpspi-fix-memory-leak-in-fsl_lpspi_probe.patch)
+
+5.4-lucjan-ll44-rc1
 
 - sync with upstream (drop PCI-pciehp-Do-not-disable-interrupt-twice-on-suspend.patch)
 
