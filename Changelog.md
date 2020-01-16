@@ -1,3 +1,7 @@
+5.4-lucjan-ll43
+
+- add ZEN-intel-pstate-Implement-enable-parameter.patch
+
 5.4-lucjan-ll42-rc1 --> 5.4-lucjan-ll42
 
 5.4-lucjan-ll42-rc1
