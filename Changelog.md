@@ -1,3 +1,5 @@
+5.4-lucjan-ll44-rc2 --> 5.4-lucjan-ll44
+
 5.4-lucjan-ll44-rc2
 
 - sync with upstream (drop spi-lpspi-fix-memory-leak-in-fsl_lpspi_probe.patch)
