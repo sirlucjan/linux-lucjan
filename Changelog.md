@@ -1,3 +1,8 @@
+5.4-lucjan-ll46
+
+- add BMQ v5.4-r2
+- update LL-Implement-ll-branding-v5.4.patch
+
 5.4-lucjan-ll45
 
 - drm-amdgpu-Add-DC-feature-mask-to-disable-fractional.patch
@@ -366,7 +371,6 @@ DROP 5.4-lucjan-ll7-rc1
 - add ZEN-Add-Thinkpad-SMAPI-driver.patch
 - add ZEN-Allow-TCP-YeAH-as-default-congestion-control.patch
 - add ZEN-Add-VHBA-driver.patch
-- add 
 - add BMQ v5.4-r0
 - add WireGuard 0.0.20191012
 
