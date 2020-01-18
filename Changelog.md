@@ -1,3 +1,8 @@
+5.4-lucjan-ll45
+
+- drm-amdgpu-Add-DC-feature-mask-to-disable-fractional.patch
+- ptp-free-ptp-device-pin-descriptors-properly.patch
+
 5.4-lucjan-ll44-rc2 --> 5.4-lucjan-ll44
 
 5.4-lucjan-ll44-rc2
