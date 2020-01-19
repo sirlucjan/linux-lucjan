@@ -1,3 +1,7 @@
+5.4-lucjan-ll47
+
+- update LL-Implement-ll-branding-v5.4.patch
+
 5.4-lucjan-ll46
 
 - add BMQ v5.4-r2
