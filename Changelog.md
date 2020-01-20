@@ -1,3 +1,7 @@
+5.4-lucjan-ll48
+
+- add AUFS 20200120
+
 5.4-lucjan-ll47
 
 - update LL-Implement-ll-branding-v5.4.patch
