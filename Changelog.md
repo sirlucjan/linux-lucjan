@@ -1,3 +1,7 @@
+5.4-lucjan-ll49
+
+- add WireGuard 0.0.20200121
+
 5.4-lucjan-ll48
 
 - add AUFS 20200120
