@@ -1,3 +1,8 @@
+5.4-lucjan-ll50-rc1
+
+- sync with upstream (drop i40e-prevent-memory-leak-in-i40e_setup_macvlans.patch,
+                      drop ptp-free-ptp-device-pin-descriptors-properly.patch
+
 5.4-lucjan-ll49
 
 - add WireGuard 0.0.20200121
@@ -17,8 +22,8 @@
 
 5.4-lucjan-ll45
 
-- drm-amdgpu-Add-DC-feature-mask-to-disable-fractional.patch
-- ptp-free-ptp-device-pin-descriptors-properly.patch
+- add drm-amdgpu-Add-DC-feature-mask-to-disable-fractional.patch
+- add ptp-free-ptp-device-pin-descriptors-properly.patch
 
 5.4-lucjan-ll44-rc2 --> 5.4-lucjan-ll44
 
