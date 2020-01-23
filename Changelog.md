@@ -1,3 +1,5 @@
+5.4-lucjan-ll50-rc1 --> 5.4-lucjan-ll50
+
 5.4-lucjan-ll50-rc1
 
 - sync with upstream (drop i40e-prevent-memory-leak-in-i40e_setup_macvlans.patch,
