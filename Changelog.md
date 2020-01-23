@@ -1,3 +1,7 @@
+5.4-lucjan-ll52-rc1
+
+- sync with upstream (drop ipmi-Fix-memory-leak-in-__ipmi_bmc_register.patch)
+
 5.4-lucjan-ll51
 
 - add exfat-add-in-memory-and-on-disk-structures-and-heade.patch
