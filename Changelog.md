@@ -1,3 +1,21 @@
+5.4-lucjan-ll51
+
+- add exfat-add-in-memory-and-on-disk-structures-and-heade.patch
+- add exfat-add-super-block-operations.patch
+- add exfat-add-inode-operations.patch
+- add exfat-add-directory-operations.patch
+- add exfat-add-file-operations.patch
+- add exfat-add-fat-entry-operations.patch
+- add exfat-add-bitmap-operations.patch
+- add exfat-add-exfat-cache.patch
+- add exfat-add-misc-operations.patch
+- add exfat-add-nls-operations.patch
+- add exfat-add-Kconfig-and-Makefile.patch
+- add MAINTAINERS-add-exfat-filesystem.patch
+- add staging-exfat-make-staging-exfat-and-fs-exfat-mutual.patch
+- add staging-exfat-Rename-EXFAT_FS-to-EXFAT_FS_SAMSUNG.patch
+- add exfat-Depend-on-EXFAT_FS_SAMSUNG-n-from-mainline-exf.patch
+
 5.4-lucjan-ll50-rc1 --> 5.4-lucjan-ll50
 
 5.4-lucjan-ll50-rc1
