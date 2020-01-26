@@ -1,3 +1,7 @@
+5.4-lucjan-ll53
+
+- add staging-exfat-Remove-old-exfat-driver.patch
+
 5.4-lucjan-ll52-rc1 --> 5.4-lucjan-ll52
 
 5.4-lucjan-ll52-rc1
