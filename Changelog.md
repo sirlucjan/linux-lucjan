@@ -1,3 +1,5 @@
+5.4-lucjan-ll52-rc1 --> 5.4-lucjan-ll52
+
 5.4-lucjan-ll52-rc1
 
 - sync with upstream (drop ipmi-Fix-memory-leak-in-__ipmi_bmc_register.patch)
