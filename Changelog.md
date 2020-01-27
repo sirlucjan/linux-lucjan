@@ -1,3 +1,8 @@
+5.4-lucjan-ll55-rc1
+
+- sync with upstream (drop pinctrl-sunrisepoint-Add-missing-Interrupt-Status-re.patch,
+                      drop Revert-iwlwifi-mvm-fix-scan-config-command-size.patch)
+
 5.4-lucjan-ll54
 
 - add AUFS 20200127
@@ -35,7 +40,7 @@
 5.4-lucjan-ll50-rc1
 
 - sync with upstream (drop i40e-prevent-memory-leak-in-i40e_setup_macvlans.patch,
-                      drop ptp-free-ptp-device-pin-descriptors-properly.patch
+                      drop ptp-free-ptp-device-pin-descriptors-properly.patch)
 
 5.4-lucjan-ll49
 
