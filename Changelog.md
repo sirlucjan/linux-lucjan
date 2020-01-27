@@ -1,3 +1,7 @@
+5.4-lucjan-ll54
+
+- add AUFS 20200127
+
 5.4-lucjan-ll53
 
 - add staging-exfat-Remove-old-exfat-driver.patch
