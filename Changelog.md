@@ -1,3 +1,7 @@
+5.5-lucjan-ll1-rc2
+
+- add WireGuard 0.0.20200128
+
 5.5-lucjan-ll1-rc1
 
 - add ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch
