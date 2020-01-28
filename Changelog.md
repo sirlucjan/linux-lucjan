@@ -1,3 +1,80 @@
+5.5-lucjan-ll1-rc1
+
+- add ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch
+- add iwlwifi-pcie-restore-support-for-Killer-Qu-C0-NICs.patch
+- add block-Kconfig.iosched-set-default-value-of-IOSCHED_B.patch
+- add block-Fix-depends-for-BLK_DEV_ZONED.patch
+- add block-set-rq_affinity-2-for-full-multithreading-I-O-.patch
+- add i8042-decrease-debug-message-level-to-info.patch
+- add Increase-the-ext4-default-commit-age.patch
+- add silence-rapl.patch
+- add pci-pme-wakeups.patch
+- add ksm-wakeups.patch
+- add intel_idle-tweak-cpuidle-cstates.patch
+- add bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
+- add smpboot-reuse-timer-calibration.patch
+- add raid6-add-Kconfig-option-to-skip-raid6-benchmarking.patch
+- add Initialize-ata-before-graphics.patch
+- add give-rdrand-some-credit.patch
+- add ipv4-tcp-allow-the-memory-tuning-for-tcp-to-go-a-lit.patch
+- add kernel-time-reduce-ntp-wakeups.patch
+- add init-wait-for-partition-and-retry-scan.patch
+- add print-fsync-count-for-bootchart.patch
+- add Add-boot-option-to-allow-unsigned-modules.patch
+- add Enable-stateless-firmware-loading.patch
+- add Migrate-some-systemd-defaults-to-the-kernel-defaults.patch
+- add xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
+- add use-lfence-instead-of-rep-and-nop.patch
+- add do-accept-in-LIFO-order-for-cache-efficiency.patch
+- add locking-rwsem-spin-faster.patch
+- add ata-libahci-ignore-staggered-spin-up.patch
+- add print-CPU-that-faults.patch
+- add x86-microcode-Force-update-a-uCode-even-if-the-rev-i.patch
+- add x86-microcode-echo-2-reload-to-force-load-ucode.patch
+- add fix-bug-in-ucode-force-reload-revision-check.patch
+- add nvme-workaround.patch
+- add init-Kconfig-enable-O3-for-all-arches.patch
+- add cpu-5.5-merge-graysky-s-patchset.patch
+- add consolemap-Fix-a-memory-leaking-bug-in-drivers-tty-v.patch
+- add net-sched-allow-configuring-cake-qdisc-as-default.patch
+- add infiniband-Fix-__read_overflow2-error-with-O3-inlini.patch
+- add kbuild-add-fcf-protection-none-to-retpoline-flags.patch
+- add trace-add-trace-events-for-open-exec-and-uselib.patch
+- add futex-Split-key-setup-from-key-queue-locking-and-rea.patch
+- add futex-Implement-mechanism-to-wait-on-any-of-several-.patch
+- add futex-Change-WAIT_MULTIPLE-opcode-to-31.patch
+- add hwmon-Driver-for-disk-and-solid-state-drives-with-te.patch
+- add mm-ksm-introduce-ksm_madvise_merge-helper.patch
+- add mm-ksm-introduce-ksm_madvise_unmerge-helper.patch
+- add mm-ksm-proc-introduce-remote-merge.patch
+- add mm-ksm-proc-add-remote-KSM-documentation.patch
+- add LL-Implement-ll-branding-v5.5.patch
+- add LL-elevator-set-default-scheduler-to-bfq-for-blk-mq.patch
+- add sched-core-nr_migrate-256-increases-number-of-tasks-.patch
+- add mm-set-2048-for-address_space-level-file-read-ahead-.patch
+- add LL-Add-.ll-version.patch
+- add scsi-sd-block-Fix-regressions-in-read-only-block-dev.patch
+- add scsi-sd-block-Update-fix-regressions-in-read-only-bl.patch
+- add ZEN-Add-VHBA-driver.patch
+- add ZEN-intel-pstate-Implement-enable-parameter.patch
+- add exfat-add-in-memory-and-on-disk-structures-and-heade.patch
+- add exfat-add-super-block-operations.patch
+- add exfat-add-inode-operations.patch
+- add exfat-add-directory-operations.patch
+- add exfat-add-file-operations.patch
+- add exfat-add-fat-entry-operations.patch
+- add exfat-add-bitmap-operations.patch
+- add exfat-add-exfat-cache.patch
+- add exfat-add-misc-operations.patch
+- add exfat-add-nls-operations.patch
+- add exfat-add-Kconfig-and-Makefile.patch
+- add MAINTAINERS-add-exfat-filesystem.patch
+- add staging-exfat-Remove-old-exfat-driver.patch
+- add BMQ v5.5-r0
+- add BFQ-dev 20200127
+- add WireGuard 0.0.20200121
+- add AUFS 20200127
+
 5.4-lucjan-ll55-rc1
 
 - sync with upstream (drop pinctrl-sunrisepoint-Add-missing-Interrupt-Status-re.patch,
