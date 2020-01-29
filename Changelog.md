@@ -79,6 +79,8 @@
 - add WireGuard 0.0.20200121
 - add AUFS 20200127
 
+5.4-lucjan-ll55-rc1 --> 5.4-lucjan-ll55
+
 5.4-lucjan-ll55-rc1
 
 - sync with upstream (drop pinctrl-sunrisepoint-Add-missing-Interrupt-Status-re.patch,
