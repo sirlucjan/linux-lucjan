@@ -1,3 +1,7 @@
+5.5-lucjan-ll2
+
+- add BFQ-dev 20200130
+
 5.5-lucjan-ll1-rc2 --> 5.5-lucjan-ll1
 
 5.5-lucjan-ll1-rc2
