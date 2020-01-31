@@ -1,3 +1,7 @@
+5.5-lucjan-ll3
+
+- add kbuild-reuse-intermediate-linker-scripts-in-the-fina.patch
+
 5.5-lucjan-ll2
 
 - add BFQ-dev 20200130
