@@ -1,6 +1,6 @@
-From b57e439576080c9556aa5a3e5260435892b389e5 Mon Sep 17 00:00:00 2001
+From 59ae124d4639812eab1a1c3e57c6f0593ec4d874 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Fri, 31 Jan 2020 15:35:24 +0100
+Date: Fri, 31 Jan 2020 15:34:24 +0100
 Subject: [PATCH] 5.5-lucjan-ll3
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -2823,7 +2823,7 @@ index 56765f542..c63cfaf00 100644
  EXT2 FILE SYSTEM
  M:	Jan Kara <jack@suse.com>
 diff --git a/Makefile b/Makefile
-index 6a01b0739..33eb6ec3d 100644
+index feba0c964..580a57276 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Kleptomaniac Octopus
@@ -63169,10 +63169,10 @@ index 790585f0e..85560927e 100644
  #define BOND_DEFAULT_TX_QUEUES 16   /* Default number of tx queues per device */
  
 diff --git a/init/Kconfig b/init/Kconfig
-index a34064a03..6c2fa18d4 100644
+index 47d40f399..d3290b2ca 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
-@@ -73,6 +73,10 @@ config THREAD_INFO_IN_TASK
+@@ -74,6 +74,10 @@ config THREAD_INFO_IN_TASK
  
  menu "General setup"
  
@@ -63183,7 +63183,7 @@ index a34064a03..6c2fa18d4 100644
  config BROKEN
  	bool
  
-@@ -697,9 +701,28 @@ config GENERIC_SCHED_CLOCK
+@@ -698,9 +702,28 @@ config GENERIC_SCHED_CLOCK
  
  menu "Scheduler features"
  
@@ -63212,7 +63212,7 @@ index a34064a03..6c2fa18d4 100644
  	help
  	  This feature enables the scheduler to track the clamped utilization
  	  of each CPU based on RUNNABLE tasks scheduled on that CPU.
-@@ -786,6 +809,7 @@ config NUMA_BALANCING
+@@ -787,6 +810,7 @@ config NUMA_BALANCING
  	depends on ARCH_SUPPORTS_NUMA_BALANCING
  	depends on !ARCH_WANT_NUMA_VARIABLE_LOCALITY
  	depends on SMP && NUMA && MIGRATION
@@ -63220,7 +63220,7 @@ index a34064a03..6c2fa18d4 100644
  	help
  	  This option adds support for automatic NUMA aware memory/task placement.
  	  The mechanism is quite primitive and is based on migrating memory when
-@@ -887,7 +911,7 @@ menuconfig CGROUP_SCHED
+@@ -888,7 +912,7 @@ menuconfig CGROUP_SCHED
  	  bandwidth allocation to such task groups. It uses cgroups to group
  	  tasks.
  
@@ -63229,7 +63229,7 @@ index a34064a03..6c2fa18d4 100644
  config FAIR_GROUP_SCHED
  	bool "Group scheduling for SCHED_OTHER"
  	depends on CGROUP_SCHED
-@@ -1102,6 +1126,22 @@ config USER_NS
+@@ -1103,6 +1127,22 @@ config USER_NS
  
  	  If unsure, say N.
  
@@ -63252,7 +63252,7 @@ index a34064a03..6c2fa18d4 100644
  config PID_NS
  	bool "PID Namespaces"
  	default y
-@@ -1134,6 +1174,7 @@ config CHECKPOINT_RESTORE
+@@ -1135,6 +1175,7 @@ config CHECKPOINT_RESTORE
  
  config SCHED_AUTOGROUP
  	bool "Automatic process group scheduling"
@@ -63260,7 +63260,7 @@ index a34064a03..6c2fa18d4 100644
  	select CGROUPS
  	select CGROUP_SCHED
  	select FAIR_GROUP_SCHED
-@@ -1228,7 +1269,6 @@ config CC_OPTIMIZE_FOR_PERFORMANCE
+@@ -1229,7 +1270,6 @@ config CC_OPTIMIZE_FOR_PERFORMANCE
  
  config CC_OPTIMIZE_FOR_PERFORMANCE_O3
  	bool "Optimize more for performance (-O3)"
