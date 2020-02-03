@@ -1,3 +1,7 @@
+5.5-lucjan-ll6
+
+- add BFQ-dev 20200203
+
 5.5-lucjan-ll5
 
 - add pci-Enable-overrides-for-missing-ACS-capabilities.patch
