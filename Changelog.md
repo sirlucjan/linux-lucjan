@@ -1,3 +1,7 @@
+5.5-lucjan-ll5
+
+- add pci-Enable-overrides-for-missing-ACS-capabilities.patch
+
 5.5-lucjan-ll4
 
 - add Btrfs-send-fix-emission-of-invalid-clone-operations-.patch
