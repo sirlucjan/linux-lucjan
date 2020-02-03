@@ -26,7 +26,7 @@
 
 * [fixes from ClearLinux](https://github.com/clearlinux-pkgs/linux) - specific patches authored by ClearLinux Team
 
-* [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.x-rcN) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
+* [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.5) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
 
 * [WireGuard](https://git.zx2c4.com/wireguard-linux-compat) - fast and secure kernelspace VPN
 
