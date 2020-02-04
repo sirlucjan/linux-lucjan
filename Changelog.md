@@ -1,3 +1,7 @@
+5.5-lucjan-ll8
+
+- add BMQ v5.5-r1
+
 5.5-lucjan-ll7
 
 - add AUFS 20200203
