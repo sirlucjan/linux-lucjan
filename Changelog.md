@@ -1,3 +1,7 @@
+5.5-lucjan-ll9
+
+- add ALSA-hda-Fix-DP-MST-support-for-NVIDIA-codecs.patch
+
 5.5-lucjan-ll8
 
 - add BMQ v5.5-r1
