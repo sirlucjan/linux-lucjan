@@ -1,3 +1,7 @@
+5.5-lucjan-ll11-rc1
+
+- sync with upstream (drop btrfs-do-not-zero-f_bavail-if-we-have-available-spac.patch)
+
 5.5-lucjan-ll10
 
 - fix Btrfs-send-fix-emission-of-invalid-clone-operations-.patch
