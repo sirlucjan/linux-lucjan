@@ -1,3 +1,7 @@
+5.5-lucjan-ll13
+
+- fix ALSA-hda-Fix-DP-MST-support-for-NVIDIA-codecs.patch
+
 5.5-lucjan-ll12
 
 - add iwlwifi-mvm-Do-not-require-PHY_SKU-NVM-section-for-3.patch
