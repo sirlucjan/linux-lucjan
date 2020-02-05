@@ -1,3 +1,7 @@
+5.5-lucjan-ll14
+
+- add LL-Implement-ll-branding-v5.5.patch
+
 5.5-lucjan-ll13
 
 - fix ALSA-hda-Fix-DP-MST-support-for-NVIDIA-codecs.patch
