@@ -1,4 +1,8 @@
-5.5-lucjan-ll5
+5.5-lucjan-ll16-rc1
+
+- sync with upstream (drop ALSA-hda-Fix-DP-MST-support-for-NVIDIA-codecs.patch)
+
+5.5-lucjan-ll15
 
 - add WireGuard 0.0.20200205
 
