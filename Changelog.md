@@ -1,8 +1,4 @@
-5.5-lucjan-ll16
-
-- add BFQ-dev 20200207
-
-5.5-lucjan-ll15
+5.5-lucjan-ll5
 
 - add WireGuard 0.0.20200205
 
