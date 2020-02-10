@@ -1,3 +1,7 @@
+5.5-lucjan-ll16-rc2
+
+- sync with upstream (drop Btrfs-send-fix-emission-of-invalid-clone-operations-.patch)
+
 5.5-lucjan-ll16-rc1
 
 - sync with upstream (drop ALSA-hda-Fix-DP-MST-support-for-NVIDIA-codecs.patch)
