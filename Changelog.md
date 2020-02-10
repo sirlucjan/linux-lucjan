@@ -1,3 +1,9 @@
+5.5-lucjan-ll16
+
+- add pipe-use-exclusive-waits-when-reading-or-writing.patch
+
+DROP 5.5-lucjan-ll16-rc2
+
 5.5-lucjan-ll16-rc2
 
 - sync with upstream (drop Btrfs-send-fix-emission-of-invalid-clone-operations-.patch)
