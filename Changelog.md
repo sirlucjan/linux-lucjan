@@ -1,3 +1,5 @@
+5.5-lucjan-ll19-rc1 --> 5.5-lucjan-ll19
+
 5.5-lucjan-ll19-rc1
 
 - sync with upstream (drop Btrfs-send-fix-emission-of-invalid-clone-operations-.patch,
