@@ -2869,7 +2869,7 @@ index 4f28483..706217d 100644
  # expect to learn how to build the kernel reading this file.
  
 +LLNAME = linux-lucjan
-+LLVERSION = .ll17
++LLVERSION = .ll18
 +EXTRAVERSION := $(EXTRAVERSION)$(LLVERSION)
 +
  # That's our default target when none is given on the command line
