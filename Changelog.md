@@ -1,3 +1,9 @@
+5.5-lucjan-ll20
+
+- add drm-i915-Wean-off-drm_pci_alloc-drm_pci_free.patch
+- add drm-Remove-PageReserved-manipulation-from-drm_pci_al.patch
+- add drm-i915-execlists-Always-force-a-context-reload-whe.patch
+
 5.5-lucjan-ll19-rc1 --> 5.5-lucjan-ll19
 
 5.5-lucjan-ll19-rc1
