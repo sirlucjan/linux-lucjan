@@ -1,3 +1,9 @@
+5.5-lucjan-ll18
+
+- add BFQ-dev 20200211
+
+DROP 5.5-lucjan-ll18-rc1
+
 5.5-lucjan-ll18-rc1
 
 - sync with upstream (drop Btrfs-send-fix-emission-of-invalid-clone-operations-.patch,
