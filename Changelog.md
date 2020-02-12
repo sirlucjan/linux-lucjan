@@ -1,3 +1,14 @@
+5.5-lucjan-ll21
+
+- drop futex-Split-key-setup-from-key-queue-locking-and-rea.patch
+- drop futex-Implement-mechanism-to-wait-on-any-of-several-.patch
+- drop futex-Change-WAIT_MULTIPLE-opcode-to-31.patch
+- add futex-Implement-mechanism-to-wait-on-any-of-several-.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-timeout-test.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wouldblock-t.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wake-up-test.patch
+- add futex-Add-Proton-compatibility-code.patch
+
 5.5-lucjan-ll20
 
 - add drm-i915-Wean-off-drm_pci_alloc-drm_pci_free.patch
