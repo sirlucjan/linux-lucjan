@@ -1,3 +1,8 @@
+5.5-lucjan-ll22
+
+- add drm-i915-Introduce-a-vma.kref.patch
+- add drm-i915-Serialise-i915_active_acquire-with-__active.patch
+
 5.5-lucjan-ll21
 
 - drop futex-Split-key-setup-from-key-queue-locking-and-rea.patch
