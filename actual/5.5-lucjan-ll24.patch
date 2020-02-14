@@ -1,6 +1,6 @@
-From e4912da7c861a135612d39c6fa9a9acc27bb3b69 Mon Sep 17 00:00:00 2001
+From e8d59871d131cbd0d85f34e91760671e77ee9239 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Fri, 14 Feb 2020 16:49:09 +0100
+Date: Fri, 14 Feb 2020 16:48:16 +0100
 Subject: [PATCH] 5.5-lucjan-ll24
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -2894,7 +2894,7 @@ index 44bc9d7f0..c8aa63c63 100644
  EXT2 FILE SYSTEM
  M:	Jan Kara <jack@suse.com>
 diff --git a/Makefile b/Makefile
-index fdaa1e262..68bcd8e65 100644
+index b4576a8c0..d54a72641 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Kleptomaniac Octopus
@@ -3735,10 +3735,10 @@ index 0340aad3f..9478c0acc 100644
  
  static __always_inline void cpu_relax(void)
 diff --git a/arch/x86/kernel/alternative.c b/arch/x86/kernel/alternative.c
-index 9ec463fe9..f06cb1974 100644
+index 2f1e2333b..7b6c9015b 100644
 --- a/arch/x86/kernel/alternative.c
 +++ b/arch/x86/kernel/alternative.c
-@@ -720,7 +720,9 @@ void __init alternative_instructions(void)
+@@ -721,7 +721,9 @@ void __init alternative_instructions(void)
  	 * patching.
  	 */
  
@@ -9664,7 +9664,7 @@ index 75fd2a7b0..ec789f4bb 100644
  		.enter_s2idle = intel_idle_s2idle, },
  	{
 diff --git a/drivers/infiniband/core/addr.c b/drivers/infiniband/core/addr.c
-index 606fa6d86..70a2cad05 100644
+index 1753a9801..184b30282 100644
 --- a/drivers/infiniband/core/addr.c
 +++ b/drivers/infiniband/core/addr.c
 @@ -816,6 +816,7 @@ int rdma_addr_find_l2_eth_by_grh(const union ib_gid *sgid,
@@ -72104,7 +72104,7 @@ index 000000000..c25bbce01
 +#endif
 +#endif /* BMQ_SCHED_H */
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index 90e4b00ac..a8e3d0015 100644
+index bfe756dee..4bb832e11 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -57,7 +57,11 @@ const_debug unsigned int sysctl_sched_features =
