@@ -1,3 +1,12 @@
+5.5-lucjan-ll23
+
+- add compat-provide-compat_ptr-on-all-architectures.patch
+- fix futex-Implement-mechanism-to-wait-on-any-of-several-.patch
+- fix selftests-futex-Add-FUTEX_WAIT_MULTIPLE-timeout-test.patch
+- fix selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wouldblock-t.patch
+- fix selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wake-up-test.patch
+- fix futex-Add-Proton-compatibility-code.patch
+
 5.5-lucjan-ll22
 
 - add drm-i915-Introduce-a-vma.kref.patch
