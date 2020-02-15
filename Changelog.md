@@ -1,3 +1,7 @@
+5.5-lucjan-ll26
+
+- add Don-t-report-an-error-if-PowerClamp-run-on-other-CPU.patch
+
 5.5-lucjan-ll25
 
 - fix drm-i915-Introduce-a-vma.kref.patch
