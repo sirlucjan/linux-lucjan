@@ -1,3 +1,7 @@
+5.5-lucjan-ll27
+
+- add WireGuard 0.0.20200215
+
 5.5-lucjan-ll26
 
 - add Don-t-report-an-error-if-PowerClamp-run-on-other-CPU.patch
