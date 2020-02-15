@@ -1,3 +1,13 @@
+5.5-lucjan-ll25
+
+- fix drm-i915-Introduce-a-vma.kref.patch
+- fix drm-i915-Serialise-i915_active_acquire-with-__active.patch
+- add drm-i915-gem-Take-runtime-pm-wakeref-prior-to-unbind.patch
+- add drm-i915-gem-Avoid-parking-the-vma-as-we-unbind.patch
+- add drm-i915-gem-Try-to-flush-pending-unbind-events.patch
+- add drm-i915-gem-Reinitialise-the-local-list-before-repe.patch
+- add drm-i915-Add-a-simple-is-bound-check-before-unbindin.patch
+
 5.5-lucjan-ll24
 
 - add WireGuard 0.0.20200214
