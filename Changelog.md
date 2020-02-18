@@ -1,3 +1,8 @@
+5.5-lucjan-ll28
+
+- add hwmon-applesmc-fix-UB-and-udelay-overflow.patch
+- update Don-t-report-an-error-if-PowerClamp-run-on-other-CPU.patch
+
 5.5-lucjan-ll27
 
 - add WireGuard 0.0.20200215
