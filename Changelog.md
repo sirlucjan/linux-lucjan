@@ -1,3 +1,11 @@
+5.5-lucjan-ll29
+
+- drop mm-ksm-introduce-ksm_madvise_merge-helper.patch
+- drop mm-ksm-introduce-ksm_madvise_unmerge-helper.patch
+- drop mm-ksm-proc-introduce-remote-merge.patch
+- drop mm-ksm-proc-add-remote-KSM-documentation.patch
+- add UKSM-for-5.5.patch
+
 5.5-lucjan-ll28
 
 - add hwmon-applesmc-fix-UB-and-udelay-overflow.patch
