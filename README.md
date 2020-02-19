@@ -28,6 +28,8 @@
 
 * [WireGuard](https://git.zx2c4.com/wireguard-linux-compat) - fast and secure kernelspace VPN
 
+* [UKSM (sources)](https://github.com/dolohow/uksm) / [UKSM (info)](https://www.usenix.org/sites/default/files/conference/protected-files/fast18_slides_xia.pdf) - resync from dolohow’s github
+
 * [LL-patches](https://github.com/sirlucjan/kernel-patches/tree/master/5.5/ll-patches) / [LL-patches](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.5/ll-patches) - specific patches authored by Piotr Gorski
 
 * [LL-branding](https://github.com/sirlucjan/kernel-patches/tree/master/5.5/ll-branding) / [LL-branding](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.5/ll-branding) - specific patches authored by Piotr Gorski
