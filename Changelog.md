@@ -1,3 +1,7 @@
+5.5-lucjan-ll30
+
+- add mm-Stop-kswapd-early-when-nothing-s-waiting-for-it-t.patch
+
 5.5-lucjan-ll29
 
 - drop mm-ksm-introduce-ksm_madvise_merge-helper.patch
