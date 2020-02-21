@@ -1,3 +1,7 @@
+5.5-lucjan-ll31-rc1
+
+- sync with upstream (drop rcu-nocb-Fix-dump_tree-hierarchy-print-always-active.patch)
+
 5.5-lucjan-ll30
 
 - add mm-Stop-kswapd-early-when-nothing-s-waiting-for-it-t.patch
