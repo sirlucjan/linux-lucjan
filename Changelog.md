@@ -1,3 +1,5 @@
+5.5-lucjan-ll32-rc1 --> 5.5-lucjan-ll32
+
 5.5-lucjan-ll32-rc1
 
 - sync with upstream (drop rcu-nocb-Fix-dump_tree-hierarchy-print-always-active.patch)
