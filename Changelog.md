@@ -1,3 +1,7 @@
+5.5-lucjan-ll33
+
+- add x86-boot-compressed-Don-t-declare-__force_order-in-k.patch
+
 5.5-lucjan-ll32-rc1 --> 5.5-lucjan-ll32
 
 5.5-lucjan-ll32-rc1
