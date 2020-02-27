@@ -1,3 +1,8 @@
+5.5-lucjan-ll34-rc1
+
+- sync with upstream (drop drm-i915-Wean-off-drm_pci_alloc-drm_pci_free.patch,
+                      drop drm-i915-execlists-Always-force-a-context-reload-whe.patch)
+
 5.5-lucjan-ll33
 
 - add x86-boot-compressed-Don-t-declare-__force_order-in-k.patch
