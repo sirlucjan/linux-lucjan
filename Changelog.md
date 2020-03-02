@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.5-lucjan-ll36
+
+- add BMQ v5.5-r2
+
 5.5-lucjan-ll35
 
 - add AUFS 20200302
