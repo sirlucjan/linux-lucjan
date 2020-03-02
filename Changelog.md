@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.5-lucjan-ll37
+
+- update LL-Implement-ll-branding-v5.5.patch
+
 5.5-lucjan-ll36
 
 - add BMQ v5.5-r2
@@ -154,7 +158,7 @@ DROP 5.5-lucjan-ll16-rc2
 
 5.5-lucjan-ll14
 
-- add LL-Implement-ll-branding-v5.5.patch
+- update LL-Implement-ll-branding-v5.5.patch
 
 5.5-lucjan-ll13
 
