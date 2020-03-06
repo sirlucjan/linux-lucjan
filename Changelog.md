@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.5-lucjan-ll38
+
+- add BFQ-dev 20200306
+
 5.5-lucjan-ll37
 
 - update LL-Implement-ll-branding-v5.5.patch
