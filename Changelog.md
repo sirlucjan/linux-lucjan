@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.5-lucjan-ll42-rc1
+
+- sync with upstream (drop x86-boot-compressed-Don-t-declare-__force_order-in-k.patch)
+
 5.5-lucjan-ll41
 
 - add BFQ-dev 20200311
