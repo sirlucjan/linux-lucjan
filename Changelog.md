@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.5-lucjan-ll43-rc1
+
+- sync with upstream (drop iwlwifi-mvm-Do-not-require-PHY_SKU-NVM-section-for-3.patch)
+
 5.5-lucjan-ll42-rc1 --> 5.5-lucjan-ll42
 
 5.5-lucjan-ll42-rc1
