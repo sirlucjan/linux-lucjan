@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.5-lucjan-ll45
+
+- drop lib-add-support-for-ZSTD-compressed-kernel.patch
+- drop x86-Enable-support-for-ZSTD-compressed-kernel.patch
+
 5.5-lucjan-ll44
 
 - add BFQ-dev 20200318
