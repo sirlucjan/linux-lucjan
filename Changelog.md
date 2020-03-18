@@ -1,5 +1,12 @@
 ## CHANGELOG
 
+5.5-lucjan-ll44
+
+- add BFQ-dev 20200318
+- add vfs-keep-inodes-with-page-cache-off-the-inode-shrink.patch
+- add lib-add-support-for-ZSTD-compressed-kernel.patch
+- add x86-Enable-support-for-ZSTD-compressed-kernel.patch
+
 5.5-lucjan-ll43-rc1 --> 5.5-lucjan-ll43
 
 5.5-lucjan-ll43-rc1
