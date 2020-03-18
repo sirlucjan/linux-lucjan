@@ -1,5 +1,7 @@
 ## CHANGELOG
 
+5.5-lucjan-ll43-rc1 --> 5.5-lucjan-ll43
+
 5.5-lucjan-ll43-rc1
 
 - sync with upstream (drop iwlwifi-mvm-Do-not-require-PHY_SKU-NVM-section-for-3.patch)
@@ -2717,5 +2719,4 @@ e1000e-start-network-tx-queue-only-when-link-is-up.patch`)
 4.17-lucjan-ll9
 
 - add ACPICA-AML-Parser-ignore-control-method-status-in-mo.patch
-
 
