@@ -1,6 +1,10 @@
 ## CHANGELOG
 
-5.5-lucjan-ll45
+5.5-lucjan-ll47
+
+- add WireGuard 0.0.20200318
+
+5.5-lucjan-ll46
 
 - add BFQ-dev 20200319
 
