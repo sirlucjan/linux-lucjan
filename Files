@@ -1062,9 +1062,6 @@
 │           └── 5.5-lucjan-ll18.patch.sig
 ├── Changelog.md
 ├── Files
-├── pending
-│   ├── 5.5-lucjan-ll47.patch
-│   └── 5.5-lucjan-ll47.patch.sig
 └── README.md
 
-14 directories, 1053 files
+13 directories, 1051 files
