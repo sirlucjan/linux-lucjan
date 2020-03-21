@@ -1,6 +1,6 @@
-From 1fa4573c79689d133ab2b65eb624d6539eba3820 Mon Sep 17 00:00:00 2001
+From 82cf13fb9193ae6d4d4ed54e4e71ac78068d0703 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Fri, 20 Mar 2020 15:52:17 +0100
+Date: Fri, 20 Mar 2020 15:53:53 +0100
 Subject: [PATCH] 5.5-lucjan-ll48
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -766,10 +766,10 @@ index 0636bcb60..d6fcfd0b1 100644
  
  IO Interface Files
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index ade4e6ec2..5927ce374 100644
+index 727a03fb2..f0c57a670 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
-@@ -432,6 +432,11 @@
+@@ -436,6 +436,11 @@
  			embedded devices based on command line input.
  			See Documentation/block/cmdline-partition.rst
  
@@ -781,7 +781,7 @@ index ade4e6ec2..5927ce374 100644
  	boot_delay=	Milliseconds to delay each printk during boot.
  			Values larger than 10 seconds (10000) are changed to
  			no delay (0).
-@@ -3423,6 +3428,15 @@
+@@ -3427,6 +3432,15 @@
  		nomsi		[MSI] If the PCI_MSI kernel config parameter is
  				enabled, this kernel boot option can be used to
  				disable the use of MSI interrupts system-wide.
@@ -2949,7 +2949,7 @@ index e73a47a88..c7c0eb520 100644
  EXT2 FILE SYSTEM
  M:	Jan Kara <jack@suse.com>
 diff --git a/Makefile b/Makefile
-index 5d0fdaf90..8dfe2de3f 100644
+index c7cbcb5aa..f9986cebf 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Kleptomaniac Octopus
