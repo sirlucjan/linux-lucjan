@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.5-lucjan-ll49
+
+- add iwlwifi-don-t-send-GEO_TX_POWER_LIMIT-if-no-wgds-tab.patch
+
 5.5-lucjan-ll48
 
 - add BFQ-dev 20200320
