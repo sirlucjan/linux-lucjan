@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.5-lucjan-ll51
+
+- add BFQ-dev 20200324
+
 5.5-lucjan-ll50
 
 - add BFQ-dev 20200323
