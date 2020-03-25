@@ -1,6 +1,6 @@
-From 0040236f0a47f023b5f8e0b41d00c47e7cccd839 Mon Sep 17 00:00:00 2001
+From ebb5d6c7513a665ab7d7abd620ba5fb03a59cc37 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Tue, 24 Mar 2020 17:45:19 +0100
+Date: Tue, 24 Mar 2020 18:04:11 +0100
 Subject: [PATCH] 5.5-lucjan-ll51
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -2952,7 +2952,7 @@ index e73a47a88..c7c0eb520 100644
  EXT2 FILE SYSTEM
  M:	Jan Kara <jack@suse.com>
 diff --git a/Makefile b/Makefile
-index b3a42cb00..f6896978d 100644
+index f3d5ebdbb..3af582498 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Kleptomaniac Octopus
@@ -3991,10 +3991,10 @@ index 7e322e2da..bb2c9b5ee 100644
  	if (sibling < nr_cpu_ids)
  		return cpu_data(sibling).loops_per_jiffy;
 diff --git a/arch/x86/mm/fault.c b/arch/x86/mm/fault.c
-index 304d31d8c..fb46992de 100644
+index c494c8c05..62d298553 100644
 --- a/arch/x86/mm/fault.c
 +++ b/arch/x86/mm/fault.c
-@@ -842,9 +842,9 @@ show_signal_msg(struct pt_regs *regs, unsigned long error_code,
+@@ -864,9 +864,9 @@ show_signal_msg(struct pt_regs *regs, unsigned long error_code,
  	if (!printk_ratelimit())
  		return;
  
@@ -62962,10 +62962,10 @@ index 30d55c9a1..34b9bbf4c 100644
  void __init files_init(void)
  {
 diff --git a/fs/inode.c b/fs/inode.c
-index 96d62d976..e32b1a6af 100644
+index c5267a4db..f90a4eb60 100644
 --- a/fs/inode.c
 +++ b/fs/inode.c
-@@ -429,26 +429,101 @@ static void inode_lru_list_add(struct inode *inode)
+@@ -430,26 +430,101 @@ static void inode_lru_list_add(struct inode *inode)
  		inode->i_state |= I_REFERENCED;
  }
  
@@ -63075,7 +63075,7 @@ index 96d62d976..e32b1a6af 100644
  
  /**
   * inode_sb_list_add - add inode to the superblock list of inodes
-@@ -741,6 +816,8 @@ static enum lru_status inode_lru_isolate(struct list_head *item,
+@@ -742,6 +817,8 @@ static enum lru_status inode_lru_isolate(struct list_head *item,
  	if (!spin_trylock(&inode->i_lock))
  		return LRU_SKIP;
  
@@ -63084,7 +63084,7 @@ index 96d62d976..e32b1a6af 100644
  	/*
  	 * Referenced or dirty inodes are still in use. Give them another pass
  	 * through the LRU as we canot reclaim them now.
-@@ -760,7 +837,18 @@ static enum lru_status inode_lru_isolate(struct list_head *item,
+@@ -761,7 +838,18 @@ static enum lru_status inode_lru_isolate(struct list_head *item,
  		return LRU_ROTATE;
  	}
  
@@ -63104,7 +63104,7 @@ index 96d62d976..e32b1a6af 100644
  		__iget(inode);
  		spin_unlock(&inode->i_lock);
  		spin_unlock(lru_lock);
-@@ -777,6 +865,12 @@ static enum lru_status inode_lru_isolate(struct list_head *item,
+@@ -778,6 +866,12 @@ static enum lru_status inode_lru_isolate(struct list_head *item,
  		iput(inode);
  		spin_lock(lru_lock);
  		return LRU_RETRY;
@@ -63117,7 +63117,7 @@ index 96d62d976..e32b1a6af 100644
  	}
  
  	WARN_ON(inode->i_state & I_NEW);
-@@ -1680,7 +1774,7 @@ EXPORT_SYMBOL(generic_update_time);
+@@ -1681,7 +1775,7 @@ EXPORT_SYMBOL(generic_update_time);
   * This does the actual work of updating an inodes time or version.  Must have
   * had called mnt_want_write() before calling this.
   */
@@ -63126,7 +63126,7 @@ index 96d62d976..e32b1a6af 100644
  {
  	int (*update_time)(struct inode *, struct timespec64 *, int);
  
-@@ -1689,6 +1783,7 @@ static int update_time(struct inode *inode, struct timespec64 *time, int flags)
+@@ -1690,6 +1784,7 @@ static int update_time(struct inode *inode, struct timespec64 *time, int flags)
  
  	return update_time(inode, time, flags);
  }
@@ -63842,7 +63842,7 @@ index 68f79d855..11083d84e 100644
 +
  #endif /* _LINUX_COMPAT_H */
 diff --git a/include/linux/fs.h b/include/linux/fs.h
-index 98e0349ad..7ca586760 100644
+index 59e8fe62a..77e4c16d7 100644
 --- a/include/linux/fs.h
 +++ b/include/linux/fs.h
 @@ -585,6 +585,11 @@ static inline void mapping_allow_writable(struct address_space *mapping)
@@ -63857,7 +63857,7 @@ index 98e0349ad..7ca586760 100644
  /*
   * Use sequence counter to get consistent i_size on 32-bit processors.
   */
-@@ -1349,6 +1354,7 @@ extern void fasync_free(struct fasync_struct *);
+@@ -1350,6 +1355,7 @@ extern void fasync_free(struct fasync_struct *);
  /* can be called from interrupts */
  extern void kill_fasync(struct fasync_struct **, int, int);
  
@@ -63865,7 +63865,7 @@ index 98e0349ad..7ca586760 100644
  extern void __f_setown(struct file *filp, struct pid *, enum pid_type, int force);
  extern int f_setown(struct file *filp, unsigned long arg, int force);
  extern void f_delown(struct file *filp);
-@@ -1842,6 +1848,7 @@ struct file_operations {
+@@ -1843,6 +1849,7 @@ struct file_operations {
  	ssize_t (*sendpage) (struct file *, struct page *, int, size_t, loff_t *, int);
  	unsigned long (*get_unmapped_area)(struct file *, unsigned long, unsigned long, unsigned long, unsigned long);
  	int (*check_flags)(int);
@@ -63873,7 +63873,7 @@ index 98e0349ad..7ca586760 100644
  	int (*flock) (struct file *, int, struct file_lock *);
  	ssize_t (*splice_write)(struct pipe_inode_info *, struct file *, loff_t *, size_t, unsigned int);
  	ssize_t (*splice_read)(struct file *, loff_t *, struct pipe_inode_info *, size_t, unsigned int);
-@@ -1912,6 +1919,12 @@ ssize_t rw_copy_check_uvector(int type, const struct iovec __user * uvector,
+@@ -1913,6 +1920,12 @@ ssize_t rw_copy_check_uvector(int type, const struct iovec __user * uvector,
  			      struct iovec *fast_pointer,
  			      struct iovec **ret_pointer);
  
@@ -63886,7 +63886,7 @@ index 98e0349ad..7ca586760 100644
  extern ssize_t __vfs_read(struct file *, char __user *, size_t, loff_t *);
  extern ssize_t vfs_read(struct file *, char __user *, size_t, loff_t *);
  extern ssize_t vfs_write(struct file *, const char __user *, size_t, loff_t *);
-@@ -1972,6 +1985,10 @@ struct super_operations {
+@@ -1973,6 +1986,10 @@ struct super_operations {
  				  struct shrink_control *);
  	long (*free_cached_objects)(struct super_block *,
  				    struct shrink_control *);
@@ -63897,7 +63897,7 @@ index 98e0349ad..7ca586760 100644
  };
  
  /*
-@@ -2139,6 +2156,9 @@ static inline void init_sync_kiocb(struct kiocb *kiocb, struct file *filp)
+@@ -2140,6 +2157,9 @@ static inline void init_sync_kiocb(struct kiocb *kiocb, struct file *filp)
   *
   * I_CREATING		New object's inode in the middle of setting up.
   *
@@ -63907,7 +63907,7 @@ index 98e0349ad..7ca586760 100644
   * Q: What is the difference between I_WILL_FREE and I_FREEING?
   */
  #define I_DIRTY_SYNC		(1 << 0)
-@@ -2161,6 +2181,7 @@ static inline void init_sync_kiocb(struct kiocb *kiocb, struct file *filp)
+@@ -2162,6 +2182,7 @@ static inline void init_sync_kiocb(struct kiocb *kiocb, struct file *filp)
  #define I_WB_SWITCH		(1 << 13)
  #define I_OVL_INUSE		(1 << 14)
  #define I_CREATING		(1 << 15)
@@ -63915,7 +63915,7 @@ index 98e0349ad..7ca586760 100644
  
  #define I_DIRTY_INODE (I_DIRTY_SYNC | I_DIRTY_DATASYNC)
  #define I_DIRTY (I_DIRTY_INODE | I_DIRTY_PAGES)
-@@ -2332,6 +2353,7 @@ extern int current_umask(void);
+@@ -2333,6 +2354,7 @@ extern int current_umask(void);
  extern void ihold(struct inode * inode);
  extern void iput(struct inode *);
  extern int generic_update_time(struct inode *, struct timespec64 *, int);
@@ -63923,7 +63923,7 @@ index 98e0349ad..7ca586760 100644
  
  /* /sys/fs */
  extern struct kobject *fs_kobj;
-@@ -2620,6 +2642,7 @@ static inline bool sb_is_blkdev_sb(struct super_block *sb)
+@@ -2621,6 +2643,7 @@ static inline bool sb_is_blkdev_sb(struct super_block *sb)
  	return false;
  }
  #endif
@@ -63931,7 +63931,7 @@ index 98e0349ad..7ca586760 100644
  extern int sync_filesystem(struct super_block *);
  extern const struct file_operations def_blk_fops;
  extern const struct file_operations def_chr_fops;
-@@ -3079,6 +3102,14 @@ static inline void remove_inode_hash(struct inode *inode)
+@@ -3080,6 +3103,14 @@ static inline void remove_inode_hash(struct inode *inode)
  		__remove_inode_hash(inode);
  }
  
@@ -65265,7 +65265,7 @@ index 790585f0e..85560927e 100644
  #define BOND_DEFAULT_TX_QUEUES 16   /* Default number of tx queues per device */
  
 diff --git a/init/Kconfig b/init/Kconfig
-index 47d40f399..f5434a978 100644
+index 74297c392..9a988689a 100644
 --- a/init/Kconfig
 +++ b/init/Kconfig
 @@ -74,6 +74,10 @@ config THREAD_INFO_IN_TASK
@@ -65300,7 +65300,7 @@ index 47d40f399..f5434a978 100644
  	help
  	  This feature enables the scheduler to track the clamped utilization
  	  of each CPU based on RUNNABLE tasks scheduled on that CPU.
-@@ -787,6 +802,7 @@ config NUMA_BALANCING
+@@ -786,6 +801,7 @@ config NUMA_BALANCING
  	depends on ARCH_SUPPORTS_NUMA_BALANCING
  	depends on !ARCH_WANT_NUMA_VARIABLE_LOCALITY
  	depends on SMP && NUMA && MIGRATION
@@ -65308,7 +65308,7 @@ index 47d40f399..f5434a978 100644
  	help
  	  This option adds support for automatic NUMA aware memory/task placement.
  	  The mechanism is quite primitive and is based on migrating memory when
-@@ -888,7 +904,7 @@ menuconfig CGROUP_SCHED
+@@ -887,7 +903,7 @@ menuconfig CGROUP_SCHED
  	  bandwidth allocation to such task groups. It uses cgroups to group
  	  tasks.
  
@@ -65317,7 +65317,7 @@ index 47d40f399..f5434a978 100644
  config FAIR_GROUP_SCHED
  	bool "Group scheduling for SCHED_OTHER"
  	depends on CGROUP_SCHED
-@@ -1103,6 +1119,22 @@ config USER_NS
+@@ -1102,6 +1118,22 @@ config USER_NS
  
  	  If unsure, say N.
  
@@ -65340,7 +65340,7 @@ index 47d40f399..f5434a978 100644
  config PID_NS
  	bool "PID Namespaces"
  	default y
-@@ -1135,6 +1167,7 @@ config CHECKPOINT_RESTORE
+@@ -1134,6 +1166,7 @@ config CHECKPOINT_RESTORE
  
  config SCHED_AUTOGROUP
  	bool "Automatic process group scheduling"
@@ -65348,7 +65348,7 @@ index 47d40f399..f5434a978 100644
  	select CGROUPS
  	select CGROUP_SCHED
  	select FAIR_GROUP_SCHED
-@@ -1229,7 +1262,6 @@ config CC_OPTIMIZE_FOR_PERFORMANCE
+@@ -1228,7 +1261,6 @@ config CC_OPTIMIZE_FOR_PERFORMANCE
  
  config CC_OPTIMIZE_FOR_PERFORMANCE_O3
  	bool "Optimize more for performance (-O3)"
@@ -65602,7 +65602,7 @@ index 080809560..237d810ab 100644
  	if (err)
  		goto bad_unshare_out;
 diff --git a/kernel/futex.c b/kernel/futex.c
-index 0cf84c866..e0bb628a5 100644
+index 82dfacb32..80c399ded 100644
 --- a/kernel/futex.c
 +++ b/kernel/futex.c
 @@ -215,6 +215,8 @@ struct futex_pi_state {
@@ -65623,7 +65623,7 @@ index 0cf84c866..e0bb628a5 100644
  } __randomize_layout;
  
  static const struct futex_q futex_q_init = {
-@@ -2420,6 +2424,29 @@ static int unqueue_me(struct futex_q *q)
+@@ -2437,6 +2441,29 @@ static int unqueue_me(struct futex_q *q)
  	return ret;
  }
  
@@ -65653,7 +65653,7 @@ index 0cf84c866..e0bb628a5 100644
  /*
   * PI futexes can not be requeued and must remove themself from the
   * hash bucket. The hash bucket lock (i.e. lock_ptr) is held on entry
-@@ -2783,6 +2810,211 @@ static int futex_wait_setup(u32 __user *uaddr, u32 val, unsigned int flags,
+@@ -2800,6 +2827,211 @@ static int futex_wait_setup(u32 __user *uaddr, u32 val, unsigned int flags,
  	return ret;
  }
  
@@ -65865,7 +65865,7 @@ index 0cf84c866..e0bb628a5 100644
  static int futex_wait(u32 __user *uaddr, unsigned int flags, u32 val,
  		      ktime_t *abs_time, u32 bitset)
  {
-@@ -3907,6 +4139,43 @@ long do_futex(u32 __user *uaddr, int op, u32 val, ktime_t *timeout,
+@@ -3924,6 +4156,43 @@ long do_futex(u32 __user *uaddr, int op, u32 val, ktime_t *timeout,
  	return -ENOSYS;
  }
  
@@ -65909,7 +65909,7 @@ index 0cf84c866..e0bb628a5 100644
  
  SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
  		struct __kernel_timespec __user *, utime, u32 __user *, uaddr2,
-@@ -3919,7 +4188,8 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
+@@ -3936,7 +4205,8 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
  
  	if (utime && (cmd == FUTEX_WAIT || cmd == FUTEX_LOCK_PI ||
  		      cmd == FUTEX_WAIT_BITSET ||
@@ -65919,7 +65919,7 @@ index 0cf84c866..e0bb628a5 100644
  		if (unlikely(should_fail_futex(!(op & FUTEX_PRIVATE_FLAG))))
  			return -EFAULT;
  		if (get_timespec64(&ts, utime))
-@@ -3928,7 +4198,7 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
+@@ -3945,7 +4215,7 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
  			return -EINVAL;
  
  		t = timespec64_to_ktime(ts);
@@ -65928,7 +65928,7 @@ index 0cf84c866..e0bb628a5 100644
  			t = ktime_add_safe(ktime_get(), t);
  		tp = &t;
  	}
-@@ -3940,6 +4210,25 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
+@@ -3957,6 +4227,25 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
  	    cmd == FUTEX_CMP_REQUEUE_PI || cmd == FUTEX_WAKE_OP)
  		val2 = (u32) (unsigned long) utime;
  
@@ -65954,7 +65954,7 @@ index 0cf84c866..e0bb628a5 100644
  	return do_futex(uaddr, op, val, tp, uaddr2, val2, val3);
  }
  
-@@ -4102,6 +4391,58 @@ COMPAT_SYSCALL_DEFINE3(get_robust_list, int, pid,
+@@ -4119,6 +4408,58 @@ COMPAT_SYSCALL_DEFINE3(get_robust_list, int, pid,
  #endif /* CONFIG_COMPAT */
  
  #ifdef CONFIG_COMPAT_32BIT_TIME
@@ -66013,7 +66013,7 @@ index 0cf84c866..e0bb628a5 100644
  SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
  		struct old_timespec32 __user *, utime, u32 __user *, uaddr2,
  		u32, val3)
-@@ -4113,14 +4454,15 @@ SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
+@@ -4130,14 +4471,15 @@ SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
  
  	if (utime && (cmd == FUTEX_WAIT || cmd == FUTEX_LOCK_PI ||
  		      cmd == FUTEX_WAIT_BITSET ||
@@ -66031,7 +66031,7 @@ index 0cf84c866..e0bb628a5 100644
  			t = ktime_add_safe(ktime_get(), t);
  		tp = &t;
  	}
-@@ -4128,6 +4470,19 @@ SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
+@@ -4145,6 +4487,19 @@ SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
  	    cmd == FUTEX_CMP_REQUEUE_PI || cmd == FUTEX_WAKE_OP)
  		val2 = (int) (unsigned long) utime;
  
@@ -74644,10 +74644,10 @@ index cb2c79a3e..9acb9d1a0 100644
  	return vma;
  
 diff --git a/mm/nommu.c b/mm/nommu.c
-index bd2b4e5ef..acdab5253 100644
+index 318df4e23..7f051e86e 100644
 --- a/mm/nommu.c
 +++ b/mm/nommu.c
-@@ -563,7 +563,7 @@ static void __put_nommu_region(struct vm_region *region)
+@@ -567,7 +567,7 @@ static void __put_nommu_region(struct vm_region *region)
  		up_write(&nommu_region_sem);
  
  		if (region->vm_file)
@@ -74656,7 +74656,7 @@ index bd2b4e5ef..acdab5253 100644
  
  		/* IO memory and memory shared directly out of the pagecache
  		 * from ramfs/tmpfs mustn't be released here */
-@@ -695,7 +695,7 @@ static void delete_vma(struct mm_struct *mm, struct vm_area_struct *vma)
+@@ -699,7 +699,7 @@ static void delete_vma(struct mm_struct *mm, struct vm_area_struct *vma)
  	if (vma->vm_ops && vma->vm_ops->close)
  		vma->vm_ops->close(vma);
  	if (vma->vm_file)
@@ -74665,7 +74665,7 @@ index bd2b4e5ef..acdab5253 100644
  	put_nommu_region(vma->vm_region);
  	vm_area_free(vma);
  }
-@@ -1218,7 +1218,7 @@ unsigned long do_mmap(struct file *file,
+@@ -1222,7 +1222,7 @@ unsigned long do_mmap(struct file *file,
  					goto error_just_free;
  				}
  			}
@@ -74674,7 +74674,7 @@ index bd2b4e5ef..acdab5253 100644
  			kmem_cache_free(vm_region_jar, region);
  			region = pregion;
  			result = start;
-@@ -1295,10 +1295,10 @@ unsigned long do_mmap(struct file *file,
+@@ -1299,10 +1299,10 @@ unsigned long do_mmap(struct file *file,
  	up_write(&nommu_region_sem);
  error:
  	if (region->vm_file)
