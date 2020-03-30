@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.6-lucjan-ll1-rc2
+
+- add exfat-Simplify-exfat_utf8_d_cmp-for-code-points-abov.patch
+- add exfat-Fix-discard-support.patch
+- add exfat-Remove-unnecessary-newlines-from-logging.patch
+
 5.6-lucjan-ll1-rc1
 
 - add ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch
