@@ -1,5 +1,83 @@
 ## CHANGELOG
 
+5.6-lucjan-ll1-rc1
+
+- add ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch
+- add drm-Remove-PageReserved-manipulation-from-drm_pci_al.patch
+- add block-Kconfig.iosched-set-default-value-of-IOSCHED_B.patch
+- add block-Fix-depends-for-BLK_DEV_ZONED.patch
+- add block-set-rq_affinity-2-for-full-multithreading-I-O-.patch
+- add i8042-decrease-debug-message-level-to-info.patch
+- add Increase-the-ext4-default-commit-age.patch
+- add silence-rapl.patch
+- add pci-pme-wakeups.patch
+- add ksm-wakeups.patch
+- add intel_idle-tweak-cpuidle-cstates.patch
+- add bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
+- add smpboot-reuse-timer-calibration.patch
+- add raid6-add-Kconfig-option-to-skip-raid6-benchmarking.patch
+- add Initialize-ata-before-graphics.patch
+- add give-rdrand-some-credit.patch
+- add ipv4-tcp-allow-the-memory-tuning-for-tcp-to-go-a-lit.patch
+- add kernel-time-reduce-ntp-wakeups.patch
+- add init-wait-for-partition-and-retry-scan.patch
+- add print-fsync-count-for-bootchart.patch
+- add Add-boot-option-to-allow-unsigned-modules.patch
+- add Enable-stateless-firmware-loading.patch
+- add Migrate-some-systemd-defaults-to-the-kernel-defaults.patch
+- add xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
+- add use-lfence-instead-of-rep-and-nop.patch
+- add do-accept-in-LIFO-order-for-cache-efficiency.patch
+- add locking-rwsem-spin-faster.patch
+- add ata-libahci-ignore-staggered-spin-up.patch
+- add print-CPU-that-faults.patch
+- add x86-microcode-Force-update-a-uCode-even-if-the-rev-i.patch
+- add x86-microcode-echo-2-reload-to-force-load-ucode.patch
+- add fix-bug-in-ucode-force-reload-revision-check.patch
+- add nvme-workaround.patch
+- add Don-t-report-an-error-if-PowerClamp-run-on-other-CPU.patch
+- add cpu-5.6-merge-graysky-s-patchset.patch
+- add init-Kconfig-enable-O3-for-all-arches.patch
+- add consolemap-Fix-a-memory-leaking-bug-in-drivers-tty-v.patch
+- add exfat-add-in-memory-and-on-disk-structures-and-heade.patch
+- add exfat-add-super-block-operations.patch
+- add exfat-add-inode-operations.patch
+- add exfat-add-directory-operations.patch
+- add exfat-add-file-operations.patch
+- add exfat-add-fat-entry-operations.patch
+- add exfat-add-bitmap-operations.patch
+- add exfat-add-exfat-cache.patch
+- add exfat-add-misc-operations.patch
+- add exfat-add-nls-operations.patch
+- add exfat-add-Kconfig-and-Makefile.patch
+- add MAINTAINERS-add-exfat-filesystem.patch
+- add exfat-update-file-system-parameter-handling.patch
+- add staging-exfat-Remove-old-exfat-driver.patch
+- add net-sched-allow-configuring-cake-qdisc-as-default.patch
+- add infiniband-Fix-__read_overflow2-error-with-O3-inlini.patch
+- add kbuild-add-fcf-protection-none-to-retpoline-flags.patch
+- add kbuild-reuse-intermediate-linker-scripts-in-the-fina.patch
+- add mm-Stop-kswapd-early-when-nothing-s-waiting-for-it-t.patch
+- add futex-Implement-mechanism-to-wait-on-any-of-several-.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-timeout-test.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wouldblock-t.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wake-up-test.patch
+- add futex-Add-Proton-compatibility-code.patch
+- add hwmon-applesmc-fix-UB-and-udelay-overflow.patch
+- add LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch
+- add LL-elevator-set-default-scheduler-to-bfq-for-blk-mq.patch
+- add LL-Add-.ll-version.patch
+- add LL-Implement-ll-branding-v5.6.patch
+- add vfs-keep-inodes-with-page-cache-off-the-inode-shrink.patch
+- add scsi-sd-block-Fix-regressions-in-read-only-block-dev.patch
+- add scsi-sd-block-Update-fix-regressions-in-read-only-bl.patch
+- add ZEN-Add-VHBA-driver.patch
+- add ZEN-intel-pstate-Implement-enable-parameter.patch
+- add BFQ-dev 20200330
+- add BMQ v5.6-r0
+- add AUFS 20200302
+- add UKSM 
+
 5.5-lucjan-ll53
 
 - update BFQ-dev 20200327
