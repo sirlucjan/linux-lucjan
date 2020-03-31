@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll1-rc3
+
+- add bpf-Undo-incorrect-__reg_bound_offset32-handling.patch
+
 5.6-lucjan-ll1-rc2
 
 - add exfat-Simplify-exfat_utf8_d_cmp-for-code-points-abov.patch
