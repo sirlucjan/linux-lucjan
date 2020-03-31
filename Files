@@ -1089,6 +1089,8 @@
     ├── 5.6-lucjan-ll1-rc4.patch
     ├── 5.6-lucjan-ll1-rc4.patch.sig
     ├── 5.6-lucjan-ll2-rc1.patch
-    └── 5.6-lucjan-ll2-rc1.patch.sig
+    ├── 5.6-lucjan-ll2-rc1.patch.sig
+    ├── 5.6-lucjan-ll2-rc2.patch
+    └── 5.6-lucjan-ll2-rc2.patch.sig
 
-16 directories, 1075 files
+16 directories, 1077 files
