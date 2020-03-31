@@ -88,6 +88,10 @@
 - add AUFS 20200302
 - add UKSM 
 
+5.5-lucjan-ll55-rc1
+
+- sync with upstream (drop Revert-bpf-Provide-better-register-bounds-after-jmp3.patch)
+
 5.5-lucjan-ll54
 
 - add Revert-bpf-Provide-better-register-bounds-after-jmp3.patch
