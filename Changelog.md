@@ -1,5 +1,12 @@
 ## CHANGELOG
 
+5.6-lucjan-ll2-rc1
+
+- add UKSM for 5.6
+- add bpf-Undo-incorrect-__reg_bound_offset32-handling.patch
+
+DROP 5.6-lucjan-ll1-rc3 && 5.6-lucjan-ll1-rc4
+
 5.6-lucjan-ll1-rc4
 
 - sync with upstream (drop bpf-Undo-incorrect-__reg_bound_offset32-handling.patch)
