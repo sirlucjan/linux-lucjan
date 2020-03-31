@@ -88,6 +88,11 @@
 - add AUFS 20200302
 - add UKSM 
 
+5.5-lucjan-ll54
+
+- add Revert-bpf-Provide-better-register-bounds-after-jmp3.patch
+- add WireGuard 0.0.20200330
+
 5.5-lucjan-ll53
 
 - update BFQ-dev 20200327
