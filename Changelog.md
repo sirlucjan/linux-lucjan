@@ -1,12 +1,18 @@
 ## CHANGELOG
 
+5.6-lucjan-ll3-rc2
+
+- sync wit upstream (drop bpf-Undo-incorrect-__reg_bound_offset32-handling.patch)
+
 5.6-lucjan-ll3-rc1
 
 - update exfat patches
 
+DROP 5.6-lucjan-ll2-rc1 && 5.6-lucjan-ll2-rc2
+
 5.6-lucjan-ll2-rc2
 
-- add bpf-Undo-incorrect-__reg_bound_offset32-handling.patch
+- sync wit upstream (drop bpf-Undo-incorrect-__reg_bound_offset32-handling.patch)
 
 5.6-lucjan-ll2-rc1
 
