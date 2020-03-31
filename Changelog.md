@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll1-rc4
+
+- sync with upstream (drop bpf-Undo-incorrect-__reg_bound_offset32-handling.patch)
+
 5.6-lucjan-ll1-rc3
 
 - add bpf-Undo-incorrect-__reg_bound_offset32-handling.patch
