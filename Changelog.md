@@ -1,10 +1,18 @@
 ## CHANGELOG
 
+5.6-lucjan-ll5-rc2
+
+- sync wit upstream (drop bpf-Undo-incorrect-__reg_bound_offset32-handling.patch)
+
 5.6-lucjan-ll15-rc1
 
 - add mac80211-fix-authentication-with-iwlwifi-mvm.patch
 
 DROP 5.6-lucjan-ll4-rc1 && 5.6-lucjan-ll4-rc2
+
+5.6-lucjan-ll4-rc2
+
+- sync wit upstream (drop bpf-Undo-incorrect-__reg_bound_offset32-handling.patch)
 
 5.6-lucjan-ll4-rc1
 
