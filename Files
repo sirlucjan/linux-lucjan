@@ -1088,7 +1088,11 @@
 │       ├── 5.6-lucjan-ll3-rc1.patch
 │       ├── 5.6-lucjan-ll3-rc1.patch.sig
 │       ├── 5.6-lucjan-ll3-rc2.patch
-│       └── 5.6-lucjan-ll3-rc2.patch.sig
+│       ├── 5.6-lucjan-ll3-rc2.patch.sig
+│       ├── 5.6-lucjan-ll4-rc1.patch
+│       ├── 5.6-lucjan-ll4-rc1.patch.sig
+│       ├── 5.6-lucjan-ll4-rc2.patch
+│       └── 5.6-lucjan-ll4-rc2.patch.sig
 ├── Changelog.md
 ├── Files
 ├── README.md
@@ -1096,10 +1100,6 @@
 │   ├── 5.5-lucjan-ll55-rc1.patch
 │   └── 5.5-lucjan-ll55-rc1.patch.sig
 └── trunk
-    ├── 5.6-lucjan-ll4-rc1.patch
-    ├── 5.6-lucjan-ll4-rc1.patch.sig
-    ├── 5.6-lucjan-ll4-rc2.patch
-    ├── 5.6-lucjan-ll4-rc2.patch.sig
     ├── 5.6-lucjan-ll5-rc1.patch
     ├── 5.6-lucjan-ll5-rc1.patch.sig
     ├── 5.6-lucjan-ll5-rc2.patch
