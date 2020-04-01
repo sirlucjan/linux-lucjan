@@ -134,6 +134,12 @@ DROP 5.6-lucjan-ll1-rc3 && 5.6-lucjan-ll1-rc4
 
 5.5-lucjan-ll55-rc1
 
+- sync with upstream (drop iwlwifi-don-t-send-GEO_TX_POWER_LIMIT-if-no-wgds-tab.patch)
+
+5.5-lucjan-ll55-rc1 --> 5.5-lucjan-ll55
+
+5.5-lucjan-ll55-rc1
+
 - sync with upstream (drop Revert-bpf-Provide-better-register-bounds-after-jmp3.patch)
 
 5.5-lucjan-ll54
