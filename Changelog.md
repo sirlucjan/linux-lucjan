@@ -1,5 +1,18 @@
 ## CHANGELOG
 
+5.6-lucjan-ll7
+
+- add lib-prepare-zstd-for-preboot-environment.patch
+- add lib-prepare-xxhash-for-preboot-environment.patch
+- add lib-add-zstd-support-to-decompress.patch
+- add init-add-support-for-zstd-compressed-kernel.patch
+- add usr-add-support-for-zstd-compressed-initramfs.patch
+- add x86-bump-ZO_z_extra_bytes-margin-for-zstd.patch
+- add x86-Add-support-for-ZSTD-compressed-kernel.patch
+- add .gitignore-add-ZSTD-compressed-files.patch
+
+5.6-lucjan-ll6-rc1 --> 5.6-lucjan-ll6
+
 5.6-lucjan-ll6-rc1
 
 - sync wit upstream (drop mac80211-fix-authentication-with-iwlwifi-mvm.patch)
