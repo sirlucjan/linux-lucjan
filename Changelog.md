@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll8
+
+- add BMQ v5.6-r1
+
 5.6-lucjan-ll7
 
 - add lib-prepare-zstd-for-preboot-environment.patch
