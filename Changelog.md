@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.6-lucjan-ll10
+
+- drop bmq-5.6-fix-build-error-with-BMQ-disabled.patch
+- add bmq-Fix-sync-up-error-when-BMQ-applied-but-not-enabl.patch
+- add bmq-Fix-cpu-topology-setup-for-BMQ-in-ryzen-system.patch
+
 5.6-lucjan-ll9
 
 - add bmq-5.6-fix-build-error-with-BMQ-disabled.patch
