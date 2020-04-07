@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll9
+
+- add bmq-5.6-fix-build-error-with-BMQ-disabled.patch
+
 5.6-lucjan-ll8
 
 - add BMQ v5.6-r1
