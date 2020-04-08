@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll11
+
+- add ALSA-hda-Fix-potential-access-overflow-in-beep-helpe.patch
+
 5.6-lucjan-ll10
 
 - drop bmq-5.6-fix-build-error-with-BMQ-disabled.patch
