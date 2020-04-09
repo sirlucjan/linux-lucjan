@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.6-lucjan-ll13
+
+- update mm-Stop-kswapd-early-when-nothing-s-waiting-for-it-t.patch
+- add mm-Disable-watermark-boosting-by-default.patch
+- add mm-Fully-disable-watermark-boosting-when-it-isn-t-us.patch
+
 5.6-lucjan-ll12
 
 - update LL-Brading v5.6
