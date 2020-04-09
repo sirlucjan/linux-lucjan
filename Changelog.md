@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll12
+
+- update LL-Brading v5.6
+
 5.6-lucjan-ll11
 
 - add ALSA-hda-Fix-potential-access-overflow-in-beep-helpe.patch
