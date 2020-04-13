@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll15
+
+- drop consolemap-Fix-a-memory-leaking-bug-in-drivers-tty-v.patch
+
 5.6-lucjan-ll14
 
 - add BMQ v5.6-r2
