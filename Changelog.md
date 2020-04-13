@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll14
+
+- add BMQ v5.6-r2
+
 5.6-lucjan-ll13
 
 - update mm-Stop-kswapd-early-when-nothing-s-waiting-for-it-t.patch
