@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll16
+
+- add AUFS 20200413
+
 5.6-lucjan-ll15
 
 - drop consolemap-Fix-a-memory-leaking-bug-in-drivers-tty-v.patch
