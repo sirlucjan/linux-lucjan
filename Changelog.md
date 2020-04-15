@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.6-lucjan-ll18-rc1
+
+- resync UKSM for 5.6
+- sync with upstream (drop ALSA-hda-Fix-potential-access-overflow-in-beep-helpe.patch,
+                      drop drm-Remove-PageReserved-manipulation-from-drm_pci_al.patch)
+
 5.6-lucjan-ll17
 
 - add mm-Proactive-compaction.patch
