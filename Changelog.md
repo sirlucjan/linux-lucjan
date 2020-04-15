@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll17
+
+- add mm-Proactive-compaction.patch
+
 5.6-lucjan-ll16
 
 - add AUFS 20200413
