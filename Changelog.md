@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll19
+
+- add x86-mm-pat-Restore-large-pages-after-fragmentation.patch
+
 5.6-lucjan-ll18-rc1 --> 5.6-lucjan-ll18
 
 5.6-lucjan-ll18-rc1
