@@ -1,5 +1,7 @@
 ## CHANGELOG
 
+5.6-lucjan-ll18-rc1 --> 5.6-lucjan-ll18
+
 5.6-lucjan-ll18-rc1
 
 - resync UKSM for 5.6
