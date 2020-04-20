@@ -1,5 +1,12 @@
 ## CHANGELOG
 
+5.6-lucjan-ll20
+
+- drop x86-mm-pat-Restore-large-pages-after-fragmentation.patch
+- add Revert-ACPI-EC-Do-not-clear-boot_ec_is_ecdt-in-acpi_.patch
+- add drm-amdgpu-fix-the-hw-hang-during-perform-system-reb.patch
+- add BMQ v5.6-r3
+
 5.6-lucjan-ll19
 
 - add x86-mm-pat-Restore-large-pages-after-fragmentation.patch
