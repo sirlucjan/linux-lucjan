@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.6-lucjan-ll21-rc1
+
+- sync with upstream (drop Revert-ACPI-EC-Do-not-clear-boot_ec_is_ecdt-in-acpi_.patch,
+                      drop drm-amdgpu-fix-the-hw-hang-during-perform-system-reb.patch)
+
 5.6-lucjan-ll20
 
 - drop x86-mm-pat-Restore-large-pages-after-fragmentation.patch
