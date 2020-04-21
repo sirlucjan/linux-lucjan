@@ -1,5 +1,7 @@
 ## CHANGELOG
 
+5.6-lucjan-ll21-rc1 --> 5.6-lucjan-ll21
+
 5.6-lucjan-ll21-rc1
 
 - sync with upstream (drop Revert-ACPI-EC-Do-not-clear-boot_ec_is_ecdt-in-acpi_.patch,
