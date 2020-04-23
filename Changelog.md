@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.6-lucjan-ll22
+
+- drop cpufreq-intel_pstate-Set-default-cpufreq_driver-to-i.patch
+- add ZEN-intel-pstate-Implement-enable-parameter.patch
+
 5.6-lucjan-ll24
 
 - drop Glitched-ondemand-BMQ.patch
