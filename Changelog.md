@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.6-lucjan-ll24
+
+- drop Glitched-ondemand-BMQ.patch
+- update LL-Brading v5.6
+
 5.6-lucjan-ll23
 
 - add Glitched-ondemand-BMQ.patch
