@@ -1,6 +1,6 @@
-From e255a69422a05e6b9024effbe63b55076c2b8c15 Mon Sep 17 00:00:00 2001
+From 0292f0b1efa8d33f6fa36edd4f2212adaff7772a Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Thu, 23 Apr 2020 02:24:13 +0200
+Date: Thu, 23 Apr 2020 02:23:09 +0200
 Subject: [PATCH] 5.6-lucjan-ll22
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -561,7 +561,7 @@ index 3f801461f..ae3ba861c 100644
  
  IO Interface Files
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index c07815d23..468c45b89 100644
+index 6ba631cc5..003a9155c 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
 @@ -436,6 +436,11 @@
@@ -2740,7 +2740,7 @@ index 5a5332b35..43e973d6b 100644
  M:	Valdis Kletnieks <valdis.kletnieks@vt.edu>
  L:	linux-fsdevel@vger.kernel.org
 diff --git a/Makefile b/Makefile
-index af76c00de..67509fc01 100644
+index 9401a9ff2..13af9832e 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Kleptomaniac Octopus
@@ -45786,10 +45786,10 @@ index 000000000..b3152c0ce
 +	return err;
 +}
 diff --git a/fs/block_dev.c b/fs/block_dev.c
-index 69bf2fb6f..46f67147a 100644
+index 84fe0162f..8f3db4a19 100644
 --- a/fs/block_dev.c
 +++ b/fs/block_dev.c
-@@ -79,7 +79,7 @@ void kill_bdev(struct block_device *bdev)
+@@ -80,7 +80,7 @@ void kill_bdev(struct block_device *bdev)
  {
  	struct address_space *mapping = bdev->bd_inode->i_mapping;
  
