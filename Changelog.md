@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.6-lucjan-ll22
+
+- drop ZEN-intel-pstate-Implement-enable-parameter.patch
+- add cpufreq-intel_pstate-Set-default-cpufreq_driver-to-i.patch
+
 5.6-lucjan-ll21-rc1 --> 5.6-lucjan-ll21
 
 5.6-lucjan-ll21-rc1
