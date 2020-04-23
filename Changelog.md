@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll23
+
+- add Glitched-ondemand-BMQ.patch
+
 5.6-lucjan-ll22
 
 - drop ZEN-intel-pstate-Implement-enable-parameter.patch
