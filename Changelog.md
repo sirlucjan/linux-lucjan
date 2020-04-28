@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll27
+
+- update LL-Brading v5.6
+
 5.6-lucjan-ll26
 
 - BFQ-dev 20200424
