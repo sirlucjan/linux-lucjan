@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll28
+
+- add mm-5.6-update-proactive-compaction-to-v4.patch
+
 5.6-lucjan-ll27
 
 - update LL-Brading v5.6
