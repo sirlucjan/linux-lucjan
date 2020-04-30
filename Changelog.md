@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll29
+
+- BFQ-dev 20200424
+
 5.6-lucjan-ll28
 
 - add mm-5.6-update-proactive-compaction-to-v4.patch
