@@ -1,5 +1,18 @@
 ## CHANGELOG
 
+5.6-lucjan-ll30
+
+- add mm-pagealloc.c-call-touch_nmi_watchdog-on-max-order-.patch
+- add mm-initialize-deferred-pages-with-interrupts-enabled.patch
+- add mm-call-cond_resched-from-deferred_init_memmap.patch
+- add padata-remove-exit-routine.patch
+- add padata-initialize-earlier.patch
+- add padata-allocate-work-structures-for-parallel-jobs-fr.patch
+- add padata-add-basic-support-for-multithreaded-jobs.patch
+- add mm-move-zone-iterator-outside-of-deferred_init_maxor.patch
+- add mm-parallelize-deferred_init_memmap.patch
+- add padata-document-multithreaded-jobs.patch
+
 5.6-lucjan-ll29
 
 - BFQ-dev 20200424
