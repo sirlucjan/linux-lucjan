@@ -1,6 +1,6 @@
-From 81a92be9a51910f77bf827b2240bf3b21eb4c4e5 Mon Sep 17 00:00:00 2001
+From 2de28eae29dbdb50236cb65e394e6cf07126bba7 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Sun, 3 May 2020 14:30:02 +0200
+Date: Sun, 3 May 2020 18:27:45 +0200
 Subject: [PATCH] 5.6-lucjan-ll30
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -2859,7 +2859,7 @@ index 5a5332b35..566d6fd0a 100644
  M:	Linus Torvalds <torvalds@linux-foundation.org>
  L:	linux-kernel@vger.kernel.org
 diff --git a/Makefile b/Makefile
-index e7101c99d..dc2982423 100644
+index 4b29cc976..ee14f46ed 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Kleptomaniac Octopus
@@ -55569,7 +55569,7 @@ index 9e5cbe5ea..c293de91d 100644
  #ifdef CONFIG_SMP
  	.pushable_tasks	= PLIST_NODE_INIT(init_task.pushable_tasks, MAX_PRIO),
 diff --git a/init/main.c b/init/main.c
-index ee4947af8..5451a80e4 100644
+index 9c7948b37..3adab41ee 100644
 --- a/init/main.c
 +++ b/init/main.c
 @@ -94,6 +94,7 @@
@@ -55580,7 +55580,7 @@ index ee4947af8..5451a80e4 100644
  
  #include <asm/io.h>
  #include <asm/bugs.h>
-@@ -1438,6 +1439,7 @@ static noinline void __init kernel_init_freeable(void)
+@@ -1437,6 +1438,7 @@ static noinline void __init kernel_init_freeable(void)
  	smp_init();
  	sched_init_smp();
  
@@ -63284,7 +63284,7 @@ index 000000000..fca42b270
 +#endif
 +#endif /* BMQ_SCHED_H */
 diff --git a/kernel/sched/core.c b/kernel/sched/core.c
-index da8a19470..33e97d636 100644
+index 3dd675697..1214a91f0 100644
 --- a/kernel/sched/core.c
 +++ b/kernel/sched/core.c
 @@ -57,7 +57,11 @@ const_debug unsigned int sysctl_sched_features =
@@ -63375,7 +63375,7 @@ index 7fbaee24c..af350d0af 100644
 +#endif
  #endif
 diff --git a/kernel/sched/cputime.c b/kernel/sched/cputime.c
-index dac9104d1..a0d474706 100644
+index ff9435dee..0ee9967d2 100644
 --- a/kernel/sched/cputime.c
 +++ b/kernel/sched/cputime.c
 @@ -122,7 +122,7 @@ void account_user_time(struct task_struct *p, u64 cputime)
@@ -72504,7 +72504,7 @@ index a1730d42e..f2184dfed 100644
  $(obj)/lib-ksyms.o: $(lib-target) FORCE
  	$(call if_changed,export_list)
 diff --git a/scripts/Makefile.lib b/scripts/Makefile.lib
-index 752ff0a22..4b99893ef 100644
+index f24ff5a90..373b1f9ab 100644
 --- a/scripts/Makefile.lib
 +++ b/scripts/Makefile.lib
 @@ -394,6 +394,21 @@ quiet_cmd_xzkern = XZKERN  $@
