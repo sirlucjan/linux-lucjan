@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll31
+
+- add pci-Enable-overrides-for-missing-ACS-capabilities.patch
+
 5.6-lucjan-ll30
 
 - add mm-pagealloc.c-call-touch_nmi_watchdog-on-max-order-.patch
