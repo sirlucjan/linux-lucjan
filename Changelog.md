@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll32
+
+- add BFQ-dev 20200505
+
 5.6-lucjan-ll31
 
 - add pci-Enable-overrides-for-missing-ACS-capabilities.patch
@@ -19,7 +23,7 @@
 
 5.6-lucjan-ll29
 
-- BFQ-dev 20200424
+- add BFQ-dev 20200424
 
 5.6-lucjan-ll28
 
