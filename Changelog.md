@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll34
+
+- add kvm-ioapic-Restrict-lazy-EOI-update-to-edge-triggere.patch
+
 5.6-lucjan-ll33
 
 - add BFQ-dev 20200506
