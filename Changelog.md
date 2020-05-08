@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.6-lucjan-ll37
+
+- add gcc-plugins-drop-support-for-GCC-4.7.patch
+- add gcc-common.h-Update-for-GCC-10.patch
+
 5.6-lucjan-ll36
 
 - drop scatterlist-Don-t-allocate-sg-lists-using-__get_free.patch
