@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll36
+
+- drop scatterlist-Don-t-allocate-sg-lists-using-__get_free.patch
+
 5.6-lucjan-ll35
 
 - add scatterlist-Don-t-allocate-sg-lists-using-__get_free.patch
