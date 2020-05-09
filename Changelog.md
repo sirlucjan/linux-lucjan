@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll38
+
+- add BMQ v5.6-r4
+
 5.6-lucjan-ll37
 
 - add gcc-plugins-drop-support-for-GCC-4.7.patch
