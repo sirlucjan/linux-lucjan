@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.6-lucjan-ll39
+
+- add Makefile-disallow-data-races-on-gcc-10-as-well.patch
+- add x86-Fix-early-boot-crash-on-gcc-10-next-try.patch
+
 5.6-lucjan-ll38
 
 - add BMQ v5.6-r4
