@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.6-lucjan-ll41
+
+- update x86-fsgsbase-64-move-save_fsgs-to-header-file.patch
+- update x86-fsgsbase-64-Use-FSGSBASE-instructions-on-thread-.patch
+
 5.6-lucjan-ll40
 
 - add x86-ptrace-Prevent-ptrace-from-clearing-the-FS-GS-se.patch
