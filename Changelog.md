@@ -1,5 +1,26 @@
 ## CHANGELOG
 
+5.6-lucjan-ll40
+
+- add x86-ptrace-Prevent-ptrace-from-clearing-the-FS-GS-se.patch
+- add selftests-x86-fsgsbase-Test-GS-selector-on-ptracer-i.patch
+- add x86-cpu-Add-unsafe_fsgsbase-to-enable-CR4.FSGSBASE.patch
+- add x86-entry-64-Clean-up-paranoid-exit.patch
+- add x86-entry-64-Switch-CR3-before-SWAPGS-in-paranoid-en.patch
+- add x86-entry-64-Introduce-the-FIND_PERCPU_BASE-macro.patch
+- add x86-entry-64-Handle-FSGSBASE-enabled-paranoid-entry-.patch
+- add x86-entry-64-Document-GSBASE-handling-in-the-paranoi.patch
+- add x86-fsgsbase-64-Add-intrinsics-for-FSGSBASE-instruct.patch
+- add x86-fsgsbase-64-Enable-FSGSBASE-instructions-in-help.patch
+- add x86-fsgsbase-64-Use-FSGSBASE-in-switch_to-if-availab.patch
+- add x86-fsgsbase-64-move-save_fsgs-to-header-file.patch
+- add x86-fsgsbase-64-Use-FSGSBASE-instructions-on-thread-.patch
+- add x86-speculation-swapgs-Check-FSGSBASE-in-enabling-SW.patch
+- add selftests-x86-fsgsbase-Test-ptracer-induced-GS-base-.patch
+- add x86-fsgsbase-64-Enable-FSGSBASE-on-64bit-by-default-.patch
+- add x86-elf-Enumerate-kernel-FSGSBASE-capability-in-AT_H.patch
+- add Documentation-x86-64-Add-documentation-for-GS-FS-add.patch
+
 5.6-lucjan-ll39
 
 - add Makefile-disallow-data-races-on-gcc-10-as-well.patch
