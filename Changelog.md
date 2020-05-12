@@ -1,5 +1,18 @@
 ## CHANGELOG
 
+5.6-lucjan-ll42
+
+- add vboxsf-don-t-use-the-source-name-in-the-bdi-name.patch
+- add bdi-move-bdi_dev_name-out-of-line.patch
+- add bdi-use-bdi_dev_name-to-get-device-name.patch
+- add bdi-add-a-dev_name-field-to-struct-backing_dev_info.patch
+- add driver-core-remove-device_create_vargs.patch
+- add bdi-unexport-bdi_register_va.patch
+- add bdi-remove-bdi_register_owner.patch
+- add bdi-simplify-bdi_alloc.patch
+- add bdi-remove-the-name-field-in-struct-backing_dev_info.patch
+- add bdi-fix-up-for-remove-the-name-field-in-struct-backi.patch
+
 5.6-lucjan-ll41
 
 - update x86-fsgsbase-64-move-save_fsgs-to-header-file.patch
