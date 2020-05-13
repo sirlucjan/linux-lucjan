@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.6-lucjan-ll43-rc1
+
+- sync with upstream (drop kvm-ioapic-Restrict-lazy-EOI-update-to-edge-triggere.patch,
+                      drop bdi-move-bdi_dev_name-out-of-line.patch,
+                      drop bdi-add-a-dev_name-field-to-struct-backing_dev_info.patch)
+
 5.6-lucjan-ll42
 
 - add vboxsf-don-t-use-the-source-name-in-the-bdi-name.patch
