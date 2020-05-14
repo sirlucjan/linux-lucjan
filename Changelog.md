@@ -1,5 +1,7 @@
 ## CHANGELOG
 
+5.6-lucjan-ll43-rc1 --> 5.6-lucjan-ll43
+
 5.6-lucjan-ll43-rc1
 
 - sync with upstream (drop kvm-ioapic-Restrict-lazy-EOI-update-to-edge-triggere.patch,
