@@ -1,5 +1,16 @@
 ## CHANGELOG
 
+5.6-lucjan-ll45
+
+- add gcc-10-warnings-fix-low-hanging-fruit.patch
+- add Stop-the-ad-hoc-games-with-Wno-maybe-initialized.patch
+- add gcc-10-disable-zero-length-bounds-warning-for-now.patch
+- add gcc-10-disable-array-bounds-warning-for-now.patch
+- add gcc-10-disable-stringop-overflow-warning-for-now.patch
+- add gcc-10-disable-restrict-warning-for-now.patch
+- add gcc-10-avoid-shadowing-standard-library-free-in-cryp.patch
+- add gcc-10-mark-more-functions-__init-to-avoid-section-m.patch
+
 5.6-lucjan-ll44
 
 - add BFQ-dev 20200514
