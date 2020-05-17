@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll46
+
+- update cpu-5.6-merge-graysky-s-patchset.patch
+
 5.6-lucjan-ll45
 
 - add gcc-10-warnings-fix-low-hanging-fruit.patch
