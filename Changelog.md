@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll48
+
+- add blk-mq-remove-the-bio-argument-to-prepare_request.patch
+
 5.6-lucjan-ll47
 
 - add AUFS 20200518
