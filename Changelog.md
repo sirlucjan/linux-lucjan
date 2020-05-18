@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll49-rc2
+
+- sync wit upstream (drop Makefile-disallow-data-races-on-gcc-10-as-well.patch)
+
 5.6-lucjan-ll49-rc1
 
 - sync with upstream (drop gcc-10-warnings-fix-low-hanging-fruit.patch,
