@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll47
+
+- add AUFS 20200518
+
 5.6-lucjan-ll46
 
 - update cpu-5.6-merge-graysky-s-patchset.patch
