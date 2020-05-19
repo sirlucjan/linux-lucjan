@@ -1,5 +1,18 @@
 ## CHANGELOG
 
+5.6-lucjan-ll50-rc1
+
+- sync with upstream (drop gcc-10-warnings-fix-low-hanging-fruit.patch,
+                      drop Stop-the-ad-hoc-games-with-Wno-maybe-initialized.patch,
+                      drop gcc-10-disable-zero-length-bounds-warning-for-now.patch,
+                      drop gcc-10-disable-array-bounds-warning-for-now.patch,
+                      drop gcc-10-disable-stringop-overflow-warning-for-now.patch,
+                      drop gcc-10-disable-restrict-warning-for-now.patch,
+                      drop gcc-10-avoid-shadowing-standard-library-free-in-cryp.patch,
+                      drop gcc-10-mark-more-functions-__init-to-avoid-section-m.patch,
+                      drop x86-Fix-early-boot-crash-on-gcc-10-next-try.patch,
+                      drop Makefile-disallow-data-races-on-gcc-10-as-well.patch)
+
 5.6-lucjan-ll49
 
 - add mm-5.6-update-proactive-compaction-to-v5.patch
