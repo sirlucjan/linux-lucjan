@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.6-lucjan-ll50
+
+- add KVM-x86-only-do-L1TF-workaround-on-affected-processo.patch
+
+DROP 5.6-lucjan-ll50-rc1
+
 5.6-lucjan-ll50-rc1
 
 - sync with upstream (drop gcc-10-warnings-fix-low-hanging-fruit.patch,
