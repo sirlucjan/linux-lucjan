@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.6-lucjan-ll49
+
+- add mm-5.6-update-proactive-compaction-to-v5.patch
+
+DROP 5.6-lucjan-ll49-rc2
+
 5.6-lucjan-ll49-rc2
 
 - sync wit upstream (drop Makefile-disallow-data-races-on-gcc-10-as-well.patch)
