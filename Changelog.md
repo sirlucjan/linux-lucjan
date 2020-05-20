@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.6-lucjan-ll52
+
+- add init-add-support-for-zstd-compressed-modules.patch
+
+5.6-lucjan-ll51-rc1 --> 5.6-lucjan-ll51
+
 5.6-lucjan-ll51-rc1
 
 - sync with upstream (drop gcc-10-warnings-fix-low-hanging-fruit.patch,
