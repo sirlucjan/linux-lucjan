@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll153
+
+- update UKSM for 5.6
+
 5.6-lucjan-ll52
 
 - add init-add-support-for-zstd-compressed-modules.patch
