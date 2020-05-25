@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.6-lucjan-ll55-rc1
+
+- sync wit upstream (drop gcc-common.h-Update-for-GCC-10.patch)
+- resync gcc-plugins-drop-support-for-GCC-4.7.patch
+
 5.6-lucjan-ll54
 
 - update UKSM for 5.6
