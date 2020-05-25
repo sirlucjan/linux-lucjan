@@ -1,6 +1,10 @@
 ## CHANGELOG
 
-5.6-lucjan-ll153
+5.6-lucjan-ll54
+
+- update UKSM for 5.6
+
+5.6-lucjan-ll53
 
 - update UKSM for 5.6
 
