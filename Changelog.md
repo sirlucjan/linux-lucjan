@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.6-lucjan-ll56-rc1
+
+- sync wit upstream (drop gcc-common.h-Update-for-GCC-10.patch)
+- resync gcc-plugins-drop-support-for-GCC-4.7.patch
+
 5.6-lucjan-ll55
 
 - add mm-Don-t-stop-kswapd-on-a-per-node-basis-when-there-.patch
