@@ -1,5 +1,7 @@
 ## CHANGELOG
 
+5.6-lucjan-ll56-rc1 --> 5.6-lucjan-ll56
+
 5.6-lucjan-ll56-rc1
 
 - sync wit upstream (drop gcc-common.h-Update-for-GCC-10.patch)
