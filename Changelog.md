@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll57
+
+- add block-Flag-elevators-suitable-for-single-queue.patch
+
 5.6-lucjan-ll56-rc1 --> 5.6-lucjan-ll56
 
 5.6-lucjan-ll56-rc1
