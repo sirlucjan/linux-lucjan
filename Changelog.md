@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll60
+
+- add kbuild-Disable-stack-conservation-for-GCC.patch
+
 5.6-lucjan-ll59
 
 - add mm-5.6-proactive-compaction-v6.patch
