@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.6-lucjan-ll59
+
+- add mm-5.6-proactive-compaction-v6.patch
+
 5.6-lucjan-ll58
 
 - add fsgsbase-5.6-v13.patch
