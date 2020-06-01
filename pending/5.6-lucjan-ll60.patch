@@ -1,6 +1,6 @@
-From 214e17391c94434bff1d7ac9ecd6a50c82ceb52b Mon Sep 17 00:00:00 2001
+From 9917670cc417437ee640897b2a349df65ac781ed Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Tue, 2 Jun 2020 01:29:57 +0200
+Date: Tue, 2 Jun 2020 01:50:25 +0200
 Subject: [PATCH] 5.6-lucjan-ll60
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3120,7 +3120,7 @@ index 5a5332b35..ba04656e1 100644
  M:	Valdis Kletnieks <valdis.kletnieks@vt.edu>
  L:	linux-fsdevel@vger.kernel.org
 diff --git a/Makefile b/Makefile
-index 3eca0c523..9ae55d8ed 100644
+index 3414a70ed..ae62a4779 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Kleptomaniac Octopus
@@ -4560,7 +4560,7 @@ index 6a99535d7..e8a4d84a8 100644
  		goto out;
  	}
 diff --git a/arch/x86/kernel/process.c b/arch/x86/kernel/process.c
-index 3053c85e0..72f94dd37 100644
+index 9898f672b..1e1748d70 100644
 --- a/arch/x86/kernel/process.c
 +++ b/arch/x86/kernel/process.c
 @@ -141,10 +141,12 @@ int copy_thread_tls(unsigned long clone_flags, unsigned long sp,
@@ -8911,7 +8911,7 @@ index a229b94d5..0862bf707 100644
   * blkcg_add_delay - add delay to this blkg
   * @blkg: blkg of interest
 diff --git a/block/blk-core.c b/block/blk-core.c
-index 60dc9552e..322591b63 100644
+index 922329076..059629048 100644
 --- a/block/blk-core.c
 +++ b/block/blk-core.c
 @@ -496,7 +496,7 @@ struct request_queue *blk_alloc_queue_node(gfp_t gfp_mask, int node_id)
@@ -8940,7 +8940,7 @@ index 60dc9552e..322591b63 100644
  		char b[BDEVNAME_SIZE];
  
  		if (op_is_flush(bio->bi_opf) && !bio_sectors(bio))
-@@ -1173,6 +1172,9 @@ blk_qc_t submit_bio(struct bio *bio)
+@@ -1170,6 +1169,9 @@ blk_qc_t submit_bio(struct bio *bio)
  			count_vm_events(PGPGIN, count);
  		}
  
@@ -55908,10 +55908,10 @@ index 664f52c6d..f2208851f 100644
  
  #define lockdep_assert_held(l)			do { (void)(l); } while (0)
 diff --git a/include/linux/mm.h b/include/linux/mm.h
-index c54fb96cb..79c6ed7e9 100644
+index 96deeecd9..4b4e7f742 100644
 --- a/include/linux/mm.h
 +++ b/include/linux/mm.h
-@@ -1487,6 +1487,28 @@ static inline void unmap_shared_mapping_range(struct address_space *mapping,
+@@ -1498,6 +1498,28 @@ static inline void unmap_shared_mapping_range(struct address_space *mapping,
  	unmap_mapping_range(mapping, holebegin, holelen, 0);
  }
  
@@ -55940,7 +55940,7 @@ index c54fb96cb..79c6ed7e9 100644
  extern int access_process_vm(struct task_struct *tsk, unsigned long addr,
  		void *buf, int len, unsigned int gup_flags);
  extern int access_remote_vm(struct mm_struct *mm, unsigned long addr,
-@@ -2402,7 +2424,11 @@ int __must_check write_one_page(struct page *page);
+@@ -2413,7 +2435,11 @@ int __must_check write_one_page(struct page *page);
  void task_dirty_inc(struct task_struct *tsk);
  
  /* readahead.c */
@@ -74301,10 +74301,10 @@ index 55094e63b..4f3e3ee61 100644
  static int zswap_zpool_param_set(const char *, const struct kernel_param *);
  static struct kernel_param_ops zswap_zpool_param_ops = {
 diff --git a/net/ipv4/inet_connection_sock.c b/net/ipv4/inet_connection_sock.c
-index d545fb99a..03b7b404a 100644
+index 76afe9390..3e04142fa 100644
 --- a/net/ipv4/inet_connection_sock.c
 +++ b/net/ipv4/inet_connection_sock.c
-@@ -407,7 +407,7 @@ static int inet_csk_wait_for_connect(struct sock *sk, long timeo)
+@@ -412,7 +412,7 @@ static int inet_csk_wait_for_connect(struct sock *sk, long timeo)
  	 * having to remove and re-insert us on the wait queue.
  	 */
  	for (;;) {
