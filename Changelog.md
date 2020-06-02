@@ -1,5 +1,18 @@
 ## CHANGELOG
 
+5.7-lucjan-ll3-rc1
+
+- add mm-pagealloc.c-call-touch_nmi_watchdog-on-max-order-.patch
+- add mm-initialize-deferred-pages-with-interrupts-enabled.patch
+- add mm-call-cond_resched-from-deferred_init_memmap.patch
+- add padata-remove-exit-routine.patch
+- add padata-initialize-earlier.patch
+- add padata-allocate-work-structures-for-parallel-jobs-fr.patch
+- add padata-add-basic-support-for-multithreaded-jobs.patch
+- add mm-move-zone-iterator-outside-of-deferred_init_maxor.patch
+- add mm-parallelize-deferred_init_memmap.patch
+- add padata-document-multithreaded-jobs.patch
+
 5.7-lucjan-ll2-rc1
 
 - add bmq-Fix-compile-error-in-psi.c.patch
@@ -77,16 +90,6 @@
 - add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-timeout-test.patch
 - add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wouldblock-t.patch
 - add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wake-up-test.patch
-- add mm-pagealloc.c-call-touch_nmi_watchdog-on-max-order-.patch
-- add mm-initialize-deferred-pages-with-interrupts-enabled.patch
-- add mm-call-cond_resched-from-deferred_init_memmap.patch
-- add padata-remove-exit-routine.patch
-- add padata-initialize-earlier.patch
-- add padata-allocate-work-structures-for-parallel-jobs-fr.patch
-- add padata-add-basic-support-for-multithreaded-jobs.patch
-- add mm-move-zone-iterator-outside-of-deferred_init_maxor.patch
-- add mm-parallelize-deferred_init_memmap.patch
-- add padata-document-multithreaded-jobs.patch
 - add lib-prepare-zstd-for-preboot-environment.patch
 - add lib-prepare-xxhash-for-preboot-environment.patch
 - add lib-add-zstd-support-to-decompress.patch
