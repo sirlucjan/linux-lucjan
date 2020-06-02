@@ -1,5 +1,110 @@
 ## CHANGELOG
 
+5.7-lucjan-ll1
+
+- add driver-core-remove-device_create_vargs.patch
+- add bdi-unexport-bdi_register_va.patch
+- add bdi-remove-bdi_register_owner.patch
+- add bdi-simplify-bdi_alloc.patch
+- add bdi-remove-the-name-field-in-struct-backing_dev_info.patch
+- add bdi-fix-up-for-remove-the-name-field-in-struct-backi.patch
+- add block-Kconfig.iosched-set-default-value-of-IOSCHED_B.patch
+- add block-Fix-depends-for-BLK_DEV_ZONED.patch
+- add block-set-rq_affinity-2-for-full-multithreading-I-O-.patch
+- add blk-mq-remove-the-bio-argument-to-prepare_request.patch
+- add block-Flag-elevators-suitable-for-single-queue.patch
+- add i8042-decrease-debug-message-level-to-info.patch
+- add Increase-the-ext4-default-commit-age.patch
+- add silence-rapl.patch
+- add pci-pme-wakeups.patch
+- add ksm-wakeups.patch
+- add intel_idle-tweak-cpuidle-cstates.patch
+- add bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
+- add smpboot-reuse-timer-calibration.patch
+- add raid6-add-Kconfig-option-to-skip-raid6-benchmarking.patch
+- add Initialize-ata-before-graphics.patch
+- add give-rdrand-some-credit.patch
+- add ipv4-tcp-allow-the-memory-tuning-for-tcp-to-go-a-lit.patch
+- add kernel-time-reduce-ntp-wakeups.patch
+- add init-wait-for-partition-and-retry-scan.patch
+- add print-fsync-count-for-bootchart.patch
+- add Add-boot-option-to-allow-unsigned-modules.patch
+- add Enable-stateless-firmware-loading.patch
+- add Migrate-some-systemd-defaults-to-the-kernel-defaults.patch
+- add xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
+- add use-lfence-instead-of-rep-and-nop.patch
+- add do-accept-in-LIFO-order-for-cache-efficiency.patch
+- add locking-rwsem-spin-faster.patch
+- add ata-libahci-ignore-staggered-spin-up.patch
+- add print-CPU-that-faults.patch
+- add x86-microcode-Force-update-a-uCode-even-if-the-rev-i.patch
+- add x86-microcode-echo-2-reload-to-force-load-ucode.patch
+- add fix-bug-in-ucode-force-reload-revision-check.patch
+- add nvme-workaround.patch
+- add Don-t-report-an-error-if-PowerClamp-run-on-other-CPU.patch
+- add net-sched-allow-configuring-cake-qdisc-as-default.patch
+- add infiniband-Fix-__read_overflow2-error-with-O3-inlini.patch
+- add kbuild-add-fcf-protection-none-to-retpoline-flags.patch
+- add mm-Disable-watermark-boosting-by-default.patch
+- add mm-Stop-kswapd-early-when-nothing-s-waiting-for-it-t.patch
+- add mm-Fully-disable-watermark-boosting-when-it-isn-t-us.patch
+- add pci-Enable-overrides-for-missing-ACS-capabilities.patch
+- add mm-Don-t-stop-kswapd-on-a-per-node-basis-when-there-.patch
+- add mm-Proactive-compaction.patch
+- add mm-5.7-proactive-compaction-v6.patch
+- add kbuild-Disable-stack-conservation-for-GCC.patch
+- add x86-ptrace-Prevent-ptrace-from-clearing-the-FS-GS-se.patch
+- add x86-cpu-Add-unsafe_fsgsbase-to-enable-CR4.FSGSBASE.patch
+- add x86-fsgsbase-64-Add-intrinsics-for-FSGSBASE-instruct.patch
+- add x86-fsgsbase-64-Enable-FSGSBASE-instructions-in-help.patch
+- add x86-process-64-Use-FSBSBASE-in-switch_to-if-availabl.patch
+- add x86-process-64-Make-save_fsgs-public-available.patch
+- add x86-process-64-Use-FSGSBASE-instructions-on-thread-c.patch
+- add x86-speculation-swapgs-Check-FSGSBASE-in-enabling-SW.patch
+- add x86-entry-64-Switch-CR3-before-SWAPGS-in-paranoid-en.patch
+- add x86-entry-64-Introduce-the-FIND_PERCPU_BASE-macro.patch
+- add x86-entry-64-Handle-FSGSBASE-enabled-paranoid-entry-.patch
+- add x86-cpu-Enable-FSGSBASE-on-64bit-by-default-and-add-.patch
+- add x86-elf-Enumerate-kernel-FSGSBASE-capability-in-AT_H.patch
+- add Documentation-x86-64-Add-documentation-for-GS-FS-add.patch
+- add selftests-x86-fsgsbase-Test-GS-selector-on-ptracer-i.patch
+- add selftests-x86-fsgsbase-Test-ptracer-induced-GS-base-.patch
+- add futex-Implement-mechanism-to-wait-on-any-of-several-.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-timeout-test.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wouldblock-t.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wake-up-test.patch
+- add mm-pagealloc.c-call-touch_nmi_watchdog-on-max-order-.patch
+- add mm-initialize-deferred-pages-with-interrupts-enabled.patch
+- add mm-call-cond_resched-from-deferred_init_memmap.patch
+- add padata-remove-exit-routine.patch
+- add padata-initialize-earlier.patch
+- add padata-allocate-work-structures-for-parallel-jobs-fr.patch
+- add padata-add-basic-support-for-multithreaded-jobs.patch
+- add mm-move-zone-iterator-outside-of-deferred_init_maxor.patch
+- add mm-parallelize-deferred_init_memmap.patch
+- add padata-document-multithreaded-jobs.patch
+- add lib-prepare-zstd-for-preboot-environment.patch
+- add lib-prepare-xxhash-for-preboot-environment.patch
+- add lib-add-zstd-support-to-decompress.patch
+- add init-add-support-for-zstd-compressed-kernel.patch
+- add usr-add-support-for-zstd-compressed-initramfs.patch
+- add x86-bump-ZO_z_extra_bytes-margin-for-zstd.patch
+- add x86-Add-support-for-ZSTD-compressed-kernel.patch
+- add .gitignore-add-ZSTD-compressed-files.patch
+- add init-add-support-for-zstd-compressed-modules.patch
+- add ZEN-Add-VHBA-driver.patch
+- add ZEN-intel-pstate-Implement-enable-parameter.patch
+- add cpu-5.7-merge-graysky-s-patchset.patch
+- add init-Kconfig-enable-O3-for-all-arches.patch
+- add LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch
+- add ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch
+- add BFQ-dev 2020530
+- add BMQ v5.7-r0
+- add AUFS 20200518
+- add UKSM for 5.7 
+- add LL-Brading v5.6
+- add LL-Add-.ll-version.patch
+
 5.6-lucjan-ll60
 
 - add kbuild-Disable-stack-conservation-for-GCC.patch
