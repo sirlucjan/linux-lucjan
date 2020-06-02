@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll4-rc1
+
+- add BMQ-tkg v5.7-r0
+
 5.7-lucjan-ll3-rc1
 
 - add mm-pagealloc.c-call-touch_nmi_watchdog-on-max-order-.patch
