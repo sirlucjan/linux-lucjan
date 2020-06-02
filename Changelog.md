@@ -1,6 +1,6 @@
 ## CHANGELOG
 
-5.7-lucjan-ll1
+5.7-lucjan-ll1-rc1
 
 - add driver-core-remove-device_create_vargs.patch
 - add bdi-unexport-bdi_register_va.patch
