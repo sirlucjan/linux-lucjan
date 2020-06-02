@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll2-rc1
+
+- add bmq-Fix-compile-error-in-psi.c.patch
+
 5.7-lucjan-ll1-rc1
 
 - add driver-core-remove-device_create_vargs.patch
