@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.7-lucjan-ll5-rc1
+
+- drop BMQ-tkg v5.7-r0
+- add bmq-Sync-14533a16c46d-thermal-cpu-cooling-sched-core.patch
+
 5.7-lucjan-ll4-rc1
 
 - add BMQ-tkg v5.7-r0
