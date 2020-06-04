@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll6-rc1
+
+- add fixes-5.7-update-applesmc-fix-to-upstream-version.patch
+
 5.7-lucjan-ll5-rc1
 
 - drop BMQ-tkg v5.7-r0
