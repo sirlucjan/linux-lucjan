@@ -125,6 +125,10 @@
 - add LL-Brading v5.6
 - add LL-Add-.ll-version.patch
 
+5.6-lucjan-ll61
+
+- add fixes-5.6-update-applesmc-fix-to-upstream-version.patch
+
 5.6-lucjan-ll60
 
 - add kbuild-Disable-stack-conservation-for-GCC.patch
