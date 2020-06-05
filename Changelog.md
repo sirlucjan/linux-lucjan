@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll7-rc1
+
+- add Disable-CPU_FREQ_GOV_SCHEDUTIL.patch
+
 5.7-lucjan-ll6-rc1
 
 - add fixes-5.7-update-applesmc-fix-to-upstream-version.patch
