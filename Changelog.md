@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll9
+
+- add BFQ-dev 2020607
+
 5.7-lucjan-ll8
 
 - add BMQ v5.7-r1
