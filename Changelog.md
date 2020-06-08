@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.7-lucjan-ll8
+
+- add BMQ v5.7-r1
+
+5.7-lucjan-ll7-rc1 --> 5.7-lucjan-ll7
+
 5.7-lucjan-ll7-rc1
 
 - add Disable-CPU_FREQ_GOV_SCHEDUTIL.patch
