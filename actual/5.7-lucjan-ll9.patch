@@ -1,6 +1,6 @@
-From d1108dcb1cad1db0214c468ff404dee12f31705d Mon Sep 17 00:00:00 2001
+From dfe67d22a228830eee01915a4d0f9957aded2a91 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Mon, 8 Jun 2020 17:00:54 +0200
+Date: Tue, 9 Jun 2020 20:40:54 +0200
 Subject: [PATCH] 5.7-lucjan-ll9
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -543,7 +543,7 @@ index 000000000..82f951849
 +		When the aufs mount option 'noxino' is specified, it
 +		will be empty. About XINO files, see the aufs manual.
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index 7bc83f3d9..ef4f1fa7e 100644
+index 5e2ce88d6..fdceb5dc1 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
 @@ -438,6 +438,11 @@
@@ -3055,7 +3055,7 @@ index 50659d769..5b24cfde5 100644
  M:	"Tigran A. Aivazian" <aivazian.tigran@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index b668725a2..145a53ae2 100644
+index 752072389..02709b5fa 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Kleptomaniac Octopus
@@ -4246,10 +4246,10 @@ index 7867dfb39..24d5c3dd6 100644
  #ifdef CONFIG_SMP
  	/* Patch to UP if other cpus not imminent. */
 diff --git a/arch/x86/kernel/cpu/bugs.c b/arch/x86/kernel/cpu/bugs.c
-index ed54b3b21..487603ea5 100644
+index 56978cb06..cb3268e3c 100644
 --- a/arch/x86/kernel/cpu/bugs.c
 +++ b/arch/x86/kernel/cpu/bugs.c
-@@ -450,14 +450,12 @@ static void __init spectre_v1_select_mitigation(void)
+@@ -543,14 +543,12 @@ static void __init spectre_v1_select_mitigation(void)
  		 * If FSGSBASE is enabled, the user can put a kernel address in
  		 * GS, in which case SMAP provides no protection.
  		 *
@@ -4267,7 +4267,7 @@ index ed54b3b21..487603ea5 100644
  			 * Mitigation can be provided from SWAPGS itself or
  			 * PTI as the CR3 write in the Meltdown mitigation
 diff --git a/arch/x86/kernel/cpu/common.c b/arch/x86/kernel/cpu/common.c
-index bed0cb83f..b5a086ea3 100644
+index 8293ee514..74f6a08e7 100644
 --- a/arch/x86/kernel/cpu/common.c
 +++ b/arch/x86/kernel/cpu/common.c
 @@ -418,6 +418,22 @@ static void __init setup_cr_pinning(void)
@@ -4293,7 +4293,7 @@ index bed0cb83f..b5a086ea3 100644
  /*
   * Protection Keys are not available in 32-bit mode.
   */
-@@ -1478,6 +1494,12 @@ static void identify_cpu(struct cpuinfo_x86 *c)
+@@ -1511,6 +1527,12 @@ static void identify_cpu(struct cpuinfo_x86 *c)
  	setup_smap(c);
  	setup_umip(c);
  
@@ -67098,5 +67098,5 @@ index c12e6b15c..b1a81a40e 100644
  obj-$(CONFIG_BLK_DEV_INITRD) := initramfs_data.o
  
 -- 
-2.27.0
+2.27.0.22.g20514004dd
 
