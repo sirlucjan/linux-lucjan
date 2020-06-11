@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll10
+
+- add aspm-simpler.patch
+
 5.7-lucjan-ll9
 
 - add BFQ-dev 2020607
