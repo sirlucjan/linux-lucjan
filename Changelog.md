@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll11-rc1
+
+- sync wit upstream (drop KVM-x86-only-do-L1TF-workaround-on-affected-processo.patch)
+
 5.7-lucjan-ll10
 
 - add aspm-simpler.patch
