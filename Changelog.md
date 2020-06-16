@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.7-lucjan-ll11
+
+- update cpu-5.7-merge-graysky-s-patchset.patch
+
+DROP 5.7-lucjan-ll11-rc1
+
 5.7-lucjan-ll11-rc1
 
 - sync wit upstream (drop KVM-x86-only-do-L1TF-workaround-on-affected-processo.patch)
