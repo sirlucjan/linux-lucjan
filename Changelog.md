@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.7-lucjan-ll13
+
+- add mm-5.7-fix-proactive-compaction-build-with-THP-disab.patch
+
+5.7-lucjan-ll12-rc1 --> 5.7-lucjan-ll12
+
 5.7-lucjan-ll12-rc1
 
 - sync wit upstream (drop KVM-x86-only-do-L1TF-workaround-on-affected-processo.patch)
