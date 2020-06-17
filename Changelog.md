@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll14
+
+- add Add-OpenRGB-patch-0c45e26c.patch
+
 5.7-lucjan-ll13
 
 - add mm-5.7-fix-proactive-compaction-build-with-THP-disab.patch
