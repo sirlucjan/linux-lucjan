@@ -2,6 +2,11 @@
 
 5.7-lucjan-ll15
 
+- add mt76-mt76x2-fix-pci-suspend.patch
+- add mt76-5.7-pick-mt76_for_each_q_rx.patch
+
+5.7-lucjan-ll15
+
 - add mm-Use-unsigned-types-for-fragmentation-score.patch
 
 5.7-lucjan-ll14
