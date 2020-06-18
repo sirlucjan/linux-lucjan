@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll15
+
+- add mm-Use-unsigned-types-for-fragmentation-score.patch
+
 5.7-lucjan-ll14
 
 - add Add-OpenRGB-patch-0c45e26c.patch
