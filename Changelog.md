@@ -1,6 +1,11 @@
 ## CHANGELOG
 
-5.7-lucjan-ll15
+5.7-lucjan-ll17
+
+- drop mt76-mt76x2-fix-pci-suspend.patch
+- drop mt76-5.7-pick-mt76_for_each_q_rx.patch
+
+5.7-lucjan-ll16
 
 - add mt76-mt76x2-fix-pci-suspend.patch
 - add mt76-5.7-pick-mt76_for_each_q_rx.patch
