@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.7-lucjan-ll18-rc1
+
+- sync with upstream (drop mm-pagealloc.c-call-touch_nmi_watchdog-on-max-order-.patch,
+                      drop mm-initialize-deferred-pages-with-interrupts-enabled.patch,
+                      drop mm-call-cond_resched-from-deferred_init_memmap.patch)
+
 5.7-lucjan-ll17
 
 - drop mt76-mt76x2-fix-pci-suspend.patch
