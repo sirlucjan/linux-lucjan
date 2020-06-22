@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll19-rc1
+
+- sync wit upstream (drop aspm-simpler.patch)
+
 5.7-lucjan-ll18-rc1 --> 5.7-lucjan-ll18
 
 5.7-lucjan-ll18-rc1
