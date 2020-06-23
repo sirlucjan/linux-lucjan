@@ -1,10 +1,16 @@
 ## CHANGELOG
 
+5.7-lucjan-ll20-rc1
+
+- sync wit upstream (drop aspm-simpler.patch)
+
 5.7-lucjan-ll19
 
 - add mm-Fix-compile-error-due-to-COMPACTION_HPAGE_ORDER.patch
 
 DROP 5.7-lucjan-ll19-rc1
+
+5.7-lucjan-ll19-rc1
 
 - sync wit upstream (drop aspm-simpler.patch)
 
