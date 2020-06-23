@@ -1,5 +1,13 @@
 ## CHANGELOG
 
+5.7-lucjan-ll20
+
+- add selftests-x86-fsgsbase-Fix-a-comment-in-the-ptrace_w.patch
+- add selftests-x86-fsgsbase-Add-a-missing-memory-constrai.patch
+- add x86-ptrace-Fix-32-bit-PTRACE_SETREGS-vs-fsbase-and-g.patch
+
+DROP 5.7-lucjan-ll20-rc1
+
 5.7-lucjan-ll20-rc1
 
 - sync wit upstream (drop aspm-simpler.patch)
