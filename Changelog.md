@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll21-rc1
+
+- sync wit upstream (drop aspm-simpler.patch)
+
 5.7-lucjan-ll20
 
 - add selftests-x86-fsgsbase-Fix-a-comment-in-the-ptrace_w.patch
