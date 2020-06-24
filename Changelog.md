@@ -1,5 +1,7 @@
 ## CHANGELOG
 
+5.7-lucjan-ll21-rc1 --> 5.7-lucjan-ll21
+
 5.7-lucjan-ll21-rc1
 
 - sync wit upstream (drop aspm-simpler.patch)
