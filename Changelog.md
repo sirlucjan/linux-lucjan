@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll22
+
+- add efi-libstub-Fix-path-separator-regression.patch
+
 5.7-lucjan-ll21-rc1 --> 5.7-lucjan-ll21
 
 5.7-lucjan-ll21-rc1
