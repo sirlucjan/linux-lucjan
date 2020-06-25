@@ -2,6 +2,10 @@
 
 5.7-lucjan-ll22
 
+- add selftests-x86-Add-a-syscall_arg_fault_64-test-for-ne.patch
+
+5.7-lucjan-ll22
+
 - add efi-libstub-Fix-path-separator-regression.patch
 
 5.7-lucjan-ll21-rc1 --> 5.7-lucjan-ll21
