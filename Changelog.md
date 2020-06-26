@@ -1,6 +1,10 @@
 ## CHANGELOG
 
-5.7-lucjan-ll22
+5.7-lucjan-ll24
+
+- add fsgsbase-5.7-remove-erroneous-if-expression-bit.patch
+
+5.7-lucjan-ll23
 
 - add selftests-x86-Add-a-syscall_arg_fault_64-test-for-ne.patch
 
