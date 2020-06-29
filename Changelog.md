@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll27
+
+- add BFQ-dev 2020628
+
 5.7-lucjan-ll26
 
 - add AUFS 20200518
