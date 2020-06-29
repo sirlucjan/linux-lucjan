@@ -1,8 +1,12 @@
 ## CHANGELOG
 
+5.7-lucjan-ll28-rc1
+
+- sync wit upstream efi-libstub-Fix-path-separator-regression.patch)
+
 5.7-lucjan-ll27
 
-- add BFQ-dev 2020628
+- add BFQ-dev 20200628
 
 5.7-lucjan-ll26
 
@@ -107,7 +111,7 @@ DROP 5.7-lucjan-ll11-rc1
 
 5.7-lucjan-ll9
 
-- add BFQ-dev 2020607
+- add BFQ-dev 20200607
 
 5.7-lucjan-ll8
 
