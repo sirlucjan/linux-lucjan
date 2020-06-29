@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.7-lucjan-ll25
+
+- add PCI-EDR-Log-only-ACPI_NOTIFY_DISCONNECT_RECOVER-even.patch
+- add x86-fsgsbase-Fix-Xen-PV-support.patch
+- add mt76-5.7-mt76x2-fix-pci-suspend.patch
+
 5.7-lucjan-ll24
 
 - add fsgsbase-5.7-remove-erroneous-if-expression-bit.patch
