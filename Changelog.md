@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.7-lucjan-ll26
+
+- add AUFS 20200518
+- add fixes-5.7-remove-unnecessary-mt76x02_dma_reset.patch
+
 5.7-lucjan-ll25
 
 - add PCI-EDR-Log-only-ACPI_NOTIFY_DISCONNECT_RECOVER-even.patch
