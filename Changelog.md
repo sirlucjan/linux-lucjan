@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll29-rc1
+
+- sync wit upstream efi-libstub-Fix-path-separator-regression.patch)
+
 5.7-lucjan-ll28
 
 - add fixes-5.7-remove-unused-dev-variable.patch
