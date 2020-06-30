@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.7-lucjan-l30
+
+- BMQ v5.7-r1 --> Project-C v5.7-r2
+
+DROP 5.7-lucjan-l30-rc1
+
 5.7-lucjan-l30-rc1
 
 - sync wit upstream efi-libstub-Fix-path-separator-regression.patch)
