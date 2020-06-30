@@ -1,5 +1,12 @@
 ## CHANGELOG
 
+5.7-lucjan-ll29
+
+- add ALSA-usb-audio-Fix-packet-size-calculation.patch
+- add drm-amd-display-Only-revalidate-bandwidth-on-medium-.patch
+
+DROP 5.7-lucjan-ll29-rc1
+
 5.7-lucjan-ll29-rc1
 
 - sync wit upstream efi-libstub-Fix-path-separator-regression.patch)
