@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-l30-rc1
+
+- sync wit upstream efi-libstub-Fix-path-separator-regression.patch)
+
 5.7-lucjan-ll29
 
 - add ALSA-usb-audio-Fix-packet-size-calculation.patch
