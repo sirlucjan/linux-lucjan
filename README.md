@@ -26,7 +26,7 @@
 
 * [fixes from ClearLinux](https://github.com/clearlinux-pkgs/linux) - specific patches authored by ClearLinux Team
 
-* [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.x-rcN) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
+* [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.7) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
 
 * [UKSM (sources)](https://github.com/dolohow/uksm) / [UKSM (info)](https://www.usenix.org/sites/default/files/conference/protected-files/fast18_slides_xia.pdf) - resync from dolohow’s github
 
