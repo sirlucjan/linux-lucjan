@@ -1,5 +1,7 @@
 ## CHANGELOG
 
+5.7-lucjan-l31-rc1 --> 5.7-lucjan-l31
+
 5.7-lucjan-l31-rc1
 
 - sync wit upstream efi-libstub-Fix-path-separator-regression.patch)
