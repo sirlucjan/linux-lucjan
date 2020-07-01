@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll32
+
+- add sched-alt-Fix-compilation-issue-when-CONFIG_SCHED_TR.patch
+
 5.7-lucjan-l31-rc1 --> 5.7-lucjan-l31
 
 5.7-lucjan-l31-rc1
