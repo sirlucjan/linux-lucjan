@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.7-lucjan-ll33
+
+- update block-Kconfig.iosched-set-default-value-of-IOSCHED_B.patch
+- update block-Fix-depends-for-BLK_DEV_ZONED.patch
+
 5.7-lucjan-ll32
 
 - add sched-alt-Fix-compilation-issue-when-CONFIG_SCHED_TR.patch
