@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll34
+
+- add BFQ-dev 20200701
+
 5.7-lucjan-ll33
 
 - update block-Kconfig.iosched-set-default-value-of-IOSCHED_B.patch
