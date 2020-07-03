@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.7-lucjan-ll35
+
+- add block-Add-CONFIG-to-rename-the-mq-deadline-scheduler.patch
+- update LL-Brading v5.7
+
 5.7-lucjan-ll34
 
 - add BFQ-dev 20200701
@@ -291,7 +296,7 @@ DROP 5.7-lucjan-ll11-rc1
 - add BMQ v5.7-r0
 - add AUFS 20200518
 - add UKSM for 5.7 
-- add LL-Brading v5.6
+- add LL-Brading v5.7
 - add LL-Add-.ll-version.patch
 
 5.6-lucjan-ll61
