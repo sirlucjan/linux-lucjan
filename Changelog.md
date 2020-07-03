@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.6-lucjan-ll37
+
+- add i2c-designware-Only-check-the-first-byte-for-SMBus-b.patch
+- add i2c-designware-Allow-block-reads-up-to-255-bytes.patch
+- add HID-i2c-hid-Use-block-reads-when-possible-to-save-po.patch
+
 5.7-lucjan-ll36
 
 - add BFQ-dev 20200702
