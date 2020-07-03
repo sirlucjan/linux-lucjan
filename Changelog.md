@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll36
+
+- add BFQ-dev 20200702
+
 5.7-lucjan-ll35
 
 - add block-Add-CONFIG-to-rename-the-mq-deadline-scheduler.patch
