@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll38
+
+- drop block-Flag-elevators-suitable-for-single-queue.patch
+
 5.6-lucjan-ll37
 
 - add i2c-designware-Only-check-the-first-byte-for-SMBus-b.patch
