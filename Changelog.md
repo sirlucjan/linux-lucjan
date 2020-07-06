@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.6-lucjan-ll40
+
+- add Revert-ath9k-Fix-general-protection-fault-in-ath9k_h.patch
+- add iwlwifi-Make-some-Killer-Wireless-AC-1550-cards-work.patch
+
 5.6-lucjan-ll39
 
 - i2c-designware-Only-check-the-first-byte-for-SMBus-b.patch --> i2c-designware-Fix-transfer-failures-for-invalid-SMB.patch
