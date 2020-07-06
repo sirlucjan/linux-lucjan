@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.6-lucjan-ll39
+
+- i2c-designware-Only-check-the-first-byte-for-SMBus-b.patch --> i2c-designware-Fix-transfer-failures-for-invalid-SMB.patch
+- update i2c-designware-Allow-block-reads-up-to-255-bytes.patch
+- update HID-i2c-hid-Use-block-reads-when-possible-to-save-po.patch
+
 5.7-lucjan-ll38
 
 - drop block-Flag-elevators-suitable-for-single-queue.patch
