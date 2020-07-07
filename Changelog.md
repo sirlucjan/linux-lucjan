@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.7-lucjan-ll41-rc1
+
+- drop ALSA-usb-audio-Fix-packet-size-calculation.patch
+- sync wit upstream (drop drm-amd-display-Only-revalidate-bandwidth-on-medium-.patch)
+
 5.6-lucjan-ll40
 
 - add Revert-ath9k-Fix-general-protection-fault-in-ath9k_h.patch
@@ -47,7 +52,7 @@
 
 5.7-lucjan-l31-rc1
 
-- sync wit upstream efi-libstub-Fix-path-separator-regression.patch)
+- sync wit upstream (drop efi-libstub-Fix-path-separator-regression.patch)
 
 5.7-lucjan-l30
 
