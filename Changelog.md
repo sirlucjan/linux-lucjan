@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll43
+
+- update zstd-patches
+
 5.7-lucjan-ll42
 
 - add BFQ-dev 20200708
