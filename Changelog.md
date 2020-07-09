@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll42
+
+- add BFQ-dev 20200708
+
 5.7-lucjan-ll41-rc1 --> 5.7-lucjan-ll41
 
 5.7-lucjan-ll41-rc1
