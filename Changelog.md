@@ -1,5 +1,7 @@
 ## CHANGELOG
 
+5.7-lucjan-ll41-rc1 --> 5.7-lucjan-ll41
+
 5.7-lucjan-ll41-rc1
 
 - drop ALSA-usb-audio-Fix-packet-size-calculation.patch
