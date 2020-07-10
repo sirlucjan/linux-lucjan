@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll44
+
+- add drivers-Revert-i2c-patches.patch
+
 5.7-lucjan-ll43
 
 - update zstd-patches
