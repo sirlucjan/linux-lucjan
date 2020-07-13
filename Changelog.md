@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.7-lucjan-ll45
+
+- add sched-core-Check-cpus_mask-not-cpus_ptr-in-__set_cpu.patch
+- add sched-alt-Backport-update-to-__set_cpus_allowed_ptr-.patch
+
 5.7-lucjan-ll44
 
 - add drivers-Revert-i2c-patches.patch
