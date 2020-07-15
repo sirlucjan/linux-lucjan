@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.7-lucjan-ll47-rc1
+
+- sync with upstream (drop sched-core-Check-cpus_mask-not-cpus_ptr-in-__set_cpu.patch,
+                      drop Revert-ath9k-Fix-general-protection-fault-in-ath9k_h.patch)
+
 5.7-lucjan-ll46
 
 - add net-sched-Allow-changing-default-qdisc-to-FQ-PIE.patch
