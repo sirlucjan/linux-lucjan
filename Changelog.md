@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.7-lucjan-ll46
+
+- add net-sched-Allow-changing-default-qdisc-to-FQ-PIE.patch
+
+DROP 5.7-lucjan-ll46-rc1
+
 5.7-lucjan-ll46-rc1
 
 - sync with upstream (drop sched-core-Check-cpus_mask-not-cpus_ptr-in-__set_cpu.patch,
