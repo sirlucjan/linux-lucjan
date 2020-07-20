@@ -1,6 +1,6 @@
-From 0a5739565a03b605ac7dc9cc51cda4823310708f Mon Sep 17 00:00:00 2001
+From 0990405d83613111ad74c6ca66f5171f8cfc5fd1 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Mon, 20 Jul 2020 20:35:48 +0200
+Date: Mon, 20 Jul 2020 20:52:36 +0200
 Subject: [PATCH] 5.7-lucjan-ll49
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3116,7 +3116,7 @@ index 50659d769..5b24cfde5 100644
  M:	"Tigran A. Aivazian" <aivazian.tigran@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index fb3a74757..14fb434fe 100644
+index fb3a74757..8015a977d 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Kleptomaniac Octopus
@@ -3124,7 +3124,7 @@ index fb3a74757..14fb434fe 100644
  # expect to learn how to build the kernel reading this file.
  
 +LLNAME = linux-lucjan
-+LLVERSION = .ll50
++LLVERSION = .ll49
 +EXTRAVERSION := $(EXTRAVERSION)$(LLVERSION)
 +
  # That's our default target when none is given on the command line
