@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+DROP 5.7-lucjan-ll49-rc1
+
+5.7-lucjan-ll49
+
+- add BFQ-dev 20200720
+
 5.7-lucjan-ll49-rc1
 
 - update virt-vbox-Add-support-for-the-new-VBG_IOCTL_ACQUIRE_.patch
