@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll51
+
+- add ALSA-hda-hdmi-Add-Intel-silent-stream-support.patch
+
 5.7-lucjan-ll50-rc1 --> 5.7-lucjan-ll50
 
 5.7-lucjan-ll50-rc1
