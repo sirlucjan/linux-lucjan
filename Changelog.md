@@ -1,5 +1,7 @@
 ## CHANGELOG
 
+5.7-lucjan-ll50-rc1 --> 5.7-lucjan-ll50
+
 5.7-lucjan-ll50-rc1
 
 - update virt-vbox-Add-support-for-the-new-VBG_IOCTL_ACQUIRE_.patch
