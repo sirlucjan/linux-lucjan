@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll52
+
+- add BFQ-dev 20200723
+
 5.7-lucjan-ll51
 
 - add ALSA-hda-hdmi-Add-Intel-silent-stream-support.patch
