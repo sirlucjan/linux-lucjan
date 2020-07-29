@@ -1,5 +1,12 @@
 ## CHANGELOG
 
+5.7-lucjan-ll53
+
+- add BFQ-dev 20200729
+- add Project-C v5.7-r3
+- update zstd-patches
+- sync wit upstream (drop iwlwifi-Make-some-Killer-Wireless-AC-1550-cards-work.patch)
+
 5.7-lucjan-ll52
 
 - add BFQ-dev 20200723
