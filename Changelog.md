@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll54
+
+- add drm-amd-display-Clear-dm_state-for-fast-updates.patch
+
 5.7-lucjan-ll53
 
 - add BFQ-dev 20200729
