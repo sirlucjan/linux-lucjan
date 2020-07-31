@@ -1,5 +1,12 @@
 ## CHANGELOG
 
+5.7-lucjan-ll56
+
+- add block-bfq-iosched-fix-duplicated-word.patch
+- add block-bio-delete-duplicated-words.patch
+- add block-elevator-delete-duplicated-word-and-fix-typos.patch
+- add block-blk-timeout-delete-duplicated-word.patch
+
 5.7-lucjan-ll55
 
 - update zstd-patches
@@ -13,7 +20,7 @@
 - add BFQ-dev 20200729
 - add Project-C v5.7-r3
 - update zstd-patches
-- sync wit upstream (drop iwlwifi-Make-some-Killer-Wireless-AC-1550-cards-work.patch)
+- sync with upstream (drop iwlwifi-Make-some-Killer-Wireless-AC-1550-cards-work.patch)
 
 5.7-lucjan-ll52
 
