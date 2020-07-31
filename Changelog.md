@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll57
+
+- update zstd-patches
+
 5.7-lucjan-ll56
 
 - add block-bfq-iosched-fix-duplicated-word.patch
