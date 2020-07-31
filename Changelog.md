@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll55
+
+- update zstd-patches
+
 5.7-lucjan-ll54
 
 - add drm-amd-display-Clear-dm_state-for-fast-updates.patch
