@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll58-rc1
+
+- sync with upstream (drop drm-amd-display-Clear-dm_state-for-fast-updates.patch)
+
 5.7-lucjan-ll57
 
 - update zstd-patches
