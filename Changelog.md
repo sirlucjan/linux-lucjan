@@ -1,5 +1,11 @@
 ## CHANGELOG
 
+5.7-lucjan-ll58
+
+- add openrgb-Deduplicate-piix4-setup-for-HUDSON2-KERNCZ-S.patch
+
+DROP 5.7-lucjan-ll58-rc1
+
 5.7-lucjan-ll58-rc1
 
 - sync with upstream (drop drm-amd-display-Clear-dm_state-for-fast-updates.patch)
