@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.7-lucjan-ll61
+
+- drop fsgsbase-5.7-minor-resync-with-upstream-PR.patch
+
 5.7-lucjan-ll60
 
 - add fsgsbase-5.7-minor-resync-with-upstream-PR.patch
