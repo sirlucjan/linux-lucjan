@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.7-lucjan-ll60
+
+- add fsgsbase-5.7-minor-resync-with-upstream-PR.patch
+- add x86-boot-compressed-Use-builtin-mem-functions-for-de.patch
+
 5.7-lucjan-ll59-rc1 --> 5.7-lucjan-ll59
 
 5.7-lucjan-ll59-rc1
