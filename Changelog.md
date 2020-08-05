@@ -1,5 +1,7 @@
 ## CHANGELOG
 
+5.7-lucjan-ll59-rc1 --> 5.7-lucjan-ll59
+
 5.7-lucjan-ll59-rc1
 
 - sync with upstream (drop drm-amd-display-Clear-dm_state-for-fast-updates.patch)
