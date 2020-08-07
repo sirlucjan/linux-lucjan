@@ -1,6 +1,6 @@
-From 3038ea697565b068daa590b325a15ff20437ab72 Mon Sep 17 00:00:00 2001
+From 3210daf04bdbb90a6ca8f56bb9ed7f8162d8d764 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Wed, 5 Aug 2020 18:15:53 +0200
+Date: Wed, 5 Aug 2020 21:06:47 +0200
 Subject: [PATCH] 5.7-lucjan-ll61
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3140,7 +3140,7 @@ index 50659d769..5b24cfde5 100644
  M:	"Tigran A. Aivazian" <aivazian.tigran@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index b77b4332a..7a0b0a7de 100644
+index 88ad4fd2f..5eb749636 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -11,6 +11,10 @@ NAME = Kleptomaniac Octopus
@@ -9570,10 +9570,10 @@ index af75a5ee4..1d847cb19 100644
  	void		*key_data; 
  
 diff --git a/drivers/char/random.c b/drivers/char/random.c
-index 0d10e31fd..9a47fd5d7 100644
+index 344a57ebb..a3cef5344 100644
 --- a/drivers/char/random.c
 +++ b/drivers/char/random.c
-@@ -1781,6 +1781,8 @@ static void __init init_std_data(struct entropy_store *r)
+@@ -1782,6 +1782,8 @@ static void __init init_std_data(struct entropy_store *r)
  		if (!arch_get_random_seed_long(&rv) &&
  		    !arch_get_random_long(&rv))
  			rv = random_get_entropy();
