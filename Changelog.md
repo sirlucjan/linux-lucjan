@@ -1,5 +1,137 @@
 ## CHANGELOG
 
+5.8-lucjan-ll1-rc1
+
+- add ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch
+- add virt-vbox-Add-support-for-the-new-VBG_IOCTL_ACQUIRE_.patch
+- add i8042-decrease-debug-message-level-to-info.patch
+- add Increase-the-ext4-default-commit-age.patch
+- add silence-rapl.patch
+- add pci-pme-wakeups.patch
+- add ksm-wakeups.patch
+- add intel_idle-tweak-cpuidle-cstates.patch
+- add bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
+- add smpboot-reuse-timer-calibration.patch
+- add raid6-add-Kconfig-option-to-skip-raid6-benchmarking.patch
+- add Initialize-ata-before-graphics.patch
+- add give-rdrand-some-credit.patch
+- add ipv4-tcp-allow-the-memory-tuning-for-tcp-to-go-a-lit.patch
+- add kernel-time-reduce-ntp-wakeups.patch
+- add init-wait-for-partition-and-retry-scan.patch
+- add print-fsync-count-for-bootchart.patch
+- add Add-boot-option-to-allow-unsigned-modules.patch
+- add Enable-stateless-firmware-loading.patch
+- add Migrate-some-systemd-defaults-to-the-kernel-defaults.patch
+- add xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
+- add use-lfence-instead-of-rep-and-nop.patch
+- add do-accept-in-LIFO-order-for-cache-efficiency.patch
+- add locking-rwsem-spin-faster.patch
+- add ata-libahci-ignore-staggered-spin-up.patch
+- add print-CPU-that-faults.patch
+- add x86-microcode-Force-update-a-uCode-even-if-the-rev-i.patch
+- add x86-microcode-echo-2-reload-to-force-load-ucode.patch
+- add fix-bug-in-ucode-force-reload-revision-check.patch
+- add nvme-workaround.patch
+- add Don-t-report-an-error-if-PowerClamp-run-on-other-CPU.patch
+- add block-Kconfig.iosched-set-default-value-of-IOSCHED_B.patch
+- add block-Fix-depends-for-BLK_DEV_ZONED.patch
+- add block-set-rq_affinity-2-for-full-multithreading-I-O-.patch
+- add block-Add-CONFIG-to-rename-the-mq-deadline-scheduler.patch
+- add block-bfq-iosched-fix-duplicated-word.patch
+- add block-bio-delete-duplicated-words.patch
+- add block-elevator-delete-duplicated-word-and-fix-typos.patch
+- add block-blk-mq-delete-duplicated-word.patch
+- add block-blk-mq-sched-delete-duplicated-word.patch
+- add block-blk-timeout-delete-duplicated-word.patch
+- add cpu-5.8-merge-graysky-s-patchset.patch
+- add init-Kconfig-enable-O3-for-all-arches.patch
+- add capabilities-Introduce-CAP_CHECKPOINT_RESTORE.patch
+- add pid-use-checkpoint_restore_ns_capable-for-set_tid.patch
+- add pid_namespace-use-checkpoint_restore_ns_capable-for-.patch
+- add proc-allow-access-in-init-userns-for-map_files-with-.patch
+- add prctl-Allow-local-CAP_CHECKPOINT_RESTORE-to-change-p.patch
+- add prctl-exe-link-permission-error-changed-from-EINVAL-.patch
+- add selftests-add-clone3-CAP_CHECKPOINT_RESTORE-test.patch
+- add net-sched-allow-configuring-cake-qdisc-as-default.patch
+- add infiniband-Fix-__read_overflow2-error-with-O3-inlini.patch
+- add kbuild-add-fcf-protection-none-to-retpoline-flags.patch
+- add mm-Disable-watermark-boosting-by-default.patch
+- add mm-Stop-kswapd-early-when-nothing-s-waiting-for-it-t.patch
+- add mm-Fully-disable-watermark-boosting-when-it-isn-t-us.patch
+- add mm-Don-t-stop-kswapd-on-a-per-node-basis-when-there-.patch
+- add kbuild-Disable-stack-conservation-for-GCC.patch
+- add pci-Enable-overrides-for-missing-ACS-capabilities.patch
+- add mm-Proactive-compaction.patch
+- add mm-Use-unsigned-types-for-fragmentation-score.patch
+- add mm-Fix-compile-error-due-to-COMPACTION_HPAGE_ORDER.patch
+- add net-sched-Allow-changing-default-qdisc-to-FQ-PIE.patch
+- add ALSA-hda-hdmi-Add-Intel-silent-stream-support.patch
+- add ZEN-Add-OpenRGB-patches.patch
+- add vfs-keep-inodes-with-page-cache-off-the-inode-shrink.patch
+- add x86-ptrace-Prevent-ptrace-from-clearing-the-FS-GS-se.patch
+- add x86-cpu-Add-unsafe_fsgsbase-to-enable-CR4.FSGSBASE.patch
+- add x86-fsgsbase-64-Add-intrinsics-for-FSGSBASE-instruct.patch
+- add x86-fsgsbase-64-Enable-FSGSBASE-instructions-in-help.patch
+- add x86-process-64-Make-save_fsgs_for_kvm-ready-for-FSGS.patch
+- add x86-process-64-Use-FSBSBASE-in-switch_to-if-availabl.patch
+- add x86-process-64-Use-FSGSBASE-instructions-on-thread-c.patch
+- add x86-speculation-swapgs-Check-FSGSBASE-in-enabling-SW.patch
+- add x86-entry-64-Switch-CR3-before-SWAPGS-in-paranoid-en.patch
+- add x86-entry-64-Introduce-the-FIND_PERCPU_BASE-macro.patch
+- add x86-entry-64-Handle-FSGSBASE-enabled-paranoid-entry-.patch
+- add x86-cpu-Enable-FSGSBASE-on-64bit-by-default-and-add-.patch
+- add x86-elf-Enumerate-kernel-FSGSBASE-capability-in-AT_H.patch
+- add Documentation-x86-64-Add-documentation-for-GS-FS-add.patch
+- add selftests-x86-fsgsbase-Test-GS-selector-on-ptracer-i.patch
+- add selftests-x86-fsgsbase-Test-ptracer-induced-GS-base-.patch
+- add selftests-x86-fsgsbase-Fix-a-comment-in-the-ptrace_w.patch
+- add selftests-x86-fsgsbase-Add-a-missing-memory-constrai.patch
+- add x86-ptrace-Fix-32-bit-PTRACE_SETREGS-vs-fsbase-and-g.patch
+- add selftests-x86-Add-a-syscall_arg_fault_64-test-for-ne.patch
+- add fsgsbase-5.8-remove-erroneous-if-expression-bit.patch
+- add x86-fsgsbase-Fix-Xen-PV-support.patch
+- add fsgsbase-5.8-minor-resync-with-upstream-PR.patch
+- add lib-prepare-zstd-for-preboot-environment.patch
+- add lib-add-zstd-support-to-decompress.patch
+- add init-add-support-for-zstd-compressed-kernel.patch
+- add usr-add-support-for-zstd-compressed-initramfs.patch
+- add x86-bump-ZO_z_extra_bytes-margin-for-zstd.patch
+- add x86-Add-support-for-ZSTD-compressed-kernel.patch
+- add .gitignore-add-ZSTD-compressed-files.patch
+- add Documentation-dontdiff-Add-zstd-compressed-files.patch
+- add init-add-support-for-zstd-compressed-modules.patch
+- add x86-boot-compressed-Use-builtin-mem-functions-for-de.patch
+- add sched-autogroup-Add-kernel-parameter-and-config-opti.patch
+- add net-sched-allow-configuring-cake-qdisc-as-default.patch
+- add infiniband-Fix-__read_overflow2-error-with-O3-inlini.patch
+- add kbuild-add-fcf-protection-none-to-retpoline-flags.patch
+- add mm-Disable-watermark-boosting-by-default.patch
+- add mm-Stop-kswapd-early-when-nothing-s-waiting-for-it-t.patch
+- add mm-Fully-disable-watermark-boosting-when-it-isn-t-us.patch
+- add mm-Don-t-stop-kswapd-on-a-per-node-basis-when-there-.patch
+- add kbuild-Disable-stack-conservation-for-GCC.patch
+- add pci-Enable-overrides-for-missing-ACS-capabilities.patch
+- add mm-Proactive-compaction.patch
+- add mm-Use-unsigned-types-for-fragmentation-score.patch
+- add mm-Fix-compile-error-due-to-COMPACTION_HPAGE_ORDER.patch
+- add net-sched-Allow-changing-default-qdisc-to-FQ-PIE.patch
+- add ALSA-hda-hdmi-Add-Intel-silent-stream-support.patch
+- add ZEN-Add-OpenRGB-patches.patch
+- add vfs-keep-inodes-with-page-cache-off-the-inode-shrink.patch
+- add futex-Implement-mechanism-to-wait-on-any-of-several-.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-timeout-test.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wouldblock-t.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wake-up-test.patch
+- add LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch
+- add Disable-CPU_FREQ_GOV_SCHEDUTIL.patch
+- add ZEN-Add-VHBA-driver.patch
+- add ZEN-intel-pstate-Implement-enable-parameter.patch
+- add BFQ-dev 20200803
+- add BMQ v5.8-r0
+- add UKSM for 5.8 
+- add LL-Brading v5.8
+- add LL-Add-.ll-version.patch
+
 5.7-lucjan-ll62
 
 - add sched-autogroup-Add-kernel-parameter-and-config-opti.patch
@@ -125,12 +257,12 @@ DROP 5.7-lucjan-ll46-rc1
 - drop ALSA-usb-audio-Fix-packet-size-calculation.patch
 - sync wit upstream (drop drm-amd-display-Only-revalidate-bandwidth-on-medium-.patch)
 
-5.6-lucjan-ll40
+5.7-lucjan-ll40
 
 - add Revert-ath9k-Fix-general-protection-fault-in-ath9k_h.patch
 - add iwlwifi-Make-some-Killer-Wireless-AC-1550-cards-work.patch
 
-5.6-lucjan-ll39
+5.7-lucjan-ll39
 
 - i2c-designware-Only-check-the-first-byte-for-SMBus-b.patch --> i2c-designware-Fix-transfer-failures-for-invalid-SMB.patch
 - update i2c-designware-Allow-block-reads-up-to-255-bytes.patch
