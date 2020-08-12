@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.8-lucjan-ll2-rc1
+
+- add sched-alt-Fix-UP-compilation-issue.patch
+
 5.8-lucjan-ll1-rc1
 
 - add ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch
