@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.8-lucjan-ll6-rc1
+
+- sync with upstream (drop x86-fsgsbase-64-Fix-NULL-deref-in-86_fsgsbase_read_t.patch)
+
 5.8-lucjan-ll5-rc1
 
 - add block-Convert-to-use-the-preferred-fallthrough-macro.patch
