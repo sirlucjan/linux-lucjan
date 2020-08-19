@@ -1,12 +1,16 @@
 ## CHANGELOG
 
+5.8-lucjan-ll5-rc1
+
+- add block-Convert-to-use-the-preferred-fallthrough-macro.patch
+
 5.8-lucjan-ll4-rc1
 
 - add x86-fsgsbase-64-Fix-NULL-deref-in-86_fsgsbase_read_t.patch
 
 5.8-lucjan-ll3-rc1
 
-- add Project C v5.8-r1
+- add Project-C v5.8-r1
 
 5.8-lucjan-ll2-rc1
 
@@ -139,7 +143,7 @@
 - add ZEN-Add-VHBA-driver.patch
 - add ZEN-intel-pstate-Implement-enable-parameter.patch
 - add BFQ-dev 20200803
-- add Project C v5.8-r0
+- add Project-C v5.8-r0
 - add UKSM for 5.8 
 - add LL-Brading v5.8
 - add LL-Add-.ll-version.patch
