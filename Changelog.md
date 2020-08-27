@@ -1,6 +1,10 @@
 ## CHANGELOG
 
-5.8-lucjan-ll7-rc1
+5.8-lucjan-ll9-rc1
+
+- add block-bfq-Disable-low_latency-when-blk_iolatency-is-.patch
+
+5.8-lucjan-ll8-rc1
 
 - add usb-renesas-xhci-remove-version-check.patch
 
