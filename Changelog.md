@@ -2,6 +2,10 @@
 
 5.8-lucjan-ll7-rc1
 
+- add usb-renesas-xhci-remove-version-check.patch
+
+5.8-lucjan-ll7-rc1
+
 - add BFQ-dev 20200819
 
 5.8-lucjan-ll6-rc1
