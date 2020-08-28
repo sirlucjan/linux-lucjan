@@ -3,6 +3,7 @@
 5.8-lucjan-ll9-rc1
 
 - add block-bfq-Disable-low_latency-when-blk_iolatency-is-.patch
+- add vfs-keep-inodes-with-page-cache-off-the-inode-shrink.patch
 
 5.8-lucjan-ll8-rc1
 
@@ -149,7 +150,6 @@
 - add net-sched-Allow-changing-default-qdisc-to-FQ-PIE.patch
 - add ALSA-hda-hdmi-Add-Intel-silent-stream-support.patch
 - add ZEN-Add-OpenRGB-patches.patch
-- add vfs-keep-inodes-with-page-cache-off-the-inode-shrink.patch
 - add futex-Implement-mechanism-to-wait-on-any-of-several-.patch
 - add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-timeout-test.patch
 - add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wouldblock-t.patch
