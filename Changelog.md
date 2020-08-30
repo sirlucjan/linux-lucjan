@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.8-lucjan-ll10-rc1
+
+- add sched-alt-Fix-compilation-issue-when-CONFIG_SCHED_TH.patch
+
 5.8-lucjan-ll9-rc1
 
 - add block-bfq-Disable-low_latency-when-blk_iolatency-is-.patch
