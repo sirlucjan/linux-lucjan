@@ -1,5 +1,10 @@
 ## CHANGELOG
 
+5.8-lucjan-ll11-rc1
+
+- sync with upstream (drop usb-renesas-xhci-remove-version-check.patch)
+- sync with upstream (resync vfs-keep-inodes-with-page-cache-off-the-inode-shrink.patch)
+
 5.8-lucjan-ll10-rc1
 
 - add sched-alt-Fix-compilation-issue-when-CONFIG_SCHED_TH.patch
