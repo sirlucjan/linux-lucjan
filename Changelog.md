@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.8-lucjan-l12
+
+- add clearlinux-Add-pageflip-patches.patch
+
 5.8-lucjan-ll11-rc1 --> 5.8-lucjan-ll11
 
 5.8-lucjan-ll11-rc1
