@@ -1,5 +1,7 @@
 ## CHANGELOG
 
+5.8-lucjan-ll11-rc1 --> 5.8-lucjan-ll11
+
 5.8-lucjan-ll11-rc1
 
 - sync with upstream (drop usb-renesas-xhci-remove-version-check.patch)
