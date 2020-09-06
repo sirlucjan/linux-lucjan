@@ -2,6 +2,10 @@
 
 5.8-lucjan-ll13
 
+- add sched-pds-Fix-compilation-issue-with-CONFIG_SCHED_TR.patch
+
+5.8-lucjan-ll13
+
 - add sched-pds-Port-of-PDS.patch
 - add sched-alt-Refill-time_slice-in-time_slice_expired.patch
 - add sched-alt-PDS-rework.patch
