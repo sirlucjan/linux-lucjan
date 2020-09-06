@@ -1,5 +1,15 @@
 ## CHANGELOG
 
+5.8-lucjan-ll13
+
+- add sched-pds-Port-of-PDS.patch
+- add sched-alt-Refill-time_slice-in-time_slice_expired.patch
+- add sched-alt-PDS-rework.patch
+- add sched-alt-Documentation-and-comments-updates.patch
+- add sched-alt-Revert-NORMAL_PRIO-defination-for-powerpc-.patch
+- add sched-alt-Add-ALT_SCHED_VERSION-micro.patch
+- resync LL-Brading v5.8
+
 5.8-lucjan-l12
 
 - add clearlinux-Add-pageflip-patches.patch
