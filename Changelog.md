@@ -1,6 +1,10 @@
 ## CHANGELOG
 
-5.8-lucjan-ll13
+5.8-lucjan-ll15
+
+- add prjc-Fix-PDS-selection-doesn-t-disable-unsupported-f.patch
+
+5.8-lucjan-ll14
 
 - add sched-pds-Fix-compilation-issue-with-CONFIG_SCHED_TR.patch
 
