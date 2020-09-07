@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.8-lucjan-ll16
+
+- add sched-pds-Update-ALT_SCHED_VERSION_MSG.patch
+
 5.8-lucjan-ll15
 
 - add prjc-Fix-PDS-selection-doesn-t-disable-unsupported-f.patch
