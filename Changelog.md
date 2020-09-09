@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.8-lucjan-ll17
+
+- add BFQ-dev 20200909
+
 5.8-lucjan-ll16
 
 - add sched-pds-Update-ALT_SCHED_VERSION_MSG.patch
