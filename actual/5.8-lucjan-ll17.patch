@@ -1,6 +1,6 @@
-From aaa4f999958cc2a3579ae5c528edfcf45a17e4af Mon Sep 17 00:00:00 2001
+From 4d814b3ee80f0d12ae2711b41cb4753f8304bd5f Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Wed, 9 Sep 2020 14:03:00 +0200
+Date: Wed, 9 Sep 2020 14:04:27 +0200
 Subject: [PATCH] 5.8-lucjan-ll17
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -909,7 +909,7 @@ index 4e2698cc7..c07a34e02 100644
  M:	"Tigran A. Aivazian" <aivazian.tigran@gmail.com>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index 5cf356503..8a40cdd82 100644
+index f5bf44865..9b35c1694 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -14,6 +14,10 @@ NAME = Kleptomaniac Octopus
@@ -2752,10 +2752,10 @@ index eb33c764d..2602a210d 100644
  		gs_sel = current->thread.gsindex;
  		fs_base = current->thread.fsbase;
 diff --git a/arch/x86/mm/fault.c b/arch/x86/mm/fault.c
-index 1ead568c0..ef9b74188 100644
+index 370c314b8..60fcd2a84 100644
 --- a/arch/x86/mm/fault.c
 +++ b/arch/x86/mm/fault.c
-@@ -717,9 +717,9 @@ show_signal_msg(struct pt_regs *regs, unsigned long error_code,
+@@ -828,9 +828,9 @@ show_signal_msg(struct pt_regs *regs, unsigned long error_code,
  	if (!printk_ratelimit())
  		return;
  
@@ -6807,10 +6807,10 @@ index 6e8f5e60b..4bdbdc35d 100644
   * blkcg_add_delay - add delay to this blkg
   * @blkg: blkg of interest
 diff --git a/block/blk-core.c b/block/blk-core.c
-index 03252af8c..b30532394 100644
+index 619a3dcd3..a08b41c95 100644
 --- a/block/blk-core.c
 +++ b/block/blk-core.c
-@@ -1244,6 +1244,9 @@ blk_qc_t submit_bio(struct bio *bio)
+@@ -1245,6 +1245,9 @@ blk_qc_t submit_bio(struct bio *bio)
  			count_vm_events(PGPGIN, count);
  		}
  
@@ -8517,7 +8517,7 @@ index f27774f57..101a0fe00 100644
  {
  	int ret;
 diff --git a/drivers/nvme/host/core.c b/drivers/nvme/host/core.c
-index f38548e6d..2c8b1e7fd 100644
+index fa0039dca..efd3fc7ff 100644
 --- a/drivers/nvme/host/core.c
 +++ b/drivers/nvme/host/core.c
 @@ -48,7 +48,7 @@ static u8 nvme_max_retries = 5;
@@ -22534,10 +22534,10 @@ index 4102034cd..7cd3f4e4b 100644
  			wait_event_freezable(ksm_thread_wait,
  				ksmd_should_run() || kthread_should_stop());
 diff --git a/mm/memory.c b/mm/memory.c
-index a279c1a26..c3b83dd91 100644
+index 03c693ea5..b32cbf714 100644
 --- a/mm/memory.c
 +++ b/mm/memory.c
-@@ -143,6 +143,25 @@ EXPORT_SYMBOL(zero_pfn);
+@@ -144,6 +144,25 @@ EXPORT_SYMBOL(zero_pfn);
  
  unsigned long highest_memmap_pfn __read_mostly;
  
@@ -22563,7 +22563,7 @@ index a279c1a26..c3b83dd91 100644
  /*
   * CONFIG_MMU architectures set up ZERO_PAGE in their paging_init()
   */
-@@ -158,6 +177,7 @@ void mm_trace_rss_stat(struct mm_struct *mm, int member, long count)
+@@ -159,6 +178,7 @@ void mm_trace_rss_stat(struct mm_struct *mm, int member, long count)
  	trace_rss_stat(mm, member, count);
  }
  
@@ -22571,7 +22571,7 @@ index a279c1a26..c3b83dd91 100644
  #if defined(SPLIT_RSS_COUNTING)
  
  void sync_mm_rss(struct mm_struct *mm)
-@@ -801,6 +821,11 @@ copy_one_pte(struct mm_struct *dst_mm, struct mm_struct *src_mm,
+@@ -802,6 +822,11 @@ copy_one_pte(struct mm_struct *dst_mm, struct mm_struct *src_mm,
  		get_page(page);
  		page_dup_rmap(page, false);
  		rss[mm_counter(page)]++;
@@ -22583,7 +22583,7 @@ index a279c1a26..c3b83dd91 100644
  	}
  
  out_set_pte:
-@@ -1073,8 +1098,10 @@ static unsigned long zap_pte_range(struct mmu_gather *tlb,
+@@ -1074,8 +1099,10 @@ static unsigned long zap_pte_range(struct mmu_gather *tlb,
  			ptent = ptep_get_and_clear_full(mm, addr, pte,
  							tlb->fullmm);
  			tlb_remove_tlb_entry(tlb, pte, addr);
@@ -22595,7 +22595,7 @@ index a279c1a26..c3b83dd91 100644
  
  			if (!PageAnon(page)) {
  				if (pte_dirty(ptent)) {
-@@ -2410,6 +2437,7 @@ static inline bool cow_user_page(struct page *dst, struct page *src,
+@@ -2420,6 +2447,7 @@ static inline bool cow_user_page(struct page *dst, struct page *src,
  
  	if (likely(src)) {
  		copy_user_highpage(dst, src, addr, vma);
@@ -22603,7 +22603,7 @@ index a279c1a26..c3b83dd91 100644
  		return true;
  	}
  
-@@ -2655,6 +2683,7 @@ static vm_fault_t wp_page_copy(struct vm_fault *vmf)
+@@ -2665,6 +2693,7 @@ static vm_fault_t wp_page_copy(struct vm_fault *vmf)
  							      vmf->address);
  		if (!new_page)
  			goto oom;
@@ -22611,7 +22611,7 @@ index a279c1a26..c3b83dd91 100644
  	} else {
  		new_page = alloc_page_vma(GFP_HIGHUSER_MOVABLE, vma,
  				vmf->address);
-@@ -2697,7 +2726,9 @@ static vm_fault_t wp_page_copy(struct vm_fault *vmf)
+@@ -2707,7 +2736,9 @@ static vm_fault_t wp_page_copy(struct vm_fault *vmf)
  						mm_counter_file(old_page));
  				inc_mm_counter_fast(mm, MM_ANONPAGES);
  			}
@@ -28885,7 +28885,7 @@ index 7ba542e45..84aa04ecd 100644
  
  endmenu
 diff --git a/sound/pci/hda/patch_hdmi.c b/sound/pci/hda/patch_hdmi.c
-index f0c6d2907..b8c8490e5 100644
+index fc22bdc30..e3a619e38 100644
 --- a/sound/pci/hda/patch_hdmi.c
 +++ b/sound/pci/hda/patch_hdmi.c
 @@ -42,6 +42,11 @@ static bool enable_acomp = true;
@@ -28981,7 +28981,7 @@ index f0c6d2907..b8c8490e5 100644
  }
  
  static void hdmi_present_sense(struct hdmi_spec_per_pin *per_pin, int repoll)
-@@ -2817,6 +2874,13 @@ static int intel_hsw_common_init(struct hda_codec *codec, hda_nid_t vendor_nid,
+@@ -2818,6 +2875,13 @@ static int intel_hsw_common_init(struct hda_codec *codec, hda_nid_t vendor_nid,
  	spec->ops.setup_stream = i915_hsw_setup_stream;
  	spec->ops.pin_cvt_fixup = i915_pin_cvt_fixup;
  
