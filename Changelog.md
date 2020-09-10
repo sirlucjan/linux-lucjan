@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.8-lucjan-ll18
+
+- add sched-alt-Call-check_preempt_curr-in-ttwu_do_wakeup.patch
+
 5.8-lucjan-ll17
 
 - add BFQ-dev 20200909
