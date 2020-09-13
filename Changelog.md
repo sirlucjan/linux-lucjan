@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.8-lucjan-ll19
+
+- add sched-pds-1.1-Implement-bitmap-allocator.patch
+
 5.8-lucjan-ll18
 
 - add sched-alt-Call-check_preempt_curr-in-ttwu_do_wakeup.patch
