@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.8-lucjan-ll20
+
+- add block-restore-a-specific-error-code-in-bdev_del_part.patch
+
 5.8-lucjan-ll19
 
 - add sched-pds-1.1-Implement-bitmap-allocator.patch
