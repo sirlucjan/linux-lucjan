@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.8-lucjan-ll21
+
+- add Project-C v5.8-r3
+
 5.8-lucjan-ll20
 
 - add block-restore-a-specific-error-code-in-bdev_del_part.patch
