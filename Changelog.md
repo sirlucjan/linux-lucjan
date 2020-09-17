@@ -1,5 +1,8 @@
 ## CHANGELOG
 
+#### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
+#### Otherwise the kernel will not compile properly.
+
 5.8-lucjan-ll23-rc1 --> 5.8-lucjan-ll23
 
 5.8-lucjan-ll23-rc1
