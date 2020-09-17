@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+5.8-lucjan-ll23-rc1
+
+- sync with upstream (drop block-restore-a-specific-error-code-in-bdev_del_part.patch)
+
 5.8-lucjan-ll22
 
 - add init-Kconfig-set-default-value-of-SCHED_PDS.patch
