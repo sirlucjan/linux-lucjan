@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.8-lucjan-ll25-rc1
+
+- sync with upstream (resync x86-Add-support-for-ZSTD-compressed-kernel.patch)
+
 5.8-lucjan-ll24
 
 - add init-Kconfig-Restore-original-PDS-description.patch
