@@ -1,6 +1,6 @@
-From 919c343a5f6433e2498ef1a7c5743cbbef92e607 Mon Sep 17 00:00:00 2001
+From ec1ce8224c6fb1085d43e5a5a02cb65f82279703 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Mon, 21 Sep 2020 18:27:49 +0200
+Date: Mon, 21 Sep 2020 18:51:18 +0200
 Subject: [PATCH] 5.8-lucjan-ll25
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -28760,7 +28760,7 @@ index 000000000..6de53fe96
 +#endif
 +
 diff --git a/mm/vmscan.c b/mm/vmscan.c
-index 749d239c6..7c60db4be 100644
+index 8b97bc615..0091380c4 100644
 --- a/mm/vmscan.c
 +++ b/mm/vmscan.c
 @@ -169,7 +169,11 @@ struct scan_control {
@@ -28797,7 +28797,7 @@ index 749d239c6..7c60db4be 100644
  		if (freepage != NULL)
  			freepage(page);
  	}
-@@ -3688,7 +3696,8 @@ static int balance_pgdat(pg_data_t *pgdat, int order, int highest_zoneidx)
+@@ -3696,7 +3704,8 @@ static int balance_pgdat(pg_data_t *pgdat, int order, int highest_zoneidx)
  		__fs_reclaim_release();
  		ret = try_to_freeze();
  		__fs_reclaim_acquire();
