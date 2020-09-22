@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.8-lucjan-ll25
+
+- add BFQ-dev 20200922
+
+DROP 5.8-lucjan-ll25-rc1
+
 5.8-lucjan-ll25-rc1
 
 - sync with upstream (resync x86-Add-support-for-ZSTD-compressed-kernel.patch)
