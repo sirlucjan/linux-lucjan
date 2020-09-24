@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.8-lucjan-ll27
+
+- add Documentation-Fix-sphinx-3.0-causes-compilation-erro.patch
+
 5.8-lucjan-ll26-rc1 --> 5.8-lucjan-ll26
 
 5.8-lucjan-ll26-rc1
