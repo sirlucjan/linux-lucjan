@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.8-lucjan-ll29
+
+- update UKSM for 5.8
+
 5.8-lucjan-ll28
 
 - add tty-Allow-setting-the-number-of-available-virtual-TT.patch
