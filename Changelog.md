@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.8-lucjan-ll32
+
+- add BFQ-dev 20200929
+
 5.8-lucjan-ll31
 
 - add sched-alt-Export-can_nice-symbol-for-Android-Binder-.patch
