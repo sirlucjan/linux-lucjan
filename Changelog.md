@@ -3,6 +3,14 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.8-lucjan-ll35
+
+- add mm-rewrite-wait_on_page_bit_common-logic.patch
+- add mm-add-list_del_init_careful-to-go-with-list_empty_c.patch
+- add list-add-list_del_init_careful-to-go-with-list_empty.patch
+- add mm-filemap.c-fix-a-data-race-in-filemap_fault.patch
+- add mm-allow-a-controlled-amount-of-unfairness-in-the-pa.patch
+
 5.8-lucjan-ll34
 
 - add scsi-sd-Optimal-I-O-size-should-be-a-multiple-of-rep.patch
