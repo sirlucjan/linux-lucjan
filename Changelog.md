@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.8-lucjan-ll33
+
+- add block-Fix-use-after-free-issue-while-accessing-iosch.patch
+
 5.8-lucjan-ll32
 
 - add BFQ-dev 20200929
