@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.8-lucjan-ll34
+
+- add scsi-sd-Optimal-I-O-size-should-be-a-multiple-of-rep.patch
+
 5.8-lucjan-ll33
 
 - add block-Fix-use-after-free-issue-while-accessing-iosch.patch
