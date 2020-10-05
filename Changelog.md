@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.8-lucjan-ll38
+
+- resync vfs-keep-inodes-with-page-cache-off-the-inode-shrink.patch
+
 5.8-lucjan-ll37
 
 - add iomap-avoid-deadlock-if-memory-reclaim-is-triggered-.patch
