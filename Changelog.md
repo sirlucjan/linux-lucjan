@@ -3,6 +3,31 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.8-lucjan-ll36
+
+- add btrfs-kill-update_block_group_flags.patch
+- add we-re-restriping-use-the-target.patch
+- add btrfs-restart-snapshot-delete-if-we-have-to-end-the-.patch
+- add btrfs-Don-t-balance-btree-inode-pages-from-buffered-.patch
+- add btrfs-add-little-endian-optimized-key-helpers.patch
+- add btrfs-relocation-allow-signal-to-cancel-balance.patch
+- add btrfs-Add-comments-for-btrfs_reserve_flush_enum.patch
+- add btrfs-prefetch-chunk-tree-leaves-at-mount.patch
+- add btrfs-document-special-case-error-codes-for-fs-error.patch
+- add btrfs-release-old-extent-maps-during-page-release.patch
+- add btrfs-do-not-set-the-full-sync-flag-on-the-inode-dur.patch
+- add btrfs-do-not-evaluate-the-expression-with-CONFIG_BTR.patch
+- add btrfs-handle-errors-from-async-submission.patch
+- add btrfs-trace-output-proper-root-owner-for-trace_find_.patch
+- add btrfs-Remove-spurious-BUG_ON-in-btrfs_get_extent.patch
+- add btrfs-do-not-commit-logs-and-transactions-during-lin.patch
+- add btrfs-do-not-take-the-log_mutex-of-the-subvolume-whe.patch
+- add btrfs-reschedule-if-necessary-when-logging-directory.patch
+- add btrfs-tree-checker-fix-false-alert-caused-by-legacy-.patch
+- add btrfs-reschedule-when-cloning-lots-of-extents.patch
+- add btrfs-cleanup-cow-block-on-error.patch
+- add fs-use-READ_ONCE-WRITE_ONCE-with-the-i_size-helpers.patch
+
 5.8-lucjan-ll35
 
 - add mm-rewrite-wait_on_page_bit_common-logic.patch
