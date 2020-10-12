@@ -3,6 +3,13 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll5-rc1
+
+- drop futex-Implement-mechanism-to-wait-on-any-of-several-.patch
+- drop selftests-futex-Add-FUTEX_WAIT_MULTIPLE-timeout-test.patch
+- drop selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wouldblock-t.patch
+- drop selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wake-up-test.patch
+
 5.9-lucjan-ll4-rc1
 
 - fix UKSM for 5.9
