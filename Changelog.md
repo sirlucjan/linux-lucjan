@@ -3,6 +3,11 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll3-rc1
+
+- fix ZEN-Add-VHBA-driver.patch
+- fix tty-Allow-setting-the-number-of-available-virtual-TT.patch
+
 5.9-lucjan-ll2-rc1
 
 - add sched-alt-Fix-compilation-erro-in-pelt.c.patch
