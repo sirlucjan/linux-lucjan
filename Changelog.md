@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll4-rc1
+
+- fix UKSM for 5.9
+
 5.9-lucjan-ll3-rc1
 
 - fix ZEN-Add-VHBA-driver.patch
