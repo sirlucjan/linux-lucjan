@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll4-rc1
+
+- fix BFQ-dev 20201012
+
 5.9-lucjan-ll5-rc1
 
 - drop futex-Implement-mechanism-to-wait-on-any-of-several-.patch
