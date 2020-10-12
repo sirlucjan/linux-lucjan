@@ -3,6 +3,95 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll1-rc1
+
+- add Export-symbols-needed-by-Android-drivers.patch
+- add android-Enable-building-ashmem-and-binder-as-modules.patch
+- add ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch
+- add block-Kconfig.iosched-set-default-value-of-IOSCHED_B.patch
+- add block-Fix-depends-for-BLK_DEV_ZONED.patch
+- add block-set-rq_affinity-2-for-full-multithreading-I-O-.patch
+- add block-Add-CONFIG-to-rename-the-mq-deadline-scheduler.patch
+- add block-bfq-Disable-low_latency-when-blk_iolatency-is-.patch
+- add block-Fix-use-after-free-issue-while-accessing-iosch.patch
+- add btrfs-do-not-evaluate-the-expression-with-CONFIG_BTR.patch
+- add btrfs-trace-output-proper-root-owner-for-trace_find_.patch
+- add btrfs-Remove-spurious-BUG_ON-in-btrfs_get_extent.patch
+- add btrfs-do-not-commit-logs-and-transactions-during-lin.patch
+- add btrfs-do-not-take-the-log_mutex-of-the-subvolume-whe.patch
+- add btrfs-reschedule-if-necessary-when-logging-directory.patch
+- add btrfs-tree-checker-fix-false-alert-caused-by-legacy-.patch
+- add btrfs-reschedule-when-cloning-lots-of-extents.patch
+- add btrfs-cleanup-cow-block-on-error.patch
+- add fs-use-READ_ONCE-WRITE_ONCE-with-the-i_size-helpers.patch
+- add i8042-decrease-debug-message-level-to-info.patch
+- add Increase-the-ext4-default-commit-age.patch
+- add silence-rapl.patch
+- add pci-pme-wakeups.patch
+- add ksm-wakeups.patch
+- add intel_idle-tweak-cpuidle-cstates.patch
+- add bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
+- add smpboot-reuse-timer-calibration.patch
+- add raid6-add-Kconfig-option-to-skip-raid6-benchmarking.patch
+- add Initialize-ata-before-graphics.patch
+- add give-rdrand-some-credit.patch
+- add ipv4-tcp-allow-the-memory-tuning-for-tcp-to-go-a-lit.patch
+- add kernel-time-reduce-ntp-wakeups.patch
+- add init-wait-for-partition-and-retry-scan.patch
+- add print-fsync-count-for-bootchart.patch
+- add Add-boot-option-to-allow-unsigned-modules.patch
+- add Enable-stateless-firmware-loading.patch
+- add Migrate-some-systemd-defaults-to-the-kernel-defaults.patch
+- add xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
+- add use-lfence-instead-of-rep-and-nop.patch
+- add do-accept-in-LIFO-order-for-cache-efficiency.patch
+- add locking-rwsem-spin-faster.patch
+- add ata-libahci-ignore-staggered-spin-up.patch
+- add print-CPU-that-faults.patch
+- add fix-bug-in-ucode-force-reload-revision-check.patch
+- add nvme-workaround.patch
+- add Don-t-report-an-error-if-PowerClamp-run-on-other-CPU.patch
+- add Port-microcode-patches.patch
+- add clearlinux-Add-pageflip-patches.patch
+- add cpu-5.9-merge-graysky-s-patchset.patch
+- add init-Kconfig-enable-O3-for-all-arches.patch
+- add Documentation-Fix-sphinx-3.0-causes-compilation-erro.patch
+- add net-sched-allow-configuring-cake-qdisc-as-default.patch
+- add infiniband-Fix-__read_overflow2-error-with-O3-inlini.patch
+- add kbuild-add-fcf-protection-none-to-retpoline-flags.patch
+- add mm-Disable-watermark-boosting-by-default.patch
+- add mm-Stop-kswapd-early-when-nothing-s-waiting-for-it-t.patch
+- add mm-Fully-disable-watermark-boosting-when-it-isn-t-us.patch
+- add mm-Don-t-stop-kswapd-on-a-per-node-basis-when-there-.patch
+- add kbuild-Disable-stack-conservation-for-GCC.patch
+- add pci-Enable-overrides-for-missing-ACS-capabilities.patch
+- add ZEN-Add-OpenRGB-patches.patch
+- add vfs-keep-inodes-with-page-cache-off-the-inode-shrink.patch
+- add tty-Allow-setting-the-number-of-available-virtual-TT.patch
+- add scsi-sd-Optimal-I-O-size-should-be-a-multiple-of-rep.patch
+- add futex-Implement-mechanism-to-wait-on-any-of-several-.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-timeout-test.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wouldblock-t.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wake-up-test.patch
+- add iomap-avoid-deadlock-if-memory-reclaim-is-triggered-.patch
+- add iomap-Clear-page-error-before-beginning-a-write.patch
+- add iomap-Mark-read-blocks-uptodate-in-write_begin.patch
+- add sched-autogroup-Add-kernel-parameter-and-config-opti.patch
+- add ZEN-Add-VHBA-driver.patch
+- add ZEN-intel-pstate-Implement-enable-parameter.patch
+- add init-add-support-for-zstd-compressed-modules.patch
+- add LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch
+- add Disable-CPU_FREQ_GOV_SCHEDUTIL.patch
+- add BFQ-dev 20201012
+- add Project-C v5.9-r0
+- add sched-alt-Export-can_nice-symbol-for-Android-Binder-.patch
+- add init-Kconfig-set-default-value-of-SCHED_PDS.patch
+- add init-Kconfig-Restore-original-PDS-description.patch
+- add sched-pds-1.1-Implement-bitmap-allocator.patch
+- add UKSM for 5.9 
+- add LL-Brading v5.9
+- add LL-Add-.ll-version.patch
+
 5.8-lucjan-ll39
 
 - add fs-direct-io-fix-one-time-init-of-s_dio_done_wq.patch
