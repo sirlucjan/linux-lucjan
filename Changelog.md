@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll10-rc1
+
+- update lib-zstd-Upgrade-to-latest-upstream-zstd-version-1.4.patch
+
 5.9-lucjan-ll9-rc1
 
 - add lib-zstd-Add-zstd-compatibility-wrapper.patch
