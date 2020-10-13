@@ -3,6 +3,13 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll11-rc1
+
+- add x86-entry-64-Correct-the-comment-over-SAVE_AND_SET_G.patch
+- add x86-fsgsbase-Replace-static_cpu_has-with-boot_cpu_ha.patch
+- add selftests-x86-fsgsbase-Reap-a-forgotten-child.patch
+- add selftests-x86-fsgsbase-Test-PTRACE_PEEKUSER-for-GSBA.patch
+
 5.9-lucjan-ll10-rc1
 
 - update lib-zstd-Upgrade-to-latest-upstream-zstd-version-1.4.patch
