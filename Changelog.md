@@ -3,6 +3,11 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll8-rc1
+
+- add Restore-futex_key.patch
+- add Import-Fsync-v3-patchset-Squashed-from-https-gitlab..patch
+
 5.9-lucjan-ll7-rc1
 
 - update UKSM for 5.9

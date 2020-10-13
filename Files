@@ -1497,7 +1497,9 @@
 │       ├── 5.9-lucjan-ll5-rc1.patch
 │       ├── 5.9-lucjan-ll5-rc1.patch.sig
 │       ├── 5.9-lucjan-ll6-rc1.patch
-│       └── 5.9-lucjan-ll6-rc1.patch.sig
+│       ├── 5.9-lucjan-ll6-rc1.patch.sig
+│       ├── 5.9-lucjan-ll7-rc1.patch
+│       └── 5.9-lucjan-ll7-rc1.patch.sig
 ├── Changelog.md
 ├── Files
 ├── pending
@@ -1505,7 +1507,7 @@
 │   └── 5.8-lucjan-ll39.patch.sig
 ├── README.md
 └── trunk
-    ├── 5.9-lucjan-ll7-rc1.patch
-    └── 5.9-lucjan-ll7-rc1.patch.sig
+    ├── 5.9-lucjan-ll8-rc1.patch
+    └── 5.9-lucjan-ll8-rc1.patch.sig
 
-19 directories, 1489 files
+19 directories, 1491 files
