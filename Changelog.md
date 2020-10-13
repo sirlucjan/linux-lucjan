@@ -3,6 +3,18 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll9-rc1
+
+- add lib-zstd-Add-zstd-compatibility-wrapper.patch
+- add lib-zstd-Add-decompress_sources.h-for-decompress_unz.patch
+- add lib-zstd-Upgrade-to-latest-upstream-zstd-version-1.4.patch
+- add crypto-zstd-Switch-to-zstd-1.4.6-API.patch
+- add btrfs-zstd-Switch-to-the-zstd-1.4.6-API.patch
+- add f2fs-zstd-Switch-to-the-zstd-1.4.6-API.patch
+- add squashfs-zstd-Switch-to-the-zstd-1.4.6-API.patch
+- add lib-unzstd-Switch-to-the-zstd-1.4.6-API.patch
+- add lib-zstd-Remove-zstd-compatibility-wrapper.patch
+
 5.9-lucjan-ll8-rc1
 
 - add Restore-futex_key.patch
