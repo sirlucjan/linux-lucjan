@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll14-rc1
+
+- add xfs-avoid-transaction-reservation-recursion.patch
+
 5.9-lucjan-ll13-rc1
 
 - add mm-Add-become_kswapd-and-restore_kswapd.patch
