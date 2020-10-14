@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll13-rc1
+
+- add mm-Add-become_kswapd-and-restore_kswapd.patch
+
 5.9-lucjan-ll12-rc1
 
 - drop fs-use-READ_ONCE-WRITE_ONCE-with-the-i_size-helpers.patch
