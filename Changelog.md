@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll12-rc1
+
+- drop fs-use-READ_ONCE-WRITE_ONCE-with-the-i_size-helpers.patch
+- add btrfs-add-a-force_chunk_alloc-to-space_info-s-sysfs.patch
+- add btrfs-restart-snapshot-delete-if-we-have-to-end-the-.patch
+
 5.9-lucjan-ll11-rc1
 
 - add x86-entry-64-Correct-the-comment-over-SAVE_AND_SET_G.patch
