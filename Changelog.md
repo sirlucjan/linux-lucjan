@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll16-rc1
+
+- add vt-keyboard-reorder-user-buffer-handling-in-vt_do_kd.patch
+- add vt-keyboard-simplify-vt_kdgkbsent.patch
+- add vt-keyboard-extend-func_buf_lock-to-readers.patch
+
 5.9-lucjan-ll15-rc1
 
 - update UKSM for 5.9
