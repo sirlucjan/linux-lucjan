@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll17-rc1
+
+- add i2c-core-Restore-acpi_walk_dep_device_list-getting-c.patch
+
 5.9-lucjan-ll16-rc1
 
 - add vt-keyboard-reorder-user-buffer-handling-in-vt_do_kd.patch
