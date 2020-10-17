@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll18-rc1
+
+- update sched-autogroup-Add-kernel-parameter-and-config-opti.patch
+
 5.9-lucjan-ll17-rc1
 
 - add i2c-core-Restore-acpi_walk_dep_device_list-getting-c.patch
@@ -160,7 +164,7 @@
 - add iomap-avoid-deadlock-if-memory-reclaim-is-triggered-.patch
 - add iomap-Clear-page-error-before-beginning-a-write.patch
 - add iomap-Mark-read-blocks-uptodate-in-write_begin.patch
-- add sched-autogroup-Add-kernel-parameter-and-config-opti.patch
+- add 
 - add ZEN-Add-VHBA-driver.patch
 - add ZEN-intel-pstate-Implement-enable-parameter.patch
 - add init-add-support-for-zstd-compressed-modules.patch
