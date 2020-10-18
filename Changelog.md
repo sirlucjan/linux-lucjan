@@ -3,6 +3,13 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll19-rc1
+
+- drop Restore-futex_key.patch
+- drop Import-Fsync-v3-patchset-Squashed-from-https-gitlab..patch
+- add futex-Implement-mechanism-to-wait-on-any-of-several-.patch
+- add futex-Add-Proton-compatibility-code.patch
+
 5.9-lucjan-ll18-rc1
 
 - update sched-autogroup-Add-kernel-parameter-and-config-opti.patch
