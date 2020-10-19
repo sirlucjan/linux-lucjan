@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll20
+
+- add Project-C v5.9-r1
+
 5.9-lucjan-ll19-rc1 --> 5.9-lucjan-ll19
 
 5.9-lucjan-ll19-rc1
