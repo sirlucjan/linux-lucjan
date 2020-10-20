@@ -3,6 +3,11 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll22
+
+- add Project-C v5.9-r1
+- add sched-alt-Fix-compilation-when-NR_CPUS-64.patch
+
 5.9-lucjan-ll21
 
 - drop  Project-C v5.9-r1 (https://gitlab.com/alfredchen/linux-prjc/-/issues/17)
