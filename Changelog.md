@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll24
+
+- add BFQ-dev 20201022
+- add block backport from 5.10 line
+- resync block-set-rq_affinity-2-for-full-multithreading-I-O-.patch
+
 5.9-lucjan-ll23
 
 - add fs-Break-generic_file_buffered_read-up-into-multiple.patch
