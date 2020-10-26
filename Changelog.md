@@ -3,6 +3,8 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll25-rc1 --> 5.9-lucjan-ll25
+
 5.9-lucjan-ll25-rc1
 
 - add block backport from 5.10 line
