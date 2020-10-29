@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll28
+
+- add mac80211-fix-regression-where-EAPOL-frames-were-sent.patch
+
 5.9-lucjan-ll27
 
 - add btrfs-fix-min-reserved-size-calculation-in-merge_rel.patch
