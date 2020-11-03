@@ -1,6 +1,6 @@
-From 6319f5d7ff60378c9527ca5867a80dea43c1daef Mon Sep 17 00:00:00 2001
+From ecfff77efb92ac5f53b25dbfd23ca6e1f613083f Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Tue, 3 Nov 2020 16:29:42 +0100
+Date: Tue, 3 Nov 2020 18:45:42 +0100
 Subject: [PATCH] 5.9-lucjan-ll33-rc1
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -15701,7 +15701,7 @@ index 380bf5183..5d52a1f47 100644
  }
  
 diff --git a/drivers/cpufreq/Kconfig b/drivers/cpufreq/Kconfig
-index 2c7171e0b..80056a9d3 100644
+index 85de313dd..4bef09787 100644
 --- a/drivers/cpufreq/Kconfig
 +++ b/drivers/cpufreq/Kconfig
 @@ -37,8 +37,6 @@ config CPU_FREQ_STAT
@@ -15751,10 +15751,10 @@ index ac361a8b1..063364e8c 100644
  #define MIN_FREQUENCY_UP_THRESHOLD		(1)
  #define MAX_FREQUENCY_UP_THRESHOLD		(100)
 diff --git a/drivers/cpufreq/intel_pstate.c b/drivers/cpufreq/intel_pstate.c
-index 9a515c460..3a15d8ef2 100644
+index ef15ec495..3a0d083ce 100644
 --- a/drivers/cpufreq/intel_pstate.c
 +++ b/drivers/cpufreq/intel_pstate.c
-@@ -3098,6 +3098,8 @@ static int __init intel_pstate_setup(char *str)
+@@ -3097,6 +3097,8 @@ static int __init intel_pstate_setup(char *str)
  		pr_info("HWP disabled\n");
  		no_hwp = 1;
  	}
@@ -16971,7 +16971,7 @@ index 094910980..58994da10 100644
  		return ide_get_identity_ioctl(drive, cmd, argp);
  	case HDIO_GET_NICE:
 diff --git a/drivers/idle/intel_idle.c b/drivers/idle/intel_idle.c
-index 9a810e4a7..f38fccf39 100644
+index d09b807e1..52ae41b06 100644
 --- a/drivers/idle/intel_idle.c
 +++ b/drivers/idle/intel_idle.c
 @@ -515,7 +515,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
@@ -25575,7 +25575,7 @@ index 93fd984eb..46ed63435 100644
  	bool
  	depends on VT && !UML
 diff --git a/fs/9p/vfs_file.c b/fs/9p/vfs_file.c
-index 3576123d8..6ecf863bf 100644
+index 6d97b6b4d..b177fd3b1 100644
 --- a/fs/9p/vfs_file.c
 +++ b/fs/9p/vfs_file.c
 @@ -625,7 +625,7 @@ static void v9fs_mmap_vm_close(struct vm_area_struct *vma)
@@ -33473,10 +33473,10 @@ index 8934886d1..0f602a5ec 100644
  	if (err)
  		goto bad_unshare_out;
 diff --git a/kernel/futex.c b/kernel/futex.c
-index 39681bf8b..67915c339 100644
+index 044c1a4fb..585c262b6 100644
 --- a/kernel/futex.c
 +++ b/kernel/futex.c
-@@ -197,6 +197,8 @@ struct futex_pi_state {
+@@ -198,6 +198,8 @@ struct futex_pi_state {
   * @rt_waiter:		rt_waiter storage for use with requeue_pi
   * @requeue_pi_key:	the requeue_pi target futex key
   * @bitset:		bitset for the optional bitmasked wakeup
@@ -33485,7 +33485,7 @@ index 39681bf8b..67915c339 100644
   *
   * We use this hashed waitqueue, instead of a normal wait_queue_entry_t, so
   * we can wake only the relevant ones (hashed queues may be shared).
-@@ -219,6 +221,8 @@ struct futex_q {
+@@ -220,6 +222,8 @@ struct futex_q {
  	struct rt_mutex_waiter *rt_waiter;
  	union futex_key *requeue_pi_key;
  	u32 bitset;
@@ -33494,7 +33494,7 @@ index 39681bf8b..67915c339 100644
  } __randomize_layout;
  
  static const struct futex_q futex_q_init = {
-@@ -2306,6 +2310,29 @@ static int unqueue_me(struct futex_q *q)
+@@ -2307,6 +2311,29 @@ static int unqueue_me(struct futex_q *q)
  	return ret;
  }
  
@@ -33524,7 +33524,7 @@ index 39681bf8b..67915c339 100644
  /*
   * PI futexes can not be requeued and must remove themself from the
   * hash bucket. The hash bucket lock (i.e. lock_ptr) is held on entry
-@@ -2664,6 +2691,205 @@ static int futex_wait_setup(u32 __user *uaddr, u32 val, unsigned int flags,
+@@ -2665,6 +2692,205 @@ static int futex_wait_setup(u32 __user *uaddr, u32 val, unsigned int flags,
  	return ret;
  }
  
@@ -33730,7 +33730,7 @@ index 39681bf8b..67915c339 100644
  static int futex_wait(u32 __user *uaddr, unsigned int flags, u32 val,
  		      ktime_t *abs_time, u32 bitset)
  {
-@@ -3776,6 +4002,43 @@ long do_futex(u32 __user *uaddr, int op, u32 val, ktime_t *timeout,
+@@ -3777,6 +4003,43 @@ long do_futex(u32 __user *uaddr, int op, u32 val, ktime_t *timeout,
  	return -ENOSYS;
  }
  
@@ -33774,7 +33774,7 @@ index 39681bf8b..67915c339 100644
  
  SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
  		struct __kernel_timespec __user *, utime, u32 __user *, uaddr2,
-@@ -3788,7 +4051,8 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
+@@ -3789,7 +4052,8 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
  
  	if (utime && (cmd == FUTEX_WAIT || cmd == FUTEX_LOCK_PI ||
  		      cmd == FUTEX_WAIT_BITSET ||
@@ -33784,16 +33784,16 @@ index 39681bf8b..67915c339 100644
  		if (unlikely(should_fail_futex(!(op & FUTEX_PRIVATE_FLAG))))
  			return -EFAULT;
  		if (get_timespec64(&ts, utime))
-@@ -3797,7 +4061,7 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
+@@ -3798,7 +4062,7 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
  			return -EINVAL;
  
  		t = timespec64_to_ktime(ts);
 -		if (cmd == FUTEX_WAIT)
 +		if (cmd == FUTEX_WAIT || cmd == FUTEX_WAIT_MULTIPLE)
  			t = ktime_add_safe(ktime_get(), t);
- 		tp = &t;
- 	}
-@@ -3809,6 +4073,25 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
+ 		else if (!(op & FUTEX_CLOCK_REALTIME))
+ 			t = timens_ktime_to_host(CLOCK_MONOTONIC, t);
+@@ -3812,6 +4076,25 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
  	    cmd == FUTEX_CMP_REQUEUE_PI || cmd == FUTEX_WAKE_OP)
  		val2 = (u32) (unsigned long) utime;
  
@@ -33819,7 +33819,7 @@ index 39681bf8b..67915c339 100644
  	return do_futex(uaddr, op, val, tp, uaddr2, val2, val3);
  }
  
-@@ -3971,6 +4254,58 @@ COMPAT_SYSCALL_DEFINE3(get_robust_list, int, pid,
+@@ -3974,6 +4257,58 @@ COMPAT_SYSCALL_DEFINE3(get_robust_list, int, pid,
  #endif /* CONFIG_COMPAT */
  
  #ifdef CONFIG_COMPAT_32BIT_TIME
@@ -33878,7 +33878,7 @@ index 39681bf8b..67915c339 100644
  SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
  		struct old_timespec32 __user *, utime, u32 __user *, uaddr2,
  		u32, val3)
-@@ -3982,14 +4317,15 @@ SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
+@@ -3985,14 +4320,15 @@ SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
  
  	if (utime && (cmd == FUTEX_WAIT || cmd == FUTEX_LOCK_PI ||
  		      cmd == FUTEX_WAIT_BITSET ||
@@ -33894,9 +33894,9 @@ index 39681bf8b..67915c339 100644
 -		if (cmd == FUTEX_WAIT)
 +		if (cmd == FUTEX_WAIT || cmd == FUTEX_WAIT_MULTIPLE)
  			t = ktime_add_safe(ktime_get(), t);
- 		tp = &t;
- 	}
-@@ -3997,6 +4333,19 @@ SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
+ 		else if (!(op & FUTEX_CLOCK_REALTIME))
+ 			t = timens_ktime_to_host(CLOCK_MONOTONIC, t);
+@@ -4002,6 +4338,19 @@ SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
  	    cmd == FUTEX_CMP_REQUEUE_PI || cmd == FUTEX_WAKE_OP)
  		val2 = (int) (unsigned long) utime;
  
