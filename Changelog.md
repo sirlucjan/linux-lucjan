@@ -3,6 +3,21 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll33-rc1
+
+- resync block backport against 5.9.4
+- sync with upstream (drop vt-keyboard-reorder-user-buffer-handling-in-vt_do_kd.patch )
+- sync with upstream (drop vt-keyboard-simplify-vt_kdgkbsent.patch)
+- sync with upstream (drop vt-keyboard-extend-func_buf_lock-to-readers.patch)
+- sync with upstream (drop selftests-x86-fsgsbase-Reap-a-forgotten-child.patch)
+- sync with upstream (drop selftests-x86-fsgsbase-Test-PTRACE_PEEKUSER-for-GSBA.patch)
+- sync with upstream (drop btrfs-trace-output-proper-root-owner-for-trace_find_.patch)
+- sync with upstream (drop btrfs-reschedule-if-necessary-when-logging-directory.patch)
+- sync with upstream (drop btrfs-tree-checker-fix-false-alert-caused-by-legacy-.patch)
+- sync with upstream (drop btrfs-reschedule-when-cloning-lots-of-extents.patch)
+- sync with upstream (drop btrfs-cleanup-cow-block-on-error.patch)
+- update f2fs-zstd-Switch-to-the-zstd-1.4.6-API.patch
+
 5.9-lucjan-ll32
 
 - update fs-Break-generic_file_buffered_read-up-into-multiple.patch
