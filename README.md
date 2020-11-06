@@ -36,10 +36,10 @@
 
 ***
 
-###### Some patches for BFQ conflict with patches for BFQ-dev.
+###### Some patches for BFQ/block-stable conflict with patches for BFQ-dev/block-mainline.
 
-###### To use lucjan-kernels smoothly apply bfq-reverts before linux-lucjan patch. Otherwise the kernel will not compile.
+###### To use lucjan-kernels smoothly apply ll-reverts before linux-lucjan patch. Otherwise the kernel will not compile.
 
-* [bfq-reverts](https://github.com/sirlucjan/kernel-patches/tree/master/5.9/bfq-reverts) / [bfq-reverts](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.9/bfq-reverts) - specific patches authored by Piotr Gorski
+* [ll-reverts](https://github.com/sirlucjan/kernel-patches/tree/master/5.9-dev/ll-reverts) / [ll-reverts](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.9-dev/ll-reverts) - specific patches authored by Piotr Gorski
 
 #### You've been warned. 
