@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll36
+
+- add block backport from 5.10 line
+
 5.9-lucjan-ll35
 
 - sync with upstream (drop Fix-ASoC-SOF-fix-a-runtime-pm-issue-in-SOF-when-HDMI.patch)
