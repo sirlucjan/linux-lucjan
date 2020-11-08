@@ -1,6 +1,6 @@
-From 8f386231fd5eab83a0383309d67d9df89f01172a Mon Sep 17 00:00:00 2001
+From 8d6618a62de54ae0101a36c9381d9b6f40d1b05c Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Sun, 8 Nov 2020 13:46:31 +0100
+Date: Sun, 8 Nov 2020 22:54:31 +0100
 Subject: [PATCH] 5.9-lucjan-ll36
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -33718,7 +33718,7 @@ index 8934886d1..0f602a5ec 100644
  	if (err)
  		goto bad_unshare_out;
 diff --git a/kernel/futex.c b/kernel/futex.c
-index 044c1a4fb..585c262b6 100644
+index 6c00c0952..84c520c65 100644
 --- a/kernel/futex.c
 +++ b/kernel/futex.c
 @@ -198,6 +198,8 @@ struct futex_pi_state {
@@ -33769,7 +33769,7 @@ index 044c1a4fb..585c262b6 100644
  /*
   * PI futexes can not be requeued and must remove themself from the
   * hash bucket. The hash bucket lock (i.e. lock_ptr) is held on entry
-@@ -2665,6 +2692,205 @@ static int futex_wait_setup(u32 __user *uaddr, u32 val, unsigned int flags,
+@@ -2677,6 +2704,205 @@ static int futex_wait_setup(u32 __user *uaddr, u32 val, unsigned int flags,
  	return ret;
  }
  
@@ -33975,7 +33975,7 @@ index 044c1a4fb..585c262b6 100644
  static int futex_wait(u32 __user *uaddr, unsigned int flags, u32 val,
  		      ktime_t *abs_time, u32 bitset)
  {
-@@ -3777,6 +4003,43 @@ long do_futex(u32 __user *uaddr, int op, u32 val, ktime_t *timeout,
+@@ -3789,6 +4015,43 @@ long do_futex(u32 __user *uaddr, int op, u32 val, ktime_t *timeout,
  	return -ENOSYS;
  }
  
@@ -34019,7 +34019,7 @@ index 044c1a4fb..585c262b6 100644
  
  SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
  		struct __kernel_timespec __user *, utime, u32 __user *, uaddr2,
-@@ -3789,7 +4052,8 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
+@@ -3801,7 +4064,8 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
  
  	if (utime && (cmd == FUTEX_WAIT || cmd == FUTEX_LOCK_PI ||
  		      cmd == FUTEX_WAIT_BITSET ||
@@ -34029,7 +34029,7 @@ index 044c1a4fb..585c262b6 100644
  		if (unlikely(should_fail_futex(!(op & FUTEX_PRIVATE_FLAG))))
  			return -EFAULT;
  		if (get_timespec64(&ts, utime))
-@@ -3798,7 +4062,7 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
+@@ -3810,7 +4074,7 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
  			return -EINVAL;
  
  		t = timespec64_to_ktime(ts);
@@ -34038,7 +34038,7 @@ index 044c1a4fb..585c262b6 100644
  			t = ktime_add_safe(ktime_get(), t);
  		else if (!(op & FUTEX_CLOCK_REALTIME))
  			t = timens_ktime_to_host(CLOCK_MONOTONIC, t);
-@@ -3812,6 +4076,25 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
+@@ -3824,6 +4088,25 @@ SYSCALL_DEFINE6(futex, u32 __user *, uaddr, int, op, u32, val,
  	    cmd == FUTEX_CMP_REQUEUE_PI || cmd == FUTEX_WAKE_OP)
  		val2 = (u32) (unsigned long) utime;
  
@@ -34064,7 +34064,7 @@ index 044c1a4fb..585c262b6 100644
  	return do_futex(uaddr, op, val, tp, uaddr2, val2, val3);
  }
  
-@@ -3974,6 +4257,58 @@ COMPAT_SYSCALL_DEFINE3(get_robust_list, int, pid,
+@@ -3986,6 +4269,58 @@ COMPAT_SYSCALL_DEFINE3(get_robust_list, int, pid,
  #endif /* CONFIG_COMPAT */
  
  #ifdef CONFIG_COMPAT_32BIT_TIME
@@ -34123,7 +34123,7 @@ index 044c1a4fb..585c262b6 100644
  SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
  		struct old_timespec32 __user *, utime, u32 __user *, uaddr2,
  		u32, val3)
-@@ -3985,14 +4320,15 @@ SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
+@@ -3997,14 +4332,15 @@ SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
  
  	if (utime && (cmd == FUTEX_WAIT || cmd == FUTEX_LOCK_PI ||
  		      cmd == FUTEX_WAIT_BITSET ||
@@ -34141,7 +34141,7 @@ index 044c1a4fb..585c262b6 100644
  			t = ktime_add_safe(ktime_get(), t);
  		else if (!(op & FUTEX_CLOCK_REALTIME))
  			t = timens_ktime_to_host(CLOCK_MONOTONIC, t);
-@@ -4002,6 +4338,19 @@ SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
+@@ -4014,6 +4350,19 @@ SYSCALL_DEFINE6(futex_time32, u32 __user *, uaddr, int, op, u32, val,
  	    cmd == FUTEX_CMP_REQUEUE_PI || cmd == FUTEX_WAKE_OP)
  		val2 = (int) (unsigned long) utime;
  
@@ -42779,10 +42779,10 @@ index 4b3a42fc3..f1022945e 100644
  		goto out;
  
 diff --git a/kernel/trace/trace_selftest.c b/kernel/trace/trace_selftest.c
-index b5e3496cf..65f60c77b 100644
+index 4738ad48a..1aa9e076c 100644
 --- a/kernel/trace/trace_selftest.c
 +++ b/kernel/trace/trace_selftest.c
-@@ -1048,10 +1048,15 @@ static int trace_wakeup_test_thread(void *data)
+@@ -1053,10 +1053,15 @@ static int trace_wakeup_test_thread(void *data)
  {
  	/* Make this a -deadline thread */
  	static const struct sched_attr attr = {
