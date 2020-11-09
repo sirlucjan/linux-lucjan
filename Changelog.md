@@ -3,6 +3,11 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll37-rc1
+
+- resync block backport against 5.9.7
+- sync with upstream (drop mac80211-fix-regression-where-EAPOL-frames-were-sent.patch)
+
 5.9-lucjan-ll36
 
 - add block backport from 5.10 line
