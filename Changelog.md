@@ -3,6 +3,19 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll39
+
+- add fs-ntfs3-Add-headers-and-misc-files.patch
+- add fs-ntfs3-Add-initialization-of-super-block.patch
+- add fs-ntfs3-Add-bitmap.patch
+- add fs-ntfs3-Add-file-operations-and-implementation.patch
+- add fs-ntfs3-Add-attrib-operations.patch
+- add fs-ntfs3-Add-compression.patch
+- add fs-ntfs3-Add-NTFS-journal.patch
+- add fs-ntfs3-Add-Kconfig-Makefile-and-doc.patch
+- add fs-ntfs3-Add-NTFS3-in-fs-Kconfig-and-fs-Makefile.patch
+- add fs-ntfs3-Add-MAINTAINERS.patch
+
 5.9-lucjan-ll38
 
 - add Bluetooth-Fix-LL-PRivacy-BLE-device-fails-to-connect.patch
