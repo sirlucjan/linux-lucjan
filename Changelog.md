@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll38
+
+- add Bluetooth-Fix-LL-PRivacy-BLE-device-fails-to-connect.patch
+
 5.9-lucjan-ll37-rc1 --> 5.9-lucjan-ll37
 
 5.9-lucjan-ll37-rc1
