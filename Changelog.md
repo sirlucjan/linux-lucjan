@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll42
+
+- drop raid6-add-Kconfig-option-to-skip-raid6-benchmarking.patch
+
 5.9-lucjan-ll41
 
 - add block backport from 5.10 line
