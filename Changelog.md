@@ -3,6 +3,11 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll44-rc1
+
+- resync block backport against 5.9.9
+- sync with upstream (drop btrfs-fix-min-reserved-size-calculation-in-merge_rel.patch)
+
 5.9-lucjan-ll43
 
 - drop futex-Implement-mechanism-to-wait-on-any-of-several-.patch
