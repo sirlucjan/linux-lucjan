@@ -3,6 +3,17 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll44
+
+- add powercap-intel_rapl-Fix-domain-detection.patch
+- add powercap-intel_rapl-enumerate-Psys-RAPL-domain-toget.patch
+- add x86-msr-index-sort-AMD-RAPL-MSRs-by-address.patch
+- add powercap-intel_rapl_msr-Convert-rapl_msr_priv-into-p.patch
+- add powercap-Add-AMD-Fam17h-RAPL-support.patch
+- add powercap-RAPL-Add-AMD-Fam19h-RAPL-support.patch
+
+DROP 5.9-lucjan-ll44-rc1
+
 5.9-lucjan-ll44-rc1
 
 - resync block backport against 5.9.9
