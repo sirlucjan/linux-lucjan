@@ -3,6 +3,18 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll43
+
+- drop futex-Implement-mechanism-to-wait-on-any-of-several-.patch
+- drop futex-Add-Proton-compatibility-code.patch
+- re-add futex-Implement-mechanism-to-wait-on-any-of-several-.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-timeout-test.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wouldblock-t.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wake-up-test.patch
+- add futex-Change-WAIT_MULTIPLE-opcode-to-31.patch
+
+DROP 5.9-lucjan-ll43-rc1
+
 5.9-lucjan-ll43-rc1
 
 - resync block backport against 5.9.9
