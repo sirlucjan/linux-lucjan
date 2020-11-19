@@ -3,6 +3,14 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll46
+
+- add btrfs-remove-unnecessary-attempt-do-drop-extent-maps.patch
+- add btrfs-skip-unnecessary-searches-for-xattrs-when-logg.patch
+- add btrfs-stop-incrementing-log-batch-when-joining-log-t.patch
+
+5.9-lucjan-ll45-rc1 --> 5.9-lucjan-ll45
+
 5.9-lucjan-ll45-rc1
 
 - resync block backport against 5.9.9
