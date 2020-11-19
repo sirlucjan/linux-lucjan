@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll47
+
+- drop btrfs-skip-unnecessary-searches-for-xattrs-when-logg.patch
+
 5.9-lucjan-ll46
 
 - add btrfs-remove-unnecessary-attempt-do-drop-extent-maps.patch
