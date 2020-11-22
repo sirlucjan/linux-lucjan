@@ -1,6 +1,6 @@
-From ee675c9f7fe6f4c16dbf38a76e7916ffad232563 Mon Sep 17 00:00:00 2001
+From f832263ede20236d5c6d94c6833d049dad734027 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Fri, 20 Nov 2020 14:08:01 +0100
+Date: Fri, 20 Nov 2020 14:09:56 +0100
 Subject: [PATCH] 5.9-lucjan-ll48
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -586,7 +586,7 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  create mode 100644 tools/testing/selftests/futex/functional/futex_wait_multiple.c
 
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index dca917ac2..f2173293e 100644
+index 12ff6ac67..43eb91228 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
 @@ -358,6 +358,10 @@
@@ -610,7 +610,7 @@ index dca917ac2..f2173293e 100644
  			passive
  			  Use intel_pstate as a scaling driver, but configure it
  			  to work with generic cpufreq governors (instead of
-@@ -3142,8 +3149,6 @@
+@@ -3144,8 +3151,6 @@
  	noapic		[SMP,APIC] Tells the kernel to not make use of any
  			IOAPICs that may be present in the system.
  
@@ -619,7 +619,7 @@ index dca917ac2..f2173293e 100644
  	nobats		[PPC] Do not use BATs for mapping kernel lowmem
  			on "Classic" PPC cores.
  
-@@ -3593,6 +3598,15 @@
+@@ -3600,6 +3605,15 @@
  		nomsi		[MSI] If the PCI_MSI kernel config parameter is
  				enabled, this kernel boot option can be used to
  				disable the use of MSI interrupts system-wide.
@@ -635,7 +635,7 @@ index dca917ac2..f2173293e 100644
  		noioapicquirk	[APIC] Disable all boot interrupt quirks.
  				Safety option to keep boot IRQs enabled. This
  				should never be necessary.
-@@ -4611,6 +4625,12 @@
+@@ -4618,6 +4632,12 @@
  
  	sbni=		[NET] Granch SBNI12 leased line adapter
  
