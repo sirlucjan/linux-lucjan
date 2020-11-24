@@ -3,6 +3,11 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll52
+
+- add fs-Break-generic_file_buffered_read-up-into-multiple.patch
+- add fs-generic_file_buffered_read-now-uses-find_get_page.patch
+
 5.9-lucjan-ll51-rc1 --> 5.9-lucjan-ll51
 
 5.9-lucjan-ll51-rc1
