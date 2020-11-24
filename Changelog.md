@@ -3,7 +3,9 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
-5.9-lucjan-ll45-rc1
+5.9-lucjan-ll51-rc1 --> 5.9-lucjan-ll51
+
+5.9-lucjan-ll51-rc1
 
 - resync block backport against 5.9.11
 - drop fs-Break-generic_file_buffered_read-up-into-multiple.patch
