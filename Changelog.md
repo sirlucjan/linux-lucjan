@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll53
+
+- add v4l2loopback-5.9-initial-merge.patch
+
 5.9-lucjan-ll52
 
 - add fs-Break-generic_file_buffered_read-up-into-multiple.patch
