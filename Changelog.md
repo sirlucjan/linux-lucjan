@@ -3,6 +3,11 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll56
+
+- add efivarfs-revert-fix-memory-leak-in-efivarfs_create.patch
+- add fs-efivarfs-attempt-to-get-the-last-fix-to-build.patch
+
 5.9-lucjan-ll55
 
 - drop mm-madvise-introduce-process_madvise-syscall-an-exte.patch
