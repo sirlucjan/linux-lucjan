@@ -3,6 +3,14 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll55
+
+- drop mm-madvise-introduce-process_madvise-syscall-an-exte.patch
+- drop readfile-implement-readfile-syscall.patch
+- drop arch-wire-up-the-readfile-syscall.patch
+- drop selftests-add-readfile-2-selftests.patch
+- drop readfile.2-new-page-describing-readfile-2.patch
+
 5.9-lucjan-ll54
 
 - add mm-madvise-introduce-process_madvise-syscall-an-exte.patch
