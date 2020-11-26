@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll57
+
+- drop block-bfq-Disable-low_latency-when-blk_iolatency-is-.patch
+
 5.9-lucjan-ll56
 
 - add efivarfs-revert-fix-memory-leak-in-efivarfs_create.patch
