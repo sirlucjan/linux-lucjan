@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll59
+
+- update efivarfs-revert-fix-memory-leak-in-efivarfs_create.patch
+- drop fs-efivarfs-attempt-to-get-the-last-fix-to-build.patch
+- add Bluetooth-Fix-attempting-to-set-RPA-timeout-when-uns.patch
+
 5.9-lucjan-ll58
 
 - add block backport from 5.10 line
