@@ -3,6 +3,11 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll61-rc1
+
+- resync block backport against 5.9.12
+- sync with upstream (drop efivarfs-revert-fix-memory-leak-in-efivarfs_create.patch)
+
 5.9-lucjan-ll60
 
 - add Revert-net-tso-add-UDP-segmentation-support.patch
