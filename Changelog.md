@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll64
+
+- update lib-zstd-Add-kernel-specific-API.patch
+- update lib-zstd-Add-decompress_sources.h-for-decompress_unz.patch
+- update lib-zstd-Upgrade-to-latest-upstream-zstd-version-1.4.patch
+
 5.9-lucjan-ll63
 
 - drop lib-zstd-Add-zstd-compatibility-wrapper.patch
