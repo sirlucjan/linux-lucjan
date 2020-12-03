@@ -3,6 +3,21 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll63
+
+- drop lib-zstd-Add-zstd-compatibility-wrapper.patch
+- drop lib-zstd-Add-decompress_sources.h-for-decompress_unz.patch
+- drop lib-zstd-Upgrade-to-latest-upstream-zstd-version-1.4.patch
+- drop crypto-zstd-Switch-to-zstd-1.4.6-API.patch
+- drop btrfs-zstd-Switch-to-the-zstd-1.4.6-API.patch
+- drop f2fs-zstd-Switch-to-the-zstd-1.4.6-API.patch
+- drop squashfs-zstd-Switch-to-the-zstd-1.4.6-API.patch
+- drop lib-unzstd-Switch-to-the-zstd-1.4.6-API.patch
+- drop lib-zstd-Remove-zstd-compatibility-wrapper.patch
+- add lib-zstd-Add-kernel-specific-API.patch
+- re-add lib-zstd-Add-decompress_sources.h-for-decompress_unz.patch
+- re-add lib-zstd-Upgrade-to-latest-upstream-zstd-version-1.4.patch
+
 5.9-lucjan-ll62
 
 - add HID-quirks-Add-Apple-Magic-Trackpad-2-to-hid_have_sp.patch
