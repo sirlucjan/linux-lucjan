@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll68
+
+- add Project-C v5.9-r3
+
 5.9-lucjan-ll67
 
 - add dm backport from 5.10 line
