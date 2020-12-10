@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll69
+
+- add BFQ-dev 20201210
+
+DROP 5.9-lucjan-ll69-rc2
+
 5.9-lucjan-ll69-rc2
 
 - resync dm backport against 5.9.14
