@@ -3,6 +3,19 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.9-lucjan-ll72
+
+- update fs-ntfs3-Add-headers-and-misc-files.patch
+- update fs-ntfs3-Add-initialization-of-super-block.patch
+- update fs-ntfs3-Add-bitmap.patch
+- update fs-ntfs3-Add-file-operations-and-implementation.patch
+- update fs-ntfs3-Add-attrib-operations.patch
+- update fs-ntfs3-Add-compression.patch
+- update fs-ntfs3-Add-NTFS-journal.patch
+- update fs-ntfs3-Add-Kconfig-Makefile-and-doc.patch
+- update fs-ntfs3-Add-NTFS3-in-fs-Kconfig-and-fs-Makefile.patch
+- update fs-ntfs3-Add-MAINTAINERS.patch
+
 5.9-lucjan-ll71
 
 - add btrfs-send-fix-wrong-file-path-when-there-is-an-inod.patch
