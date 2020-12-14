@@ -114,6 +114,11 @@
 - add BFQ-dev 20201214
 - add UKSM for 5.10
 
+5.9-lucjan-ll74
+
+- add Revert-md-change-mddev-chunk_sectors-from-int-to-uns.patch
+- add Revert-dm-raid-fix-discard-limits-for-raid1-and-raid.patch
+
 5.9-lucjan-ll73
 
 - add block backport from 5.10 line
