@@ -3,6 +3,117 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll10-rc1
+
+- add Export-symbols-needed-by-Android-drivers.patch
+- add android-Enable-building-ashmem-and-binder-as-modules.patch
+- add ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch
+- add Bluetooth-Fix-LL-PRivacy-BLE-device-fails-to-connect.patch
+- add Bluetooth-Fix-attempting-to-set-RPA-timeout-when-uns.patch
+- add HID-quirks-Add-Apple-Magic-Trackpad-2-to-hid_have_sp.patch
+- add block-Kconfig.iosched-set-default-value-of-IOSCHED_B.patch
+- add block-Fix-depends-for-BLK_DEV_ZONED.patch
+- add block-set-rq_affinity-2-for-full-multithreading-I-O.patch
+- add block-Add-CONFIG-to-rename-the-mq-deadline-scheduler.patch
+- add btrfs-add-a-force_chunk_alloc-to-space_info-s-sysfs.patch
+- add btrfs-restart-snapshot-delete-if-we-have-to-end-the-.patch
+- add btrfs-do-not-evaluate-the-expression-with-CONFIG_BTR.patch
+- add btrfs-remove-unnecessary-attempt-do-drop-extent-maps.patch
+- add btrfs-stop-incrementing-log-batch-when-joining-log-t.patch
+- add btrfs-send-fix-wrong-file-path-when-there-is-an-inod.patch
+- add btrfs-skip-unnecessary-searches-for-xattrs-when-logg.patch
+- add i8042-decrease-debug-message-level-to-info.patch
+- add Increase-the-ext4-default-commit-age.patch
+- add silence-rapl.patch
+- add pci-pme-wakeups.patch
+- add ksm-wakeups.patch
+- add intel_idle-tweak-cpuidle-cstates.patch
+- add bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
+- add smpboot-reuse-timer-calibration.patch
+- add Initialize-ata-before-graphics.patch
+- add give-rdrand-some-credit.patch
+- add ipv4-tcp-allow-the-memory-tuning-for-tcp-to-go-a-lit.patch
+- add kernel-time-reduce-ntp-wakeups.patch
+- add init-wait-for-partition-and-retry-scan.patch
+- add print-fsync-count-for-bootchart.patch
+- add Add-boot-option-to-allow-unsigned-modules.patch
+- add Enable-stateless-firmware-loading.patch
+- add Migrate-some-systemd-defaults-to-the-kernel-defaults.patch
+- add xattr-allow-setting-user.-attributes-on-symlinks-by-.patch
+- add use-lfence-instead-of-rep-and-nop.patch
+- add do-accept-in-LIFO-order-for-cache-efficiency.patch
+- add locking-rwsem-spin-faster.patch
+- add ata-libahci-ignore-staggered-spin-up.patch
+- add print-CPU-that-faults.patch
+- add fix-bug-in-ucode-force-reload-revision-check.patch
+- add nvme-workaround.patch
+- add Don-t-report-an-error-if-PowerClamp-run-on-other-CPU.patch
+- add Port-microcode-patches.patch
+- add clearlinux-Add-pageflip-patches.patch
+- add cpu-5.10-merge-graysky-s-patchset.patch
+- add init-Kconfig-enable-O3-for-all-arches.patch
+- add net-sched-allow-configuring-cake-qdisc-as-default.patch
+- add infiniband-Fix-__read_overflow2-error-with-O3-inlini.patch
+- add kbuild-add-fcf-protection-none-to-retpoline-flags.patch
+- add mm-Disable-watermark-boosting-by-default.patch
+- add mm-Stop-kswapd-early-when-nothing-s-waiting-for-it-t.patch
+- add mm-Fully-disable-watermark-boosting-when-it-isn-t-us.patch
+- add mm-Don-t-stop-kswapd-on-a-per-node-basis-when-there-.patch
+- add mm-Add-become_kswapd-and-restore_kswapd.patch
+- add kbuild-Disable-stack-conservation-for-GCC.patch
+- add pci-Enable-overrides-for-missing-ACS-capabilities.patch
+- add ZEN-Add-OpenRGB-patches.patch
+- add tty-Allow-setting-the-number-of-available-virtual-TT.patch
+- add scsi-sd-Optimal-I-O-size-should-be-a-multiple-of-rep.patch
+- add vfs-keep-inodes-with-page-cache-off-the-inode-shrink.patch
+- add fs-Break-generic_file_buffered_read-up-into-multiple.patch
+- add fs-generic_file_buffered_read-now-uses-find_get_page.patch
+- add futex-Implement-mechanism-to-wait-on-any-of-several-.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-timeout-test.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wouldblock-t.patch
+- add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wake-up-test.patch
+- add futex-Change-WAIT_MULTIPLE-opcode-to-31.patch
+- add iomap-avoid-deadlock-if-memory-reclaim-is-triggered-.patch
+- add xfs-avoid-transaction-reservation-recursion.patch
+- add xfs-avoid-transaction-reservation-recursion.patch
+- add fs-ntfs3-Add-headers-and-misc-files.patch
+- add fs-ntfs3-Add-initialization-of-super-block.patch
+- add fs-ntfs3-Add-bitmap.patch
+- add fs-ntfs3-Add-file-operations-and-implementation.patch
+- add fs-ntfs3-Add-attrib-operations.patch
+- add fs-ntfs3-Add-compression.patch
+- add fs-ntfs3-Add-NTFS-journal.patch
+- add fs-ntfs3-Add-Kconfig-Makefile-and-doc.patch
+- add fs-ntfs3-Add-NTFS3-in-fs-Kconfig-and-fs-Makefile.patch
+- add fs-ntfs3-Add-MAINTAINERS.patch
+- add mm-z3fold-fix-scheduling-while-atomic.patch
+- add genirq-i2c-Provide-and-use-generic_dispatch_irq.patch
+- add mm-z3fold-Remove-preempt-disabled-sections-for-RT.patch
+- add x86-msr-index-sort-AMD-RAPL-MSRs-by-address.patch
+- add powercap-intel_rapl_msr-Convert-rapl_msr_priv-into-p.patch
+- add powercap-Add-AMD-Fam17h-RAPL-support.patch
+- add powercap-RAPL-Add-AMD-Fam19h-RAPL-support.patch
+- add readfile-implement-readfile-syscall.patch
+- add arch-wire-up-the-readfile-syscall.patch
+- add selftests-add-readfile-2-selftests.patch
+- add readfile.2-new-page-describing-readfile-2.patch
+- add ZEN-Add-VHBA-driver.patch
+- add ZEN-intel-pstate-Implement-enable-parameter.patch
+- add lib-zstd-Add-kernel-specific-API.patch
+- add lib-zstd-Add-decompress_sources.h-for-decompress_unz.patch
+- add lib-zstd-Upgrade-to-latest-upstream-zstd-version-1.4.patch
+- add init-add-support-for-zstd-compressed-modules.patch
+- add sched-autogroup-Add-kernel-parameter-and-config-opti.patch
+- add Project-C v5.10-r0
+- add init-Kconfig-set-default-value-of-SCHED_PDS.patch
+- add init-Kconfig-Restore-original-PDS-description.patch
+- add sched-alt-Export-can_nice-symbol-for-Android-Binder-.patch
+- add sched-pds-1.1-Implement-bitmap-allocator.patch
+- add LL-kconfig-add-750Hz-timer-interrupt-kernel-config-o.patch
+- add Disable-CPU_FREQ_GOV_SCHEDUTIL.patch
+- add BFQ-dev 20201214
+- add UKSM for 5.10
+
 5.9-lucjan-ll73
 
 - add block backport from 5.10 line
