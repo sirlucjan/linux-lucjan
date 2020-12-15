@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll3-rc1
+
+- add BFQ-dev 20201215 (fix htmldocs warining)
+
 5.10-lucjan-ll2-rc1
 
 - add sched-bmq-Fix-compilation-issue.patch
