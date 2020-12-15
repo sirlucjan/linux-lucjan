@@ -3,7 +3,11 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
-5.10-lucjan-ll10-rc1
+5.10-lucjan-ll2-rc1
+
+- add sched-bmq-Fix-compilation-issue.patch
+
+5.10-lucjan-ll1-rc1
 
 - add Export-symbols-needed-by-Android-drivers.patch
 - add android-Enable-building-ashmem-and-binder-as-modules.patch
