@@ -3,6 +3,15 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll5-rc1
+
+- add btrfs-fix-race-causing-unnecessary-inode-logging-dur.patch
+- add btrfs-fix-race-that-results-in-logging-old-extents-d.patch
+- add btrfs-fix-race-that-causes-unnecessary-logging-of-an.patch
+- add btrfs-fix-race-that-makes-inode-logging-fallback-to-.patch
+- add btrfs-fix-race-leading-to-unnecessary-transaction-co.patch
+- add btrfs-do-not-block-inode-logging-for-so-long-during-.patch
+
 5.10-lucjan-ll4-rc1
 
 - drop xfs-avoid-transaction-reservation-recursion.patch (1)
