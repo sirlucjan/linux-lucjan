@@ -139,6 +139,14 @@
 - add BFQ-dev 20201214
 - add UKSM for 5.10
 
+5.9-lucjan-ll76
+
+- drop xfs-avoid-transaction-reservation-recursion.patch (1)
+- drop xfs-avoid-transaction-reservation-recursion.patch (2)
+- add xfs-use-memalloc_nofs_-save-restore-in-xfs-transacti.patch
+- add xfs-refactor-the-usage-around-xfs_trans_context_-set.patch
+- add xfs-use-current-journal_info-to-avoid-transaction-re.patch
+
 5.9-lucjan-ll75
 
 - add drm-dp_mst-Support-remote-i2c-writes.patch
