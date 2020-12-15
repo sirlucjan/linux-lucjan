@@ -130,6 +130,10 @@
 - add BFQ-dev 20201214
 - add UKSM for 5.10
 
+5.9-lucjan-ll75
+
+- add drm-dp_mst-Support-remote-i2c-writes.patch
+
 5.9-lucjan-ll74
 
 - add Revert-md-change-mddev-chunk_sectors-from-int-to-uns.patch
