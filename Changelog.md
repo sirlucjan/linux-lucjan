@@ -3,6 +3,14 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll4-rc1
+
+- drop xfs-avoid-transaction-reservation-recursion.patch (1)
+- drop xfs-avoid-transaction-reservation-recursion.patch (2)
+- add xfs-use-memalloc_nofs_-save-restore-in-xfs-transacti.patch
+- add xfs-refactor-the-usage-around-xfs_trans_context_-set.patch
+- add xfs-use-current-journal_info-to-avoid-transaction-re.patch
+
 5.10-lucjan-ll3-rc1
 
 - add BFQ-dev 20201215 (fix htmldocs warining)
@@ -82,8 +90,8 @@
 - add selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wake-up-test.patch
 - add futex-Change-WAIT_MULTIPLE-opcode-to-31.patch
 - add iomap-avoid-deadlock-if-memory-reclaim-is-triggered-.patch
-- add xfs-avoid-transaction-reservation-recursion.patch
-- add xfs-avoid-transaction-reservation-recursion.patch
+- add xfs-avoid-transaction-reservation-recursion.patch (1)
+- add xfs-avoid-transaction-reservation-recursion.patch (2)
 - add fs-ntfs3-Add-headers-and-misc-files.patch
 - add fs-ntfs3-Add-initialization-of-super-block.patch
 - add fs-ntfs3-Add-bitmap.patch
