@@ -4,6 +4,10 @@
 #### Otherwise the kernel will not compile properly.
 
 
+5.10-lucjan-ll7-rc1
+
+- update init-add-support-for-zstd-compressed-modules.patch
+
 5.10-lucjan-ll6-rc1
 
 - update init-add-support-for-zstd-compressed-modules.patch
