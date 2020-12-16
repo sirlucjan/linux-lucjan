@@ -1,6 +1,6 @@
-From 94e8241ee1d0a7a73174f87c864cb0d79020eaf2 Mon Sep 17 00:00:00 2001
+From 792c48f59323d7e09e9dcf6f37ea401c04ec175e Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Tue, 15 Dec 2020 21:57:50 +0100
+Date: Tue, 15 Dec 2020 21:59:01 +0100
 Subject: [PATCH] 5.9-lucjan-ll76
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -1284,7 +1284,7 @@ index 867157311..5f576c54e 100644
  M:	Finn Thain <fthain@telegraphics.com.au>
  L:	linux-m68k@lists.linux-m68k.org
 diff --git a/Makefile b/Makefile
-index 0983973bc..9522d5dc3 100644
+index a5dbc06c0..29c935c5a 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -14,6 +14,10 @@ NAME = Kleptomaniac Octopus
@@ -1309,7 +1309,7 @@ index 0983973bc..9522d5dc3 100644
  export RETPOLINE_CFLAGS
  export RETPOLINE_VDSO_CFLAGS
  
-@@ -933,9 +941,6 @@ KBUILD_CFLAGS	+= $(call cc-option,-fmerge-constants)
+@@ -936,9 +944,6 @@ KBUILD_CFLAGS	+= $(call cc-option,-fmerge-constants)
  # Make sure -fstack-check isn't enabled (like gentoo apparently did)
  KBUILD_CFLAGS  += $(call cc-option,-fno-stack-check,)
  
@@ -1319,7 +1319,7 @@ index 0983973bc..9522d5dc3 100644
  # Prohibit date/time macros, which would make the build non-deterministic
  KBUILD_CFLAGS   += $(call cc-option,-Werror=date-time)
  
-@@ -1043,8 +1048,8 @@ endif # INSTALL_MOD_STRIP
+@@ -1046,8 +1051,8 @@ endif # INSTALL_MOD_STRIP
  export mod_strip_cmd
  
  # CONFIG_MODULE_COMPRESS, if defined, will cause module to be compressed
@@ -1330,7 +1330,7 @@ index 0983973bc..9522d5dc3 100644
  
  mod_compress_cmd = true
  ifdef CONFIG_MODULE_COMPRESS
-@@ -1054,6 +1059,9 @@ ifdef CONFIG_MODULE_COMPRESS
+@@ -1057,6 +1062,9 @@ ifdef CONFIG_MODULE_COMPRESS
    ifdef CONFIG_MODULE_COMPRESS_XZ
      mod_compress_cmd = $(XZ) -f
    endif # CONFIG_MODULE_COMPRESS_XZ
@@ -13792,7 +13792,7 @@ index 1a3309f06..154a969c8 100644
  	*dlen = out_len;
  	return 0;
 diff --git a/drivers/Makefile b/drivers/Makefile
-index c0cd1b907..af1e2fb3a 100644
+index 576228037..cf79337dd 100644
 --- a/drivers/Makefile
 +++ b/drivers/Makefile
 @@ -59,15 +59,8 @@ obj-y				+= char/
@@ -17399,10 +17399,10 @@ index 094910980..58994da10 100644
  		return ide_get_identity_ioctl(drive, cmd, argp);
  	case HDIO_GET_NICE:
 diff --git a/drivers/idle/intel_idle.c b/drivers/idle/intel_idle.c
-index d09b807e1..52ae41b06 100644
+index 3a1617a3e..4f0ac8a9c 100644
 --- a/drivers/idle/intel_idle.c
 +++ b/drivers/idle/intel_idle.c
-@@ -515,7 +515,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
+@@ -498,7 +498,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
  		.desc = "MWAIT 0x01",
  		.flags = MWAIT2flg(0x01) | CPUIDLE_FLAG_ALWAYS_ENABLE,
  		.exit_latency = 10,
@@ -17411,7 +17411,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -523,7 +523,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
+@@ -506,7 +506,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
  		.desc = "MWAIT 0x10",
  		.flags = MWAIT2flg(0x10) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 33,
@@ -17420,7 +17420,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -531,7 +531,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
+@@ -514,7 +514,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
  		.desc = "MWAIT 0x20",
  		.flags = MWAIT2flg(0x20) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 133,
@@ -17429,7 +17429,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -539,7 +539,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
+@@ -522,7 +522,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
  		.desc = "MWAIT 0x32",
  		.flags = MWAIT2flg(0x32) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 166,
@@ -17438,7 +17438,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -547,7 +547,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
+@@ -530,7 +530,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
  		.desc = "MWAIT 0x40",
  		.flags = MWAIT2flg(0x40) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 300,
@@ -17447,7 +17447,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -555,7 +555,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
+@@ -538,7 +538,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
  		.desc = "MWAIT 0x50",
  		.flags = MWAIT2flg(0x50) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 600,
@@ -17456,7 +17456,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -563,7 +563,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
+@@ -546,7 +546,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
  		.desc = "MWAIT 0x60",
  		.flags = MWAIT2flg(0x60) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 2600,
@@ -17465,7 +17465,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -583,7 +583,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
+@@ -566,7 +566,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
  		.desc = "MWAIT 0x01",
  		.flags = MWAIT2flg(0x01) | CPUIDLE_FLAG_ALWAYS_ENABLE,
  		.exit_latency = 10,
@@ -17474,7 +17474,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -591,7 +591,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
+@@ -574,7 +574,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
  		.desc = "MWAIT 0x10",
  		.flags = MWAIT2flg(0x10) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 40,
@@ -17483,7 +17483,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -599,7 +599,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
+@@ -582,7 +582,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
  		.desc = "MWAIT 0x20",
  		.flags = MWAIT2flg(0x20) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 133,
@@ -17492,7 +17492,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -607,7 +607,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
+@@ -590,7 +590,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
  		.desc = "MWAIT 0x32",
  		.flags = MWAIT2flg(0x32) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 166,
@@ -17501,7 +17501,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -615,7 +615,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
+@@ -598,7 +598,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
  		.desc = "MWAIT 0x40",
  		.flags = MWAIT2flg(0x40) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 300,
@@ -17510,7 +17510,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -623,7 +623,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
+@@ -606,7 +606,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
  		.desc = "MWAIT 0x50",
  		.flags = MWAIT2flg(0x50) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 600,
@@ -17519,7 +17519,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -631,7 +631,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
+@@ -614,7 +614,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
  		.desc = "MWAIT 0x60",
  		.flags = MWAIT2flg(0x60) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 2600,
@@ -17528,7 +17528,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -652,7 +652,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
+@@ -635,7 +635,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
  		.desc = "MWAIT 0x01",
  		.flags = MWAIT2flg(0x01) | CPUIDLE_FLAG_ALWAYS_ENABLE,
  		.exit_latency = 10,
@@ -17537,7 +17537,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -660,7 +660,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
+@@ -643,7 +643,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
  		.desc = "MWAIT 0x10",
  		.flags = MWAIT2flg(0x10) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 70,
@@ -17546,7 +17546,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -668,7 +668,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
+@@ -651,7 +651,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
  		.desc = "MWAIT 0x20",
  		.flags = MWAIT2flg(0x20) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 85,
@@ -17555,7 +17555,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -676,7 +676,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
+@@ -659,7 +659,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
  		.desc = "MWAIT 0x33",
  		.flags = MWAIT2flg(0x33) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 124,
@@ -17564,7 +17564,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -684,7 +684,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
+@@ -667,7 +667,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
  		.desc = "MWAIT 0x40",
  		.flags = MWAIT2flg(0x40) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 200,
@@ -17573,7 +17573,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -692,7 +692,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
+@@ -675,7 +675,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
  		.desc = "MWAIT 0x50",
  		.flags = MWAIT2flg(0x50) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 480,
@@ -17582,7 +17582,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -700,7 +700,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
+@@ -683,7 +683,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
  		.desc = "MWAIT 0x60",
  		.flags = MWAIT2flg(0x60) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 890,
@@ -17591,7 +17591,7 @@ index d09b807e1..52ae41b06 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -721,7 +721,7 @@ static struct cpuidle_state skx_cstates[] __initdata = {
+@@ -704,7 +704,7 @@ static struct cpuidle_state skx_cstates[] __initdata = {
  		.desc = "MWAIT 0x01",
  		.flags = MWAIT2flg(0x01) | CPUIDLE_FLAG_ALWAYS_ENABLE,
  		.exit_latency = 10,
@@ -25525,7 +25525,7 @@ index 000000000..6cb6f842c
 +	},
 +#endif /* V4L2_PIX_FMT_HEVC */
 diff --git a/drivers/mmc/core/block.c b/drivers/mmc/core/block.c
-index fa313b634..8d3df0be0 100644
+index ba6f4a652..42e27a298 100644
 --- a/drivers/mmc/core/block.c
 +++ b/drivers/mmc/core/block.c
 @@ -723,7 +723,7 @@ static int mmc_blk_check_blkdev(struct block_device *bdev)
@@ -30570,10 +30570,10 @@ index 8ae833e00..34105f66e 100644
  					     end >> PAGE_SHIFT);
  }
 diff --git a/fs/btrfs/ctree.h b/fs/btrfs/ctree.h
-index 2f5ab8c47..e243ea3bd 100644
+index c2e38516a..36a1273c9 100644
 --- a/fs/btrfs/ctree.h
 +++ b/fs/btrfs/ctree.h
-@@ -3238,7 +3238,7 @@ static inline void assertfail(const char *expr, const char *file, int line)
+@@ -3241,7 +3241,7 @@ static inline void assertfail(const char *expr, const char *file, int line)
  
  #else
  static inline void assertfail(const char *expr, const char* file, int line) { }
@@ -78165,10 +78165,10 @@ index 36c54265b..acbdf8f3f 100644
  	nr_switches = p->nvcsw + p->nivcsw;
  
 diff --git a/kernel/sched/idle.c b/kernel/sched/idle.c
-index f324dc36f..a6b566bda 100644
+index dee807ffa..c8f9919e8 100644
 --- a/kernel/sched/idle.c
 +++ b/kernel/sched/idle.c
-@@ -369,6 +369,7 @@ void cpu_startup_entry(enum cpuhp_state state)
+@@ -395,6 +395,7 @@ void cpu_startup_entry(enum cpuhp_state state)
  		do_idle();
  }
  
@@ -78176,7 +78176,7 @@ index f324dc36f..a6b566bda 100644
  /*
   * idle-task scheduling class.
   */
-@@ -482,3 +483,4 @@ const struct sched_class idle_sched_class
+@@ -508,3 +509,4 @@ const struct sched_class idle_sched_class
  	.switched_to		= switched_to_idle,
  	.update_curr		= update_curr_idle,
  };
@@ -114523,7 +114523,7 @@ index 55e1b4cba..000000000
 -
 -#endif /* ZSTD_OPT_H_91842398743 */
 diff --git a/mm/Kconfig b/mm/Kconfig
-index 6c974888f..4c6727acd 100644
+index 92501712e..fac543169 100644
 --- a/mm/Kconfig
 +++ b/mm/Kconfig
 @@ -317,6 +317,32 @@ config KSM
@@ -115606,7 +115606,7 @@ index 25592b45a..5cba22ebc 100644
  			__dec_zone_state(oldzone, NR_ZONE_WRITE_PENDING);
  			__inc_node_state(newzone->zone_pgdat, NR_FILE_DIRTY);
 diff --git a/mm/mmap.c b/mm/mmap.c
-index 7a8987aa6..63c9e2306 100644
+index c85a2875a..04ebb5fb1 100644
 --- a/mm/mmap.c
 +++ b/mm/mmap.c
 @@ -46,6 +46,7 @@
@@ -115692,7 +115692,7 @@ index 7a8987aa6..63c9e2306 100644
  }
  
  /*
-@@ -1826,6 +1844,7 @@ unsigned long mmap_region(struct file *file, unsigned long addr,
+@@ -1824,6 +1842,7 @@ unsigned long mmap_region(struct file *file, unsigned long addr,
  			allow_write_access(file);
  	}
  	file = vma->vm_file;
@@ -115700,7 +115700,7 @@ index 7a8987aa6..63c9e2306 100644
  out:
  	perf_event_mmap(vma);
  
-@@ -1868,6 +1887,7 @@ unsigned long mmap_region(struct file *file, unsigned long addr,
+@@ -1866,6 +1885,7 @@ unsigned long mmap_region(struct file *file, unsigned long addr,
  	if (vm_flags & VM_DENYWRITE)
  		allow_write_access(file);
  free_vma:
@@ -115708,7 +115708,7 @@ index 7a8987aa6..63c9e2306 100644
  	vm_area_free(vma);
  unacct_error:
  	if (charged)
-@@ -2730,6 +2750,8 @@ int __split_vma(struct mm_struct *mm, struct vm_area_struct *vma,
+@@ -2728,6 +2748,8 @@ int __split_vma(struct mm_struct *mm, struct vm_area_struct *vma,
  	else
  		err = vma_adjust(vma, vma->vm_start, addr, vma->vm_pgoff, new);
  
@@ -115717,7 +115717,7 @@ index 7a8987aa6..63c9e2306 100644
  	/* Success. */
  	if (!err)
  		return 0;
-@@ -3037,6 +3059,7 @@ static int do_brk_flags(unsigned long addr, unsigned long len, unsigned long fla
+@@ -3035,6 +3057,7 @@ static int do_brk_flags(unsigned long addr, unsigned long len, unsigned long fla
  	if ((flags & (~VM_EXEC)) != 0)
  		return -EINVAL;
  	flags |= VM_DATA_DEFAULT_FLAGS | VM_ACCOUNT | mm->def_flags;
@@ -115725,7 +115725,7 @@ index 7a8987aa6..63c9e2306 100644
  
  	mapped_addr = get_unmapped_area(NULL, addr, len, 0, MAP_FIXED);
  	if (IS_ERR_VALUE(mapped_addr))
-@@ -3087,6 +3110,7 @@ static int do_brk_flags(unsigned long addr, unsigned long len, unsigned long fla
+@@ -3085,6 +3108,7 @@ static int do_brk_flags(unsigned long addr, unsigned long len, unsigned long fla
  	vma->vm_flags = flags;
  	vma->vm_page_prot = vm_get_page_prot(flags);
  	vma_link(mm, vma, prev, rb_link, rb_parent);
@@ -115733,7 +115733,7 @@ index 7a8987aa6..63c9e2306 100644
  out:
  	perf_event_mmap(vma);
  	mm->total_vm += len >> PAGE_SHIFT;
-@@ -3164,6 +3188,12 @@ void exit_mmap(struct mm_struct *mm)
+@@ -3162,6 +3186,12 @@ void exit_mmap(struct mm_struct *mm)
  		mmap_write_unlock(mm);
  	}
  
@@ -115746,7 +115746,7 @@ index 7a8987aa6..63c9e2306 100644
  	if (mm->locked_vm) {
  		vma = mm->mmap;
  		while (vma) {
-@@ -3199,6 +3229,11 @@ void exit_mmap(struct mm_struct *mm)
+@@ -3197,6 +3227,11 @@ void exit_mmap(struct mm_struct *mm)
  		cond_resched();
  	}
  	vm_unacct_memory(nr_accounted);
@@ -115758,7 +115758,7 @@ index 7a8987aa6..63c9e2306 100644
  }
  
  /* Insert vm structure into process list sorted by address
-@@ -3306,6 +3341,7 @@ struct vm_area_struct *copy_vma(struct vm_area_struct **vmap,
+@@ -3304,6 +3339,7 @@ struct vm_area_struct *copy_vma(struct vm_area_struct **vmap,
  			new_vma->vm_ops->open(new_vma);
  		vma_link(mm, new_vma, prev, rb_link, rb_parent);
  		*need_rmap_locks = false;
@@ -115766,7 +115766,7 @@ index 7a8987aa6..63c9e2306 100644
  	}
  	return new_vma;
  
-@@ -3458,6 +3494,7 @@ static struct vm_area_struct *__install_special_mapping(
+@@ -3456,6 +3492,7 @@ static struct vm_area_struct *__install_special_mapping(
  	vm_stat_account(mm, vma->vm_flags, len >> PAGE_SHIFT);
  
  	perf_event_mmap(vma);
