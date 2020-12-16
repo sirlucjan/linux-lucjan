@@ -3,6 +3,11 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+
+5.10-lucjan-ll6-rc1
+
+- update init-add-support-for-zstd-compressed-modules.patch
+
 5.10-lucjan-ll5-rc1
 
 - add btrfs-fix-race-causing-unnecessary-inode-logging-dur.patch
