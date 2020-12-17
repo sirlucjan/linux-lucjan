@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll10-rc1
+
+- restore init-add-support-for-zstd-compressed-modules.patch
+
 5.10-lucjan-ll9-rc1
 
 - update readfile-implement-readfile-syscall.patch
