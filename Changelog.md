@@ -164,6 +164,10 @@
 - add BFQ-dev 20201214
 - add UKSM for 5.10
 
+5.9-lucjan-ll79
+
+- restore init-add-support-for-zstd-compressed-modules.patch
+
 5.9-lucjan-ll78
 
 - update init-add-support-for-zstd-compressed-modules.patch
