@@ -3,6 +3,13 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll9-rc1
+
+- update readfile-implement-readfile-syscall.patch
+- update arch-wire-up-the-readfile-syscall.patch
+- update selftests-add-readfile-2-selftests.patch
+- update readfile.2-new-page-describing-readfile-2.patch
+- add futex2-resync-from-gitlab.collabora.com.patch
 
 5.10-lucjan-ll8-rc1
 
