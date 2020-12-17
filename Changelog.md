@@ -4,6 +4,15 @@
 #### Otherwise the kernel will not compile properly.
 
 
+5.10-lucjan-ll8-rc1
+
+- drop futex-Implement-mechanism-to-wait-on-any-of-several-.patch
+- drop selftests-futex-Add-FUTEX_WAIT_MULTIPLE-timeout-test.patch
+- drop selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wouldblock-t.patch
+- drop selftests-futex-Add-FUTEX_WAIT_MULTIPLE-wake-up-test.patch
+- drop futex-Change-WAIT_MULTIPLE-opcode-to-31.patch
+- add futex-resync-from-gitlab.collabora.com.patch
+
 5.10-lucjan-ll7-rc1
 
 - update init-add-support-for-zstd-compressed-modules.patch
