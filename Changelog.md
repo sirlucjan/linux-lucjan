@@ -3,6 +3,14 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll11-rc1
+
+- drop mm-z3fold-fix-scheduling-while-atomic.patch
+- drop mm-z3fold-Remove-preempt-disabled-sections-for-RT.patch
+- add z3fold-simplify-freeing-slots.patch
+- add z3fold-stricter-locking-and-more-careful-reclaim.patch
+- add z3fold-remove-preempt-disabled-sections-for-RT.patch
+
 5.10-lucjan-ll10-rc1
 
 - restore init-add-support-for-zstd-compressed-modules.patch
