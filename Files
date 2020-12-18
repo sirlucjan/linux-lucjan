@@ -1696,10 +1696,18 @@
 │       ├── 5.9-lucjan-ll9-rc1.patch
 │       └── 5.9-lucjan-ll9-rc1.patch.sig
 ├── Changelog.md
+├── depends
+│   └── kmod-zstd
+│       ├── 0001-add-Zstandard-compression-support.patch
+│       ├── 0002-testsuite-add-test-for-zstd-compressed-module.patch
+│       ├── depmod.hook
+│       ├── depmod.script
+│       ├── depmod-search.conf
+│       └── PKGBUILD
 ├── Files
 ├── README.md
 └── trunk
     ├── 5.10-lucjan-ll10-rc1.patch
     └── 5.10-lucjan-ll10-rc1.patch.sig
 
-19 directories, 1683 files
+21 directories, 1689 files
