@@ -3,6 +3,11 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll12-rc1
+
+- add mm-5.10-protect-file-mappings-under-memory-pressure.patch
+- resync LL-Implement-ll-branding-v5.10.patch
+
 5.10-lucjan-ll11-rc1
 
 - drop mm-z3fold-fix-scheduling-while-atomic.patch
