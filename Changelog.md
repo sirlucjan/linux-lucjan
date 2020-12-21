@@ -3,6 +3,19 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll15-rc1
+
+- add btrfs-return-bool-from-should_end_transaction.patch
+- add btrfs-return-bool-from-btrfs_should_end_transaction.patch
+- add btrfs-do-not-block-on-deleted-bgs-mutex-in-the-clean.patch
+- add btrfs-only-let-one-thread-pre-flush-delayed-refs-in-.patch
+- add btrfs-delayed-refs-pre-flushing-should-only-run-the-.patch
+- add btrfs-only-run-delayed-refs-once-before-committing.patch
+- add btrfs-move-delayed-ref-flushing-for-qgroup-into-qgro.patch
+- add btrfs-remove-bogus-BUG_ON-in-alloc_reserved_tree_blo.patch
+- add btrfs-stop-running-all-delayed-refs-during-snapshot.patch
+- add btrfs-run-delayed-refs-less-often-in-commit_cowonly_.patch
+
 5.10-lucjan-ll14-rc1
 
 - add cpu-5.10-add-support-for-Zen-3-with-trunk-GCC.patch
