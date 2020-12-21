@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll14-rc1
+
+- add cpu-5.10-add-support-for-Zen-3-with-trunk-GCC.patch
+
 5.10-lucjan-ll13-rc1
 
 - add mm-5.10-fix-unevictable-nits.patch
