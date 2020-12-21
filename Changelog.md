@@ -3,6 +3,11 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll16-rc1
+
+- add f2fs-fix-to-seek-incorrect-data-offset-in-inline-dat.patch
+- add overlayfs-over-xfs-whiteout-operation-may-cause-dead.patch
+
 5.10-lucjan-ll15-rc1
 
 - add btrfs-return-bool-from-should_end_transaction.patch
