@@ -3,6 +3,8 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll16-rc1 --> 5.10-lucjan-ll16
+
 5.10-lucjan-ll16-rc1
 
 - add f2fs-fix-to-seek-incorrect-data-offset-in-inline-dat.patch
