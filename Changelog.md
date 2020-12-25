@@ -3,6 +3,13 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll18
+
+- add Project-C v5.10-r1
+- add sched-alt-Fix-UP-compilation-warning.patch
+
+DROP 5.10-lucjan-ll18-rc1
+
 5.10-lucjan-ll18-rc1
 
 - sync with upstream (drop f2fs-fix-to-seek-incorrect-data-offset-in-inline-dat.patch)
