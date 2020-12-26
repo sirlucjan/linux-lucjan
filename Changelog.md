@@ -3,6 +3,22 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll21
+
+- add btrfs-make-flush_space-take-a-enum-btrfs_flush_state.patch
+- add btrfs-add-a-trace-point-for-reserve-tickets.patch
+- add btrfs-track-ordered-bytes-instead-of-just-dio-ordere.patch
+- add btrfs-introduce-a-FORCE_COMMIT_TRANS-flush-operation.patch
+- add btrfs-improve-preemptive-background-space-flushing.patch
+- add btrfs-rename-need_do_async_reclaim.patch
+- add btrfs-check-reclaim_size-in-need_preemptive_reclaim.patch
+- add btrfs-rework-btrfs_calc_reclaim_metadata_size.patch
+- add btrfs-simplify-the-logic-in-need_preemptive_flushing.patch
+- add btrfs-implement-space-clamping-for-preemptive-flushi.patch
+- add btrfs-adjust-the-flush-trace-point-to-include-the-so.patch
+- add btrfs-add-a-trace-class-for-dumping-the-current-ENOS.patch
+- add Partially-revert-commit-38d715f494f2-btrfs-use-btrfs.patch
+
 5.10-lucjan-ll20-rc1 --> 5.10-lucjan-ll20
 
 5.10-lucjan-ll20-rc1
