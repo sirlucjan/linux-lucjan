@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll22
+
+- add mm-5.10-respect-soft-active-file-pages-eviction.patch
+
 5.10-lucjan-ll21
 
 - add btrfs-make-flush_space-take-a-enum-btrfs_flush_state.patch
