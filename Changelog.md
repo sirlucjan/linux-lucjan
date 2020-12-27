@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll24
+
+- add drm-amd-display-Add-get_dig_frontend-implementation-.patch
+- add drm-amdgpu-only-set-DP-subconnector-type-on-DP-and-e.patch
+- add iwlwifi-Fix-regression-from-UDP-segmentation-support.patch
+
 5.10-lucjan-ll23
 
 - drop xfs-refactor-the-usage-around-xfs_trans_context_-set.patch
