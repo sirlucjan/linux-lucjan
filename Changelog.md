@@ -5,6 +5,12 @@
 
 5.10-lucjan-ll25
 
+- add BFQ-dev 20201227
+
+DROP 5.10-lucjan-ll25-rc1
+
+5.10-lucjan-ll25-rc1
+
 - sync with upstream (drop drm-amdgpu-only-set-DP-subconnector-type-on-DP-and-e.patch)
 - sync with upstream (drop Bluetooth-Fix-LL-PRivacy-BLE-device-fails-to-connect.patch)
 - sync with upstream (drop z3fold-simplify-freeing-slots.patch)
