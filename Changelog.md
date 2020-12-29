@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll26
+
+- add BFQ-dev 20201228
+
+DROP 5.10-lucjan-ll26-rc1
+
 5.10-lucjan-ll26-rc1
 
 - sync with upstream (drop drm-amdgpu-only-set-DP-subconnector-type-on-DP-and-e.patch)
