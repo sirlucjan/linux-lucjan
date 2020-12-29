@@ -3,6 +3,14 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll27-rc1
+
+- sync with upstream (drop drm-amdgpu-only-set-DP-subconnector-type-on-DP-and-e.patch)
+- sync with upstream (drop Bluetooth-Fix-LL-PRivacy-BLE-device-fails-to-connect.patch)
+- sync with upstream (drop z3fold-simplify-freeing-slots.patch)
+- sync with upstream (drop z3fold-stricter-locking-and-more-careful-reclaim.patch)
+- sync with upstream (update mm-Fully-disable-watermark-boosting-when-it-isn-t-us.patch)
+
 5.10-lucjan-ll26
 
 - add BFQ-dev 20201228
