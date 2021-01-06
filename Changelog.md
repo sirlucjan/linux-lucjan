@@ -3,6 +3,8 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll39-rc1 --> 5.10-lucjan-ll39
+
 5.10-lucjan-ll39-rc1
 
 - sync with upstream (drop drm-amd-display-Add-get_dig_frontend-implementation-.patch)
