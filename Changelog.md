@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll40-rc1
+
+- sync with upstream (drop Revert-drm-amd-display-Fix-memory-leaks-in-S3-resume.patch)
+- sync with upstream (drop Bluetooth-Fix-attempting-to-set-RPA-timeout-when-uns.patch)
+- sync with upstream (drop ALSA-hda-hdmi-fix-locking-in-silent_stream_disable.patch)
+
 5.10-lucjan-ll39-rc1 --> 5.10-lucjan-ll39
 
 5.10-lucjan-ll39-rc1
