@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll41
+
+- drop Partially-revert-commit-38d715f494f2-btrfs-use-btrfs.patch
+- add btrfs-fix-deadlock-when-cloning-inline-extent-and-lo.patch
+- add btrfs-shrink-delalloc-pages-instead-of-full-inodes.patch
+
 5.10-lucjan-ll40-rc1 --> 5.10-lucjan-ll40
 
 5.10-lucjan-ll40-rc1
@@ -26,8 +32,6 @@ DROP 5.10-lucjan-ll38-rc1
 5.10-lucjan-ll38-rc1
 
 - sync with upstream (drop drm-amd-display-Add-get_dig_frontend-implementation-.patch)
-
-5.10-lucjan-ll36
 
 5.10-lucjan-ll37
 
