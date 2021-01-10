@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll42
+
+- add drm-i915-gt-Limit-VFE-threads-based-on-GT.patch
+- add drm-i915-gt-Restore-clear-residual-mitigations-for-I.patch
+- add drm-i915-Allow-the-user-to-override-security-mitigat.patch
+
 5.10-lucjan-ll41
 
 - drop Partially-revert-commit-38d715f494f2-btrfs-use-btrfs.patch
