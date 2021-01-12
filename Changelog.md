@@ -3,6 +3,11 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll44
+
+- drop overlayfs-over-xfs-whiteout-operation-may-cause-dead.patch
+- add xfs-fix-an-ABBA-deadlock-in-xfs_rename.patch
+
 5.10-lucjan-ll43-rc1 --> 5.10-lucjan-ll43
 
 5.10-lucjan-ll43-rc1
