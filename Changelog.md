@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll45
+
+- update init-add-support-for-zstd-compressed-modules.patch
+
 5.10-lucjan-ll44
 
 - drop overlayfs-over-xfs-whiteout-operation-may-cause-dead.patch
