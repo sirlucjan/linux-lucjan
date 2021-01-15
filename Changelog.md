@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll50-rc1
+
+- sync with upstream (drop btrfs-fix-deadlock-when-cloning-inline-extent-and-lo.patch)
+- sync with upstream (drop btrfs-shrink-delalloc-pages-instead-of-full-inodes.patch)
+- sync with upstream (drop btrfs-skip-unnecessary-searches-for-xattrs-when-logg.patch)
+
 5.10-lucjan-ll49
 
 - update drm-i915-gt-Limit-VFE-threads-based-on-GT.patch
