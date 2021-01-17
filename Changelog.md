@@ -3,6 +3,13 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll53
+
+- drop xfs-introduce-xfs_trans_context_swap-for-rolling-tra.patch
+- add xfs-refactor-the-usage-around-xfs_trans_context_-set.patch
+
+DROP 5.10-lucjan-ll53-rc1
+
 5.10-lucjan-ll53-rc1
 
 - sync with upstream (drop btrfs-relocation-fix-wrong-file-extent-type-check-to.patch)
