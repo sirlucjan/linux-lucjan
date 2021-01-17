@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll53-rc1
+
+- sync with upstream (drop btrfs-relocation-fix-wrong-file-extent-type-check-to.patch)
+- sync with upstream (drop drm-i915-gt-Limit-VFE-threads-based-on-GT.patch)
+- sync with upstream (drop drm-i915-Allow-the-sysadmin-to-override-security-mit.patch)
+
 5.10-lucjan-ll53
 
 - drop xfs-introduce-xfs_trans_context_swap-for-rolling-tra.patch
