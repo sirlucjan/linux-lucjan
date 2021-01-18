@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll52-rc1
+
+- add BFQ-dev 20210118
+
 5.10-lucjan-ll55-rc1
 
 - sync with upstream (drop btrfs-relocation-fix-wrong-file-extent-type-check-to.patch)
