@@ -3,6 +3,13 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll56
+
+- add HID-logitech-hidpp-add-support-for-Unified-Battery-1.patch
+- add mm-compaction-correct-deferral-logic-for-proactive-c.patch
+
+DROP 5.10-lucjan-ll56-rc1
+
 5.10-lucjan-ll56-rc1
 
 - sync with upstream (drop btrfs-relocation-fix-wrong-file-extent-type-check-to.patch)
