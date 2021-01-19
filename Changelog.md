@@ -3,7 +3,13 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
-5.10-lucjan-ll52-rc1
+5.10-lucjan-ll55
+
+- update futex2-resync-from-gitlab.collabora.com.patch
+
+DROP 5.10-lucjan-ll55-rc2
+
+5.10-lucjan-ll55-rc2
 
 - add BFQ-dev 20210118
 
