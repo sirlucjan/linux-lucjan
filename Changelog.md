@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll58
+
+- add BFQ-dev 20210122
+
 5.10-lucjan-ll57-rc1 --> 5.10-lucjan-ll57
 
 5.10-lucjan-ll57-rc1
