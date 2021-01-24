@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll63
+
+- add ntfs3-5.10-update-to-v18.patch
+
 5.10-lucjan-ll62
 
 - add xfs-set-inode-size-after-creating-symlink.patch
