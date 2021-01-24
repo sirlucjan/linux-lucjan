@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll62
+
+- add xfs-set-inode-size-after-creating-symlink.patch
+
 5.10-lucjan-ll61
 
 - add HID-wacom-Correct-NULL-dereference-on-AES-pen-proxim.patch
