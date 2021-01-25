@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll64
+
+- add BFQ-dev 20210125
+
 5.10-lucjan-ll63
 
 - add ntfs3-5.10-update-to-v18.patch
