@@ -1867,9 +1867,6 @@
 │       └── 5.9-lucjan-ll9-rc1.patch.sig
 ├── Changelog.md
 ├── Files
-├── pending
-│   ├── 5.10-lucjan-ll65.patch
-│   └── 5.10-lucjan-ll65.patch.sig
 └── README.md
 
-19 directories, 1853 files
+18 directories, 1851 files
