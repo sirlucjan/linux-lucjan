@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll67
+
+- add ZEN-Increase-max-elevator-name-size.patch
+
 5.10-lucjan-ll66
 
 - add ZEN-Fix-mq-deadline-scheduler-renaming.patch
