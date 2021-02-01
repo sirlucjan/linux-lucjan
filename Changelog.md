@@ -3,6 +3,18 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll71
+
+- add btrfs-remove-unnecessary-directory-inode-item-update.patch
+- add btrfs-stop-setting-nbytes-when-filling-inode-item-fo.patch
+- add btrfs-avoid-logging-new-ancestor-inodes-when-logging.patch
+- add btrfs-skip-logging-directories-already-logged-when-l.patch
+- add btrfs-skip-logging-inodes-already-logged-when-loggin.patch
+- add btrfs-remove-unnecessary-check_parent_dirs_for_sync.patch
+- add btrfs-make-concurrent-fsyncs-wait-less-when-waiting-.patch
+
+DROP 5.10-lucjan-ll71-rc1
+
 5.10-lucjan-ll71-rc1
 
 - sync with upstream (drop iwlwifi-provide-gso_type-to-GSO-packets.patch)
