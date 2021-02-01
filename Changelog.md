@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll71-rc1
+
+- sync with upstream (drop iwlwifi-provide-gso_type-to-GSO-packets.patch)
+
 5.10-lucjan-ll70
 
 - drop iwlwifi-Fix-regression-from-UDP-segmentation-support.patch
