@@ -3,7 +3,9 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
-5.10-lucjan-ll57-rc1
+5.10-lucjan-ll69-rc1 --> 5.10-lucjan-ll69
+
+5.10-lucjan-ll69-rc1
 
 - sync with upstream (drop HID-wacom-Correct-NULL-dereference-on-AES-pen-proxim.patch)
 - resync futex-resync-from-gitlab.collabora.com.patch
