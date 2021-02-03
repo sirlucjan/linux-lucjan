@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll72
+
+- add BFQ-dev 20210203
+
+DROP 5.10-lucjan-ll72-rc1
+
 5.10-lucjan-ll72-rc1
 
 - sync with upstream (drop iwlwifi-provide-gso_type-to-GSO-packets.patch)
