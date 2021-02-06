@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll74
+
+- add ntfs3-5.10-update-to-v20.patch
+
+5.10-lucjan-ll73-rc1 --> 5.10-lucjan-ll73
+
 5.10-lucjan-ll73-rc1
 
 - sync with upstream (drop iwlwifi-provide-gso_type-to-GSO-packets.patch)
