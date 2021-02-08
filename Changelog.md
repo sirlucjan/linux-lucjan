@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll75-rc1
+
+- resync vfs-keep-inodes-with-page-cache-off-the-inode-shrink.patch
+
 5.10-lucjan-ll74
 
 - add ntfs3-5.10-update-to-v20.patch
