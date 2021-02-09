@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll75
+
+- add radeon-amdgpu-Firmware-is-required-for-DRM-and-KMS-o.patch
+
+DROP 5.10-lucjan-ll75-rc1
+
 5.10-lucjan-ll75-rc1
 
 - resync vfs-keep-inodes-with-page-cache-off-the-inode-shrink.patch
