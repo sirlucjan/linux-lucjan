@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll79
+
+- add xfs-restore-shutdown-check-in-mapped-write-fault-pat.patch
+
 5.10-lucjan-ll78
 
 - add sched-pds-Set-pds-dev-instead-of-pds.patch
