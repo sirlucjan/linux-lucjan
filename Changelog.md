@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.10-lucjan-ll82
+
+- add ntfs3-5.10-update-to-v21.patch
+
 5.10-lucjan-ll80
 
 - add Revert-radeon-amdgpu-Firmware-is-required-for-DRM-an.pat
