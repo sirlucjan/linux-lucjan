@@ -5,6 +5,10 @@
 
 5.10-lucjan-ll80
 
+- add Revert-radeon-amdgpu-Firmware-is-required-for-DRM-an.pat
+
+5.10-lucjan-ll80
+
 - add init-enable-FUTEX2.patch
 
 5.10-lucjan-ll79
