@@ -3,10 +3,6 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
-5.10-lucjan-ll84-rc1
-
-- add BFQ-dev 20210214
-
 5.10-lucjan-ll83
 
 - add btrfs-fix-crash-after-non-aligned-direct-IO-write-wi.patch
