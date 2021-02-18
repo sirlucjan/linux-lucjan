@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll5-rc1
+
+- update bbr2-5.11-introduce-BBRv2.patch
+
 5.11-lucjan-ll4-rc1
 
 - add SUNRPC-Set-TCP_CORK-until-the-transmit-queue-is-empt.patch
