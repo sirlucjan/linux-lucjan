@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll2-rc1
+
+- add AUFS 20210215
+
 5.11-lucjan-ll1-rc1
 
 - add Export-symbols-needed-by-Android-drivers.patch
@@ -139,7 +143,7 @@
 - add mm-zswap-fix-potential-memory-leak.patch
 - add mm-zswap-fix-variable-entry-is-uninitialized-when-us.patch
 - add mm-set-the-sleep_mapped-to-true-for-zbud-and-z3fold.patch
-- add BFQ-dev 20210214
+- add BFQ-dev 20210208
 - add UKSM for 5.11
 - add AUFS 20210111
 
