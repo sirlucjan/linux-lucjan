@@ -3,6 +3,17 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll4-rc1
+
+- add SUNRPC-Set-TCP_CORK-until-the-transmit-queue-is-empt.patch
+- add SUNRPC-Use-TCP_CORK-to-optimise-send-performance-on-.patch
+- add SUNRPC-Remove-redundant-socket-flags-from-svc_tcp_se.patch
+- add xfs-log-stripe-roundoff-is-a-property-of-the-log.patch
+- add xfs-separate-CIL-commit-record-IO.patch
+- add xfs-journal-IO-cache-flush-reductions.patch
+- add xfs-Fix-CIL-throttle-hang-when-CIL-space-used-going-.patch
+- add xfs-reduce-buffer-log-item-shadow-allocations.patch
+
 5.11-lucjan-ll3-rc1
 
 - update futex2-resync-from-gitlab.collabora.com.patch
