@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll11-rc1
+
+- add btrfs-do-not-error-out-if-the-extent-ref-hash-doesn-.patch
+
 5.11-lucjan-ll10-rc1
 
 - add Revert-drm-amd-display-reuse-current-context-instead.patch
