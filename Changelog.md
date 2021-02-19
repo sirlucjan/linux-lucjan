@@ -3,6 +3,11 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll10-rc1
+
+- add Revert-drm-amd-display-reuse-current-context-instead.patch
+- add drm-amdgpu-fix-shutdown-with-s0ix.patch
+
 5.11-lucjan-ll9-rc1
 
 - add mm-5.11-v2-of-zsmalloc-vs-zswap-fixes.patch
