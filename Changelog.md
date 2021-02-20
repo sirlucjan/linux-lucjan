@@ -3,6 +3,11 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll12-rc1
+
+- drop Revert-block-Do-not-discard-buffers-under-a-mounted-.patch
+- add block-Try-to-handle-busy-underlying-device-on-discar.patch
+
 5.11-lucjan-ll11-rc1
 
 - add btrfs-do-not-error-out-if-the-extent-ref-hash-doesn-.patch
