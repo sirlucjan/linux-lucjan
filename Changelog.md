@@ -3,6 +3,11 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll14-rc1
+
+- add drm-amd-display-Remove-Assert-from-dcn10_get_dig_fro.patch
+- add xfs-Skip-repetitive-warnings-about-mount-options.patch
+
 5.11-lucjan-ll13-rc1
 
 - add mm-5.11-simplify-file_is_low.patch
