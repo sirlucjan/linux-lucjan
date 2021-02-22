@@ -201,6 +201,10 @@
 - add UKSM for 5.11
 - add AUFS 20210111
 
+5.10-lucjan-ll86-rc1
+
+- sync with upstream (drop btrfs-fix-crash-after-non-aligned-direct-IO-write-wi.patch)
+
 5.10-lucjan-ll85
 
 - add Documentation-Fix-sphinx-3.5-causes-compilation-erro.patch
