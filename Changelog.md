@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll16-rc1
+
+- update UKSM for 5.11
+
 5.11-lucjan-ll15-rc1
 
 - add AUFS 20210222
