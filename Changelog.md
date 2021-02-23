@@ -3,6 +3,13 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll18-rc1
+
+- add drm-amdgpu-display-simplify-backlight-setting.patch
+- add drm-amdgpu-display-don-t-assert-in-set-backlight-fun.patch
+- add drm-amdgpu-display-handle-aux-backlight-in-backlight.patch
+- add xfs-don-t-reuse-busy-extents-on-extent-trim.patch
+
 5.11-lucjan-ll17-rc1
 
 - add BFQ-dev 20210223
