@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll20-rc1
+
+- sync with upstream (drop Bluetooth-btusb-Some-Qualcomm-Bluetooth-adapters-sto.patch)
+
 5.11-lucjan-ll19-rc1 --> 5.11-lucjan-ll19
 
 5.11-lucjan-ll19-rc1
@@ -54,6 +58,10 @@
 5.11-lucjan-ll9-rc1
 
 - add mm-5.11-v2-of-zsmalloc-vs-zswap-fixes.patch
+
+5.11-lucjan-ll8-rc1
+
+- add Bluetooth-btusb-Some-Qualcomm-Bluetooth-adapters-sto.patch
 
 5.11-lucjan-ll7-rc1
 
