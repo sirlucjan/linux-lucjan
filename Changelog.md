@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll22
+
+- add smp-Process-pending-softirqs-in-flush_smp_call_funct.patch
+
 5.11-lucjan-ll21
 
 - add blk-mq-Always-complete-remote-completions-requests-i.patch
