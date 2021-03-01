@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll24
+
+- add Project-C v5.11-r1
+
+DROP 5.11-lucjan-ll24-rc1
+
 5.11-lucjan-ll24-rc1
 
 - sync with upstream (drop bfq-Avoid-false-bfq-queue-merging.patch)
