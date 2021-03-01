@@ -3,6 +3,10 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll26-rc1
+
+- sync with upstream (drop bfq-Avoid-false-bfq-queue-merging.patch)
+
 5.11-lucjan-ll25
 
 - add locking-mutex-Don-t-hog-RCU-read-lock-while-optimist.patch
