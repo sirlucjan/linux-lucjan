@@ -3,6 +3,35 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll23
+
+- drop BFQ-dev 20210223
+- add block-bfq-use-half-slice_idle-as-a-threshold-to-chec.patch
+- add block-bfq-set-next_rq-to-waker_bfqq-next_rq-in-waker.patch
+- add block-bfq-increase-time-window-for-waker-detection.patch
+- add block-bfq-do-not-raise-non-default-weights.patch
+- add block-bfq-avoid-spurious-switches-to-soft_rt-of-inte.patch
+- add block-bfq-do-not-expire-a-queue-when-it-is-the-only-.patch
+- add block-bfq-replace-mechanism-for-evaluating-I-O-inten.patch
+- add block-bfq-re-evaluate-convenience-of-I-O-plugging-on.patch
+- add block-bfq-fix-switch-back-from-soft-rt-weitgh-raisin.patch
+- add block-bfq-save-also-weight-raised-service-on-queue-m.patch
+- add block-bfq-save-also-injection-state-on-queue-merging.patch
+- add block-bfq-make-waker-queue-detection-more-robust.patch
+- add bfq-bfq_check_waker-should-be-static.patch
+- add block-bfq-always-inject-I-O-of-queues-blocked-by-wak.patch
+- add block-bfq-put-reqs-of-waker-and-woken-in-dispatch-li.patch
+- add block-bfq-make-shared-queues-inherit-wakers.patch
+- add block-bfq-fix-weight-raising-resume-with-low_latency.patch
+- add block-bfq-keep-shared-queues-out-of-the-waker-mechan.patch
+- add block-bfq-merge-bursts-of-newly-created-queues.patch
+- add bfq-don-t-duplicate-code-for-different-paths.patch
+- add bfq-Avoid-false-bfq-queue-merging.patch
+- add bfq-Use-ttime-local-variable.patch
+- add bfq-Use-only-idle-IO-periods-for-think-time-calculat.patch
+- add block-bfq-update-comments-and-default-value-in-docs-.patch
+- add Revert-blk-mq-elevator-Count-requests-per-hctx-to-im.patch
+
 5.11-lucjan-ll22
 
 - add smp-Process-pending-softirqs-in-flush_smp_call_funct.patch
