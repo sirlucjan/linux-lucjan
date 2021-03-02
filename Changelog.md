@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll26
+
+- add ntfs3-5.11-update-to-v22.patch
+
+DROP 5.11-lucjan-ll26-rc2
+
 5.11-lucjan-ll26-rc2
 
 - sync with upstream (drop Revert-drm-amd-display-reuse-current-context-instead.patch)
