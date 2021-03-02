@@ -3,6 +3,16 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll27-rc1
+
+- sync with upstream (drop Revert-drm-amd-display-reuse-current-context-instead.patch)
+- sync with upstream (drop drm-amdgpu-fix-shutdown-with-s0ix.patch)
+- sync with upstream (drop smp-Process-pending-softirqs-in-flush_smp_call_funct.patch)
+- sync with upstream (drop btrfs-handle-total_bytes_pinned-inside-the-delayed-r.patch)
+- sync with upstream (drop btrfs-account-for-new-extents-being-deleted-in-total.patch)
+- sync with upstream (drop drm-amd-display-Remove-Assert-from-dcn10_get_dig_fro.patch)
+- sync with upstream (drop bfq-Avoid-false-bfq-queue-merging.patch)
+
 5.11-lucjan-ll26
 
 - add ntfs3-5.11-update-to-v22.patch
