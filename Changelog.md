@@ -3,6 +3,21 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll28
+
+- add Revert-block-bfq-merge-bursts-of-newly-created-queue.patch
+- add Revert-block-bfq-keep-shared-queues-out-of-the-waker.patch
+- add Revert-block-bfq-fix-weight-raising-resume-with-low_.patch
+- add Revert-block-bfq-make-shared-queues-inherit-wakers.patch
+- add Revert-block-bfq-put-reqs-of-waker-and-woken-in-disp.patch
+- add Revert-block-bfq-always-inject-I-O-of-queues-blocked.patch
+- add block-bfq-always-inject-I-O-of-queues-blocked-by-wak.patch (V2)
+- add block-bfq-put-reqs-of-waker-and-woken-in-dispatch-li.patch (V2)
+- add block-bfq-make-shared-queues-inherit-wakers.patch (V2)
+- add block-bfq-fix-weight-raising-resume-with-low_latency.patch (V2)
+- add block-bfq-keep-shared-queues-out-of-the-waker-mechan.patch (V2)
+- add block-bfq-merge-bursts-of-newly-created-queues.patch (V2)
+
 5.11-lucjan-ll27-rc1 --> 5.11-lucjan-ll27
 
 5.11-lucjan-ll27-rc1
