@@ -3,6 +3,8 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll27-rc1 --> 5.11-lucjan-ll27
+
 5.11-lucjan-ll27-rc1
 
 - sync with upstream (drop Revert-drm-amd-display-reuse-current-context-instead.patch)
