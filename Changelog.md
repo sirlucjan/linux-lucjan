@@ -3,6 +3,13 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll29
+
+- update cpu-5.11-merge-graysky-s-patchset.patch
+- drop Documentation-Fix-sphinx-3.5-causes-compilation-erro.patch
+
+DROP 5.11-lucjan-ll29-rc1
+
 5.11-lucjan-ll29-rc1
 
 - sync with upstream (drop btrfs-Fix-race-between-extent-freeing-allocation-whe.patch)
