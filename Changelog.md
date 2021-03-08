@@ -3,6 +3,19 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll31
+
+- add bfq-introduce-bfq_entity_to_bfqg-helper-method.patch
+- add bfq-limit-the-IO-depth-of-idle_class-to-1.patch
+- add bfq-keep-the-minimun-bandwidth-for-be_class.patch
+- add bfq-expire-bfqq-if-a-higher-priority-class-is-waitin.patch
+- add bfq-introduce-bfq.ioprio-for-cgroup.patch
+- add bfq-convert-the-type-of-bfq_group.bfqd-to-bfq_data.patch
+- add bfq-remove-unnecessary-initialization-logic.patch
+- add bfq-optimize-the-calculation-of-bfq_weight_to_ioprio.patch
+
+DROP 5.11-lucjan-ll31-rc1
+
 5.11-lucjan-ll31-rc1
 
 - sync with upstream (drop btrfs-Fix-race-between-extent-freeing-allocation-whe.patch)
