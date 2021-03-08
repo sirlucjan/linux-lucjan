@@ -3,6 +3,12 @@
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll31-rc1
+
+- sync with upstream (drop btrfs-Fix-race-between-extent-freeing-allocation-whe.patch)
+- sync with upstream (drop btrfs-do-not-error-out-if-the-extent-ref-hash-doesn-.patch)
+- sync with upstream (drop btrfs-Unlock-extents-in-btrfs_zero_range-in-case-of-.patch)
+
 5.11-lucjan-ll30
 
 - add Project-C v5.11-r2
