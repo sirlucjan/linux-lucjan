@@ -1,6 +1,7 @@
 ## CHANGELOG
 
 #### Starting from version 5.8-lucjan-ll19 it is necessary to use a PDS scheduler.
+#### You must have GCC 11 to take advantages of the MZEN3 optimization. 
 #### Otherwise the kernel will not compile properly.
 
 5.11-lucjan-ll33-rc1
