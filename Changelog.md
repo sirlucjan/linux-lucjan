@@ -4,6 +4,12 @@
 #### You must have GCC 11 to take advantages of the MZEN3 optimization. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll34
+
+- add spadfs-5.11-merge-v1.0.13.patch
+
+5.11-lucjan-ll33-rc1 --> 5.11-lucjan-ll33
+
 5.11-lucjan-ll33-rc1
 
 - sync with upstream (drop btrfs-Fix-race-between-extent-freeing-allocation-whe.patch)
