@@ -4,6 +4,28 @@
 #### You must have GCC 11 to take advantages of the MZEN3 optimization. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll35
+
+- add Revert-bfq-optimize-the-calculation-of-bfq_weight_to.patch
+- add Revert-bfq-remove-unnecessary-initialization-logic.patch
+- add Revert-bfq-convert-the-type-of-bfq_group.bfqd-to-bfq.patch
+- add Revert-bfq-introduce-bfq.ioprio-for-cgroup.patch
+- add Revert-bfq-expire-bfqq-if-a-higher-priority-class-is.patch
+- add Revert-bfq-keep-the-minimun-bandwidth-for-be_class.patch
+- add Revert-bfq-limit-the-IO-depth-of-idle_class-to-1.patch
+- add Revert-bfq-introduce-bfq_entity_to_bfqg-helper-metho.patch
+- add bfq-introduce-bfq_entity_to_bfqg-helper-method.patch
+- add bfq-convert-the-type-of-bfq_group.bfqd-to-bfq_data.patch
+- add bfq-introduce-bfq.ioprio-for-cgroup.patch
+- add bfq-limit-the-IO-depth-of-idle_class-to-1.patch
+- add bfq-keep-the-minimun-bandwidth-for-be_class.patch
+- add bfq-expire-other-class-if-CLASS_RT-is-waiting.patch
+- add bfq-optimse-IO-injection-for-CLASS_RT.patch
+- add bfq-disallow-idle-if-CLASS_RT-waiting-for-service.patch
+- add bfq-disallow-merge-CLASS_RT-with-other-class.patch
+- add bfq-remove-unnecessary-initialization-logic.patch
+- add bfq-optimize-the-calculation-of-bfq_weight_to_ioprio.patch
+
 5.11-lucjan-ll34
 
 - add spadfs-5.11-merge-v1.0.13.patch
