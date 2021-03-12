@@ -4,6 +4,12 @@
 #### You must have GCC 11 to take advantages of the MZEN3 optimization. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll36-rc1
+
+- sync with upstream (drop drm-amdgpu-display-simplify-backlight-setting.patch)
+- sync with upstream (drop drm-amdgpu-display-don-t-assert-in-set-backlight-fun.patch)
+- sync with upstream (drop drm-amdgpu-display-handle-aux-backlight-in-backlight.patch)
+
 5.11-lucjan-ll35
 
 - add Revert-bfq-optimize-the-calculation-of-bfq_weight_to.patch
