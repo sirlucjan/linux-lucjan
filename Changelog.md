@@ -4,6 +4,11 @@
 #### You must have GCC 11 to take advantages of the MZEN3 optimization. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll36
+
+- update cpu-5.11-merge-graysky-s-patchset.patch
+
+DROP 5.11-lucjan-ll36-rc2
 
 5.11-lucjan-ll36-rc2
 
