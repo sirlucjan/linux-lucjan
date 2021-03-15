@@ -4,6 +4,12 @@
 #### You must have GCC 11 to take advantages of the MZEN3 optimization. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll37
+
+- add iommu-amd-Don-t-initialise-remapping-irqdomain-if-IO.patch
+
+DROP 5.11-lucjan-ll37-rc1
+
 5.11-lucjan-ll37-rc1
 
 - sync with upstream (drop drm-amdgpu-display-simplify-backlight-setting.patch)
