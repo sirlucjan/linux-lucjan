@@ -4,6 +4,13 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll39-rc1
+
+- sync with upstream (drop drm-amdgpu-display-simplify-backlight-setting.patch)
+- sync with upstream (drop drm-amdgpu-display-don-t-assert-in-set-backlight-fun.patch)
+- sync with upstream (drop drm-amdgpu-display-handle-aux-backlight-in-backlight.patch)
+- sync with upstream (drop block-Try-to-handle-busy-underlying-device-on-discar.patch)
+
 5.11-lucjan-ll38
 
 - add ntfs3-5.11-update-to-v23.patch
