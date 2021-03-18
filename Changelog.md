@@ -4,6 +4,19 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll41
+
+- add mm-use-add_page_to_lru_list.patch
+- add mm-shuffle-lru-list-addition-and-deletion-functions.patch
+- add mm-don-t-pass-enum-lru_list-to-lru-list-addition-fun.patch
+- add mm-don-t-pass-enum-lru_list-to-trace_mm_lru_insertio.patch
+- add mm-don-t-pass-enum-lru_list-to-del_page_from_lru_lis.patch
+- add mm-add-__clear_page_lru_flags-to-replace-page_off_lr.patch
+- add mm-VM_BUG_ON-lru-page-flags.patch
+- add mm-fold-page_lru_base_type-into-its-sole-caller.patch
+- add mm-fold-__update_lru_size-into-its-sole-caller.patch
+- add mm-make-lruvec_lru_size-static.patch
+
 5.11-lucjan-ll40
 
 - add nfsd-Ensure-knfsd-shuts-down-when-the-nfsd-pseudofs-.patch
