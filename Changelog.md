@@ -4,6 +4,10 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll42
+
+- add bfq-silence-lockdep-for-bfqd-ioc-lock-inversion.patch
+
 5.11-lucjan-ll41
 
 - add mm-use-add_page_to_lru_list.patch
