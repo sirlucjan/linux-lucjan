@@ -4,6 +4,10 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll46
+
+- add ntfs3-5.11-update-to-v24.patch
+
 5.11-lucjan-ll45
 
 - update init-add-support-for-zstd-compressed-modules.patch
