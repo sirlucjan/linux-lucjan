@@ -4,6 +4,10 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll48
+
+- add AUFS 20210308
+
 5.11-lucjan-ll47
 
 - update lib-zstd-Upgrade-to-latest-upstream-zstd-version-1.4.patch
