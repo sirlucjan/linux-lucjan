@@ -4,6 +4,10 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll51
+
+- add xfs-only-reset-incore-inode-health-state-flags-when-.patch
+
 5.11-lucjan-ll50
 
 - add Revert-bfq-optimize-the-calculation-of-bfq_weight_to.patch
