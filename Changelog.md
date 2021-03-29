@@ -4,6 +4,11 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll57-rc1
+
+- sync with upstream (drop btrfs-fix-sleep-while-in-non-sleep-context-during-qg.patch)
+- sync with upstream (drop z3fold-prevent-reclaim-free-race-for-headless-pages.patch)
+
 5.11-lucjan-ll56
 
 - drop lib-zstd-Add-kernel-specific-API.patch (ZSTD 1.4.6)
@@ -16,10 +21,7 @@
 
 DROP 5.11-lucjan-ll56-rc1
 
-5.11-lucjan-ll56-rc1
 
-- sync with upstream (drop btrfs-fix-sleep-while-in-non-sleep-context-during-qg.patch)
-- sync with upstream (drop z3fold-prevent-reclaim-free-race-for-headless-pages.patch)
 
 5.11-lucjan-ll55
 
