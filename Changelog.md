@@ -4,6 +4,18 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll56
+
+- drop lib-zstd-Add-kernel-specific-API.patch (ZSTD 1.4.6)
+- drop lib-zstd-Add-decompress_sources.h-for-decompress_unz.patch (ZSTD 1.4.6)
+- drop lib-zstd-Upgrade-to-latest-upstream-zstd-version-1.4.patch (ZSTD 1.4.6) 
+- add lib-zstd-Add-kernel-specific-API.patch (ZSTD 1.4.10)
+- add lib-zstd-Add-decompress_sources.h-for-decompress_unz.patch (ZSTD 1.4.10)
+- add lib-zstd-Upgrade-to-latest-upstream-zstd-version-1.4.patch (ZSTD 1.4.10)
+- add zstd-5.11-export-ZSTD_maxCLevel.patch (ZSTD 1.4.10)
+
+DROP 5.11-lucjan-ll56-rc1
+
 5.11-lucjan-ll56-rc1
 
 - sync with upstream (drop btrfs-fix-sleep-while-in-non-sleep-context-during-qg.patch)
