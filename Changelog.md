@@ -4,6 +4,11 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll59
+
+- add Revert-zstd-5.11-export-ZSTD_maxCLevel.patch
+- add zstd-5.11-update-to-1.4.10-v9.patch
+
 5.11-lucjan-ll58-rc1 --> 5.11-lucjan-ll58
 
 5.11-lucjan-ll58-rc1
