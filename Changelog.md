@@ -4,6 +4,11 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll64
+
+- add allow-setting-zstd-compression-level-for-kernel.patch
+- add allow-setting-zstd-compression-level-for-modules.patch
+
 5.11-lucjan-ll63
 
 - update cpu-5.11-merge-graysky-s-patchset.patch
