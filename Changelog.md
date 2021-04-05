@@ -4,7 +4,15 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
-5.11-lucjan-ll56
+5.11-lucjan-ll67
+
+- add initrd-Add-the-preprocessor-guard-in-initrd.h.patch
+- add initramfs-Provide-a-common-initrd-reserve-function.patch
+- add riscv-Covert-to-reserve_initrd_mem.patch
+- add init-initramfs.c-do-unpacking-asynchronously.patch
+- add modules-add-CONFIG_MODPROBE_PATH.patch
+
+5.11-lucjan-ll66
 
 - add ntfs3-5.11-update-to-v26.patch
 
