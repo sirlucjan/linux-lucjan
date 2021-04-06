@@ -4,6 +4,12 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll70
+
+- add Makefile-use-smaller-dictionary-size-for-xz-module-c.patch (sync with 5.12-rc)
+- update init-add-support-for-zstd-compressed-modules.patch (sync with linux-next)
+- update allow-setting-zstd-compression-level-for-modules.patch (sync with linux-next)
+
 5.11-lucjan-ll69
 
 - add NFS-Fix-up-the-support-for-CONFIG_NFS_DISABLE_UDP_SU.patch
