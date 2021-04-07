@@ -6,6 +6,11 @@
 
 5.11-lucjan-ll71
 
+- add mm-5.11-do-not-protect-dirty-pages.patch
+- add mm-5.11-be-more-concise-about-clean-pages.patch
+
+5.11-lucjan-ll71
+
 - add btrfs-add-btree-read-ahead-for-full-send-operations.patch
 - add btrfs-add-btree-read-ahead-for-incremental-send-oper.patch
 
