@@ -10,6 +10,7 @@
 - add drm-i915-dp-Prevent-setting-the-LTTPR-LT-mode-if-no-.patch
 - add drm-i915-Disable-LTTPR-support-when-the-DPCD-rev-1.4.patch
 - add drm-i915-Fix-modesetting-in-case-of-unexpected-AUX-t.patch
+- drop iommu-amd-Don-t-initialise-remapping-irqdomain-if-IO.patch
 
 5.11-lucjan-ll78
 
@@ -24,7 +25,6 @@
 - drop drm-i915-ilk-glk-Fix-link-training-on-links-with-LTT.patch
 - drop drm-i915-dp-Prevent-setting-the-LTTPR-LT-mode-if-no-.patch
 - drop drm-i915-Disable-LTTPR-support-when-the-DPCD-rev-1.4.patch
-- drop iommu-amd-Don-t-initialise-remapping-irqdomain-if-IO.patch
 
 5.11-lucjan-ll75
 
