@@ -4,6 +4,13 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll79
+
+- add drm-i915-ilk-glk-Fix-link-training-on-links-with-LTT.patch
+- add drm-i915-dp-Prevent-setting-the-LTTPR-LT-mode-if-no-.patch
+- add drm-i915-Disable-LTTPR-support-when-the-DPCD-rev-1.4.patch
+- add drm-i915-Fix-modesetting-in-case-of-unexpected-AUX-t.patch
+
 5.11-lucjan-ll78
 
 - add AUFS 20210412
