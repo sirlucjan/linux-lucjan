@@ -4,6 +4,11 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll81
+
+- add blk-mq-bypass-IO-scheduler-s-limit_depth-for-passthr.patch
+- add bfq-mq-deadline-remove-redundant-check-for-passthrou.patch
+
 5.11-lucjan-ll80
 
 - add block-bfq-move-spin_unlock_irq-to-release-request-ou.patch
