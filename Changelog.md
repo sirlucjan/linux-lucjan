@@ -6,6 +6,10 @@
 
 5.11-lucjan-ll81
 
+- add block-bfq-set-bfq-lucjan-branding.patch
+
+5.11-lucjan-ll81
+
 - add blk-mq-bypass-IO-scheduler-s-limit_depth-for-passthr.patch
 - add bfq-mq-deadline-remove-redundant-check-for-passthrou.patch
 
