@@ -4,7 +4,32 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
-5.11-lucjan-ll81
+5.11-lucjan-ll83
+
+- add Revert-bfq-optimize-the-calculation-of-bfq_weight_to.patch
+- add Revert-bfq-remove-unnecessary-initialization-logic.patch
+- add Revert-bfq-disable-merging-between-different-groups-.patch
+- add Revert-bfq-disable-idle-for-prio_expire-under-better.patch
+- add Revert-bfq-optimize-IO-injection-under-better_fairne.patch
+- add Revert-bfq-expire-in_serv_queue-for-prio_expire-unde.patch
+- add Revert-bfq-introduce-prio_expire-flag-for-bfq_queue.patch
+- add Revert-bfq-introduce-better_fairness-for-container-s.patch
+- add Revert-bfq-keep-the-minimun-bandwidth-for-CLASS_BE.patch
+- add Revert-bfq-limit-the-IO-depth-of-CLASS_IDLE-to-1.patch
+- add Revert-bfq-introduce-bfq_ioprio_class-to-get-ioprio-.patch
+- add Revert-bfq-introduce-bfq.ioprio-for-cgroup.patch
+- add Revert-bfq-convert-the-type-of-bfq_group.bfqd-to-bfq.patch
+- add Revert-bfq-introduce-bfq_entity_to_bfqg-helper-metho.patch
+- add bfq-introduce-bfq_entity_to_bfqg-helper-method.patch
+- add bfq-convert-the-type-of-bfq_group.bfqd-to-bfq_data.patch
+- add bfq-limit-the-IO-depth-of-CLASS_IDLE-to-1.patch
+- add bfq-keep-the-minimun-bandwidth-for-CLASS_BE.patch
+- add bfq-remove-unnecessary-initialization-logic.patch
+- add bfq-optimize-the-calculation-of-bfq_weight_to_ioprio.patch
+- add bfq-reset-entity-prio_changed-in-bfq_init_entity.patch
+- add bfq-remove-unnecessary-BFQ_DEFAULT_GRP_IOPRIO.patch
+
+5.11-lucjan-ll82
 
 - add block-bfq-set-bfq-lucjan-branding.patch
 
