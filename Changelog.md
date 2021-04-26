@@ -4,6 +4,19 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.12-lucjan-ll3-rc1
+
+- add fs-ntfs3-Add-headers-and-misc-files.patch
+- add fs-ntfs3-Add-initialization-of-super-block.patch
+- add fs-ntfs3-Add-bitmap.patch
+- add fs-ntfs3-Add-file-operations-and-implementation.patch
+- add fs-ntfs3-Add-attrib-operations.patch
+- add fs-ntfs3-Add-compression.patch
+- add fs-ntfs3-Add-NTFS-journal.patch
+- add fs-ntfs3-Add-Kconfig-Makefile-and-doc.patch
+- add fs-ntfs3-Add-NTFS3-in-fs-Kconfig-and-fs-Makefile.patch
+- add fs-ntfs3-Add-MAINTAINERS.patch
+
 5.12-lucjan-ll2-rc1
 
 - fix bbr2-5.12-introduce-BBRv2.patch
@@ -105,16 +118,6 @@
 - add Revert-net-tso-add-UDP-segmentation-support.patch
 - add zen-Allow-MSR-writes-by-default.patch
 - add mm-5.12-protect-file-mappings-under-memory-pressure.patch
-- add fs-ntfs3-Add-headers-and-misc-files.patch
-- add fs-ntfs3-Add-initialization-of-super-block.patch
-- add fs-ntfs3-Add-bitmap.patch
-- add fs-ntfs3-Add-file-operations-and-implementation.patch
-- add fs-ntfs3-Add-attrib-operations.patch
-- add fs-ntfs3-Add-compression.patch
-- add fs-ntfs3-Add-NTFS-journal.patch
-- add fs-ntfs3-Add-Kconfig-Makefile-and-doc.patch
-- add fs-ntfs3-Add-NTFS3-in-fs-Kconfig-and-fs-Makefile.patch
-- add fs-ntfs3-Add-MAINTAINERS.patch
 - add genirq-i2c-Provide-and-use-generic_dispatch_irq.patch
 - add spadfs-5.12-merge-v1.0.13.patch
 - add v4l2loopback-5.12-merge-v0.12.5.patch
