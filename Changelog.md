@@ -4,6 +4,137 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.12-lucjan-ll1-rc1
+
+- add android-export-symbold-and-enable-building-ashmem-an.patch
+- add ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch
+- add bbr2-5.12-introduce-BBRv2.patch
+- add block-bfq-always-inject-I-O-of-queues-blocked-by-wak.patch
+- add block-bfq-put-reqs-of-waker-and-woken-in-dispatch-li.patch
+- add block-bfq-make-shared-queues-inherit-wakers.patch
+- add block-bfq-fix-weight-raising-resume-with-low_latency.patch
+- add block-bfq-keep-shared-queues-out-of-the-waker-mechan.patch
+- add block-bfq-merge-bursts-of-newly-created-queues.patch
+- add bfq-silence-lockdep-for-bfqd-ioc-lock-inversion.patch
+- add block-bfq-fix-the-timeout-calculation-in-bfq_bfqq_ch.patch
+- add block-bfq-move-spin_unlock_irq-to-release-request-ou.patch
+- add blk-mq-bypass-IO-scheduler-s-limit_depth-for-passthr.patch
+- add bfq-mq-deadline-remove-redundant-check-for-passthrou.patch
+- add bfq-introduce-bfq_entity_to_bfqg-helper-method.patch
+- add bfq-convert-the-type-of-bfq_group.bfqd-to-bfq_data.patch
+- add bfq-limit-the-IO-depth-of-CLASS_IDLE-to-1.patch
+- add bfq-keep-the-minimun-bandwidth-for-CLASS_BE.patch
+- add bfq-remove-unnecessary-initialization-logic.patch
+- add bfq-optimize-the-calculation-of-bfq_weight_to_ioprio.patch
+- add bfq-reset-entity-prio_changed-in-bfq_init_entity.patch
+- add bfq-remove-unnecessary-BFQ_DEFAULT_GRP_IOPRIO.patch
+- add block-bfq-set-bfq-lucjan-branding.patch
+- add block-Kconfig.iosched-set-default-value-of-IOSCHED_B.patch
+- add block-Fix-depends-for-BLK_DEV_ZONED.patch
+- add block-set-rq_affinity-2-for-full-multithreading-I-O.patch
+- add block-Add-CONFIG-to-rename-the-mq-deadline-scheduler.patch
+- add ZEN-Fix-mq-deadline-scheduler-renaming.patch
+- add ZEN-Increase-max-elevator-name-size.patch
+- add block-fix-trivial-typos-in-comments.patch
+- add btrfs-add-a-force_chunk_alloc-to-space_info-s-sysfs.patch
+- add btrfs-do-not-evaluate-the-expression-with-CONFIG_BTR.patch
+- add btrfs-restart-snapshot-delete-if-we-have-to-end-the-.patch
+- add btrfs-use-percpu_read_positive-instead-of-sum_positi.patch
+- add btrfs-add-btree-read-ahead-for-full-send-operations.patch
+- add btrfs-add-btree-read-ahead-for-incremental-send-oper.patch
+- add btrfs-fix-race-between-transaction-aborts-and-fsyncs.patch
+- add btrfs-return-whole-extents-in-fiemap.patch
+- add i8042-decrease-debug-message-level-to-info.patch
+- add Increase-the-ext4-default-commit-age.patch
+- add silence-rapl.patch
+- add pci-pme-wakeups.patch
+- add ksm-wakeups.patch
+- add intel_idle-tweak-cpuidle-cstates.patch
+- add bootstats-add-printk-s-to-measure-boot-time-in-more-.patch
+- add smpboot-reuse-timer-calibration.patch
+- add Initialize-ata-before-graphics.patch
+- add give-rdrand-some-credit.patch
+- add ipv4-tcp-allow-the-memory-tuning-for-tcp-to-go-a-lit.patch
+- add print-fsync-count-for-bootchart.patch
+- add clearlinux-5.12-port-Add-boot-option-to-allow-unsign.patch
+- add Enable-stateless-firmware-loading.patch
+- add Migrate-some-systemd-defaults-to-the-kernel-defaults.patch
+- add use-lfence-instead-of-rep-and-nop.patch
+- add do-accept-in-LIFO-order-for-cache-efficiency.patch
+- add locking-rwsem-spin-faster.patch
+- add ata-libahci-ignore-staggered-spin-up.patch
+- add print-CPU-that-faults.patch
+- add fix-bug-in-ucode-force-reload-revision-check.patch
+- add nvme-workaround.patch
+- add Don-t-report-an-error-if-PowerClamp-run-on-other-CPU.patch
+- add Port-microcode-patches.patch
+- add cpu-5.12-merge-graysky-s-patchset.patch
+- add init-Kconfig-enable-O3-for-all-arches.patch
+- add net-sched-allow-configuring-cake-qdisc-as-default.patch
+- add infiniband-Fix-__read_overflow2-error-with-O3-inlini.patch
+- add kbuild-add-fcf-protection-none-to-retpoline-flags.patch
+- add mm-Disable-watermark-boosting-by-default.patch
+- add mm-Stop-kswapd-early-when-nothing-s-waiting-for-it-t.patch
+- add mm-Fully-disable-watermark-boosting-when-it-isn-t-us.patch
+- add mm-Don-t-stop-kswapd-on-a-per-node-basis-when-there-.patch
+- add kbuild-Disable-stack-conservation-for-GCC.patch
+- add pci-Enable-overrides-for-missing-ACS-capabilities.patch
+- add ZEN-Add-OpenRGB-patches.patch
+- add tty-Allow-setting-the-number-of-available-virtual-TT.patch
+- add scsi-sd-Optimal-I-O-size-should-be-a-multiple-of-rep.patch
+- add iomap-avoid-deadlock-if-memory-reclaim-is-triggered-.patch
+- add xfs-log-stripe-roundoff-is-a-property-of-the-log.patch
+- add xfs-separate-CIL-commit-record-IO.patch
+- add xfs-journal-IO-cache-flush-reductions.patch
+- add xfs-Fix-CIL-throttle-hang-when-CIL-space-used-going-.patch
+- add xfs-reduce-buffer-log-item-shadow-allocations.patch
+- add xfs-Skip-repetitive-warnings-about-mount-options.patch
+- add nfsd-Ensure-knfsd-shuts-down-when-the-nfsd-pseudofs-.patch
+- add xfs-No-need-for-inode-number-error-injection-in-__xf.patch
+- add xfs-type-verification-is-expensive.patch
+- add xfs-only-reset-incore-inode-health-state-flags-when-.patch
+- add NFS-Fix-up-the-support-for-CONFIG_NFS_DISABLE_UDP_SU.patch
+- add futex-resync-from-gitlab.collabora.com.patch
+- add futex2-resync-from-gitlab.collabora.com.patch
+- add init-initramfs.c-do-unpacking-asynchronously.patch
+- add modules-add-CONFIG_MODPROBE_PATH.patch
+- add Revert-net-tso-add-UDP-segmentation-support.patch
+- add zen-Allow-MSR-writes-by-default.patch
+- add mm-5.12-protect-file-mappings-under-memory-pressure.patch
+- add fs-ntfs3-Add-headers-and-misc-files.patch
+- add fs-ntfs3-Add-initialization-of-super-block.patch
+- add fs-ntfs3-Add-bitmap.patch
+- add fs-ntfs3-Add-file-operations-and-implementation.patch
+- add fs-ntfs3-Add-attrib-operations.patch
+- add fs-ntfs3-Add-compression.patch
+- add fs-ntfs3-Add-NTFS-journal.patch
+- add fs-ntfs3-Add-Kconfig-Makefile-and-doc.patch
+- add fs-ntfs3-Add-NTFS3-in-fs-Kconfig-and-fs-Makefile.patch
+- add fs-ntfs3-Add-MAINTAINERS.patch
+- add genirq-i2c-Provide-and-use-generic_dispatch_irq.patch
+- add spadfs-5.12-merge-v1.0.13.patch
+- add v4l2loopback-5.12-merge-v0.12.5.patch
+- add v4l2loopback-5.12-confine-v4l2loopback_cleanup_modul.patch
+- add sched-autogroup-Add-kernel-parameter-and-config-opti.patch
+- add ZEN-Add-VHBA-driver.patch
+- add ZEN-intel-pstate-Implement-enable-parameter.patch
+- add ZEN-vhba-Update-to-20210418.patch
+- add lib-zstd-Add-kernel-specific-API.patch
+- add lib-zstd-Add-decompress_sources.h-for-decompress_unz.patch
+- add lib-zstd-Upgrade-to-latest-upstream-zstd-version-1.4.patch
+- add init-add-support-for-zstd-compressed-modules.patch
+- add allow-setting-zstd-compression-level-for-kernel.patch
+- add allow-setting-zstd-compression-level-for-modules.patch
+- add init-optimize-zstd-compression-settings.patch
+- add Project-C v5.12-r0
+- add alt-Export-can_nice-symbol-for-Android-Binder-.patch
+- add init-Kconfig-set-default-value-of-SCHED_PDS.patch
+- add init-Kconfig-Restore-original-PDS-description.patch
+- add sched-pds-1.1-Implement-bitmap-allocator.patch
+- add sched-pds-Set-pds-dev-instead-of-pds.patch
+- add UKSM for 5.12
+- add AUFS 20210412
+
 5.11-lucjan-ll86
 
 - aufs-nodocs --> aufs (fix htmldocs error)
