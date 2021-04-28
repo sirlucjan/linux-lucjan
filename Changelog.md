@@ -6,6 +6,27 @@
 
 5.12-lucjan-ll6-rc1
 
+- drop mm-5.12-protect-file-mappings-under-memory-pressure.patch
+- add mm-lru-5.12-protect-file-mappings-under-memory-pressure.patch
+- add include-linux-memcontrol.h-do-not-warn-in-page_memcg.patch
+- add include-linux-nodemask.h-define-next_memory_node-if-.patch
+- add include-linux-huge_mm.h-define-is_huge_zero_pmd-if-C.patch
+- add include-linux-cgroup.h-export-cgroup_mutex.patch
+- add mm-swap.c-export-activate_page.patch
+- add mm-x86-support-the-access-bit-on-non-leaf-PMD-entrie.patch
+- add mm-vmscan.c-refactor-shrink_node.patch
+- add mm-multigenerational-lru-groundwork.patch
+- add mm-multigenerational-lru-activation.patch
+- add mm-multigenerational-lru-mm_struct-list.patch
+- add mm-multigenerational-lru-aging.patch
+- add mm-multigenerational-lru-eviction.patch
+- add mm-multigenerational-lru-page-reclaim.patch
+- add mm-multigenerational-lru-user-interface.patch
+- add mm-multigenerational-lru-Kconfig.patch
+- add mm-multigenerational-lru-documentation.patch
+
+5.12-lucjan-ll6-rc1
+
 - update futex2-resync-from-gitlab.collabora.com.patch
 
 5.12-lucjan-ll5-rc1
