@@ -4,9 +4,13 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
-5.12-lucjan-ll8-rc10
+5.12-lucjan-ll9-rc1
 
-- drop drop mm-lru-5.12-protect-file-mappings-under-memory-pressure.patch
+- add sched-alt-Resync-with-lru-multigenerational.patch
+
+5.12-lucjan-ll8-rc1
+
+- drop mm-lru-5.12-protect-file-mappings-under-memory-pressure.patch
 
 5.12-lucjan-ll7-rc1
 
