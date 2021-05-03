@@ -4,6 +4,41 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.12-lucjan-ll15-rc1
+
+- drop block-bfq-move-spin_unlock_irq-to-release-request-ou.patch
+- drop bfq-introduce-bfq_entity_to_bfqg-helper-method.patch
+- drop bfq-convert-the-type-of-bfq_group.bfqd-to-bfq_data.patch
+- drop bfq-limit-the-IO-depth-of-CLASS_IDLE-to-1.patch
+- drop bfq-keep-the-minimun-bandwidth-for-CLASS_BE.patch
+- drop bfq-remove-unnecessary-initialization-logic.patch
+- drop bfq-optimize-the-calculation-of-bfq_weight_to_ioprio.patch
+- drop bfq-reset-entity-prio_changed-in-bfq_init_entity.patch
+- drop bfq-remove-unnecessary-BFQ_DEFAULT_GRP_IOPRIO.patch
+- add block-bfq-DEBUG-add-logs-and-BUG_ONs-to-for-next.patch
+- add block-bfq-DEBUG-add-BUG_ONs-to-bfq_reparent_leaf_ent.patch
+- add block-bfq-DEBUG-remove-useless-BUG_ON-in-bfq_pd_offl.patch
+- add block-bfq-DEBUG-check-that-queues-to-move-are-actual.patch
+- add block-bfq-DEBUG-log-and-check-total-number-of-reqs-q.patch
+- add block-bfq-DEBUG-log-early-exit-from-finish_requeue_r.patch
+- add block-bfq-DEBUG-move-check-bfqd-queued-to-lock-prote.patch
+- add block-bfq-DEBUG-print-weights-on-idle-busy-switch.patch
+- add block-bfq-DEBUG-improve-log-messages-in-handle_idle_.patch
+- add block-bfq-DEBUG-check-tot_busy-and-log-asymmetric-sc.patch
+- add block-bfq-DEBUG-log-I-O-intensity-parameters.patch
+- add block-bfq-DEBUG-print-all-pids-associated-with-a-sha.patch
+- add block-bfq-DEBUG-log-better_to_idle-in-handle_idle_bu.patch
+- add block-bfq-DEBUG-log-exact-actions-in-forced-stop-of-.patch
+- add block-bfq-DEBUG-add-BUG_ONs-and-logs-on-new-waker-de.patch
+- add block-bfq-DEBUG-add-more-logs-and-BUG_ONs-on-woken-l.patch
+- add block-bfq-DEBUG-add-detailed-log-on-denied-dispatch-.patch
+- add block-bfq-DEBUG-improve-detailed-log-on-denied-dispa.patch
+- add block-bfq-DEBUG-log-and-BUG_ONs-for-waker-inheritanc.patch
+- add block-bfq-DEBUG-avoid-double-del-of-same-task-from-t.patch
+- add block-bfq-DEBUG-logs-and-BUG_ONs-for-stable-merging.patch
+- add block-bfq-avoid-circular-stable-merges.patch
+- add block-bfq-DEBUG-add-BUG_ON-on-circular-stable-merge.patch
+
 5.12-lucjan-ll14-rc1
 
 - add AUFS 20210503
