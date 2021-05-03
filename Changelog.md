@@ -4,17 +4,6 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
-5.12-lucjan-ll11-rc1
-
-- add btrfs-check-worker-before-need_preemptive_reclaim.patch
-- add btrfs-only-clamp-the-first-time-we-have-to-start-flu.patch
-- add btrfs-don-t-include-the-global-rsv-size-in-the-preem.patch
-- add btrfs-take-into-account-global-rsv-in-need_preemptiv.patch
-- add btrfs-use-the-global-rsv-size-in-the-preemptive-thre.patch
-- add btrfs-only-ignore-delalloc-if-delalloc-is-much-small.patch
-- add btrfs-handle-preemptive-delalloc-flushing-slightly-d.patch
-- ad btrfs-avoid-RCU-stalls-while-running-delayed-iputs.patch
-
 5.12-lucjan-ll10-rc1
 
 - add zstd-5.12-update-to-submission-v11.patch
