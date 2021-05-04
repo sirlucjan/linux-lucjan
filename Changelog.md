@@ -6,6 +6,10 @@
 
 5.12-lucjan-ll17-rc1
 
+- update futex2-resync-from-gitlab.collabora.com.patch
+
+5.12-lucjan-ll17-rc1
+
 - add Update-vmscan.c.patch
 
 5.12-lucjan-ll16-rc1
