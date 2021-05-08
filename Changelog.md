@@ -4,6 +4,11 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll22-rc1
+
+- sync with upstream (drop btrfs-fix-race-between-transaction-aborts-and-fsyncs.patch)
+- sync with upstream (drop block-bfq-fix-weight-raising-resume-with-low_latency.patch)
+
 5.12-lucjan-ll21
 
 - add igb-fix-netpoll-exit-with-traffic.patch
