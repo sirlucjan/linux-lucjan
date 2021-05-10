@@ -4,6 +4,12 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.11-lucjan-ll22
+
+- add mm-vmscan.c-fix-warnings-from-walk_pud_range.patch
+
+DROP 5.11-lucjan-ll22-rc1
+
 5.11-lucjan-ll22-rc1
 
 - sync with upstream (drop btrfs-fix-race-between-transaction-aborts-and-fsyncs.patch)
