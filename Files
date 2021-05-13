@@ -1042,6 +1042,8 @@
 │   │   ├── 5.12-lucjan-ll25.patch.sig
 │   │   ├── 5.12-lucjan-ll25-rc1.patch
 │   │   ├── 5.12-lucjan-ll25-rc1.patch.sig
+│   │   ├── 5.12-lucjan-ll26-rc1.patch
+│   │   ├── 5.12-lucjan-ll26-rc1.patch.sig
 │   │   ├── 5.12-lucjan-ll2-rc1.patch
 │   │   ├── 5.12-lucjan-ll2-rc1.patch.sig
 │   │   ├── 5.12-lucjan-ll3-rc1.patch
@@ -2209,7 +2211,5 @@
 ├── Files
 ├── README.md
 └── testing
-    ├── 5.12-lucjan-ll26-rc1.patch
-    └── 5.12-lucjan-ll26-rc1.patch.sig
 
 21 directories, 2191 files
