@@ -4,6 +4,10 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.12-lucjan-29
+
+- add fs-ntfs3-Fix-unsupported-flags-by-clang.patch
+
 5.12-lucjan-28
 
 - add btrfs-fix-removed-dentries-still-existing-after-log-.patch
