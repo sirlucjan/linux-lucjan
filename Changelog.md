@@ -4,6 +4,15 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.12-lucjan-ll38
+
+- add btrfs-abort-the-transaction-if-we-fail-to-replay-log.patch
+- add btrfs-check-error-value-from-btrfs_update_inode-in-t.patch
+- add btrfs-do-not-infinite-loop-in-data-reclaim-if-we-abo.patch
+- add btrfs-fix-error-handling-in-btrfs_del_csums.patch
+- add btrfs-mark-ordered-extent-and-inode-with-error-if-we.patch
+- add btrfs-return-errors-from-btrfs_del_csums-in-cleanup_.patch
+
 5.12-lucjan-ll37
 
 - add AUFS 20210517
