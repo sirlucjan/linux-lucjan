@@ -4,6 +4,10 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.12-lucjan-ll39
+
+- add block-Do-not-pull-requests-from-the-scheduler-when-w.patch
+
 5.12-lucjan-ll38
 
 - add btrfs-abort-the-transaction-if-we-fail-to-replay-log.patch
