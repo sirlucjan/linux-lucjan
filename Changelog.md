@@ -4,6 +4,12 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.12-lucjan-ll42
+
+- drop Revert-bus-mhi-core-Process-execution-environment-ch.patch
+- drop Revert-net-tso-add-UDP-segmentation-support.patch
+- add drm-i915-gt-Disable-HiZ-Raw-Stall-Optimization-on-br.patch
+
 5.12-lucjan-ll41
 
 - add Revert-block-bfq-move-spin_unlock_irq-to-release-req.patch
