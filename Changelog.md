@@ -4,6 +4,17 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.12-lucjan-ll44
+
+- add Revert-blk-Fix-lock-inversion-between-ioc-lock-and-b.patch
+- add Revert-block-Do-not-merge-recursively-in-elv_attempt.patch
+- add bfq-Remove-merged-request-already-in-bfq_requests_me.patch
+- add blk-Fix-lock-inversion-between-ioc-lock-and-bfqd-loc.patch
+- add block-bfq-fix-delayed-stable-merge-check.patch
+- add block-bfq-avoid-delayed-merge-of-async-queues.patch
+
+DROP 5.12-lucjan-ll44-rc1
+
 5.12-lucjan-ll44-rc1
 
 - sync with upstream (drop drm-i915-gt-Disable-HiZ-Raw-Stall-Optimization-on-br.patch)
