@@ -4,6 +4,11 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.12-lucjan-ll43
+
+- add btrfs-handle-btrfs_record_root_in_trans-failure-in-b.patch
+- add btrfs-change-handle_fs_error-in-recover_log_trees-to.patch
+
 5.12-lucjan-ll42
 
 - drop Revert-bus-mhi-core-Process-execution-environment-ch.patch
