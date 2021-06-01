@@ -4,6 +4,10 @@
 #### You must have GCC 11 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.12-lucjan-ll51-rc1
+
+- sync with upstream (drop btrfs-return-whole-extents-in-fiemap.patch)
+
 5.12-lucjan-ll50
 
 - update futex2-resync-from-gitlab.collabora.com.patch
