@@ -4,6 +4,14 @@
 #### You must have GCC 11/Clang 12 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.12-lucjan-ll56-rc1
+
+- sync with upstream (drop btrfs-check-error-value-from-btrfs_update_inode-in-t.patch)
+- sync with upstream (drop btrfs-fix-error-handling-in-btrfs_del_csums.patch)
+- sync with upstream (drop btrfs-mark-ordered-extent-and-inode-with-error-if-we.patch)
+- sync with upstream (drop btrfs-return-errors-from-btrfs_del_csums-in-cleanup_.patch)
+- sync with upstream (drop btrfs-fix-deadlock-when-cloning-inline-extents-and-l.patch)
+
 5.12-lucjan-ll55
 
 - add mac80211-minstrel_ht-force-ampdu_len-to-be-0.patch
