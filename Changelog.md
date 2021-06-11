@@ -4,6 +4,10 @@
 #### You must have GCC 11/Clang 12 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.12-lucjan-ll57
+
+- add Makefile-Turn-off-loop-vectorization-for-GCC-O3-opti.patch
+
 5.12-lucjan-ll56-rc1 --> 5.12-lucjan-ll56
 
 5.12-lucjan-ll56-rc1
