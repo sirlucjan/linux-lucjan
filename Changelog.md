@@ -4,6 +4,12 @@
 #### You must have GCC 11/Clang 12 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.12-lucjan-ll60
+
+- update futex2-resync-from-gitlab.collabora.com.patch
+
+DROP 5.12-lucjan-ll60-rc2
+
 5.12-lucjan-ll60-rc2
 
 - add prjc-5.12-fix-compilation-error-if-sched_feat-UTIL_E.patch
