@@ -4,6 +4,18 @@
 #### You must have GCC 11/Clang 12 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.12-lucjan-ll66
+
+- add Revert-block-bfq-avoid-delayed-merge-of-async-queues.patch
+- add Revert-block-bfq-fix-delayed-stable-merge-check.patch
+- add block-bfq-let-also-stably-merged-queues-enjoy-weight.patch
+- add block-bfq-fix-delayed-stable-merge-check.patch
+- add block-bfq-consider-also-creation-time-in-delayed-sta.patch
+- add block-bfq-boost-throughput-by-extending-queue-mergin.patch
+- add block-bfq-avoid-delayed-merge-of-async-queues.patch
+- add block-bfq-check-waker-only-for-queues-with-no-in-fli.patch
+- add block-bfq-reset-waker-pointer-with-shared-queues.patch
+
 5.12-lucjan-ll65
 
 - add Revert-Makefile-Turn-off-loop-vectorization-for-GCC-.patch
