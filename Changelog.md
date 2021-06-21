@@ -4,6 +4,12 @@
 #### You must have GCC 11/Clang 12 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
 
+5.12-lucjan-ll67
+
+- add mm-compaction-optimize-proactive-compaction-deferral.patch
+- add mm-compaction-support-triggering-of-proactive-compac.patch
+- add mm-compaction-fix-wakeup-logic-of-proactive-compacti.patch
+
 5.12-lucjan-ll66
 
 - add Revert-block-bfq-avoid-delayed-merge-of-async-queues.patch
