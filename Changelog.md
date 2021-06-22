@@ -6,6 +6,36 @@
 
 5.12-lucjan-ll67
 
+- drop block-Add-CONFIG-to-rename-the-mq-deadline-scheduler.patch
+- drop ZEN-Fix-mq-deadline-scheduler-renaming.patch
+- drop ZEN-Increase-max-elevator-name-size.patch
+- update block-Kconfig.iosched-set-default-value-of-IOSCHED_B.patch
+- update LL-Implement-ll-branding-v5.12.patch
+- add Revert-block-elevator-remove-un-used-input-parameter.patch
+- add Revert-blk-Fix-lock-inversion-between-ioc-lock-and-b.patch
+- add Revert-bfq-Remove-merged-request-already-in-bfq_requ.patch
+- add block-Kconfig-Make-the-BLK_WBT-and-BLK_WBT_MQ-entrie.patch
+- add block-blk-cgroup-Swap-the-blk_throtl_init-and-blk_io.patch
+- add block-blk-rq-qos-Move-a-function-from-a-header-file-.patch
+- add block-Introduce-the-ioprio-rq-qos-policy.patch
+- add block-mq-deadline-Add-several-comments.patch
+- add block-mq-deadline-Add-two-lockdep_assert_held-statem.patch
+- add block-mq-deadline-Remove-two-local-variables.patch
+- add block-mq-deadline-Rename-dd_init_queue-and-dd_exit_q.patch
+- add block-mq-deadline-Improve-compile-time-argument-chec.patch
+- add block-mq-deadline-Improve-the-sysfs-show-and-store-m.patch
+- add block-mq-deadline-Reserve-25-of-scheduler-tags-for-s.patch
+- add block-mq-deadline-Micro-optimize-the-batching-algori.patch
+- add block-mq-deadline-Add-I-O-priority-support.patch
+- add block-mq-deadline-Track-I-O-statistics.patch
+- add block-mq-deadline-Add-cgroup-support.patch
+- add block-mq-deadline-Prioritize-high-priority-requests.patch
+- add block-elevator-remove-un-used-input-parameter-reques.patch
+- add bfq-Remove-merged-request-already-in-bfq_requests_me.patch
+- add blk-Fix-lock-inversion-between-ioc-lock-and-bfqd-loc.patch
+
+5.12-lucjan-ll67
+
 - add mm-compaction-optimize-proactive-compaction-deferral.patch
 - add mm-compaction-support-triggering-of-proactive-compac.patch
 - add mm-compaction-fix-wakeup-logic-of-proactive-compacti.patch
