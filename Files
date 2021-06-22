@@ -650,9 +650,6 @@
 │       └── 5.12-lucjan-ll9-rc1.patch.sig
 ├── Changelog.md
 ├── Files
-├── pending
-│   ├── 5.12-lucjan-ll69.patch
-│   └── 5.12-lucjan-ll69.patch.sig
 └── README.md
 
-6 directories, 649 files
+5 directories, 647 files
