@@ -5,6 +5,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.12-lucjan-ll71-rc1
+
+- sync with upstream (drop psi-Fix-psi-state-corruption-when-schedule-races-wit.patch)
+
 5.12-lucjan-ll70
 
 - update block-Kconfig.iosched-set-default-value-of-IOSCHED_B.patch
