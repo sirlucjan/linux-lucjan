@@ -5,6 +5,23 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll3-rc1
+
+- add include-linux-memcontrol.h-do-not-warn-in-page_memcg.patch
+- add include-linux-nodemask.h-define-next_memory_node-if-.patch
+- add include-linux-cgroup.h-export-cgroup_mutex.patch
+- add mm-x86-support-the-access-bit-on-non-leaf-PMD-entrie.patch
+- add mm-vmscan.c-refactor-shrink_node.patch
+- add mm-workingset.c-refactor-pack_shadow-and-unpack_shad.patch
+- add mm-multigenerational-lru-groundwork.patch
+- add mm-multigenerational-lru-activation.patch
+- add mm-multigenerational-lru-mm_struct-list.patch
+- add mm-multigenerational-lru-aging.patch
+- add mm-multigenerational-lru-eviction.patch
+- add mm-multigenerational-lru-user-interface.patch
+- add mm-multigenerational-lru-Kconfig.patch
+- add mm-multigenerational-lru-documentation.patch
+
 5.13-lucjan-ll2-rc1
 
 - add block-mq-deadline-Remove-a-WARN_ON_ONCE-call.patch
