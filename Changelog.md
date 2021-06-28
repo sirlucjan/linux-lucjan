@@ -153,6 +153,12 @@
 
 5.12-lucjan-ll71-rc1
 
+- add block-mq-deadline-Remove-a-WARN_ON_ONCE-call.patch
+
+DROP 5.12-lucjan-ll71-rc1
+
+5.12-lucjan-ll71-rc1
+
 - sync with upstream (drop psi-Fix-psi-state-corruption-when-schedule-races-wit.patch)
 
 5.12-lucjan-ll70
