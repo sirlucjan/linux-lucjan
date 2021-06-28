@@ -5,6 +5,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll2-rc1
+
+- add block-mq-deadline-Remove-a-WARN_ON_ONCE-call.patch
+
 5.13-lucjan-ll1-rc1
 
 - add android-export-symbold-and-enable-building-ashmem-an.patch
