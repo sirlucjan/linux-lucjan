@@ -5,6 +5,17 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll4-rc1
+
+- add security-Add-LSM-hook-at-the-point-where-a-task-gets.patch
+- add security-brute-Define-a-LSM-and-add-sysctl-attribute.patch
+- add security-brute-Detect-a-brute-force-attack.patch
+- add security-brute-Mitigate-a-brute-force-attack.patch
+- add security-brute-Notify-to-userspace-task-killed.patch
+- add selftests-brute-Add-tests-for-the-Brute-LSM.patch
+- add Documentation-Add-documentation-for-the-Brute-LSM.patch
+- add MAINTAINERS-Add-a-new-entry-for-the-Brute-LSM.patch
+
 5.13-lucjan-ll3-rc1
 
 - add include-linux-memcontrol.h-do-not-warn-in-page_memcg.patch
