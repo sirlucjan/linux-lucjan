@@ -5,6 +5,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll6-rc1
+
+- update futex2-resync-from-gitlab.collabora.com.patch
+
 5.13-lucjan-ll5-rc1
 
 - add mm-page_alloc-Correct-return-value-of-populated-elem.patch
