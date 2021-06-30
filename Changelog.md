@@ -5,9 +5,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll10-rc1
+
+- add kbuild-add-proper-bool-for-MODULE_COMPRESS_ZSTD_ULTR.patch
+
 5.13-lucjan-ll9-rc1
 
-- fix zstd-ll-patches
+- fix kbuild-optimize-zstd-compression-settings.patch
 
 5.13-lucjan-ll8-rc1
 
