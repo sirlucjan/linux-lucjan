@@ -5,6 +5,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll9-rc1
+
+- fix zstd-ll-patches
+
 5.13-lucjan-ll8-rc1
 
 - add kbuild-allow-setting-ultra-zstd-compression-level-fo.patch
