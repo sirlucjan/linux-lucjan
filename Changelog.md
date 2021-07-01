@@ -207,6 +207,10 @@
 - add LL-Add-.ll-version.patch
 - add LL-Implement-ll-branding-v5.13.patch
 
+5.12-lucjan-ll73
+
+- update futex2-resync-from-gitlab.collabora.com.patch
+
 5.12-lucjan-ll72-rc1 --> 5.12-lucjan-ll72
 
 5.12-lucjan-ll72-rc1
