@@ -203,6 +203,8 @@
 - add LL-Add-.ll-version.patch
 - add LL-Implement-ll-branding-v5.13.patch
 
+5.12-lucjan-ll72-rc1 --> 5.12-lucjan-ll72
+
 5.12-lucjan-ll72-rc1
 
 - sync with upstream (drop psi-Fix-psi-state-corruption-when-schedule-races-wit.patch)
