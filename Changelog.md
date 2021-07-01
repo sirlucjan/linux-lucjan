@@ -207,6 +207,12 @@
 - add LL-Add-.ll-version.patch
 - add LL-Implement-ll-branding-v5.13.patch
 
+5.12-lucjan-ll74
+
+- add kbuild-allow-setting-ultra-zstd-compression-level-fo.patch
+- add kbuild-add-proper-bool-for-MODULE_COMPRESS_ZSTD_ULTR.patch
+- add kbuild-add-proper-help-for-MODULE_COMPRESS_ZSTD_LEVE.patch
+
 5.12-lucjan-ll73
 
 - update futex2-resync-from-gitlab.collabora.com.patch
