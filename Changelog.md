@@ -207,6 +207,12 @@
 - add LL-Add-.ll-version.patch
 - add LL-Implement-ll-branding-v5.13.patch
 
+5.12-lucjan-ll75
+
+- add soundwire-add-override-addr-ops.patch
+- add soundwire-Intel-introduce-DMI-quirks-for-HP-Spectre-.patch
+- add soundwire-Intel-add-DMI-quirk-for-Dell-SKU-0A3E.patch
+
 5.12-lucjan-ll74
 
 - add kbuild-allow-setting-ultra-zstd-compression-level-fo.patch
