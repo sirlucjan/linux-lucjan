@@ -1,7 +1,5 @@
 .
 ├── actual
-│   ├── 5.12-lucjan-ll71.patch
-│   ├── 5.12-lucjan-ll71.patch.sig
 │   ├── 5.12-lucjan-ll75.patch
 │   └── 5.12-lucjan-ll75.patch.sig
 ├── archive
@@ -646,6 +644,8 @@
 │   │   ├── 5.12-lucjan-ll6-rc1.patch.sig
 │   │   ├── 5.12-lucjan-ll70.patch
 │   │   ├── 5.12-lucjan-ll70.patch.sig
+│   │   ├── 5.12-lucjan-ll71.patch
+│   │   ├── 5.12-lucjan-ll71.patch.sig
 │   │   ├── 5.12-lucjan-ll71-rc1.patch
 │   │   ├── 5.12-lucjan-ll71-rc1.patch.sig
 │   │   ├── 5.12-lucjan-ll72.patch
