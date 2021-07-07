@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll17-rc1
+
+- add net-tcp_bbr-v2-Fix-missing-ECT-markings-on-retransmi.patch
+
 5.13-lucjan-ll16-rc1
 
 - sync with upstream  (drop mm-page_alloc-Correct-return-value-of-populated-elem.patch)
