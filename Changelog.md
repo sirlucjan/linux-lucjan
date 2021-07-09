@@ -234,6 +234,10 @@
 - add LL-Add-.ll-version.patch
 - add LL-Implement-ll-branding-v5.13.patch
 
+5.12-lucjan-ll77
+
+- drop igb-fix-netpoll-exit-with-traffic.patch
+
 5.12-lucjan-ll76
 
 - add net-tcp_bbr-v2-Fix-missing-ECT-markings-on-retransmi.patch
