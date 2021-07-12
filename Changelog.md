@@ -251,6 +251,12 @@
 - add LL-Add-.ll-version.patch
 - add LL-Implement-ll-branding-v5.13.patch
 
+5.12-lucjan-ll78-rc1
+
+- sync with upstream  (drop btrfs-send-fix-invalid-path-for-unlink-operations-af.patch)
+- sync with upstream  (drop blk-mq-update-hctx-dispatch_busy-in-case-of-real-sch.patch)
+- sync with upstream  (drop bfq-Remove-merged-request-already-in-bfq_requests_me.patch)
+
 5.12-lucjan-ll77
 
 - drop igb-fix-netpoll-exit-with-traffic.patch
