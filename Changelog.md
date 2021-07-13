@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll23-rc1
+
+- add mac80211-minstrel_ht-force-ampdu_len-to-be-0.patch
+- add net-replace-WARN_ONCE-with-pr_warn_once.patch
+
 5.13-lucjan-ll22-rc1
 
 - sync with upstream  (drop btrfs-send-fix-invalid-path-for-unlink-operations-af.patch)
