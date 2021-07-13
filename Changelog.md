@@ -6,6 +6,17 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll21-rc1
+
+- add ALSA-usb-audio-Make-snd_usb_pcm_delay-static.patch
+- add ALSA-usb-audio-Pre-calculate-buffer-byte-size.patch
+- add ALSA-usb-audio-Refactoring-delay-account-code.patch
+- add ALSA-usb-audio-Factor-out-DSD-bitrev-copy-function.patch
+- add ALSA-usb-audio-Reduce-latency-at-playback-start.patch
+- add Revert-ALSA-usb-audio-Reduce-latency-at-playback-sta.patch
+- add ALSA-usb-audio-Reduce-latency-at-playback-start-take.patch
+- add ALSA-intel8x0-Fix-breakage-at-ac97-clock-measurement.patch
+
 5.13-lucjan-ll20-rc1
 
 - sync with upstream  (drop btrfs-send-fix-invalid-path-for-unlink-operations-af.patch)
