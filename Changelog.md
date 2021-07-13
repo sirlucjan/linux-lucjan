@@ -6,6 +6,16 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll22-rc1
+
+- sync with upstream  (drop btrfs-send-fix-invalid-path-for-unlink-operations-af.patch)
+- sync with upstream  (drop blk-mq-update-hctx-dispatch_busy-in-case-of-real-sch.patch)
+- sync with upstream  (drop block-bfq-fix-delayed-stable-merge-check.patch)
+- sync with upstream  (drop block-bfq-avoid-delayed-merge-of-async-queues.patch)
+- sync with upstream  (drop block-bfq-reset-waker-pointer-with-shared-queues.patch)
+- sync with upstream  (drop bfq-Remove-merged-request-already-in-bfq_requests_me.patch)
+- sync with upstream  (drop ALSA-intel8x0-Fix-breakage-at-ac97-clock-measurement.patch)
+
 5.13-lucjan-ll21-rc1
 
 - add ALSA-usb-audio-Make-snd_usb_pcm_delay-static.patch
