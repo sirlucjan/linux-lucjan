@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll29-rc1
+
+- add writeback-Track-number-of-inodes-under-writeback.patch
+- add writeback-Reliably-update-bandwidth-estimation.patch
+- add writeback-Fix-bandwidth-estimate-for-spiky-workload.patch
+- add writeback-Rename-domain_update_bandwidth.patch
+- add writeback-Use-READ_ONCE-for-unlocked-reads-of-writeb.patch
+
 5.13-lucjan-ll28-rc1
 
 - add block-Provide-icq-in-request-allocation-data.patch
