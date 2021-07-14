@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll27-rc1
+
+- add (again) bfq-Remove-merged-request-already-in-bfq_requests_me.patch
+
 5.13-lucjan-ll26-rc1
 
 - sync with upstream (drop btrfs-send-fix-invalid-path-for-unlink-operations-af.patch)
