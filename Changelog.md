@@ -6,6 +6,22 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll25-rc1
+
+- add Linux-Random-Number-Generator.patch
+- add LRNG-allocate-one-DRNG-instance-per-NUMA-node.patch
+- add LRNG-sysctls-and-proc-interface.patch
+- add LRNG-add-switchable-DRNG-support.patch
+- add LRNG-add-common-generic-hash-support.patch
+- add crypto-DRBG-externalize-DRBG-functions-for-LRNG.patch
+- add LRNG-add-SP800-90A-DRBG-extension.patch
+- add LRNG-add-kernel-crypto-API-PRNG-extension.patch
+- add crypto-provide-access-to-a-static-Jitter-RNG-state.patch
+- add LRNG-add-Jitter-RNG-fast-noise-source.patch
+- add LRNG-add-SP800-90B-compliant-health-tests.patch
+- add LRNG-add-interface-for-gathering-of-raw-entropy.patch
+- add LRNG-add-power-on-and-runtime-self-tests.patch
+
 5.13-lucjan-ll24-rc1
 
 - sync with upstream  (drop btrfs-send-fix-invalid-path-for-unlink-operations-af.patch)
