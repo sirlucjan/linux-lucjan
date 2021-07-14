@@ -6,6 +6,15 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll28-rc1
+
+- add block-Provide-icq-in-request-allocation-data.patch
+- add bfq-Track-number-of-allocated-requests-in-bfq_entity.patch
+- add bfq-Limit-number-of-requests-consumed-by-each-cgroup.patch
+- add block-bfq-do-not-idle-if-only-one-cgroup-is-activate.patch
+- add block-bfq-add-support-to-record-request-size-informa.patch
+- add block-bfq-consider-request-size-in-bfq_asymmetric_sc.patch
+
 5.13-lucjan-ll27-rc1
 
 - add (again) bfq-Remove-merged-request-already-in-bfq_requests_me.patch
