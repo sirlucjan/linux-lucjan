@@ -338,6 +338,12 @@
 - add LL-Add-.ll-version.patch
 - add LL-Implement-ll-branding-v5.13.patch
 
+5.12-lucjan-ll79
+
+- add (again) bfq-Remove-merged-request-already-in-bfq_requests_me.patch
+
+DROP 5.12-lucjan-ll78-rc1
+
 5.12-lucjan-ll78-rc1
 
 - sync with upstream  (drop btrfs-send-fix-invalid-path-for-unlink-operations-af.patch)

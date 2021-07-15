@@ -1,7 +1,9 @@
 .
 ├── actual
 │   ├── 5.12-lucjan-ll77.patch
-│   └── 5.12-lucjan-ll77.patch.sig
+│   ├── 5.12-lucjan-ll77.patch.sig
+│   ├── 5.12-lucjan-ll79.patch
+│   └── 5.12-lucjan-ll79.patch.sig
 ├── archive
 │   ├── 5.10
 │   │   ├── 5.10-lucjan-ll10-rc1.patch
@@ -660,6 +662,8 @@
 │   │   ├── 5.12-lucjan-ll75.patch.sig
 │   │   ├── 5.12-lucjan-ll76.patch
 │   │   ├── 5.12-lucjan-ll76.patch.sig
+│   │   ├── 5.12-lucjan-ll78-rc1.patch
+│   │   ├── 5.12-lucjan-ll78-rc1.patch.sig
 │   │   ├── 5.12-lucjan-ll7-rc1.patch
 │   │   ├── 5.12-lucjan-ll7-rc1.patch.sig
 │   │   ├── 5.12-lucjan-ll8-rc1.patch
@@ -726,13 +730,10 @@
 ├── Changelog.md
 ├── Files
 ├── README.md
-├── testing
-│   ├── 5.12-lucjan-ll78-rc1.patch
-│   └── 5.12-lucjan-ll78-rc1.patch.sig
 └── trunk
     ├── 5.13-lucjan-ll26-rc1.patch
     ├── 5.13-lucjan-ll26-rc1.patch.sig
     ├── 5.13-lucjan-ll30-rc1.patch
     └── 5.13-lucjan-ll30-rc1.patch.sig
 
-8 directories, 727 files
+7 directories, 729 files
