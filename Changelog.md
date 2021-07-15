@@ -351,6 +351,10 @@
 - add LL-Add-.ll-version.patch
 - add LL-Implement-ll-branding-v5.13.patch
 
+5.12-lucjan-ll80-rc1
+
+- sync with upstream (resync do-accept-in-LIFO-order-for-cache-efficiency.patch)
+
 5.12-lucjan-ll79
 
 - add (again) bfq-Remove-merged-request-already-in-bfq_requests_me.patch
