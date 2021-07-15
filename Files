@@ -662,6 +662,8 @@
 │   │   ├── 5.12-lucjan-ll75.patch.sig
 │   │   ├── 5.12-lucjan-ll76.patch
 │   │   ├── 5.12-lucjan-ll76.patch.sig
+│   │   ├── 5.12-lucjan-ll78-rc1.patch
+│   │   ├── 5.12-lucjan-ll78-rc1.patch.sig
 │   │   ├── 5.12-lucjan-ll7-rc1.patch
 │   │   ├── 5.12-lucjan-ll7-rc1.patch.sig
 │   │   ├── 5.12-lucjan-ll8-rc1.patch
@@ -731,8 +733,6 @@
 ├── Files
 ├── README.md
 ├── testing
-│   ├── 5.12-lucjan-ll78-rc1.patch
-│   ├── 5.12-lucjan-ll78-rc1.patch.sig
 │   ├── 5.12-lucjan-ll80-rc1.patch
 │   └── 5.12-lucjan-ll80-rc1.patch.sig
 └── trunk
