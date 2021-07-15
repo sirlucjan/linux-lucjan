@@ -6,6 +6,15 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll31-rc1
+
+- add Revert-bfq-Limit-number-of-requests-consumed-by-each.patch
+- add Revert-bfq-Track-number-of-allocated-requests-in-bfq.patch
+- add Revert-block-Provide-icq-in-request-allocation-data.patch
+- add block-Provide-icq-in-request-allocation-data.patch
+- add bfq-Track-number-of-allocated-requests-in-bfq_entity.patch
+- add bfq-Limit-number-of-requests-consumed-by-each-cgroup.patch
+
 5.13-lucjan-ll30-rc1
 
 - add block-bfq-fix-the-timeout-calculation-in-bfq_bfqq_ch.patch
