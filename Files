@@ -705,6 +705,8 @@
 │       ├── 5.13-lucjan-ll24-rc1.patch.sig
 │       ├── 5.13-lucjan-ll25-rc1.patch
 │       ├── 5.13-lucjan-ll25-rc1.patch.sig
+│       ├── 5.13-lucjan-ll26-rc1.patch
+│       ├── 5.13-lucjan-ll26-rc1.patch.sig
 │       ├── 5.13-lucjan-ll27-rc1.patch
 │       ├── 5.13-lucjan-ll27-rc1.patch.sig
 │       ├── 5.13-lucjan-ll28-rc1.patch
@@ -736,8 +738,6 @@
 │   ├── 5.12-lucjan-ll80-rc1.patch
 │   └── 5.12-lucjan-ll80-rc1.patch.sig
 └── trunk
-    ├── 5.13-lucjan-ll26-rc1.patch
-    ├── 5.13-lucjan-ll26-rc1.patch.sig
     ├── 5.13-lucjan-ll31-rc1.patch
     ├── 5.13-lucjan-ll31-rc1.patch.sig
     ├── 5.13-lucjan-ll32-rc1.patch
