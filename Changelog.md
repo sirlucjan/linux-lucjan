@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll38-rc1
+
+- sync with upstream (resync do-accept-in-LIFO-order-for-cache-efficiency.patch)
+
 5.13-lucjan-ll37-rc1
 
 - add block-mq-deadline-remove-redundant-assignment-of-var.patch
