@@ -375,6 +375,8 @@
 - add LL-Add-.ll-version.patch
 - add LL-Implement-ll-branding-v5.13.patch
 
+5.12-lucjan-ll80-rc1 --> 5.12-lucjan-ll80
+
 5.12-lucjan-ll80-rc1
 
 - sync with upstream (resync do-accept-in-LIFO-order-for-cache-efficiency.patch)
