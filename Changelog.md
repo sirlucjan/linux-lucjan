@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll39-rc1
+
+- add mm-swapfile-use-percpu_ref-to-serialize-against-conc.patch
+- add mm-swap-remove-confusing-checking-for-non_swap_entry.patch
+
 5.13-lucjan-ll38-rc1
 
 - sync with upstream (resync do-accept-in-LIFO-order-for-cache-efficiency.patch)
