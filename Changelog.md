@@ -8,6 +8,10 @@
 
 5.13-lucjan-ll40-rc1
 
+- add mm-fix-priority-queue-in-multigenerational-lru.patch
+
+5.13-lucjan-ll40-rc1
+
 - add block-bfq-the-delta_from_first-should-be-ns-rather-t.patch
 
 5.13-lucjan-ll39-rc1
