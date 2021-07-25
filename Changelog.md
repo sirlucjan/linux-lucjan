@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll44-rc1
+
+- add Revert-Revert-mm-shmem-fix-shmem_swapin-race-with-sw.patch
+- add Revert-Revert-swap-fix-do_swap_page-race-with-swapof.patch
+
 5.13-lucjan-ll43-rc1
 
 - add Revert-mm-fix-priority-queue-in-multigenerational-lru.patch
