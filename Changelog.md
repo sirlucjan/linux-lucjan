@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll43-rc1
+
+- add Revert-mm-fix-priority-queue-in-multigenerational-lru.patch
+- add Revert-mm-fix-priority-queue-in-multigenerational-lru-v2.patch
+- add mm-fix-priority-queue-in-multigenerational-lru.patch
+- add PCI-Add-Intel-remapped-NVMe-device-support.patch
+
 5.13-lucjan-ll42-rc1
 
 - add mm-fix-priority-queue-in-multigenerational-lru-v2.patch
