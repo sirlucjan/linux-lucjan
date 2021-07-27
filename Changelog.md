@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll47
+
+- add kbuild-add-menu-for-ZSTD-module-compression-options.patch
+
 5.13-lucjan-ll46
 
 - update futex2-resync-from-gitlab.collabora.com.patch
