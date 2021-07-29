@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll48
+
+- add Revert-block-another-attempt-to-fix-discard-merging.patch
+- add block-return-ELEVATOR_DISCARD_MERGE-if-possible.patch
+- add Revert-fs-ntfs3-Fix-unsupported-flags-by-clang.patch
+- add ntfs3-5.13-update-to-v27.patch
+
 5.13-lucjan-ll47
 
 - add kbuild-add-menu-for-ZSTD-module-compression-options.patch
