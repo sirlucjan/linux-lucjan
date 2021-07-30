@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll49
+
+- add Update-intel-nvme-remap.c.patch
+
 5.13-lucjan-ll48
 
 - add Revert-block-another-attempt-to-fix-discard-merging.patch
