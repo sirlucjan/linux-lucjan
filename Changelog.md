@@ -6,6 +6,17 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll52
+
+- add Revert-bfq-optimize-the-calculation-of-bfq_weight_to.patch
+- add ioprio-move-user-space-relevant-ioprio-bits-to-UAPI-.patch
+- add block-bfq-fix-bfq_set_next_ioprio_data.patch
+- add block-fix-ioprio-interface.patch
+- add block-rename-IOPRIO_BE_NR.patch
+- add bfq-optimize-the-calculation-of-bfq_weight_to_ioprio.patch
+
+DROP 5.13-lucjan-ll52-rc2
+
 5.13-lucjan-ll52-rc2
 
 - sync with upstream (resync AUFS 20210705)
