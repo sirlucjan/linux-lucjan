@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll58
+
+- add Bluetooth-btusb-check-conditions-before-enabling-USB.patch
+
 5.13-lucjan-ll57
 
 - add netfilter-Add-full-cone-NAT-support.patch
