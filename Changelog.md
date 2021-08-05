@@ -6,6 +6,22 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll59
+
+- add ksmbd-add-document.patch
+- add ksmbd-add-server-handler.patch
+- add ksmbd-add-tcp-transport-layer.patch
+- add ksmbd-add-ipc-transport-layer.patch
+- add ksmbd-add-rdma-transport-layer.patch
+- add ksmbd-add-a-utility-code-that-tracks-and-caches-sess.patch
+- add ksmbd-add-authentication.patch
+- add ksmbd-add-smb3-engine-part-1.patch
+- add ksmbd-add-smb3-engine-part-2.patch
+- add ksmbd-add-oplock-lease-cache-mechanism.patch
+- add ksmbd-add-file-operations.patch
+- add ksmbd-add-Kconfig-and-Makefile.patch
+- add MAINTAINERS-add-ksmbd-kernel-server.patch
+
 5.13-lucjan-ll58
 
 - add Bluetooth-btusb-check-conditions-before-enabling-USB.patch
