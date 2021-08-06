@@ -6,6 +6,26 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll60
+
+- add Revert-bfq-optimize-the-calculation-of-bfq_weight_to.patch
+- add Revert-block-rename-IOPRIO_BE_NR.patch
+- add Revert-block-fix-ioprio-interface.patch
+- add Revert-block-bfq-fix-bfq_set_next_ioprio_data.patch
+- add Revert-block-bfq-consider-request-size-in-bfq_asymme.patch
+- add Revert-block-bfq-add-support-to-record-request-size-.patch
+- add Revert-block-bfq-do-not-idle-if-only-one-cgroup-is-a.patch
+- add block-bfq-add-support-to-track-if-root_group-have-an.patch
+- add block-bfq-do-not-idle-if-only-one-cgroup-is-activate.patch
+- add block-bfq-add-support-to-record-request-size-informa.patch
+- add block-bfq-consider-request-size-in-bfq_asymmetric_sc.patch
+- add block-bfq-fix-bfq_set_next_ioprio_data.patch
+- add block-fix-ioprio-interface.patch
+- add block-rename-IOPRIO_BE_NR.patch
+- add block-fix-default-IO-priority-handling.patch
+- add bfq-optimize-the-calculation-of-bfq_weight_to_ioprio.patch
+- add bfq-use-bfq_entity_to_bfqg-helper-method.patch
+
 5.13-lucjan-ll59
 
 - add ksmbd-add-document.patch
