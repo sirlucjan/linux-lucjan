@@ -6,6 +6,23 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll63
+
+- add Revert-block-return-ELEVATOR_DISCARD_MERGE-if-possib.patch
+- add block-return-ELEVATOR_DISCARD_MERGE-if-possible.patch
+- add Revert-bfq-optimize-the-calculation-of-bfq_weight_to.patch
+- add Revert-block-fix-default-IO-priority-handling.patch
+- add Revert-block-rename-IOPRIO_BE_NR.patch
+- add Revert-block-fix-ioprio-interface.patch
+- add Revert-block-bfq-fix-bfq_set_next_ioprio_data.patch
+- add block-bfq-fix-bfq_set_next_ioprio_data.patch
+- add block-improve-ioprio-class-description-comment.patch
+- add block-change-ioprio_valid-to-an-inline-function.patch
+- add block-fix-IOPRIO_PRIO_CLASS-and-IOPRIO_PRIO_VALUE-ma.patch
+- add block-Introduce-IOPRIO_NR_LEVELS.patch
+- add block-fix-default-IO-priority-handling.patch
+- add bfq-optimize-the-calculation-of-bfq_weight_to_ioprio.patch
+
 5.13-lucjan-ll62
 
 - add AUFS 20210809
