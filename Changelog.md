@@ -6,6 +6,17 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll64
+
+- add Revert-block-return-ELEVATOR_DISCARD_MERGE-if-possib.patch
+- add Revert-block-mq-deadline-remove-redundant-assignment.patch
+- add Revert-block-elevator-remove-un-used-input-parameter.patch
+- add Revert-block-mq-deadline-Add-cgroup-support.patch
+- add Revert-block-increase-BLKCG_MAX_POLS.patch
+- add block-elevator-remove-un-used-input-parameter-reques.patch
+- add block-return-ELEVATOR_DISCARD_MERGE-if-possible.patch
+- update block-Kconfig.iosched-set-default-value-of-IOSCHED_B.patch
+
 5.13-lucjan-ll63
 
 - add Revert-block-return-ELEVATOR_DISCARD_MERGE-if-possib.patch
