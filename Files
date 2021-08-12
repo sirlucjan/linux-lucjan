@@ -821,9 +821,6 @@
 │   ├── 5.13-lucjan-ll64.patch
 │   └── 5.13-lucjan-ll64.patch.sig
 ├── Files
-├── pending
-│   ├── 5.13-lucjan-ll64.patch
-│   └── 5.13-lucjan-ll64.patch.sig
 └── README.md
 
-7 directories, 819 files
+6 directories, 817 files
