@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-67
+
+- add netfilter-New-full-cone-SNAT-upstream.patch
+
 5.13-lucjan-ll66
 
 - add Revert-Revert-block-increase-BLKCG_MAX_POLS.patch
