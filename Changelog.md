@@ -28,7 +28,7 @@ DROP 5.13-lucjan-ll70-rc1
 
 - add drm-amdgpu-handle-VCN-instances-when-harvesting.patch
 
-5.13-lucjan-67
+5.13-lucjan-ll67
 
 - add netfilter-New-full-cone-SNAT-upstream.patch
 
