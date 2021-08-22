@@ -9,6 +9,9 @@
 5.13-lucjan-ll73
 
 - add Project-C v5.13-r3
+- add Revert-mm-5.13-protect-anonymous-mappings-under-memo.patch
+- add Revert-mm-5.13-protect-file-mappings-under-memory-pr.patch
+- add mm-5.13-protect-mappings-under-memory-pressure.patch
 
 5.13-lucjan-ll72
 
