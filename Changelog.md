@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll74
+
+- add ksmbd-5.13-update-to-v8.patch
+
 5.13-lucjan-ll73
 
 - add Project-C v5.13-r3
