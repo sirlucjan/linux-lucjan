@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll75
+
+- add mq-deadline-Fix-request-accounting.patch
+
 5.13-lucjan-ll74
 
 - add ksmbd-5.13-update-to-v8.patch
