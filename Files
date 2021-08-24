@@ -847,9 +847,6 @@
 │   ├── 5.13-lucjan-ll75.patch
 │   └── 5.13-lucjan-ll75.patch.sig
 ├── Files
-├── pending
-│   ├── 5.13-lucjan-ll74.patch
-│   └── 5.13-lucjan-ll74.patch.sig
 └── README.md
 
-7 directories, 845 files
+6 directories, 843 files
