@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll77
+
+- add docs-cgroup-v1-blkio-stop-abusing-itemized-list.patch
+- add docs-cgroup-v1-blkio-update-for-5.x-kernels.patch
+- add docs-block-bfq-describe-per-device-weight.patch
+- add block-bfq-Accept-symmetric-weight-adjustments.patch
+
 5.13-lucjan-ll76
 
 - add pipe-avoid-unnecessary-EPOLLET-wakeups-under-normal-.patch
