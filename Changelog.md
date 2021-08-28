@@ -8,6 +8,11 @@
 
 5.13-lucjan-ll77
 
+- add Revert-mq-deadline-Fix-request-accounting.patch
+- add block-mq-deadline-Speed-up-the-dispatch-of-low-prior.patch
+
+5.13-lucjan-ll77
+
 - add docs-cgroup-v1-blkio-stop-abusing-itemized-list.patch
 - add docs-cgroup-v1-blkio-update-for-5.x-kernels.patch
 - add docs-block-bfq-describe-per-device-weight.patch
