@@ -6,7 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
-5.13-lucjan-ll77
+5.13-lucjan-ll79
+
+- add Revert-block-mq-deadline-Speed-up-the-dispatch-of-lo.patch
+- add block-mq-deadline-Fix-request-accounting.patch
+- add block-mq-deadline-Remove-a-ktime_get_ns-call.patch
+- add block-mq-deadline-Restore-performance.patch
+
+5.13-lucjan-ll78
 
 - add Revert-mq-deadline-Fix-request-accounting.patch
 - add block-mq-deadline-Speed-up-the-dispatch-of-low-prior.patch
