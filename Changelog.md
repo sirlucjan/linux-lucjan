@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll81
+
+- add ksmbd-fix-__write_overflow-warning-in-ndr_read_strin.patch
+
 5.13-lucjan-ll80
 
 - add update-to-git-tree-state.patch
