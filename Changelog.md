@@ -6,6 +6,29 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.13-lucjan-ll80
+
+- add update-to-git-tree-state.patch
+- ad fs-ntfs3-Fix-various-spelling-mistakes.patch
+- add fs-ntfs3-Use-linux-log2-is_power_of_2-function.patch
+- add fs-ntfs3-Add-ifndef-define-to-all-header-files.patch
+- add fs-ntfs3-Fix-integer-overflow-in-multiplication.patch
+- add fs-ntfs3-Remove-unused-variable-cnt-in-ntfs_security.patch
+- add fs-ntfs3-Fix-one-none-utf8-char-in-source-file.patch
+- add fs-ntfs3-Fix-fall-through-warnings-for-Clang.patch
+- add fs-ntfs3-Remove-unused-including-linux-version.h.patch
+- add fs-ntfs3-Restyle-comment-block-in-ni_parse_reparse.patch
+- add fs-ntfs3-Use-kernel-ALIGN-macros-over-driver-specifi.patch
+- add fs-ntfs3-Do-not-use-driver-own-alloc-wrappers.patch
+- add fs-ntfs3-Use-kcalloc-kmalloc_array-over-kzalloc-kmal.patch
+- add fs-ntfs3-add-checks-for-allocation-failure.patch
+- add fs-ntfs3-fix-an-error-code-in-ntfs_get_acl_ex.patch
+- add fs-ntfs3-Fix-error-code-in-indx_add_allocate.patch
+- add fs-ntfs3-Potential-NULL-dereference-in-hdr_find_spli.patch
+- add fs-ntfs3-Fix-error-handling-in-indx_insert_into_root.patch
+- add ntfs3-5.13-revert-back-to-iov_iter_copy_from_user_at.patch
+- add ntfs3-5.13-fix-arguments-order-in-iov_iter_copy_from.patch
+
 5.13-lucjan-ll79
 
 - add Revert-block-mq-deadline-Speed-up-the-dispatch-of-lo.patch
