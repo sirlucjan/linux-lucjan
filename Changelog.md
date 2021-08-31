@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll2-rc1
+
+- add fs-ntfs3-Remove-fat-ioctl-s-from-ntfs3-driver-for-no.patch
+- add fs-ntfs3-Rework-file-operations.patch
+- add fs-ntfs3-Restyle-comments-to-better-align-with-kerne.patch
+- add Revert-block-Provide-icq-in-request-allocation-data.patch
+- add block-Provide-icq-in-request-allocation-data.patch
+
 5.14-lucjan-ll1-rc1
 
 - add android-export-symbold-and-enable-building-ashmem-an.patch
