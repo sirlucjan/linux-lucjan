@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll5-rc1
+
+- add sched-alt-Fix-fails-on-x86-UP-build.patch
+
 5.14-lucjan-ll4-rc1
 
 - update lib-zstd-Upgrade-to-latest-upstream-zstd-version-1.4.patch
