@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll9-rc1
+
+- update UKSM-for-5.14.patch
+
 5.14-lucjan-ll8-rc1
 
 - sync with upstream (drop Bluetooth-btusb-check-conditions-before-enabling-USB.patch)
