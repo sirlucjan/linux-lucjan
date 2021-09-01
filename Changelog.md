@@ -242,6 +242,13 @@
 - add kbuild-add-menu-for-ZSTD-module-compression-options.patch
 - add LL-Implement-ll-branding-v5.14.patch
 
+5.13-lucjan-ll82-rc1
+
+- sync with upstream (drop Bluetooth-btusb-check-conditions-before-enabling-USB.patch)
+- sync with upstream (drop pipe-avoid-unnecessary-EPOLLET-wakeups-under-normal-.patch)
+- sync with upstream (drop pipe-do-FASYNC-notifications-for-every-pipe-IO-not-j.patch)
+- sync with upstream (update block-fix-trivial-typos-in-comments.patch)
+
 5.13-lucjan-ll81
 
 - add ksmbd-fix-__write_overflow-warning-in-ndr_read_strin.patch
