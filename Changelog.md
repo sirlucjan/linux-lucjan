@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll15-rc1
+
+- add fs-ntfs3-Fix-integer-overflow-in-ni_fiemap-with-fiem.patch
+- add fs-ntfs3-Remove-unnecessary-condition-checking-from-.patch
+- add fs-ntfs3-Remove-GPL-boilerplates-from-decompress-lib.patch
+- add fs-ntfs3-Change-how-module-init-info-messages-are-di.patch
+
 5.14-lucjan-ll14-rc1
 
 - sync with upstream (drop Bluetooth-btusb-check-conditions-before-enabling-USB.patch)
