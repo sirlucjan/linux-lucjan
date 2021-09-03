@@ -285,6 +285,8 @@
 - add kbuild-add-menu-for-ZSTD-module-compression-options.patch
 - add LL-Implement-ll-branding-v5.14.patch
 
+5.13-lucjan-ll82-rc1 --> 5.13-lucjan-ll82
+
 5.13-lucjan-ll82-rc1
 
 - sync with upstream (drop Bluetooth-btusb-check-conditions-before-enabling-USB.patch)
