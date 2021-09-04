@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll18-rc1
+
+- add bfq-use-bfq_entity_to_bfqg-helper-method.patch
+
 5.14-lucjan-ll17-rc1
 
 - add mm-fix-priority-queue-in-multigenerational-lru.patch
