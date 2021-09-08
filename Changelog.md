@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll29-rc1
+
+- add NFS-Always-provide-aligned-buffers-to-the-RPC-read-l.patch
+
 5.14-lucjan-ll28-rc1
 
 - add fs-add-a-filemap_fdatawrite_wbc-helper.patch
