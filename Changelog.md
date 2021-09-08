@@ -6,6 +6,34 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll27-rc1
+
+- add btrfs-add-a-force_chunk_alloc-to-space_info-s-sysfs.patch
+- add btrfs-wait-on-async-extents-when-flushing-delalloc.patch
+- add btrfs-use-the-filemap_fdatawrite_wbc-helper-for-dela.patch
+- add btrfs-enable-a-tracepoint-when-we-fail-tickets.patch
+- add btrfs-include-delalloc-related-info-in-dump-space-in.patch
+- add btrfs-use-delalloc_bytes-to-determine-flush-amount-f.patch
+- add btrfs-wake-up-async_delalloc_pages-waiters-after-sub.patch
+- add btrfs-avoid-unnecessary-lock-and-leaf-splits-when-up.patch
+- add btrfs-avoid-unnecessary-log-mutex-contention-when-sy.patch
+- add btrfs-continue-readahead-of-siblings-even-if-target-.patch
+- add btrfs-improve-the-batch-insertion-of-delayed-items.patch
+- add btrfs-remove-unnecessary-list-head-initialization-wh.patch
+- add btrfs-stop-doing-GFP_KERNEL-memory-allocations-in-th.patch
+- add btrfs-make-btrfs_next_leaf-static-inline.patch
+- add btrfs-allocate-backref_ctx-on-stack-in-find_extent_c.patch
+- add btrfs-allocate-btrfs_ioctl_defrag_range_args-on-stac.patch
+- add btrfs-allocate-btrfs_ioctl_quota_rescan_args-on-stac.patch
+- add btrfs-allocate-file_ra_state-on-stack-in-readahead_c.patch
+- add btrfs-do-not-pin-logs-too-early-during-renames.patch
+- add btrfs-eliminate-some-false-positives-when-checking-i.patch
+- add btrfs-avoid-unnecessarily-logging-directories-that-h.patch
+- add btrfs-do-not-do-preemptive-flushing-if-the-majority-.patch
+- add btrfs-reduce-the-preemptive-flushing-threshold-to-90.patch
+- add btrfs-fix-mount-failure-due-to-past-and-transient-de.patch
+- add btrfs-remove-the-failing-device-argument-from-btrfs_.patch
+
 5.14-lucjan-ll26-rc1
 
 - sync with upstream (drop HID-usbhid-fix-control-queue-full-flood.patch)
