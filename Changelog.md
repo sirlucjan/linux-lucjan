@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll28-rc1
+
+- add fs-add-a-filemap_fdatawrite_wbc-helper.patch
+
 5.14-lucjan-ll27-rc1
 
 - add btrfs-add-a-force_chunk_alloc-to-space_info-s-sysfs.patch
