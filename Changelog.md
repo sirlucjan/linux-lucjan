@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll31-rc1
+
+- add Bluetooth-Move-shutdown-callback-before-flushing-tx-.patch
+- add watchdog-iTCO_wdt-Fix-detection-of-SMI-off-case.patch
+
 5.14-lucjan-ll30-rc1
 
 - add Revert-btrfs-remove-the-failing-device-argument-from.patch
