@@ -6,6 +6,27 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll33-rc1
+
+- add ksmbd-fix-lookup-on-idmapped-mounts.patch
+- add ksmbd-fix-translation-in-smb2_populate_readdir_entry.patch
+- add ksmbd-fix-translation-in-create_posix_rsp_buf.patch
+- add ksmbd-fix-translation-in-ksmbd_acls_fattr.patch
+- add ksmbd-fix-translation-in-acl-entries.patch
+- add ksmbd-fix-subauth-0-handling-in-sid_to_id.patch
+- add ksmbd-fix-translation-in-sid_to_id.patch
+- add ndr-fix-translation-in-ndr_encode_posix_acl.patch
+- add ksmbd-ensure-error-is-surfaced-in-set_file_basic_inf.patch
+- add ksmbd-remove-setattr-preparations-in-set_file_basic_.patch
+- add ksmbd-defer-notify_change-call.patch
+- add ksmbd-Reduce-error-log-speed-is-unknown-to-debug.patch
+- add ksmbd-smbd-fix-dma-mapping-error-in-smb_direct_post_.patch
+- add ksmbd-remove-unused-ksmbd_file_table_flush-function.patch
+- add ksmbd-add-validation-for-ndr-read-write-functions.patch
+- add ksmbd-add-missing-assignments-to-ret-on-ndr_read_int.patch
+- add ksmbd-fix-read-of-uninitialized-variable-ret-in-set_.patch
+- add ksmbd-fix-control-flow-issues-in-sid_to_id.patch
+
 5.14-lucjan-ll32-rc1
 
 - add block-bfq-fix-UAF-in-bfq_io_set_weight_legacy.patch
