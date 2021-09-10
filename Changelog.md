@@ -6,6 +6,18 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll34-rc1
+
+- add fs-ntfs3-Remove-unnecesarry-mount-option-noatime.patch
+- add fs-ntfs3-Remove-unnecesarry-remount-flag-handling.patch
+- add fs-ntfs3-Convert-mount-options-to-pointer-in-sbi.patch
+- add fs-ntfs3-Use-new-api-for-mounting.patch
+- add fs-ntfs3-Init-spi-more-in-init_fs_context-than-fill_.patch
+- add fs-ntfs3-Make-mount-option-nohidden-more-universal.patch
+- add fs-ntfs3-Add-iocharset-mount-option-as-alias-for-nls.patch
+- add fs-ntfs3-Rename-mount-option-no_acs_rules-no-acsrule.patch
+- add fs-ntfs3-Show-uid-gid-always-in-show_options.patch
+
 5.14-lucjan-ll33-rc1
 
 - add ksmbd-fix-lookup-on-idmapped-mounts.patch
