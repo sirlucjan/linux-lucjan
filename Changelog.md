@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll38-rc1
+
+- sync with upstream (drop block-return-ELEVATOR_DISCARD_MERGE-if-possible.patch)
+- sync with upstream (drop Bluetooth-Move-shutdown-callback-before-flushing-tx-.patch)
+- add Revert-block-bfq-fix-UAF-in-bfq_io_set_weight_legacy.patch
+- add blk-cgroup-fix-UAF-by-grabbing-blkcg-lock-before-des.patch
+
 5.14-lucjan-ll38
 
 - add CacULE-5.14.patch
