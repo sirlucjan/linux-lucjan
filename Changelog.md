@@ -6,6 +6,23 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll37
+
+- add fs-ntfs3-Remove-redundant-initialization-of-variable.patch
+- add fs-ntfs3.-Add-forward-declarations-for-structs-to-de.patch
+- add fs-ntfs3-Add-missing-header-files-to-ntfs.h.patch
+- add fs-ntfs3-Add-missing-headers-and-forward-declaration.patch
+- add fs-ntfs3-Add-missing-header-and-guards-to-lib-header.patch
+- add fs-ntfs3-Change-right-headers-to-bitfunc.c.patch
+- add fs-ntfs3-Change-right-headers-to-upcase.c.patch
+- add fs-ntfs3-Change-right-headers-to-lznt.c.patch
+- add fs-ntfs3-Remove-unneeded-header-files-from-c-files.patch
+- add fs-ntfs3-Limit-binary-search-table-size.patch
+- add fs-ntfs3-Make-binary-search-to-search-smaller-chunks.patch
+- add fs-ntfs3-Always-use-binary-search-with-entry-search.patch
+
+DROP 5.14-lucjan-ll37-rc1
+
 5.14-lucjan-ll37-rc1
 
 - sync with upstream (drop block-return-ELEVATOR_DISCARD_MERGE-if-possible.patch)
