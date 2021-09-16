@@ -6,6 +6,19 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll40
+
+- add fs-ntfs3-Remove-before-constant-in-ni_insert_residen.patch
+- add fs-ntfs3-Place-Comparisons-constant-right-side-of-th.patch
+- add fs-ntfs3-Remove-braces-from-single-statment-block.patch
+- add fs-ntfs3-Remove-tabs-before-spaces-from-comment.patch
+- add fs-ntfs3-Fix-ntfs_look_for_free_space-does-only-repo.patch
+- add fs-ntfs3-Remove-always-false-condition-check.patch
+- add fs-ntfs3-Use-clamp-max-macros-instead-of-comparisons.patch
+- add fs-ntfs3-Use-min-max-macros-instated-of-ternary-oper.patch
+
+DROP 5.14-lucjan-ll40-rc1
+
 5.14-lucjan-ll40-rc1
 
 - sync with upstream (drop block-bfq-fix-bfq_set_next_ioprio_data.patch)
