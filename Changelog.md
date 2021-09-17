@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll41
+
+- add ksmbd-transport_rdma-Don-t-include-rwlock.h-directly.patch
+- add ksmbd-prevent-out-of-share-access.patch
+
+DROP 5.14-lucjan-ll41-rc1
+
 5.14-lucjan-ll41-rc1
 
 - sync with upstream (drop block-bfq-fix-bfq_set_next_ioprio_data.patch)
