@@ -8,6 +8,10 @@
 
 5.14-lucjan-ll42-rc1
 
+- add btrfs-unlock-the-newly-allocated-extent-buffer-in-bt.patch
+
+5.14-lucjan-ll42-rc1
+
 - sync with upstream (drop block-bfq-fix-bfq_set_next_ioprio_data.patch)
 - sync with upstream (drop btrfs-wait-on-async-extents-when-flushing-delalloc.patch)
 - sync with upstream (drop btrfs-use-delalloc_bytes-to-determine-flush-amount-f.patch)
