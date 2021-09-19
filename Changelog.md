@@ -6,7 +6,9 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
-5.14-lucjan-ll42-rc1
+5.14-lucjan-ll43-rc1 --> 5.14-lucjan-ll43
+
+5.14-lucjan-ll43-rc1
 
 - sync with upstream (drop block-bfq-fix-bfq_set_next_ioprio_data.patch)
 - sync with upstream (drop btrfs-wait-on-async-extents-when-flushing-delalloc.patch)
