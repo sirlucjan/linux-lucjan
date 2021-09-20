@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll46
+
+- add lrng-5.14-update-to-v42.patch
+
 5.14-lucjan-ll45
 
 - add ksmbd-add-validation-for-FILE_FULL_EA_INFORMATION-of.patch
