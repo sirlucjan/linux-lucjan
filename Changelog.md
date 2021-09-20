@@ -6,6 +6,24 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll48
+
+- add fs-ntfs3-Fix-wrong-error-message-Logfile-UpCase.patch
+- add fs-ntfs3-Change-EINVAL-to-ENOMEM-when-d_make_root-fa.patch
+- add fs-ntfs3-Remove-impossible-fault-condition-in-fill_s.patch
+- add fs-ntfs3-Return-straight-without-goto-in-fill_super.patch
+- add fs-ntfs3-Remove-unnecessary-variable-loading-in-fill.patch
+- add fs-ntfs3-Use-sb-instead-of-sbi-sb-in-fill_super.patch
+- add fs-ntfs3-Remove-tmp-var-is_ro-in-ntfs_fill_super.patch
+- add fs-ntfs3-Remove-tmp-pointer-bd_inode-in-fill_super.patch
+- add fs-ntfs3-Remove-tmp-pointer-upcase-in-fill_super.patch
+- add fs-ntfs3-Initialize-pointer-before-use-place-in-fill.patch
+- add fs-ntfs3-Initiliaze-sb-blocksize-only-in-one-place-r.patch
+- add Doc-fs-ntfs3-Fix-rst-format-and-make-it-cleaner.patch
+- add fs-ntfs3-Fix-a-memory-leak-on-object-opts.patch
+
+DROP 5.14-lucjan-ll48-rc1
+
 5.14-lucjan-ll48-rc1
 
 - sync with upstream (drop block-bfq-honor-already-setup-queue-merges.patch)
