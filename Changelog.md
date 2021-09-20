@@ -6,6 +6,15 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll45
+
+- add ksmbd-add-validation-for-FILE_FULL_EA_INFORMATION-of.patch
+- add ksmbd-add-request-buffer-validation-in-smb2_set_info.patch
+- add ksmbd-add-validation-in-smb2_ioctl.patch
+- add ksmbd-add-buffer-validation-for-SMB2_CREATE_CONTEXT.patch
+- add ksmbd-use-LOOKUP_NO_SYMLINKS-flags-for-default-looku.patch
+- add ksmbd-add-default-data-stream-name-in-FILE_STREAM_IN.patch
+
 5.14-lucjan-ll44
 
 - add SUNRPC-don-t-pause-on-incomplete-allocation.patch
