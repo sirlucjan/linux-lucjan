@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll51
+
+- add fs-ntfs3-Fix-insertion-of-attr-in-ni_ins_attr_ext.patch
+- add fs-ntfs3-Change-max-hardlinks-limit-to-4000.patch
+- add fs-ntfs3-Add-sync-flag-to-ntfs_sb_write_run-and-al_u.patch
+
+DROP 5.14-lucjan-ll51-rc1
+
 5.14-lucjan-ll51-rc1
 
 - sync with upstream (drop block-bfq-honor-already-setup-queue-merges.patch)
