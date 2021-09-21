@@ -6,6 +6,16 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll49
+
+- add ksmbd-log-that-server-is-experimental-at-module-load.patch
+- add Revert-ksmbd-use-LOOKUP_NO_SYMLINKS-flags-for-defaul.patch
+- add ksmbd-remove-follow-symlinks-support.patch
+- add Revert-ksmbd-add-request-buffer-validation-in-smb2_s.patch
+- add ksmbd-add-request-buffer-validation-in-smb2_set_info.patch
+
+DROP 5.14-lucjan-ll49-rc1
+
 5.14-lucjan-ll49-rc1
 
 - sync with upstream (drop block-bfq-honor-already-setup-queue-merges.patch)
