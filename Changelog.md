@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll56
+
+- add Bluetooth-btusb-Add-support-for-IMC-Networks-Mediate.patch
+- add Bluetooth-btusb-Add-support-for-Foxconn-Mediatek-Chi.patch
+- add ALSA-pcm-Check-mmap-capability-of-runtime-dma-buffer.patch
+- add ALSA-pci-rme-Set-up-buffer-type-properly.patch
+- add ALSA-pci-cs46xx-Fix-set-up-buffer-type-properly.patch
+
 5.14-lucjan-ll55
 
 - add sched-alt-add-missing-sanity-check-in-migrate_pendin.patch
