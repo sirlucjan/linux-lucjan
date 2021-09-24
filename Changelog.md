@@ -6,6 +6,17 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll61
+
+- add fs-ntfs3-Fix-logical-error-in-ntfs_create_inode.patch
+- add fs-ntfs3-Move-ni_lock_dir-and-ni_unlock-into-ntfs_cr.patch
+- add fs-ntfs3-Refactor-ntfs_get_acl_ex-for-better-readabi.patch
+- add fs-ntfs3-Pass-flags-to-ntfs_set_ea-in-ntfs_set_acl_e.patch
+- add fs-ntfs3-Change-posix_acl_equiv_mode-to-posix_acl_up.patch
+- add fs-ntfs3-Refactoring-lock-in-ntfs_init_acl.patch
+
+DROP 5.14-lucjan-ll61-rc1
+
 5.14-lucjan-ll61-rc1
 
 - sync with upstream (drop SUNRPC-don-t-pause-on-incomplete-allocation.patch)
