@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll67-rc1
+
+- sync with upstream (drop atlantic-Fix-issue-in-the-pm-resume-flow.patch)
+- sync with upstream (drop blk-cgroup-fix-UAF-by-grabbing-blkcg-lock-before-des.patch)
+- sync with upstream (resync ZEN-intel-pstate-Implement-enable-parameter.patch)
+
 5.14-lucjan-ll66
 
 - add Project-C v5.14-r3
