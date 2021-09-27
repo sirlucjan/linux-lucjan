@@ -6,7 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
-5.14-lucjan-ll63
+5.14-lucjan-ll65
+
+- add ksmbd-5.14-update-to-next-20210927.patch
+
+5.14-lucjan-ll64-rc1 --> 5.14-lucjan-ll64
+
+5.14-lucjan-ll64-rc1
 
 - add atlantic-Fix-issue-in-the-pm-resume-flow.patch
 - add SUNRPC-Simplify-socket-shutdown-when-not-reusing-TCP.patch
