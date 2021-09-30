@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll70
+
+- add fs-ntfs3-Reject-mount-if-boot-s-cluster-size-media-s.patch
+- add fs-ntfs3-Refactoring-of-ntfs_init_from_boot.patch
+- add fs-ntfs3-Check-for-NULL-if-ATTR_EA_INFO-is-incorrect.patch
+
 5.14-lucjan-ll69
 
 - add btrfs-index-free-space-entries-on-size.patch
