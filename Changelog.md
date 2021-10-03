@@ -6,6 +6,18 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll75
+
+- add hwmon-nct6775-Use-superio_-function-pointers-in-sio_.patch
+- add hwmon-nct6775-Use-nct6775_-function-pointers-in-nct6.patch
+- add hwmon-nct6775-Support-access-via-Asus-WMI.patch
+- add hwmon-nct6775-Add-additional-ASUS-motherboards.patch
+- add hwmon-nct6775-Use-custom-scale-for-ASUS-motherboards.patch
+- add hwmon-asus_wmi_sensors-Support-access-via-Asus-WMI.patch
+- add hwmon-nct6775-add-Pro-WS-X570-ACE.patch
+- add hwmon-asus_wmi_sensors-add-Pro-WS-X570-ACE.patch
+- add hwmon-asus_wmi_sensors-remove-T_Sensor-for-Pro-WS-X5.patch
+
 5.14-lucjan-ll74
 
 - update LL-Implement-ll-branding-v5.14.patch
