@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll74
+
+- update LL-Implement-ll-branding-v5.14.patch
+
 5.14-lucjan-ll73
 
 - add mac80211-airtime-replace-WARN_ON_ONCE-with-pr_warn_o.patch
