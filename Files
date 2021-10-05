@@ -1049,8 +1049,6 @@
 │       ├── 5.14-lucjan-ll75.patch.sig
 │       ├── 5.14-lucjan-ll76.patch
 │       ├── 5.14-lucjan-ll76.patch.sig
-│       ├── 5.14-lucjan-ll77-rc1.patch
-│       ├── 5.14-lucjan-ll77-rc1.patch.sig
 │       ├── 5.14-lucjan-ll7-rc1.patch
 │       ├── 5.14-lucjan-ll7-rc1.patch.sig
 │       ├── 5.14-lucjan-ll8-rc1.patch
@@ -1064,7 +1062,7 @@
 ├── Files
 ├── README.md
 └── testing
-    ├── 5.14-lucjan-ll78-rc1.patch
-    └── 5.14-lucjan-ll78-rc1.patch.sig
+    ├── 5.14-lucjan-ll77-rc1.patch
+    └── 5.14-lucjan-ll77-rc1.patch.sig
 
-8 directories, 1059 files
+8 directories, 1057 files
