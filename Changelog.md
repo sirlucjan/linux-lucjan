@@ -6,6 +6,17 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll78
+
+- add fs-ntfs3-Use-available-posix_acl_release-instead-of-.patch
+- add fs-ntfs3-Remove-locked-argument-in-ntfs_set_ea.patch
+- add fs-ntfs3-Refactoring-of-ntfs_set_ea.patch
+- add fs-ntfs3-Forbid-FALLOC_FL_PUNCH_HOLE-for-normal-file.patch
+- add fs-ntfs3-Remove-unnecessary-functions.patch
+- add ksmbd-missing-check-for-NULL-in-convert_to_nt_pathna.patch
+
+DROP 5.14-lucjan-ll78-rc1
+
 5.14-lucjan-ll78-rc1
 
 - sync with upstream (drop Revert-block-bfq-honor-already-setup-queue-merges.patch)
