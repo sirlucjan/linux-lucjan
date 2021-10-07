@@ -6,6 +6,20 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll80
+
+- add Revert-block-Provide-icq-in-request-allocation-data.patch
+- add Revert-bfq-Limit-number-of-requests-consumed-by-each.patch
+- add Revert-bfq-Track-number-of-allocated-requests-in-bfq.patch
+- add block-Provide-icq-in-request-allocation-data.patch
+- add bfq-Track-number-of-allocated-requests-in-bfq_entity.patch
+- add bfq-Store-full-bitmap-depth-in-bfq_data.patch
+- add bfq-Limit-number-of-requests-consumed-by-each-cgroup.patch
+- add bfq-Limit-waker-detection-in-time.patch
+- add bfq-Provide-helper-to-generate-bfqq-name.patch
+- add bfq-Log-waker-detections.patch
+- add bfq-Do-not-let-waker-requests-skip-proper-accounting.patch
+
 5.14-lucjan-ll79-rc1 --> 5.14-lucjan-ll79
 
 5.14-lucjan-ll79-rc1
