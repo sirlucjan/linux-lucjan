@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll81
+
+- add Revert-ZEN-Add-OpenRGB-patches.patch
+- add i2c-busses-Add-SMBus-capability-to-work-with-OpenRGB.patch
+- add ksmbd-5.14-update-to-next-20211007.patch
+- add mac80211-rate-replace-WARN_ON-with-pr_warn.patch
+- update lib-zstd-Upgrade-to-latest-upstream-zstd-version-1.4.patch
+
 5.14-lucjan-ll80
 
 - add Revert-block-Provide-icq-in-request-allocation-data.patch
