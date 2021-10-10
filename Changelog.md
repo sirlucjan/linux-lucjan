@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll81
+
+- add btrfs-fix-deadlock-between-chunk-allocation-and-chun.patch
+- add btrfs-update-comments-for-chunk-allocation-ENOSPC-ca.patch
+
 5.14-lucjan-ll84-rc1 --> 5.14-lucjan-ll84
 
 5.14-lucjan-ll84-rc1
