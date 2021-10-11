@@ -6,7 +6,22 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
-5.14-lucjan-ll81
+5.14-lucjan-ll86
+
+- update mm-x86-arm64-add-arch_has_hw_pte_young.patch
+- update mm-x86-add-CONFIG_ARCH_HAS_NONLEAF_PMD_YOUNG.patch
+- update mm-vmscan.c-refactor-shrink_node.patch
+- update mm-multigenerational-lru-groundwork.patch
+- update mm-multigenerational-lru-protection.patch
+- update mm-multigenerational-lru-mm_struct-list.patch
+- update mm-multigenerational-lru-aging.patch
+- update mm-multigenerational-lru-eviction.patch
+- update mm-multigenerational-lru-user-interface.patch
+- update mm-multigenerational-lru-Kconfig.patch
+- update mm-multigenerational-lru-documentation.patch
+- update LL-Implement-ll-branding-v5.14.patch
+
+5.14-lucjan-ll85
 
 - add btrfs-fix-deadlock-between-chunk-allocation-and-chun.patch
 - add btrfs-update-comments-for-chunk-allocation-ENOSPC-ca.patch
