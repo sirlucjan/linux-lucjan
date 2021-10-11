@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll87
+
+- add ksmbd-5.14-update-to-next-20211011.patch
+
 5.14-lucjan-ll86
 
 - update mm-x86-arm64-add-arch_has_hw_pte_young.patch
