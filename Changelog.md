@@ -6,6 +6,16 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll88
+
+- add fs-ntfs3-Keep-prealloc-for-all-types-of-files.patch
+- add fs-ntfs3-Fix-memory-leak-if-fill_super-failed.patch
+- add fs-ntfs3-Rework-ntfs_utf16_to_nls.patch
+- add fs-ntfs3-Refactor-ntfs_readlink_hlp.patch
+- add fs-ntfs3-Refactor-ntfs_create_inode.patch
+- add fs-ntfs3-Refactor-ni_parse_reparse.patch
+- add fs-ntfs3-Refactor-ntfs_read_mft.patch
+
 5.14-lucjan-ll87
 
 - add ksmbd-5.14-update-to-next-20211011.patch
