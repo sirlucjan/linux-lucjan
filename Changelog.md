@@ -6,6 +6,15 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll90
+
+- add Revert-hwmon-nct6775-Use-custom-scale-for-ASUS-mothe.patch
+- add Revert-hwmon-asus_wmi_sensors-remove-T_Sensor-for-Pr.patch
+- add Revert-hwmon-asus_wmi_sensors-add-Pro-WS-X570-ACE.patch
+- add Revert-hwmon-asus_wmi_sensors-Support-access-via-Asu.patch
+- add hwmon-asus_wmi_ec_sensors-Support-B550-Asus-WMI.patch
+- add hwmon-asus_wmi_sensors-Support-X370-Asus-WMI.patch
+
 5.14-lucjan-ll89
 
 - add block-bfq-fix-UAF-problem-in-bfqg_stats_init.patch
