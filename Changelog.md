@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll89
+
+- add block-bfq-fix-UAF-problem-in-bfqg_stats_init.patch
+
 5.14-lucjan-ll88
 
 - add fs-ntfs3-Keep-prealloc-for-all-types-of-files.patch
