@@ -6,6 +6,17 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll93
+
+- add Revert-bfq-use-bfq_entity_to_bfqg-helper-method.patch
+- add Revert-block-bfq-consider-request-size-in-bfq_asymme.patch
+- add Revert-block-bfq-add-support-to-record-request-size-.patch
+- add Revert-block-bfq-do-not-idle-if-only-one-cgroup-is-a.patch
+- add Revert-block-bfq-add-support-to-track-if-root_group-.patch
+- add block-bfq-counted-root-group-into-num_groups_with_pe.patch
+- add block-bfq-do-not-idle-if-only-one-cgroup-is-activate.patch
+- add bfq-use-bfq_entity_to_bfqg-helper-method.patch
+
 5.14-lucjan-ll92
 
 - add units-Add-SI-metric-prefix-definitions.patch
