@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll95
+
+- add nct6775-5.14-update-to-v6-ASUS-WMI-submission.patch
+
 5.14-lucjan-ll94
 
 - add Revert-bfq-use-bfq_entity_to_bfqg-helper-method.patch
