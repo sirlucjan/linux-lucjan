@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll99
+
+- add Revert-block-bfq-Accept-symmetric-weight-adjustments.patch
+- add block-bfq-Accept-symmetric-weight-adjustments.patch
+- add block-bfq-honor-already-setup-queue-merges.patch
+- add block-bfq-reset-last_bfqq_created-on-group-change.patch
+
 5.14-lucjan-ll98
 
 - add nct6775-5.14-update-to-v7-ASUS-WMI-submission.patch
