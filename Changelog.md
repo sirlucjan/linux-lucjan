@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll97
+
+- add ksmbd-5.14-update-to-next-20211015.patch
+
 5.14-lucjan-ll96
 
 - add kbuild-Add-make-tarzst-pkg-build-option.patch
