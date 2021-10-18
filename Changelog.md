@@ -6,6 +6,32 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll101
+
+- add x86-cpufreatures-add-AMD-Collaborative-Processor-Per.patch
+- add x86-msr-add-AMD-CPPC-MSR-definitions.patch
+- add ACPI-CPPC-Check-online-CPUs-for-determining-_CPC-is-.patch
+- add ACPI-CPPC-add-cppc-enable-register-function.patch
+- add cpufreq-amd-introduce-a-new-amd-pstate-driver-to-sup.patch
+- add cpufreq-amd-add-fast-switch-function-for-amd-pstate-.patch
+- add cpufreq-amd-add-acpi-cppc-function-as-the-backend-fo.patch
+- add cpufreq-amd-add-trace-for-amd-pstate-module.patch
+- add cpufreq-amd-add-boost-mode-support-for-amd-pstate.patch
+- add cpufreq-amd-add-amd-pstate-checking-support-check-at.patch
+- add cpufreq-amd-add-amd-pstate-frequencies-attributes.patch
+- add cpufreq-amd-add-amd-pstate-performance-attributes.patch
+- add cpupower-add-AMD-P-state-capability-flag.patch
+- add cpupower-add-the-function-to-check-amd-pstate-enable.patch
+- add cpupower-initial-AMD-P-state-capability.patch
+- add cpupower-add-the-function-to-get-the-sysfs-value-fro.patch
+- add cpupower-add-amd-pstate-sysfs-definition-and-access-.patch
+- add cpupower-enable-boost-state-support-for-amd-pstate-m.patch
+- add cpupower-move-print_speed-function-into-misc-helper.patch
+- add cpupower-print-amd-pstate-information-on-cpupower.patch
+- add Documentation-amd-pstate-add-amd-pstate-driver-intro.patch
+
+DROP 5.14-lucjan-ll101-rc1
+
 5.14-lucjan-ll101-rc1
 
 - sync with upstream (drop btrfs-unlock-the-newly-allocated-extent-buffer-in-bt.patch)
