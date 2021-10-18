@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll101-rc1
+
+- sync with upstream (drop btrfs-unlock-the-newly-allocated-extent-buffer-in-bt.patch)
+- add Revert-btrfs-update-comments-for-chunk-allocation-EN.patch
+- add Revert-btrfs-fix-deadlock-between-chunk-allocation-a.patch
+- add btrfs-fix-deadlock-between-chunk-allocation-and-chun.patch
+- add btrfs-update-comments-for-chunk-allocation-ENOSPC-ca.patch
+
 5.14-lucjan-ll100
 
 - add AUFS 20211018
