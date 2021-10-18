@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.9 have been removed!
 
+5.14-lucjan-ll100
+
+- add AUFS 20211018
+
+DROP 5.14-lucjan-ll100-rc1
+
 5.14-lucjan-ll100-rc1
 
 - sync with upstream (drop btrfs-unlock-the-newly-allocated-extent-buffer-in-bt.patch)
