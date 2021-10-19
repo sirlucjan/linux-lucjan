@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.14-lucjan-ll105-rc1
+
+- sync with upstream (drop btrfs-unlock-the-newly-allocated-extent-buffer-in-bt.patch)
+- add Revert-btrfs-update-comments-for-chunk-allocation-EN.patch
+- add Revert-btrfs-fix-deadlock-between-chunk-allocation-a.patch
+- add btrfs-fix-deadlock-between-chunk-allocation-and-chun.patch
+- add btrfs-update-comments-for-chunk-allocation-ENOSPC-ca.patch
+
 5.14-lucjan-ll104
 
 - add LL-Disable-RDB-by-default.patch
