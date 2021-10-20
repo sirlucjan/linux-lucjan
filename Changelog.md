@@ -6,6 +6,8 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.14-lucjan-ll105-rc1 --> 5.14-lucjan-ll105
+
 5.14-lucjan-ll105-rc1
 
 - sync with upstream (drop btrfs-unlock-the-newly-allocated-extent-buffer-in-bt.patch)
