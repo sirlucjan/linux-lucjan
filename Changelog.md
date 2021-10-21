@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.14-lucjan-ll107
+
+- add ksmbd-5.14-update-to-next-20211021.patch
+
 5.14-lucjan-ll106
 
 - add btrfs-fix-lost-error-handling-when-replaying-directo.patch
