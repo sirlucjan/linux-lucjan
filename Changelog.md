@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.14-lucjan-ll110
+
+- add cacule-5.14-define-yield_mark-and-yield_unmark.patch
+
 5.14-lucjan-ll109
 
 - add nct6775-5.14-update-to-v8-ASUS-WMI-submission.patch
