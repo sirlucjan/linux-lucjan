@@ -6,6 +6,52 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.14-lucjan-ll111
+
+- add x86-MCE-AMD-EDAC-amd64-Move-address-translation-to-A.patch
+- add x86-amd_nb-EDAC-amd64-Move-DF-Indirect-Read-to-AMD64.patch
+- add EDAC-amd64-Don-t-use-naked-values-for-DF-registers.patch
+- add EDAC-amd64-Allow-for-DF-Indirect-Broadcast-reads.patch
+- add EDAC-amd64-Add-context-struct.patch
+- add EDAC-amd64-Define-Data-Fabric-operations.patch
+- add EDAC-amd64-Define-functions-for-DramOffset.patch
+- add EDAC-amd64-Define-function-to-read-DRAM-address-map-.patch
+- add EDAC-amd64-Define-function-to-find-interleaving-mode.patch
+- add EDAC-amd64-Define-function-to-denormalize-address.patch
+- add EDAC-amd64-Define-function-to-add-DRAM-base-and-hole.patch
+- add EDAC-amd64-Define-function-to-dehash-address.patch
+- add EDAC-amd64-Define-function-to-check-DRAM-limit-addre.patch
+- add EDAC-amd64-Remove-goto-statements.patch
+- add EDAC-amd64-Simplify-function-parameters.patch
+- add EDAC-amd64-Define-function-to-get-Interleave-Address.patch
+- add EDAC-amd64-Skip-denormalization-if-no-interleaving.patch
+- add EDAC-amd64-Define-function-to-get-number-of-interlea.patch
+- add EDAC-amd64-Define-function-to-get-number-of-interlea.patch
+- add EDAC-amd64-Define-function-to-get-number-of-interlea.patch
+- add EDAC-amd64-Remove-unnecessary-assert.patch
+- add EDAC-amd64-Define-function-to-make-space-for-CS-ID.patch
+- add EDAC-amd64-Define-function-to-calculate-CS-ID.patch
+- add EDAC-amd64-Define-function-to-insert-CS-ID-into-addr.patch
+- add EDAC-amd64-Define-function-to-get-CS-Fabric-ID.patch
+- add EDAC-amd64-Define-function-to-find-shift-and-mask-va.patch
+- add EDAC-amd64-Update-CS-ID-calculation-to-match-referen.patch
+- add EDAC-amd64-Match-hash-function-to-reference-code.patch
+- add EDAC-amd64-Define-helper-function-to-get-interleave-.patch
+- add EDAC-amd64-Add-support-for-address-translation-on-DF.patch
+- add EDAC-amd64-Add-glossary-of-acronyms-for-address-tran.patch
+- add dmaengine-ptdma-Initial-driver-for-the-AMD-PTDMA.patch
+- add dmaengine-ptdma-register-PTDMA-controller-as-a-DMA-r.patch
+- add dmaengine-ptdma-Add-debugfs-entries-for-PTDMA.patch
+- add iommu-amd-Selective-flush-on-unmap.patch
+- add iommu-amd-Do-not-use-flush-queue-when-NpCache-is-on.patch
+- add iommu-Improve-iommu_iotlb_gather-helpers.patch
+- add iommu-Factor-iommu_iotlb_gather_is_disjoint-out.patch
+- add iommu-amd-Tailored-gather-logic-for-AMD.patch
+- add iommu-amd-Sync-once-for-scatter-gather-operations.patch
+- add iommu-amd-Use-only-natural-aligned-flushes-in-a-VM.patch
+
+DROP 5.14-lucjan-ll111-rc1
+
 5.14-lucjan-ll111-rc1
 
 - sync with upstream (drop mm-secretmem-Fix-NULL-page-mapping-dereference-in-pa.patch)
