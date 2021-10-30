@@ -6,6 +6,15 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.14-lucjan-ll116
+
+- add ksmbd-use-ksmbd_req_buf_next-in-ksmbd_verify_smb_mes.patch
+- add ksmbd-use-ksmbd_req_buf_next-in-ksmbd_smb2_check_mes.patch
+- add ksmdb-use-cmd-helper-variable-in-smb2_get_ksmbd_tcon.patch
+- add ksmbd-Remove-redundant-flush_workqueue-calls.patch
+- add ksmbd-Fix-buffer-length-check-in-fsctl_validate_nego.patch
+- add ksmbd-don-t-need-8byte-alignment-for-request-length-.patch
+
 5.14-lucjan-ll115
 
 - add nct6775-5.14-update-to-v9-ASUS-WMI-submission.patch
