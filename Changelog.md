@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.14-lucjan-ll117
+
+- add x86-change-default-to-spec_store_bypass_disable-prct.patch
+- add x86-deduplicate-the-spectre_v2_user-documentation.patch
+
 5.14-lucjan-ll116
 
 - add ksmbd-use-ksmbd_req_buf_next-in-ksmbd_verify_smb_mes.patch
