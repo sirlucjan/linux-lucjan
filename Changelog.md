@@ -6,7 +6,23 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
-5.15-lucjan-ll3-rc1
+5.15-lucjan-ll5-rc1
+
+- add blk-mq-Change-rqs-check-in-blk_mq_free_rqs.patch
+- add block-Rename-BLKDEV_MAX_RQ-BLKDEV_DEFAULT_RQ.patch
+- add blk-mq-Relocate-shared-sbitmap-resize-in-blk_mq_upda.patch
+- add blk-mq-Invert-check-in-blk_mq_update_nr_requests.patch
+- add blk-mq-sched-Rename-blk_mq_sched_alloc_-tags-map_and.patch
+- add blk-mq-sched-Rename-blk_mq_sched_free_-requests-rqs.patch
+- add blk-mq-Pass-driver-tags-to-blk_mq_clear_rq_mapping.patch
+- add blk-mq-Don-t-clear-driver-tags-own-mapping.patch
+- add blk-mq-Add-blk_mq_tag_update_sched_shared_sbitmap.patch
+- add blk-mq-Add-blk_mq_alloc_map_and_rqs.patch
+- add blk-mq-Refactor-and-rename-blk_mq_free_map_and_-requ.patch
+- add blk-mq-Use-shared-tags-for-shared-sbitmap-support.patch
+- add blk-mq-Stop-using-pointers-for-blk_mq_tags-bitmap-ta.patch
+
+5.15-lucjan-ll4-rc1
 
 - add mm-Disable-watermark-boosting-by-default.patch
 
