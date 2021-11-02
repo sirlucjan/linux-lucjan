@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll3-rc1
+
+- add mm-Stop-kswapd-early-when-nothing-s-waiting-for-it-t.patch
+- add mm-Fully-disable-watermark-boosting-when-it-isn-t-us.patch
+- add mm-Don-t-stop-kswapd-on-a-per-node-basis-when-there-.patch
+
 5.15-lucjan-ll2-rc1
 
 - add bcachefs-5.15-introduce-bcachefs-patchset.patch
