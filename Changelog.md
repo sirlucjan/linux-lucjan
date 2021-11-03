@@ -145,7 +145,7 @@
 - add Documentation-amd-pstate-add-amd-pstate-driver-intro.patch
 - add net-sched-allow-configuring-cake-qdisc-as-default.patch
 - add infiniband-Fix-__read_overflow2-error-with-O3-inlini.patch
-- ad pci-Enable-overrides-for-missing-ACS-capabilities.patch
+- add pci-Enable-overrides-for-missing-ACS-capabilities.patch
 - add scsi-sd-Optimal-I-O-size-should-be-a-multiple-of-rep.patch
 - add iomap-avoid-deadlock-if-memory-reclaim-is-triggered-.patch
 - add tty-Allow-setting-the-number-of-available-virtual-TT.patch
@@ -268,6 +268,51 @@
 - add spadfs-5.15-merge-v1.0.14.patch
 - add UKSM-for-5.15.patch
 - add AUFS 20211018
+
+5.14-lucjan-ll119
+
+- drop x86-cpufreatures-add-AMD-Collaborative-Processor-Per.patch
+- drop x86-msr-add-AMD-CPPC-MSR-definitions.patch
+- drop ACPI-CPPC-Check-online-CPUs-for-determining-_CPC-is-.patch
+- drop ACPI-CPPC-add-cppc-enable-register-function.patch
+- drop cpufreq-amd-introduce-a-new-amd-pstate-driver-to-sup.patch
+- drop cpufreq-amd-add-fast-switch-function-for-amd-pstate-.patch
+- drop cpufreq-amd-add-acpi-cppc-function-as-the-backend-fo.patch
+- drop cpufreq-amd-add-trace-for-amd-pstate-module.patch
+- drop cpufreq-amd-add-boost-mode-support-for-amd-pstate.patch
+- drop cpufreq-amd-add-amd-pstate-checking-support-check-at.patch
+- drop cpufreq-amd-add-amd-pstate-frequencies-attributes.patch
+- drop cpufreq-amd-add-amd-pstate-performance-attributes.patch
+- drop cpupower-add-AMD-P-state-capability-flag.patch
+- drop cpupower-add-the-function-to-check-amd-pstate-enable.patch
+- drop cpupower-initial-AMD-P-state-capability.patch
+- drop cpupower-add-the-function-to-get-the-sysfs-value-fro.patch
+- drop cpupower-add-amd-pstate-sysfs-definition-and-access-.patch
+- drop cpupower-enable-boost-state-support-for-amd-pstate-m.patch
+- drop cpupower-move-print_speed-function-into-misc-helper.patch
+- drop cpupower-print-amd-pstate-information-on-cpupower.patch
+- drop Documentation-amd-pstate-add-amd-pstate-driver-intro.patch
+- add x86-cpufreatures-add-AMD-Collaborative-Processor-Per.patch
+- add x86-msr-add-AMD-CPPC-MSR-definitions.patch
+- add ACPI-CPPC-implement-support-for-SystemIO-registers.patch
+- add ACPI-CPPC-Check-present-CPUs-for-determining-_CPC-is.patch
+- add ACPI-CPPC-add-cppc-enable-register-function.patch
+- add cpufreq-amd-introduce-a-new-amd-pstate-driver-to-sup.patch
+- add cpufreq-amd-add-fast-switch-function-for-amd-pstate.patch
+- add cpufreq-amd-add-acpi-cppc-function-as-the-backend-fo.patch
+- add cpufreq-amd-add-trace-for-amd-pstate-module.patch
+- add cpufreq-amd-add-boost-mode-support-for-amd-pstate.patch
+- add cpufreq-amd-add-amd-pstate-frequencies-attributes.patch
+- add cpufreq-amd-add-amd-pstate-performance-attributes.patch
+- add cpupower-add-AMD-P-state-capability-flag.patch
+- add cpupower-add-the-function-to-check-amd-pstate-enable.patch
+- add cpupower-initial-AMD-P-state-capability.patch
+- add cpupower-add-the-function-to-get-the-sysfs-value-fro.patch
+- add cpupower-add-amd-pstate-sysfs-definition-and-access-.patch
+- add cpupower-enable-boost-state-support-for-amd-pstate-m.patch
+- add cpupower-move-print_speed-function-into-misc-helper.patch
+- add cpupower-print-amd-pstate-information-on-cpupower.patch
+- add Documentation-amd-pstate-add-amd-pstate-driver-intro.patch
 
 5.14-lucjan-ll118
 
