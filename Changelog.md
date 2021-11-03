@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll6-rc1
+
+- drop block-remove-plug-based-merging.patch
+- update blk-mq-Use-shared-tags-for-shared-sbitmap-support.patch
+- add blk-mq-Change-shared-sbitmap-naming-to-shared-tags.patch
+- add blk-mq-Fix-blk_mq_tagset_busy_iter-for-shared-tags.patch
+
 5.15-lucjan-ll5-rc1
 
 - add blk-mq-Change-rqs-check-in-blk_mq_free_rqs.patch
