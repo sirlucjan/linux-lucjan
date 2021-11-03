@@ -6,6 +6,51 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll7-rc1
+
+- drop x86-cpufreatures-add-AMD-Collaborative-Processor-Per.patch
+- drop x86-msr-add-AMD-CPPC-MSR-definitions.patch
+- drop ACPI-CPPC-implement-support-for-SystemIO-registers.patch
+- drop ACPI-CPPC-Check-present-CPUs-for-determining-_CPC-is.patch
+- drop ACPI-CPPC-add-cppc-enable-register-function.patch
+- drop cpufreq-amd-introduce-a-new-amd-pstate-driver-to-sup.patch
+- drop cpufreq-amd-add-fast-switch-function-for-amd-pstate.patch
+- drop cpufreq-amd-add-acpi-cppc-function-as-the-backend-fo.patch
+- drop cpufreq-amd-add-trace-for-amd-pstate-module.patch
+- drop cpufreq-amd-add-boost-mode-support-for-amd-pstate.patch
+- drop cpufreq-amd-add-amd-pstate-frequencies-attributes.patch
+- drop cpufreq-amd-add-amd-pstate-performance-attributes.patch
+- drop cpupower-add-AMD-P-state-capability-flag.patch
+- drop cpupower-add-the-function-to-check-amd-pstate-enable.patch
+- drop cpupower-initial-AMD-P-state-capability.patch
+- drop cpupower-add-the-function-to-get-the-sysfs-value-fro.patch
+- drop cpupower-add-amd-pstate-sysfs-definition-and-access-.patch
+- drop cpupower-enable-boost-state-support-for-amd-pstate-m.patch
+- drop cpupower-move-print_speed-function-into-misc-helper.patch
+- drop cpupower-print-amd-pstate-information-on-cpupower.patch
+- drop Documentation-amd-pstate-add-amd-pstate-driver-intro.patch
+- add x86-cpufreatures-add-AMD-Collaborative-Processor-Per.patch
+- add x86-msr-add-AMD-CPPC-MSR-definitions.patch
+- add ACPI-CPPC-implement-support-for-SystemIO-registers.patch
+- add ACPI-CPPC-Check-present-CPUs-for-determining-_CPC-is.patch
+- add ACPI-CPPC-add-cppc-enable-register-function.patch
+- add cpufreq-amd-introduce-a-new-amd-pstate-driver-to-sup.patch
+- add cpufreq-amd-add-fast-switch-function-for-amd-pstate.patch
+- add cpufreq-amd-add-acpi-cppc-function-as-the-backend-fo.patch
+- add cpufreq-amd-add-trace-for-amd-pstate-module.patch
+- add cpufreq-amd-add-boost-mode-support-for-amd-pstate.patch
+- add cpufreq-amd-add-amd-pstate-frequencies-attributes.patch
+- add cpufreq-amd-add-amd-pstate-performance-attributes.patch
+- add cpupower-add-AMD-P-state-capability-flag.patch
+- add cpupower-add-the-function-to-check-amd-pstate-enable.patch
+- add cpupower-initial-AMD-P-state-capability.patch
+- add cpupower-add-the-function-to-get-the-sysfs-value-fro.patch
+- add cpupower-add-amd-pstate-sysfs-definition-and-access-.patch
+- add cpupower-enable-boost-state-support-for-amd-pstate-m.patch
+- add cpupower-move-print_speed-function-into-misc-helper.patch
+- add cpupower-print-amd-pstate-information-on-cpupower.patch
+- add Documentation-amd-pstate-add-amd-pstate-driver-intro.patch
+
 5.15-lucjan-ll6-rc1
 
 - drop block-remove-plug-based-merging.patch
