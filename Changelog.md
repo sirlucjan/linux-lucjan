@@ -8,6 +8,10 @@
 
 5.15-lucjan-ll7-rc1
 
+- add Disable-stack-conservation-for-GCC.patch
+
+5.15-lucjan-ll7-rc1
+
 - drop x86-cpufreatures-add-AMD-Collaborative-Processor-Per.patch
 - drop x86-msr-add-AMD-CPPC-MSR-definitions.patch
 - drop ACPI-CPPC-implement-support-for-SystemIO-registers.patch
