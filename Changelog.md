@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll10-rc1
+
+- update lib-zstd-Upgrade-to-latest-upstream-zstd-version-1.4.patch
+
 5.15-lucjan-ll9-rc1
 
 - add blk-mq-sched-Don-t-reference-queue-tagset-in-blk_mq_.patch
