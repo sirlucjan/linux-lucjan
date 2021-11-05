@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll11-rc1
+
+- add ksmbd-set-unique-value-to-volume-serial-field-in-FS_.patch
+- add ksmbd-remove-md4-leftovers.patch
+- add ksmbd-remove-smb2_buf_length-in-smb2_hdr.patch
+- add ksmbd-remove-smb2_buf_length-in-smb2_transform_hdr.patch
+- add ksmbd-change-LeaseKey-data-type-to-u8-array.patch
+
 5.15-lucjan-ll10-rc1
 
 - update lib-zstd-Upgrade-to-latest-upstream-zstd-version-1.4.patch
