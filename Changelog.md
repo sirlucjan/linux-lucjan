@@ -6,6 +6,43 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll12-rc1
+
+- drop btrfs-add-a-force_chunk_alloc-to-space_info-s-sysfs.patch
+- drop btrfs-index-free-space-entries-on-size.patch
+- drop btrfs-fix-deadlock-between-chunk-allocation-and-chun.patch
+- drop btrfs-update-comments-for-chunk-allocation-ENOSPC-ca.patch
+- drop btrfs-fix-lost-error-handling-when-replaying-directo.patch
+- add btrfs-add-a-force_chunk_alloc-to-space_info-s-sysfs.patch
+- add btrfs-check-if-a-log-tree-exists-at-inode_logged.patch
+- add btrfs-remove-no-longer-needed-checks-for-NULL-log-co.patch
+- add btrfs-do-not-log-new-dentries-when-logging-that-a-ne.patch
+- add btrfs-always-update-the-logged-transaction-when-logg.patch
+- add btrfs-avoid-expensive-search-when-dropping-inode-ite.patch
+- add btrfs-add-helper-to-truncate-inode-items-when-loggin.patch
+- add btrfs-avoid-expensive-search-when-truncating-inode-i.patch
+- add btrfs-avoid-attempt-to-drop-extents-when-logging-ino.patch
+- add btrfs-avoid-search-for-logged-i_size-when-logging-in.patch
+- add btrfs-do-not-commit-delayed-inode-when-logging-a-fil.patch
+- add btrfs-remove-root-argument-from-btrfs_log_inode-and-.patch
+- add btrfs-remove-redundant-log-root-assignment-from-log_.patch
+- add btrfs-factor-out-the-copying-loop-of-dir-items-from-.patch
+- add btrfs-insert-items-in-batches-when-logging-a-directo.patch
+- add btrfs-keep-track-of-the-last-logged-keys-when-loggin.patch
+- add btrfs-loop-only-once-over-data-sizes-array-when-inse.patch
+- add btrfs-unexport-setup_items_for_insert.patch
+- add btrfs-use-single-bulk-copy-operations-when-logging-d.patch
+- add btrfs-index-free-space-entries-on-size.patch
+- add btrfs-fix-deadlock-between-chunk-allocation-and-chun.patch
+- add btrfs-update-comments-for-chunk-allocation-ENOSPC-ca.patch
+- add btrfs-fix-lost-error-handling-when-replaying-directo.patch
+- add btrfs-remove-root-argument-from-drop_one_dir_item.patch
+- add btrfs-remove-root-argument-from-btrfs_unlink_inode.patch
+- add btrfs-remove-root-argument-from-add_link.patch
+- add btrfs-remove-root-argument-from-check_item_in_log.patch
+- add btrfs-only-copy-dir-index-keys-when-logging-a-direct.patch
+- add btrfs-remove-no-longer-needed-logic-for-replaying-di.patch
+
 5.15-lucjan-ll11-rc1
 
 - add ksmbd-set-unique-value-to-volume-serial-field-in-FS_.patch
