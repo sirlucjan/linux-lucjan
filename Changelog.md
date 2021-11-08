@@ -6,6 +6,17 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll14-rc1
+
+- add ksmbd-switch-to-use-shared-definitions-where-availab.patch
+- add ksmbd-use-the-common-definitions-for-NEGOTIATE_PROTO.patch
+- add ksmbd-Move-more-definitions-into-the-shared-area.patch
+- add ksmbd-Use-the-SMB3_Create-definitions-from-the-share.patch
+- add cifs-Create-a-new-shared-file-holding-smb2-pdu-defin.patch
+- add cifs-move-NEGOTIATE_PROTOCOL-definitions-out-into-th.patch
+- add cifs-Move-more-definitions-into-the-shared-area.patch
+- add cifs-Move-SMB2_Create-definitions-to-the-shared-area.patch
+
 5.15-lucjan-ll13-rc1
 
 - add scripts-package-builddeb-add-UPLOAD_DIR-and-NO_HEADE.patch
