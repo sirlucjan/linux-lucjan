@@ -6,6 +6,38 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll15-rc1
+
+- drop Linux-Random-Number-Generator.patch
+- drop LRNG-allocate-one-DRNG-instance-per-NUMA-node.patch
+- drop LRNG-sysctls-and-proc-interface.patch
+- drop LRNG-add-switchable-DRNG-support.patch
+- drop LRNG-add-common-generic-hash-support.patch
+- drop crypto-DRBG-externalize-DRBG-functions-for-LRNG.patch
+- drop LRNG-add-SP800-90A-DRBG-extension.patch
+- drop LRNG-add-kernel-crypto-API-PRNG-extension.patch
+- drop crypto-move-Jitter-RNG-header-include-dir.patch
+- drop LRNG-add-Jitter-RNG-fast-noise-source.patch
+- drop LRNG-add-SP800-90B-compliant-health-tests.patch
+- drop LRNG-add-interface-for-gathering-of-raw-entropy.patch
+- drop LRNG-add-power-on-and-runtime-self-tests.patch
+- drop lrng-5.15-update-to-the-latest-git-HEAD.patch
+- add Linux-Random-Number-Generator.patch
+- add LRNG-IRQ-entropy-source.patch
+- add LRNG-sysctls-and-proc-interface.patch
+- add LRNG-allocate-one-DRNG-instance-per-NUMA-node.patch
+- add LRNG-CPU-entropy-source.patch
+- add LRNG-add-switchable-DRNG-support.patch
+- add LRNG-add-common-generic-hash-support.patch
+- add crypto-DRBG-externalize-DRBG-functions-for-LRNG.patch
+- add LRNG-add-SP800-90A-DRBG-extension.patch
+- add LRNG-add-kernel-crypto-API-PRNG-extension.patch
+- add crypto-move-Jitter-RNG-header-include-dir.patch
+- add LRNG-add-Jitter-RNG-fast-noise-source.patch
+- add LRNG-add-SP800-90B-compliant-health-tests.patch
+- add LRNG-add-interface-for-gathering-of-raw-entropy.patch
+- add LRNG-add-power-on-and-runtime-self-tests.patch
+
 5.15-lucjan-ll14-rc1
 
 - add ksmbd-switch-to-use-shared-definitions-where-availab.patch
