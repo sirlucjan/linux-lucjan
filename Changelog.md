@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll16-rc1
+
+- update mm-multigenerational-lru-groundwork.patch
+- update mm-multigenerational-lru-aging.patch
+- update mm-multigenerational-lru-eviction.patch
+
 5.15-lucjan-ll15-rc1
 
 - drop Linux-Random-Number-Generator.patch
