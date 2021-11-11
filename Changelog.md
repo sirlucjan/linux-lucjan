@@ -6,6 +6,30 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll18-rc1
+
+- drop mm-x86-arm64-add-arch_has_hw_pte_young.patch
+- drop mm-x86-add-CONFIG_ARCH_HAS_NONLEAF_PMD_YOUNG.patch
+- drop mm-vmscan.c-refactor-shrink_node.patch
+- drop mm-multigenerational-lru-groundwork.patch
+- drop mm-multigenerational-lru-protection.patch
+- drop mm-multigenerational-lru-mm_struct-list.patch
+- drop mm-multigenerational-lru-aging.patch
+- drop mm-multigenerational-lru-eviction.patch
+- drop mm-multigenerational-lru-user-interface.patch
+- drop mm-multigenerational-lru-Kconfig.patch
+- drop mm-multigenerational-lru-documentation.patch
+- add mm-x86-arm64-add-arch_has_hw_pte_young.patch
+- add mm-x86-add-CONFIG_ARCH_HAS_NONLEAF_PMD_YOUNG.patch
+- add mm-vmscan.c-refactor-shrink_node.patch
+- add mm-multigenerational-lru-groundwork.patch
+- add mm-multigenerational-lru-mm_struct-list.patch
+- add mm-multigenerational-lru-aging.patch
+- add mm-multigenerational-lru-eviction.patch
+- add mm-multigenerational-lru-user-interface.patch
+- add mm-multigenerational-lru-Kconfig.patch
+- add mm-multigenerational-lru-documentation.patch
+
 5.15-lucjan-ll17-rc1
 
 - sync with upstream (update android-export-symbold-and-enable-building-ashmem-an.patch)
