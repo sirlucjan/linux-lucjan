@@ -6,6 +6,42 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll23-rc1
+
+- add mm-damon-grammar-s-works-work.patch
+- add mm-damon-core-print-kdamond-start-log-in-debug-mode-.patch
+- add mm-damon-remove-unnecessary-do_exit-from-kdamond.patch
+- add mm-damon-needn-t-hold-kdamond_lock-to-print-pid-of-k.patch
+- add mm-damon-core-nullify-pointer-ctx-kdamond-with-a-NUL.patch
+- add mm-damon-core-account-age-of-target-regions.patch
+- add mm-damon-core-implement-DAMON-based-Operation-Scheme.patch
+- add mm-damon-vaddr-support-DAMON-based-Operation-Schemes.patch
+- add mm-damon-dbgfs-support-DAMON-based-Operation-Schemes.patch
+- add mm-damon-schemes-implement-statistics-feature.patch
+- add mm-damon-dbgfs-allow-users-to-set-initial-monitoring.patch
+- add mm-damon-dbgfs-test-add-a-unit-test-case-for-init_re.patch
+- add mm-damon-vaddr-separate-commonly-usable-functions.patch
+- add mm-damon-implement-primitives-for-physical-address-s.patch
+- add mm-damon-dbgfs-support-physical-memory-monitoring.patch
+- add mm-damon-vaddr-constify-static-mm_walk_ops.patch
+- add mm-damon-dbgfs-remove-unnecessary-variables.patch
+- add mm-damon-paddr-support-the-pageout-scheme.patch
+- add mm-damon-schemes-implement-size-quota-for-schemes-ap.patch
+- add mm-damon-schemes-skip-already-charged-targets-and-re.patch
+- add mm-damon-schemes-implement-time-quota.patch
+- add mm-damon-dbgfs-support-quotas-of-schemes.patch
+- add mm-damon-schemes-prioritize-regions-within-the-quota.patch
+- add mm-damon-vaddr-paddr-support-pageout-prioritization.patch
+- add mm-damon-dbgfs-support-prioritization-weights.patch
+- add mm-damon-schemes-activate-schemes-based-on-a-waterma.patch
+- add mm-damon-dbgfs-support-watermarks.patch
+- add mm-damon-introduce-DAMON-based-Reclamation-DAMON_REC.patch
+- add mm-damon-remove-unnecessary-variable-initialization.patch
+- add mm-damon-dbgfs-add-adaptive_targets-list-check-befor.patch
+- add mm-damon-simplify-stop-mechanism.patch
+- add mm-damon-fix-a-few-spelling-mistakes-in-comments-and.patch
+- add mm-damon-remove-return-value-from-before_terminate-c.patch
+
 5.15-lucjan-ll22-rc1
 
 - drop scripts-package-builddeb-add-UPLOAD_DIR-and-NO_HEADE.patch
