@@ -574,6 +574,8 @@
 - add UKSM-for-5.15.patch
 - add AUFS 20211018
 
+5.14-lucjan-ll120-rc1 --> 5.14-lucjan-ll120
+
 5.14-lucjan-ll120-rc1
 
 - sync with upstream (drop ALSA-pcm-Check-mmap-capability-of-runtime-dma-buffer.patch
