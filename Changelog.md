@@ -6,6 +6,43 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll22-rc1
+
+- drop scripts-package-builddeb-add-UPLOAD_DIR-and-NO_HEADE.patch
+- drop build-fixes.patch
+- drop enable-Werror-build.patch
+- drop mm-export-dump_mm.patch
+- drop mmap-locking-API-mmap_lock_is_contended-returns-a-bo.patch
+- drop mmap-locking-API-name-the-return-values.patch
+- drop do_anonymous_page-use-update_mmu_tlb.patch
+- drop do_anonymous_page-reduce-code-duplication.patch
+- drop mm-introduce-CONFIG_SPECULATIVE_PAGE_FAULT.patch
+- drop x86-mm-define-ARCH_SUPPORTS_SPECULATIVE_PAGE_FAULT.patch
+- drop mm-add-FAULT_FLAG_SPECULATIVE-flag.patch
+- drop mm-add-do_handle_mm_fault.patch
+- drop mm-add-per-mm-mmap-sequence-counter-for-speculative-.patch
+- drop mm-rcu-safe-vma-freeing.patch
+- drop mm-separate-mmap-locked-assertion-from-find_vma.patch
+- drop x86-mm-attempt-speculative-mm-faults-first.patch
+- drop mm-add-speculative_page_walk_begin-and-speculative_p.patch
+- drop mm-refactor-__handle_mm_fault-handle_pte_fault.patch
+- drop mm-implement-speculative-handling-in-__handle_mm_fau.patch
+- drop mm-add-pte_map_lock-and-pte_spinlock.patch
+- drop mm-implement-speculative-handling-in-do_anonymous_pa.patch
+- drop mm-enable-speculative-fault-handling-through-do_anon.patch
+- drop mm-implement-speculative-handling-in-do_numa_page.patch
+- drop mm-enable-speculative-fault-handling-in-do_numa_page.patch
+- drop mm-implement-speculative-handling-in-wp_page_copy.patch
+- drop mm-implement-and-enable-speculative-fault-handling-i.patch
+- drop mm-disable-speculative-faults-for-single-threaded-us.patch
+- drop mm-disable-rcu-safe-vma-freeing-for-single-threaded-.patch
+- drop mm-create-new-include-linux-vm_event.h-header-file.patch
+- drop mm-anon-spf-statistics.patch
+- drop arm64-mm-define-ARCH_SUPPORTS_SPECULATIVE_PAGE_FAULT.patch
+- drop arm64-mm-attempt-speculative-mm-faults-first.patch
+- drop powerpc-mm-define-ARCH_SUPPORTS_SPECULATIVE_PAGE_FAU.patch
+- drop powerpc-mm-attempt-speculative-mm-faults-first.patch
+
 5.15-lucjan-ll21-rc1
 
 - sync with upstream (update android-export-symbold-and-enable-building-ashmem-an.patch)
