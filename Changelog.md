@@ -574,11 +574,15 @@
 - add UKSM-for-5.15.patch
 - add AUFS 20211018
 
+5.14-lucjan-ll121-rc1
+
+- sync with upstream (drop btrfs-fix-lost-error-handling-when-replaying-directo.patch)
+
 5.14-lucjan-ll120-rc1 --> 5.14-lucjan-ll120
 
 5.14-lucjan-ll120-rc1
 
-- sync with upstream (drop ALSA-pcm-Check-mmap-capability-of-runtime-dma-buffer.patch
+- sync with upstream (drop ALSA-pcm-Check-mmap-capability-of-runtime-dma-buffer.patch)
 - sync with upstream (drop ALSA-pci-cs46xx-Fix-set-up-buffer-type-properly.patch)
 - sync with upstream (update android-export-symbold-and-enable-building-ashmem-an.patch)
 
