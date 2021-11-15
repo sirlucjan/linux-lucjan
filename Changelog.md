@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll25-rc2
+
+- sync with upstream (update ksmbd-use-ksmbd_req_buf_next-in-ksmbd_smb2_check_mes.patch)
+- sync with upstream (drop btrfs-fix-lost-error-handling-when-replaying-directo.patch)
+- sync with upstream (drop ksmbd-Fix-buffer-length-check-in-fsctl_validate_nego.patch)
+- sync with upstream (drop ksmbd-don-t-need-8byte-alignment-for-request-length-.patch)
+- sync with upstream (drop ksmbd-set-unique-value-to-volume-serial-field-in-FS_.patch)
+
 5.15-lucjan-ll26-rc1
 
 - add AUFS 20211115
