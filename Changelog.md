@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll32-rc1
+
+- add hwmon-asus_wmi_sensors-create-separate-record.patch
+- add Revert-hwmon-asus_wmi_sensors-support-ROG-STRIX-Z390.patch
+
 5.15-lucjan-ll31-rc1
 
 - sync with upstream (update ksmbd-use-ksmbd_req_buf_next-in-ksmbd_smb2_check_mes.patch)
