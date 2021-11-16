@@ -348,6 +348,8 @@
 │       ├── 5.15-lucjan-ll25-rc1.patch.sig
 │       ├── 5.15-lucjan-ll25-rc2.patch
 │       ├── 5.15-lucjan-ll25-rc2.patch.sig
+│       ├── 5.15-lucjan-ll27-rc1.patch
+│       ├── 5.15-lucjan-ll27-rc1.patch.sig
 │       ├── 5.15-lucjan-ll2-rc1.patch
 │       ├── 5.15-lucjan-ll2-rc1.patch.sig
 │       ├── 5.15-lucjan-ll3-rc1.patch
@@ -376,7 +378,7 @@
 └── trunk
     ├── 5.15-lucjan-ll26-rc1.patch
     ├── 5.15-lucjan-ll26-rc1.patch.sig
-    ├── 5.15-lucjan-ll27-rc1.patch
-    └── 5.15-lucjan-ll27-rc1.patch.sig
+    ├── 5.15-lucjan-ll27-rc2.patch
+    └── 5.15-lucjan-ll27-rc2.patch.sig
 
-6 directories, 373 files
+6 directories, 375 files
