@@ -602,6 +602,10 @@
 - add UKSM-for-5.15.patch
 - add AUFS 20211018
 
+5.14-lucjan-ll121-rc2
+
+- add prjc-5.14-sched-Add-wrapper-for-get_wchan-to-keep-ta.patch
+
 5.14-lucjan-ll121-rc1
 
 - sync with upstream (drop btrfs-fix-lost-error-handling-when-replaying-directo.patch)
