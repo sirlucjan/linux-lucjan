@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll28-rc1
+
+- add hwmon-asus_wmi_sensors-support-ROG-STRIX-Z390-F-GAMI.patch
+
 5.15-lucjan-ll27-rc2
 
 - add prjc-5.15-sched-Add-wrapper-for-get_wchan-to-keep-ta.patch
