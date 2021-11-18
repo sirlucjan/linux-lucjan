@@ -676,6 +676,11 @@
 - add UKSM-for-5.15.patch
 - add AUFS 20211018
 
+5.14-lucjan-ll122
+
+- drop prjc-5.14-sched-Add-wrapper-for-get_wchan-to-keep-ta.patch
+- add prjc-5.14-sched-Fix-sched_fork-access-an-invalid-sch.patch
+
 5.14-lucjan-ll121-rc2 --> 5.14-lucjan-ll121
 
 5.14-lucjan-ll121-rc2
