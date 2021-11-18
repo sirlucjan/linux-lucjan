@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll37-rc2
+
+- drop prjc-5.15-sched-Add-wrapper-for-get_wchan-to-keep-ta.patch
+- add prjc-5.15-sched-Fix-sched_fork-access-an-invalid-sch.patch
+
 5.15-lucjan-ll37-rc1
 
 - sync with upstream (update ksmbd-use-ksmbd_req_buf_next-in-ksmbd_smb2_check_mes.patch)
