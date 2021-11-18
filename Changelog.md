@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll38-rc1
+
+- add zstd-5.15-update-against-zstd-zstd-1.4.10.patch
+
 5.15-lucjan-ll37-rc2
 
 - drop prjc-5.15-sched-Add-wrapper-for-get_wchan-to-keep-ta.patch
