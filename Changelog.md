@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll45-rc1
+
+- sync with upstream (drop PCI-MSI-Deal-with-devices-lying-about-their-MSI-mask.patch)
+- sync with upstream (drop PCI-Add-MSI-masking-quirk-for-Nvidia-ION-AHCI.patch)
+
 5.15-lucjan-ll44-rc1
 
 - add Bluetooth-btintel-Fix-bdaddress-comparison-with-garb.patch
@@ -55,7 +60,7 @@
 - add staging-r8188eu-Fix-breakage-introduced-when-5G-code.patch
 - add PCI-MSI-Deal-with-devices-lying-about-their-MSI-mask.patch
 - add PCI-Add-MSI-masking-quirk-for-Nvidia-ION-AHCI.patch
-- addPCI-Add-more-NVIDIA-controllers-to-the-MSI-masking-q.patch
+- add PCI-Add-more-NVIDIA-controllers-to-the-MSI-masking-q.patch
 - add drm-amd-pm-avoid-duplicate-powergate-ungate-setting.patch
 - add iommu-intel-do-deep-dma-unmapping-to-avoid-kernel-fl.patch
 
