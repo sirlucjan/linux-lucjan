@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll44-rc1
+
+- add Bluetooth-btintel-Fix-bdaddress-comparison-with-garb.patch
+
 5.15-lucjan-ll43-rc1
 
 - add cpufreq-intel_pstate-ITMT-support-for-overclocked-sy.patch
