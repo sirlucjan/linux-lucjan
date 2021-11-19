@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll47-rc1
+
+- sync with upstream (drop PCI-MSI-Deal-with-devices-lying-about-their-MSI-mask.patch)
+- sync with upstream (drop PCI-Add-MSI-masking-quirk-for-Nvidia-ION-AHCI.patch)
+
 5.15-lucjan-ll46-rc1
 
 - add Revert-btrfs-index-free-space-entries-on-size.patch
