@@ -6,7 +6,34 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
-5.15-lucjan-ll37-rc2
+5.15-lucjan-ll42-rc1
+
+- add net-introduce-sk_forward_alloc_get.patch
+- add tcp-move-inet-rx_dst_ifindex-to-sk-sk_rx_dst_ifindex.patch
+- add ipv6-move-inet6_sk-sk-rx_dst_cookie-to-sk-sk_rx_dst_.patch
+- add bpf-sockmap-Use-stricter-sk-state-checks-in-sk_looku.patch
+- add tcp-minor-optimization-in-tcp_add_backlog.patch
+- add tcp-remove-dead-code-in-__tcp_v6_send_check.patch
+- add tcp-small-optimization-in-tcp_v6_send_check.patch
+- add net-use-sk_is_tcp-in-more-places.patch
+- add net-remove-sk_route_forced_caps.patch
+- add net-remove-sk_route_nocaps.patch
+- add ipv6-shrink-struct-ipcm6_cookie.patch
+- add net-shrink-struct-sock-by-8-bytes.patch
+- add net-forward_alloc_get-depends-on-CONFIG_MPTCP.patch
+- add net-cache-align-tcp_memory_allocated-tcp_sockets_all.patch
+- add tcp-small-optimization-in-tcp-recvmsg.patch
+- add tcp-add-RETPOLINE-mitigation-to-sk_backlog_rcv.patch
+- add tcp-annotate-data-races-on-tp-segs_in-and-tp-data_se.patch
+- add tcp-annotate-races-around-tp-urg_data.patch
+- add tcp-tp-urg_data-is-unlikely-to-be-set.patch
+- add tcp-avoid-indirect-calls-to-sock_rfree.patch
+- add tcp-defer-skb-freeing-after-socket-lock-is-released.patch
+- add tcp-check-local-var-timeo-before-socket-fields-in-on.patch
+- add tcp-do-not-call-tcp_cleanup_rbuf-if-we-have-a-backlo.patch
+- add net-move-early-demux-fields-close-to-sk_refcnt.patch
+
+5.15-lucjan-ll41-rc1
 
 - drop prjc-5.15-sched-Fix-sched_fork-access-an-invalid-sch.patch
 - add Project-C v5.15-r1
