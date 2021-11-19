@@ -6,6 +6,15 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll37-rc2
+
+- drop prjc-5.15-sched-Fix-sched_fork-access-an-invalid-sch.patch
+- add Project-C v5.15-r1
+- add btrfs-only-use-max_extent_size-if-it-is-set-in-the-b.patch
+- add Revert-btrfs-index-free-space-entries-on-size.patch
+- add btrfs-index-free-space-entries-on-size.patch
+- add x86-csum-rewrite-csum_partial.patch
+
 5.15-lucjan-ll40-rc1
 
 - add staging-r8188eu-Fix-breakage-introduced-when-5G-code.patch
