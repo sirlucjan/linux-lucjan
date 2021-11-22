@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll49-rc1
+
+- add ksmbd-downgrade-addition-info-error-msg-to-debug-in-.patch
+- add ksmbd-contain-default-data-stream-even-if-xattr-is-e.patch
+- add ksmbd-Fix-an-error-handling-path-in-smb2_sess_setup.patch
+- add docs-filesystem-cifs-ksmbd-Fix-small-layout-issues.patch
+
 5.15-lucjan-ll48-rc1
 
 - add mm-damon-dbgfs-use-__GFP_NOWARN-for-user-specified-s.patch
