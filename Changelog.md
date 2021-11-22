@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll48-rc1
+
+- add mm-damon-dbgfs-use-__GFP_NOWARN-for-user-specified-s.patch
+- add mm-damon-dbgfs-fix-missed-use-of-damon_dbgfs_lock.patch
+
 5.15-lucjan-ll47-rc1
 
 - sync with upstream (drop PCI-MSI-Deal-with-devices-lying-about-their-MSI-mask.patch)
