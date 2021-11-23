@@ -6,6 +6,15 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll51-rc1
+
+- sync with upstream (drop drm-amd-pm-avoid-duplicate-powergate-ungate-setting.patch)
+- sync with upstream (drop mm-damon-dbgfs-use-__GFP_NOWARN-for-user-specified-s.patch)
+- sync with upstream (drop mm-damon-dbgfs-fix-missed-use-of-damon_dbgfs_lock.patch)
+- sync with upstream (update mm-damon-dbgfs-remove-unnecessary-variables.patch)
+- sync with upstream (update mm-damon-dbgfs-add-adaptive_targets-list-check-befor.patch)
+- sync with upstream (add mm-damon-dbgfs-fix-missing-damon_dbgfs_lock.patch)
+
 5.15-lucjan-ll50-rc1
 
 - drop x86-cpufreatures-add-AMD-Collaborative-Processor-Per.patch
