@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll52-rc1
+
+- add fs-ntfs3-Fix-some-memory-leaks-in-an-error-handling-.patch
+- add fs-ntfs3-Keep-preallocated-only-if-option-prealloc-e.patch
+- add fs-ntfs3-Restore-ntfs_xattr_get_acl-and-ntfs_xattr_s.patch
+- add fs-ntfs3-Update-i_ctime-when-xattr-is-added.patch
+- add fs-ntfs3-Optimize-locking-in-ntfs_save_wsl_perm.patch
+
 5.15-lucjan-ll51-rc1
 
 - sync with upstream (drop drm-amd-pm-avoid-duplicate-powergate-ungate-setting.patch)
