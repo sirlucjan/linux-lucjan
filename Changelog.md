@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll54-rc1
+
+- add ksmbd-use-oid-registry-functions-to-decode-OIDs.patch
+- add ksmbd-fix-memleak-in-get_file_stream_info.patch
+
 5.15-lucjan-ll53-rc2
 
 - sync with upstream (add AUFS 20211124)
