@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll53-rc2
+
+- sync with upstream (add AUFS 20211124)
+
 5.15-lucjan-ll53-rc1
 
 - sync with upstream (drop drm-amd-pm-avoid-duplicate-powergate-ungate-setting.patch)
