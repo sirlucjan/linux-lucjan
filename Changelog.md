@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll56-rc1
+
+- add fs-ntfs3-In-function-ntfs_set_acl_ex-do-not-change-i.patch
+- add fs-ntfs3-Fix-fiemap-fix-shrink-file-size-to-remove-p.patch
+- add fs-ntfs3-Check-new-size-for-limits.patch
+- add fs-ntfs3-Update-valid-size-if-EIOCBQUEUED.patch
+
 5.15-lucjan-ll55-rc1
 
 - sync with upstream (drop drm-amd-pm-avoid-duplicate-powergate-ungate-setting.patch)
