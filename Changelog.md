@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll58-rc1
+
+- add hwmon-nct6775-Use-nct6775_-lock-function-pointers-in.patch
+- add hwmon-nct6775-Implement-custom-lock-by-ACPI-mutex.patch
+- add hwmon-nct6775-add-MAXIMUS-VII-HERO.patch
+- add igb-fix-netpoll-exit-with-traffic.patch
+
 5.15-lucjan-ll57-rc1
 
 - sync with upstream (drop drm-amd-pm-avoid-duplicate-powergate-ungate-setting.patch)
