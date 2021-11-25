@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll60-rc1
+
+- add mm-damon-core-Avoid-fake-load-reports-due-to-uninter.patch
+- add Revert-net-replace-WARN_ONCE-with-pr_warn_once.patch
+- add sched-alt-Sync-42dc938a-sched-core-Mitigate-race-cpu.patch
+- add sched-alt-Sync-b027789e-Prevent-dead-task-groups-fro.patch
+
 5.15-lucjan-ll59-rc1
 
 - sync with upstream (drop drm-amd-pm-avoid-duplicate-powergate-ungate-setting.patch)
