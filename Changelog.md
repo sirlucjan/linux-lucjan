@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll61-rc1
+
+- add x86-csum-Fix-compilation-error-for-UM.patch
+
 5.15-lucjan-ll60-rc1
 
 - add mm-damon-core-Avoid-fake-load-reports-due-to-uninter.patch
