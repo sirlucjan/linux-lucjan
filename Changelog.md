@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll62-rc1
+
+- add lg-laptop-Recognize-more-models.patch
+- add bfq-Fix-spelling-mistake-tenative-tentative.patch
+- add Revert-mm-damon-core-Avoid-fake-load-reports-due-to-.patch
+- add timers-Implement-usleep_idle_range.patch
+- add mm-damon-core-Fix-fake-load-reports-due-to-uninterru.patch
+
 5.15-lucjan-ll61-rc1
 
 - add x86-csum-Fix-compilation-error-for-UM.patch
