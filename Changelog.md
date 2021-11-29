@@ -6,7 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
-5.15-lucjan-ll62-rc1
+5.15-lucjan-ll63-rc2
+
+- sync with upstream (drop ksmbd-Fix-an-error-handling-path-in-smb2_sess_setup.patch)
+- sync with upstream (update ksmbd-remove-smb2_buf_length-in-smb2_hdr.patch)
+
+5.15-lucjan-ll63-rc1
 
 - sync with upstream (drop staging-r8188eu-Fix-breakage-introduced-when-5G-code.patch)
 - sync with upstream (drop igb-fix-netpoll-exit-with-traffic.patch)
