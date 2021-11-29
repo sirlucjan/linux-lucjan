@@ -6,6 +6,21 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll64
+
+- add Revert-bfq-use-bfq_entity_to_bfqg-helper-method.patch
+- add Revert-block-bfq-do-not-idle-if-only-one-cgroup-is-a.patch
+- add Revert-block-bfq-counted-root-group-into-num_groups_.patch
+- add block-bfq-add-new-apis-to-iterate-bfq-entities.patch
+- add block-bfq-apply-news-apis-where-root-group-is-not-ex.patch
+- add block-bfq-handle-the-case-when-for_each_entity-acces.patch
+- add block-bfq-count-root-group-into-num_groups_with_pend.patch
+- add block-bfq-do-not-idle-if-only-one-cgroup-is-activate.patch
+- add block-bfq-only-count-group-that-the-bfq_queue-belong.patch
+- add block-bfq-record-how-many-queues-have-pending-reques.patch
+- add block-bfq-move-forward-__bfq_weights_tree_remove.patch
+- add block-bfq-decrease-num_groups_with_pending_reqs-earl.patch
+
 5.15-lucjan-ll63-rc2
 
 - sync with upstream (drop ksmbd-Fix-an-error-handling-path-in-smb2_sess_setup.patch)
