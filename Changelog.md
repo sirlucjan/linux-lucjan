@@ -14,7 +14,12 @@
 - sync with upstream (drop ksmbd-contain-default-data-stream-even-if-xattr-is-e.patch)
 - sync with upstream (drop ksmbd-fix-memleak-in-get_file_stream_info.patch)
 - sync with upstream (drop ksmbd-Fix-an-error-handling-path-in-smb2_sess_setup.patch)
+- sync with upstream (drop scsi-sd-Fix-sd_do_mode_sense-buffer-length-handling.patch)
 - sync with upstream (update ksmbd-remove-smb2_buf_length-in-smb2_hdr.patch)
+
+5.15-lucjan-ll66-rc2
+
+- add scsi-sd-Fix-sd_do_mode_sense-buffer-length-handling.patch
 
 5.15-lucjan-ll66-rc1
 
