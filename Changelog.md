@@ -8,6 +8,14 @@
 
 5.15-lucjan-ll62-rc1
 
+- sync with upstream (drop staging-r8188eu-Fix-breakage-introduced-when-5G-code.patch)
+- sync with upstream (drop igb-fix-netpoll-exit-with-traffic.patch)
+- sync with upstream (drop ksmbd-downgrade-addition-info-error-msg-to-debug-in-.patch)
+- sync with upstream (drop ksmbd-contain-default-data-stream-even-if-xattr-is-e.patch)
+- sync with upstream (drop ksmbd-fix-memleak-in-get_file_stream_info.patch)
+
+5.15-lucjan-ll62-rc1
+
 - add lg-laptop-Recognize-more-models.patch
 - add bfq-Fix-spelling-mistake-tenative-tentative.patch
 - add Revert-mm-damon-core-Avoid-fake-load-reports-due-to-.patch
