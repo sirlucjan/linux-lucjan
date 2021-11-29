@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll66-rc1
+
+- add spadfs-5.15-merge-v1.0.15.patch
+
 5.15-lucjan-ll65-rc1
 
 - sync with upstream (drop staging-r8188eu-Fix-breakage-introduced-when-5G-code.patch)
@@ -16,7 +20,7 @@
 - sync with upstream (drop ksmbd-Fix-an-error-handling-path-in-smb2_sess_setup.patch)
 - sync with upstream (update ksmbd-remove-smb2_buf_length-in-smb2_hdr.patch)
 
-5.15-lucjan-ll64
+5.15-lucjan-ll64-rc1
 
 - add Revert-bfq-use-bfq_entity_to_bfqg-helper-method.patch
 - add Revert-block-bfq-do-not-idle-if-only-one-cgroup-is-a.patch
