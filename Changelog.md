@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll68-rc1
+
+- add hwmon-asus_wmi_ec_sensors-fix-array-overflow.patch
+- add hwmon-asus_wmi_sensors-fix-an-array-overflow.patch
+
 5.15-lucjan-ll67-rc1
 
 - sync with upstream (drop staging-r8188eu-Fix-breakage-introduced-when-5G-code.patch)
