@@ -460,6 +460,8 @@
 │       ├── 5.15-lucjan-ll67-rc1.patch.sig
 │       ├── 5.15-lucjan-ll68-rc1.patch
 │       ├── 5.15-lucjan-ll68-rc1.patch.sig
+│       ├── 5.15-lucjan-ll69-rc1.patch
+│       ├── 5.15-lucjan-ll69-rc1.patch.sig
 │       ├── 5.15-lucjan-ll6-rc1.patch
 │       ├── 5.15-lucjan-ll6-rc1.patch.sig
 │       ├── 5.15-lucjan-ll7-rc1.patch
@@ -475,7 +477,7 @@
 ├── Files
 ├── README.md
 └── trunk
-    ├── 5.15-lucjan-ll69-rc1.patch
-    └── 5.15-lucjan-ll69-rc1.patch.sig
+    ├── 5.15-lucjan-ll70-rc1.patch
+    └── 5.15-lucjan-ll70-rc1.patch.sig
 
-5 directories, 473 files
+5 directories, 475 files

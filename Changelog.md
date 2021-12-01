@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll70-rc1
+
+- add ksmbd-fix-error-code-in-ndr_read_int32.patch
+- add ksmbd-fix-uninitialized-symbol-pntsd_size.patch
+
 5.15-lucjan-ll69-rc1
 
 - add bfq-Fix-use-after-free-with-cgroups.patch
