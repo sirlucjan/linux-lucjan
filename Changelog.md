@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll69-rc1
+
+- add bfq-Fix-use-after-free-with-cgroups.patch
+
 5.15-lucjan-ll68-rc1
 
 - add hwmon-asus_wmi_ec_sensors-fix-array-overflow.patch
