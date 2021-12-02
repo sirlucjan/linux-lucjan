@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll71-rc1
+
+- add Revert-drm-i915-Implement-Wa_1508744258.patch
+
 5.15-lucjan-ll70-rc1
 
 - add ksmbd-fix-error-code-in-ndr_read_int32.patch
