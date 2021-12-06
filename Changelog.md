@@ -6,6 +6,80 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll76
+
+- drop x86-MCE-AMD-EDAC-amd64-Move-address-translation-to-A.patch
+- drop x86-amd_nb-EDAC-amd64-Move-DF-Indirect-Read-to-AMD64.patch
+- drop EDAC-amd64-Don-t-use-naked-values-for-DF-registers.patch
+- drop EDAC-amd64-Allow-for-DF-Indirect-Broadcast-reads.patch
+- drop EDAC-amd64-Add-context-struct.patch
+- drop EDAC-amd64-Define-Data-Fabric-operations.patch
+- drop EDAC-amd64-Define-functions-for-DramOffset.patch
+- drop EDAC-amd64-Define-function-to-read-DRAM-address-map-.patch
+- drop EDAC-amd64-Define-function-to-find-interleaving-mode.patch
+- drop EDAC-amd64-Define-function-to-denormalize-address.patch
+- drop EDAC-amd64-Define-function-to-add-DRAM-base-and-hole.patch
+- drop EDAC-amd64-Define-function-to-dehash-address.patch
+- drop EDAC-amd64-Define-function-to-check-DRAM-limit-addre.patch
+- drop EDAC-amd64-Remove-goto-statements.patch
+- drop EDAC-amd64-Simplify-function-parameters.patch
+- drop EDAC-amd64-Define-function-to-get-Interleave-Address.patch
+- drop EDAC-amd64-Skip-denormalization-if-no-interleaving.patch
+- drop EDAC-amd64-Define-function-to-get-number-of-interlea.patch
+- drop EDAC-amd64-Define-function-to-get-number-of-interlea.patch
+- drop EDAC-amd64-Define-function-to-get-number-of-interlea.patch
+- drop EDAC-amd64-Remove-unnecessary-assert.patch
+- drop EDAC-amd64-Define-function-to-make-space-for-CS-ID.patch
+- drop EDAC-amd64-Define-function-to-calculate-CS-ID.patch
+- drop EDAC-amd64-Define-function-to-insert-CS-ID-into-addr.patch
+- drop EDAC-amd64-Define-function-to-get-CS-Fabric-ID.patch
+- drop EDAC-amd64-Define-function-to-find-shift-and-mask-va.patch
+- drop EDAC-amd64-Update-CS-ID-calculation-to-match-referen.patch
+- drop EDAC-amd64-Match-hash-function-to-reference-code.patch
+- drop EDAC-amd64-Define-helper-function-to-get-interleave-.patch
+- drop EDAC-amd64-Add-support-for-address-translation-on-DF.patch
+- drop EDAC-amd64-Add-glossary-of-acronyms-for-address-tran.patch
+- add x86-amd_nb-Add-support-for-northbridges-on-Aldebaran.patch
+- add EDAC-mce_amd-Extract-node-id-from-MCA_IPID.patch
+- add EDAC-amd64-Extend-family-ops-functions.patch
+- add EDAC-amd64-Move-struct-fam_type-into-amd64_pvt-struc.patch
+- add EDAC-amd64-Enumerate-memory-on-Aldebaran-GPU-nodes.patch
+- add x86-MCE-AMD-EDAC-amd64-Move-address-translation-to-A.patch
+- add x86-amd_nb-EDAC-amd64-Move-DF-Indirect-Read-to-AMD64.patch
+- add EDAC-amd64-Allow-for-DF-Indirect-Broadcast-reads.patch
+- add EDAC-amd64-Add-context-struct.patch
+- add EDAC-amd64-Define-Data-Fabric-operations.patch
+- add EDAC-amd64-Define-functions-for-DramOffset.patch
+- add EDAC-amd64-Define-function-to-read-DRAM-address-map-.patch
+- add EDAC-amd64-Define-function-to-find-interleaving-mode.patch
+- add EDAC-amd64-Define-function-to-denormalize-address.patch
+- add EDAC-amd64-Define-function-to-add-DRAM-base-and-hole.patch
+- add EDAC-amd64-Define-function-to-dehash-address.patch
+- add EDAC-amd64-Define-function-to-check-DRAM-limit-addre.patch
+- add EDAC-amd64-Remove-goto-statements.patch
+- add EDAC-amd64-Simplify-function-parameters.patch
+- add EDAC-amd64-Define-function-to-get-Interleave-Address.patch
+- add EDAC-amd64-Skip-denormalization-if-no-interleaving.patch
+- add EDAC-amd64-Define-function-to-get-number-of-interlea.patch
+- add EDAC-amd64-Define-function-to-get-number-of-interlea.patch
+- add EDAC-amd64-Define-function-to-get-number-of-interlea.patch
+- add EDAC-amd64-Remove-unnecessary-assert.patch
+- add EDAC-amd64-Define-function-to-make-space-for-CS-ID.patch
+- add EDAC-amd64-Define-function-to-calculate-CS-ID.patch
+- add EDAC-amd64-Define-function-to-insert-CS-ID-into-addr.patch
+- add EDAC-amd64-Define-function-to-get-CS-Fabric-ID.patch
+- add EDAC-amd64-Define-function-to-find-shift-and-mask-va.patch
+- add EDAC-amd64-Update-CS-ID-calculation-to-match-referen.patch
+- add EDAC-amd64-Match-hash-function-to-reference-code.patch
+- add EDAC-amd64-Define-function-to-get-interleave-address.patch
+- add EDAC-amd64-Add-support-for-address-translation-on-DF.patch
+- add EDAC-amd64-Add-glossary-of-acronyms-for-address-tran.patch
+- add EDAC-amd64-Add-check-for-when-to-add-DRAM-base-and-h.patch
+- add EDAC-amd64-Save-the-number-of-block-instances.patch
+- add EDAC-amd64-Add-address-translation-support-for-DF3.5.patch
+
+DROP 5.15-lucjan-ll76-rc1
+
 5.15-lucjan-ll76-rc1
 
 - sync with upstream (drop Revert-drm-i915-Implement-Wa_1508744258.patch)
