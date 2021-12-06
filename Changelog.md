@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll75
+
+- update mm-5.15-protect-mappings-under-memory-pressure.patch
+
 5.15-lucjan-ll74
 
 - add lrng-5.15-update-to-the-latest-git-HEAD.patch
