@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll77-rc1
+
+- sync with upstream (drop Revert-drm-i915-Implement-Wa_1508744258.patch)
+
 5.15-lucjan-ll76
 
 - drop x86-MCE-AMD-EDAC-amd64-Move-address-translation-to-A.patch
