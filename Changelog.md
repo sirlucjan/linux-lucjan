@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll79
+
+- add Revert-netfilter-Add-full-cone-NAT-support.patch
+- add Revert-drm-i915-Add-workaround-numbers-to-GEN7_COMMO.patch
+- add amd-pmu-fix-s2idle-failures-on-certain-AMD-laptops.patch
+- add netfilter-Add-full-cone-NAT-support.patch
+
 5.15-lucjan-ll78-rc1 --> 5.15-lucjan-ll78
 
 5.15-lucjan-ll78-rc1
