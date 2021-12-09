@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll80
+
+- add clearlinux-5.15-backport-patches-from-clearlinux-rep.patch
+
 5.15-lucjan-ll79
 
 - add Revert-netfilter-Add-full-cone-NAT-support.patch
