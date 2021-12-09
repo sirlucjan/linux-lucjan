@@ -6,6 +6,15 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll81
+
+- add x86-sched-Decrease-further-the-priorities-of-SMT-sib.patch
+- add sched-topology-Introduce-sched_group-flags.patch
+- add sched-fair-Optimize-checking-for-group_asym_packing.patch
+- add sched-fair-Provide-update_sg_lb_stats-with-sched-dom.patch
+- add sched-fair-Carve-out-logic-to-mark-a-group-for-asymm.patch
+- add sched-fair-Consider-SMT-in-ASYM_PACKING-load-balance.patch
+
 5.15-lucjan-ll80
 
 - add clearlinux-5.15-backport-patches-from-clearlinux-rep.patch
