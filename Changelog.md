@@ -6,6 +6,15 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll83-rc1
+
+- sync with upstream (drop mm-damon-core-Avoid-fake-load-reports-due-to-uninter.patch)
+- sync with upstream (drop Revert-mm-damon-core-Avoid-fake-load-reports-due-to-.patch)
+- sync with upstream (drop mm-damon-core-Fix-fake-load-reports-due-to-uninterru.patch)
+- sync with upstream (drop timers-Implement-usleep_idle_range.patchd)
+- sync with upstream (update mm-damon-simplify-stop-mechanism.patch)
+- sync with upstream (update mm-damon-dbgfs-fix-missing-damon_dbgfs_lock.patch
+
 5.15-lucjan-ll82
 
 - add block-bfq-update-pos_root-for-idle-bfq_queue-in-bfq_.patch
