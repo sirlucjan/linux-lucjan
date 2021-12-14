@@ -6,6 +6,17 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll84
+
+- add block-wbt-fix-negative-inflight-counter-when-remove-.patch
+- add btrfs-Fix-memory-leak-in-__add_inode_ref.patch
+- add btrfs-fix-double-free-of-anon_dev-after-failure-to-c.patch
+- add btrfs-fix-invalid-delayed-ref-after-subvolume-creati.patch
+- add btrfs-fix-warning-when-freeing-leaf-after-subvolume-.patch
+- add btrfs-skip-transaction-commit-after-failure-to-creat.patch
+- add btrfs-check-WRITE_ERR-when-trying-to-read-an-extent-.patch
+- add btrfs-fix-missing-last-dir-item-offset-update-when-l.patch
+
 5.15-lucjan-ll83-rc2 --> 5.15-lucjan-ll83
 
 5.15-lucjan-ll83-rc2
