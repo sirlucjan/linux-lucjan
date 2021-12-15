@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll86
+
+- add sched-alt-Optimize-loops-in-update_sched_rq_watermar.patch
+
 5.15-lucjan-ll85
 
 - add wait-Add-EXPORT_SYMBOL-for-__wake_up_pollfree.patch
