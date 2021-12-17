@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll89
+
+- add btrfs-don-t-log-unnecessary-boundary-keys-when-loggi.patch
+- add btrfs-put-initial-index-value-of-a-directory-in-a-co.patch
+- add btrfs-stop-copying-old-dir-items-when-logging-a-dire.patch
+- add btrfs-stop-trying-to-log-subdirectories-created-in-p.patch
+
 5.15-lucjan-ll88
 
 - add bfq-fix-use-after-free-in-bfq_dispatch_request.patch
