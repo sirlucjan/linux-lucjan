@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll90
+
+- add xfs-check-sb_meta_uuid-for-dabuf-buffer-recovery.patch
+
 5.15-lucjan-ll89
 
 - add btrfs-don-t-log-unnecessary-boundary-keys-when-loggi.patch
