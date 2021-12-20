@@ -6,6 +6,46 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll91
+
+- drop drm-i915-Add-workaround-numbers-to-GEN7_COMMON_SLICE.patch
+- drop x86-cpufeatures-add-AMD-Collaborative-Processor-Perf.patch
+- drop x86-msr-add-AMD-CPPC-MSR-definitions.patch
+- drop ACPI-CPPC-implement-support-for-SystemIO-registers.patch
+- drop ACPI-CPPC-Check-present-CPUs-for-determining-_CPC-is.patch
+- drop ACPI-CPPC-add-cppc-enable-register-function.patch
+- drop cpufreq-amd-introduce-a-new-amd-pstate-driver-to-sup.patch
+- drop cpufreq-amd-add-fast-switch-function-for-amd-pstate.patch
+- drop cpufreq-amd-introduce-the-support-for-the-processors.patch
+- drop cpufreq-amd-add-trace-for-amd-pstate-module.patch
+- drop cpufreq-amd-add-boost-mode-support-for-amd-pstate.patch
+- drop cpufreq-amd-add-amd-pstate-frequencies-attributes.patch
+- drop cpufreq-amd-add-amd-pstate-performance-attributes.patch
+- drop cpupower-add-AMD-P-state-capability-flag.patch
+- drop cpupower-add-the-function-to-check-amd-pstate-enable.patch
+- drop cpupower-initial-AMD-P-state-capability.patch
+- drop cpupower-add-the-function-to-get-the-sysfs-value-fro.patch
+- drop cpupower-introduce-acpi-cppc-library.patch
+- drop cpupower-add-amd-pstate-sysfs-definition-and-access-.patch
+- drop cpupower-enable-boost-state-support-for-amd-pstate-m.patch
+- drop cpupower-move-print_speed-function-into-misc-helper.patch
+- drop cpupower-print-amd-pstate-information-on-cpupower.patch
+- drop Documentation-amd-pstate-add-amd-pstate-driver-intro.patch
+- add x86-cpufeatures-add-AMD-Collaborative-Processor-Perf.patch
+- add x86-msr-add-AMD-CPPC-MSR-definitions.patch
+- add ACPI-CPPC-implement-support-for-SystemIO-registers.patch
+- add ACPI-CPPC-Check-present-CPUs-for-determining-_CPC-is.patch
+- add ACPI-CPPC-add-cppc-enable-register-function.patch
+- add cpufreq-amd-pstate-introduce-a-new-AMD-P-State-drive.patch
+- add cpufreq-amd-pstate-add-fast-switch-function-for-AMD-.patch
+- add cpufreq-amd-pstate-introduce-the-support-for-the-pro.patch
+- add cpufreq-amd-pstate-add-trace-for-AMD-P-State-module.patch
+- add cpufreq-amd-pstate-add-boost-mode-support-for-AMD-P-.patch
+- add cpufreq-amd-pstate-add-AMD-P-State-frequencies-attri.patch
+- add cpufreq-amd-pstate-add-AMD-P-State-performance-attri.patch
+- add Documentation-AMD-P-State-add-AMD-P-State-driver-int.patch
+- add MAINTAINERS-add-AMD-P-State-driver-maintainer-entry.patch
+
 5.15-lucjan-ll90
 
 - add xfs-check-sb_meta_uuid-for-dabuf-buffer-recovery.patch
