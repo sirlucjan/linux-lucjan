@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll93-rc1
+
+- sync with upstream (drop btrfs-Fix-memory-leak-in-__add_inode_ref.patch)
+- sync with upstream (drop btrfs-fix-double-free-of-anon_dev-after-failure-to-c.patch)
+- sync with upstream (drop btrfs-check-WRITE_ERR-when-trying-to-read-an-extent-.patch)
+
 5.15-lucjan-ll92
 
 - add Revert-hwmon-nct6775-add-MAXIMUS-VII-HERO.patch
