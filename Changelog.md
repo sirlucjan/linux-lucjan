@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll92
+
+- add Revert-hwmon-nct6775-add-MAXIMUS-VII-HERO.patch
+- add hwmon-nct6775-Additional-check-for-ChipID-before-ASU.patch
+- add Add-module_version-macro.patch
+
 5.15-lucjan-ll91
 
 - drop drm-i915-Add-workaround-numbers-to-GEN7_COMMON_SLICE.patch
