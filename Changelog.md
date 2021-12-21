@@ -6,6 +6,18 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll93
+
+- add Revert-block-bfq-update-pos_root-for-idle-bfq_queue-.patch
+- add block-bfq-cleanup-bfq_bfqq_to_bfqg.patch
+- add block-bfq-avoid-moving-bfqq-to-it-s-parent-bfqg.patch
+- add block-bfq-don-t-move-oom_bfqq.patch
+- add block-bfq-update-pos_root-for-idle-bfq_queue-in-bfq_.patch
+- add block-bfq-Fix-bfq_group-error.patch
+- add hwmon-nct6775-add-ROG-STRIX-B550-A-X570-I-GAMING.patch
+
+DROP 5.15-lucjan-ll93-rc1
+
 5.15-lucjan-ll93-rc1
 
 - sync with upstream (drop btrfs-Fix-memory-leak-in-__add_inode_ref.patch)
