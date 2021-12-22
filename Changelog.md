@@ -6,6 +6,15 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll96
+
+- add ksmbd-Fix-buffer_check_err-kernel-doc-comment.patch
+- add ksmbd-Fix-smb2_set_info_file-kernel-doc-comment.patch
+- add ksmbd-Delete-an-invalid-argument-description-in-smb2.patch
+- add ksmbd-Fix-smb2_get_name-kernel-doc-comment.patch
+- add btrfs-fix-reserved-space-leak-on-log-tree-nodes-afte.patch
+- add HID-holtek-fix-mouse-probing.patch
+
 5.15-lucjan-ll95-rc1 --> 5.15-lucjan-ll95
 
 5.15-lucjan-ll95-rc1
