@@ -8,9 +8,9 @@
 
 5.15-lucjan-ll97
 
-- add kbuild-use-perl-instead-of-shell-to-get-file-size.patch
-- add kbuild-pass-stream-size-no-content-size-to-zstd.patch
-- update kbuild-allow-setting-zstd-compression-level-for-kern.patch
+- add bfq-Avoid-false-marking-of-bic-as-stably-merged.patch
+- add bfq-Avoid-merging-queues-with-different-parents.patch
+- add bfq-Split-shared-queues-on-move-between-cgroups.patch
 
 5.15-lucjan-ll96
 
