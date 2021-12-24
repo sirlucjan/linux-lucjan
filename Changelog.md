@@ -6,11 +6,21 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
-5.15-lucjan-ll97
+5.15-lucjan-ll99
+
+- add amd-pstate-5.15-update-to-v7.patch
+
+5.15-lucjan-ll98
 
 - add bfq-Avoid-false-marking-of-bic-as-stably-merged.patch
 - add bfq-Avoid-merging-queues-with-different-parents.patch
 - add bfq-Split-shared-queues-on-move-between-cgroups.patch
+
+5.15-lucjan-ll97
+
+- add kbuild-use-perl-instead-of-shell-to-get-file-size.patch
+- add kbuild-pass-stream-size-no-content-size-to-zstd.patch
+- update kbuild-allow-setting-zstd-compression-level-for-kern.patch
 
 5.15-lucjan-ll96
 
