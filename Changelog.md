@@ -6,6 +6,15 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll100
+
+- add ksmbd-Remove-unused-parameter-from-smb2_get_name.patch
+- add ksmbd-Remove-unused-fields-from-ksmbd_file-struct-de.patch
+- add ksmbd-set-RSS-capable-in-FSCTL_QUERY_NETWORK_INTERFA.patch
+- add ksmbd-set-both-ipv4-and-ipv6-in-FSCTL_QUERY_NETWORK_.patch
+- add ksmbd-fix-multi-session-connection-failure.patch
+- add ksmbd-force-fail-immediately-flag-on-fs-with-its-own.patch
+
 5.15-lucjan-ll99
 
 - add amd-pstate-5.15-update-to-v7.patch
