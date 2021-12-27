@@ -6,6 +6,17 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll102-rc1
+
+- sync with upstream (drop HID-holtek-fix-mouse-probing.patch)
+- sync with upstream (drop ksmbd-fix-error-code-in-ndr_read_int32.patch)
+- sync with upstream (drop ksmbd-fix-uninitialized-symbol-pntsd_size.patch)
+- sync with upstream (drop ksmbd-disable-SMB2_GLOBAL_CAP_ENCRYPTION-for-SMB-3.1.patch)
+- sync with upstream (drop tcp-move-inet-rx_dst_ifindex-to-sk-sk_rx_dst_ifindex.patch)
+- sync with upstream (drop ipv6-move-inet6_sk-sk-rx_dst_cookie-to-sk-sk_rx_dst_.patch)
+- sync with upstream (update net-move-early-demux-fields-close-to-sk_refcnt.patch)
+- sync with upstream (update mm-damon-remove-return-value-from-before_terminate-c.patch)
+
 5.15-lucjan-ll101
 
 - add hwmon-nct6775-delete-some-extension-lines.patch
@@ -177,9 +188,9 @@ DROP 5.15-lucjan-ll93-rc1
 - sync with upstream (drop mm-damon-core-Avoid-fake-load-reports-due-to-uninter.patch)
 - sync with upstream (drop Revert-mm-damon-core-Avoid-fake-load-reports-due-to-.patch)
 - sync with upstream (drop mm-damon-core-Fix-fake-load-reports-due-to-uninterru.patch)
-- sync with upstream (drop timers-Implement-usleep_idle_range.patchd)
+- sync with upstream (drop timers-Implement-usleep_idle_range.patch)
 - sync with upstream (update mm-damon-simplify-stop-mechanism.patch)
-- sync with upstream (update mm-damon-dbgfs-fix-missing-damon_dbgfs_lock.patch
+- sync with upstream (update mm-damon-dbgfs-fix-missing-damon_dbgfs_lock.patch)
 
 5.15-lucjan-ll82
 
