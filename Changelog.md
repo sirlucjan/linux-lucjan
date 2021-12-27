@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll101
+
+- add hwmon-nct6775-delete-some-extension-lines.patch
+
 5.15-lucjan-ll100
 
 - add ksmbd-Remove-unused-parameter-from-smb2_get_name.patch
