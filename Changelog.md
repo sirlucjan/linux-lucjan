@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll105
+
+- add btrfs-add-a-BTRFS_FS_ERROR-helper.patch
+- add btrfs-change-error-handling-for-btrfs_delete_-_in_lo.patch
+- add btrfs-change-handle_fs_error-in-recover_log_trees-to.patch
+
 5.15-lucjan-ll104
 
 - add Revert-block-bfq-update-pos_root-for-idle-bfq_queue-.patch
