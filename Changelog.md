@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll106-rc1
+
+- sync with upstream (update mm-damon-dbgfs-support-physical-memory-monitoring.patch)
+
 5.15-lucjan-ll105
 
 - add btrfs-add-a-BTRFS_FS_ERROR-helper.patch
