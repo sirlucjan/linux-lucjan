@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll107
+
+- add bfq-Fix-__bfq_lookup_next_entity-kernel-doc-comment.patch
+
+DROP 5.15-lucjan-ll107-rc1
+
 5.15-lucjan-ll107-rc1
 
 - sync with upstream (update mm-damon-dbgfs-support-physical-memory-monitoring.patch)
