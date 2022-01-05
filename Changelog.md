@@ -6,6 +6,20 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll109
+
+- add Revert-btrfs-fix-reserved-space-leak-on-log-tree-nod.patch
+- add btrfs-fix-log-tree-cleanup-after-a-transaction-abort.patch
+- add btrfs-remove-write-and-wait-of-struct-walk_control.patch
+- add amd-pstate-5.15-update-to-next.patch
+- add mm-damon-resync-against-upstream.patch
+- add ksmbd-register-ksmbd-ib-client-with-ib_register_clie.patch
+- add ksmbd-set-445-port-to-smbdirect-port-by-default.patch
+- add ksmbd-add-support-for-smb2-max-credit-parameter.patch
+- add ksmbd-move-credit-charge-deduction-under-processing-.patch
+- add ksmbd-limits-exceeding-the-maximum-allowable-outstan.patch
+- add ksmbd-smbd-call-rdma_accept-under-CM-handler.patch
+
 5.15-lucjan-ll108-rc1 --> 5.15-lucjan-ll108
 
 5.15-lucjan-ll108-rc1
