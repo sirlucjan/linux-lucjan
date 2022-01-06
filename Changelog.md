@@ -6,6 +6,18 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll110
+
+- add Revert-bfq-Split-shared-queues-on-move-between-cgrou.patch
+- add Revert-bfq-Avoid-merging-queues-with-different-paren.patch
+- add Revert-bfq-Avoid-false-marking-of-bic-as-stably-merg.patch
+- add bfq-Avoid-false-marking-of-bic-as-stably-merged.patch
+- addbfq-Avoid-merging-queues-with-different-parents.patch
+- add bfq-Simplify-bfq_put_cooperator.patch
+- add bfq-Split-shared-queues-on-move-between-cgroups.patch
+- add bfq-Update-cgroup-information-before-merging-bio.patch
+- add sched-alt-Alfred-Chen-s-PoC-sched_preferred_cpumask-.patch
+
 5.15-lucjan-ll109
 
 - add Revert-btrfs-fix-reserved-space-leak-on-log-tree-nod.patch
