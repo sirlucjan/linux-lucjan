@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.15-lucjan-ll111
+
+- add elevator-always-use-bfq-unless-overridden-by-flag.patch
+- add mt76-mt7921-Add-mt7922-support.patch
+- add mt76-mt7921-add-support-for-PCIe-ID-0x0608-0x0616.patch
+
 5.15-lucjan-ll110
 
 - add Revert-bfq-Split-shared-queues-on-move-between-cgrou.patch
