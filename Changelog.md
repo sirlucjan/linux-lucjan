@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll3-rc1
+
+- add hwmon-asus-ec-sensors-add-driver-for-ASUS-EC.patch
+- add hwmon-asus-ec-sensors-update-documentation.patch
+- add hwmon-deprecate-asis_wmi_ec_sensors-driver.patch
+- add hwmon-asus_wmi_ec_sensors-Support-T_Sensor-on-Prime-.patch
+- add hwmon-nct6775-add-support-for-TSI-temperature-regist.patch
+
 5.16-lucjan-ll2-rc1
 
 - add Revert-bfq-Update-cgroup-information-before-merging-.patch
