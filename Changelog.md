@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll4-rc1
+
+- drop net-remove-sk_route_forced_caps.patch
+- drop net-remove-sk_route_nocaps.patch
+- add hwmon-asus_wmi_sensors-add-ASUS-ROG-STRIX-B450-F-GAM.patch
+- add hwmon-nct6775-add-ASUS-Pro-B550M-C-PRIME-B550M-A.patch
+- add asus-wmi-5.16-fix-SENSORS_ASUS_WMI_EC-counterdep-on-.patch
+
 5.16-lucjan-ll3-rc1
 
 - add hwmon-asus-ec-sensors-add-driver-for-ASUS-EC.patch
