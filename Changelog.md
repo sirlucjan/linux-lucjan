@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll5-rc1
+
+- Revert-bfq-fix-use-after-free-in-bfq_dispatch_reques.patch (1)
+- Revert-bfq-fix-use-after-free-in-bfq_dispatch_reques.patch (2)
+
 5.16-lucjan-ll4-rc1
 
 - drop net-remove-sk_route_forced_caps.patch
