@@ -6,6 +6,19 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll6-rc1
+
+- add Revert-bfq-Update-cgroup-information-before-merging-.patch
+- add Revert-bfq-Split-shared-queues-on-move-between-cgrou.patch
+- add Revert-bfq-Avoid-merging-queues-with-different-paren.patch
+- add Revert-bfq-Avoid-false-marking-of-bic-as-stably-merg.patch
+- add bfq-Avoid-false-marking-of-bic-as-stably-merged.patch
+- add bfq-Avoid-merging-queues-with-different-parents.patch
+- add bfq-Split-shared-queues-on-move-between-cgroups.patch
+- add bfq-Update-cgroup-information-before-merging-bio.patch
+- add Revert-hwmon-nct6775-add-support-for-TSI-temperature.patch
+- add hwmon-nct6775-add-support-for-TSI-temperature-regist.patch
+
 5.16-lucjan-ll5-rc1
 
 - Revert-bfq-fix-use-after-free-in-bfq_dispatch_reques.patch (1)
