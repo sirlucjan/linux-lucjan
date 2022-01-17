@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll7-rc1
+
+- add AUFS 20220117
+- add openrgb-Deduplicate-piix4-setup-for-HUDSON2-KERNCZ-S.patch
+- add asus-wmi-5.16-update-asus_ec_sensors-to-v6.patch
+
 5.16-lucjan-ll6-rc1
 
 - add Revert-bfq-Update-cgroup-information-before-merging-.patch
