@@ -6,6 +6,21 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll9-rc1
+
+- add Watchdog-sp5100_tco-Move-timer-initialization-into-f.patch
+- add Watchdog-sp5100_tco-Refactor-MMIO-base-address-initi.patch
+- add Watchdog-sp5100_tco-Add-initialization-using-EFCH-MM.patch
+- add Watchdog-sp5100_tco-Enable-Family-17h-CPUs.patch
+- add i2c-piix4-Replace-hardcoded-memory-map-size-with-a-d.patch
+- add i2c-piix4-Move-port-I-O-region-request-release-code-.patch
+- add i2c-piix4-Move-SMBus-controller-base-address-detect-.patch
+- add i2c-piix4-Move-SMBus-port-selection-into-function.patch
+- add i2c-piix4-Add-EFCH-MMIO-support-to-region-request-an.patch
+- add i2c-piix4-Add-EFCH-MMIO-support-to-SMBus-base-addres.patch
+- add i2c-piix4-Add-EFCH-MMIO-support-for-SMBus-port-selec.patch
+- add i2c-piix4-Enable-EFCH-MMIO-for-Family-17h.patch
+
 5.16-lucjan-ll8-rc1
 
 - add Revert-sched-alt-Alfred-Chen-s-PoC-sched_preferred_c.patch
