@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll10-rc1
+
+- add btrfs-skip-reserved-bytes-warning-on-unmount-after-l.patch
+- update LL-Implement-ll-branding-v5.16.patch
+
 5.16-lucjan-ll9-rc1
 
 - add Watchdog-sp5100_tco-Move-timer-initialization-into-f.patch
