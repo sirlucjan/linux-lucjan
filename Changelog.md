@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll11-rc2
+
+- add asus-wmi-5.16-update-asus_ec_sensors-to-v7.patch
+
 5.16-lucjan-ll11-rc1
 
 - add Revert-bfq-Update-cgroup-information-before-merging-.patch
