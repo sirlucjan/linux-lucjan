@@ -6,6 +6,23 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll13-rc1
+
+- sync with upstream (drop bfq-Do-not-let-waker-requests-skip-proper-accounting.patch)
+- sync with upstream (drop ACPI-CPPC-Check-present-CPUs-for-determining-_CPC-is.patch)
+- sync with upstream (drop x86-sched-Fix-the-undefined-reference-building-error.patch)
+- sync with upstream (drop f2fs-fix-remove-page-failed-in-invalidate-compress-p.patch)
+- sync with upstream (drop f2fs-show-number-of-pending-discard-commands.patch)
+- sync with upstream (drop f2fs-fix-to-do-sanity-check-on-inode-type-during-gar.patch)
+- sync with upstream (drop f2fs-fix-to-avoid-panic-in-is_alive-if-metadata-is-i.patch)
+- sync with upstream (drop f2fs-add-gc_urgent_high_remaining-sysfs-node.patch)
+- sync with upstream (drop f2fs-avoid-EINVAL-by-SBI_NEED_FSCK-when-pinning-a-fi.patch)
+- sync with upstream (drop f2fs-compress-fix-potential-deadlock-of-compress-fil.patch)
+- sync with upstream (drop f2fs-fix-to-do-sanity-check-on-last-xattr-entry-in-_.patch)
+- sync with upstream (drop f2fs-fix-to-check-available-space-of-CP-area-correct.patch)
+- sync with upstream (drop f2fs-fix-to-reserve-space-for-IO-align-feature.patch)
+- sync with upstream (update PRJC-for-5.16.patch)
+
 5.16-lucjan-ll13-rc1 --> 5.16-lucjan-ll13
 
 5.16-lucjan-ll13-rc1
