@@ -6,7 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
-5.16-lucjan-ll11-rc2
+5.16-lucjan-ll13-rc1
+
+- add v4l2loopback-5.16-update-to-latest-git-HEAD.patch
+
+5.16-lucjan-ll12-rc1
 
 - add asus-wmi-5.16-update-asus_ec_sensors-to-v7.patch
 
