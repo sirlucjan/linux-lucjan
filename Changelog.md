@@ -6,7 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
-5.16-lucjan-ll13-rc1
+5.16-lucjan-ll14
+
+- add asus-wmi-5.16-update-asus_ec_sensors-to-v7.patch
+
+5.16-lucjan-ll14-rc1 --> 5.16-lucjan-ll14
+
+5.16-lucjan-ll14-rc1
 
 - sync with upstream (drop bfq-Do-not-let-waker-requests-skip-proper-accounting.patch)
 - sync with upstream (drop ACPI-CPPC-Check-present-CPUs-for-determining-_CPC-is.patch)
