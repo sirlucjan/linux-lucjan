@@ -6,6 +6,17 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll16
+
+- add btrfs-add-helper-to-delete-a-dir-entry-from-a-log-tr.patch
+- add btrfs-pass-the-dentry-to-btrfs_log_new_name-instead-.patch
+- add btrfs-avoid-logging-all-directory-changes-during-ren.patch
+- add btrfs-stop-doing-unnecessary-log-updates-during-a-re.patch
+- add btrfs-avoid-inode-logging-during-rename-and-link-whe.patch
+- add btrfs-use-single-variable-to-track-return-value-at-b.patch
+- add btrfs-fix-use-after-free-after-failure-to-create-a-s.patch
+- add iomap-Address-soft-lockup-in-iomap_finish_ioend.patch
+
 5.16-lucjan-ll15-rc1 --> 5.16-lucjan-ll15
 
 5.16-lucjan-ll15-rc1
