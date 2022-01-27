@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll17
+
+- add Bluetooth-Read-codec-capabilities-only-if-supported.patch
+
 5.16-lucjan-ll16
 
 - add btrfs-add-helper-to-delete-a-dir-entry-from-a-log-tr.patch
