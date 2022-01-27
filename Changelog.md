@@ -6,6 +6,24 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll18
+
+- add bitops-move-find_bit_-_le-functions-from-le.h-to-fin.patch
+- add include-move-find.h-from-asm_generic-to-linux.patch
+- add arch-remove-GENERIC_FIND_FIRST_BIT-entirely.patch
+- add lib-add-find_first_and_bit.patch
+- add cpumask-use-find_first_and_bit.patch
+- add all-replace-find_next-_zero-_bit-with-find_first-_ze.patch
+- add tools-sync-tools-bitmap-with-mother-linux.patch
+- add cpumask-replace-cpumask_next_-with-cpumask_first_-wh.patch
+- add include-linux-move-for_each_bit-macros-from-bitops.h.patch
+- add find-micro-optimize-for_each_-set-clear-_bit.patch
+- add Replace-for_each_-_bit_from-with-for_each_-_bit-wher.patch
+- add mm-percpu-micro-optimize-pcpu_is_populated.patch
+- add bitmap-unify-find_bit-operations.patch
+- add lib-bitmap-add-performance-test-for-bitmap_print_to_.patch
+- add vsprintf-rework-bitmap_list_string.patch
+
 5.16-lucjan-ll17
 
 - add Bluetooth-Read-codec-capabilities-only-if-supported.patch
