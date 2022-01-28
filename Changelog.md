@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll19
+
+- add mac80211-ignore-AP-power-level-when-tx-power-type-is.patch
+
 5.16-lucjan-ll18
 
 - add bitops-move-find_bit_-_le-functions-from-le.h-to-fin.patch
