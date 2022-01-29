@@ -1,6 +1,6 @@
-From 5bf497bcd9ef095a148cbfc11d99b209faead4a4 Mon Sep 17 00:00:00 2001
+From 84cffea0d58bd25350575a08056fa442ffe3a925 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Fri, 28 Jan 2022 14:43:12 +0100
+Date: Fri, 28 Jan 2022 14:44:29 +0100
 Subject: [PATCH] 5.16-lucjan-ll19
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3948,7 +3948,7 @@ index dd36acc87..d749fb1ab 100644
  M:	Eric Piel <eric.piel@tremplin-utc.net>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index acb8ffee6..d55bab54b 100644
+index 381e365b1..1bf76caf9 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -14,6 +14,10 @@ NAME = Gobble Gobble
@@ -106306,10 +106306,10 @@ index 066209323..8d7bbf3c9 100644
  			wait_event_freezable(ksm_thread_wait,
  				ksmd_should_run() || kthread_should_stop());
 diff --git a/mm/memcontrol.c b/mm/memcontrol.c
-index 2ed5f2a08..33576f681 100644
+index fdc952f27..a59278ed3 100644
 --- a/mm/memcontrol.c
 +++ b/mm/memcontrol.c
-@@ -5098,6 +5098,7 @@ static void __mem_cgroup_free(struct mem_cgroup *memcg)
+@@ -5104,6 +5104,7 @@ static void __mem_cgroup_free(struct mem_cgroup *memcg)
  
  static void mem_cgroup_free(struct mem_cgroup *memcg)
  {
@@ -106317,7 +106317,7 @@ index 2ed5f2a08..33576f681 100644
  	memcg_wb_domain_exit(memcg);
  	__mem_cgroup_free(memcg);
  }
-@@ -5161,6 +5162,7 @@ static struct mem_cgroup *mem_cgroup_alloc(void)
+@@ -5167,6 +5168,7 @@ static struct mem_cgroup *mem_cgroup_alloc(void)
  	memcg->deferred_split_queue.split_queue_len = 0;
  #endif
  	idr_replace(&mem_cgroup_idr, memcg, memcg->id.id);
@@ -106325,7 +106325,7 @@ index 2ed5f2a08..33576f681 100644
  	return memcg;
  fail:
  	mem_cgroup_id_remove(memcg);
-@@ -6133,6 +6135,29 @@ static void mem_cgroup_move_task(void)
+@@ -6139,6 +6141,29 @@ static void mem_cgroup_move_task(void)
  }
  #endif
  
@@ -106355,7 +106355,7 @@ index 2ed5f2a08..33576f681 100644
  static int seq_puts_memcg_tunable(struct seq_file *m, unsigned long value)
  {
  	if (value == PAGE_COUNTER_MAX)
-@@ -6476,6 +6501,7 @@ struct cgroup_subsys memory_cgrp_subsys = {
+@@ -6482,6 +6507,7 @@ struct cgroup_subsys memory_cgrp_subsys = {
  	.css_reset = mem_cgroup_css_reset,
  	.css_rstat_flush = mem_cgroup_css_rstat_flush,
  	.can_attach = mem_cgroup_can_attach,
