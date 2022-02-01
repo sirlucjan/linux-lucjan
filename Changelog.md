@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll21
+
+- add lib-zstd-clean-up-double-word-in-comment.patch
+
 5.16-lucjan-ll20
 
 - drop Watchdog-sp5100_tco-Move-timer-initialization-into-f.patch
