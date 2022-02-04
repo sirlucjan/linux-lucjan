@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll23
+
+- add kernel-cpu.c-fix-init_cpu_online.patch
+- add hwmon-asus-ec-sensors-Add-Crosshair-VIII-Hero-WiFi.patch
+
 5.16-lucjan-ll22
 
 - add Revert-btrfs-use-single-variable-to-track-return-val.patch
