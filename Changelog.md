@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll24
+
+- add btrfs-stop-checking-for-NULL-return-from-btrfs_get_e.patch
+- add btrfs-fix-lost-error-return-value-when-reading-a-dat.patch
+- add btrfs-remove-no-longer-used-counter-when-reading-dat.patch
+- add btrfs-assert-we-have-a-write-lock-when-removing-and-.patch
+
 5.16-lucjan-ll23
 
 - add kernel-cpu.c-fix-init_cpu_online.patch
