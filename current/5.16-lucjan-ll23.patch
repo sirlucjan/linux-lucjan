@@ -1,6 +1,6 @@
-From 3008ccb0614e48b371786cfbc4e786c478887e13 Mon Sep 17 00:00:00 2001
+From b191490464100ada751d34cb26c770b5635daf1f Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Fri, 4 Feb 2022 17:13:06 +0100
+Date: Fri, 4 Feb 2022 17:15:13 +0100
 Subject: [PATCH] 5.16-lucjan-ll23
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -92781,7 +92781,7 @@ index d18c2ef31..06db369e2 100644
  /*
   * sock->sk_cgrp_data handling.  For more info, see sock_cgroup_data
 diff --git a/kernel/cgroup/cpuset.c b/kernel/cgroup/cpuset.c
-index d0e163a02..b5276a7a5 100644
+index ff8f2f522..71656611a 100644
 --- a/kernel/cgroup/cpuset.c
 +++ b/kernel/cgroup/cpuset.c
 @@ -682,7 +682,7 @@ static int validate_change(struct cpuset *cur, struct cpuset *trial)
@@ -116460,7 +116460,7 @@ index 63cb953bd..0d4fa04a4 100644
  	tristate "REDIRECT target support"
  	depends on NETFILTER_ADVANCED
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index 2bb28bfd8..ec3cbec31 100644
+index 94cbba9fb..3b0c7ba28 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
 @@ -292,7 +292,7 @@ EXPORT_PER_CPU_SYMBOL_GPL(tcp_orphan_count);
@@ -116514,7 +116514,7 @@ index 2bb28bfd8..ec3cbec31 100644
  		       READ_ONCE(tp->urg_seq) == READ_ONCE(tp->copied_seq);
  		break;
  	case SIOCOUTQ:
-@@ -1466,7 +1467,7 @@ static int tcp_recv_urg(struct sock *sk, struct msghdr *msg, int len, int flags)
+@@ -1469,7 +1470,7 @@ static int tcp_recv_urg(struct sock *sk, struct msghdr *msg, int len, int flags)
  		char c = tp->urg_data;
  
  		if (!(flags & MSG_PEEK))
@@ -116523,7 +116523,7 @@ index 2bb28bfd8..ec3cbec31 100644
  
  		/* Read urgent data. */
  		msg->msg_flags |= MSG_OOB;
-@@ -1580,6 +1581,36 @@ void tcp_cleanup_rbuf(struct sock *sk, int copied)
+@@ -1583,6 +1584,36 @@ void tcp_cleanup_rbuf(struct sock *sk, int copied)
  		tcp_send_ack(sk);
  }
  
@@ -116560,7 +116560,7 @@ index 2bb28bfd8..ec3cbec31 100644
  static struct sk_buff *tcp_recv_skb(struct sock *sk, u32 seq, u32 *off)
  {
  	struct sk_buff *skb;
-@@ -1599,7 +1630,7 @@ static struct sk_buff *tcp_recv_skb(struct sock *sk, u32 seq, u32 *off)
+@@ -1602,7 +1633,7 @@ static struct sk_buff *tcp_recv_skb(struct sock *sk, u32 seq, u32 *off)
  		 * splitted a fat GRO packet, while we released socket lock
  		 * in skb_splice_bits()
  		 */
@@ -116569,7 +116569,7 @@ index 2bb28bfd8..ec3cbec31 100644
  	}
  	return NULL;
  }
-@@ -1633,7 +1664,7 @@ int tcp_read_sock(struct sock *sk, read_descriptor_t *desc,
+@@ -1636,7 +1667,7 @@ int tcp_read_sock(struct sock *sk, read_descriptor_t *desc,
  
  			len = skb->len - offset;
  			/* Stop reading if we hit a patch of urgent data */
@@ -116578,7 +116578,7 @@ index 2bb28bfd8..ec3cbec31 100644
  				u32 urg_offset = tp->urg_seq - seq;
  				if (urg_offset < len)
  					len = urg_offset;
-@@ -1665,11 +1696,11 @@ int tcp_read_sock(struct sock *sk, read_descriptor_t *desc,
+@@ -1668,11 +1699,11 @@ int tcp_read_sock(struct sock *sk, read_descriptor_t *desc,
  				continue;
  		}
  		if (TCP_SKB_CB(skb)->tcp_flags & TCPHDR_FIN) {
@@ -116592,7 +116592,7 @@ index 2bb28bfd8..ec3cbec31 100644
  		if (!desc->count)
  			break;
  		WRITE_ONCE(tp->copied_seq, seq);
-@@ -2329,7 +2360,7 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
+@@ -2332,7 +2363,7 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
  		u32 offset;
  
  		/* Are we at urgent data? Stop if we have read anything or have SIGURG pending. */
@@ -116601,7 +116601,7 @@ index 2bb28bfd8..ec3cbec31 100644
  			if (copied)
  				break;
  			if (signal_pending(current)) {
-@@ -2372,10 +2403,10 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
+@@ -2375,10 +2406,10 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
  			break;
  
  		if (copied) {
@@ -116614,7 +116614,7 @@ index 2bb28bfd8..ec3cbec31 100644
  			    signal_pending(current))
  				break;
  		} else {
-@@ -2409,13 +2440,12 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
+@@ -2412,13 +2443,12 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
  			}
  		}
  
@@ -116631,7 +116631,7 @@ index 2bb28bfd8..ec3cbec31 100644
  			sk_wait_data(sk, &timeo, last);
  		}
  
-@@ -2435,7 +2465,7 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
+@@ -2438,7 +2468,7 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
  			used = len;
  
  		/* Do we have urgent data here? */
@@ -116640,7 +116640,7 @@ index 2bb28bfd8..ec3cbec31 100644
  			u32 urg_offset = tp->urg_seq - *seq;
  			if (urg_offset < used) {
  				if (!urg_offset) {
-@@ -2469,8 +2499,8 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
+@@ -2472,8 +2502,8 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
  		tcp_rcv_space_adjust(sk);
  
  skip_copy:
@@ -116651,7 +116651,7 @@ index 2bb28bfd8..ec3cbec31 100644
  			tcp_fast_path_check(sk);
  		}
  
-@@ -2485,14 +2515,14 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
+@@ -2488,14 +2518,14 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
  		if (TCP_SKB_CB(skb)->tcp_flags & TCPHDR_FIN)
  			goto found_fin_ok;
  		if (!(flags & MSG_PEEK))
@@ -116668,7 +116668,7 @@ index 2bb28bfd8..ec3cbec31 100644
  		break;
  	} while (len > 0);
  
-@@ -2534,6 +2564,7 @@ int tcp_recvmsg(struct sock *sk, struct msghdr *msg, size_t len, int nonblock,
+@@ -2537,6 +2567,7 @@ int tcp_recvmsg(struct sock *sk, struct msghdr *msg, size_t len, int nonblock,
  	ret = tcp_recvmsg_locked(sk, msg, len, nonblock, flags, &tss,
  				 &cmsg_flags);
  	release_sock(sk);
@@ -116676,7 +116676,7 @@ index 2bb28bfd8..ec3cbec31 100644
  
  	if (cmsg_flags && ret >= 0) {
  		if (cmsg_flags & TCP_CMSG_TS)
-@@ -2964,7 +2995,7 @@ int tcp_disconnect(struct sock *sk, int flags)
+@@ -2967,7 +2998,7 @@ int tcp_disconnect(struct sock *sk, int flags)
  	tcp_clear_xmit_timers(sk);
  	__skb_queue_purge(&sk->sk_receive_queue);
  	WRITE_ONCE(tp->copied_seq, tp->rcv_nxt);
@@ -116685,7 +116685,7 @@ index 2bb28bfd8..ec3cbec31 100644
  	tcp_write_queue_purge(sk);
  	tcp_fastopen_active_disable_ofo_check(sk);
  	skb_rbtree_purge(&tp->out_of_order_queue);
-@@ -3044,6 +3075,7 @@ int tcp_disconnect(struct sock *sk, int flags)
+@@ -3047,6 +3078,7 @@ int tcp_disconnect(struct sock *sk, int flags)
  	tp->rx_opt.dsack = 0;
  	tp->rx_opt.num_sacks = 0;
  	tp->rcv_ooopack = 0;
@@ -116693,7 +116693,7 @@ index 2bb28bfd8..ec3cbec31 100644
  
  
  	/* Clean up fastopen related fields */
-@@ -3058,7 +3090,7 @@ int tcp_disconnect(struct sock *sk, int flags)
+@@ -3061,7 +3093,7 @@ int tcp_disconnect(struct sock *sk, int flags)
  		sk->sk_frag.page = NULL;
  		sk->sk_frag.offset = 0;
  	}
@@ -116702,7 +116702,7 @@ index 2bb28bfd8..ec3cbec31 100644
  	sk_error_report(sk);
  	return 0;
  }
-@@ -3773,10 +3805,12 @@ void tcp_get_info(struct sock *sk, struct tcp_info *info)
+@@ -3776,10 +3808,12 @@ void tcp_get_info(struct sock *sk, struct tcp_info *info)
  	tcp_get_info_chrono_stats(tp, info);
  
  	info->tcpi_segs_out = tp->segs_out;
@@ -116717,7 +116717,7 @@ index 2bb28bfd8..ec3cbec31 100644
  	info->tcpi_data_segs_out = tp->data_segs_out;
  
  	info->tcpi_delivery_rate_app_limited = tp->rate_app_limited ? 1 : 0;
-@@ -4185,6 +4219,7 @@ static int do_tcp_getsockopt(struct sock *sk, int level,
+@@ -4188,6 +4222,7 @@ static int do_tcp_getsockopt(struct sock *sk, int level,
  		err = BPF_CGROUP_RUN_PROG_GETSOCKOPT_KERN(sk, level, optname,
  							  &zc, &len, err);
  		release_sock(sk);
@@ -116725,7 +116725,7 @@ index 2bb28bfd8..ec3cbec31 100644
  		if (len >= offsetofend(struct tcp_zerocopy_receive, msg_flags))
  			goto zerocopy_rcv_cmsg;
  		switch (len) {
-@@ -4560,8 +4595,8 @@ void __init tcp_init(void)
+@@ -4563,8 +4598,8 @@ void __init tcp_init(void)
  	tcp_init_mem();
  	/* Set per-socket limits to no more than 1/128 the pressure threshold */
  	limit = nr_free_buffer_pages() << (PAGE_SHIFT - 7);
@@ -119494,7 +119494,7 @@ index db5831e6c..153ed9010 100644
  		icsk->icsk_ca_ops->init(sk);
  	if (tcp_ca_needs_ecn(sk))
 diff --git a/net/ipv4/tcp_input.c b/net/ipv4/tcp_input.c
-index 0ce46849e..83bde7ed9 100644
+index 2b8e84d24..70246fd2b 100644
 --- a/net/ipv4/tcp_input.c
 +++ b/net/ipv4/tcp_input.c
 @@ -349,7 +349,7 @@ static void __tcp_ecn_check_ce(struct sock *sk, const struct sk_buff *skb)
@@ -119546,7 +119546,7 @@ index 0ce46849e..83bde7ed9 100644
  	/* When we're adding to gso_segs == 1, gso_size will be zero,
  	 * in theory this shouldn't be necessary but as long as DSACK
  	 * code can come after this skb later on it's better to keep
-@@ -3788,6 +3804,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
+@@ -3790,6 +3806,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
  
  	prior_fack = tcp_is_sack(tp) ? tcp_highest_sack_seq(tp) : tp->snd_una;
  	rs.prior_in_flight = tcp_packets_in_flight(tp);
@@ -119554,7 +119554,7 @@ index 0ce46849e..83bde7ed9 100644
  
  	/* ts_recent update must be made after we are sure that the packet
  	 * is in window.
-@@ -3885,6 +3902,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
+@@ -3887,6 +3904,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
  	delivered = tcp_newly_delivered(sk, delivered, flag);
  	lost = tp->lost - lost;			/* freshly marked lost */
  	rs.is_ack_delayed = !!(flag & FLAG_ACK_MAYBE_DELAYED);
@@ -119562,7 +119562,7 @@ index 0ce46849e..83bde7ed9 100644
  	tcp_rate_gen(sk, delivered, lost, is_sack_reneg, sack_state.rate);
  	tcp_cong_control(sk, ack, delivered, flag, sack_state.rate);
  	tcp_xmit_recovery(sk, rexmit);
-@@ -5463,13 +5481,14 @@ static void __tcp_ack_snd_check(struct sock *sk, int ofo_possible)
+@@ -5465,13 +5483,14 @@ static void __tcp_ack_snd_check(struct sock *sk, int ofo_possible)
  
  	    /* More than one full frame received... */
  	if (((tp->rcv_nxt - tp->rcv_wup) > inet_csk(sk)->icsk_ack.rcv_mss &&
@@ -119579,7 +119579,7 @@ index 0ce46849e..83bde7ed9 100644
  	    /* We ACK each frame or... */
  	    tcp_in_quickack_mode(sk) ||
  	    /* Protocol state mandates a one-time immediate ACK */
-@@ -5591,7 +5610,7 @@ static void tcp_check_urg(struct sock *sk, const struct tcphdr *th)
+@@ -5593,7 +5612,7 @@ static void tcp_check_urg(struct sock *sk, const struct tcphdr *th)
  		}
  	}
  
@@ -119588,7 +119588,7 @@ index 0ce46849e..83bde7ed9 100644
  	WRITE_ONCE(tp->urg_seq, ptr);
  
  	/* Disable header prediction. */
-@@ -5604,11 +5623,11 @@ static void tcp_urg(struct sock *sk, struct sk_buff *skb, const struct tcphdr *t
+@@ -5606,11 +5625,11 @@ static void tcp_urg(struct sock *sk, struct sk_buff *skb, const struct tcphdr *t
  	struct tcp_sock *tp = tcp_sk(sk);
  
  	/* Check if we get a new urgent pointer - normally not. */
@@ -119602,7 +119602,7 @@ index 0ce46849e..83bde7ed9 100644
  		u32 ptr = tp->urg_seq - ntohl(th->seq) + (th->doff * 4) -
  			  th->syn;
  
-@@ -5617,7 +5636,7 @@ static void tcp_urg(struct sock *sk, struct sk_buff *skb, const struct tcphdr *t
+@@ -5619,7 +5638,7 @@ static void tcp_urg(struct sock *sk, struct sk_buff *skb, const struct tcphdr *t
  			u8 tmp;
  			if (skb_copy_bits(skb, ptr, &tmp, 1))
  				BUG();
