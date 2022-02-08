@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll26-rc1
+
+- sync with upstream (drop btrfs-fix-use-after-free-after-failure-to-create-a-s.patch)
+
 5.16-lucjan-ll25
 
 - add Bluetooth-fix-deadlock-for-RFCOMM-sk-state-change.patch
