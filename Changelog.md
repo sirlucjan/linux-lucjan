@@ -6,6 +6,16 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll26
+
+- add hwmon-asus-ec-sensors-fix-a-typo-in-asus_ec_probe.patch
+- add hwmon-asus-ec-sensors-read-sensors-as-signed-ints.patch
+- add hwmon-asus-ec-sensors-add-CPU-core-voltage.patch
+- add hwmon-nct6775-add-PRIME-B550-PLUS-motherboard-to-whi.patch
+- add hwmon-nct6775-add-ASUS-ROG-STRIX-Z390-Z490-X570-PRIM.patch
+
+DROP 5.16-lucjan-ll26-rc1
+
 5.16-lucjan-ll26-rc1
 
 - sync with upstream (drop btrfs-fix-use-after-free-after-failure-to-create-a-s.patch)
