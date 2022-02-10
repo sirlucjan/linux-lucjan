@@ -6,6 +6,18 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll28
+
+- add cpupower-Add-AMD-P-state-capability-flag.patch
+- add cpupower-Add-the-function-to-check-AMD-P-State-enabl.patch
+- add cpupower-Initial-AMD-P-state-capability.patch
+- add cpupower-Add-the-function-to-get-the-sysfs-value-fro.patch
+- add cpupower-Introduce-acpi-cppc-library.patch
+- add cpupower-Add-AMD-P-State-sysfs-definition-and-access.patch
+- add cpupower-Enable-boost-state-support-for-AMD-P-State-.patch
+- add cpupower-Move-print_speed-function-into-misc-helper.patch
+- add cpupower-Print-AMD-P-State-information-on-cpupower.patch
+
 5.16-lucjan-ll27-rc1 --> 5.16-lucjan-ll27
 
 5.16-lucjan-ll27-rc1
