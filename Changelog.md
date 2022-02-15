@@ -6,6 +6,30 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll30
+
+- drop blk-make-blk-rq-qos-support-pluggable-and-modular-po.patch
+- drop blk-wbt-make-wbt-pluggable.patch
+- drop blk-export-following-interfaces.patch
+- drop cgroup-export-following-two-interfaces.patch
+- drop blk-iolatency-make-iolatency-pluggable-and-modular.patch
+- drop blk-remove-unused-BLK_RQ_IO_DATA_LEN.patch
+- drop blk-use-standalone-macro-to-control-bio.bi_iocost_co.patch
+- drop blk-iocost-make-iocost-pluggable-and-modular.patch
+- drop blk-rename-ioprio.c-to-ioprio-common.c.patch
+- drop blk-ioprio-make-ioprio-pluggable-and-modular.patch
+- drop blk-remove-unused-interfaces-of-blk-rq-qos.patch
+- drop blk-make-request-able-to-carry-blkcg_gq.patch
+- drop blk-introduce-iostat-per-cgroup-module.patch
+- add blk-make-blk-rq-qos-support-pluggable-and-modular-po.patch
+- add blk-wbt-make-wbt-pluggable.patch
+- add blk-iolatency-make-iolatency-pluggable.patch
+- add blk-iocost-make-iocost-pluggable.patch
+- add blk-ioprio-make-ioprio-pluggable-and-modular.patch
+- add blk-remove-unused-interfaces-of-blk-rq-qos.patch
+
+DROP 5.16-lucjan-ll30-rc1
+
 5.16-lucjan-ll30-rc1
 
 - sync with upstream (update PRJC-for-5.16.patch)
