@@ -6,7 +6,22 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
-5.16-lucjan-ll31
+5.16-lucjan-ll33
+
+- drop blk-prepare-to-make-blk-rq-qos-pluggable-and-modular.patch
+- drop blk-wbt-make-wbt-pluggable.patch
+- drop blk-iolatency-make-iolatency-pluggable.patch
+- drop blk-iocost-make-iocost-pluggable.patch
+- drop blk-ioprio-make-ioprio-pluggable-and-modular.patch
+- drop blk-export-the-sysfs-for-switching-qos.patch
+- add blk-prepare-to-make-blk-rq-qos-pluggable-and-modular.patch
+- add blk-wbt-make-wbt-pluggable.patch
+- add blk-iolatency-make-iolatency-pluggable.patch
+- add blk-iocost-make-iocost-pluggable.patch
+- add blk-ioprio-make-ioprio-pluggable-and-modular.patch
+- add blk-export-the-sysfs-for-switching-qos.patch
+
+5.16-lucjan-ll32
 
 - drop blk-make-blk-rq-qos-support-pluggable-and-modular-po.patch
 - drop blk-wbt-make-wbt-pluggable.patch
