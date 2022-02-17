@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll34
+
+- add hwmon-asus-ec-sensors-merge-setup-functions.patch
+
 5.16-lucjan-ll33
 
 - drop blk-prepare-to-make-blk-rq-qos-pluggable-and-modular.patch
