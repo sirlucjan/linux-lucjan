@@ -6,6 +6,26 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll35
+
+- drop kbuild-use-perl-instead-of-shell-to-get-file-size.patch
+- drop kbuild-pass-stream-size-no-content-size-to-zstd.patch
+- drop kbuild-allow-setting-zstd-compression-level-for-modu.patch
+- drop kbuild-allow-setting-zstd-compression-level-for-kern.patch
+- drop kbuild-optimize-zstd-compression-settings.patch
+- drop kbuild-allow-setting-ultra-zstd-compression-level-fo.patch
+- drop kbuild-add-menu-for-ZSTD-module-compression-options.patch
+- add sh-rename-suffix-y-to-suffix_y.patch
+- add kbuild-drop-size_append-from-cmd_zstd.patch
+- add kbuild-rename-cmd_-bzip2-lzma-lzo-lz4-xzkern-zstd22.patch
+- add arch-decompressor-remove-useless-vmlinux.bin.all-y.patch
+- add kbuild-add-cmd_file_size.patch
+- add kbuild-zstd-allow-users-to-choose-a-compression-leve.patch
+- add kbuild-allow-setting-zstd-compression-level-for-modu.patch
+- add kbuild-optimize-zstd-compression-settings.patch
+- add kbuild-allow-setting-ultra-zstd-compression-level-fo.patch
+- add kbuild-add-menu-for-ZSTD-module-compression-options.patch
+
 5.16-lucjan-ll34
 
 - add hwmon-asus-ec-sensors-merge-setup-functions.patch
