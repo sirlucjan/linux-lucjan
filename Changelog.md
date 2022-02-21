@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll36-rc1
+
+- sync with upstream (drop block-wbt-fix-negative-inflight-counter-when-remove-.patch)
+
 5.16-lucjan-ll35
 
 - drop kbuild-use-perl-instead-of-shell-to-get-file-size.patch
