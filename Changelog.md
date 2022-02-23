@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll39
+
+- add mt76-mt7921-reduce-log-severity-levels-for-informati.patch
+
+DROP 5.16-lucjan-ll39-rc1
+
 5.16-lucjan-ll39-rc1
 
 - sync with upstream (drop block-wbt-fix-negative-inflight-counter-when-remove-.patch)
