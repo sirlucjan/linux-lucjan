@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll41
+
+- add Add-perf-option-to-print-AMD-P-State-inform.patch
+
 5.16-lucjan-ll40-rc1 --> 5.16-lucjan-ll40
 
 5.16-lucjan-ll40-rc1
