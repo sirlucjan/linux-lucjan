@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll43
+
+- add Revert-NFSv4.1-query-for-fs_location-attr-on-a-new-f.patch
+
 5.16-lucjan-ll42
 
 - add cpupower-5.16-Revert-old-AMD-P-State-patches.patch
