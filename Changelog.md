@@ -8,6 +8,11 @@
 
 5.16-lucjan-ll43
 
+- add btrfs-fix-lost-prealloc-extents-beyond-eof-after-ful.patch
+- add btrfs-fix-relocation-crash-due-to-premature-return-f.patch
+
+5.16-lucjan-ll43
+
 - add Revert-NFSv4.1-query-for-fs_location-attr-on-a-new-f.patch
 
 5.16-lucjan-ll42
