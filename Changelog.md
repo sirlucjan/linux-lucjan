@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll45-rc1
+
+- sync with upstream (drop netfilter-nf_tables_offload-incorrect-flow-offload-a.patch)
+
 5.16-lucjan-ll43
 
 - add btrfs-fix-lost-prealloc-extents-beyond-eof-after-ful.patch
