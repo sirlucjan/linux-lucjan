@@ -6,6 +6,19 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
 
+5.16-lucjan-ll45
+
+- add ACPICA-Macros-Remove-ACPI_PHYSADDR_TO_PTR.patch
+- add ACPICA-Use-uintptr_t-and-offsetof-in-Linux-kernel-bu.patch
+- add ACPICA-Use-original-data_table_region-pointer-for-ac.patch
+- add ACPICA-Use-original-pointer-for-virtual-origin-table.patch
+- add ACPICA-Avoid-subobject-buffer-overflow-when-validati.patch
+- add drm-amd-amdgpu-amdgpu_cs-fix-refcount-leak-of-a-dma_.patch
+- add drm-amd-display-Fix-memory-leak.patch
+- add PCI-Mark-all-AMD-Navi10-and-Navi14-GPU-ATS-as-broken.patch
+
+DROP 5.16-lucjan-ll45-rc1
+
 5.16-lucjan-ll45-rc1
 
 - sync with upstream (drop netfilter-nf_tables_offload-incorrect-flow-offload-a.patch)
