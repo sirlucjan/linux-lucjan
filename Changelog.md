@@ -4,7 +4,9 @@
 #### As of version 5.13-lucjan-ll15-rc1 it is again possible to choose between the BMQ CPU scheduler and the PDS CPU scheduler.
 #### You must have GCC 11/Clang 12 to take advantages of the MZEN3/MSAPPHIRERAPIDS/MALDERLAKE/GENERIC_CPU2/GENERIC_CPU3/GENERIC_CPU4 optimizations. 
 #### Otherwise the kernel will not compile properly.
-#### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.13 have been removed!
+#### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
+
+5.16-lucjan-ll46-rc1 --> 5.16-lucjan-ll46
 
 5.16-lucjan-ll46-rc1
 
