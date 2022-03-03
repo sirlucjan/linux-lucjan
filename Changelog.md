@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.16-lucjan-ll47
+
+- add f2fs-Restore-rwsem-lockdep-support.patch
+
 5.16-lucjan-ll46-rc1 --> 5.16-lucjan-ll46
 
 5.16-lucjan-ll46-rc1
