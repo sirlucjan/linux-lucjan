@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.16-lucjan-ll49
+
+- add f2fs-avoid-an-infinite-loop-in-f2fs_sync_dirty_inode.patch
+- add f2fs-introduce-F2FS_UNFAIR_RWSEM-to-support-unfair-r.patch
+
 5.16-lucjan-ll48
 
 - add bfq-fix-use-after-free-in-bfq_dispatch_request.patch
