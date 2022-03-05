@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.16-lucjan-ll50
+
+- add mm-Increment-kswapd_waiters-for-throttled-direct-rec.patch
+- add mm-Lower-the-non-hugetlbpage-pageblock-size-to-reduc.patch
+- add mm-Don-t-hog-the-CPU-and-zone-lock-in-rmqueue_bulk.patch
+
 5.16-lucjan-ll49
 
 - add f2fs-avoid-an-infinite-loop-in-f2fs_sync_dirty_inode.patch
