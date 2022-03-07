@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.16-lucjan-ll51-rc1
+
+- sync with upstream (drop btrfs-get-rid-of-warning-on-transaction-commit-when-.patch)
+- sync with upstream (drop btrfs-fix-lost-prealloc-extents-beyond-eof-after-ful.patch)
+- sync with upstream (drop btrfs-fix-relocation-crash-due-to-premature-return-f.patch)
+
 5.16-lucjan-ll50
 
 - add mm-Increment-kswapd_waiters-for-throttled-direct-rec.patch
