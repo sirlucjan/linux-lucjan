@@ -6,6 +6,41 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.16-lucjan-ll51
+
+- add Revert-block-bfq-cleanup-bfq_bfqq_to_bfqg.patch
+- add Revert-block-bfq-decrease-num_groups_with_pending_re.patch
+- add Revert-block-bfq-move-forward-__bfq_weights_tree_rem.patch
+- add Revert-block-bfq-record-how-many-queues-have-pending.patch
+- add Revert-block-bfq-only-count-group-that-the-bfq_queue.patch
+- add Revert-block-bfq-do-not-idle-if-only-one-cgroup-is-a.patch
+- add Revert-block-bfq-count-root-group-into-num_groups_wi.patch
+- add Revert-block-bfq-handle-the-case-when-for_each_entit.patch
+- add Revert-block-bfq-apply-news-apis-where-root-group-is.patch
+- add Revert-block-bfq-add-new-apis-to-iterate-bfq-entitie.patch
+- add Revert-bfq-introduce-bfq_entity_to_bfqg-helper-metho.patch
+- add Revert-bfq-remove-unnecessary-BFQ_DEFAULT_GRP_IOPRIO.patch
+- add Revert-bfq-reset-entity-prio_changed-in-bfq_init_ent.patch
+- add Revert-bfq-optimize-the-calculation-of-bfq_weight_to.patch
+- add Revert-bfq-remove-unnecessary-initialization-logic.patch
+- add Revert-bfq-keep-the-minimun-bandwidth-for-CLASS_BE.patch
+- add Revert-bfq-limit-the-IO-depth-of-CLASS_IDLE-to-1.patch
+- add Partial-revert-bfq-convert-the-type-of-bfq_group.bfq.patch
+- add block-bfq-add-new-apis-to-iterate-bfq-entities.patch
+- add block-bfq-apply-news-apis-where-root-group-is-not-ex.patch
+- add block-bfq-cleanup-for-__bfq_activate_requeue_entity.patch
+- add block-bfq-move-the-increasement-of-num_groups_with_p.patch
+- add block-bfq-count-root-group-into-num_groups_with_pend.patch
+- add block-bfq-do-not-idle-if-only-one-cgroup-is-activate.patch
+- add block-bfq-only-count-parent-bfqg-when-bfqq-is-activa.patch
+- add block-bfq-record-how-many-queues-have-pending-reques.patch
+- add block-bfq-move-forward-__bfq_weights_tree_remove.patch
+- add block-bfq-decrease-num_groups_with_pending_reqs-earl.patch
+- add block-bfq-cleanup-bfqq_group.patch
+- add block-bfq_wf2q-correct-weight-to-ioprio.patch
+
+DROP 5.16-lucjan-ll51-rc2
+
 5.16-lucjan-ll51-rc2
 
 - sync with upstream (update PRJC-for-5.16.patch)
