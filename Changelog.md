@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.16-lucjan-ll54
+
+- add firmware-Add-the-support-for-ZSTD-compressed-firmwar.patch
+- add selftests-firmware-Simplify-test-patterns.patch
+- add selftest-firmware-Fix-the-request_firmware_into_buf-.patch
+
 5.16-lucjan-ll53
 
 - add btrfs-avoid-full-commit-due-to-race-when-logging-den.patch
