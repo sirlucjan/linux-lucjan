@@ -1,6 +1,6 @@
-From 6fe4467b4151535bf0af84a8729b3df982b45a57 Mon Sep 17 00:00:00 2001
+From 88165ac89ea298e74a3a8b5c5573525fe31cebf1 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Tue, 8 Mar 2022 20:57:46 +0100
+Date: Tue, 8 Mar 2022 21:28:59 +0100
 Subject: [PATCH] 5.16-lucjan-ll53
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -940,7 +940,7 @@ index 16253eda1..48559541c 100644
  
    blkio.bfq.weight_device
 diff --git a/Documentation/admin-guide/kernel-parameters.txt b/Documentation/admin-guide/kernel-parameters.txt
-index 2fba82431..58083f6db 100644
+index 391b3f905..eecf062b6 100644
 --- a/Documentation/admin-guide/kernel-parameters.txt
 +++ b/Documentation/admin-guide/kernel-parameters.txt
 @@ -367,6 +367,10 @@
@@ -1002,7 +1002,7 @@ index 2fba82431..58083f6db 100644
  	sched_verbose	[KNL] Enables verbose scheduler debug messages.
  
  	schedstats=	[KNL,X86] Enable or disable scheduled statistics.
-@@ -6199,6 +6219,22 @@
+@@ -6203,6 +6223,22 @@
  			  P	Enable page structure init time poisoning
  			  -	Disable all of the above options
  
@@ -4113,7 +4113,7 @@ index c92e42a5c..8e94fe7ab 100644
  
  /*
 diff --git a/arch/arm64/Kconfig b/arch/arm64/Kconfig
-index 651bf2174..117243e8c 100644
+index 0e2c31f7a..4b04ed113 100644
 --- a/arch/arm64/Kconfig
 +++ b/arch/arm64/Kconfig
 @@ -120,7 +120,6 @@ config ARM64
@@ -4137,10 +4137,10 @@ index 81a3e519b..9b3c78713 100644
  #include <asm-generic/bitops/sched.h>
  #include <asm-generic/bitops/hweight.h>
 diff --git a/arch/arm64/include/asm/cpufeature.h b/arch/arm64/include/asm/cpufeature.h
-index ef6be92b1..99518b4b2 100644
+index a77b5f49b..cf5e2b061 100644
 --- a/arch/arm64/include/asm/cpufeature.h
 +++ b/arch/arm64/include/asm/cpufeature.h
-@@ -779,6 +779,11 @@ static inline bool system_supports_tlb_range(void)
+@@ -808,6 +808,11 @@ static inline bool system_supports_tlb_range(void)
  		cpus_have_const_cap(ARM64_HAS_TLB_RANGE);
  }
  
@@ -4187,10 +4187,10 @@ index c4ba047a8..e736f4743 100644
  #define arch_wants_old_prefaulted_pte	arch_wants_old_prefaulted_pte
  
 diff --git a/arch/arm64/kernel/cpufeature.c b/arch/arm64/kernel/cpufeature.c
-index d18b953c0..12617099e 100644
+index d33687673..d857e6dd8 100644
 --- a/arch/arm64/kernel/cpufeature.c
 +++ b/arch/arm64/kernel/cpufeature.c
-@@ -2174,6 +2174,25 @@ static const struct arm64_cpu_capabilities arm64_features[] = {
+@@ -2197,6 +2197,25 @@ static const struct arm64_cpu_capabilities arm64_features[] = {
  		.matches = has_hw_dbm,
  		.cpu_enable = cpu_enable_hw_dbm,
  	},
@@ -4217,7 +4217,7 @@ index d18b953c0..12617099e 100644
  	{
  		.desc = "CRC32 instructions",
 diff --git a/arch/arm64/tools/cpucaps b/arch/arm64/tools/cpucaps
-index 9c65b1e25..d7244930e 100644
+index cea7533cb..27b9c0e2f 100644
 --- a/arch/arm64/tools/cpucaps
 +++ b/arch/arm64/tools/cpucaps
 @@ -36,6 +36,7 @@ HAS_STAGE2_FWB
@@ -5240,7 +5240,7 @@ index 0367efdc5..a288ecd23 100644
  
  #include <asm/arch_hweight.h>
 diff --git a/arch/x86/include/asm/cpufeatures.h b/arch/x86/include/asm/cpufeatures.h
-index d5b5f2ab8..18de5f76f 100644
+index cc8570f73..af4addfa7 100644
 --- a/arch/x86/include/asm/cpufeatures.h
 +++ b/arch/x86/include/asm/cpufeatures.h
 @@ -315,6 +315,7 @@
@@ -5462,7 +5462,7 @@ index 75884d2cd..4e6a08d4c 100644
  #define MODULE_PROC_FAMILY "ELAN "
  #elif defined CONFIG_MCRUSOE
 diff --git a/arch/x86/kernel/alternative.c b/arch/x86/kernel/alternative.c
-index 23fb4d51a..69d999c9f 100644
+index 563a3de72..94c319727 100644
 --- a/arch/x86/kernel/alternative.c
 +++ b/arch/x86/kernel/alternative.c
 @@ -829,7 +829,9 @@ void __init alternative_instructions(void)
@@ -105062,7 +105062,7 @@ index eca38107b..7a674a911 100644
  {
  	wq_entry->flags = flags;
 diff --git a/kernel/sysctl.c b/kernel/sysctl.c
-index 083be6af2..d884f73d0 100644
+index 0586047f7..c0b166f65 100644
 --- a/kernel/sysctl.c
 +++ b/kernel/sysctl.c
 @@ -105,6 +105,9 @@
@@ -105086,7 +105086,7 @@ index 083be6af2..d884f73d0 100644
  #ifdef CONFIG_PRINTK
  static int ten_thousand = 10000;
  #endif
-@@ -1771,6 +1778,24 @@ int proc_do_static_key(struct ctl_table *table, int write,
+@@ -1778,6 +1785,24 @@ int proc_do_static_key(struct ctl_table *table, int write,
  }
  
  static struct ctl_table kern_table[] = {
@@ -105111,7 +105111,7 @@ index 083be6af2..d884f73d0 100644
  	{
  		.procname	= "sched_child_runs_first",
  		.data		= &sysctl_sched_child_runs_first,
-@@ -1778,6 +1803,59 @@ static struct ctl_table kern_table[] = {
+@@ -1785,6 +1810,59 @@ static struct ctl_table kern_table[] = {
  		.mode		= 0644,
  		.proc_handler	= proc_dointvec,
  	},
@@ -105171,7 +105171,7 @@ index 083be6af2..d884f73d0 100644
  #ifdef CONFIG_SCHEDSTATS
  	{
  		.procname	= "sched_schedstats",
-@@ -1901,6 +1979,7 @@ static struct ctl_table kern_table[] = {
+@@ -1908,6 +1986,7 @@ static struct ctl_table kern_table[] = {
  		.extra2		= SYSCTL_ONE,
  	},
  #endif
@@ -105179,7 +105179,7 @@ index 083be6af2..d884f73d0 100644
  #ifdef CONFIG_PROVE_LOCKING
  	{
  		.procname	= "prove_locking",
-@@ -1949,6 +2028,15 @@ static struct ctl_table kern_table[] = {
+@@ -1956,6 +2035,15 @@ static struct ctl_table kern_table[] = {
  		.proc_handler	= proc_dointvec,
  	},
  #endif
@@ -105195,7 +105195,7 @@ index 083be6af2..d884f73d0 100644
  #ifdef CONFIG_PROC_SYSCTL
  	{
  		.procname	= "tainted",
-@@ -2477,6 +2565,17 @@ static struct ctl_table kern_table[] = {
+@@ -2484,6 +2572,17 @@ static struct ctl_table kern_table[] = {
  		.proc_handler	= proc_dointvec,
  	},
  #endif
@@ -105213,7 +105213,7 @@ index 083be6af2..d884f73d0 100644
  #if defined(CONFIG_S390) && defined(CONFIG_SMP)
  	{
  		.procname	= "spin_retry",
-@@ -2721,6 +2820,92 @@ static struct ctl_table kern_table[] = {
+@@ -2728,6 +2827,92 @@ static struct ctl_table kern_table[] = {
  	{ }
  };
  
@@ -105306,7 +105306,7 @@ index 083be6af2..d884f73d0 100644
  static struct ctl_table vm_table[] = {
  	{
  		.procname	= "overcommit_memory",
-@@ -3178,6 +3363,42 @@ static struct ctl_table vm_table[] = {
+@@ -3185,6 +3370,42 @@ static struct ctl_table vm_table[] = {
  		.extra2		= SYSCTL_ONE,
  	},
  #endif
