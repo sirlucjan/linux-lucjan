@@ -8,6 +8,10 @@
 
 5.16-lucjan-ll54
 
+- add selftest-firmware-Add-ZSTD-compressed-file-tests.patch
+
+5.16-lucjan-ll54
+
 - add firmware-Add-the-support-for-ZSTD-compressed-firmwar.patch
 - add selftests-firmware-Simplify-test-patterns.patch
 - add selftest-firmware-Fix-the-request_firmware_into_buf-.patch
