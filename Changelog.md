@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.16-lucjan-ll57
+
+- add AUFS 20220314
+
+DROP 5.16-lucjan-ll57-rc1
+
 5.16-lucjan-ll57-rc1
 
 - sync with upstream (drop PCI-Mark-all-AMD-Navi10-and-Navi14-GPU-ATS-as-broken.patch)
