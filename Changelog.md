@@ -6,7 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
-5.16-lucjan-ll54
+5.16-lucjan-ll56
+
+- add Revert-sched-alt-Optimize-loops-in-update_sched_rq_w.patch
+- add sched-alt-Transpose-the-sched_rq_watermark-array.patch
+- add alt_core.c-Add-potentially-missing-assignment-of-p-o.patch
+
+5.16-lucjan-ll55
 
 - add selftest-firmware-Add-ZSTD-compressed-file-tests.patch
 
