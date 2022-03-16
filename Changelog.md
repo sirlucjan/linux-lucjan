@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.16-lucjan-ll60
+
+- add Revert-alt_core.c-Add-potentially-missing-assignment.patch
+- add Add-potentially-missing-assignment.patch
+
 5.16-lucjan-ll59-rc1 --> 5.16-lucjan-ll59
 
 5.16-lucjan-ll59-rc1
