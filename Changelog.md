@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.16-lucjan-ll65
+
+- drop lrng-5.16-sync-with-upstream.patch
+- drop lrng-5.16-update-to-the-latest-git-HEAD.patch
+
 5.16-lucjan-ll64
 
 - add lrng-5.16-sync-with-upstream.patch
