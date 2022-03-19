@@ -1,6 +1,6 @@
-From 5ab58d59245287207fc286e4e3d503e1c5cc71d2 Mon Sep 17 00:00:00 2001
+From 5d246ff999f066e330617a853425c42ed6e431d5 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Sat, 19 Mar 2022 00:04:05 +0100
+Date: Sat, 19 Mar 2022 00:04:48 +0100
 Subject: [PATCH] 5.16-lucjan-ll63
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3989,7 +3989,7 @@ index dd36acc87..d749fb1ab 100644
  M:	Eric Piel <eric.piel@tremplin-utc.net>
  S:	Maintained
 diff --git a/Makefile b/Makefile
-index 8675dd2a9..7da93f7bb 100644
+index 3e347f371..81d7b0557 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -14,6 +14,10 @@ NAME = Gobble Gobble
@@ -105764,10 +105764,10 @@ index ad912511a..8ccb40284 100644
  
  struct cpumask watchdog_cpumask __read_mostly;
 diff --git a/lib/Kconfig b/lib/Kconfig
-index 5e7165e6a..6a6ae5312 100644
+index fa4b10322..22975a87f 100644
 --- a/lib/Kconfig
 +++ b/lib/Kconfig
-@@ -65,9 +65,6 @@ config GENERIC_STRNLEN_USER
+@@ -64,9 +64,6 @@ config GENERIC_STRNLEN_USER
  config GENERIC_NET_UTILS
  	bool
  
@@ -117574,7 +117574,7 @@ index 63cb953bd..0d4fa04a4 100644
  	tristate "REDIRECT target support"
  	depends on NETFILTER_ADVANCED
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index 28abb0bb1..677b06fca 100644
+index 38f936785..6bc02d058 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
 @@ -292,7 +292,7 @@ EXPORT_PER_CPU_SYMBOL_GPL(tcp_orphan_count);
@@ -117692,7 +117692,7 @@ index 28abb0bb1..677b06fca 100644
  				u32 urg_offset = tp->urg_seq - seq;
  				if (urg_offset < len)
  					len = urg_offset;
-@@ -1673,11 +1704,11 @@ int tcp_read_sock(struct sock *sk, read_descriptor_t *desc,
+@@ -1675,11 +1706,11 @@ int tcp_read_sock(struct sock *sk, read_descriptor_t *desc,
  				continue;
  		}
  		if (TCP_SKB_CB(skb)->tcp_flags & TCPHDR_FIN) {
@@ -117706,7 +117706,7 @@ index 28abb0bb1..677b06fca 100644
  		if (!desc->count)
  			break;
  		WRITE_ONCE(tp->copied_seq, seq);
-@@ -2337,7 +2368,7 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
+@@ -2339,7 +2370,7 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
  		u32 offset;
  
  		/* Are we at urgent data? Stop if we have read anything or have SIGURG pending. */
@@ -117715,7 +117715,7 @@ index 28abb0bb1..677b06fca 100644
  			if (copied)
  				break;
  			if (signal_pending(current)) {
-@@ -2380,10 +2411,10 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
+@@ -2382,10 +2413,10 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
  			break;
  
  		if (copied) {
@@ -117728,7 +117728,7 @@ index 28abb0bb1..677b06fca 100644
  			    signal_pending(current))
  				break;
  		} else {
-@@ -2417,13 +2448,12 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
+@@ -2419,13 +2450,12 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
  			}
  		}
  
@@ -117745,7 +117745,7 @@ index 28abb0bb1..677b06fca 100644
  			sk_wait_data(sk, &timeo, last);
  		}
  
-@@ -2443,7 +2473,7 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
+@@ -2445,7 +2475,7 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
  			used = len;
  
  		/* Do we have urgent data here? */
@@ -117754,7 +117754,7 @@ index 28abb0bb1..677b06fca 100644
  			u32 urg_offset = tp->urg_seq - *seq;
  			if (urg_offset < used) {
  				if (!urg_offset) {
-@@ -2477,8 +2507,8 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
+@@ -2479,8 +2509,8 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
  		tcp_rcv_space_adjust(sk);
  
  skip_copy:
@@ -117765,7 +117765,7 @@ index 28abb0bb1..677b06fca 100644
  			tcp_fast_path_check(sk);
  		}
  
-@@ -2493,14 +2523,14 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
+@@ -2495,14 +2525,14 @@ static int tcp_recvmsg_locked(struct sock *sk, struct msghdr *msg, size_t len,
  		if (TCP_SKB_CB(skb)->tcp_flags & TCPHDR_FIN)
  			goto found_fin_ok;
  		if (!(flags & MSG_PEEK))
@@ -117782,7 +117782,7 @@ index 28abb0bb1..677b06fca 100644
  		break;
  	} while (len > 0);
  
-@@ -2542,6 +2572,7 @@ int tcp_recvmsg(struct sock *sk, struct msghdr *msg, size_t len, int nonblock,
+@@ -2544,6 +2574,7 @@ int tcp_recvmsg(struct sock *sk, struct msghdr *msg, size_t len, int nonblock,
  	ret = tcp_recvmsg_locked(sk, msg, len, nonblock, flags, &tss,
  				 &cmsg_flags);
  	release_sock(sk);
@@ -117790,7 +117790,7 @@ index 28abb0bb1..677b06fca 100644
  
  	if (cmsg_flags && ret >= 0) {
  		if (cmsg_flags & TCP_CMSG_TS)
-@@ -2972,7 +3003,7 @@ int tcp_disconnect(struct sock *sk, int flags)
+@@ -2974,7 +3005,7 @@ int tcp_disconnect(struct sock *sk, int flags)
  	tcp_clear_xmit_timers(sk);
  	__skb_queue_purge(&sk->sk_receive_queue);
  	WRITE_ONCE(tp->copied_seq, tp->rcv_nxt);
@@ -117799,7 +117799,7 @@ index 28abb0bb1..677b06fca 100644
  	tcp_write_queue_purge(sk);
  	tcp_fastopen_active_disable_ofo_check(sk);
  	skb_rbtree_purge(&tp->out_of_order_queue);
-@@ -3052,6 +3083,7 @@ int tcp_disconnect(struct sock *sk, int flags)
+@@ -3054,6 +3085,7 @@ int tcp_disconnect(struct sock *sk, int flags)
  	tp->rx_opt.dsack = 0;
  	tp->rx_opt.num_sacks = 0;
  	tp->rcv_ooopack = 0;
@@ -117807,7 +117807,7 @@ index 28abb0bb1..677b06fca 100644
  
  
  	/* Clean up fastopen related fields */
-@@ -3066,7 +3098,7 @@ int tcp_disconnect(struct sock *sk, int flags)
+@@ -3068,7 +3100,7 @@ int tcp_disconnect(struct sock *sk, int flags)
  		sk->sk_frag.page = NULL;
  		sk->sk_frag.offset = 0;
  	}
@@ -117816,7 +117816,7 @@ index 28abb0bb1..677b06fca 100644
  	sk_error_report(sk);
  	return 0;
  }
-@@ -3781,10 +3813,12 @@ void tcp_get_info(struct sock *sk, struct tcp_info *info)
+@@ -3783,10 +3815,12 @@ void tcp_get_info(struct sock *sk, struct tcp_info *info)
  	tcp_get_info_chrono_stats(tp, info);
  
  	info->tcpi_segs_out = tp->segs_out;
@@ -117831,7 +117831,7 @@ index 28abb0bb1..677b06fca 100644
  	info->tcpi_data_segs_out = tp->data_segs_out;
  
  	info->tcpi_delivery_rate_app_limited = tp->rate_app_limited ? 1 : 0;
-@@ -4193,6 +4227,7 @@ static int do_tcp_getsockopt(struct sock *sk, int level,
+@@ -4195,6 +4229,7 @@ static int do_tcp_getsockopt(struct sock *sk, int level,
  		err = BPF_CGROUP_RUN_PROG_GETSOCKOPT_KERN(sk, level, optname,
  							  &zc, &len, err);
  		release_sock(sk);
@@ -117839,7 +117839,7 @@ index 28abb0bb1..677b06fca 100644
  		if (len >= offsetofend(struct tcp_zerocopy_receive, msg_flags))
  			goto zerocopy_rcv_cmsg;
  		switch (len) {
-@@ -4568,8 +4603,8 @@ void __init tcp_init(void)
+@@ -4570,8 +4605,8 @@ void __init tcp_init(void)
  	tcp_init_mem();
  	/* Set per-socket limits to no more than 1/128 the pressure threshold */
  	limit = nr_free_buffer_pages() << (PAGE_SHIFT - 7);
