@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.17-lucjan-ll2-rc1
+
+- update UKSM for 5.17
+
 5.17-lucjan-ll1-rc1
 
 - add android-export-symbold-and-enable-building-ashmem-an.patch
