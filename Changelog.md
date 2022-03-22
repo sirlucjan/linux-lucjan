@@ -6,6 +6,43 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.17-lucjan-ll3-rc1
+
+- drop block-elevator-remove-un-used-input-parameter-reques.patch
+- drop block-bfq-the-delta_from_first-should-be-ns-rather-t.patch
+- drop block-bfq-fix-the-timeout-calculation-in-bfq_bfqq_ch.patch
+- drop bfq-Fix-spelling-mistake-tenative-tentative.patch
+- drop block-bfq-Accept-symmetric-weight-adjustments.patch
+- drop block-bfq-honor-already-setup-queue-merges.patch
+- drop bfq-Fix-use-after-free-with-cgroups.patch
+- drop block-bfq-cleanup-bfq_bfqq_to_bfqg.patch
+- drop block-bfq-avoid-moving-bfqq-to-it-s-parent-bfqg.patch
+- drop block-bfq-don-t-move-oom_bfqq.patch
+- drop bfq-Fix-__bfq_lookup_next_entity-kernel-doc-comment.patch
+- drop block-bfq-wf2q-Fix-some-typos-in-comments.patch
+- drop bfq-Avoid-false-marking-of-bic-as-stably-merged.patch
+- drop bfq-Avoid-merging-queues-with-different-parents.patch
+- drop bfq-Split-shared-queues-on-move-between-cgroups.patch
+- drop bfq-Update-cgroup-information-before-merging-bio.patch
+- drop bfq-fix-use-after-free-in-bfq_dispatch_request.patch
+- drop block-bfq-add-new-apis-to-iterate-bfq-entities.patch
+- drop block-bfq-apply-news-apis-where-root-group-is-not-ex.patch
+- drop block-bfq-cleanup-for-__bfq_activate_requeue_entity.patch
+- drop block-bfq-move-the-increasement-of-num_groups_with_p.patch
+- drop block-bfq-count-root-group-into-num_groups_with_pend.patch
+- drop block-bfq-do-not-idle-if-only-one-cgroup-is-activate.patch
+- drop block-bfq-only-count-parent-bfqg-when-bfqq-is-activa.patch
+- drop block-bfq-record-how-many-queues-have-pending-reques.patch
+- drop block-bfq-move-forward-__bfq_weights_tree_remove.patch
+- drop block-bfq-decrease-num_groups_with_pending_reqs-earl.patch
+- drop block-bfq-cleanup-bfqq_group.patch
+- drop block-bfq_wf2q-correct-weight-to-ioprio.patch
+- drop elevator-set-default-scheduler-to-bfq-for-blk-mq.patch
+- drop elevator-always-use-bfq-unless-overridden-by-flag.patch
+- drop block-bfq-set-bfq-lucjan-branding.patch
+- add Revert-Revert-block-bfq-honor-already-setup-queue-me.patch
+- add block-bfq-DEBUG-add-logs-and-BUG_ONs-to-5.17.patch
+
 5.17-lucjan-ll2-rc1
 
 - update UKSM for 5.17
