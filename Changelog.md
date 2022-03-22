@@ -6,6 +6,44 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.17-lucjan-ll4-rc1
+
+- add mm-export-dump_mm.patch
+- add mmap-locking-API-mmap_lock_is_contended-returns-a-bo.patch
+- add mmap-locking-API-name-the-return-values.patch
+- add do_anonymous_page-use-update_mmu_tlb.patch
+- add do_anonymous_page-reduce-code-duplication.patch
+- add mm-introduce-CONFIG_SPECULATIVE_PAGE_FAULT.patch
+- add x86-mm-define-ARCH_SUPPORTS_SPECULATIVE_PAGE_FAULT.patch
+- add mm-add-FAULT_FLAG_SPECULATIVE-flag.patch
+- add mm-add-do_handle_mm_fault.patch
+- add mm-add-per-mm-mmap-sequence-counter-for-speculative-.patch
+- add mm-rcu-safe-vma-freeing.patch
+- add mm-separate-mmap-locked-assertion-from-find_vma.patch
+- add x86-mm-attempt-speculative-mm-faults-first.patch
+- add mm-add-speculative_page_walk_begin-and-speculative_p.patch
+- add mm-refactor-__handle_mm_fault-handle_pte_fault.patch
+- add mm-implement-speculative-handling-in-__handle_mm_fau.patch
+- add mm-add-pte_map_lock-and-pte_spinlock.patch
+- add mm-implement-speculative-handling-in-do_anonymous_pa.patch
+- add mm-enable-speculative-fault-handling-through-do_anon.patch
+- add mm-implement-speculative-handling-in-do_numa_page.patch
+- add mm-enable-speculative-fault-handling-in-do_numa_page.patch
+- add percpu-rwsem-enable-percpu_sem-destruction-in-atomic.patch
+- add mm-add-mmu_notifier_lock.patch
+- add mm-write-lock-mmu_notifier_lock-when-registering-mmu.patch
+- add mm-add-mmu_notifier_trylock-and-mmu_notifier_unlock.patch
+- add mm-implement-speculative-handling-in-wp_page_copy.patch
+- add mm-implement-and-enable-speculative-fault-handling-i.patch
+- add mm-disable-speculative-faults-for-single-threaded-us.patch
+- add mm-disable-rcu-safe-vma-freeing-for-single-threaded-.patch
+- add mm-create-new-include-linux-vm_event.h-header-file.patch
+- add mm-anon-spf-statistics.patch
+- add arm64-mm-define-ARCH_SUPPORTS_SPECULATIVE_PAGE_FAULT.patch
+- add arm64-mm-attempt-speculative-mm-faults-first.patch
+- add powerpc-mm-define-ARCH_SUPPORTS_SPECULATIVE_PAGE_FAU.patch
+- add powerpc-mm-attempt-speculative-mm-faults-first.patch
+
 5.17-lucjan-ll3-rc1
 
 - drop block-elevator-remove-un-used-input-parameter-reques.patch
