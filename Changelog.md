@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.17-lucjan-ll7-rc1
+
+- add shmem-mapping_set_exiting-to-help-mapped-resilience.patch
+- add tmpfs-do-not-allocate-pages-on-read.patch
+
 5.17-lucjan-ll6-rc1
 
 - add fixes-5.17-unbreak-swiotlb.patch
