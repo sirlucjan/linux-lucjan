@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.17-lucjan-ll6-rc1
+
+- add fixes-5.17-unbreak-swiotlb.patch
+
 5.17-lucjan-ll5-rc1
 
 - add elevator-set-default-scheduler-to-bfq-for-blk-mq.patch
