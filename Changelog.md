@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.17-lucjan-ll8-rc1
+
+- update mm-5.17-protect-mappings-under-memory-pressure.patch
+
 5.17-lucjan-ll7-rc1
 
 - add shmem-mapping_set_exiting-to-help-mapped-resilience.patch
@@ -205,17 +209,6 @@
 - add init-Kconfig-enable-O3-for-all-arches.patch
 - add init-Kconfig-add-O1-flag.patch
 - add Makefile-Turn-off-loop-vectorization-for-GCC-O3-opti.patch
-- add cpupower-Add-AMD-P-state-capability-flag.patch
-- add cpupower-Add-the-function-to-check-AMD-P-State-enabl.patch
-- add cpupower-Initial-AMD-P-state-capability.patch
-- add cpupower-Add-the-function-to-get-the-sysfs-value-fro.patch
-- add cpupower-Introduce-acpi-cppc-library.patch
-- add cpupower-Add-AMD-P-State-sysfs-definition-and-access.patch
-- add cpupower-Enable-boost-state-support-for-AMD-P-State-.patch
-- add cpupower-Move-print_speed-function-into-misc-helper.patch
-- add cpupower-Print-AMD-P-State-information-on-cpupower.patch
-- add cpupower-Add-perf-option-to-print-AMD-P-State-inform.patch
-- add cpupower-5.16-Revert-old-AMD-P-State-patches.patch
 - add cpupower-Add-AMD-P-State-capability-flag.patch
 - add cpupower-Add-the-function-to-check-AMD-P-State-enabl.patch
 - add cpupower-Initial-AMD-P-State-capability.patch
