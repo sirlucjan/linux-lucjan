@@ -9,6 +9,11 @@
 5.17-lucjan-ll8-rc1
 
 - update mm-5.17-protect-mappings-under-memory-pressure.patch
+- update cacULE-5.17.patch
+
+5.17-lucjan-ll8-rc1
+
+- update mm-5.17-protect-mappings-under-memory-pressure.patch
 
 5.17-lucjan-ll7-rc1
 
@@ -339,6 +344,7 @@
 - add spadfs-5.17-merge-v1.0.15.patch
 - add UKSM-for-5.17.patch
 - add AUFS 20220314
+- add cacULE-5.17.patch
 
 5.16-lucjan-ll66-rc1
 
