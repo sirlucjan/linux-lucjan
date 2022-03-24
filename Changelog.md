@@ -6,7 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
-5.17-lucjan-ll8-rc1
+5.17-lucjan-ll10-rc1
+
+- drop btrfs-add-a-force_chunk_alloc-to-space_info-s-sysfs.patch
+
+5.17-lucjan-ll9-rc1
 
 - update mm-5.17-protect-mappings-under-memory-pressure.patch
 - update cacULE-5.17.patch
