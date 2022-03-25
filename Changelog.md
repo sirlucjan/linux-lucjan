@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.17-lucjan-ll11-rc1
+
+- add x86-chacha20-Avoid-spurious-jumps-to-other-functions.patch
+- add x86-poly1305-Fixup-SLS.patch
+- add Revert-fixes-5.17-unbreak-swiotlb.patch
+- add ath9k-do-not-call-dma_sync_single_for_device-on-EINP.patch
+- add alt_core.c-Potential-fix-for-the-UBSAN-out-of-bounds.patch
+
 5.17-lucjan-ll10-rc1
 
 - drop btrfs-add-a-force_chunk_alloc-to-space_info-s-sysfs.patch
