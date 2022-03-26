@@ -8,6 +8,10 @@
 
 5.17-lucjan-ll11-rc1
 
+- add rcu-5.17-port-changes-from-zenkernel.patch
+
+5.17-lucjan-ll11-rc1
+
 - add x86-chacha20-Avoid-spurious-jumps-to-other-functions.patch
 - add x86-poly1305-Fixup-SLS.patch
 - add Revert-fixes-5.17-unbreak-swiotlb.patch
