@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.17-lucjan-ll114-rc1
+
+- add Revert-ath9k-do-not-call-dma_sync_single_for_device-.patch
+- add Revert-swiotlb-rework-fix-info-leak-with-DMA_FROM_DE.patch
+
 5.17-lucjan-ll13-rc1
 
 - sync with upstream (resync rcu-5.17-port-changes-from-zenkernel.patch)
