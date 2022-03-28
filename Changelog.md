@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.17-lucjan-ll16-rc1
+
+- add AUFS 20220328
+
 5.17-lucjan-ll15-rc1
 
 - sync with upstream (resync rcu-5.17-port-changes-from-zenkernel.patch)
