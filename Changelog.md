@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.15 have been removed!
 
+5.17-lucjan-ll19-rc1
+
+- add random-treat-bootloader-trust-toggle-the-same-way-as.patch
+
 5.17-lucjan-ll18-rc1
 
 - add XANMOD-block-mq-deadline-Disable-front_merges-by-def.patch
