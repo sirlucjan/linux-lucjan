@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll21
+
+- update Project-C v5.17-r0
+
+DROP 5.17-lucjan-ll21-rc1
+
 5.17-lucjan-ll21-rc1
 
 - sync with upstream (drop fixes-5.17-unbreak-swiotlb.patch)
