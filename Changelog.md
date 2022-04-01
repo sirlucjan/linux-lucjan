@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll23-rc1
+
+- sync with upstream (drop fixes-5.17-unbreak-swiotlb.patch)
+- sync with upstream (drop Revert-fixes-5.17-unbreak-swiotlb.patch)
+- sync with upstream (drop ath9k-do-not-call-dma_sync_single_for_device-on-EINP.patch)
+- sync with upstream (drop Revert-ath9k-do-not-call-dma_sync_single_for_device-.patch)
+- sync with upstream (drop Revert-swiotlb-rework-fix-info-leak-with-DMA_FROM_DE.patch)
+
 5.17-lucjan-ll22
 
 - update Project-C v5.17-r0
