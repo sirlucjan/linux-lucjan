@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll23-rc2
+
+- sync with upstream (drop Revert-Revert-block-bfq-honor-already-setup-queue-me.patch)
+- sync with upstream (drop btrfs-fix-unexpected-error-path-when-reflinking-an-i.patch)
+- sync with upstream (drop x86-poly1305-Fixup-SLS.patch)
+- sync with upstream (update Project-C v5.17-r0)
+
 5.17-lucjan-ll23-rc1
 
 - sync with upstream (drop fixes-5.17-unbreak-swiotlb.patch)
