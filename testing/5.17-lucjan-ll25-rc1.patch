@@ -1,6 +1,6 @@
-From c85f554e6e2af265417d0fe40bb43a1e2477960c Mon Sep 17 00:00:00 2001
+From 14bd750a9b3ebebdce0adccbe266af552f7e1e13 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Mon, 4 Apr 2022 12:26:49 +0200
+Date: Mon, 4 Apr 2022 14:57:32 +0200
 Subject: [PATCH] 5.17-lucjan-ll25-rc1
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -1027,10 +1027,10 @@ index 000000000..4ea6a801d
 +result obtained from the working set estimation step described
 +earlier.
 diff --git a/Documentation/admin-guide/sysctl/kernel.rst b/Documentation/admin-guide/sysctl/kernel.rst
-index d359bcfad..96ca39f15 100644
+index 0f86e9f93..b8bd3cdc2 100644
 --- a/Documentation/admin-guide/sysctl/kernel.rst
 +++ b/Documentation/admin-guide/sysctl/kernel.rst
-@@ -1095,6 +1095,10 @@ reboot-cmd (SPARC only)
+@@ -1096,6 +1096,10 @@ reboot-cmd (SPARC only)
  ROM/Flash boot loader. Maybe to tell it what to do after
  rebooting. ???
  
@@ -1041,7 +1041,7 @@ index d359bcfad..96ca39f15 100644
  
  sched_energy_aware
  ==================
-@@ -1553,3 +1557,13 @@ is 10 seconds.
+@@ -1554,3 +1558,13 @@ is 10 seconds.
  
  The softlockup threshold is (``2 * watchdog_thresh``). Setting this
  tunable to zero will disable lockup detection altogether.
@@ -100550,7 +100550,7 @@ index c20bd4d9a..dd4ccea00 100644
  			wait_event_freezable(ksm_thread_wait,
  				ksmd_should_run() || kthread_should_stop());
 diff --git a/mm/memcontrol.c b/mm/memcontrol.c
-index 36e9f38c9..d5993490b 100644
+index 9b89a340a..1feb89ac0 100644
 --- a/mm/memcontrol.c
 +++ b/mm/memcontrol.c
 @@ -2744,6 +2744,7 @@ static void commit_charge(struct folio *folio, struct mem_cgroup *memcg)
@@ -101494,7 +101494,7 @@ index 9ddaf0e1b..0d7b2bd24 100644
  	mminit_dprintk(MMINIT_TRACE, "pageflags_layout_shifts",
  		"Section %d Node %d Zone %d Lastcpupid %d Kasantag %d\n",
 diff --git a/mm/mmap.c b/mm/mmap.c
-index f61a15474..4e0c7e1e7 100644
+index 18875c216..66d84b6de 100644
 --- a/mm/mmap.c
 +++ b/mm/mmap.c
 @@ -47,6 +47,7 @@
