@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll23
+
+- update Disable-CPU_FREQ_GOV_SCHEDUTIL.patch
+- add v4l2loopback-5.17-update-against-latest-git-HEAD.patch
+
+DROP 5.17-lucjan-ll23-rc3
+
 5.17-lucjan-ll23-rc3
 
 - sync with upstream (update Project-C v5.17-r0)
