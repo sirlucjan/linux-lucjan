@@ -17,6 +17,7 @@
 - sync with upstream (drop ath9k-do-not-call-dma_sync_single_for_device-on-EINP.patch)
 - sync with upstream (drop Revert-ath9k-do-not-call-dma_sync_single_for_device-.patch)
 - sync with upstream (drop Revert-swiotlb-rework-fix-info-leak-with-DMA_FROM_DE.patch)
+- sync with upstream (drop Reinstate-some-of-swiotlb-rework-fix-info-leak-with-.patch)
 
 5.17-lucjan-ll23
 
