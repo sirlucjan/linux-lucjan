@@ -6,6 +6,16 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll26
+
+- add Project-C v5.17-r1
+- add tick-Detect-and-fix-jiffies-update-stall.patch
+- add tick-rcu-Remove-obsolete-rcu_needs_cpu-parameters.patch
+- add tick-rcu-Stop-allowing-RCU_SOFTIRQ-in-idle.patch
+- add lib-irq_poll-Declare-IRQ_POLL-softirq-vector-as-ksof.patch
+
+DROP 5.17-lucjan-ll26-rc1
+
 5.17-lucjan-ll26-rc1
 
 - sync with upstream (drop Revert-Revert-block-bfq-honor-already-setup-queue-me.patch)
