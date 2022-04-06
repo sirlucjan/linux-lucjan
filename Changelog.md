@@ -8,6 +8,10 @@
 
 5.17-lucjan-ll28-rc1
 
+- sync with upstream (update Project-C v5.17-r1)
+
+5.17-lucjan-ll28-rc1
+
 - sync with upstream (drop Revert-Revert-block-bfq-honor-already-setup-queue-me.patch)
 - sync with upstream (drop btrfs-fix-unexpected-error-path-when-reflinking-an-i.patch)
 - sync with upstream (drop x86-poly1305-Fixup-SLS.patch)
