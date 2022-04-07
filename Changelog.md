@@ -6,7 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
-5.17-lucjan-ll28-rc1
+5.17-lucjan-ll28
+
+- add x86-speculation-Restore-speculation-related-MSRs-dur.patch
+
+DROP 5.17-lucjan-ll28-rc2
+
+5.17-lucjan-ll28-rc2
 
 - sync with upstream (update Project-C v5.17-r1)
 
