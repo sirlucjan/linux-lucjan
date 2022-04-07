@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll29-rc2
+
+- add sched-alt-Sync-sched-sugov-Ignore-busy-filter-when-r.patch
+- add sched-alt-Sync-sched-uclamp-Fix-iowait-boost-escapin.patch
+- add sched-alt-Sync-sched-uclamp-Add-dummy-functions-to-s.patch
+
 5.17-lucjan-ll29-rc1
 
 - sync with upstream (drop Revert-Revert-block-bfq-honor-already-setup-queue-me.patch)
