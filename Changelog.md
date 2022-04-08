@@ -6,6 +6,18 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll32
+
+- add bfq-Avoid-false-marking-of-bic-as-stably-merged.patch
+- add bfq-Avoid-merging-queues-with-different-parents.patch
+- add bfq-Split-shared-queues-on-move-between-cgroups.patch
+- add bfq-Update-cgroup-information-before-merging-bio.patch
+- add bfq-Drop-pointless-unlock-lock-pair.patch
+- add bfq-Remove-pointless-bfq_init_rq-calls.patch
+- add bfq-Track-whether-bfq_group-is-still-online.patch
+- add bfq-Get-rid-of-__bio_blkcg-usage.patch
+- add bfq-Make-sure-bfqg-for-which-we-are-queueing-request.patch
+
 5.17-lucjan-ll31
 
 - add cpufreq-intel_pstate-Handle-no_turbo-in-frequency-in.patch
