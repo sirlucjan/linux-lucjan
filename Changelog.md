@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll36-rc1
+
+- sync with upstream (drop drm-amd-amdgpu-amdgpu_cs-fix-refcount-leak-of-a-dma_.patch)
+- sync with upstream (drop drm-amd-display-Fix-memory-leak.patch)
+- sync with upstream (drop x86-speculation-Restore-speculation-related-MSRs-dur.patch)
+- sync with upstream (drop Revert-ACPI-processor-idle-Only-flush-cache-on-enter.patch)
+- add AUFS 20220411
+
 5.17-lucjan-ll35
 
 - add Revert-ACPI-processor-idle-Only-flush-cache-on-enter.patch
