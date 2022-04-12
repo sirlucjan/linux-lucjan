@@ -85,6 +85,8 @@
 │       ├── 5.17-lucjan-ll33.patch.sig
 │       ├── 5.17-lucjan-ll34.patch
 │       ├── 5.17-lucjan-ll34.patch.sig
+│       ├── 5.17-lucjan-ll36-rc1.patch
+│       ├── 5.17-lucjan-ll36-rc1.patch.sig
 │       ├── 5.17-lucjan-ll3-rc1.patch
 │       ├── 5.17-lucjan-ll3-rc1.patch.sig
 │       ├── 5.17-lucjan-ll4-rc1.patch
@@ -106,7 +108,7 @@
 ├── Files
 ├── README.md
 └── testing
-    ├── 5.17-lucjan-ll36-rc1.patch
-    └── 5.17-lucjan-ll36-rc1.patch.sig
+    ├── 5.17-lucjan-ll36-rc2.patch
+    └── 5.17-lucjan-ll36-rc2.patch.sig
 
-4 directories, 105 files
+4 directories, 107 files

@@ -8,6 +8,11 @@
 
 5.17-lucjan-ll36-rc1
 
+- drop AUFS 20220411
+- add AUFS 20220412
+
+5.17-lucjan-ll36-rc1
+
 - sync with upstream (drop drm-amd-amdgpu-amdgpu_cs-fix-refcount-leak-of-a-dma_.patch)
 - sync with upstream (drop drm-amd-display-Fix-memory-leak.patch)
 - sync with upstream (drop x86-speculation-Restore-speculation-related-MSRs-dur.patch)
