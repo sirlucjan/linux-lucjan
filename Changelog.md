@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll37
+
+- add btrfs-remove-unused-variable-in-btrfs_-start-write-_.patch
+
 5.17-lucjan-ll36-rc2 --> 5.17-lucjan-ll36
 
 5.17-lucjan-ll36-rc2
