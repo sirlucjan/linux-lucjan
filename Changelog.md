@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll39-rc1
+
+- sync with upstream (drop btrfs-fix-fallocate-to-use-file_modified-to-update-p.patch)
+- sync with upstream (drop btrfs-remove-no-longer-used-counter-when-reading-dat.patch)
+- sync with upstream (drop btrfs-remove-unused-variable-in-btrfs_-start-write-_.patch)
+
 5.17-lucjan-ll38
 
 - add gpio-Request-interrupts-after-IRQ-is-initialized.patch
