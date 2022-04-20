@@ -97,6 +97,8 @@
 │       ├── 5.17-lucjan-ll37.patch.sig
 │       ├── 5.17-lucjan-ll38-rc1.patch
 │       ├── 5.17-lucjan-ll38-rc1.patch.sig
+│       ├── 5.17-lucjan-ll39-rc1.patch
+│       ├── 5.17-lucjan-ll39-rc1.patch.sig
 │       ├── 5.17-lucjan-ll3-rc1.patch
 │       ├── 5.17-lucjan-ll3-rc1.patch.sig
 │       ├── 5.17-lucjan-ll4-rc1.patch
@@ -114,11 +116,10 @@
 ├── Changelog.md
 ├── current
 │   ├── 5.17-lucjan-ll38.patch
-│   └── 5.17-lucjan-ll38.patch.sig
+│   ├── 5.17-lucjan-ll38.patch.sig
+│   ├── 5.17-lucjan-ll39.patch
+│   └── 5.17-lucjan-ll39.patch.sig
 ├── Files
-├── README.md
-└── testing
-    ├── 5.17-lucjan-ll39-rc1.patch
-    └── 5.17-lucjan-ll39-rc1.patch.sig
+└── README.md
 
-4 directories, 117 files
+3 directories, 119 files
