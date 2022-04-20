@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll40
+
+- add NFSv4.1-provide-mount-option-to-toggle-trunking-disc.patch
+
 5.17-lucjan-ll39-rc1 --> 5.17-lucjan-ll39
 
 5.17-lucjan-ll39-rc1
