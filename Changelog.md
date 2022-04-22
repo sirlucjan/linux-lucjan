@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll42
+
+- add firmware_loader-use-kernel-credentials-when-reading-.patch
+
 5.17-lucjan-ll41
 
 - add Revert-selftest-firmware-Add-ZSTD-compressed-file-te.patch
