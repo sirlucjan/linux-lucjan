@@ -6,6 +6,21 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll41
+
+- add Revert-selftest-firmware-Add-ZSTD-compressed-file-te.patch
+- add Revert-selftest-firmware-Fix-the-request_firmware_in.patch
+- add Revert-selftests-firmware-Simplify-test-patterns.patch
+- add Revert-firmware-Add-the-support-for-ZSTD-compressed-.patch
+- add firmware_loader-EXTRA_FIRMWARE-does-not-support-comp.patch
+- add firmware-Add-the-support-for-ZSTD-compressed-firmwar.patch
+- add selftests-firmware-Use-smaller-dictionary-for-XZ-com.patch
+- add selftests-firmware-Fix-the-request_firmware_into_buf.patch
+- add selftests-firmware-Simplify-test-patterns.patch
+- add selftests-firmware-Add-ZSTD-compressed-file-tests.patch
+- add firmware_loader-Clear-data-and-size-in-fw_free_paged.patch
+- add firmware_loader-Check-fw_state_is_done-in-loading_st.patch
+
 5.17-lucjan-ll40
 
 - add NFSv4.1-provide-mount-option-to-toggle-trunking-disc.patch
