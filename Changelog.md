@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll44
+
+- add hwmon-asus-ec-sensors-add-ProArt-X570-Creator-WIFI-b.patch
+
 5.17-lucjan-ll43
 
 - add btrfs-use-non-bh-spin_lock-in-zstd-timer-callback.patch
