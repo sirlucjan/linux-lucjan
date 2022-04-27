@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll48
+
+- add xfs-fix-soft-lockup-via-spinning-in-filestream-ag-se.patch
+
 5.17-lucjan-ll47
 
 - add Revert-firmware_loader-use-kernel-credentials-when-r.patch
