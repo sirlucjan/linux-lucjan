@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll50
+
+- add hwmon-asus-ec-sensors-introduce-ec_board_info-struct.patch
+- add hwmon-asus-ec-sensors-implement-locking-via-the-ACPI.patch
+- add hwmon-asus-ec-sensors-add-support-for-board-families.patch
+- add hwmon-asus-ec-sensors-add-PRIME-X470-PRO-board.patch
+
 5.17-lucjan-ll49
 
 - drop 5.17-bfq-dev-lucjan-r2K220408v3.patch
