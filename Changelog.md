@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll52
+
+- add selftests-firmware-Add-firmware-upload-selftests.patch
+- add firmware_loader-Fix-configs-for-sysfs-split.patch
+- add firmware_loader-Move-definitions-from-sysfs_upload.h.patch
+
 5.17-lucjan-ll51
 
 - add 5.17-bfq-lucjan-r2K220429v1.patch
