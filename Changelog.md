@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll53
+
+- add hwmon-nct6775-Convert-register-access-to-regmap-API.patch
+- add hwmon-nct6775-Rearrange-attr-group-initialization.patch
+- add hwmon-nct6775-Add-read-only-mode.patch
+- add hwmon-nct6775-Convert-S_I-permissions-macros-to-octa.patch
+- add hwmon-nct6775-Split-core-and-platform-driver.patch
+
 5.17-lucjan-ll52
 
 - add selftests-firmware-Add-firmware-upload-selftests.patch
