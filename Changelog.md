@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll54
+
+- add xfs-convert-buffer-flags-to-unsigned.patch
+
 5.17-lucjan-ll53
 
 - add hwmon-nct6775-Convert-register-access-to-regmap-API.patch
