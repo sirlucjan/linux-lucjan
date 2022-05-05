@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll56
+
+- add ZEN-HID-lenovo-Add-support-for-ThinkPad-TrackPoint-K.patch
+
+DROP 5.17-lucjan-ll56-rc2
+
 5.17-lucjan-ll56-rc2
 
 - update bbr2-5.17-introduce-BBRv2.patch
