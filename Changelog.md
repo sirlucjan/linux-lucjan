@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll57
+
+- add firmware_loader-use-kernel-credentials-when-reading-.patch
+
+DROP 5.17-lucjan-ll57-rc2
+
 5.17-lucjan-ll57-rc2
 
 - add Revert-ASoC-Intel-sof_es8336-Add-a-quirk-for-Huawei-.patch
