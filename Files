@@ -155,6 +155,8 @@
 │       ├── 5.17-lucjan-ll57-rc1.patch.sig
 │       ├── 5.17-lucjan-ll57-rc2.patch
 │       ├── 5.17-lucjan-ll57-rc2.patch.sig
+│       ├── 5.17-lucjan-ll58-rc1.patch
+│       ├── 5.17-lucjan-ll58-rc1.patch.sig
 │       ├── 5.17-lucjan-ll59.patch
 │       ├── 5.17-lucjan-ll59.patch.sig
 │       ├── 5.17-lucjan-ll5-rc1.patch
@@ -175,9 +177,6 @@
 ├── pending
 │   ├── 5.17-lucjan-ll60.patch
 │   └── 5.17-lucjan-ll60.patch.sig
-├── README.md
-└── testing
-    ├── 5.17-lucjan-ll58-rc1.patch
-    └── 5.17-lucjan-ll58-rc1.patch.sig
+└── README.md
 
-5 directories, 175 files
+4 directories, 175 files
