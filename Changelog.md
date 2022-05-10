@@ -6,6 +6,15 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll61
+
+- add hwmon-nct6775-add-ASUS-PRO-H410T-PRIME-H410M-R-ROG-X.patch
+- add hwmon-asus-ec-sensors-add-doc-entry-for-PRIME-X470-P.patch
+- add hwmon-asus-ec-sensors-add-ROG-STRIX-X570-E-GAMING-WI.patch
+- add dt-bindings-hwmon-Add-nuvoton-nct6775.patch
+- add hwmon-nct6775-Add-i2c-driver.patch
+- add hwmon-nct6775-Fix-Kconfig-references-in-SENSORS_NCT6.patch
+
 5.17-lucjan-ll60
 
 - add btrfs-fix-assertion-failure-when-logging-directory-k.patch
