@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll60
+
+- add btrfs-fix-assertion-failure-when-logging-directory-k.patch
+- add net-atlantic-always-deep-reset-on-pm-op-fixing-null-.patch
+
 5.17-lucjan-ll59
 
 - drop Revert-ASoC-Intel-sof_es8336-Add-a-quirk-for-Huawei-.patch
