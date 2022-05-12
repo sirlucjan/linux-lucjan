@@ -1,6 +1,6 @@
-From 73e88d0de69cb1cda499b99cb225c2f63c78f1e0 Mon Sep 17 00:00:00 2001
+From 60ebc2682077405ebd86c328fe23b064d9dcd5e6 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Wed, 11 May 2022 14:26:28 +0200
+Date: Wed, 11 May 2022 14:27:21 +0200
 Subject: [PATCH] 5.17-lucjan-ll63
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3938,7 +3938,7 @@ index d9b2f1731..8137df4b4 100644
  NETDEVSIM
  M:	Jakub Kicinski <kuba@kernel.org>
 diff --git a/Makefile b/Makefile
-index 7ef8dd5ab..69f702521 100644
+index 5e48451b6..ff474a886 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -14,6 +14,10 @@ NAME = Superb Owl
@@ -67914,7 +67914,7 @@ index 000000000..4e7e39c98
 +	return err;
 +}
 diff --git a/fs/btrfs/btrfs_inode.h b/fs/btrfs/btrfs_inode.h
-index b3e46aabc..47e72d72f 100644
+index 5c0035316..32131a5d3 100644
 --- a/fs/btrfs/btrfs_inode.h
 +++ b/fs/btrfs/btrfs_inode.h
 @@ -13,6 +13,13 @@
@@ -68233,7 +68233,7 @@ index 28ddd9cf2..2633e0f40 100644
  	if (ret)
  		goto out_trans;
 diff --git a/fs/btrfs/inode.c b/fs/btrfs/inode.c
-index ecd305649..e74d04d81 100644
+index 10e205fba..4fb4bf4d5 100644
 --- a/fs/btrfs/inode.c
 +++ b/fs/btrfs/inode.c
 @@ -66,6 +66,11 @@ struct btrfs_dio_data {
@@ -68257,7 +68257,7 @@ index ecd305649..e74d04d81 100644
  out:
  	/*
  	 * Don't forget to free the reserved space, as for inlined extent
-@@ -4067,7 +4072,8 @@ int btrfs_update_inode_fallback(struct btrfs_trans_handle *trans,
+@@ -4056,7 +4061,8 @@ int btrfs_update_inode_fallback(struct btrfs_trans_handle *trans,
  static int __btrfs_unlink_inode(struct btrfs_trans_handle *trans,
  				struct btrfs_inode *dir,
  				struct btrfs_inode *inode,
@@ -68267,7 +68267,7 @@ index ecd305649..e74d04d81 100644
  {
  	struct btrfs_root *root = dir->root;
  	struct btrfs_fs_info *fs_info = root->fs_info;
-@@ -4123,15 +4129,27 @@ static int __btrfs_unlink_inode(struct btrfs_trans_handle *trans,
+@@ -4112,15 +4118,27 @@ static int __btrfs_unlink_inode(struct btrfs_trans_handle *trans,
  		goto err;
  	}
  skip_backref:
@@ -68298,7 +68298,7 @@ index ecd305649..e74d04d81 100644
  
  	/*
  	 * If we have a pending delayed iput we could end up with the final iput
-@@ -4163,7 +4181,7 @@ int btrfs_unlink_inode(struct btrfs_trans_handle *trans,
+@@ -4152,7 +4170,7 @@ int btrfs_unlink_inode(struct btrfs_trans_handle *trans,
  		       const char *name, int name_len)
  {
  	int ret;
@@ -68307,7 +68307,7 @@ index ecd305649..e74d04d81 100644
  	if (!ret) {
  		drop_nlink(&inode->vfs_inode);
  		ret = btrfs_update_inode(trans, inode->root, inode);
-@@ -4888,8 +4906,7 @@ int btrfs_cont_expand(struct btrfs_inode *inode, loff_t oldsize, loff_t size)
+@@ -4877,8 +4895,7 @@ int btrfs_cont_expand(struct btrfs_inode *inode, loff_t oldsize, loff_t size)
  						cur_offset + hole_size - 1, 0);
  			hole_em = alloc_extent_map();
  			if (!hole_em) {
@@ -68317,7 +68317,7 @@ index ecd305649..e74d04d81 100644
  				goto next;
  			}
  			hole_em->start = cur_offset;
-@@ -5983,14 +6000,8 @@ static int btrfs_set_inode_index_count(struct btrfs_inode *inode)
+@@ -5972,14 +5989,8 @@ static int btrfs_set_inode_index_count(struct btrfs_inode *inode)
  		goto out;
  	ret = 0;
  
@@ -68333,7 +68333,7 @@ index ecd305649..e74d04d81 100644
  		goto out;
  	}
  
-@@ -6001,7 +6012,7 @@ static int btrfs_set_inode_index_count(struct btrfs_inode *inode)
+@@ -5990,7 +6001,7 @@ static int btrfs_set_inode_index_count(struct btrfs_inode *inode)
  
  	if (found_key.objectid != btrfs_ino(inode) ||
  	    found_key.type != BTRFS_DIR_INDEX_KEY) {
@@ -68342,7 +68342,7 @@ index ecd305649..e74d04d81 100644
  		goto out;
  	}
  
-@@ -6152,7 +6163,7 @@ static struct inode *btrfs_new_inode(struct btrfs_trans_handle *trans,
+@@ -6141,7 +6152,7 @@ static struct inode *btrfs_new_inode(struct btrfs_trans_handle *trans,
  	 * sync since it will be a full sync anyway and this will blow away the
  	 * old info in the log.
  	 */
@@ -68351,7 +68351,7 @@ index ecd305649..e74d04d81 100644
  
  	key[0].objectid = objectid;
  	key[0].type = BTRFS_INODE_ITEM_KEY;
-@@ -6549,7 +6560,7 @@ static int btrfs_link(struct dentry *old_dentry, struct inode *dir,
+@@ -6538,7 +6549,7 @@ static int btrfs_link(struct dentry *old_dentry, struct inode *dir,
  				goto fail;
  		}
  		d_instantiate(dentry, inode);
@@ -68360,7 +68360,7 @@ index ecd305649..e74d04d81 100644
  	}
  
  fail:
-@@ -8114,8 +8125,13 @@ int btrfs_readpage(struct file *file, struct page *page)
+@@ -8103,8 +8114,13 @@ int btrfs_readpage(struct file *file, struct page *page)
  	btrfs_lock_and_flush_ordered_range(inode, start, end, NULL);
  
  	ret = btrfs_do_readpage(page, NULL, &bio_ctrl, 0, NULL);
@@ -68376,7 +68376,7 @@ index ecd305649..e74d04d81 100644
  	return ret;
  }
  
-@@ -8744,7 +8760,7 @@ static int btrfs_truncate(struct inode *inode, bool skip_writeback)
+@@ -8733,7 +8749,7 @@ static int btrfs_truncate(struct inode *inode, bool skip_writeback)
  	 * extents beyond i_size to drop.
  	 */
  	if (control.extents_found > 0)
@@ -68385,7 +68385,7 @@ index ecd305649..e74d04d81 100644
  
  	return ret;
  }
-@@ -9040,14 +9056,14 @@ static int btrfs_rename_exchange(struct inode *old_dir,
+@@ -9029,14 +9045,14 @@ static int btrfs_rename_exchange(struct inode *old_dir,
  	struct inode *new_inode = new_dentry->d_inode;
  	struct inode *old_inode = old_dentry->d_inode;
  	struct timespec64 ctime = current_time(old_inode);
@@ -68402,7 +68402,7 @@ index ecd305649..e74d04d81 100644
  	bool need_abort = false;
  
  	/*
-@@ -9150,29 +9166,6 @@ static int btrfs_rename_exchange(struct inode *old_dir,
+@@ -9139,29 +9155,6 @@ static int btrfs_rename_exchange(struct inode *old_dir,
  				BTRFS_I(new_inode), 1);
  	}
  
@@ -68432,7 +68432,7 @@ index ecd305649..e74d04d81 100644
  	/* src is a subvolume */
  	if (old_ino == BTRFS_FIRST_FREE_OBJECTID) {
  		ret = btrfs_unlink_subvol(trans, old_dir, old_dentry);
-@@ -9180,7 +9173,8 @@ static int btrfs_rename_exchange(struct inode *old_dir,
+@@ -9169,7 +9162,8 @@ static int btrfs_rename_exchange(struct inode *old_dir,
  		ret = __btrfs_unlink_inode(trans, BTRFS_I(old_dir),
  					   BTRFS_I(old_dentry->d_inode),
  					   old_dentry->d_name.name,
@@ -68442,7 +68442,7 @@ index ecd305649..e74d04d81 100644
  		if (!ret)
  			ret = btrfs_update_inode(trans, root, BTRFS_I(old_inode));
  	}
-@@ -9196,7 +9190,8 @@ static int btrfs_rename_exchange(struct inode *old_dir,
+@@ -9185,7 +9179,8 @@ static int btrfs_rename_exchange(struct inode *old_dir,
  		ret = __btrfs_unlink_inode(trans, BTRFS_I(new_dir),
  					   BTRFS_I(new_dentry->d_inode),
  					   new_dentry->d_name.name,
@@ -68452,7 +68452,7 @@ index ecd305649..e74d04d81 100644
  		if (!ret)
  			ret = btrfs_update_inode(trans, dest, BTRFS_I(new_inode));
  	}
-@@ -9226,46 +9221,31 @@ static int btrfs_rename_exchange(struct inode *old_dir,
+@@ -9215,46 +9210,31 @@ static int btrfs_rename_exchange(struct inode *old_dir,
  	if (new_inode->i_nlink == 1)
  		BTRFS_I(new_inode)->dir_index = new_idx;
  
@@ -68521,7 +68521,7 @@ index ecd305649..e74d04d81 100644
  	ret2 = btrfs_end_transaction(trans);
  	ret = ret ? ret : ret2;
  out_notrans:
-@@ -9340,11 +9320,11 @@ static int btrfs_rename(struct user_namespace *mnt_userns,
+@@ -9329,11 +9309,11 @@ static int btrfs_rename(struct user_namespace *mnt_userns,
  	struct btrfs_root *dest = BTRFS_I(new_dir)->root;
  	struct inode *new_inode = d_inode(new_dentry);
  	struct inode *old_inode = d_inode(old_dentry);
@@ -68534,7 +68534,7 @@ index ecd305649..e74d04d81 100644
  
  	if (btrfs_ino(BTRFS_I(new_dir)) == BTRFS_EMPTY_SUBVOL_DIR_OBJECTID)
  		return -EPERM;
-@@ -9449,29 +9429,11 @@ static int btrfs_rename(struct user_namespace *mnt_userns,
+@@ -9438,29 +9418,11 @@ static int btrfs_rename(struct user_namespace *mnt_userns,
  	if (unlikely(old_ino == BTRFS_FIRST_FREE_OBJECTID)) {
  		ret = btrfs_unlink_subvol(trans, old_dir, old_dentry);
  	} else {
@@ -68566,7 +68566,7 @@ index ecd305649..e74d04d81 100644
  		if (!ret)
  			ret = btrfs_update_inode(trans, root, BTRFS_I(old_inode));
  	}
-@@ -9513,12 +9475,9 @@ static int btrfs_rename(struct user_namespace *mnt_userns,
+@@ -9502,12 +9464,9 @@ static int btrfs_rename(struct user_namespace *mnt_userns,
  	if (old_inode->i_nlink == 1)
  		BTRFS_I(old_inode)->dir_index = index;
  
@@ -68582,7 +68582,7 @@ index ecd305649..e74d04d81 100644
  
  	if (flags & RENAME_WHITEOUT) {
  		ret = btrfs_whiteout_for_rename(trans, root, mnt_userns,
-@@ -9530,28 +9489,6 @@ static int btrfs_rename(struct user_namespace *mnt_userns,
+@@ -9519,28 +9478,6 @@ static int btrfs_rename(struct user_namespace *mnt_userns,
  		}
  	}
  out_fail:
@@ -68611,7 +68611,7 @@ index ecd305649..e74d04d81 100644
  	ret2 = btrfs_end_transaction(trans);
  	ret = ret ? ret : ret2;
  out_notrans:
-@@ -10031,8 +9968,7 @@ static int __btrfs_prealloc_file_range(struct inode *inode, int mode,
+@@ -10020,8 +9957,7 @@ static int __btrfs_prealloc_file_range(struct inode *inode, int mode,
  
  		em = alloc_extent_map();
  		if (!em) {
@@ -68717,7 +68717,7 @@ index 319fed82d..c5b3a631b 100644
  
  /*
 diff --git a/fs/btrfs/tree-log.c b/fs/btrfs/tree-log.c
-index 7a0bfa5be..3b941d7c8 100644
+index 049ee1904..740835b42 100644
 --- a/fs/btrfs/tree-log.c
 +++ b/fs/btrfs/tree-log.c
 @@ -917,6 +917,26 @@ static noinline int replay_one_extent(struct btrfs_trans_handle *trans,
@@ -69839,9 +69839,9 @@ index 7a0bfa5be..3b941d7c8 100644
 +	ret = 0;
 +
  	/*
- 	 * This is for cases where logging a directory could result in losing a
- 	 * a file after replaying the log. For example, if we move a file from a
-@@ -5666,7 +5856,7 @@ static int btrfs_log_inode(struct btrfs_trans_handle *trans,
+ 	 * For symlinks, we must always log their content, which is stored in an
+ 	 * inline extent, otherwise we could end up with an empty symlink after
+@@ -5678,7 +5868,7 @@ static int btrfs_log_inode(struct btrfs_trans_handle *trans,
  	    inode_only == LOG_INODE_ALL &&
  	    inode->last_unlink_trans >= trans->transid) {
  		btrfs_set_log_full_commit(trans);
@@ -69850,7 +69850,7 @@ index 7a0bfa5be..3b941d7c8 100644
  		goto out_unlock;
  	}
  
-@@ -5680,9 +5870,11 @@ static int btrfs_log_inode(struct btrfs_trans_handle *trans,
+@@ -5692,9 +5882,11 @@ static int btrfs_log_inode(struct btrfs_trans_handle *trans,
  		clear_bit(BTRFS_INODE_COPY_EVERYTHING, &inode->runtime_flags);
  		if (inode_only == LOG_INODE_EXISTS)
  			max_key_type = BTRFS_XATTR_ITEM_KEY;
@@ -69864,7 +69864,7 @@ index 7a0bfa5be..3b941d7c8 100644
  			/*
  			 * Make sure the new inode item we write to the log has
  			 * the same isize as the current one (if it exists).
-@@ -5696,22 +5888,23 @@ static int btrfs_log_inode(struct btrfs_trans_handle *trans,
+@@ -5708,22 +5900,23 @@ static int btrfs_log_inode(struct btrfs_trans_handle *trans,
  			 * (zeroes), as if an expanding truncate happened,
  			 * instead of getting a file of 4Kb only.
  			 */
@@ -69893,7 +69893,7 @@ index 7a0bfa5be..3b941d7c8 100644
  					ret = truncate_inode_items(trans, log,
  								   inode, 0, 0);
  			}
-@@ -5721,8 +5914,9 @@ static int btrfs_log_inode(struct btrfs_trans_handle *trans,
+@@ -5733,8 +5926,9 @@ static int btrfs_log_inode(struct btrfs_trans_handle *trans,
  			if (inode_only == LOG_INODE_ALL)
  				fast_search = true;
  			max_key.type = BTRFS_XATTR_ITEM_KEY;
@@ -69905,7 +69905,7 @@ index 7a0bfa5be..3b941d7c8 100644
  		} else {
  			if (inode_only == LOG_INODE_ALL)
  				fast_search = true;
-@@ -5731,37 +5925,35 @@ static int btrfs_log_inode(struct btrfs_trans_handle *trans,
+@@ -5743,37 +5937,35 @@ static int btrfs_log_inode(struct btrfs_trans_handle *trans,
  		}
  
  	}
@@ -69952,7 +69952,7 @@ index 7a0bfa5be..3b941d7c8 100644
  			goto out_unlock;
  		/*
  		 * If we are doing a fast fsync and the inode was logged before
-@@ -5772,18 +5964,16 @@ static int btrfs_log_inode(struct btrfs_trans_handle *trans,
+@@ -5784,18 +5976,16 @@ static int btrfs_log_inode(struct btrfs_trans_handle *trans,
  		 * BTRFS_INODE_COPY_EVERYTHING set.
  		 */
  		if (!xattrs_logged && inode->logged_trans < trans->transid) {
@@ -69974,7 +69974,7 @@ index 7a0bfa5be..3b941d7c8 100644
  	} else if (inode_only == LOG_INODE_ALL) {
  		struct extent_map *em, *n;
  
-@@ -5795,10 +5985,8 @@ static int btrfs_log_inode(struct btrfs_trans_handle *trans,
+@@ -5807,10 +5997,8 @@ static int btrfs_log_inode(struct btrfs_trans_handle *trans,
  
  	if (inode_only == LOG_INODE_ALL && S_ISDIR(inode->vfs_inode.i_mode)) {
  		ret = log_directory_changes(trans, inode, path, dst_path, ctx);
@@ -69986,7 +69986,7 @@ index 7a0bfa5be..3b941d7c8 100644
  	}
  
  	spin_lock(&inode->lock);
-@@ -5837,12 +6025,24 @@ static int btrfs_log_inode(struct btrfs_trans_handle *trans,
+@@ -5849,12 +6037,24 @@ static int btrfs_log_inode(struct btrfs_trans_handle *trans,
  	if (inode_only != LOG_INODE_EXISTS)
  		inode->last_log_commit = inode->last_sub_trans;
  	spin_unlock(&inode->lock);
@@ -70012,7 +70012,7 @@ index 7a0bfa5be..3b941d7c8 100644
  }
  
  /*
-@@ -5927,7 +6127,6 @@ static int log_new_dir_dentries(struct btrfs_trans_handle *trans,
+@@ -5939,7 +6139,6 @@ static int log_new_dir_dentries(struct btrfs_trans_handle *trans,
  				struct btrfs_log_ctx *ctx)
  {
  	struct btrfs_fs_info *fs_info = root->fs_info;
@@ -70020,7 +70020,7 @@ index 7a0bfa5be..3b941d7c8 100644
  	struct btrfs_path *path;
  	LIST_HEAD(dir_list);
  	struct btrfs_dir_list *dir_elem;
-@@ -5969,7 +6168,7 @@ static int log_new_dir_dentries(struct btrfs_trans_handle *trans,
+@@ -5981,7 +6180,7 @@ static int log_new_dir_dentries(struct btrfs_trans_handle *trans,
  		min_key.offset = 0;
  again:
  		btrfs_release_path(path);
@@ -70029,7 +70029,7 @@ index 7a0bfa5be..3b941d7c8 100644
  		if (ret < 0) {
  			goto next_dir_inode;
  		} else if (ret > 0) {
-@@ -5977,7 +6176,6 @@ static int log_new_dir_dentries(struct btrfs_trans_handle *trans,
+@@ -5989,7 +6188,6 @@ static int log_new_dir_dentries(struct btrfs_trans_handle *trans,
  			goto next_dir_inode;
  		}
  
@@ -70037,7 +70037,7 @@ index 7a0bfa5be..3b941d7c8 100644
  		leaf = path->nodes[0];
  		nritems = btrfs_header_nritems(leaf);
  		for (i = path->slots[0]; i < nritems; i++) {
-@@ -5995,8 +6193,7 @@ static int log_new_dir_dentries(struct btrfs_trans_handle *trans,
+@@ -6007,8 +6205,7 @@ static int log_new_dir_dentries(struct btrfs_trans_handle *trans,
  
  			di = btrfs_item_ptr(leaf, i, struct btrfs_dir_item);
  			type = btrfs_dir_type(leaf, di);
@@ -70047,7 +70047,7 @@ index 7a0bfa5be..3b941d7c8 100644
  				continue;
  			btrfs_dir_item_key_to_cpu(leaf, di, &di_key);
  			if (di_key.type == BTRFS_ROOT_ITEM_KEY)
-@@ -6034,16 +6231,6 @@ static int log_new_dir_dentries(struct btrfs_trans_handle *trans,
+@@ -6046,16 +6243,6 @@ static int log_new_dir_dentries(struct btrfs_trans_handle *trans,
  			}
  			break;
  		}
@@ -70064,7 +70064,7 @@ index 7a0bfa5be..3b941d7c8 100644
  		if (min_key.offset < (u64)-1) {
  			min_key.offset++;
  			goto again;
-@@ -6774,15 +6961,32 @@ void btrfs_record_snapshot_destroy(struct btrfs_trans_handle *trans,
+@@ -6786,15 +6973,32 @@ void btrfs_record_snapshot_destroy(struct btrfs_trans_handle *trans,
  	mutex_unlock(&dir->log_mutex);
  }
  
@@ -70102,7 +70102,7 @@ index 7a0bfa5be..3b941d7c8 100644
  
  	/*
  	 * this will force the logging code to walk the dentry chain
-@@ -6795,26 +6999,83 @@ void btrfs_log_new_name(struct btrfs_trans_handle *trans,
+@@ -6807,26 +7011,83 @@ void btrfs_log_new_name(struct btrfs_trans_handle *trans,
  	 * if this inode hasn't been logged and directory we're renaming it
  	 * from hasn't been logged, we don't need to log it
  	 */
@@ -70202,7 +70202,7 @@ index 7a0bfa5be..3b941d7c8 100644
  
  	btrfs_init_log_ctx(&ctx, &inode->vfs_inode);
  	ctx.logging_new_name = true;
-@@ -6826,5 +7087,16 @@ void btrfs_log_new_name(struct btrfs_trans_handle *trans,
+@@ -6838,5 +7099,16 @@ void btrfs_log_new_name(struct btrfs_trans_handle *trans,
  	 * inconsistent state after a rename operation.
  	 */
  	btrfs_log_inode_parent(trans, inode, parent, LOG_INODE_EXISTS, &ctx);
@@ -91509,10 +91509,10 @@ index 086a22d1a..c6f5f1e84 100644
  }
  #endif /* CONFIG_COMPAT_32BIT_TIME */
 diff --git a/kernel/irq/irqdesc.c b/kernel/irq/irqdesc.c
-index 2267e6527..3e129f2e1 100644
+index a4426a00b..dc95a5f5e 100644
 --- a/kernel/irq/irqdesc.c
 +++ b/kernel/irq/irqdesc.c
-@@ -681,6 +681,27 @@ int generic_handle_domain_irq(struct irq_domain *domain, unsigned int hwirq)
+@@ -683,6 +683,27 @@ int generic_handle_domain_irq(struct irq_domain *domain, unsigned int hwirq)
  }
  EXPORT_SYMBOL_GPL(generic_handle_domain_irq);
  
