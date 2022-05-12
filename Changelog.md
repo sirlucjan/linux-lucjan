@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll64
+
+- add XANMOD-block-mq-deadline-Increase-write-priority-to-.patch
+
 5.17-lucjan-ll63
 
 - add blk-mq-don-t-queue-hctx-run_work-if-the-queue-is-dea.patch
