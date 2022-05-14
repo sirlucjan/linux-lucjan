@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll67
+
+- add 5.17-bfq-lucjan-r2K220514v1.patch
+
 5.17-lucjan-ll66
 
 - add 5.17-bfq-lucjan-r2K220513v1.patch
