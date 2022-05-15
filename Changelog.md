@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll61
+
+- add net-atlantic-fix-frag-0-not-initialized.patch
+- add net-atlantic-reduce-scope-of-is_rsc_complete.patch
+- add net-atlantic-add-check-for-MAX_SKB_FRAGS.patch
+- add net-atlantic-verify-hw_head_-lies-within-TX-buffer-r.patch
+
 5.17-lucjan-ll67
 
 - add 5.17-bfq-lucjan-r2K220514v1.patch
