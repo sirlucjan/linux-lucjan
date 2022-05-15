@@ -1,6 +1,6 @@
-From 2b63c2fd9af784d4dcc1bf2d79ddf938962b3a26 Mon Sep 17 00:00:00 2001
+From 1c780ea3087e21838ca8304f64de46a2d6775e32 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Sat, 14 May 2022 19:19:55 +0200
+Date: Sat, 14 May 2022 19:20:44 +0200
 Subject: [PATCH] 5.17-lucjan-ll67
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
@@ -3938,7 +3938,7 @@ index d9b2f1731..8137df4b4 100644
  NETDEVSIM
  M:	Jakub Kicinski <kuba@kernel.org>
 diff --git a/Makefile b/Makefile
-index ce65b393a..39a407a16 100644
+index c1b5cdfe3..72406727b 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -14,6 +14,10 @@ NAME = Superb Owl
@@ -106406,7 +106406,7 @@ index 563100f2a..e814c9616 100644
  	.post_attach = mem_cgroup_move_task,
  	.dfl_cftypes = memory_files,
 diff --git a/mm/memory.c b/mm/memory.c
-index b69afe3dd..357fd1649 100644
+index 886925d97..5eec0722e 100644
 --- a/mm/memory.c
 +++ b/mm/memory.c
 @@ -122,18 +122,6 @@ int randomize_va_space __read_mostly =
@@ -107910,7 +107910,7 @@ index 9e27f9f03..32c3a83b7 100644
  						pvmw.pte)) {
  				/*
 diff --git a/mm/shmem.c b/mm/shmem.c
-index a09b29ec2..6b761c1b6 100644
+index 7a46419d3..44f484e07 100644
 --- a/mm/shmem.c
 +++ b/mm/shmem.c
 @@ -1121,6 +1121,7 @@ static void shmem_evict_inode(struct inode *inode)
@@ -107921,7 +107921,7 @@ index a09b29ec2..6b761c1b6 100644
  		shmem_truncate_range(inode, 0, (loff_t)-1);
  		if (!list_empty(&info->shrinklist)) {
  			spin_lock(&sbinfo->shrinklist_lock);
-@@ -2492,19 +2493,10 @@ static ssize_t shmem_file_read_iter(struct kiocb *iocb, struct iov_iter *to)
+@@ -2494,19 +2495,10 @@ static ssize_t shmem_file_read_iter(struct kiocb *iocb, struct iov_iter *to)
  	struct address_space *mapping = inode->i_mapping;
  	pgoff_t index;
  	unsigned long offset;
@@ -107941,7 +107941,7 @@ index a09b29ec2..6b761c1b6 100644
  	index = *ppos >> PAGE_SHIFT;
  	offset = *ppos & ~PAGE_MASK;
  
-@@ -2513,6 +2505,7 @@ static ssize_t shmem_file_read_iter(struct kiocb *iocb, struct iov_iter *to)
+@@ -2515,6 +2507,7 @@ static ssize_t shmem_file_read_iter(struct kiocb *iocb, struct iov_iter *to)
  		pgoff_t end_index;
  		unsigned long nr, ret;
  		loff_t i_size = i_size_read(inode);
@@ -107949,7 +107949,7 @@ index a09b29ec2..6b761c1b6 100644
  
  		end_index = i_size >> PAGE_SHIFT;
  		if (index > end_index)
-@@ -2523,15 +2516,13 @@ static ssize_t shmem_file_read_iter(struct kiocb *iocb, struct iov_iter *to)
+@@ -2525,15 +2518,13 @@ static ssize_t shmem_file_read_iter(struct kiocb *iocb, struct iov_iter *to)
  				break;
  		}
  
@@ -107966,7 +107966,7 @@ index a09b29ec2..6b761c1b6 100644
  			unlock_page(page);
  
  			if (PageHWPoison(page)) {
-@@ -2571,9 +2562,10 @@ static ssize_t shmem_file_read_iter(struct kiocb *iocb, struct iov_iter *to)
+@@ -2573,9 +2564,10 @@ static ssize_t shmem_file_read_iter(struct kiocb *iocb, struct iov_iter *to)
  			 */
  			if (!offset)
  				mark_page_accessed(page);
@@ -107978,7 +107978,7 @@ index a09b29ec2..6b761c1b6 100644
  		}
  
  		/*
-@@ -2586,7 +2578,8 @@ static ssize_t shmem_file_read_iter(struct kiocb *iocb, struct iov_iter *to)
+@@ -2588,7 +2580,8 @@ static ssize_t shmem_file_read_iter(struct kiocb *iocb, struct iov_iter *to)
  		index += offset >> PAGE_SHIFT;
  		offset &= ~PAGE_MASK;
  
@@ -107988,7 +107988,7 @@ index a09b29ec2..6b761c1b6 100644
  		if (!iov_iter_count(to))
  			break;
  		if (ret < nr) {
-@@ -4140,6 +4133,7 @@ int shmem_zero_setup(struct vm_area_struct *vma)
+@@ -4142,6 +4135,7 @@ int shmem_zero_setup(struct vm_area_struct *vma)
  
  	return 0;
  }
