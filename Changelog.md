@@ -6,7 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
-5.17-lucjan-ll61
+5.17-lucjan-ll69-rc1
+
+- sync with upstream (drop net-atlantic-always-deep-reset-on-pm-op-fixing-null-.patch)
+- sync with upstream (drop hwmon-asus_wmi_sensors-Fix-CROSSHAIR-VI-HERO-name.patch)
+- sync with upstream (drop firmware_loader-use-kernel-credentials-when-reading-.patch)
+
+5.17-lucjan-ll68
 
 - add net-atlantic-fix-frag-0-not-initialized.patch
 - add net-atlantic-reduce-scope-of-is_rsc_complete.patch
