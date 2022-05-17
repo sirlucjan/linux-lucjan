@@ -6,6 +6,17 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll69
+
+- drop UKSM for 5.17
+- add mm-ksm-introduce-ksm_madvise_merge-helper.patch
+- add mm-ksm-introduce-ksm_madvise_unmerge-helper.patch
+- add mm-introduce-pmadv_ksm-system-call.patch
+- add mm-wire-up-pmadv_ksm-system-call.patch
+- add mm-add-sysfs-entry-for-pmadv_ksm-syscall-number.patch
+
+DROP 5.17-lucjan-ll69-rc1
+
 5.17-lucjan-ll69-rc1
 
 - sync with upstream (drop net-atlantic-always-deep-reset-on-pm-op-fixing-null-.patch)
