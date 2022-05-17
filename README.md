@@ -32,7 +32,7 @@
 
 * [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.17) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
 
-* [UKSM (sources)](https://github.com/dolohow/uksm) / [UKSM (info)](https://www.usenix.org/sites/default/files/conference/protected-files/fast18_slides_xia.pdf) - resync from dolohow’s github
+* [UKSMD](https://gitlab.com/post-factum/uksmd) - Userspace KSM helper daemon authored by Oleksandr Natalenko
 
 * [LL-patches](https://github.com/sirlucjan/kernel-patches/tree/master/5.17/ll-patches) / [LL-patches](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.17/ll-patches) - specific patches authored by Piotr Gorski
 
