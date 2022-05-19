@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll75
+
+- add Revert-sched-alt-Tentative-Add-lockdep-to-select_tas.patch
+- add Revert-sched-alt-Make-sure-that-__set_task_cpu-gets-.patch
+
 5.17-lucjan-ll74
 
 - add hwmon-asus-ec-sensors-fix-Formula-VIII-definition.patch
@@ -17,7 +22,7 @@
 
 5.17-lucjan-ll72
 
-- add -ched-alt-Make-sure-that-__set_task_cpu-gets-called-.patch
+- add sched-alt-Make-sure-that-__set_task_cpu-gets-called-.patch
 
 5.17-lucjan-ll71-rc1 --> 5.17-lucjan-ll71
 
