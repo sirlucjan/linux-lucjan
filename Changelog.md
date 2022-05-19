@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll73
+
+- add 5.17-bfq-lucjan-r2K220519v1.patch
+- add sched-alt-Tentative-Add-lockdep-to-select_task_rq.patch
+
 5.17-lucjan-ll72
 
 - add -ched-alt-Make-sure-that-__set_task_cpu-gets-called-.patch
