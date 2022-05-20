@@ -6,6 +6,21 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll76
+
+- add Revert-blk-mq-don-t-queue-hctx-run_work-if-the-queue.patch
+- add blk-mq-fix-panic-during-blk_mq_run_work_fn.patch
+- add rtw88-Call-rtw_fw_beacon_filter_config-with-rtwdev-m.patch
+- add rtw88-Drop-rf_lock.patch
+- add rtw88-Drop-h2c.lock.patch
+- add rtw88-Drop-coex-mutex.patch
+- add rtw88-Do-not-access-registers-while-atomic.patch
+- add rtw88-Add-common-USB-chip-support.patch
+- add rtw88-Add-rtw8723du-chipset-support.patch
+- add rtw88-Add-rtw8821cu-chipset-support.patch
+- add rtw88-Add-rtw8822bu-chipset-support.patch
+- add rtw88-Add-rtw8822cu-chipset-support.patch
+
 5.17-lucjan-ll75
 
 - add Revert-sched-alt-Tentative-Add-lockdep-to-select_tas.patch
