@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll78
+
+- add 5.17-bfq-lucjan-r2K220521v1.patch
+- add zram-5.17-introduce-ZRAM-entropy-calculation.patch
+
 5.17-lucjan-ll77
 
 - add test_firmware-fix-end-of-loop-test-in-upload_read_sh.patch
