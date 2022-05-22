@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.17-lucjan-ll80
+
+- update LL-Implement-ll-branding-v5.17.patch
+
 5.17-lucjan-ll79
 
 - add MAINTAINERS-add-Russ-Weight-as-a-firmware-loader-mai.patch
