@@ -8,6 +8,10 @@
 
 5.18-lucjan-ll5-rc1
 
+- add lkdtm-heap-Hide-allocation-size-from-Warray-bounds.patch
+
+5.18-lucjan-ll5-rc1
+
 - add btrfs-add-a-force_chunk_alloc-to-space_info-s-sysfs.patch
 
 5.18-lucjan-ll4-rc1
