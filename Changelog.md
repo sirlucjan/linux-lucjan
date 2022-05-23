@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.18-lucjan-ll5-rc1
+
+- add btrfs-add-a-force_chunk_alloc-to-space_info-s-sysfs.patch
+
 5.18-lucjan-ll4-rc1
 
 - add btrfs-fix-hang-during-unmount-when-block-group-recla.patch
