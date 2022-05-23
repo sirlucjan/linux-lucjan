@@ -401,6 +401,27 @@
 - add AUFS 20220418
 - add cacULE-5.18.patch
 
+5.17-lucjan-ll81-rc1
+
+- sync with upstream (x86-chacha20-Avoid-spurious-jumps-to-other-functions.patch)
+- sync with upstream (net-atlantic-fix-frag-0-not-initialized.patch)
+- sync with upstream (net-atlantic-reduce-scope-of-is_rsc_complete.patch)
+- sync with upstream (net-atlantic-add-check-for-MAX_SKB_FRAGS.patch)
+- sync with upstream (net-atlantic-verify-hw_head_-lies-within-TX-buffer-r.patch)
+- sync with upstream (kernel-resource-Introduce-request_mem_region_muxed.patch)
+- sync with upstream (i2c-piix4-Replace-hardcoded-memory-map-size-with-a-d.patch)
+- sync with upstream (i2c-piix4-Move-port-I-O-region-request-release-code-.patch)
+- sync with upstream (i2c-piix4-Move-SMBus-controller-base-address-detect-.patch)
+- sync with upstream (i2c-piix4-Move-SMBus-port-selection-into-function.patch)
+- sync with upstream (i2c-piix4-Add-EFCH-MMIO-support-to-region-request-an.patch)
+- sync with upstream (i2c-piix4-Add-EFCH-MMIO-support-to-SMBus-base-addres.patch)
+- sync with upstream (i2c-piix4-Add-EFCH-MMIO-support-for-SMBus-port-selec.patch)
+- sync with upstream (i2c-piix4-Enable-EFCH-MMIO-for-Family-17h.patch)
+- sync with upstream (Watchdog-sp5100_tco-Move-timer-initialization-into-f.patch)
+- sync with upstream (Watchdog-sp5100_tco-Refactor-MMIO-base-address-initi.patch)
+- sync with upstream (Watchdog-sp5100_tco-Add-initialization-using-EFCH-MM.patch)
+- sync with upstream (Watchdog-sp5100_tco-Enable-Family-17h-CPUs.patch)
+
 5.17-lucjan-ll80
 
 - update LL-Implement-ll-branding-v5.17.patch
