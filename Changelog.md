@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.18-lucjan-ll4-rc1
+
+- add btrfs-fix-hang-during-unmount-when-block-group-recla.patch
+- add net-atlantic-Avoid-out-of-bounds-indexing.patch
+- add fs-writeback-writeback_sb_inodes-Recalculate-wrote-a.patch
+- add xfs-fix-soft-lockup-via-spinning-in-filestream-ag-se.patch
+
 5.18-lucjan-ll3-rc1
 
 - update PRJC-for-5.18.patch
