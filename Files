@@ -225,7 +225,9 @@
 │       ├── 5.18-lucjan-ll4-rc1.patch
 │       ├── 5.18-lucjan-ll4-rc1.patch.sig
 │       ├── 5.18-lucjan-ll5-rc1.patch
-│       └── 5.18-lucjan-ll5-rc1.patch.sig
+│       ├── 5.18-lucjan-ll5-rc1.patch.sig
+│       ├── 5.18-lucjan-ll6-rc1.patch
+│       └── 5.18-lucjan-ll6-rc1.patch.sig
 ├── Changelog.md
 ├── current
 │   ├── 5.17-lucjan-ll80.patch
@@ -233,7 +235,7 @@
 ├── Files
 ├── README.md
 └── trunk
-    ├── 5.18-lucjan-ll6-rc1.patch
-    └── 5.18-lucjan-ll6-rc1.patch.sig
+    ├── 5.18-lucjan-ll7-rc1.patch
+    └── 5.18-lucjan-ll7-rc1.patch.sig
 
-5 directories, 231 files
+5 directories, 233 files
