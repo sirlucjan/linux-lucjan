@@ -6,6 +6,18 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.18-lucjan-ll14-rc1
+
+- add Revert-pci-Enable-overrides-for-missing-ACS-capabili.patch
+- add Revert-openrgb-Deduplicate-piix4-setup-for-HUDSON2-K.patch
+- add Revert-i2c-busses-Add-SMBus-capability-to-work-with-.patch
+- add Revert-Input-evdev-use-call_rcu-when-detaching-clien.patch
+- add Revert-PCI-Add-Intel-remapped-NVMe-device-support.patch
+- add ZEN-Input-evdev-use-call_rcu-when-detaching-client.patch
+- add ZEN-Add-ACS-override-support.patch
+- add ZEN-PCI-Add-Intel-remapped-NVMe-device-support.patch
+- add ZEN-Add-OpenRGB-patches.patch
+
 5.18-lucjan-ll13-rc1
 
 - update PRJC-for-5.18.patch
