@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.18-lucjan-ll11-rc1
+
+- add kbuild-Fix-include-path-in-scripts-Makefile.modpost.patch
+- add scripts-kallsyms-update-usage-message-of-the-kallsym.patch
+- update spadfs-5.18-merge-v1.0.15.patch
+
 5.18-lucjan-ll10-rc1
 
 - update PRJC-for-5.18.patch
