@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.18-lucjan-ll12-rc1
+
+- add kbuild-link-symbol-CRCs-at-final-link-removing-CONFI.patch
+- add kbuild-check-static-EXPORT_SYMBOL-by-script-instead-.patch
+- add kbuild-make-built-in.a-rule-robust-against-too-long-.patch
+- add kbuild-make-.mod-rule-robust-against-too-long-argume.patch
+
 5.18-lucjan-ll11-rc1
 
 - add kbuild-Fix-include-path-in-scripts-Makefile.modpost.patch
