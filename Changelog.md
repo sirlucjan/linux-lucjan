@@ -442,6 +442,8 @@
 - add AUFS 20220418
 - add cacULE-5.18.patch
 
+5.17-lucjan-ll81-rc1 --> 5.17-lucjan-ll81
+
 5.17-lucjan-ll81-rc1
 
 - sync with upstream (x86-chacha20-Avoid-spurious-jumps-to-other-functions.patch)
