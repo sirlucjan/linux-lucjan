@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.18-lucjan-ll21-rc1
+
+- add kbuild-5.18-merge-changes-from-dev-tree.patch
+
 5.18-lucjan-ll20-rc1
 
 - add Revert-modpost-split-the-section-mismatch-checks-int.patch
