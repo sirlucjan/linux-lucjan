@@ -6,6 +6,15 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.18-lucjan-ll19-rc1
+
+- add modpost-fix-removing-numeric-suffixes.patch
+- add modpost-fix-undefined-behavior-of-is_arm_mapping_sym.patch
+- add modpost-remove-the-unused-argument-of-check_sec_ref.patch
+- add modpost-reuse-ARRAY_SIZE-macro-for-section_mismatch.patch
+- add modpost-squash-if.else-if-in-find_elf_symbol2.patch
+- add kbuild-replace-if-A-A-B-with-or-A-B-in-scripts-Makef.patch
+
 5.18-lucjan-ll18-rc1
 
 - update spadfs-5.18-merge-v1.0.15.patch
