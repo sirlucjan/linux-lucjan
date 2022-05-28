@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.16 have been removed!
 
+5.18-lucjan-ll22-rc1
+
+- add 5.18-bfq-lucjan-r2K220528v1.patch
+- add damon-5.18-extend-DAMOS-for-proactive-LRU-lists-sort.patch
+
 5.18-lucjan-ll21-rc1
 
 - add kbuild-5.18-merge-changes-from-dev-tree.patch
