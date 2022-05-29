@@ -213,8 +213,12 @@
 │   │   ├── 5.17-lucjan-ll7-rc1.patch.sig
 │   │   ├── 5.17-lucjan-ll80.patch
 │   │   ├── 5.17-lucjan-ll80.patch.sig
+│   │   ├── 5.17-lucjan-ll81.patch
+│   │   ├── 5.17-lucjan-ll81.patch.sig
 │   │   ├── 5.17-lucjan-ll81-rc1.patch
 │   │   ├── 5.17-lucjan-ll81-rc1.patch.sig
+│   │   ├── 5.17-lucjan-ll82-rc1.patch
+│   │   ├── 5.17-lucjan-ll82-rc1.patch.sig
 │   │   ├── 5.17-lucjan-ll8-rc1.patch
 │   │   ├── 5.17-lucjan-ll8-rc1.patch.sig
 │   │   ├── 5.17-lucjan-ll9-rc1.patch
@@ -246,6 +250,8 @@
 │       ├── 5.18-lucjan-ll20-rc1.patch.sig
 │       ├── 5.18-lucjan-ll21-rc1.patch
 │       ├── 5.18-lucjan-ll21-rc1.patch.sig
+│       ├── 5.18-lucjan-ll22-rc1.patch
+│       ├── 5.18-lucjan-ll22-rc1.patch.sig
 │       ├── 5.18-lucjan-ll2-rc1.patch
 │       ├── 5.18-lucjan-ll2-rc1.patch.sig
 │       ├── 5.18-lucjan-ll3-rc1.patch
@@ -264,15 +270,9 @@
 │       └── 5.18-lucjan-ll9-rc1.patch.sig
 ├── Changelog.md
 ├── current
-│   ├── 5.17-lucjan-ll81.patch
-│   └── 5.17-lucjan-ll81.patch.sig
+│   ├── 5.18-lucjan-ll22.patch
+│   └── 5.18-lucjan-ll22.patch.sig
 ├── Files
-├── README.md
-├── testing
-│   ├── 5.17-lucjan-ll82-rc1.patch
-│   └── 5.17-lucjan-ll82-rc1.patch.sig
-└── trunk
-    ├── 5.18-lucjan-ll22-rc1.patch
-    └── 5.18-lucjan-ll22-rc1.patch.sig
+└── README.md
 
-6 directories, 269 files
+4 directories, 271 files
