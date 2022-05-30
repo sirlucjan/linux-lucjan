@@ -6,6 +6,43 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll27
+
+- add winesync-Introduce-the-winesync-driver-and-character.patch
+- add winesync-Reserve-a-minor-device-number-and-ioctl-ran.patch
+- add winesync-Introduce-WINESYNC_IOC_CREATE_SEM-and-WINES.patch
+- add winesync-Introduce-WINESYNC_IOC_PUT_SEM.patch
+- add winesync-Introduce-WINESYNC_IOC_WAIT_ANY.patch
+- add winesync-Introduce-WINESYNC_IOC_WAIT_ALL.patch
+- add winesync-Introduce-WINESYNC_IOC_CREATE_MUTEX.patch
+- add winesync-Introduce-WINESYNC_IOC_PUT_MUTEX.patch
+- add winesync-Introduce-WINESYNC_IOC_KILL_OWNER.patch
+- add winesync-Introduce-WINESYNC_IOC_READ_SEM.patch
+- add winesync-Introduce-WINESYNC_IOC_READ_MUTEX.patch
+- add docs-winesync-Add-documentation-for-the-winesync-uAP.patch
+- add selftests-winesync-Add-some-tests-for-semaphore-stat.patch
+- add selftests-winesync-Add-some-tests-for-mutex-state.patch
+- add selftests-winesync-Add-some-tests-for-WINESYNC_IOC_W.patch
+- add selftests-winesync-Add-some-tests-for-WINESYNC_IOC_W.patch
+- add selftests-winesync-Add-some-tests-for-invalid-object.patch
+- add selftests-winesync-Add-some-tests-for-wakeup-signali.patch
+- add selftests-winesync-Add-some-tests-for-wakeup-signali.patch
+- add maintainers-Add-an-entry-for-winesync.patch
+- add winesync-Introduce-WINESYNC_IOC_CREATE_EVENT.patch
+- add winesync-Introduce-WINESYNC_IOC_SET_EVENT.patch
+- add winesync-Introduce-WINESYNC_IOC_RESET_EVENT.patch
+- add winesync-Introduce-WINESYNC_IOC_PULSE_EVENT.patch
+- add winesync-Introduce-WINESYNC_IOC_READ_EVENT.patch
+- add selftests-winesync-Add-some-tests-for-manual-reset-e.patch
+- add selftests-winesync-Add-some-tests-for-auto-reset-eve.patch
+- add selftests-winesync-Add-some-tests-for-wakeup-signali.patch
+- add selftests-winesync-Add-some-tests-for-invalid-object.patch
+- add docs-winesync-Document-event-APIs.patch
+- add winesync-Introduce-alertable-waits.patch
+- add selftests-winesync-Add-tests-for-alertable-waits.patch
+- add serftests-winesync-Add-some-tests-for-wakeup-signali.patch
+- add docs-winesync-Document-alertable-waits.patch
+
 5.18-lucjan-ll26
 
 - add ntfs3-5.18-provide-block_invalidate_folio-to-fix-mem.patch
