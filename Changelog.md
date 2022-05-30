@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll25
+
+- add sched-autogroup-Fix-sysctl-move.patch
+- update sched-autogroup-Add-kernel-parameter-and-config-opti.patch
+
 5.18-lucjan-ll24
 
 - add mm-page_alloc-Always-attempt-to-allocate-at-least-on.patch
