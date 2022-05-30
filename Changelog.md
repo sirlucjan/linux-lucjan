@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll24
+
+- add mm-page_alloc-Always-attempt-to-allocate-at-least-on.patch
+- add net-sched-fixed-barrier-to-prevent-skbuff-sticking-i.patch
+- add pipe-Fix-missing-lock-in-pipe_resize_ring.patch
+- add writeback-Fix-inode-i_io_list-not-be-protected-by-in.patch
+- add xfs-fix-xfs_ifree-error-handling-to-not-leak-perag-r.patch
+
 5.18-lucjan-ll23
 
 - add AUFS 20220530
