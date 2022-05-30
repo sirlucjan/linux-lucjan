@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll26
+
+- add ntfs3-5.18-provide-block_invalidate_folio-to-fix-mem.patch
+
 5.18-lucjan-ll25
 
 - add sched-autogroup-Fix-sysctl-move.patch
