@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll29
+
+- add lrng-5.18-merge-full-ABI-compliance-branch.patch
+
 5.18-lucjan-ll28
 
 - add lrng-5.18-update-to-the-latest-git-HEAD.patch
