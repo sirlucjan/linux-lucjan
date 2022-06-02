@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll32
+
+- add sched-Fix-the-check-of-nr_running-at-queue-wakelist.patch
+- add sched-Remove-the-limitation-of-WF_ON_CPU-on-wakelist.patch
+- add sched-alt-Sync-sched-Fix-the-check-of-nr_running-at-.patch
+- add sched-alt-Sync-sched-Remove-the-limitation-of-WF_ON_.patch
+
 5.18-lucjan-ll31
 
 - add 5.18-bfq-lucjan-r2K220601v2.patch
