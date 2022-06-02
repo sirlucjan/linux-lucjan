@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll33
+
+- add MAINTAINERS-add-Stephan-Mueller-as-a-LRNG-maintainer.patch
+
 5.18-lucjan-ll32
 
 - add sched-Fix-the-check-of-nr_running-at-queue-wakelist.patch
