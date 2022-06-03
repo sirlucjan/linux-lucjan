@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll36
+
+- add Revert-block-fix-bio_clone_blkg_association-to-assoc.patch
+
 5.18-lucjan-ll35
 
 - add Revert-blk-mq-fix-panic-during-blk_mq_run_work_fn.patch
