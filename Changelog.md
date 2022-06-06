@@ -6,6 +6,8 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll38-rc1 --> 5.18-lucjan-ll38
+
 5.18-lucjan-ll38-rc1
 
 - sync with upstream (drop pipe-Fix-missing-lock-in-pipe_resize_ring.patch)
