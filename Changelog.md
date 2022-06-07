@@ -24,6 +24,7 @@
 - sync with upstream (drop bfq-Allow-current-waker-to-defend-against-a-tentativ.patch)
 - sync with upstream (drop btrfs-fix-anon_dev-leak-in-create_subvol.patch)
 - sync with upstream (drop btrfs-fix-the-error-handling-for-submit_extent_page-.patch)
+- sync with upstream (drop btrfs-return-correct-error-number-for-__extent_write.patch)
 - sync with upstream (drop x86-MCE-AMD-Fix-memory-leak-when-threshold_create_ba.patch)
 - sync with upstream (drop fs-writeback-writeback_sb_inodes-Recalculate-wrote-a.patch)
 - sync with upstream (drop nodemask.h-fix-compilation-error-with-GCC12.patch)
