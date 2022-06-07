@@ -90,9 +90,6 @@
 │   ├── 5.18-lucjan-ll40.patch
 │   └── 5.18-lucjan-ll40.patch.sig
 ├── Files
-├── README.md
-└── testing
-    ├── 5.18-lucjan-ll41-rc1.patch
-    └── 5.18-lucjan-ll41-rc1.patch.sig
+└── README.md
 
-4 directories, 91 files
+3 directories, 89 files
