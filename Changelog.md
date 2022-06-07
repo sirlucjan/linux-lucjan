@@ -28,7 +28,6 @@
 - sync with upstream (drop fs-writeback-writeback_sb_inodes-Recalculate-wrote-a.patch)
 - sync with upstream (drop nodemask.h-fix-compilation-error-with-GCC12.patch)
 - sync with upstream (drop mm-page_alloc-Always-attempt-to-allocate-at-least-on.patch)
-- sync with upstream (drop ntfs3-5.18-provide-block_invalidate_folio-to-fix-mem.patch)
 
 5.18-lucjan-ll40
 
