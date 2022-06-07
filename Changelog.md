@@ -6,6 +6,30 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll43-rc1
+
+- sync with upstream (drop signal-Deliver-SIGTRAP-on-perf-event-asynchronously-.patch)
+- sync with upstream (drop perf-amd-ibs-Use-interrupt-regs-ip-for-stack-unwindi.patch)
+- sync with upstream (drop perf-amd-ibs-Cascade-pmu-init-functions-return-value.patch)
+- sync with upstream (drop bfq-Avoid-false-marking-of-bic-as-stably-merged.patch)
+- sync with upstream (drop bfq-Avoid-merging-queues-with-different-parents.patch)
+- sync with upstream (drop bfq-Split-shared-queues-on-move-between-cgroups.patch)
+- sync with upstream (drop bfq-Update-cgroup-information-before-merging-bio.patch)
+- sync with upstream (drop bfq-Drop-pointless-unlock-lock-pair.patch)
+- sync with upstream (drop bfq-Remove-pointless-bfq_init_rq-calls.patch)
+- sync with upstream (drop bfq-Track-whether-bfq_group-is-still-online.patch)
+- sync with upstream (drop bfq-Get-rid-of-__bio_blkcg-usage.patch)
+- sync with upstream (drop bfq-Make-sure-bfqg-for-which-we-are-queueing-request.patch)
+- sync with upstream (drop bfq-Relax-waker-detection-for-shared-queues.patch)
+- sync with upstream (drop bfq-Allow-current-waker-to-defend-against-a-tentativ.patch)
+- sync with upstream (drop btrfs-fix-anon_dev-leak-in-create_subvol.patch)
+- sync with upstream (drop btrfs-fix-the-error-handling-for-submit_extent_page-.patch)
+- sync with upstream (drop x86-MCE-AMD-Fix-memory-leak-when-threshold_create_ba.patch)
+- sync with upstream (drop fs-writeback-writeback_sb_inodes-Recalculate-wrote-a.patch)
+- sync with upstream (drop nodemask.h-fix-compilation-error-with-GCC12.patch)
+- sync with upstream (drop mm-page_alloc-Always-attempt-to-allocate-at-least-on.patch)
+- sync with upstream (drop ntfs3-5.18-provide-block_invalidate_folio-to-fix-mem.patch)
+
 5.18-lucjan-ll42
 
 - add pci-5.18-Allow-BAR-movement-during-boot-and-hotplug.patch
