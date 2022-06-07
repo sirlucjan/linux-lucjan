@@ -6,6 +6,57 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll43
+
+- add mm-usercopy-Check-kmap-addresses-properly.patch
+- add mm-usercopy-Detect-vmalloc-overruns.patch
+- add mm-usercopy-Detect-large-folio-overruns.patch
+- add usercopy-Remove-HARDENED_USERCOPY_PAGESPAN.patch
+- add security-don-t-treat-structure-as-an-array-of-struct.patch
+- add cfi-Use-__builtin_function_start.patch
+- add netfs-Eliminate-Clang-randstruct-warning.patch
+- add sancov-Split-plugin-build-from-plugin-CFLAGS.patch
+- add randstruct-Reorganize-Kconfigs-and-attribute-macros.patch
+- add randstruct-Split-randstruct-Makefile-and-CFLAGS.patch
+- add randstruct-Move-seed-generation-into-scripts-basic.patch
+- add randstruct-Enable-Clang-support.patch
+- add arm64-stackleak-fix-current_top_of_stack.patch
+- add stackleak-move-skip_erasing-check-earlier.patch
+- add stackleak-remove-redundant-check.patch
+- add stackleak-rework-stack-low-bound-handling.patch
+- add stackleak-clarify-variable-names.patch
+- add stackleak-rework-stack-high-bound-handling.patch
+- add stackleak-rework-poison-scanning.patch
+- add lkdtm-stackleak-avoid-spurious-failure.patch
+- add lkdtm-stackleak-rework-boundary-management.patch
+- add lkdtm-stackleak-prevent-unexpected-stack-usage.patch
+- add lkdtm-stackleak-check-stack-boundaries.patch
+- add stackleak-add-on-off-stack-variants.patch
+- add arm64-entry-use-stackleak_erase_on_task_stack.patch
+- add lkdtm-stackleak-fix-CONFIG_GCC_PLUGIN_STACKLEAK-n.patch
+- add randomize_kstack-Improve-docs-on-requirements-ration.patch
+- add gcc-plugins-Change-all-version-strings-match-kernel.patch
+- add big_keys-Use-struct-for-internal-payload.patch
+- add niu-Silence-randstruct-warnings.patch
+- add af_unix-Silence-randstruct-GCC-plugin-warning.patch
+- add gcc-plugins-randstruct-Remove-cast-exception-handlin.patch
+- add mm-usercopy-move-the-virt_addr_valid-below-the-is_vm.patch
+- add loadpin-stop-using-bdevname.patch
+- add selftests-seccomp-Test-PTRACE_O_SUSPEND_SECCOMP-with.patch
+- add selftests-seccomp-Add-SKIP-for-failed-unshare.patch
+- add seccomp-Use-FIFO-semantics-to-order-notifications.patch
+- add selftests-seccomp-Ensure-that-notifications-come-in-.patch
+- add seccomp-Add-wait_killable-semantic-to-seccomp-user-n.patch
+- add selftests-seccomp-Refactor-get_proc_stat-to-split-ou.patch
+- add selftests-seccomp-Add-test-for-wait-killable-notifie.patch
+- add selftests-seccomp-Fix-spelling-mistake-Coud-Could.patch
+- add binfmt_flat-do-not-stop-relocating-GOT-entries-prema.patch
+- add binfmt_flat-Drop-vestiges-of-coredump-support.patch
+- add binfmt_flat-Remove-shared-library-support.patch
+- add gcc-plugins-use-KERNELVERSION-for-plugin-version.patch
+
+DROP 5.18-lucjan-ll43-rc1
+
 5.18-lucjan-ll43-rc1
 
 - sync with upstream (drop signal-Deliver-SIGTRAP-on-perf-event-asynchronously-.patch)
