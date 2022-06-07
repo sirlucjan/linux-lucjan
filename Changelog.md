@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll41
+
+- add AUFS 20220606
+
 5.18-lucjan-ll40
 
 - add mm-lru_cache_disable-use-synchronize_rcu_expedited.patch
