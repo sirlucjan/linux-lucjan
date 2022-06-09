@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll45
+
+- add hwmon-asus-ec-sensors-add-support-for-Strix-Z690-a-D.patch
+
 5.18-lucjan-ll44-rc1 --> 5.18-lucjan-ll44
 
 5.18-lucjan-ll44-rc1
