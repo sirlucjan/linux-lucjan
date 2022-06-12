@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll47-rc1
+
+- add 5.18-bfq-lucjan-r2K220612v1.patch
+
 5.18-lucjan-ll46
 
 - add Revert-nvme-pci-add-quirks-for-Samsung-X5-SSDs.patch
