@@ -6,7 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
-5.18-lucjan-ll47-rc1
+5.18-lucjan-ll48
+
+- add hwmon-nct6775-Drop-duplicate-NULL-check-in-init-and-.patch
+
+5.18-lucjan-ll47
 
 - add 5.18-bfq-lucjan-r2K220612v1.patch
 
