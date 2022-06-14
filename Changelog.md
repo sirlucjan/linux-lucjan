@@ -6,6 +6,15 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll51-rc1
+
+- sync with upstream (drop blk-mq-introduce-Ming-Lei-s-patch-from-mailing-list.patch)
+- sync with upstream (drop net-sched-fixed-barrier-to-prevent-skbuff-sticking-i.patch) 
+- sync with upstream (drop sched-autogroup-Fix-sysctl-move.patch)
+- sync with upstream (drop net-sched-add-barrier-to-fix-packet-stuck-problem-fo.patch)
+- sync with upstream (drop writeback-Fix-inode-i_io_list-not-be-protected-by-in.patch)
+- sync with upstream (update kbuild-5.18-merge-changes-from-dev-tree.patch)
+
 5.18-lucjan-ll50
 
 - add damon-5.18-merge-changes-from-dev-tree.patch
