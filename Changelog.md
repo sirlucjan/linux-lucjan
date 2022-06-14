@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll52
+
+- add KVM-x86-Grab-regs_dirty-in-local-unsigned-long.patch
+- add KVM-x86-Harden-_regs-accesses-to-guard-against-buggy.patch
+
+DROP 5.18-lucjan-ll52-rc1
+
 5.18-lucjan-ll52-rc1
 
 - sync with upstream (drop blk-mq-introduce-Ming-Lei-s-patch-from-mailing-list.patch)
