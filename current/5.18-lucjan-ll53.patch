@@ -1,7 +1,7 @@
-From 5e11eef16def209f7d9de0099c4f26978b9f3ed4 Mon Sep 17 00:00:00 2001
+From 47a9bda685e096fef0e9fb113aba19cbe19923a2 Mon Sep 17 00:00:00 2001
 From: Piotr Gorski <lucjan.lucjanov@gmail.com>
-Date: Tue, 14 Jun 2022 16:41:53 +0200
-Subject: [PATCH] 5.18-lucjan-ll54-rc1
+Date: Tue, 14 Jun 2022 16:41:14 +0200
+Subject: [PATCH] 5.18-lucjan-ll53
 
 Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
 ---
@@ -167,6 +167,7 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  block/bfq-iosched.h                           |   42 +-
  block/bfq-wf2q.c                              |  143 +-
  block/blk-core.c                              |    3 +
+ block/blk-mq.c                                |    7 +-
  block/elevator.c                              |   22 +-
  block/elevator.h                              |   10 +-
  block/mq-deadline.c                           |   11 +-
@@ -459,7 +460,9 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  fs/exec.c                                     |    3 +
  fs/fcntl.c                                    |    5 +-
  fs/file_table.c                               |    1 +
+ fs/fs-writeback.c                             |   37 +-
  fs/fuse/dev.c                                 |    3 +-
+ fs/inode.c                                    |    2 +-
  fs/namespace.c                                |    9 +
  fs/notify/group.c                             |    1 +
  fs/open.c                                     |    1 +
@@ -554,6 +557,7 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  include/linux/vmstat.h                        |   95 +-
  include/linux/wait.h                          |    2 +
  include/net/inet_connection_sock.h            |    3 +-
+ include/net/sch_generic.h                     |   42 +-
  include/net/tcp.h                             |   41 +-
  include/uapi/asm-generic/unistd.h             |    5 +-
  include/uapi/linux/aufs_type.h                |  452 +
@@ -592,7 +596,7 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  kernel/sched/alt_core.c                       | 7888 +++++++++++++++++
  kernel/sched/alt_debug.c                      |   31 +
  kernel/sched/alt_sched.h                      |  639 ++
- kernel/sched/autogroup.c                      |    9 +-
+ kernel/sched/autogroup.c                      |   11 +-
  kernel/sched/bmq.h                            |  111 +
  kernel/sched/build_policy.c                   |    8 +-
  kernel/sched/build_utility.c                  |    2 +
@@ -722,9 +726,9 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  scripts/link-vmlinux.sh                       |   44 +-
  scripts/mod/Makefile                          |    4 +-
  scripts/mod/list.h                            |  213 +
- scripts/mod/modpost.c                         | 1852 +---
+ scripts/mod/modpost.c                         | 1851 +---
  scripts/mod/modpost.h                         |   65 +-
- scripts/mod/section-check.c                   | 1223 +++
+ scripts/mod/section-check.c                   | 1222 +++
  scripts/mod/sumversion.c                      |   19 +-
  scripts/prune-kernel                          |    6 +-
  security/Kconfig                              |   13 +-
@@ -747,7 +751,7 @@ Signed-off-by: Piotr Gorski <lucjan.lucjanov@gmail.com>
  tools/testing/selftests/seccomp/Makefile      |    1 +
  tools/testing/selftests/seccomp/seccomp_bpf.c |  427 +-
  usr/include/Makefile                          |    2 +-
- 742 files changed, 108722 insertions(+), 8256 deletions(-)
+ 746 files changed, 108768 insertions(+), 8298 deletions(-)
  create mode 100644 Documentation/ABI/testing/debugfs-aufs
  create mode 100644 Documentation/ABI/testing/sysfs-aufs
  create mode 100644 Documentation/ABI/testing/sysfs-class-firmware
@@ -5065,7 +5069,7 @@ index f468864fd..b1cdb10ff 100644
  M:	William Breathitt Gray <vilhelm.gray@gmail.com>
  L:	linux-watchdog@vger.kernel.org
 diff --git a/Makefile b/Makefile
-index 7578eff6b..bd659a3c8 100644
+index eb3adfec0..889fc78d1 100644
 --- a/Makefile
 +++ b/Makefile
 @@ -14,6 +14,10 @@ NAME = Superb Owl
@@ -5073,7 +5077,7 @@ index 7578eff6b..bd659a3c8 100644
  	$(error targets prefixed with '__' are only for internal use))
  
 +LLNAME = linux-lucjan
-+LLVERSION = .ll54
++LLVERSION = .ll53
 +EXTRAVERSION := $(EXTRAVERSION)$(LLVERSION)
 +
  # That's our default target when none is given on the command line
@@ -5902,7 +5906,7 @@ index 68b46fe2f..e19e8deb4 100644
  450	common	set_mempolicy_home_node		sys_set_mempolicy_home_node
 +451	common	pmadv_ksm			sys_pmadv_ksm
 diff --git a/arch/powerpc/Kconfig b/arch/powerpc/Kconfig
-index 500f2a083..9ecbe833c 100644
+index 174edabb7..52ed45bb2 100644
 --- a/arch/powerpc/Kconfig
 +++ b/arch/powerpc/Kconfig
 @@ -149,6 +149,7 @@ config PPC
@@ -5913,7 +5917,7 @@ index 500f2a083..9ecbe833c 100644
  	select ARCH_USE_BUILTIN_BSWAP
  	select ARCH_USE_CMPXCHG_LOCKREF		if PPC64
  	select ARCH_USE_MEMTEST
-@@ -565,7 +566,6 @@ config RELOCATABLE
+@@ -566,7 +567,6 @@ config RELOCATABLE
  	bool "Build a relocatable kernel"
  	depends on PPC64 || (FLATMEM && (44x || FSL_BOOKE))
  	select NONSTATIC_KERNEL
@@ -11117,7 +11121,7 @@ index f8eb34038..3a3908c55 100644
  	if (bfqq->wr_coeff > 1)
  		bfqd->wr_busy_queues++;
 diff --git a/block/blk-core.c b/block/blk-core.c
-index 84f7b7884..8041556fb 100644
+index bc0506772..b338321c1 100644
 --- a/block/blk-core.c
 +++ b/block/blk-core.c
 @@ -901,6 +901,9 @@ void submit_bio(struct bio *bio)
@@ -11130,6 +11134,31 @@ index 84f7b7884..8041556fb 100644
  		}
  	}
  
+diff --git a/block/blk-mq.c b/block/blk-mq.c
+index 84d749511..9d33e0032 100644
+--- a/block/blk-mq.c
++++ b/block/blk-mq.c
+@@ -2123,8 +2123,7 @@ static bool blk_mq_has_sqsched(struct request_queue *q)
+  */
+ static struct blk_mq_hw_ctx *blk_mq_get_sq_hctx(struct request_queue *q)
+ {
+-	struct blk_mq_hw_ctx *hctx;
+-
++	struct blk_mq_ctx *ctx = blk_mq_get_ctx(q);
+ 	/*
+ 	 * If the IO scheduler does not respect hardware queues when
+ 	 * dispatching, we just don't bother with multiple HW queues and
+@@ -2132,8 +2131,8 @@ static struct blk_mq_hw_ctx *blk_mq_get_sq_hctx(struct request_queue *q)
+ 	 * just causes lock contention inside the scheduler and pointless cache
+ 	 * bouncing.
+ 	 */
+-	hctx = blk_mq_map_queue_type(q, HCTX_TYPE_DEFAULT,
+-				     raw_smp_processor_id());
++	struct blk_mq_hw_ctx *hctx = blk_mq_map_queue(q, 0, ctx);
++
+ 	if (!blk_mq_hctx_stopped(hctx))
+ 		return hctx;
+ 	return NULL;
 diff --git a/block/elevator.c b/block/elevator.c
 index c31976589..a3a6d756c 100644
 --- a/block/elevator.c
@@ -13431,7 +13460,7 @@ index 000000000..31931ff78
 +
 +#endif /* __SYSFS_UPLOAD_H */
 diff --git a/drivers/block/loop.c b/drivers/block/loop.c
-index 4e1dce3be..bcc50535a 100644
+index ed7bec119..ec3d1b794 100644
 --- a/drivers/block/loop.c
 +++ b/drivers/block/loop.c
 @@ -509,6 +509,15 @@ static inline void loop_update_dio(struct loop_device *lo)
@@ -30460,10 +30489,10 @@ index ac8e7d606..790579034 100644
  	/* If the SMBus is still busy, we give up */
  	if (timeout == MAX_TIMEOUT) {
 diff --git a/drivers/idle/intel_idle.c b/drivers/idle/intel_idle.c
-index c5a019eab..ed48d6c20 100644
+index 47551ab73..ff6f7eea3 100644
 --- a/drivers/idle/intel_idle.c
 +++ b/drivers/idle/intel_idle.c
-@@ -529,7 +529,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
+@@ -514,7 +514,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
  		.desc = "MWAIT 0x01",
  		.flags = MWAIT2flg(0x01) | CPUIDLE_FLAG_ALWAYS_ENABLE,
  		.exit_latency = 10,
@@ -30472,7 +30501,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -537,7 +537,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
+@@ -522,7 +522,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
  		.desc = "MWAIT 0x10",
  		.flags = MWAIT2flg(0x10) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 33,
@@ -30481,7 +30510,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -545,7 +545,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
+@@ -530,7 +530,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
  		.desc = "MWAIT 0x20",
  		.flags = MWAIT2flg(0x20) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 133,
@@ -30490,7 +30519,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -553,7 +553,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
+@@ -538,7 +538,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
  		.desc = "MWAIT 0x32",
  		.flags = MWAIT2flg(0x32) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 166,
@@ -30499,7 +30528,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -561,7 +561,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
+@@ -546,7 +546,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
  		.desc = "MWAIT 0x40",
  		.flags = MWAIT2flg(0x40) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 300,
@@ -30508,7 +30537,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -569,7 +569,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
+@@ -554,7 +554,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
  		.desc = "MWAIT 0x50",
  		.flags = MWAIT2flg(0x50) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 600,
@@ -30517,7 +30546,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -577,7 +577,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
+@@ -562,7 +562,7 @@ static struct cpuidle_state hsw_cstates[] __initdata = {
  		.desc = "MWAIT 0x60",
  		.flags = MWAIT2flg(0x60) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 2600,
@@ -30526,7 +30555,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -597,7 +597,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
+@@ -582,7 +582,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
  		.desc = "MWAIT 0x01",
  		.flags = MWAIT2flg(0x01) | CPUIDLE_FLAG_ALWAYS_ENABLE,
  		.exit_latency = 10,
@@ -30535,7 +30564,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -605,7 +605,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
+@@ -590,7 +590,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
  		.desc = "MWAIT 0x10",
  		.flags = MWAIT2flg(0x10) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 40,
@@ -30544,7 +30573,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -613,7 +613,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
+@@ -598,7 +598,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
  		.desc = "MWAIT 0x20",
  		.flags = MWAIT2flg(0x20) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 133,
@@ -30553,7 +30582,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -621,7 +621,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
+@@ -606,7 +606,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
  		.desc = "MWAIT 0x32",
  		.flags = MWAIT2flg(0x32) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 166,
@@ -30562,7 +30591,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -629,7 +629,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
+@@ -614,7 +614,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
  		.desc = "MWAIT 0x40",
  		.flags = MWAIT2flg(0x40) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 300,
@@ -30571,7 +30600,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -637,7 +637,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
+@@ -622,7 +622,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
  		.desc = "MWAIT 0x50",
  		.flags = MWAIT2flg(0x50) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 600,
@@ -30580,7 +30609,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -645,7 +645,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
+@@ -630,7 +630,7 @@ static struct cpuidle_state bdw_cstates[] __initdata = {
  		.desc = "MWAIT 0x60",
  		.flags = MWAIT2flg(0x60) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 2600,
@@ -30589,7 +30618,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -666,7 +666,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
+@@ -651,7 +651,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
  		.desc = "MWAIT 0x01",
  		.flags = MWAIT2flg(0x01) | CPUIDLE_FLAG_ALWAYS_ENABLE,
  		.exit_latency = 10,
@@ -30598,7 +30627,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -674,7 +674,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
+@@ -659,7 +659,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
  		.desc = "MWAIT 0x10",
  		.flags = MWAIT2flg(0x10) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 70,
@@ -30607,7 +30636,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -682,7 +682,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
+@@ -667,7 +667,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
  		.desc = "MWAIT 0x20",
  		.flags = MWAIT2flg(0x20) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 85,
@@ -30616,7 +30645,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -690,7 +690,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
+@@ -675,7 +675,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
  		.desc = "MWAIT 0x33",
  		.flags = MWAIT2flg(0x33) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 124,
@@ -30625,7 +30654,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -698,7 +698,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
+@@ -683,7 +683,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
  		.desc = "MWAIT 0x40",
  		.flags = MWAIT2flg(0x40) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 200,
@@ -30634,7 +30663,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -706,7 +706,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
+@@ -691,7 +691,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
  		.desc = "MWAIT 0x50",
  		.flags = MWAIT2flg(0x50) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 480,
@@ -30643,7 +30672,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -714,7 +714,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
+@@ -699,7 +699,7 @@ static struct cpuidle_state skl_cstates[] __initdata = {
  		.desc = "MWAIT 0x60",
  		.flags = MWAIT2flg(0x60) | CPUIDLE_FLAG_TLB_FLUSHED,
  		.exit_latency = 890,
@@ -30652,7 +30681,7 @@ index c5a019eab..ed48d6c20 100644
  		.enter = &intel_idle,
  		.enter_s2idle = intel_idle_s2idle, },
  	{
-@@ -735,7 +735,7 @@ static struct cpuidle_state skx_cstates[] __initdata = {
+@@ -720,7 +720,7 @@ static struct cpuidle_state skx_cstates[] __initdata = {
  		.desc = "MWAIT 0x01",
  		.flags = MWAIT2flg(0x01) | CPUIDLE_FLAG_ALWAYS_ENABLE,
  		.exit_latency = 10,
@@ -40590,7 +40619,7 @@ index 19814c26c..e65448e9a 100644
  # This goes last, so that "real" scsi devices probe earlier
  obj-$(CONFIG_SCSI_DEBUG)	+= scsi_debug.o
 diff --git a/drivers/scsi/sd.c b/drivers/scsi/sd.c
-index edc27a88a..30777f9b8 100644
+index dc6e55761..e7d38c3eb 100644
 --- a/drivers/scsi/sd.c
 +++ b/drivers/scsi/sd.c
 @@ -2843,7 +2843,6 @@ static void sd_read_app_tag_own(struct scsi_disk *sdkp, unsigned char *buffer)
@@ -81809,6 +81838,131 @@ index ada8fe814..4ebcd56ea 100644
  
  /*
   * Variant of alloc_empty_file() that doesn't check and modify nr_files.
+diff --git a/fs/fs-writeback.c b/fs/fs-writeback.c
+index a1074a26e..90050b4ad 100644
+--- a/fs/fs-writeback.c
++++ b/fs/fs-writeback.c
+@@ -120,6 +120,7 @@ static bool inode_io_list_move_locked(struct inode *inode,
+ 				      struct list_head *head)
+ {
+ 	assert_spin_locked(&wb->list_lock);
++	assert_spin_locked(&inode->i_lock);
+ 
+ 	list_move(&inode->i_io_list, head);
+ 
+@@ -1365,9 +1366,9 @@ static int move_expired_inodes(struct list_head *delaying_queue,
+ 		inode = wb_inode(delaying_queue->prev);
+ 		if (inode_dirtied_after(inode, dirtied_before))
+ 			break;
++		spin_lock(&inode->i_lock);
+ 		list_move(&inode->i_io_list, &tmp);
+ 		moved++;
+-		spin_lock(&inode->i_lock);
+ 		inode->i_state |= I_SYNC_QUEUED;
+ 		spin_unlock(&inode->i_lock);
+ 		if (sb_is_blkdev_sb(inode->i_sb))
+@@ -1383,7 +1384,12 @@ static int move_expired_inodes(struct list_head *delaying_queue,
+ 		goto out;
+ 	}
+ 
+-	/* Move inodes from one superblock together */
++	/*
++	 * Although inode's i_io_list is moved from 'tmp' to 'dispatch_queue',
++	 * we don't take inode->i_lock here because it is just a pointless overhead.
++	 * Inode is already marked as I_SYNC_QUEUED so writeback list handling is
++	 * fully under our control.
++	 */
+ 	while (!list_empty(&tmp)) {
+ 		sb = wb_inode(tmp.prev)->i_sb;
+ 		list_for_each_prev_safe(pos, node, &tmp) {
+@@ -1826,8 +1832,8 @@ static long writeback_sb_inodes(struct super_block *sb,
+ 			 * We'll have another go at writing back this inode
+ 			 * when we completed a full scan of b_io.
+ 			 */
+-			spin_unlock(&inode->i_lock);
+ 			requeue_io(inode, wb);
++			spin_unlock(&inode->i_lock);
+ 			trace_writeback_sb_inodes_requeue(inode);
+ 			continue;
+ 		}
+@@ -2358,6 +2364,7 @@ void __mark_inode_dirty(struct inode *inode, int flags)
+ {
+ 	struct super_block *sb = inode->i_sb;
+ 	int dirtytime = 0;
++	struct bdi_writeback *wb = NULL;
+ 
+ 	trace_writeback_mark_inode_dirty(inode, flags);
+ 
+@@ -2409,6 +2416,17 @@ void __mark_inode_dirty(struct inode *inode, int flags)
+ 			inode->i_state &= ~I_DIRTY_TIME;
+ 		inode->i_state |= flags;
+ 
++		/*
++		 * Grab inode's wb early because it requires dropping i_lock and we
++		 * need to make sure following checks happen atomically with dirty
++		 * list handling so that we don't move inodes under flush worker's
++		 * hands.
++		 */
++		if (!was_dirty) {
++			wb = locked_inode_to_wb_and_lock_list(inode);
++			spin_lock(&inode->i_lock);
++		}
++
+ 		/*
+ 		 * If the inode is queued for writeback by flush worker, just
+ 		 * update its dirty state. Once the flush worker is done with
+@@ -2416,7 +2434,7 @@ void __mark_inode_dirty(struct inode *inode, int flags)
+ 		 * list, based upon its state.
+ 		 */
+ 		if (inode->i_state & I_SYNC_QUEUED)
+-			goto out_unlock_inode;
++			goto out_unlock;
+ 
+ 		/*
+ 		 * Only add valid (hashed) inodes to the superblock's
+@@ -2424,22 +2442,19 @@ void __mark_inode_dirty(struct inode *inode, int flags)
+ 		 */
+ 		if (!S_ISBLK(inode->i_mode)) {
+ 			if (inode_unhashed(inode))
+-				goto out_unlock_inode;
++				goto out_unlock;
+ 		}
+ 		if (inode->i_state & I_FREEING)
+-			goto out_unlock_inode;
++			goto out_unlock;
+ 
+ 		/*
+ 		 * If the inode was already on b_dirty/b_io/b_more_io, don't
+ 		 * reposition it (that would break b_dirty time-ordering).
+ 		 */
+ 		if (!was_dirty) {
+-			struct bdi_writeback *wb;
+ 			struct list_head *dirty_list;
+ 			bool wakeup_bdi = false;
+ 
+-			wb = locked_inode_to_wb_and_lock_list(inode);
+-
+ 			inode->dirtied_when = jiffies;
+ 			if (dirtytime)
+ 				inode->dirtied_time_when = jiffies;
+@@ -2453,6 +2468,7 @@ void __mark_inode_dirty(struct inode *inode, int flags)
+ 							       dirty_list);
+ 
+ 			spin_unlock(&wb->list_lock);
++			spin_unlock(&inode->i_lock);
+ 			trace_writeback_dirty_inode_enqueue(inode);
+ 
+ 			/*
+@@ -2467,6 +2483,9 @@ void __mark_inode_dirty(struct inode *inode, int flags)
+ 			return;
+ 		}
+ 	}
++out_unlock:
++	if (wb)
++		spin_unlock(&wb->list_lock);
+ out_unlock_inode:
+ 	spin_unlock(&inode->i_lock);
+ }
 diff --git a/fs/fuse/dev.c b/fs/fuse/dev.c
 index 0e537e580..5d3601507 100644
 --- a/fs/fuse/dev.c
@@ -81823,6 +81977,19 @@ index 0e537e580..5d3601507 100644
  		dump_page(page, "fuse: trying to steal weird page");
  		return 1;
  	}
+diff --git a/fs/inode.c b/fs/inode.c
+index 9d9b42250..bd4da9c52 100644
+--- a/fs/inode.c
++++ b/fs/inode.c
+@@ -27,7 +27,7 @@
+  * Inode locking rules:
+  *
+  * inode->i_lock protects:
+- *   inode->i_state, inode->i_hash, __iget()
++ *   inode->i_state, inode->i_hash, __iget(), inode->i_io_list
+  * Inode LRU list locks protect:
+  *   inode->i_sb->s_inode_lru, inode->i_lru
+  * inode->i_sb->s_inode_list_lock protects:
 diff --git a/fs/namespace.c b/fs/namespace.c
 index 41461f55c..e27c3897b 100644
 --- a/fs/namespace.c
@@ -96256,10 +96423,10 @@ similarity index 100%
 rename from crypto/jitterentropy.h
 rename to include/crypto/internal/jitterentropy.h
 diff --git a/include/linux/blkdev.h b/include/linux/blkdev.h
-index 108e3d114..6c81f09fa 100644
+index 60d016138..19e1cf186 100644
 --- a/include/linux/blkdev.h
 +++ b/include/linux/blkdev.h
-@@ -564,6 +564,7 @@ struct request_queue {
+@@ -563,6 +563,7 @@ struct request_queue {
  
  #define QUEUE_FLAG_MQ_DEFAULT	((1 << QUEUE_FLAG_IO_STAT) |		\
  				 (1 << QUEUE_FLAG_SAME_COMP) |		\
@@ -96493,10 +96660,10 @@ index 000000000..c2b1d4fd5
 +
 +#endif /* __LINUX_EXPORT_INTERNAL_H__ */
 diff --git a/include/linux/export.h b/include/linux/export.h
-index 5910ccb66..3f31ced0d 100644
+index 27d848712..565c5ffcb 100644
 --- a/include/linux/export.h
 +++ b/include/linux/export.h
-@@ -13,6 +13,14 @@
+@@ -11,6 +11,14 @@
   * hackers place grumpy comments in header files.
   */
  
@@ -96511,7 +96678,7 @@ index 5910ccb66..3f31ced0d 100644
  #ifndef __ASSEMBLY__
  #ifdef MODULE
  extern struct module __this_module;
-@@ -21,26 +29,6 @@ extern struct module __this_module;
+@@ -19,26 +27,6 @@ extern struct module __this_module;
  #define THIS_MODULE ((struct module *)0)
  #endif
  
@@ -96538,7 +96705,7 @@ index 5910ccb66..3f31ced0d 100644
  #ifdef CONFIG_HAVE_ARCH_PREL32_RELOCATIONS
  #include <linux/compiler.h>
  /*
-@@ -87,7 +75,6 @@ struct kernel_symbol {
+@@ -85,7 +73,6 @@ struct kernel_symbol {
  /*
   * For every exported symbol, do the following:
   *
@@ -96546,7 +96713,7 @@ index 5910ccb66..3f31ced0d 100644
   * - Put the name of the symbol and namespace (empty string "" for none) in
   *   __ksymtab_strings.
   * - Place a struct kernel_symbol entry in the __ksymtab section.
-@@ -100,7 +87,6 @@ struct kernel_symbol {
+@@ -98,7 +85,6 @@ struct kernel_symbol {
  	extern typeof(sym) sym;							\
  	extern const char __kstrtab_##sym[];					\
  	extern const char __kstrtabns_##sym[];					\
@@ -98259,7 +98426,7 @@ index c7bf1eaf5..0c33b715c 100644
  
  /**
 diff --git a/include/linux/nodemask.h b/include/linux/nodemask.h
-index 0f233b76c..292ec0ce0 100644
+index c6199dbe2..9002865c3 100644
 --- a/include/linux/nodemask.h
 +++ b/include/linux/nodemask.h
 @@ -485,6 +485,7 @@ static inline int num_node_state(enum node_states state)
@@ -99361,8 +99528,71 @@ index 3908296d1..41ed0ac26 100644
  #define ICSK_CA_PRIV_SIZE	  sizeof_field(struct inet_connection_sock, icsk_ca_priv)
  };
  
+diff --git a/include/net/sch_generic.h b/include/net/sch_generic.h
+index 9bab396c1..d6cf5116b 100644
+--- a/include/net/sch_generic.h
++++ b/include/net/sch_generic.h
+@@ -187,37 +187,17 @@ static inline bool qdisc_run_begin(struct Qdisc *qdisc)
+ 		if (spin_trylock(&qdisc->seqlock))
+ 			return true;
+ 
+-		/* Paired with smp_mb__after_atomic() to make sure
+-		 * STATE_MISSED checking is synchronized with clearing
+-		 * in pfifo_fast_dequeue().
++		/* No need to insist if the MISSED flag was already set.
++		 * Note that test_and_set_bit() also gives us memory ordering
++		 * guarantees wrt potential earlier enqueue() and below
++		 * spin_trylock(), both of which are necessary to prevent races
+ 		 */
+-		smp_mb__before_atomic();
+-
+-		/* If the MISSED flag is set, it means other thread has
+-		 * set the MISSED flag before second spin_trylock(), so
+-		 * we can return false here to avoid multi cpus doing
+-		 * the set_bit() and second spin_trylock() concurrently.
+-		 */
+-		if (test_bit(__QDISC_STATE_MISSED, &qdisc->state))
++		if (test_and_set_bit(__QDISC_STATE_MISSED, &qdisc->state))
+ 			return false;
+ 
+-		/* Set the MISSED flag before the second spin_trylock(),
+-		 * if the second spin_trylock() return false, it means
+-		 * other cpu holding the lock will do dequeuing for us
+-		 * or it will see the MISSED flag set after releasing
+-		 * lock and reschedule the net_tx_action() to do the
+-		 * dequeuing.
+-		 */
+-		set_bit(__QDISC_STATE_MISSED, &qdisc->state);
+-
+-		/* spin_trylock() only has load-acquire semantic, so use
+-		 * smp_mb__after_atomic() to ensure STATE_MISSED is set
+-		 * before doing the second spin_trylock().
+-		 */
+-		smp_mb__after_atomic();
+-
+-		/* Retry again in case other CPU may not see the new flag
+-		 * after it releases the lock at the end of qdisc_run_end().
++		/* Try to take the lock again to make sure that we will either
++		 * grab it or the CPU that still has it will see MISSED set
++		 * when testing it in qdisc_run_end()
+ 		 */
+ 		return spin_trylock(&qdisc->seqlock);
+ 	}
+@@ -229,6 +209,12 @@ static inline void qdisc_run_end(struct Qdisc *qdisc)
+ 	if (qdisc->flags & TCQ_F_NOLOCK) {
+ 		spin_unlock(&qdisc->seqlock);
+ 
++		/* spin_unlock() only has store-release semantic. The unlock
++		 * and test_bit() ordering is a store-load ordering, so a full
++		 * memory barrier is needed here.
++		 */
++		smp_mb();
++
+ 		if (unlikely(test_bit(__QDISC_STATE_MISSED,
+ 				      &qdisc->state)))
+ 			__netif_schedule(qdisc);
 diff --git a/include/net/tcp.h b/include/net/tcp.h
-index 2d9a78b3b..94f6853cb 100644
+index cc1295037..d63369ab0 100644
 --- a/include/net/tcp.h
 +++ b/include/net/tcp.h
 @@ -370,6 +370,7 @@ static inline void tcp_dec_quickack_mode(struct sock *sk,
@@ -109837,7 +110067,7 @@ index 000000000..1d0c1592a
 +
 +#endif /* ALT_SCHED_H */
 diff --git a/kernel/sched/autogroup.c b/kernel/sched/autogroup.c
-index 4ebaf97f7..934287557 100644
+index 16092b49f..934287557 100644
 --- a/kernel/sched/autogroup.c
 +++ b/kernel/sched/autogroup.c
 @@ -4,7 +4,8 @@
@@ -109850,11 +110080,20 @@ index 4ebaf97f7..934287557 100644
  static struct autogroup autogroup_default;
  static atomic_t autogroup_seq_nr;
  
-@@ -219,11 +220,13 @@ void sched_autogroup_exit(struct signal_struct *sig)
+@@ -36,6 +37,7 @@ void __init autogroup_init(struct task_struct *init_task)
+ 	kref_init(&autogroup_default.kref);
+ 	init_rwsem(&autogroup_default.lock);
+ 	init_task->signal->autogroup = &autogroup_default;
++	sched_autogroup_sysctl_init();
+ }
+ 
+ void autogroup_free(struct task_group *tg)
+@@ -218,12 +220,13 @@ void sched_autogroup_exit(struct signal_struct *sig)
  
  static int __init setup_autogroup(char *str)
  {
 -	sysctl_sched_autogroup_enabled = 0;
+-	sched_autogroup_sysctl_init();
 +	unsigned long enabled;
 +	if (!kstrtoul(str, 0, &enabled))
 +		sysctl_sched_autogroup_enabled = enabled ? 1 : 0;
@@ -113494,7 +113733,7 @@ index 0a9719398..e32235cdc 100644
  	return false;
  }
 diff --git a/kernel/trace/trace.c b/kernel/trace/trace.c
-index 114c31bdf..4b0354a89 100644
+index f6fb04d79..a8bef684e 100644
 --- a/kernel/trace/trace.c
 +++ b/kernel/trace/trace.c
 @@ -4291,17 +4291,11 @@ print_trace_header(struct seq_file *m, struct trace_iterator *iter)
@@ -116881,10 +117120,10 @@ index bef329bf2..0ea6679dd 100644
  static bool page_init_poisoning __read_mostly = true;
  
 diff --git a/mm/filemap.c b/mm/filemap.c
-index 61dd39990..a9007639f 100644
+index 9a1eef6c5..19ca34788 100644
 --- a/mm/filemap.c
 +++ b/mm/filemap.c
-@@ -3417,7 +3417,7 @@ vm_fault_t filemap_page_mkwrite(struct vm_fault *vmf)
+@@ -3416,7 +3416,7 @@ vm_fault_t filemap_page_mkwrite(struct vm_fault *vmf)
  	vm_fault_t ret = VM_FAULT_LOCKED;
  
  	sb_start_pagefault(mapping->host->i_sb);
@@ -116894,7 +117133,7 @@ index 61dd39990..a9007639f 100644
  	if (folio->mapping != mapping) {
  		folio_unlock(folio);
 diff --git a/mm/huge_memory.c b/mm/huge_memory.c
-index b7d0697b1..32d010d97 100644
+index 910a138e9..79e51d77c 100644
 --- a/mm/huge_memory.c
 +++ b/mm/huge_memory.c
 @@ -58,7 +58,11 @@ unsigned long transparent_hugepage_flags __read_mostly =
@@ -123119,7 +123358,7 @@ index aab384126..83ecd0e61 100644
  	tristate "REDIRECT target support"
  	depends on NETFILTER_ADVANCED
 diff --git a/net/ipv4/tcp.c b/net/ipv4/tcp.c
-index e31cf137c..b910604b3 100644
+index cf18fbcbf..07ff161cd 100644
 --- a/net/ipv4/tcp.c
 +++ b/net/ipv4/tcp.c
 @@ -3085,6 +3085,7 @@ int tcp_disconnect(struct sock *sk, int flags)
@@ -123142,7 +123381,7 @@ index e31cf137c..b910604b3 100644
  	init_net.ipv4.sysctl_tcp_wmem[0] = SK_MEM_QUANTUM;
  	init_net.ipv4.sysctl_tcp_wmem[1] = 16*1024;
 diff --git a/net/ipv4/tcp_bbr.c b/net/ipv4/tcp_bbr.c
-index c7d30a3bb..5856e84e9 100644
+index 02e8626cc..fd3f89e3a 100644
 --- a/net/ipv4/tcp_bbr.c
 +++ b/net/ipv4/tcp_bbr.c
 @@ -294,26 +294,40 @@ static void bbr_set_pacing_rate(struct sock *sk, u32 bw, int gain)
@@ -125887,7 +126126,7 @@ index 000000000..c3bc59e31
 +MODULE_LICENSE("Dual BSD/GPL");
 +MODULE_DESCRIPTION("TCP BBR (Bottleneck Bandwidth and RTT)");
 diff --git a/net/ipv4/tcp_cong.c b/net/ipv4/tcp_cong.c
-index d854bcfb9..81c8aac38 100644
+index dc9557216..3e3864471 100644
 --- a/net/ipv4/tcp_cong.c
 +++ b/net/ipv4/tcp_cong.c
 @@ -177,6 +177,7 @@ void tcp_init_congestion_control(struct sock *sk)
@@ -125899,7 +126138,7 @@ index d854bcfb9..81c8aac38 100644
  		icsk->icsk_ca_ops->init(sk);
  	if (tcp_ca_needs_ecn(sk))
 diff --git a/net/ipv4/tcp_input.c b/net/ipv4/tcp_input.c
-index 6b8fcf796..43c7cf103 100644
+index 1f3ce7aea..eb5eb3051 100644
 --- a/net/ipv4/tcp_input.c
 +++ b/net/ipv4/tcp_input.c
 @@ -349,7 +349,7 @@ static void __tcp_ecn_check_ce(struct sock *sk, const struct sk_buff *skb)
@@ -125951,7 +126190,7 @@ index 6b8fcf796..43c7cf103 100644
  	/* When we're adding to gso_segs == 1, gso_size will be zero,
  	 * in theory this shouldn't be necessary but as long as DSACK
  	 * code can come after this skb later on it's better to keep
-@@ -3793,6 +3809,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
+@@ -3790,6 +3806,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
  
  	prior_fack = tcp_is_sack(tp) ? tcp_highest_sack_seq(tp) : tp->snd_una;
  	rs.prior_in_flight = tcp_packets_in_flight(tp);
@@ -125959,7 +126198,7 @@ index 6b8fcf796..43c7cf103 100644
  
  	/* ts_recent update must be made after we are sure that the packet
  	 * is in window.
-@@ -3891,6 +3908,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
+@@ -3888,6 +3905,7 @@ static int tcp_ack(struct sock *sk, const struct sk_buff *skb, int flag)
  	delivered = tcp_newly_delivered(sk, delivered, flag);
  	lost = tp->lost - lost;			/* freshly marked lost */
  	rs.is_ack_delayed = !!(flag & FLAG_ACK_MAYBE_DELAYED);
@@ -125967,7 +126206,7 @@ index 6b8fcf796..43c7cf103 100644
  	tcp_rate_gen(sk, delivered, lost, is_sack_reneg, sack_state.rate);
  	tcp_cong_control(sk, ack, delivered, flag, sack_state.rate);
  	tcp_xmit_recovery(sk, rexmit);
-@@ -5496,13 +5514,14 @@ static void __tcp_ack_snd_check(struct sock *sk, int ofo_possible)
+@@ -5493,13 +5511,14 @@ static void __tcp_ack_snd_check(struct sock *sk, int ofo_possible)
  
  	    /* More than one full frame received... */
  	if (((tp->rcv_nxt - tp->rcv_wup) > inet_csk(sk)->icsk_ack.rcv_mss &&
@@ -125985,7 +126224,7 @@ index 6b8fcf796..43c7cf103 100644
  	    tcp_in_quickack_mode(sk) ||
  	    /* Protocol state mandates a one-time immediate ACK */
 diff --git a/net/ipv4/tcp_output.c b/net/ipv4/tcp_output.c
-index 6b00c17c7..1d4c67afe 100644
+index 1ca2f28c9..9a336caa7 100644
 --- a/net/ipv4/tcp_output.c
 +++ b/net/ipv4/tcp_output.c
 @@ -378,7 +378,8 @@ static void tcp_ecn_send(struct sock *sk, struct sk_buff *skb,
@@ -126051,7 +126290,7 @@ index 6b00c17c7..1d4c67afe 100644
  		}
  
 diff --git a/net/ipv4/tcp_rate.c b/net/ipv4/tcp_rate.c
-index a8f6d9d06..a8b4c9504 100644
+index 9a8e014d9..de9d4cc29 100644
 --- a/net/ipv4/tcp_rate.c
 +++ b/net/ipv4/tcp_rate.c
 @@ -34,6 +34,24 @@
@@ -127701,7 +127940,7 @@ index 1e8ab4749..75122fd65 100644
  endif
  
 diff --git a/net/unix/af_unix.c b/net/unix/af_unix.c
-index 4aed12e94..793d17e3a 100644
+index e71a312fa..36367e7e3 100644
 --- a/net/unix/af_unix.c
 +++ b/net/unix/af_unix.c
 @@ -1808,11 +1808,9 @@ static int maybe_init_creds(struct scm_cookie *scm,
@@ -129410,7 +129649,7 @@ index 000000000..a924a6c4a
 +
 +#endif /* LIST_H */
 diff --git a/scripts/mod/modpost.c b/scripts/mod/modpost.c
-index b28344fd7..36c27906c 100644
+index ed9d056d2..2328522f8 100644
 --- a/scripts/mod/modpost.c
 +++ b/scripts/mod/modpost.c
 @@ -23,20 +23,20 @@
@@ -129870,7 +130109,7 @@ index b28344fd7..36c27906c 100644
  		break;
  	}
  }
-@@ -797,1211 +707,114 @@ static char *get_modinfo(struct elf_info *info, const char *tag)
+@@ -797,1210 +707,114 @@ static char *get_modinfo(struct elf_info *info, const char *tag)
  	return get_next_modinfo(info, tag, NULL);
  }
  
@@ -130237,7 +130476,7 @@ index b28344fd7..36c27906c 100644
 -		check++;
 +	if (n && s[n]) {
 +		size_t m = strspn(s + n + 1, "0123456789");
-+		if (m && (s[n + m + 1] == '.' || s[n + m + 1] == 0))
++		if (m && (s[n + m] == '.' || s[n + m] == 0))
 +			s[n] = 0;
  	}
 -	return NULL;
@@ -130350,8 +130589,7 @@ index b28344fd7..36c27906c 100644
 -
 -static inline int is_arm_mapping_symbol(const char *str)
 -{
--	return str[0] == '$' &&
--	       (str[1] == 'a' || str[1] == 'd' || str[1] == 't' || str[1] == 'x')
+-	return str[0] == '$' && strchr("axtd", str[1])
 -	       && (str[2] == '\0' || str[2] == '.');
 +	return s;
  }
@@ -131144,7 +131382,7 @@ index b28344fd7..36c27906c 100644
  
 -	if (n && s[n]) {
 -		size_t m = strspn(s + n + 1, "0123456789");
--		if (m && (s[n + m + 1] == '.' || s[n + m + 1] == 0))
+-		if (m && (s[n + m] == '.' || s[n + m] == 0))
 -			s[n] = 0;
 -
 -		/* strip trailing .prelink */
@@ -131156,7 +131394,7 @@ index b28344fd7..36c27906c 100644
  }
  
  static void read_symbols(const char *modname)
-@@ -2023,9 +836,6 @@ static void read_symbols(const char *modname)
+@@ -2022,9 +836,6 @@ static void read_symbols(const char *modname)
  		/* strip trailing .o */
  		tmp = NOFAIL(strdup(modname));
  		tmp[strlen(tmp) - 2] = '\0';
@@ -131166,7 +131404,7 @@ index b28344fd7..36c27906c 100644
  		mod = new_module(tmp);
  		free(tmp);
  	}
-@@ -2035,10 +845,8 @@ static void read_symbols(const char *modname)
+@@ -2034,10 +845,8 @@ static void read_symbols(const char *modname)
  		if (!license)
  			error("missing MODULE_LICENSE() in %s\n", modname);
  		while (license) {
@@ -131179,7 +131417,7 @@ index b28344fd7..36c27906c 100644
  				break;
  			}
  			license = get_next_modinfo(&info, "license", license);
-@@ -2065,26 +873,7 @@ static void read_symbols(const char *modname)
+@@ -2064,26 +873,7 @@ static void read_symbols(const char *modname)
  		/* Apply symbol namespaces from __kstrtabns_<symbol> entries. */
  		if (strstarts(symname, "__kstrtabns_"))
  			sym_update_namespace(symname + strlen("__kstrtabns_"),
@@ -131207,7 +131445,7 @@ index b28344fd7..36c27906c 100644
  	}
  
  	check_sec_ref(mod, modname, &info);
-@@ -2098,12 +887,17 @@ static void read_symbols(const char *modname)
+@@ -2097,12 +887,17 @@ static void read_symbols(const char *modname)
  
  	parse_elf_finish(&info);
  
@@ -131231,7 +131469,7 @@ index b28344fd7..36c27906c 100644
  }
  
  static void read_symbols_from_files(const char *filename)
-@@ -2156,34 +950,30 @@ void buf_write(struct buffer *buf, const char *s, int len)
+@@ -2155,34 +950,30 @@ void buf_write(struct buffer *buf, const char *s, int len)
  	buf->pos += len;
  }
  
@@ -131278,7 +131516,7 @@ index b28344fd7..36c27906c 100644
  		basename = strrchr(mod->name, '/');
  		if (basename)
  			basename++;
-@@ -2191,15 +981,16 @@ static void check_exports(struct module *mod)
+@@ -2190,15 +981,16 @@ static void check_exports(struct module *mod)
  			basename = mod->name;
  
  		if (exp->namespace &&
@@ -131298,7 +131536,7 @@ index b28344fd7..36c27906c 100644
  	}
  }
  
-@@ -2229,6 +1020,7 @@ static void add_header(struct buffer *b, struct module *mod)
+@@ -2228,6 +1020,7 @@ static void add_header(struct buffer *b, struct module *mod)
  	buf_printf(b, "#define INCLUDE_VERMAGIC\n");
  	buf_printf(b, "#include <linux/build-salt.h>\n");
  	buf_printf(b, "#include <linux/elfnote-lto.h>\n");
@@ -131306,7 +131544,7 @@ index b28344fd7..36c27906c 100644
  	buf_printf(b, "#include <linux/vermagic.h>\n");
  	buf_printf(b, "#include <linux/compiler.h>\n");
  	buf_printf(b, "\n");
-@@ -2249,26 +1041,41 @@ static void add_header(struct buffer *b, struct module *mod)
+@@ -2248,26 +1041,41 @@ static void add_header(struct buffer *b, struct module *mod)
  			      "#endif\n");
  	buf_printf(b, "\t.arch = MODULE_ARCH_INIT,\n");
  	buf_printf(b, "};\n");
@@ -131362,7 +131600,7 @@ index b28344fd7..36c27906c 100644
  }
  
  /**
-@@ -2276,16 +1083,7 @@ static void add_staging_flag(struct buffer *b, const char *name)
+@@ -2275,16 +1083,7 @@ static void add_staging_flag(struct buffer *b, const char *name)
   **/
  static void add_versions(struct buffer *b, struct module *mod)
  {
@@ -131380,7 +131618,7 @@ index b28344fd7..36c27906c 100644
  
  	if (!modversions)
  		return;
-@@ -2294,7 +1092,7 @@ static void add_versions(struct buffer *b, struct module *mod)
+@@ -2293,7 +1092,7 @@ static void add_versions(struct buffer *b, struct module *mod)
  	buf_printf(b, "static const struct modversion_info ____versions[]\n");
  	buf_printf(b, "__used __section(\"__versions\") = {\n");
  
@@ -131389,7 +131627,7 @@ index b28344fd7..36c27906c 100644
  		if (!s->module)
  			continue;
  		if (!s->crc_valid) {
-@@ -2320,13 +1118,14 @@ static void add_depends(struct buffer *b, struct module *mod)
+@@ -2319,13 +1118,14 @@ static void add_depends(struct buffer *b, struct module *mod)
  	int first = 1;
  
  	/* Clear ->seen flag of modules that own symbols needed by this. */
@@ -131406,7 +131644,7 @@ index b28344fd7..36c27906c 100644
  		const char *p;
  		if (!s->module)
  			continue;
-@@ -2334,7 +1133,7 @@ static void add_depends(struct buffer *b, struct module *mod)
+@@ -2333,7 +1133,7 @@ static void add_depends(struct buffer *b, struct module *mod)
  		if (s->module->seen)
  			continue;
  
@@ -131415,7 +131653,7 @@ index b28344fd7..36c27906c 100644
  		p = strrchr(s->module->name, '/');
  		if (p)
  			p++;
-@@ -2359,6 +1158,9 @@ static void write_buf(struct buffer *b, const char *fname)
+@@ -2358,6 +1158,9 @@ static void write_buf(struct buffer *b, const char *fname)
  {
  	FILE *file;
  
@@ -131425,7 +131663,7 @@ index b28344fd7..36c27906c 100644
  	file = fopen(fname, "w");
  	if (!file) {
  		perror(fname);
-@@ -2409,6 +1211,47 @@ static void write_if_changed(struct buffer *b, const char *fname)
+@@ -2408,6 +1211,47 @@ static void write_if_changed(struct buffer *b, const char *fname)
  	write_buf(b, fname);
  }
  
@@ -131473,7 +131711,7 @@ index b28344fd7..36c27906c 100644
  /* parse Module.symvers file. line format:
   * 0x12345678<tab>symbol<tab>module<tab>export<tab>namespace
   **/
-@@ -2428,6 +1271,7 @@ static void read_dump(const char *fname)
+@@ -2427,6 +1271,7 @@ static void read_dump(const char *fname)
  		unsigned int crc;
  		struct module *mod;
  		struct symbol *s;
@@ -131481,7 +131719,7 @@ index b28344fd7..36c27906c 100644
  
  		if (!(symname = strchr(line, '\t')))
  			goto fail;
-@@ -2445,14 +1289,23 @@ static void read_dump(const char *fname)
+@@ -2444,14 +1289,23 @@ static void read_dump(const char *fname)
  		crc = strtoul(line, &d, 16);
  		if (*symname == '\0' || *modname == '\0' || *d != '\0')
  			goto fail;
@@ -131509,7 +131747,7 @@ index b28344fd7..36c27906c 100644
  		sym_update_namespace(symname, namespace);
  	}
  	free(buf);
-@@ -2465,22 +1318,17 @@ static void read_dump(const char *fname)
+@@ -2464,22 +1318,17 @@ static void read_dump(const char *fname)
  static void write_dump(const char *fname)
  {
  	struct buffer buf = { };
@@ -131543,7 +131781,7 @@ index b28344fd7..36c27906c 100644
  		}
  	}
  	write_buf(&buf, fname);
-@@ -2493,14 +1341,14 @@ static void write_namespace_deps_files(const char *fname)
+@@ -2492,14 +1341,14 @@ static void write_namespace_deps_files(const char *fname)
  	struct namespace_list *ns;
  	struct buffer ns_deps_buf = {};
  
@@ -131561,7 +131799,7 @@ index b28344fd7..36c27906c 100644
  			buf_printf(&ns_deps_buf, " %s", ns->namespace);
  
  		buf_printf(&ns_deps_buf, "\n");
-@@ -2511,55 +1359,52 @@ static void write_namespace_deps_files(const char *fname)
+@@ -2510,55 +1359,52 @@ static void write_namespace_deps_files(const char *fname)
  }
  
  struct dump_list {
@@ -131629,7 +131867,7 @@ index b28344fd7..36c27906c 100644
  			break;
  		case 'd':
  			missing_namespace_deps = optarg;
-@@ -2569,13 +1414,10 @@ int main(int argc, char **argv)
+@@ -2568,13 +1414,10 @@ int main(int argc, char **argv)
  		}
  	}
  
@@ -131647,7 +131885,7 @@ index b28344fd7..36c27906c 100644
  	}
  
  	while (optind < argc)
-@@ -2584,28 +1426,14 @@ int main(int argc, char **argv)
+@@ -2583,28 +1426,14 @@ int main(int argc, char **argv)
  	if (files_source)
  		read_symbols_from_files(files_source);
  
@@ -131682,7 +131920,7 @@ index b28344fd7..36c27906c 100644
  	}
  
  	if (missing_namespace_deps)
-@@ -2616,22 +1444,10 @@ int main(int argc, char **argv)
+@@ -2615,22 +1444,10 @@ int main(int argc, char **argv)
  	if (sec_mismatch_count && !sec_mismatch_warn_only)
  		error("Section mismatches detected.\n"
  		      "Set CONFIG_SECTION_MISMATCH_WARN_ONLY=y to allow them.\n");
@@ -131836,10 +132074,10 @@ index 0c47ff95c..ffa4512e9 100644
  
 diff --git a/scripts/mod/section-check.c b/scripts/mod/section-check.c
 new file mode 100644
-index 000000000..a8086d908
+index 000000000..c7467fe9a
 --- /dev/null
 +++ b/scripts/mod/section-check.c
-@@ -0,0 +1,1223 @@
+@@ -0,0 +1,1222 @@
 +// SPDX-License-Identifier: GPL-2.0-only
 +/*
 + * Copyright 2006-2008  Sam Ravnborg
@@ -132343,8 +132581,7 @@ index 000000000..a8086d908
 +
 +static inline int is_arm_mapping_symbol(const char *str)
 +{
-+	return str[0] == '$' &&
-+	       (str[1] == 'a' || str[1] == 'd' || str[1] == 't' || str[1] == 'x')
++	return str[0] == '$' && strchr("axtd", str[1])
 +	       && (str[2] == '\0' || str[2] == '.');
 +}
 +
