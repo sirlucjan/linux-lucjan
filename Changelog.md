@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll49
+
+- add 5.18-bfq-lucjan-r2K220612v1.patch
+- add sched-Fix-balance_push-vs-__sched_setscheduler.patch
+- update damon-5.18-extend-DAMOS-for-proactive-LRU-lists-sort.patch
+
+DROP 5.18-lucjan-ll49-rc2
+
 5.18-lucjan-ll49-rc2
 
 - add Revert-lrng-5.18-drop-EXPORT_SYMBOL_GPL-add_bootload.patch
