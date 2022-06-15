@@ -140,9 +140,6 @@
 │   ├── 5.18-lucjan-ll56.patch
 │   └── 5.18-lucjan-ll56.patch.sig
 ├── Files
-├── pending
-│   ├── 5.18-lucjan-ll55.patch
-│   └── 5.18-lucjan-ll55.patch.sig
 └── README.md
 
-4 directories, 141 files
+3 directories, 139 files
