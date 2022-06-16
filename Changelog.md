@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll61
+
+- add btrfs-do-not-account-twice-for-inode-ref-when-reserv.patch
+- add btrfs-don-t-limit-direct-reads-to-a-single-sector.patch
+
 5.18-lucjan-ll60
 
 - add cfi-Fix-__cfi_slowpath_diag-RCU-usage-with-cpuidle.patch
