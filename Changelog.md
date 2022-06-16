@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll62
+
+- add btrfs-remove-search-start-argument-from-first_logica.patch
+- add btrfs-use-rbtree-with-leftmost-node-cached-for-track.patch
+- add btrfs-use-a-read-write-lock-for-protecting-the-block.patch
+- add btrfs-return-block-group-directly-at-btrfs_next_bloc.patch
+
 5.18-lucjan-ll61
 
 - add btrfs-do-not-account-twice-for-inode-ref-when-reserv.patch
