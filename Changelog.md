@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll60
+
+- add cfi-Fix-__cfi_slowpath_diag-RCU-usage-with-cpuidle.patch
+- add usercopy-Handle-vm_map_ram-areas.patch
+- add usercopy-Cast-pointer-to-an-integer-once.patch
+- add usercopy-Make-usercopy-resilient-against-ridiculousl.patch
+- add blk-mq-introduce-Ming-Lei-s-patches-from-mailing-lis.patch
+
 5.18-lucjan-ll59
 
 - add hwmon-asus-ec-sensors-add-missing-comma-in-board-nam.patch
