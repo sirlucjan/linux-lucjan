@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll66
+
+- add btrfs-add-error-messages-to-all-unrecognized-mount-o.patch
+
 5.18-lucjan-ll65
 
 - add btrfs-replace-kmap-with-kmap_local_page-in-inode.c.patch
