@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll65
+
+- add btrfs-replace-kmap-with-kmap_local_page-in-inode.c.patch
+- add btrfs-replace-kmap-with-kmap_local_page-in-lzo.c.patch
+- add btrfs-replace-kmap-with-kmap_local_page-in-zstd.c.patch
+- add highmem-Make-kunmap_-local-atomic-take-const-void.patch
+- add mm-highmem-delete-memmove_page.patch
+
 5.18-lucjan-ll64
 
 - add 5.18-bfq-lucjan-r2K220617v1.patch
