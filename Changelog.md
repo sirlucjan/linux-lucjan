@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll64
+
+- add 5.18-bfq-lucjan-r2K220617v1.patch
+
 5.18-lucjan-ll63
 
 - update bcachefs-5.18-introduce-bcachefs-patchset.patch
@@ -125,7 +129,7 @@ DROP 5.18-lucjan-ll50-rc1
 
 5.18-lucjan-ll49
 
-- add 5.18-bfq-lucjan-r2K220612v1.patch
+- add 5.18-bfq-lucjan-r2K220613v1.patch
 - add sched-Fix-balance_push-vs-__sched_setscheduler.patch
 - update damon-5.18-extend-DAMOS-for-proactive-LRU-lists-sort.patch
 
