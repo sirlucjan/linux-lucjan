@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll67
+
+- update bcachefs-5.18-introduce-bcachefs-patchset.patch
+
 5.18-lucjan-ll66
 
 - add btrfs-add-error-messages-to-all-unrecognized-mount-o.patch
