@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll69
+
+- update bcachefs-5.18-introduce-bcachefs-patchset.patch
+- add 5.18-bfq-lucjan-r2K220619v1.patch
+
 5.18-lucjan-ll68
 
 - update bcachefs-5.18-introduce-bcachefs-patchset.patch
