@@ -159,8 +159,6 @@
 │       ├── 5.18-lucjan-ll6-rc1.patch.sig
 │       ├── 5.18-lucjan-ll70.patch
 │       ├── 5.18-lucjan-ll70.patch.sig
-│       ├── 5.18-lucjan-ll71.patch
-│       ├── 5.18-lucjan-ll71.patch.sig
 │       ├── 5.18-lucjan-ll71-rc1.patch
 │       ├── 5.18-lucjan-ll71-rc1.patch.sig
 │       ├── 5.18-lucjan-ll7-rc1.patch
@@ -171,12 +169,12 @@
 │       └── 5.18-lucjan-ll9-rc1.patch.sig
 ├── Changelog.md
 ├── current
-│   ├── 5.18-lucjan-ll72.patch
-│   └── 5.18-lucjan-ll72.patch.sig
+│   ├── 5.18-lucjan-ll71.patch
+│   └── 5.18-lucjan-ll71.patch.sig
 ├── Files
 ├── README.md
 └── testing
     ├── 5.18-lucjan-ll72-rc1.patch
     └── 5.18-lucjan-ll72-rc1.patch.sig
 
-4 directories, 175 files
+4 directories, 173 files
