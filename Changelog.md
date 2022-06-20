@@ -11,6 +11,7 @@
 - sync with upstream (drop virtio-pci-Remove-wrong-address-verification-in-vp_d.patch)
 - sync with upstream (drop sched-Fix-balance_push-vs-__sched_setscheduler.patch) 
 - sync with upstream (drop cfi-Fix-__cfi_slowpath_diag-RCU-usage-with-cpuidle.patch)
+- sync with upstream (drop netfs-Eliminate-Clang-randstruct-warning.patch)
 
 5.18-lucjan-ll70
 
