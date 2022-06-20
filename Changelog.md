@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll71-rc1
+
+- sync with upstream (drop virtio-pci-Remove-wrong-address-verification-in-vp_d.patch)
+- sync with upstream (drop sched-Fix-balance_push-vs-__sched_setscheduler.patch) 
+- sync with upstream (drop cfi-Fix-__cfi_slowpath_diag-RCU-usage-with-cpuidle.patch)
+
 5.18-lucjan-ll70
 
 - update bcachefs-5.18-introduce-bcachefs-patchset.patch
