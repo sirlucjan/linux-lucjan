@@ -6,6 +6,8 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll80-rc1 --> 5.18-lucjan-ll80
+
 5.18-lucjan-ll80-rc1
 
 - sync with upstream (drop virtio-pci-Remove-wrong-address-verification-in-vp_d.patch)
