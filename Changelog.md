@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll81
+
+- add btrfs-increase-direct-io-read-size-limit-to-256-sect.patch
+- add platform-x86-thinkpad_acpi-Fix-a-memory-leak-of-EFCH.patch
+- add i2c-piix4-Fix-a-memory-leak-in-the-EFCH-MMIO-support.patch
+- add watchdog-sp5100_tco-Fix-a-memory-leak-of-EFCH-MMIO-r.patch
+
 5.18-lucjan-ll80-rc1 --> 5.18-lucjan-ll80
 
 5.18-lucjan-ll80-rc1
