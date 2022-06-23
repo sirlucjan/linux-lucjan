@@ -201,6 +201,8 @@
 │       ├── 5.18-lucjan-ll80-rc1.patch.sig
 │       ├── 5.18-lucjan-ll81.patch
 │       ├── 5.18-lucjan-ll81.patch.sig
+│       ├── 5.18-lucjan-ll82.patch
+│       ├── 5.18-lucjan-ll82.patch.sig
 │       ├── 5.18-lucjan-ll8-rc1.patch
 │       ├── 5.18-lucjan-ll8-rc1.patch.sig
 │       ├── 5.18-lucjan-ll9-rc1.patch
@@ -209,9 +211,9 @@
 ├── current
 │   ├── 5.18-lucjan-ll79.patch
 │   ├── 5.18-lucjan-ll79.patch.sig
-│   ├── 5.18-lucjan-ll82.patch
-│   └── 5.18-lucjan-ll82.patch.sig
+│   ├── 5.18-lucjan-ll83.patch
+│   └── 5.18-lucjan-ll83.patch.sig
 ├── Files
 └── README.md
 
-3 directories, 211 files
+3 directories, 213 files

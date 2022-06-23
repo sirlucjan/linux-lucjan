@@ -8,6 +8,11 @@
 
 5.18-lucjan-ll82
 
+- add xfs-bound-maximum-wait-time-for-inodegc-work.patch
+- add xfs-introduce-xfs_inodegc_push.patch
+
+5.18-lucjan-ll82
+
 - update bcachefs-5.18-introduce-bcachefs-patchset.patch
 
 5.18-lucjan-ll81
