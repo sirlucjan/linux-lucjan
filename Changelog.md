@@ -6,7 +6,19 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
-5.18-lucjan-ll82
+5.18-lucjan-ll84
+
+- add block-fix-default-IO-priority-handling-again.patch
+- add block-Return-effective-IO-priority-from-get_current_.patch
+- add block-Generalize-get_current_ioprio-for-any-task.patch
+- add block-Make-ioprio_best-static.patch
+- add block-Fix-handling-of-tasks-without-ioprio-in-ioprio.patch
+- add blk-ioprio-Remove-unneeded-field.patch
+- add blk-ioprio-Convert-from-rqos-policy-to-direct-call.patch
+- add block-Initialize-bio-priority-earlier.patch
+- add block-Always-initialize-bio-IO-priority-on-submit.patch
+
+5.18-lucjan-ll83
 
 - add xfs-bound-maximum-wait-time-for-inodegc-work.patch
 - add xfs-introduce-xfs_inodegc_push.patch
