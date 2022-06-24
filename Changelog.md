@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll86
+
+- update kbuild-5.18-merge-changes-from-dev-tree.patch
+- add 5.18-bfq-lucjan-r2K220624v1.patch
+
+DROP 5.18-lucjan-ll86-rc1
+
 5.18-lucjan-ll86-rc1
 
 - sync with upstream (drop x86-boot-Wrap-literal-addresses-in-absolute_pointer.patch)
