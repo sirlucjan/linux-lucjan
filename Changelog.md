@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll87
+
+- add lrng-5.18-merge-changes-from-5.18-tree.patch
+
 5.18-lucjan-ll88-rc1
 
 - sync with upstream (drop x86-boot-Wrap-literal-addresses-in-absolute_pointer.patch)
