@@ -219,6 +219,8 @@
 │       ├── 5.18-lucjan-ll86-rc1.patch.sig
 │       ├── 5.18-lucjan-ll87-rc1.patch
 │       ├── 5.18-lucjan-ll87-rc1.patch.sig
+│       ├── 5.18-lucjan-ll88-rc1.patch
+│       ├── 5.18-lucjan-ll88-rc1.patch.sig
 │       ├── 5.18-lucjan-ll8-rc1.patch
 │       ├── 5.18-lucjan-ll8-rc1.patch.sig
 │       ├── 5.18-lucjan-ll9-rc1.patch
@@ -226,11 +228,10 @@
 ├── Changelog.md
 ├── current
 │   ├── 5.18-lucjan-ll87.patch
-│   └── 5.18-lucjan-ll87.patch.sig
+│   ├── 5.18-lucjan-ll87.patch.sig
+│   ├── 5.18-lucjan-ll88.patch
+│   └── 5.18-lucjan-ll88.patch.sig
 ├── Files
-├── README.md
-└── testing
-    ├── 5.18-lucjan-ll88-rc1.patch
-    └── 5.18-lucjan-ll88-rc1.patch.sig
+└── README.md
 
-4 directories, 229 files
+3 directories, 231 files
