@@ -6,6 +6,15 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll94-rc1
+
+- sync with upstream (drop btrfs-fix-hang-during-unmount-when-block-group-recla.patch)
+- sync with upstream (drop btrfs-add-error-messages-to-all-unrecognized-mount-o.patch) 
+- sync with upstream (drop btrfs-fix-deadlock-with-fsync-fiemap-transaction-com.patch)
+- sync with upstream (drop Revert-nvme-pci-add-quirks-for-Samsung-X5-SSDs.patch)
+- sync with upstream (drop mm-lru_cache_disable-use-synchronize_rcu_expedited.patch)
+- sync with upstream (update kbuild-5.18-merge-changes-from-dev-tree.patch)
+
 5.18-lucjan-ll93
 
 - add Revert-Revert-lrng-5.18-drop-EXPORT_SYMBOL_GPL-add_b.patch
