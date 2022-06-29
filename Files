@@ -217,6 +217,8 @@
 │       ├── 5.18-lucjan-ll86.patch.sig
 │       ├── 5.18-lucjan-ll86-rc1.patch
 │       ├── 5.18-lucjan-ll86-rc1.patch.sig
+│       ├── 5.18-lucjan-ll87.patch
+│       ├── 5.18-lucjan-ll87.patch.sig
 │       ├── 5.18-lucjan-ll87-rc1.patch
 │       ├── 5.18-lucjan-ll87-rc1.patch.sig
 │       ├── 5.18-lucjan-ll88.patch
@@ -241,8 +243,6 @@
 │       └── 5.18-lucjan-ll9-rc1.patch.sig
 ├── Changelog.md
 ├── current
-│   ├── 5.18-lucjan-ll87.patch
-│   ├── 5.18-lucjan-ll87.patch.sig
 │   ├── 5.18-lucjan-ll93.patch
 │   └── 5.18-lucjan-ll93.patch.sig
 ├── Files
