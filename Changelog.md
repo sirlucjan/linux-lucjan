@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll95
+
+- add lrng-5.18-merge-changes-from-dev-tree.patch
+- add sched-core-Optimize-load-balance-of-core-scheduling.patch
+- add Introduce-SIS_UTIL-to-search-idle-CPU-based-on-sum-o.patch
+- add improve-scan-efficiency-of-SIS.patch
+
 5.18-lucjan-ll94-rc1 --> 5.18-lucjan-ll94
 
 5.18-lucjan-ll94-rc1
