@@ -6,6 +6,8 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll94-rc1 --> 5.18-lucjan-ll94
+
 5.18-lucjan-ll94-rc1
 
 - sync with upstream (drop btrfs-fix-hang-during-unmount-when-block-group-recla.patch)
