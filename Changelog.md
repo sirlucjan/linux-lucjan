@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll96
+
+- add lrng-5.18-merge-changes-from-5.18-tree.patch
+- add hwmon-asus-ec-sensors-add-support-for-Maximus-XI-Her.patch
+- update kbuild-5.18-merge-changes-from-dev-tree.patch
+
 5.18-lucjan-ll95
 
 - add lrng-5.18-merge-changes-from-dev-tree.patch
