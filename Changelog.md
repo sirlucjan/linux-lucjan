@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll100
+
+- add bitops-let-optimize-out-non-atomic-bitops-on-compile.patch (part 2)
+- add clearlinux-5.18-introduce-clearlinux-patchset.patch
+
 5.18-lucjan-ll99
 
 - add drm-amdgpu-flush-delete-wq-after-wait-fence.patch
