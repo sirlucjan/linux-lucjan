@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll98
+
+- add bitops-let-optimize-out-non-atomic-bitops-on-compile.patch
+- add mm-madvise-allow-KSM-hints-for-process_madvise.patch
+
 5.18-lucjan-ll97
 
 - add rcu-5.18-introduce-rcu-patchset.patch
