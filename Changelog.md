@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll99
+
+- add drm-amdgpu-flush-delete-wq-after-wait-fence.patch
+
 5.18-lucjan-ll98
 
 - add bitops-let-optimize-out-non-atomic-bitops-on-compile.patch
