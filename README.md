@@ -28,7 +28,7 @@
 
 * [random fixes from pfkernel](https://github.com/pfactum/pf-kernel/tree/pf-5.18) / [random fixes from pfkernel](https://gitlab.com/post-factum/pf-kernel/tree/pf-5.18) - for example patches from Arch Linux or specific patches authored by Oleksandr Natalenko
 
-* [fixes from ClearLinux](https://github.com/clearlinux-pkgs/linux) - specific patches authored by ClearLinux Team
+* [random fixes from CachyOS](https://github.com/CachyOS/linux-cachyos) - specific patches authored by CachyOS Team
 
 * [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.18) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
 
