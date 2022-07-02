@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll102
+
+- add perf-5.18-merge-changes-from-dev-tree.patch
+
 5.18-lucjan-ll101
 
 - update kbuild-5.18-merge-changes-from-dev-tree.patch
