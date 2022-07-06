@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll112-rc1
+
+- sync with upstream (drop platform-x86-thinkpad_acpi-Fix-a-memory-leak-of-EFCH.patch)
+
 5.18-lucjan-ll111
 
 - add add-a-sysctl-to-enable-disable-tcp_collapse-logic.patch
