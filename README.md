@@ -32,7 +32,7 @@
 
 * [AUFS](https://github.com/sfjro/aufs5-standalone/tree/aufs5.18) / [AUFS](http://aufs.sourceforge.net) - advanced multi-layered unification filesystem
 
-* [UKSMD](https://gitlab.com/post-factum/uksmd) - Userspace KSM helper daemon authored by Oleksandr Natalenko
+* [UKSMD](https://codeberg.org/pf-kernel/uksmd) - Userspace KSM helper daemon authored by Oleksandr Natalenko
 
 * [LL-patches](https://github.com/sirlucjan/kernel-patches/tree/master/5.18/ll-patches) / [LL-patches](https://gitlab.com/sirlucjan/kernel-patches/tree/master/5.18/ll-patches) - specific patches authored by Piotr Gorski
 
