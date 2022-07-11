@@ -6,6 +6,10 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll115-rc1
+
+- sync with upstream (drop i2c-piix4-Fix-a-memory-leak-in-the-EFCH-MMIO-support.patch)
+
 5.18-lucjan-ll114
 
 - add lib-string.c-Optimize-memchr.patch
