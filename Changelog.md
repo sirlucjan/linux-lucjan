@@ -6,6 +6,19 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll115
+
+- update bcachefs-5.18-introduce-bcachefs-patchset.patch
+- add Revert-btrfs-Replace-kmap-with-kmap_local_page-in-zs.patch
+- add btrfs-zstd-replace-kmap-with-kmap_local_page.patch
+- add btrfs-zlib-replace-kmap-with-kmap_local_page-in-zlib.patch
+- add btrfs-zlib-replace-kmap-with-kmap_local_page-in-zlib.patch
+- add btrfs-replace-kmap_atomic-with-kmap_local_page.patch
+- add Revert-highmem-Make-__kunmap_-local-atomic-take-cons.patch
+- add highmem-Make-__kunmap_-local-atomic-take-const-void-.patc
+
+DROP 5.18-lucjan-ll115-rc1
+
 5.18-lucjan-ll115-rc1
 
 - sync with upstream (drop i2c-piix4-Fix-a-memory-leak-in-the-EFCH-MMIO-support.patch)
