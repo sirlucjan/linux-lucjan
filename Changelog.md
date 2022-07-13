@@ -6,6 +6,15 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll120
+
+- update bcachefs-5.18-introduce-bcachefs-patchset.patch
+- update clearlinux-5.18-introduce-clearlinux-patchset.patc
+- add compiler-gcc.h-remove-ancient-workaround-for-gcc-PR-.patch
+- add ACPI-CPPC-unbreak-amd-pstate-for-shared-memory-desig.patch
+
+DROP 5.18-lucjan-ll120-rc1
+
 5.18-lucjan-ll120-rc1
 
 - sync with upstream (update perf-5.18-merge-changes-from-dev-tree.patch)
