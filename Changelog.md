@@ -6,6 +6,11 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll125-rc1
+
+- sync with upstream (update perf-5.18-merge-changes-from-dev-tree.patch)
+- sync with upstream (update randstruct-Split-randstruct-Makefile-and-CFLAGS.patch)
+
 5.18-lucjan-ll124
 
 - add amd-5.18-amd-pstate-enhancement-and-issue-fixs.patch
