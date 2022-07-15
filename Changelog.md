@@ -6,6 +6,16 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll126
+
+- add btrfs-set-the-objectid-of-the-btree-inode-s-location.patch
+- add btrfs-add-optimized-btrfs_ino-version-for-64-bits-sy.patch 
+- add damon-5.18-merge-changes-from-dev-tree.patch
+- add net-atlantic-remove-deep-parameter-on-suspend-resume.patch
+- add net-atlantic-remove-aq_nic_deinit-when-resume.patch
+
+DROP 5.18-lucjan-ll126-rc1
+
 5.18-lucjan-ll126-rc1
 
 - sync with upstream (update perf-5.18-merge-changes-from-dev-tree.patch)
