@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll125
+
+- add damon-5.18-merge-changes-from-CachyOS.patch
+
+DROP 5.18-lucjan-ll125-rc2
+
 5.18-lucjan-ll125-rc2
 
 - add um-Add-missing-apply_returns.patch
