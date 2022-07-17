@@ -6,6 +6,12 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll129-rc1
+
+- sync with upstream (update perf-5.18-merge-changes-from-dev-tree.patch)
+- sync with upstream (update randstruct-Split-randstruct-Makefile-and-CFLAGS.patch)
+- add um-Add-missing-apply_returns.patch
+
 5.18-lucjan-ll128
 
 - update bcachefs-5.18-introduce-bcachefs-patchset.patch
