@@ -6,6 +6,13 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll131-rc1
+
+- sync with upstream (update damon-5.18-merge-changes-from-next-tree.patch)
+- sync with upstream (drop ACPI-CPPC-Fix-enabling-CPPC-on-AMD-systems-with-shar.patch) 
+- sync with upstream (drop net-atlantic-remove-deep-parameter-on-suspend-resume.patch)
+- sync with upstream (drop net-atlantic-remove-aq_nic_deinit-when-resume.patch)
+
 5.18-lucjan-ll130-rc1
 
 - sync with upstream (update perf-5.18-merge-changes-from-dev-tree.patch)
