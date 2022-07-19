@@ -6,6 +6,14 @@
 #### Otherwise the kernel will not compile properly.
 #### The repository has been cleaned of old patch versions - patches for kernels 4.17-5.17 have been removed!
 
+5.18-lucjan-ll131
+
+- update amd-5.18-amd-pstate-enhancement-and-issue-fixs.patch
+- update bcachefs-5.18-introduce-bcachefs-patchset.patch
+- add Introducing-OpenVPN-Data-Channel-Offload.patch
+
+DROP 5.18-lucjan-ll131-rc1
+
 5.18-lucjan-ll131-rc1
 
 - sync with upstream (update damon-5.18-merge-changes-from-next-tree.patch)
