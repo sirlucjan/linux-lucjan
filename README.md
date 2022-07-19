@@ -1,3 +1,6 @@
+# As of July 19, 2022, the project will cease to be developed. Thank you to all users for their willingness to use the project and bug reports.
+# I encourage all users to use [CachyOS kernels](https://github.com/CachyOS/linux-cachyos), in the development of which I will take an active part from now on.
+
 ## Use at your own risk
 ###### Patches developed and offered only for the last, stable line (not EOL). 
 ###### Active support is offered only for this kernel line. 
